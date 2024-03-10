@@ -28,6 +28,7 @@ plugins:
 # in order as they should show up.
 header_pages:
   - about.md
+  - projects.md
 
 # Set to `true` to show excerpts on the homepage.
 #show_excerpts: false
@@ -42,7 +43,7 @@ minima:
   # solarized-light	   Light variant of solarized color scheme.
   # solarized-dark	   Dark variant of solarized color scheme.
   # solarized	         Adaptive skin for solarized color scheme skins.
-  skin: solarized-dark
+  skin: dark
 
   # Minima date format.
   # The default value is "%b %d, %Y" (e.g. Nov 14, 2023)
