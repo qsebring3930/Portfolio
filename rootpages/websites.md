@@ -4,4 +4,4 @@ title: Websites
 permalink: /websites/
 ---
 
-HI!!!!!!!!!!
+### A collection of websites that I have collaborated on or created myself.

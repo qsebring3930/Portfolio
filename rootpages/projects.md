@@ -4,4 +4,4 @@ title: Projects
 permalink: /projects/
 ---
 
-HII!
+### A collection of projects that I have collaborated on or created myself.

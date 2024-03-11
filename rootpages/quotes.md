@@ -4,6 +4,6 @@ title: Quotes
 permalink: /quotes/
 ---
 
-Here are some of my favorite quotes:
+### Some of my favorite quotes:
 
 "So you mean to tell me that a shrimp fried this rice" - @emiilywrld/Twitter

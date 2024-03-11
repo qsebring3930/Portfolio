@@ -4,4 +4,4 @@ title: Blogs
 permalink: /blog/
 ---
 
-HI!!!
+### A feed of my thoughts, updates on projects, things I'd like to share.
