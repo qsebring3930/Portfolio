@@ -4,4 +4,4 @@ title: About
 permalink: /about/
 ---
 
-Howdy! I'm Thomas (They/Them), and I'm a computer science major at [Hendrix college](https://www.hendrix.edu). I'm 23, I enjoy playing [video games](https://steamcommunity.com/profiles/76561198151306073/), expanding my mind through psychedelics, and lounging with my two cats Slim Jim and Cheese. Currently I'm focused on expanding my music taste if you'd like to check out my [Spotify](https://open.spotify.com/user/rq1qg5gqm6h8z7pao1o4jj6jv?si=26f74ed7287049c4). ![cars](/assets/images/Cars.jpg)
+Howdy! I'm Thomas (They/Them), and I'm a recent computer science graduate from [Hendrix college](https://www.hendrix.edu). I'm 24, I enjoy playing [video games](https://steamcommunity.com/profiles/76561198151306073/), expanding my mind, and lounging with my two cats Slim Jim and Cheese. Currently I'm focused on creating games with the Love2D framework if you'd like to check out my [Itch](https://twistedsquiddy.itch.io/). ![cars](/assets/images/Cars.jpg)
