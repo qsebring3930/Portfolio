@@ -7,3 +7,11 @@
 #
 layout: home
 ---
+
+## Hello World!
+
+Testing if this spotify API works:
+
+&nbsp;<div align="center">
+  [![Spotify](https://novatorem.vercel.app/api/spotify?background_color=0d1117&border_color=ffffff)](https://open.spotify.com/user/rq1qg5gqm6h8z7pao1o4jj6jv?si=1cdfb628f85d4241)
+</div>
