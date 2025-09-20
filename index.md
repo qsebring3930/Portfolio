@@ -12,4 +12,4 @@ layout: home
 
 What I'm currently listening to:
 
-[![Spotify](https://novatorem.vercel.app/api/spotify?background_color=0d1117&border_color=ffffff)](https://open.spotify.com/user/rq1qg5gqm6h8z7pao1o4jj6jv?si=1cdfb628f85d4241)
+[![spotify-github-profile](https://spotify-github-profile.kittinanx.com/api/view?uid=rq1qg5gqm6h8z7pao1o4jj6jv&cover_image=true&theme=default&show_offline=false&background_color=121212&interchange=true)](https://spotify-github-profile.kittinanx.com/api/view?uid=rq1qg5gqm6h8z7pao1o4jj6jv&redirect=true)
