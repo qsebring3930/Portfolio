@@ -5,11 +5,7 @@ client = ApifyClient(os.environ["APIFY_TOKEN"])
 
 run_input = {
     "token": os.environ["DISCORD_TOKEN"],
-    "channelInput": "869237470565392388",
-    "afterDate": "2026-01-25 01:00",
-    "beforeDate": "2026-01-26",
-    "messageFilter": "from:Tyrrrz has:image",
-    "includeThreads": "none",
+    "channelInput": "https://discord.com/channels/1232410706230513814/1240609027470131261",
 }
 
 run = client.actor("wUoh2wdO7k9mnzL9d").call(run_input=run_input)
