@@ -14,5 +14,5 @@ run_input = {
 
 run = client.actor("wUoh2wdO7k9mnzL9d").call(run_input=run_input)
 
-for item in client.dataset(run["defaultDatasetId"]).iterate_items():
+for item in client.dataset(run.get("defaultDatasetId")).iterate_items():
     print(item)
