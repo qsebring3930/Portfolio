@@ -1,24 +1,18 @@
 import os
-import json
-import requests
+from apify_client import ApifyClient
 
-token = os.environ["APIFY_TOKEN"]
-dataset_id = os.environ["APIFY_DATASET_ID"]
+client = ApifyClient(os.environ["APIFY_TOKEN"])
 
-url = f"https://api.apify.com/v2/datasets/{dataset_id}/items"
+run_input = {
+    "token": os.environ["DISCORD_TOKEN"],
+    "channelInput": "869237470565392388",
+    "afterDate": "2026-01-25 01:00",
+    "beforeDate": "2026-01-26",
+    "messageFilter": "from:Tyrrrz has:image",
+    "includeThreads": "none",
+}
 
-response = requests.get(url, params={
-    "token": token,
-    "format": "json",
-    "clean": "true"
-})
+run = client.actor("wUoh2wdO7k9mnzL9d").call(run_input=run_input)
 
-response.raise_for_status()
-items = response.json()
-
-os.makedirs("_data", exist_ok=True)
-
-with open("_data/apify_items.json", "w", encoding="utf-8") as f:
-    json.dump(items, f, indent=2, ensure_ascii=False)
-
-print(f"Saved {len(items)} items")
+for item in client.dataset(run["defaultDatasetId"]).iterate_items():
+    print(item)
