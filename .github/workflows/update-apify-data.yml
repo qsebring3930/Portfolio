@@ -18,7 +18,7 @@ jobs:
 
       - run: pip install -r requirements.txt
 
-      - run: python script/apify_pull.py
+      - run: python script/fetch_apify.py
         env:
           APIFY_TOKEN: ${{ secrets.APIFY_TOKEN }}
           DISCORD_TOKEN: ${{ secrets.DISCORD_TOKEN }}
