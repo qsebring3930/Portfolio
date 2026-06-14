@@ -1,15 +1,12 @@
-name: Update Apify Data
+name: Run Apify Pull
 
 on:
   schedule:
-    - cron: "*/5 * * * *"
+    - cron: "* * * * *"
   workflow_dispatch:
 
-permissions:
-  contents: write
-
 jobs:
-  update-data:
+  run:
     runs-on: ubuntu-latest
 
     steps:
@@ -17,21 +14,11 @@ jobs:
 
       - uses: actions/setup-python@v5
         with:
-          python-version: "3.12"
+          python-version: "3.11"
 
-      - name: Install requests
-        run: pip install requests
+      - run: pip install -r requirements.txt
 
-      - name: Fetch Apify data
+      - run: python apify_pull.py
         env:
           APIFY_TOKEN: ${{ secrets.APIFY_TOKEN }}
-          APIFY_DATASET_ID: ${{ secrets.APIFY_DATASET_ID }}
-        run: python scripts/fetch_apify.py
-
-      - name: Commit updated JSON
-        run: |
-          git config user.name "github-actions"
-          git config user.email "github-actions@github.com"
-          git add _data/apify_items.json
-          git commit -m "Update Apify data" || echo "No changes"
-          git push
+          DISCORD_TOKEN: ${{ secrets.DISCORD_TOKEN }}
