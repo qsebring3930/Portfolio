@@ -6,7 +6,7 @@ print("Testing Azure SQL connection...")
 
 conn = pyodbc.connect(
     "DRIVER={ODBC Driver 18 for SQL Server};"
-    f"SERVER={os.environ['AZURE_SQL_SERVER']};"
+    f"SERVER={os.environ['AZURE_SQL_SERVER']},1433;"
     f"DATABASE={os.environ['AZURE_SQL_DATABASE']};"
     f"UID={os.environ['AZURE_SQL_USERNAME']};"
     f"PWD={os.environ['AZURE_SQL_PASSWORD']};"
