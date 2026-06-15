@@ -3,6 +3,10 @@ name: Run Apify Pull
 permissions:
   contents: write
 
+concurrency:
+  group: apify-pull
+  cancel-in-progress: false
+
 on:
   schedule:
     - cron: "*/5 * * * *"
@@ -57,5 +61,7 @@ jobs:
       
           git commit -m "Update stats JSON" || echo "No changes"
       
-          git push
+          git pull --rebase origin master
+      
+          git push origin HEAD:master
           
