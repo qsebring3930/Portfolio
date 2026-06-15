@@ -26,6 +26,43 @@ print(row[0][:200])
 cursor.close()
 conn.close()
 
+cursor = conn.cursor()
+
+cursor.execute("""
+IF OBJECT_ID('race_playtime', 'U') IS NULL
+CREATE TABLE race_playtime (
+    player_name NVARCHAR(255) NOT NULL,
+    race_name NVARCHAR(255) NOT NULL,
+    minutes_played INT NOT NULL DEFAULT 0,
+    last_seen DATETIME2 NULL,
+    PRIMARY KEY (player_name, race_name)
+);
+""")
+
+cursor.execute("""
+IF OBJECT_ID('race_levels', 'U') IS NULL
+CREATE TABLE race_levels (
+    player_name NVARCHAR(255) NOT NULL,
+    race_name NVARCHAR(255) NOT NULL,
+    level INT NOT NULL,
+    last_seen DATETIME2 NULL,
+    PRIMARY KEY (player_name, race_name)
+);
+""")
+
+cursor.execute("""
+IF OBJECT_ID('map_playtime', 'U') IS NULL
+CREATE TABLE map_playtime (
+    map_name NVARCHAR(255) NOT NULL PRIMARY KEY,
+    minutes_played INT NOT NULL DEFAULT 0,
+    last_seen DATETIME2 NULL
+);
+""")
+
+conn.commit()
+
+print("Tables created or already exist.")
+
 client = ApifyClient(os.environ["APIFY_TOKEN"])
 
 run_input = {
