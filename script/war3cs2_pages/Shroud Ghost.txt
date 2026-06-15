@@ -1,0 +1,82 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Shroud Ghost
+|image=[[File:Shroud Ghost.webp]]
+|category=SC-Terran
+|max=30
+|level=1215
+|unlocks=
+<p>
+[[Races/Ghost|Ghost]]: 30 lvls.
+</p>
+|weapons=
+SSG 08<br>
+Knife
+|restricted=All
+|team=1
+|passive=
+<p>
+Knife: No Damage
+</p>
+}}
+|skill1={{SkillInfo
+|name=Lock Down
+|info=
+Bash if within range
+|trigger=Attack
+|chance=25
+|duration=1.5
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Range|lvl1=600.0|lvl2=1000.0|lvl3=1400.0|lvl4=1800.0|lvl5=2200.0|lvl6=2600.0}}
+}}}}
+|skill2={{SkillInfo
+|name=Personal Cloaking
+|info=
+<p>
+Passive: Decrease visibility<br>
+Ability: Decrease Visibility Further
+</p>
+|trigger=Ability1
+|target=Self
+|cooldown=15.0
+|extra=Decrease Duration by 1.0 sec. on Shots Fired. Charges over time to further decrease visibility.
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Visibility|lvl1=10.0%|lvl2=18.0%|lvl3=26.0%|lvl4=34.0%|lvl5=42.0%|lvl6=50.0%}}
+}}}}
+|skill3={{SkillInfo
+|name=Ocular Implants
+|info=
+Increase Range of 'Lock Down' and 'Nuclear Strike'
+|trigger=Special
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Range|lvl1=150.0|lvl2=200.0|lvl3=250.0|lvl4=300.0|lvl5=350.0|lvl6=400.0}}
+}}}}
+|skill4={{SkillInfo
+|name=Moebius Factor
+|info=
+Increase Health
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Health|unit=HP|lvl1=15|lvl2=20|lvl3=25|lvl4=30|lvl5=35|lvl6=40}}
+}}}}
+|skill5={{SkillInfo
+|name=Nuclear Strike
+|info=
+<p>
+Action based on Phase<br>
+Phase 1: Buy a nuclear missle<br>
+Phase 2: Channel for Magical Explosion
+</p>
+|trigger=Ultimate
+|target=Special
+|expldmg=6000
+|explrad=1400
+|cooldown=20.0
+|extra=Nuclear strike is canceled on death, Spawn Zones are safe areas
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Cost|lvl1=$15,000|lvl2=$14,000|lvl3=$13,000|lvl4=$12,000|lvl5=$11,000|lvl6=$10,000}}
+|line2={{LevelUpRow|field=Range|lvl1=500.0|lvl2=600.0|lvl3=700.0|lvl4=800.0|lvl5=900.0|lvl6=1000.0}}
+|line3={{LevelUpRow|field=Channel|unit=sec.|lvl1=20.0|lvl2=19.0|lvl3=18.0|lvl4=17.0|lvl5=16.0|lvl6=15.0}}
+}}}}
+}}
