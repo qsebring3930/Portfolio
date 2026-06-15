@@ -53,10 +53,6 @@ CREATE TABLE map_playtime (
 conn.commit()
 print("Tables created or already exist.")
 
-VALID_RACE_COLUMNS = ensure_known_race_columns(cursor)
-conn.commit()
-
-
 SNAPSHOT_MINUTES = 5
 
 def race_to_column(race_name):
@@ -98,6 +94,8 @@ def ensure_known_race_columns(cursor):
     print(f"Ensured {len(valid_columns)} race columns.")
     return valid_columns
 
+VALID_RACE_COLUMNS = ensure_known_race_columns(cursor)
+conn.commit()
 
 def get_embed(item):
     embeds = item.get("embeds") or []
