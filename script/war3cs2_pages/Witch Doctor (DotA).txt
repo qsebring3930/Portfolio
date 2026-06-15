@@ -1,0 +1,74 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Witch Doctor (DotA)
+|image=[[File:Witch Doctor (DotA).webp]]
+|category=DotA-Magic
+|max=32
+|level=2540
+|weapons=
+Glock-18
+|restricted=All
+|team=1
+}}
+|skill1={{SkillInfo
+|name=Paralyzing Cask
+|info=
+Jump between Enemies to Damage and Bash
+|trigger=Ability1
+|target=Target_Enemy
+|damage=5
+|duration=0.8
+|tickrate=0.5
+|range=600
+|radius=575
+|extra=Double damage on summons
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Bounces|lvl1=3|lvl2=4|lvl3=5|lvl4=6|lvl5=7|lvl6=8|lvl7=9|lvl8=10}}
+|line2={{LevelUpRow|field=Cooldown|unit=sec.|lvl1=28.0|lvl2=26.0|lvl3=24.0|lvl4=22.0|lvl5=20.0|lvl6=18.0|lvl7=16.0|lvl8=14.0}}
+}}}}
+|skill2={{SkillInfo
+|name=Voodoo Restoration
+|info=
+Regen HP for Allies
+|trigger=Aura
+|tickrate=2
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Radius|lvl1=300.0|lvl2=350.0|lvl3=400.0|lvl4=450.0|lvl5=500.0|lvl6=550.0|lvl7=600.0|lvl8=650.0}}
+|line2={{LevelUpRow|field=Heal|unit=HP|lvl1=1|lvl2=1|lvl3=2|lvl4=2|lvl5=3|lvl6=3|lvl7=4|lvl8=5}}
+}}}}
+|skill3={{SkillInfo
+|name=Maledict
+|info=
+DoT enemies in an area
+|trigger=Ability2
+|target=Location
+|damage=3
+|duration=12
+|range=600
+|radius=250
+|extra=Every 4.0 sec. Damage increased by health difference from the start of the curse
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Multiplier|lvl1=12.0%|lvl2=16.0%|lvl3=20.0%|lvl4=24.0%|lvl5=28.0%|lvl6=32.0%|lvl7=36.0%|lvl8=40.0%}}
+|line2={{LevelUpRow|field=Cooldown|unit=sec.|lvl1=34.0|lvl2=32.0|lvl3=30.0|lvl4=28.0|lvl5=26.0|lvl6=24.0|lvl7=22.0|lvl8=20.0}}
+}}}}
+|skill4={{SkillInfo
+|name=Death Ward
+|info=
+Channel to spawn Totem, Totem: Attack closest Enemy
+|trigger=Ultimate
+|target=Location
+|duration=8
+|tickrate=0.5
+|range=750
+|radius=500
+|extra=
+<p>
+Press Again to cancel early.<br>
+Reduce damage by 50% if no LoS
+</p>
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Damage|lvl1=9|lvl2=10|lvl3=11|lvl4=12|lvl5=13|lvl6=14|lvl7=15|lvl8=16}}
+|line2={{LevelUpRow|field=Cooldown|unit=sec.|lvl1=44.0|lvl2=42.0|lvl3=40.0|lvl4=38.0|lvl5=36.0|lvl6=34.0|lvl7=32.0|lvl8=30.0}}
+}}}}
+}}

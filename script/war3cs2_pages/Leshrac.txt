@@ -1,0 +1,58 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Leshrac
+|image=[[File:Leshrac.webp]]
+|category=DotA-Magic
+|max=32
+|level=2540
+}}
+|skill1={{SkillInfo
+|name=Split Earth
+|info=
+Damage and Bash Area
+|trigger=Ability1
+|target=Location
+|damage=15
+|duration=1
+|range=600
+|cooldown=15.0
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Radius|lvl1=160.0|lvl2=180.0|lvl3=200.0|lvl4=220.0|lvl5=240.0|lvl6=260.0|lvl7=280.0|lvl8=300.0}}
+}}}}
+|skill2={{SkillInfo
+|name=Diabolic Edict
+|info=
+Damage Random enemy near you
+|trigger=Aura
+|damage=5
+|tickrate=2
+|levelup={{LevelUpInfo|levels=8|zero=1
+|line1={{LevelUpRow|field=Radius|lvl0=140.0|lvl1=160.0|lvl2=180.0|lvl3=200.0|lvl4=220.0|lvl5=240.0|lvl6=260.0|lvl7=280.0|lvl8=300.0}}
+}}}}
+|skill3={{SkillInfo
+|name=Lightning Storm
+|info=
+Damage Enemy and those closeby
+|trigger=Attack
+|radius=250
+|cooldown=7.5
+|extra=Reduces Damage Potential after every Jump. Random Damage between 5 and ...
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Targets|lvl1=2|lvl2=2|lvl3=3|lvl4=3|lvl5=4|lvl6=4|lvl7=5|lvl8=5}}
+|line2={{LevelUpRow|field=Damage|lvl1=6|lvl2=8|lvl3=10|lvl4=12|lvl5=14|lvl6=16|lvl7=18|lvl8=20}}
+}}}}
+|skill4={{SkillInfo
+|name=Pulse Nova
+|info=
+Increase Potency of Diabolic Edict
+|trigger=Ultimate
+|target=Self
+|damage=10
+|radius=100
+|cooldown=30.0
+|extra=Damage all enemies instead of a random one
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl1=3.0|lvl2=4.0|lvl3=5.0|lvl4=6.0|lvl5=7.0|lvl6=8.0|lvl7=9.0|lvl8=10.0}}
+}}}}
+}}

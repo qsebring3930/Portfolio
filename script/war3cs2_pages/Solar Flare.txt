@@ -1,0 +1,105 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Solar Flare
+|image=[[File:Solar Flare.webp]]
+|category=Legendary
+|max=42
+|level=3705
+|weapons=
+Knife<br>
+Flashbang
+|restricted=All
+|team=1
+|passive=
+<p>
+Flashbang Efficiency: 25%
+</p>
+}}
+|skill1={{SkillInfo
+|name=Fission Reaction
+|info=
+Gain Flashbang
+|trigger=Kill
+|extra=Knife Kill gives Extra Flash. Also Procs on Assist
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Chance|unit=%|lvl0=50|lvl1=60|lvl2=68|lvl3=76|lvl4=84|lvl5=92|lvl6=100}}
+}}}}
+|skill2={{SkillInfo
+|name=Speed of Light
+|info=
+Blinding increases speed and Evade Gun Damage. Loses stacks slowly
+|trigger=Special
+|quantity=12
+|tickrate=8
+|buffs=
+<p>
+Speed: +5%<br>
+Evade: +3%
+</p>
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Double Stack Chance|unit=%|lvl0=40|lvl1=50|lvl2=60|lvl3=70|lvl4=80|lvl5=90|lvl6=100}}
+}}}}
+|skill3={{SkillInfo
+|name=Radiation
+|info=
+<p>
+Blinding Radiates.<br>
+Radiated enemies take DoT, have damaged vision, Decreases Speed and Dealt Weapon Damage<br>
+Each Radiation Stage takes 25 Radiation and goes up to 10 stages<br>
+Every 3 ticks you will lose 25 Radiation<br>
+Radiated Victims Drop a Radiation Ward on Death
+</p>
+|trigger=Special
+|duration=5
+|radius=200
+|buffs=
+<p>
+DoT: 1%<br>
+Speed: -3%<br>
+Decrease: -5%
+</p>
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Radiation|lvl0=10|lvl1=15|lvl2=18|lvl3=21|lvl4=24|lvl5=27|lvl6=30}}
+}}}}
+|skill4={{SkillInfo
+|name=Ambient Heat
+|info=
+Radiate Enemies
+|trigger=Aura
+|radius=300
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Radiation|lvl0=5|lvl1=10|lvl2=12|lvl3=14|lvl4=16|lvl5=18|lvl6=20}}
+}}}}
+|skill5={{SkillInfo
+|name=Unbearable Heat
+|info=
+Flashbang Radiates and Damages enemies close by
+|trigger=Special
+|damage=20
+|radius=300
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Radiation|lvl0=10|lvl1=20|lvl2=24|lvl3=28|lvl4=32|lvl5=36|lvl6=40}}
+}}}}
+|skill6={{SkillInfo
+|name=Gamma Rays
+|info=
+Increase Flashbang Damage and Radiate
+|trigger=Special
+|quantity=75
+|extra=Random Damage between 50 and ...
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Damage|lvl0=50|lvl1=70|lvl2=80|lvl3=90|lvl4=100|lvl5=110|lvl6=120}}
+}}}}
+|skill7={{SkillInfo
+|name=Mass Ejection
+|info=
+Throw Flashbang, Leaves Radiation Wards on Detonate
+|trigger=Ultimate
+|target=Object
+|quantity=4
+|duration=5
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Cooldown|unit=sec.|lvl1=26.0|lvl2=24.0|lvl3=22.0|lvl4=20.0|lvl5=18.0|lvl6=16.0}}
+}}}}
+}}

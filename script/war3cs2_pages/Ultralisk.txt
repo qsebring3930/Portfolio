@@ -1,0 +1,64 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Ultralisk
+|image=[[File:Ultralisk.webp]]
+|category=SC-Zerg
+|max=30
+|level=1305
+|weapons=
+Knife
+|restricted=All
+|items=
+Boots of Zephyr
+}}
+|skill1={{SkillInfo
+|name=Chitinous Plating
+|info=
+Increase Health
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Health|unit=HP|lvl1=100|lvl2=120|lvl3=140|lvl4=160|lvl5=180|lvl6=200}}
+}}}}
+|skill2={{SkillInfo
+|name=Tissue Assimilation
+|info=
+Sacrifice Tissue for Healback and Regen HP, Gain Tissue on Attack
+|trigger=Special
+|heal=5
+|duration=2
+|extra=Tissue refills with 40% of your Weapon Damage
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Max Tissue|lvl1=200|lvl2=220|lvl3=240|lvl4=260|lvl5=280|lvl6=300}}
+|line2={{LevelUpRow|field=Healback|unit=HP|lvl1=12|lvl2=14|lvl3=16|lvl4=18|lvl5=20|lvl6=22}}
+}}}}
+|skill3={{SkillInfo
+|name=Frenzied
+|info=
+Increase Speed, Skill and Spell Immunity while out of Tissue
+|trigger=Special
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Speed|lvl1=5.0%|lvl2=10.0%|lvl3=15.0%|lvl4=20.0%|lvl5=25.0%|lvl6=30.0%}}
+}}}}
+|skill4={{SkillInfo
+|name=Kaiser Blades
+|info=
+Increase Weapon Damage, AoE Damage
+|trigger=Attack
+|radius=200
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Increase|lvl1=15.0%|lvl2=20.0%|lvl3=25.0%|lvl4=30.0%|lvl5=35.0%|lvl6=40.0%}}
+}}}}
+|skill5={{SkillInfo
+|name=Burrow Charge
+|info=
+Toggle to Hide under the ground, Bash those around you when you unburrow
+|trigger=Ultimate
+|target=Self
+|duration=1
+|radius=250
+|extra=Highlight enemies who walk above you
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Cooldown|unit=sec.|lvl1=25.0|lvl2=23.0|lvl3=21.0|lvl4=19.0|lvl5=17.0|lvl6=15.0}}
+}}}}
+}}

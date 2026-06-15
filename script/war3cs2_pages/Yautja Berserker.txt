@@ -1,0 +1,70 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Yautja Berserker
+|image=[[File:Yautja Berserker.webp]]
+|category=AVP
+|max=35
+|level=3495
+|weapons=
+Knife
+|restricted=All
+|team=2
+|passive=
+<p>
+Size: +10%<br>
+Backstab: No<br>
+Cloaked: 3 sec.
+</p>
+}}
+|skill1={{SkillInfo
+|name=Brute
+|info=
+Increase Health, Speed, High Jump and Fall Damage Resistance
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=7|zero=1
+|line1={{LevelUpRow|field=Health|unit=HP|lvl0=10|lvl1=30|lvl2=50|lvl3=70|lvl4=90|lvl5=110|lvl6=130|lvl7=150}}
+|line2={{LevelUpRow|field=Speed|lvl0=4.0%|lvl1=7.0%|lvl2=10.0%|lvl3=13.0%|lvl4=16.0%|lvl5=19.0%|lvl6=22.0%|lvl7=25.0%}}
+|line3={{LevelUpRow|field=High Jump|lvl0=4.0%|lvl1=12.0%|lvl2=20.0%|lvl3=28.0%|lvl4=36.0%|lvl5=44.0%|lvl6=52.0%|lvl7=60.0%}}
+|line4={{LevelUpRow|field=Fall Damage|lvl0=8.0%|lvl1=14.0%|lvl2=20.0%|lvl3=26.0%|lvl4=32.0%|lvl5=38.0%|lvl6=44.0%|lvl7=50.0%}}
+}}}}
+|skill2={{SkillInfo
+|name=War Club
+|info=
+Increase Right Click Knife Damage
+|trigger=Attack
+|levelup={{LevelUpInfo|levels=7|zero=1
+|line1={{LevelUpRow|field=Increase|lvl0=5.0%|lvl1=15.0%|lvl2=25.0%|lvl3=35.0%|lvl4=45.0%|lvl5=55.0%|lvl6=65.0%|lvl7=75.0%}}
+}}}}
+|skill3={{SkillInfo
+|name=War Slam
+|info=
+Right Click in the Air to slam down and Impale those around you
+|trigger=Special
+|force=300
+|levelup={{LevelUpInfo|levels=7|zero=1
+|line1={{LevelUpRow|field=Radius|lvl0=140.0|lvl1=170.0|lvl2=200.0|lvl3=230.0|lvl4=260.0|lvl5=290.0|lvl6=320.0|lvl7=350.0}}
+}}}}
+|skill4={{SkillInfo
+|name=Throw Combistick
+|info=
+Throw Stick, Impact Knock Back, Damage and Bash if near wall
+|trigger=Ability1
+|target=Object
+|duration=3
+|force=1.5
+|levelup={{LevelUpInfo|levels=7|zero=1
+|line1={{LevelUpRow|field=Damage|lvl0=5|lvl1=10|lvl2=15|lvl3=20|lvl4=25|lvl5=30|lvl6=35|lvl7=40}}
+|line2={{LevelUpRow|field=Cooldown|unit=sec.|lvl0=21.0|lvl1=20.0|lvl2=19.0|lvl3=18.0|lvl4=17.0|lvl5=16.0|lvl6=15.0|lvl7=14.0}}
+}}}}
+|skill5={{SkillInfo
+|name=Self Destruct Device
+|info=
+Delayed Deal Damage Around You
+|trigger=Death
+|duration=7
+|explrad=1000
+|levelup={{LevelUpInfo|levels=7|zero=1
+|line1={{LevelUpRow|field=Explosion Damage|lvl0=255|lvl1=290|lvl2=325|lvl3=360|lvl4=395|lvl5=430|lvl6=465|lvl7=490}}
+}}}}
+}}

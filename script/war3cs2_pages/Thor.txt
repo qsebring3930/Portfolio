@@ -1,0 +1,69 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Thor
+|image=[[File:Thor.webp]]
+|category=God
+|max=48
+|level=3020
+|weapons=
+Taser
+|restricted=All
+|passive=
+<p>
+On Kill: +5% Speed upto 60%
+</p>
+}}
+|skill1={{SkillInfo
+|name=Godly Power
+|info=
+Gain Charges over Time
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=8|zero=1
+|line1={{LevelUpRow|field=Tick Rate|unit=sec.|lvl0=6.0|lvl1=4.5|lvl2=4.0|lvl3=3.5|lvl4=3.0|lvl5=2.5|lvl6=2.0|lvl7=1.5|lvl8=1.0}}
+}}}}
+|skill2={{SkillInfo
+|name=Power Draw
+|info=
+Regain Charge.
+|trigger=Attack
+|levelup={{LevelUpInfo|levels=8|zero=1
+|line1={{LevelUpRow|field=Chance|lvl0=5.0%|lvl1=11.0%|lvl2=13.0%|lvl3=15.0%|lvl4=17.0%|lvl5=19.0%|lvl6=21.0%|lvl7=23.0%|lvl8=25.0%}}
+}}}}
+|skill3={{SkillInfo
+|name=Godly Speed
+|info=
+Increase Speed
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=8|zero=1
+|line1={{LevelUpRow|field=Speed|lvl0=5.0%|lvl1=12.0%|lvl2=16.0%|lvl3=20.0%|lvl4=24.0%|lvl5=28.0%|lvl6=32.0%|lvl7=36.0%|lvl8=40.0%}}
+}}}}
+|skill4={{SkillInfo
+|name=Godly Fortitude
+|info=
+Increase Health
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=8|zero=1
+|line1={{LevelUpRow|field=Health|unit=HP|lvl0=5|lvl1=15|lvl2=20|lvl3=25|lvl4=30|lvl5=35|lvl6=40|lvl7=45|lvl8=50}}
+}}}}
+|skill5={{SkillInfo
+|name=Godly Strength
+|info=
+Increase Taser Damage, Charge Capacity
+|trigger=Attack
+|levelup={{LevelUpInfo|levels=8|zero=1
+|line1={{LevelUpRow|field=Damage|lvl0=50|lvl1=70|lvl2=78|lvl3=86|lvl4=94|lvl5=102|lvl6=110|lvl7=118|lvl8=125}}
+|line2={{LevelUpRow|field=Capacity|lvl0=6|lvl1=15|lvl2=20|lvl3=25|lvl4=30|lvl5=35|lvl6=40|lvl7=45|lvl8=50}}
+}}}}
+|skill6={{SkillInfo
+|name=Thundering Blow
+|info=
+Damage Nearest Enemy and blind them
+|trigger=Ultimate
+|target=Enemies
+|duration=1
+|cooldown=30.0
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Damage|lvl1=16|lvl2=18|lvl3=20|lvl4=22|lvl5=24|lvl6=26|lvl7=28|lvl8=30}}
+}}}}
+}}

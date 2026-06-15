@@ -1,0 +1,91 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Support Class
+|image=[[File:Support Class.webp]]
+|category=XCOM
+|max=42
+|level=4675
+|weapons=
+Galil AR<br>
+P2000<br>
+Smoke Grenade
+|restricted=All
+}}
+|skill1={{SkillInfo
+|name=Smoke Screen
+|info=
+Allies Evade Weapon Damage in Smoke, Reduce Weapon Damage if shot through the smoke
+|trigger=Special
+|chance=25
+|buffs=
+<p>
+Decrease: 20%
+</p>
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl1=1.5|lvl2=1.8|lvl3=2.1|lvl4=2.4|lvl5=2.7|lvl6=3.0}}
+}}}}
+|skill2={{SkillInfo
+|name=Sprinter
+|info=
+Increase Speed
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Speed|lvl1=20.0%|lvl2=22.0%|lvl3=24.0%|lvl4=26.0%|lvl5=28.0%|lvl6=30.0%}}
+}}}}
+|skill3={{SkillInfo
+|name=Field Medic
+|info=
+Use Medkit to Heal an Ally
+|trigger=Ability1
+|target=Target_Ally
+|range=400
+|cooldown=15.0
+|extra=Applies to self if no target
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Heal|unit=HP|lvl1=20|lvl2=24|lvl3=28|lvl4=32|lvl5=36|lvl6=40}}
+}}}}
+|skill4={{SkillInfo
+|name=Revive
+|info=
+Revive Ally who died recently
+|trigger=Ability2
+|target=Random_Ally
+|cooldown=30.0
+|extra=Allies who die have 50% chance to allow to be revived for a Duration between 10 and 30 sec. Use Medkit if possible for guaranteed Revive
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Chance|unit=%|lvl1=25|lvl2=30|lvl3=35|lvl4=40|lvl5=45|lvl6=50}}
+}}}}
+|skill5={{SkillInfo
+|name=Combat Drugs
+|info=
+<p>
+Empower Allies in Smoke<br>
+Increase Dealt Weapon Damage<br>
+Decrease Received Weapon Damage
+</p>
+|trigger=Special
+|duration=3
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Increase|lvl1=10.0%|lvl2=12.0%|lvl3=14.0%|lvl4=16.0%|lvl5=18.0%|lvl6=20.0%}}
+|line2={{LevelUpRow|field=Decrease|lvl1=10.0%|lvl2=12.0%|lvl3=14.0%|lvl4=16.0%|lvl5=18.0%|lvl6=20.0%}}
+}}}}
+|skill6={{SkillInfo
+|name=Deep Pockets
+|info=
+Get More Medkits and Smoke Grenades
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Medkits|lvl1=2|lvl2=3|lvl3=4|lvl4=5|lvl5=6|lvl6=7}}
+|line2={{LevelUpRow|field=Smoke Grenades|lvl1=1|lvl2=2|lvl3=2|lvl4=3|lvl5=3|lvl6=4}}
+}}}}
+|skill7={{SkillInfo
+|name=Savior
+|info=
+Increase Medkits effect
+|trigger=Passive
+|extra=Add Between 5 and ...
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Heal|lvl1=5|lvl2=10|lvl3=15|lvl4=20|lvl5=25|lvl6=30}}
+}}}}
+}}

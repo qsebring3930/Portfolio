@@ -1,0 +1,85 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Wax Golem
+|image=[[File:Wax Golem.webp]]
+|category=Golem
+|max=36
+|level=1085
+|weapons=
+Knife
+|restricted=All
+|items=
+Boots of Evasion<br>
+Boots of Zephyr
+|team=1
+}}
+|skill1={{SkillInfo
+|name=Wax Body
+|info=
+Increase Health, Size, Decrease Speed
+|trigger=Passive
+|extra=Sacrificing Mass decreases buff
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Health|unit=HP|lvl0=100|lvl1=150|lvl2=200|lvl3=250|lvl4=300|lvl5=350|lvl6=400}}
+|line2={{LevelUpRow|field=Size|lvl0=6.0%|lvl1=10.0%|lvl2=14.0%|lvl3=18.0%|lvl4=22.0%|lvl5=26.0%|lvl6=30.0%}}
+|line3={{LevelUpRow|field=Speed|lvl0=6.0%|lvl1=10.0%|lvl2=14.0%|lvl3=18.0%|lvl4=22.0%|lvl5=26.0%|lvl6=30.0%}}
+}}}}
+|skill2={{SkillInfo
+|name=Burning Sacrifice
+|info=
+Increase Allowed Mass to Sacrifice
+|trigger=Special
+|extra=Reduces buff of Wax Body
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Quantity|unit=%|lvl0=45|lvl1=50|lvl2=55|lvl3=60|lvl4=65|lvl5=70|lvl6=75}}
+}}}}
+|skill3={{SkillInfo
+|name=Remelting
+|info=
+Stand Still To Regain Mass and Heal
+|trigger=Special
+|duration=2
+|extra=Regain 5%. Heal Based on Max Health
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Heal|lvl0=4.0%|lvl1=5.0%|lvl2=6.0%|lvl3=7.0%|lvl4=8.0%|lvl5=9.0%|lvl6=10.0%}}
+}}}}
+|skill4={{SkillInfo
+|name=Flaming Blob
+|info=
+Sacrifice Mass to Throw Molotov
+|trigger=Ability1
+|target=Object
+|extra=Sacrifice 5%
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Cooldown|unit=sec.|lvl0=21.0|lvl1=20.0|lvl2=19.0|lvl3=18.0|lvl4=17.0|lvl5=16.0|lvl6=15.0}}
+}}}}
+|skill5={{SkillInfo
+|name=Waxen Shield
+|info=
+Sacrifice Mass to Increase Speed and Protect Yourself from Damage
+|trigger=Ability2
+|target=Self
+|duration=10
+|buffs=
+<p>
+Speed: +20%
+</p>
+|cooldown=20.0
+|extra=Sacrifice 5%. Lose more if it breaks
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Damage|lvl0=50|lvl1=55|lvl2=60|lvl3=65|lvl4=70|lvl5=75|lvl6=80}}
+}}}}
+|skill6={{SkillInfo
+|name=Melting Grasp
+|info=
+Sacrifice Mass to Damage Enemies Around you
+|trigger=Ultimate
+|target=Self
+|radius=400
+|cooldown=5.0
+|extra=Sacrifice 5% each tick
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Damage|lvl1=2|lvl2=3|lvl3=5|lvl4=6|lvl5=8|lvl6=10}}
+}}}}
+}}

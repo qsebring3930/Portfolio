@@ -1,0 +1,62 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Mudkip
+|image=[[File:Mudkip.webp]]
+|category=Pokémon - Water
+|max=25
+|level=645
+}}
+|skill1={{SkillInfo
+|name=Mud-Slap
+|info=
+Damage Vision
+|trigger=Attack
+|duration=6
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Chance|lvl1=14.0%|lvl2=18.0%|lvl3=22.0%|lvl4=26.0%|lvl5=30.0%}}
+}}}}
+|skill2={{SkillInfo
+|name=Take Down
+|info=
+Increase Gun Damage, Recoil
+|trigger=Attack
+|extra=Deal 50% of your health as Damage, Recoil is 50% of that damage
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Chance|lvl1=12.0%|lvl2=14.0%|lvl3=16.0%|lvl4=18.0%|lvl5=20.0%}}
+}}}}
+|skill3={{SkillInfo
+|name=Protect
+|info=
+Decrease Damage
+|trigger=Victim
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Gun|lvl1=4.0%|lvl2=8.0%|lvl3=12.0%|lvl4=16.0%|lvl5=20.0%}}
+|line2={{LevelUpRow|field=Knife|lvl1=8.0%|lvl2=16.0%|lvl3=24.0%|lvl4=32.0%|lvl5=40.0%}}
+|line3={{LevelUpRow|field=Grenade|lvl1=6.0%|lvl2=12.0%|lvl3=18.0%|lvl4=24.0%|lvl5=30.0%}}
+|line4={{LevelUpRow|field=Magic|lvl1=12.0%|lvl2=24.0%|lvl3=36.0%|lvl4=48.0%|lvl5=60.0%}}
+}}}}
+|skill4={{SkillInfo
+|name=Endeavor
+|info=
+Increase Gun Damage if you have lower health
+|trigger=Attack
+|extra=Maximum 40 damage. Maximum is doubled if enemy has more then 150HP
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Chance|lvl1=14.0%|lvl2=18.0%|lvl3=22.0%|lvl4=26.0%|lvl5=30.0%}}
+}}}}
+|skill5={{SkillInfo
+|name=Whirlpool
+|info=
+Ward: Pull and Damage
+|trigger=Death
+|duration=4
+|tickrate=0.5
+|radius=600
+|force=900
+|extra=Water Attack
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Chance|unit=%|lvl1=30|lvl2=35|lvl3=40|lvl4=45|lvl5=50}}
+|line2={{LevelUpRow|field=Damage|lvl1=8|lvl2=9|lvl3=10|lvl4=11|lvl5=12}}
+}}}}
+}}

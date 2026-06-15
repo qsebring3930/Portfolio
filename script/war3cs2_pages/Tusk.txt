@@ -1,0 +1,82 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Tusk
+|image=[[File:Tusk.webp]]
+|category=DotA-Strength
+|max=32
+|level=2180
+|weapons=
+Knife
+|restricted=All
+|passive=
+<p>
+Health: +60HP<br>
+Speed: +15%
+</p>
+}}
+|skill1={{SkillInfo
+|name=Walrus Punch
+|info=
+Increase Knife Damage and impale those around you
+|trigger=Attack
+|radius=300
+|force=500
+|cooldown=10.0
+|levelup={{LevelUpInfo|levels=8|zero=1
+|line1={{LevelUpRow|field=Damage|lvl0=3|lvl1=6|lvl2=8|lvl3=10|lvl4=12|lvl5=14|lvl6=16|lvl7=18|lvl8=20}}
+}}}}
+|skill2={{SkillInfo
+|name=Ice Shards
+|info=
+Damage and Summon walls
+|trigger=Ability1
+|target=Target_Enemy
+|duration=6
+|range=800
+|cooldown=15.0
+|levelup={{LevelUpInfo|levels=8|zero=1
+|line1={{LevelUpRow|field=Damage|lvl0=2|lvl1=6|lvl2=8|lvl3=10|lvl4=12|lvl5=14|lvl6=16|lvl7=18|lvl8=20}}
+}}}}
+|skill3={{SkillInfo
+|name=Snowball
+|info=
+<p>
+Damage Aura, Impact Damage<br>
+No Friction or Jump, Speed and Weapon Damage Reduction.
+</p>
+|trigger=Ability2
+|target=Self
+|duration=6
+|tickrate=0.5
+|radius=200
+|force=750
+|buffs=
+<p>
+Speed: +100%<br>
+Weapon Damage: -50%
+</p>
+|cooldown=15.0
+|levelup={{LevelUpInfo|levels=8|zero=1
+|line1={{LevelUpRow|field=Aura Damage|lvl0=1|lvl1=3|lvl2=3|lvl3=4|lvl4=4|lvl5=5|lvl6=5|lvl7=6|lvl8=6}}
+|line2={{LevelUpRow|field=Hit Damage|lvl0=10|lvl1=16|lvl2=18|lvl3=20|lvl4=22|lvl5=24|lvl6=26|lvl7=28|lvl8=30}}
+}}}}
+|skill4={{SkillInfo
+|name=Frozen Sigil
+|info=
+Slow and Weaken Aura
+|trigger=Ultimate
+|target=Self
+|duration=6
+|tickrate=0.5
+|buffs=
+<p>
+Speed: -33%<br>
+Fire Rate: -33%<br>
+Weapon Damage: +20%
+</p>
+|cooldown=15.0
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Radius|lvl1=260.0|lvl2=280.0|lvl3=300.0|lvl4=320.0|lvl5=340.0|lvl6=360.0|lvl7=380.0|lvl8=400.0}}
+}}}}
+}}

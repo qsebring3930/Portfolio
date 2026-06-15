@@ -1,0 +1,71 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Jigglypuff
+|image=[[File:Jigglypuff.webp]]
+|category=Pokémon - Normal
+|max=25
+|level=745
+|weapons=
+Knife
+|restricted=All
+|passive=
+<p>
+Speed: +40%<br>
+Gravity: -60%
+</p>
+}}
+|skill1={{SkillInfo
+|name=Cute Charm
+|info=
+Hinder
+|trigger=Victim
+|chance=35
+|duration=3
+|levelup={{LevelUpInfo|levels=5|zero=1
+|line1={{LevelUpRow|field=Hinder|lvl0=5.0%|lvl1=10.0%|lvl2=15.0%|lvl3=20.0%|lvl4=25.0%|lvl5=30.0%}}
+}}}}
+|skill2={{SkillInfo
+|name=Metronome
+|info=
+Gain Random Weapon
+|trigger=Passive
+|extra=Adds slots from the previous tier to random
+|levelup={{LevelUpInfo|levels=5|zero=1
+|line1={{LevelUpRow|field=Weapon Slot|lvl0=Pistol|lvl1=Shotgun|lvl2=SMG|lvl3=Sniper|lvl4=Rifle|lvl5=LMG}}
+}}}}
+|skill3={{SkillInfo
+|name=Disarming Voice
+|info=
+Empty Clip
+|trigger=Ability1
+|target=AoE_Self
+|radius=650
+|cooldown=18.0
+|levelup={{LevelUpInfo|levels=5|zero=1
+|line1={{LevelUpRow|field=Multiplier|lvl0=10.0%|lvl1=18.0%|lvl2=26.0%|lvl3=34.0%|lvl4=42.0%|lvl5=50.0%}}
+}}}}
+|skill4={{SkillInfo
+|name=Rest
+|info=
+Put yourself to sleep to heal
+|trigger=Ability2
+|target=Self
+|duration=3
+|cooldown=12.0
+|extra=Kill people you land on while sleeping
+|levelup={{LevelUpInfo|levels=5|zero=1
+|line1={{LevelUpRow|field=Heal|unit=HP|lvl0=5|lvl1=9|lvl2=13|lvl3=17|lvl4=21|lvl5=25}}
+}}}}
+|skill5={{SkillInfo
+|name=Sing
+|info=
+Sleep Enemies around you
+|trigger=Ultimate
+|target=AoE_Self
+|cooldown=20.0
+|extra=Duration between 2.5 and 5.0 sec
+|levelup={{LevelUpInfo|levels=5|zero=1
+|line1={{LevelUpRow|field=Radius|lvl0=250.0|lvl1=300.0|lvl2=350.0|lvl3=400.0|lvl4=450.0|lvl5=500.0}}
+}}}}
+}}

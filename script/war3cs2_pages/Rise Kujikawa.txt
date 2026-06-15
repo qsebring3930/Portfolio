@@ -1,0 +1,67 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Rise Kujikawa
+|image=[[File:Rise Kujikawa.webp]]
+|category=Persona 4
+|max=35
+|level=4915
+|weapons=
+Five-Seven<br>
+Knife
+|restricted=All
+|team=1
+}}
+|skill1={{SkillInfo
+|name=Support
+|info=
+Grant Random Buffs
+|trigger=Aura
+|duration=4
+|tickrate=3
+|extra=Do one of the following: Heal, Increase Dealt Weapon Damage, Decrease Received Weapon Damage, Evade Weapon Damage, Increase Speed, Decrease Gravity
+|levelup={{LevelUpInfo|levels=10
+|line1={{LevelUpRow|field=Radius|lvl1=250.0|lvl2=300.0|lvl3=325.0|lvl4=350.0|lvl5=375.0|lvl6=400.0|lvl7=425.0|lvl8=450.0|lvl9=475.0|lvl10=500.0}}
+}}}}
+|skill2={{SkillInfo
+|name=Support Boost
+|info=
+Increase 'Support' Efficiency
+|trigger=Special
+|levelup={{LevelUpInfo|levels=7|zero=1
+|line1={{LevelUpRow|field=Heal|unit=HP|lvl0=2|lvl1=6|lvl2=10|lvl3=14|lvl4=18|lvl5=22|lvl6=26|lvl7=30}}
+|line2={{LevelUpRow|field=Increase|lvl0=2.0%|lvl1=6.0%|lvl2=10.0%|lvl3=14.0%|lvl4=18.0%|lvl5=22.0%|lvl6=26.0%|lvl7=30.0%}}
+|line3={{LevelUpRow|field=Decrease|lvl0=2.0%|lvl1=6.0%|lvl2=10.0%|lvl3=14.0%|lvl4=18.0%|lvl5=22.0%|lvl6=26.0%|lvl7=30.0%}}
+|line4={{LevelUpRow|field=Evade|lvl0=6.0%|lvl1=8.0%|lvl2=10.0%|lvl3=12.0%|lvl4=14.0%|lvl5=16.0%|lvl6=18.0%|lvl7=20.0%}}
+|line5={{LevelUpRow|field=Speed|lvl0=2.0%|lvl1=6.0%|lvl2=10.0%|lvl3=14.0%|lvl4=18.0%|lvl5=22.0%|lvl6=26.0%|lvl7=30.0%}}
+|line6={{LevelUpRow|field=Gravity|lvl0=2.0%|lvl1=6.0%|lvl2=10.0%|lvl3=14.0%|lvl4=18.0%|lvl5=22.0%|lvl6=26.0%|lvl7=30.0%}}
+}}}}
+|skill3={{SkillInfo
+|name=Radar
+|info=
+Reveal Enemies
+|trigger=Aura
+|levelup={{LevelUpInfo|levels=7
+|line1={{LevelUpRow|field=Radius|lvl1=300.0|lvl2=350.0|lvl3=400.0|lvl4=450.0|lvl5=500.0|lvl6=550.0|lvl7=600.0}}
+}}}}
+|skill4={{SkillInfo
+|name=All Out Attack Boost
+|info=
+Increase 'All Out Attack' Efficiency
+|trigger=Special
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Radius|lvl1=20.0|lvl2=40.0|lvl3=60.0|lvl4=80.0|lvl5=100.0}}
+|line2={{LevelUpRow|field=Increase|lvl1=5.0%|lvl2=10.0%|lvl3=15.0%|lvl4=20.0%|lvl5=25.0%}}
+}}}}
+|skill5={{SkillInfo
+|name=All Out Attack
+|info=
+Damage enemies around you.
+|trigger=Ultimate
+|target=AoE_Self
+|radius=500
+|cooldown=30.0
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Damage|lvl1=10|lvl2=14|lvl3=18|lvl4=22|lvl5=26|lvl6=30}}
+}}}}
+}}

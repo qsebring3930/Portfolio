@@ -1,0 +1,61 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Pit Lord
+|image=[[File:Pit Lord.webp]]
+|category=WC3-Neutral
+|max=32
+|level=175
+}}
+|skill1={{SkillInfo
+|name=Rain of Fire
+|info=
+Ward: Damage and Burn
+|trigger=Ability1
+|target=Location
+|damage=5
+|range=1000
+|radius=300
+|cooldown=15.0
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl1=3.0|lvl2=4.0|lvl3=5.0|lvl4=6.0|lvl5=7.0|lvl6=8.0|lvl7=9.0|lvl8=10.0}}
+}}}}
+|skill2={{SkillInfo
+|name=Howl of Terror
+|info=
+Weaken Enemies
+|trigger=Ability2
+|target=AoE_Self
+|duration=5
+|buffs=
+<p>
+Weapon Damage: -50%
+</p>
+|cooldown=10.0
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Radius|lvl1=225.0|lvl2=250.0|lvl3=275.0|lvl4=300.0|lvl5=325.0|lvl6=350.0|lvl7=375.0|lvl8=400.0}}
+}}}}
+|skill3={{SkillInfo
+|name=Cleaving Attack
+|info=
+AoE Gun Damage
+|trigger=Attack
+|chance=50
+|radius=250
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Damage Multiplier|lvl1=8.0%|lvl2=16.0%|lvl3=24.0%|lvl4=32.0%|lvl5=40.0%|lvl6=48.0%|lvl7=56.0%|lvl8=60.0%}}
+}}}}
+|skill4={{SkillInfo
+|name=Doom
+|info=
+Doom Enemy, Doom Guard Minion
+|trigger=Ultimate
+|target=Target_Enemy
+|damage=10
+|range=600
+|aim=12
+|extra=Enemy Becomes Doom Guard Minion on Death
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Cooldown|unit=sec.|lvl1=44.0|lvl2=42.0|lvl3=40.0|lvl4=38.0|lvl5=36.0|lvl6=34.0|lvl7=32.0|lvl8=30.0}}
+}}}}
+}}

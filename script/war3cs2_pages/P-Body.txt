@@ -1,0 +1,72 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=P-Body
+|image=[[File:P-Body.webp]]
+|category=Portal
+|max=25
+|level=3615
+}}
+|skill1={{SkillInfo
+|name=Aperture Security System
+|info=
+Totem: Attack Enemies
+|trigger=Ability1
+|target=Location
+|health=150
+|duration=20
+|tickrate=0.5
+|range=300
+|radius=500
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Damage|lvl1=2|lvl2=4|lvl3=6|lvl4=8|lvl5=10}}
+|line2={{LevelUpRow|field=Cooldown|unit=sec.|lvl1=30.0|lvl2=25.0|lvl3=20.0|lvl4=15.0|lvl5=10.0}}
+}}}}
+|skill2={{SkillInfo
+|name=Repulsion Gel
+|info=
+Place Wards in a Line, Ward: High Jump and Decrease Fall Damage
+|trigger=Ability2
+|target=Location
+|range=600
+|radius=75
+|force=1.8
+|cooldown=15.0
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl1=4.0|lvl2=5.0|lvl3=6.0|lvl4=7.0|lvl5=8.0}}
+}}}}
+|skill3={{SkillInfo
+|name=Testing Initiative
+|info=
+Increase Health, Decrease Fall Damage
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Health|unit=HP|lvl1=10|lvl2=20|lvl3=30|lvl4=40|lvl5=50}}
+|line2={{LevelUpRow|field=Fall Damage|lvl1=60.0%|lvl2=70.0%|lvl3=80.0%|lvl4=90.0%|lvl5=100.0%}}
+}}}}
+|skill4={{SkillInfo
+|name=GLaDOS Descruct
+|info=
+Damage Enemies around you
+|trigger=Death
+|target=AoE_Self
+|chance=33
+|radius=250
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Magnitude|lvl1=200|lvl2=225|lvl3=250|lvl4=275|lvl5=300}}
+}}}}
+|skill5={{SkillInfo
+|name=The Cake is a Lie
+|info=
+Trap: Big Damage or Big Reward
+|trigger=Ultimate
+|target=Random_Location
+|damage=50
+|duration=20
+|cooldown=30.0
+|extra=Either deals Damage or gives money
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Ally Reward Chance|unit=%|lvl1=20|lvl2=25|lvl3=30|lvl4=35|lvl5=40}}
+|line2={{LevelUpRow|field=Enemy Reward Chance|unit=%|lvl1=40|lvl2=35|lvl3=30|lvl4=25|lvl5=20}}
+}}}}
+}}

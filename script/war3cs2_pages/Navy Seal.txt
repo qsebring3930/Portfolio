@@ -1,0 +1,84 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Navy Seal
+|image=[[File:Navy Seal.webp]]
+|category=Military
+|max=30
+|level=1680
+|weapons=
+MP7<br>
+USP-S<br>
+Knife
+|restricted=All
+}}
+|skill1={{SkillInfo
+|name=Combat Training
+|info=
+Banish, Increase Damage
+|trigger=Attack
+|damage=15
+|chance=25
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl1=1.0|lvl2=1.4|lvl3=1.6|lvl4=1.8|lvl5=2.0}}
+}}}}
+|skill2={{SkillInfo
+|name=Enhanced Gear
+|info=
+Increase Health
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Health|unit=HP|lvl1=30|lvl2=35|lvl3=40|lvl4=45|lvl5=50}}
+}}}}
+|skill3={{SkillInfo
+|name=Recon
+|info=
+Decrease Visibility, Speed
+|trigger=Ability1
+|target=Self
+|buffs=
+<p>
+Speed: -40%
+</p>
+|cooldown=5.0
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Visibility|lvl1=45.0%|lvl2=50.0%|lvl3=55.0%|lvl4=60.0%|lvl5=65.0%}}
+}}}}
+|skill4={{SkillInfo
+|name=Extraction Point
+|info=
+Increase Speed, Slow Resistance
+|trigger=Ability2
+|target=Self
+|buffs=
+<p>
+Speed: +40%<br>
+Slow Resistance: +100%
+</p>
+|cooldown=20.0
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl1=5.0|lvl2=6.0|lvl3=7.0|lvl4=8.0|lvl5=9.0}}
+}}}}
+|skill5={{SkillInfo
+|name=Medical Attention
+|info=
+Revive Ally
+|trigger=Ability3
+|target=Self
+|cooldown=30.0
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Chance|unit=%|lvl1=60|lvl2=70|lvl3=80|lvl4=90|lvl5=100}}
+}}}}
+|skill6={{SkillInfo
+|name=Call in Air Strike
+|info=
+Summon Missile, Damage Area
+|trigger=Ultimate
+|target=Location
+|range=2000
+|radius=250
+|cooldown=30.0
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Magnitude|lvl1=70|lvl2=90|lvl3=110|lvl4=130|lvl5=150}}
+}}}}
+}}

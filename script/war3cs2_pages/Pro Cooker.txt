@@ -1,0 +1,95 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Pro Cooker
+|image=[[File:Pro Cooker.webp]]
+|category=Hero
+|max=48
+|level=1500
+|weapons=
+Knife
+|restricted=All
+}}
+|skill1={{SkillInfo
+|name=Sugar Rush
+|info=
+Increase Speed, Longjump, Decrease Gravity
+|trigger=Passive
+|buffs=
+<p>
+Gravity: -30%
+</p>
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Speed|lvl1=15.0%|lvl2=20.0%|lvl3=25.0%|lvl4=30.0%|lvl5=35.0%|lvl6=40.0%}}
+|line2={{LevelUpRow|field=Longjump|lvl1=15.0%|lvl2=20.0%|lvl3=25.0%|lvl4=30.0%|lvl5=35.0%|lvl6=40.0%}}
+}}}}
+|skill2={{SkillInfo
+|name=High Protein Diet
+|info=
+Increase Health
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Health|unit=HP|lvl1=25|lvl2=30|lvl3=35|lvl4=40|lvl5=45|lvl6=50}}
+}}}}
+|skill3={{SkillInfo
+|name=Cannibalism
+|info=
+Steal Health
+|trigger=Attack
+|chance=50
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Steal|lvl1=25.0%|lvl2=30.0%|lvl3=35.0%|lvl4=40.0%|lvl5=45.0%|lvl6=50.0%}}
+}}}}
+|skill4={{SkillInfo
+|name=Supa Butcher
+|info=
+Increase Weapon Damage
+|trigger=Attack
+|chance=25
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Increase|lvl1=5.0%|lvl2=10.0%|lvl3=15.0%|lvl4=20.0%|lvl5=25.0%|lvl6=30.0%}}
+}}}}
+|skill5={{SkillInfo
+|name=Camouflage Apron
+|info=
+Decrease Visibility
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Visibility|lvl1=30.0%|lvl2=35.0%|lvl3=40.0%|lvl4=45.0%|lvl5=50.0%|lvl6=55.0%}}
+}}}}
+|skill6={{SkillInfo
+|name=Flame Broil
+|info=
+Burn
+|trigger=Attack
+|chance=25
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl1=1.5|lvl2=2.0|lvl3=2.5|lvl4=3.0|lvl5=3.5|lvl6=4.0}}
+}}}}
+|skill7={{SkillInfo
+|name=Buffet
+|info=
+Slow
+|trigger=Attack
+|chance=25
+|buffs=
+<p>
+Speed: -20%
+</p>
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl1=1.5|lvl2=2.0|lvl3=2.5|lvl4=3.0|lvl5=3.5|lvl6=4.0}}
+}}}}
+|skill8={{SkillInfo
+|name=Pre-Heated Oven
+|info=
+Ward: Damage Enemies
+|trigger=Ability1
+|target=Self
+|quantity=5
+|duration=15
+|radius=200
+|cooldown=5.0
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Damage|lvl1=10|lvl2=11|lvl3=12|lvl4=13|lvl5=14|lvl6=15}}
+}}}}
+}}

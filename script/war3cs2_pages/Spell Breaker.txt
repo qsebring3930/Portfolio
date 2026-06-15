@@ -1,0 +1,52 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Spell Breaker
+|image=[[File:Spell Breaker.webp]]
+|category=WC3-Human
+|max=32
+|level=50
+|weapons=
+MP9
+|restricted=All
+}}
+|skill1={{SkillInfo
+|name=Spell Steal
+|info=
+Steal Buffs
+|trigger=Kill
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Max Buff|lvl1=15.0%|lvl2=20.0%|lvl3=25.0%|lvl4=30.0%|lvl5=35.0%|lvl6=40.0%|lvl7=45.0%|lvl8=50.0%}}
+}}}}
+|skill2={{SkillInfo
+|name=Skill Immunity
+|info=
+Skill Immunity
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Chance|unit=%|lvl1=25|lvl2=30|lvl3=35|lvl4=40|lvl5=45|lvl6=50|lvl7=55|lvl8=60}}
+}}}}
+|skill3={{SkillInfo
+|name=Feedback
+|info=
+Increase Damage
+|trigger=Attack
+|damage=15
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Chance|lvl1=12.0%|lvl2=15.0%|lvl3=18.0%|lvl4=21.0%|lvl5=24.0%|lvl6=27.0%|lvl7=30.0%|lvl8=33.0%}}
+}}}}
+|skill4={{SkillInfo
+|name=Control Magic
+|info=
+Control Enemy, Control Summons that get close
+|trigger=Ultimate
+|target=Target_Enemy
+|duration=5
+|tickrate=2
+|aim=12
+|cooldown=50.0
+|extra=Channeling duration depends on missing health. Summons are taken over immediately if they get close.
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Range / Radius|lvl1=325.0|lvl2=350.0|lvl3=375.0|lvl4=400.0|lvl5=425.0|lvl6=450.0|lvl7=475.0|lvl8=500.0}}
+}}}}
+}}

@@ -1,0 +1,62 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Kinetic Supporter
+|image=[[File:Kinetic Supporter.webp]]
+|category=Mental
+|max=30
+|level=3845
+|weapons=
+Knife
+|restricted=All
+}}
+|skill1={{SkillInfo
+|name=Myokinesis
+|info=
+Increase Speed for Allies
+|trigger=Aura
+|radius=500
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Speed|lvl0=10.0%|lvl1=15.0%|lvl2=18.0%|lvl3=21.0%|lvl4=24.0%|lvl5=27.0%|lvl6=30.0%}}
+}}}}
+|skill2={{SkillInfo
+|name=Mystokinesis
+|info=
+Increase Spell Immunity for Allies
+|trigger=Passive
+|radius=500
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Immunity|unit=%|lvl0=10|lvl1=20|lvl2=24|lvl3=28|lvl4=32|lvl5=36|lvl6=40}}
+}}}}
+|skill3={{SkillInfo
+|name=Spatiokinesis
+|info=
+Teleport a random person in front of you
+|trigger=Ability1
+|target=Random_Player
+|chance=50
+|cooldown=30.0
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Only Enemies Chance|unit=%|lvl0=25|lvl1=30|lvl2=34|lvl3=38|lvl4=42|lvl5=46|lvl6=50}}
+}}}}
+|skill4={{SkillInfo
+|name=Tychokinesis
+|info=
+Evade Damage
+|trigger=Victim
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Chance|lvl0=10.0%|lvl1=18.0%|lvl2=21.0%|lvl3=24.0%|lvl4=27.0%|lvl5=30.0%|lvl6=33.0%}}
+}}}}
+|skill5={{SkillInfo
+|name=Odynokinesis
+|info=
+Return Weapon Damage for allies
+|trigger=Ultimate
+|target=AoE_Self
+|damage=50.0%
+|radius=500
+|cooldown=30.0
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl1=4.0|lvl2=4.4|lvl3=4.8|lvl4=5.2|lvl5=5.6|lvl6=6.0}}
+}}}}
+}}

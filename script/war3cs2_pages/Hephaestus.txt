@@ -1,0 +1,72 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Hephaestus
+|image=[[File:Hephaestus.webp]]
+|category=God
+|max=56
+|level=3020
+|items=
+Ankh of Reincarnation
+}}
+|skill1={{SkillInfo
+|name=Aegis
+|info=
+Increase Health and Speed
+|trigger=Passive
+|buffs=
+<p>
+Speed: +10%
+</p>
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Health|unit=HP|lvl1=25|lvl2=30|lvl3=35|lvl4=40|lvl5=45|lvl6=50|lvl7=55|lvl8=60}}
+}}}}
+|skill2={{SkillInfo
+|name=Smith's Pride
+|info=
+Gain Random Primary with larger clip
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Chance|unit=%|lvl1=65|lvl2=70|lvl3=75|lvl4=80|lvl5=85|lvl6=90|lvl7=95|lvl8=100}}
+}}}}
+|skill3={{SkillInfo
+|name=Smith's Backup
+|info=
+Gain Random Secondary with larger clip
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Chance|unit=%|lvl1=65|lvl2=70|lvl3=75|lvl4=80|lvl5=85|lvl6=90|lvl7=95|lvl8=100}}
+}}}}
+|skill4={{SkillInfo
+|name=Smith's Tools
+|info=
+Gain Grenades
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Chance|unit=%|lvl1=25|lvl2=30|lvl3=35|lvl4=40|lvl5=45|lvl6=50|lvl7=55|lvl8=60}}
+}}}}
+|skill5={{SkillInfo
+|name=Arm the Masses - Guns
+|info=
+Give Allies Random Primaries
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Chance|unit=%|lvl1=12|lvl2=15|lvl3=18|lvl4=21|lvl5=24|lvl6=27|lvl7=30|lvl8=33}}
+}}}}
+|skill6={{SkillInfo
+|name=Arm the Masses - Tools
+|info=
+Give Allies Grenades
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Chance|unit=%|lvl1=12|lvl2=15|lvl3=18|lvl4=21|lvl5=24|lvl6=27|lvl7=30|lvl8=33}}
+}}}}
+|skill7={{SkillInfo
+|name=Embued Armor
+|info=
+Spell Immunity
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Chance|unit=%|lvl1=46|lvl2=52|lvl3=60|lvl4=68|lvl5=76|lvl6=84|lvl7=92|lvl8=100}}
+}}}}
+}}

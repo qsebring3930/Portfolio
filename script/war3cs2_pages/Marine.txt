@@ -1,0 +1,95 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Marine
+|image=[[File:Marine.webp]]
+|category=SC-Terran
+|max=30
+|level=1215
+|access=Beta
+|weapons=
+Galil AR
+|restricted=All
+|items=
+Ring of Resistance
+}}
+|skill1={{SkillInfo
+|name=Ballistic Alloy Shield
+|info=
+<p>
+Passive: Increase Health<br>
+Victim: Reduce Incoming Weapon Damage, Increase Incoming Magic Damage
+</p>
+|trigger=Special
+|buffs=
+<p>
+Weapon Damage: -20%<br>
+Magic Damage: +33%
+</p>
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Health|unit=HP|lvl1=10|lvl2=20|lvl3=30|lvl4=40|lvl5=50|lvl6=60}}
+}}}}
+|skill2={{SkillInfo
+|name=Switch Rounds
+|info=
+<p>
+Passive: Increase Clip Size.<br>
+Ability: Change Round Type.<br>
+Depleted Uranium Rounds: Silence, Spell Usage Hurts<br>
+Armor Piercing Rounds: Increase Weapon Damage<br>
+Incendiary Rounds: Burn
+</p>
+|trigger=Ability1
+|target=Self
+|chance=33
+|cooldown=5.0
+|extra=
+<p>
+Depleted Uranium Rounds: Damage 10<br>
+Armor Piercing Rounds: Increase Between 2 and ...
+</p>
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Clip|lvl1=5|lvl2=10|lvl3=15|lvl4=20|lvl5=25|lvl6=30}}
+|line2={{LevelUpRow|field=Uranium Duration|unit=sec.|lvl1=2.5|lvl2=3.0|lvl3=3.5|lvl4=4.0|lvl5=4.5|lvl6=5.0}}
+|line3={{LevelUpRow|field=AP Increase|lvl1=5|lvl2=6|lvl3=7|lvl4=8|lvl5=9|lvl6=10}}
+|line4={{LevelUpRow|field=Incendiary Duration|unit=sec.|lvl1=0.6|lvl2=1.2|lvl3=1.8|lvl4=2.4|lvl5=3.0|lvl6=3.6}}
+}}}}
+|skill3={{SkillInfo
+|name=Magrail Munitions
+|info=
+Right Click to Damage Enemies
+|trigger=Special
+|target=Cylinder
+|range=1500
+|cooldown=30.0
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Damage|lvl1=15|lvl2=18|lvl3=21|lvl4=24|lvl5=27|lvl6=30}}
+}}}}
+|skill4={{SkillInfo
+|name=Laser Targeting
+|info=
+Toggle to Increase Accuracy
+|trigger=Ability2
+|target=Self
+|range=3000
+|cooldown=5.0
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Accuracy|lvl1=15.0%|lvl2=20.0%|lvl3=25.0%|lvl4=30.0%|lvl5=35.0%|lvl6=40.0%}}
+}}}}
+|skill5={{SkillInfo
+|name=Stim Pack
+|info=
+Sacrifice Health to Increase Speed and Fire Rate
+|trigger=Ultimate
+|target=Self
+|duration=8
+|buffs=
+<p>
+Speed: +20%<br>
+Fire Rate: +20%
+</p>
+|cooldown=15.0
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Health|unit=HP|lvl1=30|lvl2=27|lvl3=24|lvl4=21|lvl5=18|lvl6=15}}
+}}}}
+}}

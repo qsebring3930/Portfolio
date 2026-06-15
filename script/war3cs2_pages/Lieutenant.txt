@@ -1,0 +1,69 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Lieutenant
+|image=[[File:Lieutenant.webp]]
+|category=Military
+|max=25
+|level=1680
+|weapons=
+Five-Seven<br>
+Knife
+|restricted=All
+|items=
+Boots of Evasion
+}}
+|skill1={{SkillInfo
+|name=Hollow Point
+|info=
+Increase Gun Damage
+|trigger=Attack
+|extra=Damage +10%. Extra Damage between 3 and ...
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Increase|lvl1=3|lvl2=4|lvl3=5|lvl4=6|lvl5=7}}
+}}}}
+|skill2={{SkillInfo
+|name=Explosive Heads
+|info=
+AoE Damage
+|trigger=Attack
+|radius=150
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Chance|lvl1=10.0%|lvl2=15.0%|lvl3=20.0%|lvl4=25.0%|lvl5=30.0%}}
+|line2={{LevelUpRow|field=Damage|lvl1=10|lvl2=15|lvl3=20|lvl4=25|lvl5=30}}
+}}}}
+|skill3={{SkillInfo
+|name=Flare Shot
+|info=
+Blind
+|trigger=Attack
+|chance=20
+|extra=Duration between 1 and ...
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl1=3.0|lvl2=3.2|lvl3=3.5|lvl4=3.7|lvl5=4.0}}
+}}}}
+|skill4={{SkillInfo
+|name=Bionic Vest
+|info=
+Evade Weapon Damage if armored
+|trigger=Victim
+|extra=Cooldown between 2.0 and ...
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Cooldown|unit=sec.|lvl1=7.0|lvl2=6.0|lvl3=5.0|lvl4=4.0|lvl5=3.0}}
+}}}}
+|skill5={{SkillInfo
+|name=Expert Marksman
+|info=
+Scope, Increase Attack Skill Potency
+|trigger=Ultimate
+|target=Self
+|buffs=
+<p>
+Hollow Point: +10% & Max Damage<br>
+Explosive Heads: +10% Chance
+</p>
+|cooldown=1.0
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Scope|lvl1=54|lvl2=48|lvl3=42|lvl4=36|lvl5=30}}
+}}}}
+}}

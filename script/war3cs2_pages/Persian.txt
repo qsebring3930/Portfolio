@@ -1,0 +1,73 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Persian
+|image=[[File:Persian.webp]]
+|category=Pokémon - Normal
+|max=25
+|level=745
+|weapons=
+P250<br>
+Knife
+|restricted=All
+}}
+|skill1={{SkillInfo
+|name=Technician
+|info=
+<p>
+Increase Weapon Damage on triggering 'Fake Out' and 'Pay Day'<br>
+Increase 'Snarl' Damage
+</p>
+|trigger=Special
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Increase|lvl1=10.0%|lvl2=20.0%|lvl3=30.0%|lvl4=40.0%|lvl5=50.0%}}
+|line2={{LevelUpRow|field=Damage|lvl1=1|lvl2=2|lvl3=3|lvl4=4|lvl5=5}}
+}}}}
+|skill2={{SkillInfo
+|name=Fake Out
+|info=
+<p>
+Passive: Increase Speed<br>
+Attack: Bash on First Attack
+</p>
+|trigger=Special
+|duration=1
+|extra=Halves Speed Boost when triggered until out of combat
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Speed|lvl1=5.0%|lvl2=10.0%|lvl3=15.0%|lvl4=20.0%|lvl5=25.0%}}
+}}}}
+|skill3={{SkillInfo
+|name=Pay Day
+|info=
+Steal Money
+|trigger=Attack
+|chance=30
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Money|lvl1=$100|lvl2=$200|lvl3=$300|lvl4=$400|lvl5=$500}}
+}}}}
+|skill4={{SkillInfo
+|name=Snarl
+|info=
+Damage, Hex and Decrease Dealt Magic Damage
+|trigger=Ability1
+|target=Cone
+|range=600
+|cone=40
+|cooldown=15.0
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Damage|lvl1=2|lvl2=4|lvl3=6|lvl4=8|lvl5=10}}
+|line2={{LevelUpRow|field=Duration|unit=sec.|lvl1=1.0|lvl2=2.0|lvl3=3.0|lvl4=4.0|lvl5=5.0}}
+|line3={{LevelUpRow|field=Decrease|lvl1=10.0%|lvl2=20.0%|lvl3=30.0%|lvl4=40.0%|lvl5=50.0%}}
+}}}}
+|skill5={{SkillInfo
+|name=Switcheroo
+|info=
+Steal Weapon
+|trigger=Ultimate
+|target=Target_Enemy
+|range=750
+|cooldown=25.0
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl1=2.0|lvl2=3.0|lvl3=4.0|lvl4=5.0|lvl5=6.0}}
+}}}}
+}}

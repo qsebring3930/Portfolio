@@ -1,0 +1,90 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Tech Goblin
+|image=[[File:Tech Goblin.webp]]
+|category=Goblin
+|max=36
+|level=875
+|weapons=
+PP-Bizon<br>
+Grenade<br>
+Smoke Grenade<br>
+Incendiary Grenade<br>
+Decoy Grenade<br>
+Taser
+|restricted=All
+|items=
+Gloves of Warmth
+}}
+|skill1={{SkillInfo
+|name=Grenade Dispenser
+|info=
+Gain random Grenade
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Tick Rate|unit=sec.|lvl1=13.0|lvl2=12.0|lvl3=11.0|lvl4=10.0|lvl5=9.0|lvl6=8.0}}
+}}}}
+|skill2={{SkillInfo
+|name=Well Stocked
+|info=
+Increase Magazine, Gain Random Grenades
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Magazine|lvl1=8|lvl2=16|lvl3=24|lvl4=32|lvl5=40|lvl6=48}}
+|line2={{LevelUpRow|field=Grenades|lvl1=1|lvl2=2|lvl3=3|lvl4=4|lvl5=5|lvl6=6}}
+}}}}
+|skill3={{SkillInfo
+|name=Misfire
+|info=
+Increase Fire Rate
+|trigger=Special
+|chance=20
+|duration=2
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Fire Rate|lvl0=5.0%|lvl1=10.0%|lvl2=20.0%|lvl3=30.0%|lvl4=40.0%|lvl5=50.0%|lvl6=60.0%}}
+}}}}
+|skill4={{SkillInfo
+|name=Goblin Tinkering
+|info=
+<p>
+Improve Utilities<br>
+Turn Grenade into Frag Grenade<br>
+Turn Smoke into Tear Gass<br>
+Turn Incendiary into Fuel Bomb<br>
+Turn Decoy into Hologram<br>
+Decrease Taser Charge Time
+</p>
+|trigger=Special
+|extra=Frag Grenades deal 50% of the damage
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Frag Quantity|lvl1=1|lvl2=2|lvl3=3|lvl4=4|lvl5=5|lvl6=6}}
+|line2={{LevelUpRow|field=Tear Gas Damage|lvl1=1|lvl2=2|lvl3=3|lvl4=4|lvl5=5|lvl6=6}}
+|line3={{LevelUpRow|field=Fuel Bomb Chance|unit=%|lvl1=7|lvl2=14|lvl3=21|lvl4=28|lvl5=35|lvl6=42}}
+|line4={{LevelUpRow|field=Hologram Duration|unit=sec.|lvl1=1.0|lvl2=2.0|lvl3=3.0|lvl4=4.0|lvl5=5.0|lvl6=6.0}}
+|line5={{LevelUpRow|field=Taser Cooldown|unit=sec.|lvl1=25.0|lvl2=21.5|lvl3=18.0|lvl4=14.5|lvl5=11.0|lvl6=7.5}}
+}}}}
+|skill5={{SkillInfo
+|name=Magnet Contraption
+|info=
+Push flying weapons away from you
+|trigger=Ability1
+|target=Self
+|cooldown=15.0
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl1=1.0|lvl2=2.0|lvl3=3.0|lvl4=4.0|lvl5=5.0|lvl6=6.0}}
+|line2={{LevelUpRow|field=Radius|lvl1=125.0|lvl2=200.0|lvl3=275.0|lvl4=350.0|lvl5=425.0|lvl6=500.0}}
+}}}}
+|skill6={{SkillInfo
+|name=Rocket Launcher
+|info=
+Launch Rocket
+|trigger=Ultimate
+|target=Object
+|damage=120
+|force=1.25
+|cooldown=30.0
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Radius|lvl1=200.0|lvl2=220.0|lvl3=240.0|lvl4=260.0|lvl5=280.0|lvl6=300.0}}
+}}}}
+}}

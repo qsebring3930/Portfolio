@@ -1,0 +1,77 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Poltergeist
+|image=[[File:Poltergeist.webp]]
+|category=Ghost
+|max=48
+|level=505
+|weapons=
+Knife
+|restricted=All
+|items=
+Armor of Protection<br>
+Boots of Evasion<br>
+Sock of Feathers
+|passive=
+<p>
+Speed: -25%<br>
+Size: -20%<br>
+Weapon Fire: disabled
+</p>
+}}
+|skill1={{SkillInfo
+|name=Possessed
+|info=
+Possess Enemy
+|trigger=Death
+|levelup={{LevelUpInfo|levels=8|zero=1
+|line1={{LevelUpRow|field=Chance|unit=%|lvl0=3|lvl1=6|lvl2=8|lvl3=10|lvl4=12|lvl5=14|lvl6=16|lvl7=18|lvl8=20}}
+}}}}
+|skill2={{SkillInfo
+|name=Strangeness
+|info=
+Teleport Behind Random Enemy
+|trigger=Victim
+|levelup={{LevelUpInfo|levels=8|zero=1
+|line1={{LevelUpRow|field=Chance|lvl0=25.0%|lvl1=40.0%|lvl2=45.0%|lvl3=50.0%|lvl4=55.0%|lvl5=60.0%|lvl6=65.0%|lvl7=70.0%|lvl8=75.0%}}
+}}}}
+|skill3={{SkillInfo
+|name=Haunting
+|info=
+Gain Health
+|trigger=Kill
+|levelup={{LevelUpInfo|levels=8|zero=1
+|line1={{LevelUpRow|field=Health|unit=HP|lvl0=20|lvl1=40|lvl2=45|lvl3=50|lvl4=55|lvl5=60|lvl6=65|lvl7=70|lvl8=75}}
+}}}}
+|skill4={{SkillInfo
+|name=Mischief
+|info=
+Increase Damage, Impale
+|trigger=Attack
+|damage=15
+|force=275
+|levelup={{LevelUpInfo|levels=8|zero=1
+|line1={{LevelUpRow|field=Chance|lvl0=10.0%|lvl1=15.0%|lvl2=20.0%|lvl3=25.0%|lvl4=30.0%|lvl5=35.0%|lvl6=40.0%|lvl7=45.0%|lvl8=50.0%}}
+}}}}
+|skill5={{SkillInfo
+|name=Persistance
+|info=
+Heal Back
+|trigger=Victim
+|extra=Heal between 10 and ...
+|levelup={{LevelUpInfo|levels=8|zero=1
+|line1={{LevelUpRow|field=Health|unit=HP|lvl0=20|lvl1=26|lvl2=28|lvl3=30|lvl4=32|lvl5=34|lvl6=36|lvl7=38|lvl8=40}}
+}}}}
+|skill6={{SkillInfo
+|name=Spiratic Movement
+|info=
+Leap
+|trigger=Ultimate
+|target=Self
+|force=3
+|cooldown=3.0
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Range|lvl1=160.0|lvl2=180.0|lvl3=200.0|lvl4=220.0|lvl5=240.0|lvl6=260.0|lvl7=280.0|lvl8=300.0}}
+}}}}
+}}

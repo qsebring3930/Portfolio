@@ -1,0 +1,60 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Santa
+|image=[[File:Santa.webp]]
+|category=Holiday - Christmas
+|max=25
+|level=405
+}}
+|skill1={{SkillInfo
+|name=Jolly
+|info=
+Increase Health
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Health|unit=HP|lvl1=10|lvl2=20|lvl3=30|lvl4=40|lvl5=50}}
+}}}}
+|skill2={{SkillInfo
+|name=Santa's Helpers
+|info=
+Turn Enemy into Minion
+|trigger=Victim
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Chance|lvl1=2.0%|lvl2=3.5%|lvl3=5.0%|lvl4=6.5%|lvl5=8.0%}}
+}}}}
+|skill3={{SkillInfo
+|name=Presents
+|info=
+Ward: Damage Enemies
+|trigger=Victim
+|chance=33
+|duration=6
+|radius=250
+|cooldown=2.0
+|extra=Damage is between 10 and ...
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Damage|lvl1=12|lvl2=14|lvl3=16|lvl4=18|lvl5=20}}
+}}}}
+|skill4={{SkillInfo
+|name=Cookies and Milk
+|info=
+Heal, Increase Speed
+|trigger=Ability1
+|target=Self
+|duration=5
+|cooldown=15.0
+|extra=Heal is between 10 and ...
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Heal|unit=HP|lvl1=14|lvl2=18|lvl3=22|lvl4=26|lvl5=30}}
+}}}}
+|skill5={{SkillInfo
+|name=Santa's Sleigh
+|info=
+Toggle Flight
+|trigger=Ultimate
+|target=Toggle
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Cooldown|unit=sec.|lvl1=8.0|lvl2=7.0|lvl3=6.0|lvl4=5.0|lvl5=4.0}}
+}}}}
+}}

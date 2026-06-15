@@ -1,0 +1,71 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Yukiko Amagi
+|image=[[File:Yukiko Amagi.webp]]
+|category=Persona 4
+|max=30
+|level=4915
+|weapons=
+Glock-18<br>
+Knife
+|restricted=All
+|team=1
+}}
+|skill1={{SkillInfo
+|name=Fire Magic
+|info=
+Damage, Burn
+|trigger=Ability1
+|target=Target_Enemy
+|duration=2
+|range=600
+|cooldown=20.0
+|extra=Levels 2, 4, 6 and 7 are AoE with radius 300.
+|levelup={{LevelUpInfo|levels=7
+|line1={{LevelUpRow|field=Damage|lvl1=25|lvl2=20|lvl3=30|lvl4=25|lvl5=35|lvl6=30|lvl7=40}}
+}}}}
+|skill2={{SkillInfo
+|name=Fire Boost
+|info=
+Increase 'Fire Magic' Efficiency
+|trigger=Special
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Damage|lvl1=2|lvl2=4|lvl3=6|lvl4=8|lvl5=10}}
+|line2={{LevelUpRow|field=Duration|unit=sec.|lvl1=1.0|lvl2=1.2|lvl3=1.5|lvl4=1.8|lvl5=2.0}}
+}}}}
+|skill3={{SkillInfo
+|name=Healing Magic
+|info=
+Heal your Allies
+|trigger=Ability2
+|target=Target_Ally
+|range=600
+|cooldown=20.0
+|extra=Applies to self if no target. Levels 2, 4, 6 and 7 are AoE with radius 400. Level 7 also Cleanses
+|levelup={{LevelUpInfo|levels=7
+|line1={{LevelUpRow|field=Heal|unit=HP|lvl1=25|lvl2=20|lvl3=30|lvl4=25|lvl5=35|lvl6=30|lvl7=40}}
+}}}}
+|skill4={{SkillInfo
+|name=Mudoon
+|info=
+Chance to Cast Mudoon Instead of 'Fire Magic'. Reduce Enemy's health to low health and Darken Vision
+|trigger=Special
+|duration=2
+|extra=Set Health to 20% of Max Health.
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Chance|unit=%|lvl1=2|lvl2=4|lvl3=6|lvl4=8|lvl5=10}}
+}}}}
+|skill5={{SkillInfo
+|name=All Out Attack
+|info=
+Damage enemies around you. Evolves if Chie is close by.
+|trigger=Ultimate
+|target=AoE_Self
+|radius=500
+|cooldown=30.0
+|extra=Twin Dragon increases Damage by 30% and Radius by 100
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Damage|lvl1=10|lvl2=14|lvl3=18|lvl4=22|lvl5=26|lvl6=30}}
+}}}}
+}}

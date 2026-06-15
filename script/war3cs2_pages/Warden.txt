@@ -1,0 +1,49 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Warden
+|image=[[File:Warden.webp]]
+|category=WC3-Elf
+|max=32
+|level=130
+}}
+|skill1={{SkillInfo
+|name=Shadow Meld
+|info=
+Decrease visibility, Decreases Further on no Action
+|trigger=Passive
+|tickrate=0.5
+|extra=Further Decreased by 5% each tick upto 75% base visibility
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Visibility|lvl1=5.0%|lvl2=10.0%|lvl3=15.0%|lvl4=20.0%|lvl5=25.0%|lvl6=30.0%|lvl7=35.0%|lvl8=40.0%}}
+}}}}
+|skill2={{SkillInfo
+|name=Blink
+|info=
+Teleport to where you aim
+|trigger=Ability1
+|target=Location
+|cooldown=10.0
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Range|lvl1=325.0|lvl2=350.0|lvl3=375.0|lvl4=400.0|lvl5=425.0|lvl6=450.0|lvl7=475.0|lvl8=500.0}}
+}}}}
+|skill3={{SkillInfo
+|name=Shadow Strike
+|info=
+DoT
+|trigger=Attack
+|damage=5
+|duration=5
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Cooldown|unit=sec.|lvl1=6.0|lvl2=5.5|lvl3=5.0|lvl4=4.5|lvl5=4.0|lvl6=3.5|lvl7=3.0|lvl8=2.5}}
+}}}}
+|skill4={{SkillInfo
+|name=Vengeance
+|info=
+Summon Avatar of Vengeance
+|trigger=Ultimate
+|target=Random_Ally
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Cooldown|unit=sec.|lvl1=44.0|lvl2=42.0|lvl3=40.0|lvl4=38.0|lvl5=36.0|lvl6=34.0|lvl7=32.0|lvl8=30.0}}
+}}}}
+}}

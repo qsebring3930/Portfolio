@@ -1,0 +1,51 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Necromancer
+|image=[[File:Necromancer.webp]]
+|category=WC3-Undead
+|max=32
+|level=10
+}}
+|skill1={{SkillInfo
+|name=Cripple
+|info=
+Hinder
+|trigger=Attack
+|chance=25
+|buffs=
+<p>
+Speed: -30%<br>
+Fire Rate: -30%
+</p>
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl1=1.5|lvl2=2.0|lvl3=2.5|lvl4=3.0|lvl5=3.5|lvl6=4.0|lvl7=4.5|lvl8=5.0}}
+}}}}
+|skill2={{SkillInfo
+|name=Unholy Frenzy
+|info=
+Double Weapon Damage Dealt and Received
+|trigger=Attack
+|chance=20
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl1=1.5|lvl2=2.0|lvl3=2.5|lvl4=3.0|lvl5=3.5|lvl6=4.0|lvl7=4.5|lvl8=5.0}}
+}}}}
+|skill3={{SkillInfo
+|name=Necromancer Master
+|info=
+Gain Assault Rifle with extra ammo
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Chance|unit=%|lvl1=65|lvl2=70|lvl3=75|lvl4=80|lvl5=85|lvl6=90|lvl7=95|lvl8=100}}
+}}}}
+|skill4={{SkillInfo
+|name=Raise Skeleton
+|info=
+Revive Ally
+|trigger=Ultimate
+|target=Random_Ally
+|cooldown=30.0
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Chance|unit=%|lvl1=50|lvl2=55|lvl3=60|lvl4=65|lvl5=70|lvl6=75|lvl7=80|lvl8=85}}
+}}}}
+}}

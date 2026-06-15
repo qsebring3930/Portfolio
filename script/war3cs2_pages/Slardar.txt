@@ -1,0 +1,100 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Slardar
+|image=[[File:Slardar.webp]]
+|category=DotA-Strength
+|max=40
+|level=2180
+|weapons=
+Knife
+|restricted=All
+|passive=
+<p>
+Random Puddles: 6<br>
+Weapon Fire: disabled
+</p>
+}}
+|skill1={{SkillInfo
+|name=Seaborn Sentinel
+|info=
+<p>
+Gain Buffs While in a Puddle<br>
+Regen HP<br>
+Increase Speed, Skill and Spell Immunity<br>
+Increase Dealt Knife Damage<br>
+Decrease Received Weapon Damage
+</p>
+|trigger=Special
+|buffs=
+<p>
+Speed: +18%
+</p>
+|levelup={{LevelUpInfo|levels=8|zero=1
+|line1={{LevelUpRow|field=Heal|unit=HP|lvl0=2|lvl1=3|lvl2=4|lvl3=5|lvl4=6|lvl5=7|lvl6=8|lvl7=9|lvl8=10}}
+|line2={{LevelUpRow|field=Increase|lvl0=4.0%|lvl1=6.0%|lvl2=8.0%|lvl3=10.0%|lvl4=12.0%|lvl5=14.0%|lvl6=16.0%|lvl7=18.0%|lvl8=20.0%}}
+|line3={{LevelUpRow|field=Decrease|lvl0=2.0%|lvl1=3.0%|lvl2=4.0%|lvl3=5.0%|lvl4=6.0%|lvl5=7.0%|lvl6=8.0%|lvl7=9.0%|lvl8=10.0%}}
+|line4={{LevelUpRow|field=Immunity|unit=%|lvl0=8|lvl1=12|lvl2=16|lvl3=20|lvl4=24|lvl5=28|lvl6=32|lvl7=36|lvl8=40}}
+}}}}
+|skill2={{SkillInfo
+|name=Guardian Sprint
+|info=
+Increase Speed and Slow Resistance
+|trigger=Ability1
+|target=Self
+|duration=12
+|extra=Slow Resistance decreases slowly
+|levelup={{LevelUpInfo|levels=8|zero=1
+|line1={{LevelUpRow|field=Speed|lvl0=10.0%|lvl1=14.0%|lvl2=18.0%|lvl3=22.0%|lvl4=26.0%|lvl5=30.0%|lvl6=34.0%|lvl7=38.0%|lvl8=42.0%}}
+|line2={{LevelUpRow|field=Cooldown|unit=sec.|lvl0=36.0|lvl1=34.0|lvl2=32.0|lvl3=30.0|lvl4=28.0|lvl5=26.0|lvl6=24.0|lvl7=22.0|lvl8=20.0}}
+}}}}
+|skill3={{SkillInfo
+|name=Slithereen Crush
+|info=
+<p>
+Channel to Damage, Stun and Hinder Enemies around you. Create a Puddle<br>
+Shard: Inflict 'Corrosive Haze'
+</p>
+|trigger=Ability2
+|target=Self
+|duration=1
+|radius=325
+|buffs=
+<p>
+Hinder: -35%
+</p>
+|cooldown=8.0
+|extra=
+<p>
+Damage is reduced by distance<br>
+Stun: 0.8 sec.<br>
+Puddle: Radius: 300 - Duration: 10.0 sec.
+</p>
+|levelup={{LevelUpInfo|levels=8|zero=1
+|line1={{LevelUpRow|field=Damage|lvl0=8|lvl1=12|lvl2=16|lvl3=20|lvl4=24|lvl5=28|lvl6=32|lvl7=36|lvl8=40}}
+|line2={{LevelUpRow|field=Hinder Duration|unit=sec.|lvl0=2.0|lvl1=3.0|lvl2=3.0|lvl3=4.0|lvl4=4.0|lvl5=5.0|lvl6=5.0|lvl7=6.0|lvl8=6.0}}
+}}}}
+|skill4={{SkillInfo
+|name=Bash of the Deep
+|info=
+Increase Damage and Bash Every Fourth Hit
+|trigger=Attack
+|duration=1
+|levelup={{LevelUpInfo|levels=8|zero=1
+|line1={{LevelUpRow|field=Increase|lvl0=4|lvl1=6|lvl2=8|lvl3=10|lvl4=12|lvl5=14|lvl6=16|lvl7=18|lvl8=20}}
+}}}}
+|skill5={{SkillInfo
+|name=Corrosive Haze
+|info=
+Reveal and Highlight, Increase Received Weapon Damage, drops puddles while active
+|trigger=Ultimate
+|target=Target_Enemy
+|duration=8
+|range=900
+|radius=175
+|cooldown=10.0
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Increase|lvl1=7.5%|lvl2=10.0%|lvl3=12.5%|lvl4=15.0%|lvl5=17.5%|lvl6=20.0%|lvl7=22.5%|lvl8=25.0%}}
+|line2={{LevelUpRow|field=Puddle Duration|unit=sec.|lvl1=5.0|lvl2=6.0|lvl3=7.0|lvl4=8.0|lvl5=9.0|lvl6=10.0|lvl7=11.0|lvl8=12.0}}
+}}}}
+}}

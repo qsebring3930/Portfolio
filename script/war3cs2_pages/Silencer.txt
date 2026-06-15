@@ -1,0 +1,67 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Silencer
+|image=[[File:Silencer.webp]]
+|category=DotA-Magic
+|max=40
+|level=2540
+|weapons=
+MP9<br>
+Knife
+|restricted=All
+}}
+|skill1={{SkillInfo
+|name=Arcane Curse
+|info=
+Ward: Damages Enemies. Silence them if they cast spells
+|trigger=Ability1
+|target=Location
+|duration=10
+|range=750
+|radius=250
+|cooldown=15.0
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Damage|lvl1=3|lvl2=4|lvl3=5|lvl4=6|lvl5=7|lvl6=8|lvl7=9|lvl8=10}}
+}}}}
+|skill2={{SkillInfo
+|name=Glaives of Wisdom
+|info=
+Silence
+|trigger=Attack
+|duration=2
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Chance|lvl1=12.0%|lvl2=15.0%|lvl3=18.0%|lvl4=21.0%|lvl5=24.0%|lvl6=27.0%|lvl7=30.0%|lvl8=33.0%}}
+}}}}
+|skill3={{SkillInfo
+|name=Last Word
+|info=
+Hurt Silenced Enemies around you
+|trigger=Aura
+|damage=5
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Radius|lvl1=400.0|lvl2=450.0|lvl3=500.0|lvl4=550.0|lvl5=600.0|lvl6=650.0|lvl7=700.0|lvl8=750.0}}
+}}}}
+|skill4={{SkillInfo
+|name=Suffer in Silence
+|info=
+<p>
+Attack: Increase Gun Damage To Silenced<br>
+Victim: Decrease Gun Damage From Silenced
+</p>
+|trigger=Special
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Increase|lvl1=9.0%|lvl2=12.0%|lvl3=15.0%|lvl4=18.0%|lvl5=21.0%|lvl6=24.0%|lvl7=27.0%|lvl8=30.0%}}
+|line2={{LevelUpRow|field=Decrease|lvl1=9.0%|lvl2=12.0%|lvl3=15.0%|lvl4=18.0%|lvl5=21.0%|lvl6=24.0%|lvl7=27.0%|lvl8=30.0%}}
+}}}}
+|skill5={{SkillInfo
+|name=Global Silence
+|info=
+Silence all Enemies
+|trigger=Ultimate
+|target=Enemies
+|cooldown=30.0
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl1=4.0|lvl2=4.5|lvl3=5.0|lvl4=5.5|lvl5=6.0|lvl6=6.5|lvl7=7.0|lvl8=7.5}}
+}}}}
+}}

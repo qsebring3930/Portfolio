@@ -1,0 +1,80 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Marauder
+|image=[[File:Marauder.webp]]
+|category=SC-Terran
+|max=30
+|level=1215
+|weapons=
+R8 Revolver
+|restricted=All
+|items=
+Armor of Protection<br>
+Ring of Resistance
+|passive=
+<p>
+Alt Weapon Fire: disabled
+</p>
+}}
+|skill1={{SkillInfo
+|name=Kinetic Foam
+|info=
+<p>
+Passive: Increase Health<br>
+ Victim: Reduce Incoming Weapon Damage, Increase Incoming Magic Damage
+</p>
+|trigger=Special
+|buffs=
+<p>
+Weapon Damage: -0.6<br>
+Magic Damage: +1.33
+</p>
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Health|unit=HP|lvl1=30|lvl2=40|lvl3=50|lvl4=60|lvl5=70|lvl6=80}}
+}}}}
+|skill2={{SkillInfo
+|name=Quad K12 Launcher
+|info=
+Launch Grenade
+|trigger=Ability1
+|target=Object
+|radius=200
+|force=0.75
+|cooldown=20.0
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Explosion Damage|lvl1=50|lvl2=54|lvl3=58|lvl4=62|lvl5=66|lvl6=70}}
+}}}}
+|skill3={{SkillInfo
+|name=Concussive Shells
+|info=
+Quad K12 Launcher Slows
+|trigger=Special
+|buffs=
+<p>
+Speed: -0.3
+</p>
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl1=3.0|lvl2=3.6|lvl3=4.2|lvl4=4.8|lvl5=5.4|lvl6=6.0}}
+}}}}
+|skill4={{SkillInfo
+|name=Magrail Munitions
+|info=
+Increase Clip Size
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Clip|lvl1=1|lvl2=2|lvl3=3|lvl4=4|lvl5=5|lvl6=6}}
+}}}}
+|skill5={{SkillInfo
+|name=Stim Pack
+|info=
+Sacrifice Health to Allow Fanning, Decrease Quad K12 Launcher Cooldown
+|trigger=Ultimate
+|target=Self
+|duration=10
+|cooldown=15.0
+|extra=Reduce Cooldown Quad K12 Launcher by 50%
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Health|unit=HP|lvl1=30|lvl2=28|lvl3=26|lvl4=24|lvl5=22|lvl6=20}}
+}}}}
+}}

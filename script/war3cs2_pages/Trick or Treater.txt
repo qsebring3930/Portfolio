@@ -1,0 +1,125 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Trick or Treater
+|image=[[File:Trick or Treater.webp]]
+|category=Holiday - Halloween
+|max=40
+|level=345
+|passive=
+<p>
+Candy: Spawns on kill and randomly
+</p>
+}}
+|skill1={{SkillInfo
+|name=Knock Knock
+|info=
+Increase Weapon Damage and Bash
+|trigger=Attack
+|chance=15
+|duration=0.5
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Damage|lvl1=2|lvl2=4|lvl3=6|lvl4=8|lvl5=10}}
+}}}}
+|skill2={{SkillInfo
+|name=Eat Candy
+|info=
+Eat Candy to heal and Increase Max Health
+|trigger=Ability1
+|target=Self
+|heal=10
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Cooldown|unit=sec.|lvl1=9.0|lvl2=8.0|lvl3=7.0|lvl4=6.0|lvl5=5.0}}
+}}}}
+|skill3={{SkillInfo
+|name=Sugar Rush
+|info=
+Increase Speed on collecting candy
+|trigger=Special
+|duration=8
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Speed|lvl1=4.0%|lvl2=8.0%|lvl3=12.0%|lvl4=16.0%|lvl5=20.0%}}
+}}}}
+|skill4={{SkillInfo
+|name=Jedi Costume
+|info=
+Increase Longjump, Increase Weapon Damage; Ability2: Push and Pull Enemies around you
+|trigger=Special
+|damage=5
+|force=3
+|cooldown=5.0
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Long Jump|lvl1=14.0%|lvl2=18.0%|lvl3=22.0%|lvl4=26.0%|lvl5=30.0%}}
+|line2={{LevelUpRow|field=Chance|lvl1=8.0%|lvl2=16.0%|lvl3=24.0%|lvl4=32.0%|lvl5=40.0%}}
+|line3={{LevelUpRow|field=Radius|lvl1=400.0|lvl2=425.0|lvl3=450.0|lvl4=475.0|lvl5=500.0}}
+}}}}
+|skill5={{SkillInfo
+|name=Reaper Costume
+|info=
+Increase Health, Decrease Visibility, Steal Health; Ability2: Sacrifice Health to Damage enemies around you
+|trigger=Special
+|buffs=
+<p>
+Steal Multiplier: 40%
+</p>
+|cooldown=5.0
+|extra=Damage to self is 5% and enemies is 10% of Max Health
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Health|unit=HP|lvl1=10|lvl2=20|lvl3=30|lvl4=40|lvl5=50}}
+|line2={{LevelUpRow|field=Visibility|lvl1=30.0%|lvl2=35.0%|lvl3=40.0%|lvl4=45.0%|lvl5=50.0%}}
+|line3={{LevelUpRow|field=Steal Chance|lvl1=10.0%|lvl2=15.0%|lvl3=20.0%|lvl4=25.0%|lvl5=30.0%}}
+|line4={{LevelUpRow|field=Aura Radius|lvl1=200.0|lvl2=225.0|lvl3=250.0|lvl4=275.0|lvl5=300.0}}
+}}}}
+|skill6={{SkillInfo
+|name=Tiger Costume
+|info=
+Knife Only, Increase Speed, Increase Knife Damage; Ability2: Chance to Evade Weapon Damage
+|trigger=Special
+|cooldown=15.0
+|extra=Damage increase is halfed on left click
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Speed|lvl1=80.0%|lvl2=75.0%|lvl3=70.0%|lvl4=65.0%|lvl5=60.0%}}
+|line2={{LevelUpRow|field=Increase|lvl1=5|lvl2=10|lvl3=15|lvl4=20|lvl5=25}}
+|line3={{LevelUpRow|field=Evade Duration|lvl1=3.0|lvl2=3.5|lvl3=4.0|lvl4=4.5|lvl5=5.0}}
+}}}}
+|skill7={{SkillInfo
+|name=Goku Costume
+|info=
+Increase Health, Increase Longjump; Ability2: Teleport to where you aim
+|trigger=Special
+|cooldown=10.0
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Health|unit=HP|lvl1=40|lvl2=50|lvl3=60|lvl4=70|lvl5=80}}
+|line2={{LevelUpRow|field=LongJump|lvl1=24.0%|lvl2=28.0%|lvl3=32.0%|lvl4=36.0%|lvl5=40.0%}}
+|line3={{LevelUpRow|field=Teleport Range|lvl1=300.0|lvl2=350.0|lvl3=400.0|lvl4=450.0|lvl5=500.0}}
+}}}}
+|skill8={{SkillInfo
+|name=Use Power
+|info=
+Use the Power of your costume
+|trigger=Ability2
+|extra=Power depends on costume
+}}
+|skill9={{SkillInfo
+|name=Put on Costume
+|info=
+<p>
+Select a costume, Lose candy over time to keep costume<br>
+Use Settings to change default behavior
+</p>
+|trigger=Ultimate
+|required=
+<p>
+Jedi Costume - Level 1<br>
+Reaper Costume - Level 1<br>
+Tiger Costume - Level 1<br>
+Goku Costume - Level 1
+</p>
+|target=Self
+|tickrate=30
+|cooldown=10.0
+|extra=Tickrate Descreases by 5 seconds each tick
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Cost|lvl1=5|lvl2=4|lvl3=3|lvl4=2|lvl5=1}}
+}}}}
+}}

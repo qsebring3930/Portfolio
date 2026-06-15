@@ -1,0 +1,104 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Venus
+|image=[[File:Venus.webp]]
+|category=God
+|max=48
+|level=3020
+|weapons=
+Knife
+|restricted=All
+|passive=
+<p>
+Speed: +20%<br>
+Health: +20HP
+</p>
+}}
+|skill1={{SkillInfo
+|name=Tongue Tied
+|info=
+Force Reload
+|trigger=Attack
+|levelup={{LevelUpInfo|levels=8|zero=1
+|line1={{LevelUpRow|field=Chance|lvl0=4.0%|lvl1=6.0%|lvl2=8.0%|lvl3=10.0%|lvl4=12.0%|lvl5=14.0%|lvl6=16.0%|lvl7=18.0%|lvl8=20.0%}}
+}}}}
+|skill2={{SkillInfo
+|name=Venus' Embrace
+|info=
+Turn Enemy into Minion
+|trigger=Victim
+|levelup={{LevelUpInfo|levels=8|zero=1
+|line1={{LevelUpRow|field=Chance|lvl0=1.6%|lvl1=2.4%|lvl2=3.2%|lvl3=4.0%|lvl4=4.8%|lvl5=5.6%|lvl6=6.4%|lvl7=7.2%|lvl8=8.0%}}
+}}}}
+|skill3={{SkillInfo
+|name=Love Tap
+|info=
+Heal Ally or Damage and Disable Enemy. Affects nearby targets
+|trigger=Ability1
+|target=Target_Any
+|quantity=2
+|duration=1
+|range=800
+|radius=500
+|cooldown=15.0
+|extra=Effect is 50% for bounces
+|levelup={{LevelUpInfo|levels=8|zero=1
+|line1={{LevelUpRow|field=Heal|unit=HP|lvl0=9|lvl1=11|lvl2=13|lvl3=15|lvl4=17|lvl5=19|lvl6=21|lvl7=23|lvl8=25}}
+|line2={{LevelUpRow|field=Damage|lvl0=2|lvl1=3|lvl2=4|lvl3=5|lvl4=6|lvl5=7|lvl6=8|lvl7=9|lvl8=10}}
+}}}}
+|skill4={{SkillInfo
+|name=Swipe Right
+|info=
+Push to where you aim, Heal Allies and Slow Enemies around you on landing
+|trigger=Ability2
+|target=Self
+|duration=2.5
+|range=300
+|radius=250
+|force=2
+|cooldown=8.0
+|extra=Cooldown Resets if anyone dies in a radius of 300 around you
+|levelup={{LevelUpInfo|levels=8|zero=1
+|line1={{LevelUpRow|field=Heal|unit=HP|lvl0=9|lvl1=11|lvl2=13|lvl3=15|lvl4=17|lvl5=19|lvl6=21|lvl7=23|lvl8=25}}
+|line2={{LevelUpRow|field=Slow|lvl0=8.0%|lvl1=12.0%|lvl2=16.0%|lvl3=20.0%|lvl4=24.0%|lvl5=28.0%|lvl6=32.0%|lvl7=36.0%|lvl8=40.0%}}
+}}}}
+|skill5={{SkillInfo
+|name=Cupid's Kiss
+|info=
+Highlight and DoT Enemy. Cupid Minion
+|trigger=Ability3
+|target=Target_Enemy
+|range=800
+|cooldown=18.0
+|extra=Enemy Becomes Cupid Minion on Death
+|levelup={{LevelUpInfo|levels=8|zero=1
+|line1={{LevelUpRow|field=Damage|lvl0=1|lvl1=1|lvl2=2|lvl3=2|lvl4=3|lvl5=3|lvl6=4|lvl7=4|lvl8=5}}
+|line2={{LevelUpRow|field=Duration|unit=sec.|lvl0=1.0|lvl1=2.0|lvl2=2.0|lvl3=3.0|lvl4=3.0|lvl5=4.0|lvl6=4.0|lvl7=5.0|lvl8=5.0}}
+}}}}
+|skill6={{SkillInfo
+|name=Eternal Bond
+|info=
+<p>
+Bond with Ally to empower each other until death<br>
+Increase Speed<br>
+Increase Dealt Weapon Damage<br>
+Reduce Received Weapon Damage<br>
+Evade Weapon Damage
+</p>
+|trigger=Ultimate
+|target=Target_Ally
+|range=800
+|buffs=
+<p>
+Speed: +10%<br>
+Increase: +10%<br>
+Decrease: -10%<br>
+Evade: 10%
+</p>
+|extra=Expires if either party dies. Use again to replace the bond.
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Heal|unit=HP|lvl1=1|lvl2=2|lvl3=3|lvl4=4|lvl5=5|lvl6=6|lvl7=7|lvl8=8}}
+|line2={{LevelUpRow|field=Cooldown|unit=sec.|lvl1=42.0|lvl2=40.0|lvl3=37.5|lvl4=35.0|lvl5=32.5|lvl6=30.0|lvl7=27.5|lvl8=25.0}}
+}}}}
+}}

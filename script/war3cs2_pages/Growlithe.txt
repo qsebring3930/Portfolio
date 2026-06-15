@@ -1,0 +1,67 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Growlithe
+|image=[[File:Growlithe.webp]]
+|category=Pokémon - Fire
+|max=25
+|level=625
+}}
+|skill1={{SkillInfo
+|name=Flash Fire
+|info=
+Increase All Damage, and Heal while Burning
+|trigger=Special
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Increase|lvl1=10.0%|lvl2=15.0%|lvl3=20.0%|lvl4=25.0%|lvl5=30.0%}}
+}}}}
+|skill2={{SkillInfo
+|name=Bite
+|info=
+Increase Weapon Damage and Bash
+|trigger=Attack
+|chance=25
+|extra=Damage Between 1 and ...
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Max Damage|lvl1=1|lvl2=2|lvl3=3|lvl4=4|lvl5=5}}
+|line2={{LevelUpRow|field=Duration|unit=sec.|lvl1=0.3|lvl2=0.4|lvl3=0.6|lvl4=0.6|lvl5=0.8}}
+}}}}
+|skill3={{SkillInfo
+|name=Flame Wheel
+|info=
+Increase Speed and Burn yourself
+|trigger=Ability1
+|target=Self
+|buffs=
+<p>
+Speed: +30%
+</p>
+|cooldown=15.0
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl1=3.0|lvl2=3.5|lvl3=4.0|lvl4=4.5|lvl5=5.0}}
+}}}}
+|skill4={{SkillInfo
+|name=Fire Fang
+|info=
+Increase Damage and Burn on Next Bite
+|trigger=Ability2
+|target=Self
+|duration=3
+|cooldown=15.0
+|extra=Guarantees Bite Proc on next attack
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Damage|lvl1=3|lvl2=6|lvl3=9|lvl4=12|lvl5=15}}
+}}}}
+|skill5={{SkillInfo
+|name=Roar
+|info=
+Channel to Knock Back enemies
+|trigger=Ultimate
+|target=AoE_Self
+|duration=1
+|radius=500
+|cooldown=15.0
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Force|lvl1=2.0|lvl2=2.4|lvl3=2.8|lvl4=3.2|lvl5=3.6}}
+}}}}
+}}

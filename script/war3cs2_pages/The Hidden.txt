@@ -1,0 +1,97 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=The Hidden
+|image=[[File:The Hidden.webp]]
+|category=Monster
+|max=42
+|level=3965
+|weapons=
+Grenade<br>
+Knife
+|restricted=All
+|items=
+Gloves of Warmth<br>
+Cloak of Shadows<br>
+Sock of Feathers
+|team=1
+|passive=
+<p>
+Footsteps: Silent<br>
+Fall Damage: 0%
+</p>
+}}
+|skill1={{SkillInfo
+|name=Pig Stick
+|info=
+Right Click to deal massive damage if you are the last person alive
+|trigger=Attack
+|damage=350
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Cooldown|unit=sec.|lvl0=40.0|lvl1=35.0|lvl2=30.0|lvl3=25.0|lvl4=20.0|lvl5=15.0|lvl6=10.0}}
+}}}}
+|skill2={{SkillInfo
+|name=Subject 617
+|info=
+Decrease Weapon Damage
+|trigger=Victim
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Decrease|lvl0=5.0%|lvl1=10.0%|lvl2=15.0%|lvl3=20.0%|lvl4=25.0%|lvl5=30.0%|lvl6=35.0%}}
+}}}}
+|skill3={{SkillInfo
+|name=Pipe Bombs
+|info=
+Increase Magnitude Grenades
+|trigger=Attack
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Magnitude|lvl0=15|lvl1=25|lvl2=30|lvl3=35|lvl4=40|lvl5=45|lvl6=50}}
+}}}}
+|skill4={{SkillInfo
+|name=Pounce
+|info=
+Push to where you aim
+|trigger=Ability1
+|target=Location
+|range=300
+|force=1.75
+|extra=Increased Force when Wall Grab is active
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Cooldown|unit=sec.|lvl0=7.0|lvl1=6.0|lvl2=5.0|lvl3=4.0|lvl4=3.0|lvl5=2.0|lvl6=1.0}}
+}}}}
+|skill5={{SkillInfo
+|name=Feed
+|info=
+Ward: Heal
+|trigger=Ability2
+|target=Self
+|duration=4
+|radius=100
+|cooldown=10.0
+|extra=Collect Corpses by killing enemies with your knife. Only works if you are not moving
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Heal|unit=HP|lvl0=4|lvl1=6|lvl2=8|lvl3=10|lvl4=12|lvl5=14|lvl6=16}}
+}}}}
+|skill6={{SkillInfo
+|name=Sense Fear
+|info=
+Highlight Enemies if you are not moving
+|trigger=Ability3
+|target=Self
+|tickrate=0.5
+|cooldown=5.0
+|extra=Cancels if you move. Enemies are color coded for health
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Radius|lvl0=600.0|lvl1=750.0|lvl2=800.0|lvl3=850.0|lvl4=900.0|lvl5=950.0|lvl6=1000.0}}
+}}}}
+|skill7={{SkillInfo
+|name=Wall Grab
+|info=
+Channel to Bash
+|trigger=Ultimate
+|target=Self
+|cooldown=1.0
+|extra=Press Again to cancel early, only works against walls
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl1=2.0|lvl2=4.0|lvl3=6.0|lvl4=8.0|lvl5=10.0|lvl6=12.0}}
+}}}}
+}}

@@ -1,0 +1,58 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Tauren Chieftain
+|image=[[File:Tauren Chieftain.webp]]
+|category=WC3-Orc
+|max=32
+|level=90
+}}
+|skill1={{SkillInfo
+|name=Shockwave
+|info=
+Damage and Slow Enemies in Cone
+|trigger=Ability1
+|target=Cone
+|duration=3
+|range=400
+|cone=60
+|buffs=
+<p>
+Speed: -35%
+</p>
+|cooldown=15.0
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Damage|lvl1=2|lvl2=4|lvl3=6|lvl4=8|lvl5=10|lvl6=12|lvl7=14|lvl8=16}}
+}}}}
+|skill2={{SkillInfo
+|name=War Stomp
+|info=
+Damage and Impale Enemies around you
+|trigger=Ability2
+|target=AoE_Self
+|radius=350
+|force=300
+|cooldown=15.0
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Damage|lvl1=3|lvl2=6|lvl3=9|lvl4=12|lvl5=15|lvl6=18|lvl7=21|lvl8=24}}
+}}}}
+|skill3={{SkillInfo
+|name=Endurance Aura
+|info=
+Increase Speed, Reduce Weapon Damage for allies
+|trigger=Aura
+|radius=500
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Speed|lvl1=2.0%|lvl2=4.0%|lvl3=6.0%|lvl4=8.0%|lvl5=10.0%|lvl6=12.0%|lvl7=14.0%|lvl8=16.0%}}
+|line2={{LevelUpRow|field=Reduce|lvl1=3.0%|lvl2=5.0%|lvl3=8.0%|lvl4=10.0%|lvl5=13.0%|lvl6=15.0%|lvl7=18.0%|lvl8=20.0%}}
+}}}}
+|skill4={{SkillInfo
+|name=Reincarnation
+|info=
+Revive at fallen allies
+|trigger=Special
+|extra=Chance is halfed at every revive
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Chance|unit=%|lvl1=6|lvl2=8|lvl3=10|lvl4=12|lvl5=14|lvl6=16|lvl7=18|lvl8=20}}
+}}}}
+}}

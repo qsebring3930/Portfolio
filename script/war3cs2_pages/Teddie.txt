@@ -1,0 +1,75 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Teddie
+|image=[[File:Teddie.webp]]
+|category=Persona 4
+|max=39
+|level=4915
+|weapons=
+P250<br>
+Knife
+|restricted=All
+|team=1
+}}
+|skill1={{SkillInfo
+|name=Ice Magic
+|info=
+Damage, Hinder
+|trigger=Ability1
+|target=Target_Enemy
+|duration=3
+|range=600
+|buffs=
+<p>
+Hinder: -20%
+</p>
+|cooldown=20.0
+|extra=Levels 2, 4 and 6 are AoE with radius 300.
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Damage|lvl1=20|lvl2=15|lvl3=25|lvl4=20|lvl5=30|lvl6=25}}
+}}}}
+|skill2={{SkillInfo
+|name=Ice Boost
+|info=
+Increase 'Ice Magic' Efficiency
+|trigger=Special
+|levelup={{LevelUpInfo|levels=10
+|line1={{LevelUpRow|field=Damage|lvl1=1|lvl2=2|lvl3=3|lvl4=4|lvl5=5|lvl6=6|lvl7=7|lvl8=8|lvl9=9|lvl10=10}}
+|line2={{LevelUpRow|field=Hinder|lvl1=11.0%|lvl2=12.0%|lvl3=13.0%|lvl4=14.0%|lvl5=15.0%|lvl6=16.0%|lvl7=17.0%|lvl8=18.0%|lvl9=19.0%|lvl10=20.0%}}
+}}}}
+|skill3={{SkillInfo
+|name=Healing Magic
+|info=
+Heal your Allies
+|trigger=Ability2
+|target=Target_Ally
+|duration=5
+|range=600
+|cooldown=20.0
+|extra=Applies to self if no target. Levels 2, 4, 6 and 7 are AoE with radius 400. Level 7 is a lottery that Heals, Buffs, Debuffs or does nothing to a random team
+|levelup={{LevelUpInfo|levels=7
+|line1={{LevelUpRow|field=Heal|unit=HP|lvl1=25|lvl2=20|lvl3=30|lvl4=25|lvl5=35|lvl6=30|lvl7=40}}
+}}}}
+|skill4={{SkillInfo
+|name=The Nose Knows
+|info=
+Increase Weapon Damage
+|trigger=Attack
+|chance=33
+|levelup={{LevelUpInfo|levels=10
+|line1={{LevelUpRow|field=Increase|lvl1=3.0%|lvl2=6.0%|lvl3=9.0%|lvl4=12.0%|lvl5=15.0%|lvl6=18.0%|lvl7=21.0%|lvl8=24.0%|lvl9=27.0%|lvl10=30.0%}}
+}}}}
+|skill5={{SkillInfo
+|name=All Out Attack
+|info=
+Damage enemies around you. Evolves if Yosuke is close by.
+|trigger=Ultimate
+|target=AoE_Self
+|radius=500
+|cooldown=30.0
+|extra=Junes Bomber increases Damage by 30% and Radius by 100
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Damage|lvl1=10|lvl2=14|lvl3=18|lvl4=22|lvl5=26|lvl6=30}}
+}}}}
+}}

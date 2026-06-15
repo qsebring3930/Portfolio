@@ -1,0 +1,58 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Medic
+|image=[[File:Medic.webp]]
+|category=SC-Terran
+|max=30
+|level=1215
+}}
+|skill1={{SkillInfo
+|name=Medical Nanobots
+|info=
+Regen HP for allies
+|trigger=Aura
+|heal=3
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Radius|lvl1=250.0|lvl2=300.0|lvl3=350.0|lvl4=400.0|lvl5=450.0|lvl6=500.0}}
+}}}}
+|skill2={{SkillInfo
+|name=Nano Projectors
+|info=
+Double Medical Nanobots Heal
+|trigger=Special
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Chance|unit=%|lvl1=10|lvl2=14|lvl3=18|lvl4=22|lvl5=26|lvl6=30}}
+}}}}
+|skill3={{SkillInfo
+|name=Nano Restoration
+|info=
+Medical Nanobots Cleanses
+|trigger=Special
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Chance|unit=%|lvl1=10|lvl2=15|lvl3=20|lvl4=25|lvl5=30|lvl6=35}}
+}}}}
+|skill4={{SkillInfo
+|name=Stabilizer Med-packs
+|info=
+Throw Health, Impact creates healing item
+|trigger=Ability1
+|target=Object
+|duration=15
+|force=1
+|cooldown=10.0
+|extra=Based on Max Health
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Heal|unit=HP|lvl1=0.1|lvl2=0.2|lvl3=0.2|lvl4=0.2|lvl5=0.3|lvl6=0.3}}
+}}}}
+|skill5={{SkillInfo
+|name=Optic Flare
+|info=
+Throw potent Flashbang, Reveal affected
+|trigger=Ultimate
+|target=Object
+|duration=8
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Cooldown|unit=sec.|lvl1=30.0|lvl2=28.0|lvl3=26.0|lvl4=24.0|lvl5=22.0|lvl6=20.0}}
+}}}}
+}}

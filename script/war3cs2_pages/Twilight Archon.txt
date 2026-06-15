@@ -1,0 +1,52 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Twilight Archon
+|image=[[File:Twilight Archon.webp]]
+|category=SC-Protoss
+|max=24
+|level=1395
+|weapons=
+MAG-7
+|restricted=All
+}}
+|skill1={{SkillInfo
+|name=Psionic Shockwave
+|info=
+Increase Weapon Damage
+|trigger=Attack
+|extra=Extra Damage is magic damage and is 100% of the base damage
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Chance|lvl1=10.0%|lvl2=13.0%|lvl3=16.0%|lvl4=19.0%|lvl5=22.0%|lvl6=25.0%}}
+}}}}
+|skill2={{SkillInfo
+|name=Advanced Plasma Shields
+|info=
+Absorb Damage, Can't absorb Headshots
+|trigger=Victim
+|extra=Regen Shield after 3.0 sec.
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Health|unit=HP|lvl1=30|lvl2=50|lvl3=70|lvl4=90|lvl5=110|lvl6=130}}
+|line2={{LevelUpRow|field=Heal|unit=HP|lvl1=1|lvl2=2|lvl3=3|lvl4=4|lvl5=5|lvl6=6}}
+}}}}
+|skill3={{SkillInfo
+|name=Uraj Fragment
+|info=
+Decrease HP, Evade Weapon Damage
+|trigger=Victim
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Health|unit=HP|lvl1=-12|lvl2=-20|lvl3=-28|lvl4=-36|lvl5=-42|lvl6=-50}}
+|line2={{LevelUpRow|field=Chance|lvl1=5.0%|lvl2=10.0%|lvl3=15.0%|lvl4=20.0%|lvl5=25.0%|lvl6=30.0%}}
+}}}}
+|skill4={{SkillInfo
+|name=Twilight
+|info=
+Darken Vision
+|trigger=Ultimate
+|target=AoE_Self
+|cooldown=24.0
+|extra=Stays fully opaque for 2.0 sec. Slowly Regain Vision afterwards
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Radius|lvl1=350.0|lvl2=400.0|lvl3=450.0|lvl4=500.0|lvl5=550.0|lvl6=600.0}}
+}}}}
+}}

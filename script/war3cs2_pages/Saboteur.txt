@@ -1,0 +1,49 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Saboteur
+|image=[[File:Saboteur.webp]]
+|category=Military
+|max=20
+|level=1680
+}}
+|skill1={{SkillInfo
+|name=Invade
+|info=
+Mole on Command at Spawn
+|trigger=Ability1
+|target=Self
+|cooldown=60.0
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Spawn Cooldown|unit=sec.|lvl1=15.0|lvl2=12.5|lvl3=10.0|lvl4=7.5|lvl5=5.0}}
+}}}}
+|skill2={{SkillInfo
+|name=Integrate
+|info=
+Increase Facade
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Chance|unit=%|lvl1=20|lvl2=40|lvl3=60|lvl4=80|lvl5=100}}
+}}}}
+|skill3={{SkillInfo
+|name=Appropriate
+|info=
+Steal Respawns and Summons
+|trigger=Special
+|extra=You are Camouflaged when you respawn, Chance is halfed at every revive
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Chance|unit=%|lvl1=10|lvl2=20|lvl3=30|lvl4=40|lvl5=50}}
+}}}}
+|skill4={{SkillInfo
+|name=Subvert
+|info=
+Invert Buffs, Inverse
+|trigger=Ultimate
+|target=Target_Enemy
+|range=600
+|cooldown=30.0
+|extra=Select Random Enemy in range if not aimed at someone
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl1=2.0|lvl2=3.0|lvl3=4.0|lvl4=5.0|lvl5=6.0}}
+}}}}
+}}

@@ -1,0 +1,71 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Neo
+|image=[[File:Neo.webp]]
+|category=Matrix
+|max=30
+|level=3160
+|weapons=
+Dual Berettas<br>
+Knife
+|restricted=All
+}}
+|skill1={{SkillInfo
+|name=The One
+|info=
+Random Buffs
+|trigger=Passive
+|quantity=6
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Speed|lvl1=5.0%|lvl2=7.5%|lvl3=10.0%|lvl4=12.5%|lvl5=15.0%}}
+|line2={{LevelUpRow|field=Long Jump|lvl1=7.0%|lvl2=9.0%|lvl3=11.0%|lvl4=13.0%|lvl5=15.0%}}
+|line3={{LevelUpRow|field=Health|unit=HP|lvl1=5|lvl2=7|lvl3=10|lvl4=12|lvl5=15}}
+}}}}
+|skill2={{SkillInfo
+|name=Lots of guns
+|info=
+Gain Assault Rifle or SMG
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Chance|unit=%|lvl1=13|lvl2=18|lvl3=23|lvl4=28|lvl5=33}}
+}}}}
+|skill3={{SkillInfo
+|name=Bullet Time
+|info=
+Evade Weapon Damage
+|trigger=Victim
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Chance|lvl1=12.0%|lvl2=14.0%|lvl3=16.0%|lvl4=18.0%|lvl5=20.0%}}
+}}}}
+|skill4={{SkillInfo
+|name=Enter the Matrix
+|info=
+Respawn with random health
+|trigger=Death
+|chance=50
+|extra=Reduced HP between 0 and ...
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=HP|unit=HP|lvl1=40|lvl2=30|lvl3=20|lvl4=10|lvl5=0}}
+}}}}
+|skill5={{SkillInfo
+|name=Kung-fu
+|info=
+Increase Knife Damage
+|trigger=Attack
+|chance=50
+|extra=Increase Damage between 10 and ...
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Damage|lvl1=20|lvl2=25|lvl3=30|lvl4=35|lvl5=40}}
+}}}}
+|skill6={{SkillInfo
+|name=Hack the system
+|info=
+Toggle Flight, Gain Health
+|trigger=Ultimate
+|target=Toggle
+|cooldown=1.0
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Health|unit=HP|lvl1=12|lvl2=14|lvl3=16|lvl4=18|lvl5=20}}
+}}}}
+}}

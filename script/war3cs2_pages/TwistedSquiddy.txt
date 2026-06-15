@@ -1,0 +1,63 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=TwistedSquiddy
+|image=[[File:TwistedSquiddy.webp]]
+|category=Player
+|max=25
+|level=925
+|weapons=
+Sawed-Off<br>
+Nova<br>
+MAG-7<br>
+Taser
+|restricted=All
+|team=2
+}}
+|skill1={{SkillInfo
+|name=Here! You Have It Instead!
+|info=
+Return Weapon Damage to Random Enemy
+|trigger=Victim
+|damage=15.0%
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Chance|lvl1=20.0%|lvl2=30.0%|lvl3=40.0%|lvl4=50.0%|lvl5=60.0%}}
+}}}}
+|skill2={{SkillInfo
+|name=The Boon of TwistedSquiddy
+|info=
+Increase Speed, Long Jump
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Speed|lvl1=4.0%|lvl2=8.0%|lvl3=12.0%|lvl4=16.0%|lvl5=20.0%}}
+|line2={{LevelUpRow|field=Long Jump|lvl1=12.0%|lvl2=14.0%|lvl3=16.0%|lvl4=18.0%|lvl5=20.0%}}
+}}}}
+|skill3={{SkillInfo
+|name=Night Elf OP
+|info=
+Summon first Ally to die as Night Elf
+|trigger=Special
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Chance|unit=%|lvl1=60|lvl2=70|lvl3=80|lvl4=90|lvl5=100}}
+}}}}
+|skill4={{SkillInfo
+|name=Get Tased Nerds!
+|info=
+Recharge your Zeus
+|trigger=Ability1
+|target=Self
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Cooldown|unit=sec.|lvl1=18.0|lvl2=16.0|lvl3=14.0|lvl4=12.0|lvl5=10.0}}
+}}}}
+|skill5={{SkillInfo
+|name=Fuck it! We Night Elf!
+|info=
+Bash Everyone and Kill yourself. Respawn as Night Elf
+|trigger=Ultimate
+|target=Self
+|duration=3.2
+|extra=Respawn between 5.0 and 10.0 sec.
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Chance|unit=%|lvl1=60|lvl2=70|lvl3=80|lvl4=90|lvl5=100}}
+}}}}
+}}

@@ -1,0 +1,63 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=T-101
+|image=[[File:T-101.webp]]
+|category=Robots
+|max=30
+|level=3230
+|weapons=
+M249<br>
+Knife
+|restricted=All
+}}
+|skill1={{SkillInfo
+|name=Metal Exo Skeleton
+|info=
+Decrease Weapon Damage
+|trigger=Victim
+|buffs=
+<p>
+Decrease: -50%
+</p>
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Chance|lvl1=18.0%|lvl2=21.0%|lvl3=24.0%|lvl4=27.0%|lvl5=30.0%|lvl6=33.0%}}
+}}}}
+|skill2={{SkillInfo
+|name=Hydraulic Servos
+|info=
+Increase Knife Damage
+|trigger=Attack
+|extra=Increase Damage between 20 and ...
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Increase|lvl1=40|lvl2=44|lvl3=48|lvl4=52|lvl5=56|lvl6=60}}
+}}}}
+|skill3={{SkillInfo
+|name=Robotic Strength
+|info=
+Increase health
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Health|unit=HP|lvl1=50|lvl2=60|lvl3=70|lvl4=80|lvl5=90|lvl6=100}}
+}}}}
+|skill4={{SkillInfo
+|name=Unstoppable Force
+|info=
+Healback when weak
+|trigger=Victim
+|chance=33
+|extra=Activates when below 40%. Heals between 10 and ...
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Heal|unit=HP|lvl1=20|lvl2=24|lvl3=28|lvl4=32|lvl5=36|lvl6=40}}
+}}}}
+|skill5={{SkillInfo
+|name=I'll be back
+|info=
+Respawn with random health
+|trigger=Death
+|chance=40
+|extra=Reduced HP between 0 and ...
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=HP|unit=HP|lvl1=40|lvl2=35|lvl3=30|lvl4=25|lvl5=20|lvl6=15}}
+}}}}
+}}

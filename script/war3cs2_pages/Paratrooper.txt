@@ -1,0 +1,82 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Paratrooper
+|image=[[File:Paratrooper.webp]]
+|category=Military
+|max=25
+|level=1680
+|weapons=
+Famas<br>
+Glock-18<br>
+Knife<br>
+Smoke Grenade
+|restricted=All
+|passive=
+<p>
+Hold Jump: Decrease Gravity
+</p>
+}}
+|skill1={{SkillInfo
+|name=Environmental Training
+|info=
+Increase Health, Speed, Slow Resistance
+|trigger=Passive
+|buffs=
+<p>
+Slow Resist: 100%
+</p>
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Health|unit=HP|lvl1=5|lvl2=10|lvl3=15|lvl4=20|lvl5=25}}
+|line2={{LevelUpRow|field=Speed|lvl1=5.0%|lvl2=10.0%|lvl3=15.0%|lvl4=20.0%|lvl5=25.0%}}
+}}}}
+|skill2={{SkillInfo
+|name=Weapon Training
+|info=
+Increase Gun Damage
+|trigger=Attack
+|extra=Increase doubled if in the air
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Increase|lvl1=4.0%|lvl2=8.0%|lvl3=12.0%|lvl4=16.0%|lvl5=20.0%}}
+}}}}
+|skill3={{SkillInfo
+|name=Air Support
+|info=
+<p>
+Get Smoke Grenade. Smoke reacts differently based on amount of allies or enemies close to detonation<br>
+Allies: Ward: Heals and Regen Reserve allies<br>
+Enemies: Explosion<br>
+None: Regular Smoke
+</p>
+|trigger=Ability1
+|target=Self
+|heal=5
+|duration=3
+|radius=750
+|cooldown=30.0
+|extra=Ward Radius: 300, Explosion Radius: 500
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Ward Duration|unit=sec.|lvl1=4.0|lvl2=5.0|lvl3=6.0|lvl4=7.0|lvl5=8.0}}
+|line2={{LevelUpRow|field=Explosion Magnitude|lvl1=50|lvl2=75|lvl3=100|lvl4=125|lvl5=150}}
+}}}}
+|skill4={{SkillInfo
+|name=Counter-Terrorism
+|info=
+Highlight enemies around the person doing the objective
+|trigger=Special
+|radius=750
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl1=1.0|lvl2=1.5|lvl3=2.0|lvl4=2.5|lvl5=3.0}}
+}}}}
+|skill5={{SkillInfo
+|name=Air Insertion
+|info=
+Teleport to the sky
+|trigger=Ultimate
+|target=Self
+|range=1000
+|extra=Passively removes most Air Accuracy Penalties
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Cooldown|unit=sec.|lvl1=27.0|lvl2=24.0|lvl3=21.0|lvl4=18.0|lvl5=15.0}}
+}}}}
+}}

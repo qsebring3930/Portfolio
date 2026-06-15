@@ -1,0 +1,59 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Psionic Commando
+|image=[[File:Psionic Commando.webp]]
+|category=Mental
+|max=30
+|level=3845
+}}
+|skill1={{SkillInfo
+|name=Psionic Strength
+|info=
+Increase Health based on Players
+|trigger=Passive
+|health=60
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Min Players|lvl1=50|lvl2=46|lvl3=42|lvl4=38|lvl5=34|lvl6=30}}
+}}}}
+|skill2={{SkillInfo
+|name=Psionic Speed Leech
+|info=
+Steal Speed
+|trigger=Attack
+|chance=20
+|extra=Max Speed stolen and gained is 50%
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Steal|lvl1=5.0%|lvl2=6.0%|lvl3=7.0%|lvl4=8.0%|lvl5=9.0%|lvl6=10.0%}}
+}}}}
+|skill3={{SkillInfo
+|name=Telekinesis
+|info=
+Impale
+|trigger=Attack
+|force=300
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Chance|lvl1=10.0%|lvl2=12.0%|lvl3=14.0%|lvl4=16.0%|lvl5=18.0%|lvl6=20.0%}}
+}}}}
+|skill4={{SkillInfo
+|name=Psionic Repulse
+|info=
+Knockback
+|trigger=Attack
+|chance=25
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Force|lvl1=1.0|lvl2=1.4|lvl3=1.8|lvl4=2.2|lvl5=2.6|lvl6=3.0}}
+}}}}
+|skill5={{SkillInfo
+|name=Mind Dominance
+|info=
+Control Enemy
+|trigger=Ultimate
+|target=Target_Enemy
+|range=1000
+|cooldown=30.0
+|extra=Summons always succeed and lowers cooldown, Chance increases based on missing health.
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Chance|unit=%|lvl1=25|lvl2=30|lvl3=35|lvl4=40|lvl5=45|lvl6=50}}
+}}}}
+}}

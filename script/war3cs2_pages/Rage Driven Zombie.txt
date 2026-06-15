@@ -1,0 +1,63 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Rage Driven Zombie
+|image=[[File:Rage Driven Zombie.webp]]
+|category=Zombie
+|max=32
+|level=4605
+|weapons=
+Knife
+|restricted=All
+|items=
+Blademail<br>
+Armor of Protection<br>
+Boots of Zephyr<br>
+Ring of Armor
+|team=1
+}}
+|skill1={{SkillInfo
+|name=Zombie Resistance
+|info=
+Increase Health, Decrease Speed
+|trigger=Passive
+|extra=Health Increase is Halved with lower player count
+|levelup={{LevelUpInfo|levels=8|zero=1
+|line1={{LevelUpRow|field=Health|unit=HP|lvl0=100|lvl1=165|lvl2=330|lvl3=495|lvl4=660|lvl5=825|lvl6=990|lvl7=1155|lvl8=1300}}
+|line2={{LevelUpRow|field=Speed|lvl0=8.0%|lvl1=12.0%|lvl2=16.0%|lvl3=20.0%|lvl4=24.0%|lvl5=28.0%|lvl6=32.0%|lvl7=36.0%|lvl8=40.0%}}
+}}}}
+|skill2={{SkillInfo
+|name=Zombie Persistance
+|info=
+Regen Health
+|trigger=Victim
+|duration=5
+|levelup={{LevelUpInfo|levels=8|zero=1
+|line1={{LevelUpRow|field=Heal|unit=HP|lvl0=1|lvl1=2|lvl2=4|lvl3=6|lvl4=8|lvl5=10|lvl6=12|lvl7=14|lvl8=16}}
+}}}}
+|skill3={{SkillInfo
+|name=Zombie Bite
+|info=
+Stacking DoT, Minion Infected
+|trigger=Attack
+|damage=1
+|tickrate=0.3
+|extra=Chance is 50% on Left Click.
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl1=1.2|lvl2=1.8|lvl3=2.4|lvl4=3.0|lvl5=3.6|lvl6=4.2|lvl7=4.8|lvl8=5.4}}
+}}}}
+|skill4={{SkillInfo
+|name=Zombie Rage
+|info=
+<p>
+Increase Speed, Cleanse Slow and Bash Debuffs<br>
+Taking Damage Activates or Extends for half time
+</p>
+|trigger=Ultimate
+|duration=4
+|cooldown=20.0
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Speed|lvl1=30.0%|lvl2=35.0%|lvl3=40.0%|lvl4=45.0%|lvl5=50.0%|lvl6=55.0%|lvl7=60.0%|lvl8=65.0%}}
+|line2={{LevelUpRow|field=Threshold|lvl1=240|lvl2=225|lvl3=210|lvl4=195|lvl5=180|lvl6=165|lvl7=150|lvl8=135}}
+}}}}
+}}

@@ -1,0 +1,78 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Squirtle
+|image=[[File:Squirtle.webp]]
+|category=Pokémon - Water
+|max=25
+|level=645
+|weapons=
+Knife
+|restricted=All
+|passive=
+<p>
+Size: -30%
+</p>
+}}
+|skill1={{SkillInfo
+|name=Rain Dish
+|info=
+Regen HP while in Rain
+|trigger=Special
+|levelup={{LevelUpInfo|levels=5|zero=1
+|line1={{LevelUpRow|field=Heal|unit=HP|lvl0=0.5|lvl1=1.0|lvl2=1.5|lvl3=2.0|lvl4=2.5|lvl5=3.0}}
+}}}}
+|skill2={{SkillInfo
+|name=Water Gun
+|info=
+Damage
+|trigger=Ability1
+|target=Target_Enemy
+|range=500
+|cooldown=3.0
+|extra=Water Attack
+|levelup={{LevelUpInfo|levels=5|zero=1
+|line1={{LevelUpRow|field=Damage|lvl0=5|lvl1=8|lvl2=11|lvl3=14|lvl4=17|lvl5=20}}
+}}}}
+|skill3={{SkillInfo
+|name=Rapid Spin
+|info=
+<p>
+Passive: Increase Speed<br>
+Ability: Cleanse and Damage Enemies around you
+</p>
+|trigger=Ability2
+|target=AoE_Self
+|radius=300
+|cooldown=15.0
+|levelup={{LevelUpInfo|levels=5|zero=1
+|line1={{LevelUpRow|field=Speed|lvl0=5.0%|lvl1=9.0%|lvl2=13.0%|lvl3=17.0%|lvl4=21.0%|lvl5=25.0%}}
+|line2={{LevelUpRow|field=Damage|lvl0=5|lvl1=7|lvl2=9|lvl3=11|lvl4=13|lvl5=15}}
+}}}}
+|skill4={{SkillInfo
+|name=Rain Dance
+|info=
+Ward: Boost Water Attacks for Pokemon
+|trigger=Ability3
+|target=Location
+|damage=+50.0%
+|duration=8
+|cooldown=15.0
+|levelup={{LevelUpInfo|levels=5|zero=1
+|line1={{LevelUpRow|field=Radius|lvl0=250.0|lvl1=300.0|lvl2=350.0|lvl3=400.0|lvl4=450.0|lvl5=500.0}}
+}}}}
+|skill5={{SkillInfo
+|name=Aqua Tail
+|info=
+Damage and Impale
+|trigger=Ultimate
+|target=Cone
+|range=350
+|cone=40
+|force=300
+|cooldown=20.0
+|extra=Water Attack
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Damage|lvl1=6|lvl2=12|lvl3=18|lvl4=24|lvl5=30}}
+}}}}
+}}

@@ -1,0 +1,72 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Shadow Monkey
+|image=[[File:Shadow Monkey.webp]]
+|category=Pet
+|max=35
+|level=1810
+|weapons=
+Knife<br>
+Glock-18<br>
+P2000<br>
+P250<br>
+Five-Seven<br>
+Desert Eagle<br>
+Dual Berettas<br>
+Tec-9
+|restricted=All
+|items=
+Boots of Evasion
+}}
+|skill1={{SkillInfo
+|name=Monkey Movement
+|info=
+Periods of Increased Speed
+|trigger=Passive
+|duration=3
+|levelup={{LevelUpInfo|levels=7
+|line1={{LevelUpRow|field=Speed|lvl1=50.0%|lvl2=55.0%|lvl3=60.0%|lvl4=65.0%|lvl5=70.0%|lvl6=75.0%|lvl7=80.0%}}
+}}}}
+|skill2={{SkillInfo
+|name=Secret Creature
+|info=
+Decrease Visibility, Fade in and out of Complete Invisibility
+|trigger=Passive
+|tickrate=0.5
+|buffs=
+<p>
+Visibility: -40%
+</p>
+|levelup={{LevelUpInfo|levels=7
+|line1={{LevelUpRow|field=Step|lvl1=25.0%|lvl2=23.0%|lvl3=20.0%|lvl4=18.0%|lvl5=15.0%|lvl6=13.0%|lvl7=10.0%}}
+}}}}
+|skill3={{SkillInfo
+|name=Primate Leap
+|info=
+Increase Longjump, Decrease Gravity
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=7
+|line1={{LevelUpRow|field=Longjump|lvl1=5.0%|lvl2=10.0%|lvl3=15.0%|lvl4=20.0%|lvl5=25.0%|lvl6=30.0%|lvl7=35.0%}}
+|line2={{LevelUpRow|field=Gravity|lvl1=20.0%|lvl2=25.0%|lvl3=30.0%|lvl4=35.0%|lvl5=40.0%|lvl6=45.0%|lvl7=50.0%}}
+}}}}
+|skill4={{SkillInfo
+|name=Prehensile Tail
+|info=
+Knife Attacks Disarm
+|trigger=Attack
+|levelup={{LevelUpInfo|levels=7
+|line1={{LevelUpRow|field=Chance|lvl1=45.0%|lvl2=50.0%|lvl3=55.0%|lvl4=60.0%|lvl5=65.0%|lvl6=70.0%|lvl7=75.0%}}
+}}}}
+|skill5={{SkillInfo
+|name=Higher Thinking
+|info=
+Gain Gun, lose invisibility for short time
+|trigger=Ultimate
+|target=Self
+|cooldown=30.0
+|levelup={{LevelUpInfo|levels=7
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl1=4.0|lvl2=4.5|lvl3=5.0|lvl4=5.5|lvl5=6.0|lvl6=6.5|lvl7=7.0}}
+|line2={{LevelUpRow|field=Weapon|lvl1=Glock-18|lvl2=P2000|lvl3=P250|lvl4=Five-Seven|lvl5=Desert Eagle|lvl6=Dual Berettas|lvl7=Tec-9}}
+}}}}
+}}

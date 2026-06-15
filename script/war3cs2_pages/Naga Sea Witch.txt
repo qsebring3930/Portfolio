@@ -1,0 +1,68 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Naga Sea Witch
+|image=[[File:Naga Sea Witch.webp]]
+|category=WC3-Neutral
+|max=32
+|level=175
+|weapons=
+SSG 08<br>
+Smoke Grenade
+|restricted=All
+|items=
+Tome of Experience<br>
+Tome of Gambling<br>
+Tome of Opportunity
+}}
+|skill1={{SkillInfo
+|name=Forked Lightning
+|info=
+Damage Enemies in Cone
+|trigger=Ability1
+|target=Cone
+|quantity=3
+|range=800
+|cone=40
+|cooldown=12.0
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Damage|lvl1=11|lvl2=13|lvl3=15|lvl4=17|lvl5=19|lvl6=21|lvl7=23|lvl8=25}}
+}}}}
+|skill2={{SkillInfo
+|name=Frost Arrow
+|info=
+Slow
+|trigger=Attack
+|chance=25
+|duration=2
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Speed|lvl1=22.0%|lvl2=26.0%|lvl3=30.0%|lvl4=34.0%|lvl5=38.0%|lvl6=42.0%|lvl7=46.0%|lvl8=50.0%}}
+|line2={{LevelUpRow|field=Fire Rate|lvl1=22.0%|lvl2=26.0%|lvl3=30.0%|lvl4=34.0%|lvl5=38.0%|lvl6=42.0%|lvl7=46.0%|lvl8=50.0%}}
+}}}}
+|skill3={{SkillInfo
+|name=Mana Shield
+|info=
+Absorb Damage with Money
+|trigger=Ability2
+|target=Self
+|cooldown=5.0
+|extra=Toggle Shield, Lose or gain Money based on status. If enough Money take no damage, otherwise breaks shield and take reduced damage
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Cost Multiplier|unit=%|lvl1=100|lvl2=95|lvl3=90|lvl4=85|lvl5=80|lvl6=75|lvl7=70|lvl8=65}}
+|line2={{LevelUpRow|field=Reduce|lvl1=20.0%|lvl2=30.0%|lvl3=40.0%|lvl4=50.0%|lvl5=60.0%|lvl6=70.0%|lvl7=80.0%|lvl8=90.0%}}
+}}}}
+|skill4={{SkillInfo
+|name=Tornado
+|info=
+Ward: Impale, Damage on landing
+|trigger=Ultimate
+|target=Location
+|damage=20
+|duration=8
+|range=800
+|radius=200
+|force=400
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Cooldown|unit=sec.|lvl1=30.0|lvl2=28.0|lvl3=26.0|lvl4=24.0|lvl5=22.0|lvl6=20.0|lvl7=18.0|lvl8=16.0}}
+}}}}
+}}

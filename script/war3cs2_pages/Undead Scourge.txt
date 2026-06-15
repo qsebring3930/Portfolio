@@ -1,0 +1,44 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Undead Scourge
+|image=[[File:Undead Scourge.webp]]
+|category=Default
+|max=32
+|level=0
+}}
+|skill1={{SkillInfo
+|name=Vampiric Aura
+|info=
+Steal Health
+|trigger=Attack
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Steal|lvl1=11.0%|lvl2=13.0%|lvl3=15.0%|lvl4=17.0%|lvl5=19.0%|lvl6=21.0%|lvl7=23.0%|lvl8=25.0%}}
+}}}}
+|skill2={{SkillInfo
+|name=Unholy Aura
+|info=
+Increase Speed
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Speed|lvl1=22.0%|lvl2=25.0%|lvl3=27.0%|lvl4=30.0%|lvl5=32.0%|lvl6=35.0%|lvl7=37.0%|lvl8=40.0%}}
+}}}}
+|skill3={{SkillInfo
+|name=Unholy Levitation
+|info=
+Decrease Gravity
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Gravity|lvl1=30.0%|lvl2=35.0%|lvl3=40.0%|lvl4=45.0%|lvl5=50.0%|lvl6=55.0%|lvl7=60.0%|lvl8=65.0%}}
+}}}}
+|skill4={{SkillInfo
+|name=Unholy Explosion
+|info=
+Damage Enemies around you
+|trigger=Death
+|chance=50
+|explrad=300
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Magnitude|lvl1=100|lvl2=125|lvl3=150|lvl4=175|lvl5=200|lvl6=225|lvl7=250|lvl8=275}}
+}}}}
+}}

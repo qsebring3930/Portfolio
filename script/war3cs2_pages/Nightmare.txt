@@ -1,0 +1,76 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Nightmare
+|image=[[File:Nightmare.webp]]
+|category=Monster
+|max=36
+|level=3965
+|weapons=
+Knife
+|restricted=All
+}}
+|skill1={{SkillInfo
+|name=Bad Dream
+|info=
+Increase Knife Damage if asleep
+|trigger=Attack
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Increase|lvl0=5.0%|lvl1=10.0%|lvl2=14.0%|lvl3=18.0%|lvl4=22.0%|lvl5=26.0%|lvl6=30.0%}}
+}}}}
+|skill2={{SkillInfo
+|name=Dream Eater
+|info=
+Steal Health if asleep
+|trigger=Attack
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Steal|lvl0=30.0%|lvl1=50.0%|lvl2=55.0%|lvl3=60.0%|lvl4=65.0%|lvl5=70.0%|lvl6=75.0%}}
+}}}}
+|skill3={{SkillInfo
+|name=Insomnia
+|info=
+Increase Sleep Immunity
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Immunity|unit=%|lvl0=25|lvl1=50|lvl2=60|lvl3=70|lvl4=80|lvl5=90|lvl6=100}}
+}}}}
+|skill4={{SkillInfo
+|name=Drowsy
+|info=
+Hinder Enemies
+|trigger=Aura
+|tickrate=2
+|radius=400
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Speed|lvl0=10.0%|lvl1=15.0%|lvl2=20.0%|lvl3=25.0%|lvl4=30.0%|lvl5=35.0%|lvl6=40.0%}}
+|line2={{LevelUpRow|field=Fire Rate|lvl0=5.0%|lvl1=10.0%|lvl2=14.0%|lvl3=18.0%|lvl4=22.0%|lvl5=26.0%|lvl6=30.0%}}
+}}}}
+|skill5={{SkillInfo
+|name=Inescapable
+|info=
+Increase Speed and Long Jump, Decrease Gravity
+|trigger=Passive
+|buffs=
+<p>
+Gravity: -20%
+</p>
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Speed|lvl0=15.0%|lvl1=20.0%|lvl2=24.0%|lvl3=28.0%|lvl4=32.0%|lvl5=36.0%|lvl6=40.0%}}
+|line2={{LevelUpRow|field=Long Jump|lvl0=15.0%|lvl1=20.0%|lvl2=24.0%|lvl3=28.0%|lvl4=32.0%|lvl5=36.0%|lvl6=40.0%}}
+}}}}
+|skill6={{SkillInfo
+|name=Sleeping Dust
+|info=
+Ward: Drowsy
+|trigger=Ability1
+|target=Self
+|radius=250
+|buffs=
+<p>
+Drowsy: +35
+</p>
+|cooldown=15.0
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl0=2.0|lvl1=3.0|lvl2=4.0|lvl3=5.0|lvl4=6.0|lvl5=7.0|lvl6=8.0}}
+}}}}
+}}

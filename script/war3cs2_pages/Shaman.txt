@@ -1,0 +1,64 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Shaman
+|image=[[File:Shaman.webp]]
+|category=WC3-Orc
+|max=32
+|level=90
+|weapons=
+UMP-45<br>
+Knife
+|restricted=All
+}}
+|skill1={{SkillInfo
+|name=Blood Lust
+|info=
+Increase Speed and Fire Rate Ally
+|trigger=Ability1
+|target=Target_Ally
+|duration=6
+|range=600
+|cooldown=15.0
+|extra=Applies to self if no target
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Speed|lvl1=9.0%|lvl2=12.0%|lvl3=15.0%|lvl4=18.0%|lvl5=21.0%|lvl6=24.0%|lvl7=27.0%|lvl8=30.0%}}
+|line2={{LevelUpRow|field=Fire Rate|lvl1=6.0%|lvl2=8.0%|lvl3=10.0%|lvl4=12.0%|lvl5=14.0%|lvl6=16.0%|lvl7=18.0%|lvl8=20.0%}}
+}}}}
+|skill2={{SkillInfo
+|name=Purge
+|info=
+Slow, Increase Damage if Summon
+|trigger=Attack
+|duration=4
+|buffs=
+<p>
+Speed: -25%
+</p>
+|extra=50% extra Damage on Summons
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Chance|lvl1=16.0%|lvl2=18.0%|lvl3=20.0%|lvl4=22.0%|lvl5=24.0%|lvl6=26.0%|lvl7=28.0%|lvl8=30.0%}}
+}}}}
+|skill3={{SkillInfo
+|name=Shaman Training
+|info=
+Increase Health
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Health|unit=HP|lvl1=12|lvl2=16|lvl3=20|lvl4=24|lvl5=28|lvl6=32|lvl7=36|lvl8=40}}
+}}}}
+|skill4={{SkillInfo
+|name=Lightning Shield
+|info=
+Damage Enemies near Target
+|trigger=Ultimate
+|target=Target_Any
+|damage=10
+|duration=8
+|range=500
+|radius=200
+|extra=Applies to self if no target
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Cooldown|unit=sec.|lvl1=34.0|lvl2=32.0|lvl3=30.0|lvl4=28.0|lvl5=26.0|lvl6=24.0|lvl7=22.0|lvl8=20.0}}
+}}}}
+}}

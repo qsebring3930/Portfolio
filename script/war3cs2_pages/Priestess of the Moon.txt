@@ -1,0 +1,59 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Priestess of the Moon
+|image=[[File:Priestess of the Moon.webp]]
+|category=WC3-Elf
+|max=32
+|level=130
+|weapons=
+SG 553<br>
+P250<br>
+Knife
+|restricted=All
+}}
+|skill1={{SkillInfo
+|name=Scout
+|info=
+Ward: Reveal Enemies
+|trigger=Ability1
+|target=Location
+|duration=10
+|range=750
+|radius=500
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Cooldown|unit=sec.|lvl1=15.0|lvl2=14.0|lvl3=13.0|lvl4=12.0|lvl5=11.0|lvl6=10.0|lvl7=9.0|lvl8=8.0}}
+}}}}
+|skill2={{SkillInfo
+|name=Searing Arrows
+|info=
+Burn
+|trigger=Attack
+|damage=10
+|duration=2
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Chance|lvl1=16.0%|lvl2=18.0%|lvl3=20.0%|lvl4=22.0%|lvl5=24.0%|lvl6=26.0%|lvl7=28.0%|lvl8=30.0%}}
+}}}}
+|skill3={{SkillInfo
+|name=Trueshot Aura
+|info=
+Increase Gun Damage for allies
+|trigger=Aura
+|radius=250
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Increase|lvl1=6.0%|lvl2=8.0%|lvl3=10.0%|lvl4=12.0%|lvl5=14.0%|lvl6=16.0%|lvl7=18.0%|lvl8=20.0%}}
+}}}}
+|skill4={{SkillInfo
+|name=Star Fall
+|info=
+Channel to Damage Enemies around you
+|trigger=Ultimate
+|target=AoE_Self
+|damage=10
+|radius=600
+|cooldown=30.0
+|extra=Press again to cancel early
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl1=3.0|lvl2=4.0|lvl3=5.0|lvl4=6.0|lvl5=7.0|lvl6=8.0|lvl7=9.0|lvl8=10.0}}
+}}}}
+}}

@@ -1,0 +1,52 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Wisp
+|image=[[File:Wisp.webp]]
+|category=WC3-Elf
+|max=32
+|level=130
+|weapons=
+Knife
+|restricted=All
+}}
+|skill1={{SkillInfo
+|name=Meld
+|info=
+Decrease Visibility
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=8|zero=1
+|line1={{LevelUpRow|field=Visibility|lvl0=50.0%|lvl1=55.0%|lvl2=60.0%|lvl3=65.0%|lvl4=70.0%|lvl5=75.0%|lvl6=80.0%|lvl7=85.0%|lvl8=90.0%}}
+}}}}
+|skill2={{SkillInfo
+|name=Gather and Renew
+|info=
+Gain Armor Over Time, Attack Allies to heal them by sacrificing armor
+|trigger=Special
+|heal=10
+|tickrate=2
+|levelup={{LevelUpInfo|levels=8|zero=1
+|line1={{LevelUpRow|field=Armor|lvl0=1|lvl1=3|lvl2=4|lvl3=5|lvl4=6|lvl5=7|lvl6=8|lvl7=9|lvl8=10}}
+}}}}
+|skill3={{SkillInfo
+|name=Ultravision
+|info=
+Reveal Enemies
+|trigger=Aura
+|tickrate=0.5
+|levelup={{LevelUpInfo|levels=8|zero=1
+|line1={{LevelUpRow|field=Radius|lvl0=100.0|lvl1=150.0|lvl2=200.0|lvl3=250.0|lvl4=300.0|lvl5=350.0|lvl6=400.0|lvl7=450.0|lvl8=500.0}}
+}}}}
+|skill4={{SkillInfo
+|name=Detonate
+|info=
+Self destruct. Magic Damage. Dispel, Extra Damage if Summon
+|trigger=Ultimate
+|target=AoE_Self
+|duration=5
+|radius=300
+|extra=50% extra Damage on Summons
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Magnitude|lvl1=125|lvl2=150|lvl3=175|lvl4=200|lvl5=225|lvl6=250|lvl7=275|lvl8=300}}
+}}}}
+}}

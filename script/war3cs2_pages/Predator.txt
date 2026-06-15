@@ -1,0 +1,70 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Predator
+|image=[[File:Predator.webp]]
+|category=AVP
+|max=35
+|level=3495
+|weapons=
+SSG 08<br>
+Knife
+|restricted=All
+|items=
+Cloak of Shadows
+|team=2
+|passive=
+<p>
+Cloaked: 3 sec.
+</p>
+}}
+|skill1={{SkillInfo
+|name=Trophy Collector
+|info=
+Gain Extra Ammo on headshot
+|trigger=Attack
+|levelup={{LevelUpInfo|levels=7
+|line1={{LevelUpRow|field=Chance|lvl1=20.0%|lvl2=30.0%|lvl3=40.0%|lvl4=50.0%|lvl5=60.0%|lvl6=70.0%|lvl7=80.0%}}
+}}}}
+|skill2={{SkillInfo
+|name=Wristblades
+|info=
+Increase Knife Damage
+|trigger=Attack
+|extra=Damage between 10 and ...
+|levelup={{LevelUpInfo|levels=7
+|line1={{LevelUpRow|field=Damage|lvl1=12|lvl2=15|lvl3=18|lvl4=21|lvl5=24|lvl6=27|lvl7=30}}
+}}}}
+|skill3={{SkillInfo
+|name=Ceramic Plating
+|info=
+Increase Health, Speed.
+|trigger=Attack
+|levelup={{LevelUpInfo|levels=7
+|line1={{LevelUpRow|field=Health|unit=HP|lvl1=10|lvl2=20|lvl3=30|lvl4=40|lvl5=50|lvl6=60|lvl7=70}}
+|line2={{LevelUpRow|field=Speed|lvl1=10.0%|lvl2=15.0%|lvl3=20.0%|lvl4=25.0%|lvl5=30.0%|lvl6=35.0%|lvl7=40.0%}}
+}}}}
+|skill4={{SkillInfo
+|name=Net Gun
+|info=
+Throw Net, Impact Bashes those close
+|trigger=Ability1
+|target=Object
+|radius=100
+|force=1
+|cooldown=10.0
+|levelup={{LevelUpInfo|levels=7
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl1=0.5|lvl2=0.8|lvl3=1.0|lvl4=1.2|lvl5=1.5|lvl6=1.8|lvl7=2.0}}
+}}}}
+|skill5={{SkillInfo
+|name=Targeting System
+|info=
+Highlight Enemies around you
+|trigger=Ultimate
+|target=AoE_Self
+|radius=2000
+|cooldown=16.0
+|levelup={{LevelUpInfo|levels=7
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl1=1.6|lvl2=2.0|lvl3=2.4|lvl4=2.8|lvl5=3.2|lvl6=3.6|lvl7=4.0}}
+}}}}
+}}

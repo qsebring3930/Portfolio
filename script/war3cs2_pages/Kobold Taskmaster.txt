@@ -1,0 +1,71 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Kobold Taskmaster
+|image=[[File:Kobold Taskmaster.webp]]
+|category=WC3-Creep
+|max=30
+|level=210
+}}
+|skill1={{SkillInfo
+|name=Command Aura
+|info=
+Increase Ally Weapon Damage
+|trigger=Aura
+|buffs=
+<p>
+Damage: +25%
+</p>
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Radius|lvl1=250.0|lvl2=300.0|lvl3=350.0|lvl4=400.0|lvl5=450.0|lvl6=500.0}}
+}}}}
+|skill2={{SkillInfo
+|name=Crunch Time
+|info=
+Increase Speed Allies
+|trigger=Ability1
+|target=AoE_Self
+|radius=500
+|buffs=
+<p>
+Speed: +30%
+</p>
+|cooldown=15.0
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl1=1.5|lvl2=3.0|lvl3=4.5|lvl4=6.0|lvl5=7.5|lvl6=9.0}}
+}}}}
+|skill3={{SkillInfo
+|name=For the Candle
+|info=
+Reduce Cooldown Allies on Crunch Time
+|trigger=Special
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Cooldown|unit=sec.|lvl1=1.0|lvl2=2.0|lvl3=3.0|lvl4=4.0|lvl5=5.0|lvl6=6.0}}
+}}}}
+|skill4={{SkillInfo
+|name=Taskmaster
+|info=
+Revive Ally
+|trigger=Ability2
+|target=Random_Ally
+|cooldown=25.0
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Chance|unit=%|lvl1=50|lvl2=54|lvl3=58|lvl4=62|lvl5=66|lvl6=70}}
+}}}}
+|skill5={{SkillInfo
+|name=Break Time
+|info=
+Hinder Enemies around you
+|trigger=Ultimate
+|target=AoE_Self
+|radius=600
+|buffs=
+<p>
+Speed: -40%<br>
+Fire Rate: -40%
+</p>
+|cooldown=15.0
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl1=2.5|lvl2=3.0|lvl3=3.5|lvl4=4.0|lvl5=4.5|lvl6=5.0}}
+}}}}
+}}

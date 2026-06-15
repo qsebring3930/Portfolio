@@ -1,0 +1,65 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Mummy
+|image=[[File:Mummy.webp]]
+|category=Hero
+|max=36
+|level=1500
+|items=
+Blastproof Plate
+}}
+|skill1={{SkillInfo
+|name=Death Book
+|info=
+On Knife Kill gain Health and Max HP
+|trigger=Kill
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Health|unit=HP|lvl1=6|lvl2=8|lvl3=10|lvl4=12|lvl5=14|lvl6=16}}
+}}}}
+|skill2={{SkillInfo
+|name=Steal Flesh
+|info=
+Steal Health
+|trigger=Attack
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Steal|lvl1=10.0%|lvl2=14.0%|lvl3=18.0%|lvl4=22.0%|lvl5=26.0%|lvl6=30.0%}}
+}}}}
+|skill3={{SkillInfo
+|name=Bandage Wrap
+|info=
+Evade Grenade Damage
+|trigger=Victim
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Chance|lvl1=65.0%|lvl2=70.0%|lvl3=75.0%|lvl4=80.0%|lvl5=85.0%|lvl6=90.0%}}
+}}}}
+|skill4={{SkillInfo
+|name=Embalmed Skin
+|info=
+Healback Knife Damage
+|trigger=Victim
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Heal|unit=HP|lvl1=20|lvl2=22|lvl3=24|lvl4=26|lvl5=28|lvl6=30}}
+}}}}
+|skill5={{SkillInfo
+|name=Mummy's Breath
+|info=
+AoE Darken Vision
+|trigger=Attack
+|duration=3
+|radius=200
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Chance|lvl1=10.0%|lvl2=12.0%|lvl3=14.0%|lvl4=16.0%|lvl5=18.0%|lvl6=20.0%}}
+}}}}
+|skill6={{SkillInfo
+|name=Swarm of Locusts
+|info=
+Damage Random Enemy
+|trigger=Ultimate
+|target=Random_Enemy
+|cooldown=30.0
+|extra=Random Damage between 15 and ...
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Damage|lvl1=20|lvl2=24|lvl3=28|lvl4=32|lvl5=36|lvl6=40}}
+}}}}
+}}

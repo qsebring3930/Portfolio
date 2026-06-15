@@ -1,0 +1,66 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Omniknight
+|image=[[File:Omniknight.webp]]
+|category=DotA-Strength
+|max=32
+|level=2180
+}}
+|skill1={{SkillInfo
+|name=Hammer of Purity
+|info=
+Throw hammer
+|trigger=Ability1
+|target=Object
+|force=1
+|cooldown=10.0
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Damage|lvl1=20|lvl2=22|lvl3=25|lvl4=28|lvl5=31|lvl6=34|lvl7=37|lvl8=40}}
+}}}}
+|skill2={{SkillInfo
+|name=Purification
+|info=
+Heal, Damage Enemies around ally
+|trigger=Ability2
+|target=Target_Ally
+|range=600
+|radius=200
+|cooldown=15.0
+|extra=Applies to self if no target
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Heal|unit=HP|lvl1=10|lvl2=12|lvl3=15|lvl4=17|lvl5=19|lvl6=21|lvl7=23|lvl8=25}}
+|line2={{LevelUpRow|field=Damage|lvl1=10|lvl2=12|lvl3=15|lvl4=17|lvl5=19|lvl6=21|lvl7=23|lvl8=25}}
+}}}}
+|skill3={{SkillInfo
+|name=Repel
+|info=
+Skill Immunity and Reduced Magic Damage for ally
+|trigger=Ability3
+|target=Target_Ally
+|range=600
+|buffs=
+<p>
+Magic Damage: -60%
+</p>
+|cooldown=10.0
+|extra=Applies to self if no target
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl1=3.5|lvl2=4.0|lvl3=4.5|lvl4=5.0|lvl5=5.5|lvl6=6.0|lvl7=6.5|lvl8=7.0}}
+}}}}
+|skill4={{SkillInfo
+|name=Guardian Angel
+|info=
+Reduce Weapon Damage for allies around you but can't attack
+|trigger=Ultimate
+|target=AoE_Self
+|radius=600
+|buffs=
+<p>
+Weapon Damage: -60%
+</p>
+|cooldown=30.0
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl1=2.5|lvl2=3.0|lvl3=3.5|lvl4=4.0|lvl5=4.5|lvl6=5.0|lvl7=5.5|lvl8=6.0}}
+}}}}
+}}

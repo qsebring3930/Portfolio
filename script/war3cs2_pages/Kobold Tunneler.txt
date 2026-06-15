@@ -1,0 +1,52 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Kobold Tunneler
+|image=[[File:Kobold Tunneler.webp]]
+|category=WC3-Creep
+|max=32
+|level=210
+|weapons=
+Desert Eagle<br>
+Knife
+|restricted=All
+}}
+|skill1={{SkillInfo
+|name=Tunneler
+|info=
+Mole
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Chance|unit=%|lvl1=7|lvl2=10|lvl3=12|lvl4=15|lvl5=17|lvl6=20|lvl7=22|lvl8=25}}
+}}}}
+|skill2={{SkillInfo
+|name=Heavy Shovel
+|info=
+Increase Damage, Bash
+|trigger=Attack
+|duration=0.3
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Chance|lvl1=10.0%|lvl2=14.0%|lvl3=18.0%|lvl4=22.0%|lvl5=26.0%|lvl6=30.0%|lvl7=34.0%|lvl8=38.0%}}
+|line2={{LevelUpRow|field=Increase|lvl1=4.0%|lvl2=8.0%|lvl3=12.0%|lvl4=16.0%|lvl5=20.0%|lvl6=24.0%|lvl7=28.0%|lvl8=32.0%}}
+}}}}
+|skill3={{SkillInfo
+|name=Dig
+|info=
+Place a Mark for Tunnel Network
+|trigger=Ability1
+|target=Self
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Cooldown|unit=sec.|lvl1=16.0|lvl2=15.0|lvl3=14.0|lvl4=13.0|lvl5=12.0|lvl6=11.0|lvl7=10.0|lvl8=9.0}}
+}}}}
+|skill4={{SkillInfo
+|name=Tunnel Network
+|info=
+Teleport to random Mark, Decrease Visibility
+|trigger=Ultimate
+|target=Self
+|duration=5
+|cooldown=15.0
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Visibility|lvl1=10.0%|lvl2=20.0%|lvl3=30.0%|lvl4=40.0%|lvl5=50.0%|lvl6=60.0%|lvl7=70.0%|lvl8=80.0%}}
+}}}}
+}}

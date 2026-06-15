@@ -1,0 +1,58 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=SAS Marksman
+|image=[[File:SAS Marksman.webp]]
+|category=Military
+|max=25
+|level=1680
+|weapons=
+AWP<br>
+Glock-18<br>
+Smoke Grenade
+|restricted=All
+}}
+|skill1={{SkillInfo
+|name=Marked Target
+|info=
+Track an enemy
+|trigger=Passive
+|duration=10
+|extra=If you kill the target track a new enemy. If Somebody else kills the target chance to track new enemy
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Transfer Chance|lvl1=20|lvl2=25|lvl3=30|lvl4=35|lvl5=40}}
+}}}}
+|skill2={{SkillInfo
+|name=Knowledge of vitals
+|info=
+Increase Damage
+|trigger=Attack
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Increase|lvl1=20.0%|lvl2=25.0%|lvl3=30.0%|lvl4=35.0%|lvl5=40.0%}}
+}}}}
+|skill3={{SkillInfo
+|name=Travel Light
+|info=
+Increase Speed
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Speed|lvl1=10.0%|lvl2=15.0%|lvl3=20.0%|lvl4=25.0%|lvl5=30.0%}}
+}}}}
+|skill4={{SkillInfo
+|name=Trained Assassin
+|info=
+Decrease Visibility
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Visibility|lvl1=15.0%|lvl2=23.0%|lvl3=31.0%|lvl4=39.0%|lvl5=45.0%}}
+}}}}
+|skill5={{SkillInfo
+|name=Snipers Tools
+|info=
+Switch Between AWP and Glock
+|trigger=Ultimate
+|target=Toggle
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Cooldown|unit=sec.|lvl1=14.0|lvl2=12.0|lvl3=10.0|lvl4=8.0|lvl5=6.0}}
+}}}}
+}}

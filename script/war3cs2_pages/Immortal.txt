@@ -1,0 +1,68 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Immortal
+|image=[[File:Immortal.webp]]
+|category=SC-Protoss
+|max=30
+|level=1395
+|weapons=
+Desert Eagle
+|restricted=All
+|team=2
+}}
+|skill1={{SkillInfo
+|name=Assault Strider
+|info=
+Increase Speed
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Speed|lvl1=10.0%|lvl2=13.0%|lvl3=16.0%|lvl4=19.0%|lvl5=22.0%|lvl6=25.0%}}
+}}}}
+|skill2={{SkillInfo
+|name=Twin Phase Disruptor
+|info=
+Bash and Bash again
+|trigger=Attack
+|duration=1
+|extra=Second Bash is Half the Duration
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Chance|lvl1=5.0%|lvl2=8.0%|lvl3=11.0%|lvl4=14.0%|lvl5=17.0%|lvl6=20.0%}}
+}}}}
+|skill3={{SkillInfo
+|name=Singularity Discharge
+|info=
+Throw Singular Grenade, Explodes, Pulls Enemies to the center and Explodes again
+|trigger=Ability1
+|target=Object
+|force=500
+|cooldown=20.0
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=First Pull Radius|lvl1=375.0|lvl2=400.0|lvl3=425.0|lvl4=450.0|lvl5=475.0|lvl6=500.0}}
+|line2={{LevelUpRow|field=Second Explosive Damage|lvl1=60|lvl2=68|lvl3=76|lvl4=84|lvl5=92|lvl6=100}}
+}}}}
+|skill4={{SkillInfo
+|name=Hardened Plasma Shield
+|info=
+Absorb Damage, Break Shield to absorb large damage
+|trigger=Victim
+|extra=Regen Shield after 3.0 sec.
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Health|unit=HP|lvl1=20|lvl2=28|lvl3=36|lvl4=44|lvl5=52|lvl6=60}}
+|line2={{LevelUpRow|field=Heal|unit=HP|lvl1=1|lvl2=2|lvl3=3|lvl4=4|lvl5=5|lvl6=6}}
+|line3={{LevelUpRow|field=Threshold|lvl1=145|lvl2=130|lvl3=115|lvl4=100|lvl5=85|lvl6=70}}
+}}}}
+|skill5={{SkillInfo
+|name=Barrier
+|info=
+Restore Shield, Decrease Shield Damage
+|trigger=Ultimate
+|required=
+Hardened Plasma Shield - Level 1
+|target=Self
+|duration=6
+|cooldown=30.0
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Decrease|lvl1=5.0%|lvl2=10.0%|lvl3=15.0%|lvl4=20.0%|lvl5=25.0%|lvl6=30.0%}}
+}}}}
+}}

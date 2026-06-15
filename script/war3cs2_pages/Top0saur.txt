@@ -1,0 +1,71 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Top0saur
+|image=[[File:Top0saur.webp]]
+|category=Legendary
+|max=30
+|level=3705
+}}
+|skill1={{SkillInfo
+|name=Go to church and steal
+|info=
+Gain Money
+|trigger=Passive
+|chance=50
+|extra=Money between 500 and ...
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Money|lvl1=$2,500|lvl2=$2,600|lvl3=$2,700|lvl4=$2,800|lvl5=$2,900|lvl6=$3,000}}
+}}}}
+|skill2={{SkillInfo
+|name=Safety
+|info=
+Increase Health
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Health|unit=HP|lvl1=10|lvl2=20|lvl3=30|lvl4=40|lvl5=50|lvl6=60}}
+}}}}
+|skill3={{SkillInfo
+|name=Ice Barrier
+|info=
+<p>
+Spawn an Icy Barrier in front of you<br>
+Hinder enemies who attack the barrier
+</p>
+|trigger=Ability1
+|target=Location
+|range=300
+|buffs=
+<p>
+Speed: -33%<br>
+Attack Speed: -33%
+</p>
+|cooldown=15.0
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl1=3.0|lvl2=4.0|lvl3=5.0|lvl4=6.0|lvl5=7.0|lvl6=8.0}}
+}}}}
+|skill4={{SkillInfo
+|name=Charging my fireballs
+|info=
+AoE Burn
+|trigger=Attack
+|chance=25
+|radius=150
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl1=2.5|lvl2=3.0|lvl3=3.5|lvl4=4.0|lvl5=4.5|lvl6=5.0}}
+}}}}
+|skill5={{SkillInfo
+|name=Do a barrel roll
+|info=
+<p>
+Transform into an oil barrel<br>
+Explode if you die
+</p>
+|trigger=Ultimate
+|target=Toggle
+|radius=300
+|cooldown=20.0
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Magnitude|lvl1=175|lvl2=200|lvl3=225|lvl4=250|lvl5=275|lvl6=300}}
+}}}}
+}}

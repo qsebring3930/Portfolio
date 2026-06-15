@@ -1,0 +1,67 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Rock Golem
+|image=[[File:Rock Golem.webp]]
+|category=WC3-Creep
+|max=36
+|level=210
+|weapons=
+Knife<br>
+Decoy Grenade
+|restricted=All
+}}
+|skill1={{SkillInfo
+|name=Hurl Boulder
+|info=
+Increase Decoy Grenade Damage
+|trigger=Attack
+|extra=Random Damage between 75 and ... , damage is reduced by 25% each bounce.
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Damage|lvl0=75|lvl1=100|lvl2=140|lvl3=180|lvl4=220|lvl5=260|lvl6=300}}
+}}}}
+|skill2={{SkillInfo
+|name=Unstoppable Force
+|info=
+Convert Decoy Damage to True Damage
+|trigger=Attack
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Chance|unit=%|lvl0=25|lvl1=50|lvl2=60|lvl3=70|lvl4=80|lvl5=90|lvl6=100}}
+}}}}
+|skill3={{SkillInfo
+|name=Spell Immunity
+|info=
+Spell Immunity
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Chance|unit=%|lvl0=5|lvl1=20|lvl2=30|lvl3=40|lvl4=50|lvl5=60|lvl6=70}}
+}}}}
+|skill4={{SkillInfo
+|name=Rock Collection
+|info=
+Gain Decoy Grenades
+|trigger=Attack
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=RockChc|unit=%|lvl0=15|lvl1=30|lvl2=40|lvl3=50|lvl4=60|lvl5=70|lvl6=80}}
+}}}}
+|skill5={{SkillInfo
+|name=Granite
+|info=
+Increase Health and Reduce Received Weapon Damage
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Health|unit=HP|lvl0=25|lvl1=50|lvl2=60|lvl3=70|lvl4=80|lvl5=90|lvl6=100}}
+|line2={{LevelUpRow|field=Reduce|lvl0=10.0%|lvl1=15.0%|lvl2=20.0%|lvl3=25.0%|lvl4=30.0%|lvl5=35.0%|lvl6=40.0%}}
+}}}}
+|skill6={{SkillInfo
+|name=Quarry
+|info=
+Gain Decoy Grenades
+|trigger=Ultimate
+|target=Self
+|cooldown=15.0
+|extra=Grenades between 1 and ...
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Quantity|lvl1=5|lvl2=6|lvl3=7|lvl4=8|lvl5=9|lvl6=10}}
+}}}}
+}}

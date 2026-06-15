@@ -1,0 +1,73 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Heavy Mercenary
+|image=[[File:Heavy Mercenary.webp]]
+|category=Stalker
+|max=48
+|level=1175
+|weapons=
+SG 553<br>
+Knife
+|restricted=All
+|items=
+Boots of Evasion<br>
+Boots of Zephyr
+|passive=
+<p>
+Speed: -36%
+</p>
+}}
+|skill1={{SkillInfo
+|name=Prototype Exeskeleton
+|info=
+Increase Health
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Health|unit=HP|lvl1=15|lvl2=20|lvl3=25|lvl4=30|lvl5=35|lvl6=40|lvl7=45|lvl8=50}}
+}}}}
+|skill2={{SkillInfo
+|name=Experimental Weaponry
+|info=
+Increase Weapon Damage, Decrease Fire Rate
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Increase|lvl1=6.0%|lvl2=8.0%|lvl3=10.0%|lvl4=12.0%|lvl5=14.0%|lvl6=16.0%|lvl7=18.0%|lvl8=20.0%}}
+|line2={{LevelUpRow|field=Fire Rate|lvl1=3.0%|lvl2=6.0%|lvl3=9.0%|lvl4=12.0%|lvl5=15.0%|lvl6=18.0%|lvl7=21.0%|lvl8=24.0%}}
+}}}}
+|skill3={{SkillInfo
+|name=Armored Plating
+|info=
+Decrease Weapon Damage
+|trigger=Victim
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Reduce|lvl1=6.0%|lvl2=8.0%|lvl3=10.0%|lvl4=12.0%|lvl5=14.0%|lvl6=16.0%|lvl7=18.0%|lvl8=20.0%}}
+}}}}
+|skill4={{SkillInfo
+|name=Artifact
+|info=
+Regen HP
+|trigger=Passive
+|tickrate=5
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Heal|unit=HP|lvl1=3|lvl2=4|lvl3=5|lvl4=6|lvl5=7|lvl6=8|lvl7=9|lvl8=10}}
+}}}}
+|skill5={{SkillInfo
+|name=Irradiated Rounds
+|info=
+DoT
+|trigger=Attack
+|chance=15
+|duration=3
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Damage|lvl1=1|lvl2=2|lvl3=3|lvl4=4|lvl5=5|lvl6=6|lvl7=7|lvl8=8}}
+}}}}
+|skill6={{SkillInfo
+|name=Gyro-Motors
+|info=
+Increase Speed
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Speed|lvl1=2.0%|lvl2=4.0%|lvl3=6.0%|lvl4=8.0%|lvl5=10.0%|lvl6=12.0%|lvl7=14.0%|lvl8=16.0%}}
+}}}}
+}}

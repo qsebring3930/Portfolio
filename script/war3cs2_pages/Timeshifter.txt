@@ -1,0 +1,74 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Timeshifter
+|image=[[File:Timeshifter.webp]]
+|category=Hero
+|max=36
+|level=1500
+|weapons=
+Dual Berettas
+|restricted=All
+|items=
+Boots of Evasion
+}}
+|skill1={{SkillInfo
+|name=Slow Time
+|info=
+Slow
+|trigger=Attack
+|chance=35
+|buffs=
+<p>
+Speed: -30%
+</p>
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl1=1.0|lvl2=2.0|lvl3=3.0|lvl4=4.0|lvl5=5.0|lvl6=6.0}}
+}}}}
+|skill2={{SkillInfo
+|name=Time Manipulation
+|info=
+Evade Weapon Damage
+|trigger=Victim
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Chance|lvl1=10.0%|lvl2=14.0%|lvl3=18.0%|lvl4=22.0%|lvl5=26.0%|lvl6=30.0%}}
+}}}}
+|skill3={{SkillInfo
+|name=Stop Time
+|info=
+Bash
+|trigger=Attack
+|chance=21
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl1=0.5|lvl2=0.6|lvl3=0.7|lvl4=0.8|lvl5=0.9|lvl6=1.0}}
+}}}}
+|skill4={{SkillInfo
+|name=Time Shifter
+|info=
+Increase Speed
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Speed|lvl1=5.0%|lvl2=10.0%|lvl3=15.0%|lvl4=20.0%|lvl5=25.0%|lvl6=30.0%}}
+}}}}
+|skill5={{SkillInfo
+|name=Time Distortions
+|info=
+Banish
+|trigger=Attack
+|chance=25
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl1=0.5|lvl2=1.0|lvl3=1.5|lvl4=2.0|lvl5=2.5|lvl6=3.0}}
+}}}}
+|skill6={{SkillInfo
+|name=Time Warp
+|info=
+Warp Back in 8 seconds
+|trigger=Ultimate
+|target=Self
+|duration=8
+|cooldown=30.0
+|extra=Saves Location and Health
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Chance|unit=%|lvl1=50|lvl2=60|lvl3=70|lvl4=80|lvl5=90|lvl6=100}}
+}}}}
+}}

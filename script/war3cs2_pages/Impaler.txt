@@ -1,0 +1,77 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Impaler
+|image=[[File:Impaler.webp]]
+|category=SC-Zerg
+|max=36
+|level=1305
+|weapons=
+Knife
+|restricted=All
+}}
+|skill1={{SkillInfo
+|name=Evolved Carapace
+|info=
+Increase Health
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Health|unit=HP|lvl0=5|lvl1=10|lvl2=20|lvl3=30|lvl4=40|lvl5=50|lvl6=60}}
+}}}}
+|skill2={{SkillInfo
+|name=Adrenal Glands
+|info=
+Increase Speed
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Speed|lvl0=2.5%|lvl1=5.0%|lvl2=10.0%|lvl3=15.0%|lvl4=20.0%|lvl5=25.0%|lvl6=30.0%}}
+}}}}
+|skill3={{SkillInfo
+|name=Leeching Tentacle
+|info=
+Steal Health
+|trigger=Attack
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Steal|lvl0=3.0%|lvl1=6.0%|lvl2=9.0%|lvl3=11.0%|lvl4=14.0%|lvl5=17.0%|lvl6=20.0%}}
+}}}}
+|skill4={{SkillInfo
+|name=Tenderize
+|info=
+Weaken
+|trigger=Attack
+|chance=50
+|buffs=
+<p>
+Weapon Damage: +20%
+</p>
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl0=1.5|lvl1=2.5|lvl2=3.0|lvl3=3.5|lvl4=4.0|lvl5=4.5|lvl6=5.0}}
+}}}}
+|skill5={{SkillInfo
+|name=Spine Lash
+|info=
+Increase Weapon Damage, Impale
+|trigger=Attack
+|chance=50
+|force=300
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Increase|lvl0=2.5%|lvl1=5.0%|lvl2=10.0%|lvl3=15.0%|lvl4=20.0%|lvl5=25.0%|lvl6=30.0%}}
+}}}}
+|skill6={{SkillInfo
+|name=Burrow Attack
+|info=
+<p>
+Toggle to Dig Halfway into the ground<br>
+Right Click to spike enemies you aim at<br>
+Reduce Received Headshot Damage
+</p>
+|trigger=Ultimate
+|target=Toggle
+|range=800
+|aim=15
+|cooldown=3.0
+|extra=Headshots are converted into body shots
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Damage|lvl1=20|lvl2=24|lvl3=28|lvl4=32|lvl5=36|lvl6=40}}
+}}}}
+}}

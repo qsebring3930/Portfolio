@@ -1,0 +1,71 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Templar Assassin
+|image=[[File:Templar Assassin.webp]]
+|category=DotA-Agility
+|max=32
+|level=2340
+|weapons=
+Knife<br>
+Glock-18<br>
+P2000<br>
+USP-S<br>
+P250<br>
+Five-Seven<br>
+Desert Eagle
+|restricted=All
+}}
+|skill1={{SkillInfo
+|name=Refraction
+|info=
+Protect yourself from damage, Increase Psi Blades Damage
+|trigger=Ability1
+|target=Self
+|duration=15
+|cooldown=15.0
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Health|lvl1=15|lvl2=20|lvl3=25|lvl4=30|lvl5=35|lvl6=40|lvl7=45|lvl8=50}}
+|line2={{LevelUpRow|field=Damage|lvl1=3.0%|lvl2=4.0%|lvl3=5.0%|lvl4=6.0%|lvl5=7.0%|lvl6=8.0%|lvl7=9.0%|lvl8=10.0%}}
+}}}}
+|skill2={{SkillInfo
+|name=Psi Blades
+|info=
+<p>
+Better Pistols, Damage Enemies behind enemy<br>
+Use Settings to change default behavior
+</p>
+|trigger=Attack
+|range=300
+|cone=10
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Weapon|lvl1=P2000|lvl2=USP-S|lvl3=P250|lvl4=P250|lvl5=Five-Seven|lvl6=Five-Seven|lvl7=Desert Eagle|lvl8=Desert Eagle}}
+|line2={{LevelUpRow|field=Damage|lvl1=40.0%|lvl2=45.0%|lvl3=50.0%|lvl4=55.0%|lvl5=60.0%|lvl6=65.0%|lvl7=70.0%|lvl8=75.0%}}
+}}}}
+|skill3={{SkillInfo
+|name=Psionic Trap
+|info=
+Trap: Slow Enemies
+|trigger=Ability2
+|target=Location
+|duration=5
+|tickrate=0.5
+|range=500
+|radius=300
+|cooldown=15.0
+|extra=Trigger Radius is 100. The Trap is active for 30 seconds
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Slow|lvl1=22.0%|lvl2=26.0%|lvl3=30.0%|lvl4=34.0%|lvl5=38.0%|lvl6=42.0%|lvl7=46.0%|lvl8=50.0%}}
+}}}}
+|skill4={{SkillInfo
+|name=Meld
+|info=
+Become Invisible but can't move. Breaks on attack, deals bonus damage
+|trigger=Ultimate
+|target=Self
+|damage=20
+|duration=20
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Cooldown|unit=sec.|lvl1=30.0|lvl2=28.0|lvl3=26.0|lvl4=24.0|lvl5=22.0|lvl6=20.0|lvl7=18.0|lvl8=16.0}}
+}}}}
+}}

@@ -1,0 +1,69 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Voidwalker
+|image=[[File:Voidwalker.webp]]
+|category=WC3-Creep
+|max=30
+|level=210
+|team=2
+}}
+|skill1={{SkillInfo
+|name=Living Shade
+|info=
+Increase Speed, Decrease Visibility
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Speed|lvl1=3.0%|lvl2=6.0%|lvl3=9.0%|lvl4=12.0%|lvl5=15.0%}}
+|line2={{LevelUpRow|field=Visibility|lvl1=5.0%|lvl2=10.0%|lvl3=15.0%|lvl4=20.0%|lvl5=25.0%}}
+}}}}
+|skill2={{SkillInfo
+|name=Darkness
+|info=
+Darken Vision
+|trigger=Attack
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Chance|lvl1=10.0%|lvl2=15.0%|lvl3=20.0%|lvl4=25.0%|lvl5=30.0%}}
+|line2={{LevelUpRow|field=Duration|unit=sec.|lvl1=0.5|lvl2=1.0|lvl3=1.5|lvl4=2.0|lvl5=2.5}}
+}}}}
+|skill3={{SkillInfo
+|name=Consuming Shadows
+|info=
+Increase Damage on Darkness
+|trigger=Attack
+|extra=Damage based on Max Health
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Multiplier|lvl1=4.0%|lvl2=5.5%|lvl3=7.0%|lvl4=8.5%|lvl5=10.0%}}
+}}}}
+|skill4={{SkillInfo
+|name=Into the Void
+|info=
+Decrease Visibility on Darkness
+|trigger=Attack
+|duration=5
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Visibility|lvl1=20.0%|lvl2=25.0%|lvl3=30.0%|lvl4=35.0%|lvl5=40.0%}}
+}}}}
+|skill5={{SkillInfo
+|name=Devour Magic
+|info=
+Block Spells, Heal Health
+|trigger=Aura
+|duration=5
+|radius=600
+|cooldown=5.0
+|extra=Leech Life on Darkness
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Health|unit=HP|lvl1=5|lvl2=10|lvl3=15|lvl4=20|lvl5=25}}
+}}}}
+|skill6={{SkillInfo
+|name=Confusion in Darkness
+|info=
+Swap Places with Enemy, Inflict Darkness
+|trigger=Ultimate
+|target=Target_Enemy
+|range=800
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Cooldown|unit=sec.|lvl1=30.0|lvl2=27.0|lvl3=23.0|lvl4=19.0|lvl5=15.0}}
+}}}}
+}}

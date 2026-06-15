@@ -1,0 +1,96 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Naoto Shirogane
+|image=[[File:Naoto Shirogane.webp]]
+|category=Persona 4
+|max=34
+|level=4915
+|weapons=
+Desert Eagle<br>
+Knife
+|restricted=All
+|team=1
+}}
+|skill1={{SkillInfo
+|name=Elemental Magic
+|info=
+Damage, Randomly Hinder, Bash, Burn or Impale
+|trigger=Ability1
+|target=Target_Enemy
+|chance=20
+|duration=2.5
+|range=600
+|force=300
+|buffs=
+<p>
+Hinder: -20%<br>
+Bash Duration: 1.0 sec.
+</p>
+|cooldown=20.0
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Damage|lvl1=15|lvl2=18|lvl3=21|lvl4=24|lvl5=27|lvl6=30}}
+}}}}
+|skill2={{SkillInfo
+|name=Physical Attack
+|info=
+AoE Gun Damage
+|trigger=Attack
+|damage=5
+|chance=40
+|duration=3
+|radius=400
+|extra=Levels 3 and 4 have 20% chance to DoT. Levels 7 and 8 proc 3 times with a 60% chance to hit
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Damage|lvl1=8|lvl2=10|lvl3=12|lvl4=14|lvl5=16|lvl6=18|lvl7=8|lvl8=10}}
+}}}}
+|skill3={{SkillInfo
+|name=Support Magic
+|info=
+<p>
+Support Ally with random spell based on Level<br>
+Tetrakarn: Reflect Weapon Damage Once<br>
+Makarakarn: Reflect Magic Damage Once<br>
+Tetraja: Survive Killing Blow Once<br>
+Shield of Justice: Nullify Damage Once for all Allies Close By
+</p>
+|trigger=Ability2
+|target=Target_Ally
+|duration=10
+|range=600
+|radius=400
+|cooldown=15.0
+|extra=Applies to self if no target.
+|levelup={{LevelUpInfo|levels=4
+|line1={{LevelUpRow|field=Skill|lvl1=Tetrakarn|lvl2=Makarakarn|lvl3=Tetraja|lvl4=Shield of Justice}}
+}}}}
+|skill4={{SkillInfo
+|name=Superior Magic
+|info=
+<p>
+Chance to Cast Mudoon, Hamaon or Megidolaon Instead of 'Elemental Magic'.<br>
+Mudoon: Reduce Enemy's health to low health and Darken Vision<br>
+Hamaon: Reduce Enemy's health to low health and Blind<br>
+Megidolaon: Damage AoE
+</p>
+|trigger=Special
+|damage=40
+|duration=2
+|radius=300
+|extra=Set Health to 20% of Max Health.
+|levelup={{LevelUpInfo|levels=10
+|line1={{LevelUpRow|field=Chance|unit=%|lvl1=2|lvl2=4|lvl3=6|lvl4=8|lvl5=10|lvl6=12|lvl7=14|lvl8=16|lvl9=18|lvl10=20}}
+}}}}
+|skill5={{SkillInfo
+|name=All Out Attack
+|info=
+Damage enemies around you. Evolves if Kanji is close by.
+|trigger=Ultimate
+|target=AoE_Self
+|radius=500
+|cooldown=30.0
+|extra=Beauty & The Beast increases Damage by 30% and Radius by 100
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Damage|lvl1=10|lvl2=14|lvl3=18|lvl4=22|lvl5=26|lvl6=30}}
+}}}}
+}}

@@ -1,0 +1,61 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Lifestealer
+|image=[[File:Lifestealer.webp]]
+|category=DotA-Strength
+|max=32
+|level=2180
+|items=
+Book of Cannibalism<br>
+Mask of Death
+}}
+|skill1={{SkillInfo
+|name=Infest
+|info=
+Heal HP and Teleport when Crouched
+|trigger=Kill
+|cooldown=2.0
+|extra=Heal Random between 10 and ...
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Heal|unit=HP|lvl1=16|lvl2=18|lvl3=20|lvl4=22|lvl5=24|lvl6=26|lvl7=28|lvl8=30}}
+}}}}
+|skill2={{SkillInfo
+|name=Open Wounds
+|info=
+Slow, Lifesteal for allies
+|trigger=Attack
+|duration=5
+|buffs=
+<p>
+Speed: -30%
+</p>
+|extra=Lifesteal is 10%
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Chance|lvl1=12.0%|lvl2=15.0%|lvl3=18.0%|lvl4=21.0%|lvl5=24.0%|lvl6=27.0%|lvl7=30.0%|lvl8=33.0%}}
+}}}}
+|skill3={{SkillInfo
+|name=Feast
+|info=
+Steal Health, Gain Max HP on Kill
+|trigger=Attack
+|quantity=10
+|extra=Based on Max Health. Loses 2 stacks each spawn.
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Steal|lvl1=3.0%|lvl2=4.0%|lvl3=5.0%|lvl4=6.0%|lvl5=7.0%|lvl6=8.0%|lvl7=9.0%|lvl8=10.0%}}
+}}}}
+|skill4={{SkillInfo
+|name=Rage
+|info=
+Skill Immunity, Reduce Magic Damage
+|trigger=Ultimate
+|target=Self
+|buffs=
+<p>
+Magic Damage: -50%
+</p>
+|cooldown=20.0
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl1=2.5|lvl2=3.0|lvl3=3.5|lvl4=4.0|lvl5=4.5|lvl6=5.0|lvl7=5.5|lvl8=6.0}}
+}}}}
+}}

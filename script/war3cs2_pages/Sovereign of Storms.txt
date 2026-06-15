@@ -1,0 +1,68 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Sovereign of Storms
+|image=[[File:Sovereign of Storms.webp]]
+|category=AQW
+|max=25
+|level=4345
+|weapons=
+UMP-45<br>
+AWP<br>
+Knife
+|restricted=All
+}}
+|skill1={{SkillInfo
+|name=Roaring Thunder
+|info=
+Damage and Thunderstruck Enemies around your target
+|trigger=Attack
+|quantity=2
+|chance=25
+|radius=500
+|extra=Damage Reduces by 33% and Radius Reduces 75 each jump
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Damage|lvl1=3|lvl2=6|lvl3=9|lvl4=12|lvl5=15}}
+}}}}
+|skill2={{SkillInfo
+|name=Fulminate
+|info=
+Thunderstruck Enemies hit by Roaring Thunder or Sky Splitter Become Shocked and are Bashed. Removes Thunderstruck
+|trigger=Special
+|extra=Thunderstruck Enemies take 20% more Magic Damage.
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl1=0.5|lvl2=0.8|lvl3=1.0|lvl4=1.2|lvl5=1.5}}
+}}}}
+|skill3={{SkillInfo
+|name=Storm Surge
+|info=
+Heal when you damage a Shocked Enemy
+|trigger=Attack
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Heal|unit=HP|lvl1=2|lvl2=3|lvl3=4|lvl4=5|lvl5=6}}
+}}}}
+|skill4={{SkillInfo
+|name=Sky Splitter
+|info=
+Damage and Thunderstruck Enemies around you
+|trigger=Ability1
+|target=AoE_Self
+|radius=400
+|cooldown=15.0
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Damage|lvl1=14|lvl2=18|lvl3=22|lvl4=26|lvl5=30}}
+}}}}
+|skill5={{SkillInfo
+|name=Eye of the Storm
+|info=
+Gain Awp with 1 Bullet. Impact Damages enemies around it
+|trigger=Ultimate
+|target=Self
+|duration=10
+|radius=400
+|cooldown=20.0
+|extra=Headshot increases damage by 50%
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Damage|lvl1=20|lvl2=25|lvl3=30|lvl4=35|lvl5=40}}
+}}}}
+}}

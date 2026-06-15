@@ -1,0 +1,52 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Twins
+|image=[[File:Twins.webp]]
+|category=Matrix
+|max=20
+|level=3160
+|weapons=
+UMP-45
+|restricted=All
+|team=2
+}}
+|skill1={{SkillInfo
+|name=Double Team
+|info=
+Banish
+|trigger=Attack
+|chance=33
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl1=1.0|lvl2=1.5|lvl3=2.0|lvl4=2.5|lvl5=3.0}}
+}}}}
+|skill2={{SkillInfo
+|name=Double Mags
+|info=
+Increase Clip Size
+|trigger=Passive
+|extra=Double the clip
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Chance|unit=%|lvl1=60|lvl2=70|lvl3=80|lvl4=90|lvl5=100}}
+}}}}
+|skill3={{SkillInfo
+|name=Apparition
+|info=
+Evade Weapon Damage
+|trigger=Victim
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Chance|lvl1=14.0%|lvl2=18.0%|lvl3=22.0%|lvl4=26.0%|lvl5=30.0%}}
+}}}}
+|skill4={{SkillInfo
+|name=Partial Existence
+|info=
+Toggle Noclip
+|trigger=Ultimate
+|target=Toggle
+|damage=4
+|cooldown=7.5
+|extra=Slowly lose health
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Chance|unit=%|lvl1=60|lvl2=70|lvl3=80|lvl4=90|lvl5=100}}
+}}}}
+}}

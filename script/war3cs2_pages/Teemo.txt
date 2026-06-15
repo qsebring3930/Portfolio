@@ -1,0 +1,90 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Teemo
+|image=[[File:Teemo.webp]]
+|category=LoL-Specialist
+|max=30
+|level=4285
+|weapons=
+P250<br>
+Grenade
+|restricted=All
+|items=
+Gloves of Warmth
+|team=1
+|passive=
+<p>
+Increase Fire Rate: +1.0% per Level<br>
+Size: -30%
+</p>
+}}
+|skill1={{SkillInfo
+|name=Guerrilla Warfare
+|info=
+Decrease Visibility on no Actions
+|trigger=Special
+|tickrate=0.1
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl1=10.0|lvl2=8.5|lvl3=7.0|lvl4=5.5|lvl5=4.0|lvl6=2.5}}
+}}}}
+|skill2={{SkillInfo
+|name=Blinding Dart
+|info=
+Darken Vision
+|trigger=Attack
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Chance|lvl1=5.0%|lvl2=10.0%|lvl3=15.0%|lvl4=20.0%|lvl5=25.0%|lvl6=30.0%}}
+|line2={{LevelUpRow|field=Duration|unit=sec.|lvl1=0.5|lvl2=1.0|lvl3=1.5|lvl4=2.0|lvl5=2.5|lvl6=3.0}}
+}}}}
+|skill3={{SkillInfo
+|name=Move Quick
+|info=
+<p>
+Increase Speed, don't lose on hit<br>
+Passive: Increase Speed, lose on hit
+</p>
+|trigger=Ability1
+|target=Self
+|duration=3
+|buffs=
+<p>
+Extra Speed: +15%
+</p>
+|cooldown=15.0
+|extra=Speed Loss Duration is 2.0 sec.
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Base Speed|lvl1=10.0%|lvl2=16.0%|lvl3=22.0%|lvl4=28.0%|lvl5=34.0%|lvl6=40.0%}}
+}}}}
+|skill4={{SkillInfo
+|name=Toxic Shot
+|info=
+DoT
+|trigger=Attack
+|damage=3
+|duration=3
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Chance|lvl1=50.0%|lvl2=60.0%|lvl3=70.0%|lvl4=80.0%|lvl5=90.0%|lvl6=100.0%}}
+}}}}
+|skill5={{SkillInfo
+|name=Noxious Trap
+|info=
+<p>
+Turn Grenade into sticking trap<br>
+Trap: Spawn Ward that Decreases Speed and DoT<br>
+Passive: Gain Grenades Over Time
+</p>
+|trigger=Special
+|damage=6
+|quantity=3
+|duration=4
+|buffs=
+<p>
+Slow: 50.0%
+</p>
+|extra=Trap Radius: 100, Ward Radius: 200, Ward Duration: 5.0 sec.
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Grenade Tickrate|unit=sec.|lvl1=30.0|lvl2=26.0|lvl3=22.0|lvl4=18.0|lvl5=14.0|lvl6=10.0}}
+|line2={{LevelUpRow|field=Trap Duration|unit=sec.|lvl1=20.0|lvl2=24.0|lvl3=28.0|lvl4=32.0|lvl5=36.0|lvl6=40.0}}
+}}}}
+}}

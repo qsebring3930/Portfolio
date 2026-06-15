@@ -1,0 +1,83 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Mao
+|image=[[File:Mao.webp]]
+|category=Disgaea
+|max=36
+|level=2860
+|weapons=
+Desert Eagle<br>
+Knife
+|restricted=All
+|items=
+Sock of Feathers
+}}
+|skill1={{SkillInfo
+|name=Blast Finger
+|info=
+Leap Forward, Damage Enemy on Touch
+|trigger=Ability1
+|target=Self
+|range=400
+|force=2
+|cooldown=15.0
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Damage|lvl1=15|lvl2=16|lvl3=17|lvl4=18|lvl5=19|lvl6=20}}
+}}}}
+|skill2={{SkillInfo
+|name=Shine Beam
+|info=
+Throw exploding beams
+|trigger=Ability2
+|target=Object
+|radius=75
+|cooldown=15.0
+|extra=Force random between 75% and 150%. Damage between 5 and 15. Quantity Random between 2 and ...
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Quantity|lvl1=3|lvl2=4|lvl3=5|lvl4=6|lvl5=7|lvl6=8}}
+}}}}
+|skill3={{SkillInfo
+|name=Violent Courage
+|info=
+Increase Weapon Damage based on Enemies alive
+|trigger=Attack
+|buffs=
+<p>
+Increase: +5%
+</p>
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Increase Cap|lvl1=25.0%|lvl2=30.0%|lvl3=35.0%|lvl4=40.0%|lvl5=45.0%|lvl6=50.0%}}
+}}}}
+|skill4={{SkillInfo
+|name=Scientific Enthusiasm
+|info=
+Increase Weapon Damage
+|trigger=Attack
+|extra=Damage between 2 and 10
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Chance|lvl1=18.0%|lvl2=21.0%|lvl3=24.0%|lvl4=27.0%|lvl5=30.0%|lvl6=33.0%}}
+}}}}
+|skill5={{SkillInfo
+|name=Evil Modifications
+|info=
+Increase Magic Damage, Reduce Received Magic Damage
+|trigger=Special
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Increase|lvl1=5.0%|lvl2=10.0%|lvl3=15.0%|lvl4=20.0%|lvl5=25.0%|lvl6=30.0%}}
+|line2={{LevelUpRow|field=Reduce|lvl1=5.0%|lvl2=10.0%|lvl3=15.0%|lvl4=20.0%|lvl5=25.0%|lvl6=30.0%}}
+}}}}
+|skill6={{SkillInfo
+|name=Vasa Aergi
+|info=
+Deal Damage at Random Locations
+|trigger=Ultimate
+|target=Location
+|range=750
+|radius=100
+|cooldown=30.0
+|extra=5 Beams, Random Locations in Radius of 400
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Damage|lvl1=20|lvl2=22|lvl3=24|lvl4=26|lvl5=28|lvl6=30}}
+}}}}
+}}

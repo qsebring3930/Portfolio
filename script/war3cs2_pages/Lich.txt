@@ -1,0 +1,70 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Lich
+|image=[[File:Lich.webp]]
+|category=WC3-Undead
+|max=40
+|level=10
+}}
+|skill1={{SkillInfo
+|name=Frost Nova
+|info=
+Chill Enemies around you
+|trigger=Ability1
+|target=AoE_Self
+|damage=25
+|cooldown=15.0
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Radius|lvl1=150.0|lvl2=200.0|lvl3=250.0|lvl4=300.0|lvl5=350.0|lvl6=400.0|lvl7=450.0|lvl8=500.0}}
+}}}}
+|skill2={{SkillInfo
+|name=Frost Armor
+|info=
+Reduce Weapon Damage, Chill
+|trigger=Victim
+|buffs=
+<p>
+Weapon Damage: -50%
+</p>
+|extra=Always triggers on Knife
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Chance|lvl1=20.0%|lvl2=22.0%|lvl3=25.0%|lvl4=28.0%|lvl5=31.0%|lvl6=34.0%|lvl7=37.0%|lvl8=40.0%}}
+}}}}
+|skill3={{SkillInfo
+|name=Chilled
+|info=
+More Effects on being more chilled
+|trigger=Attack
+|damage=50
+|duration=6
+|extra=Chill 1: Speed -25%/Fire Rate -25% <nowiki>|</nowiki> Chill 2: Chance to Stun for 1.5 sec. <nowiki>|</nowiki> Chill 3: Deal Damage
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Chill Chance|lvl1=4.0%|lvl2=7.0%|lvl3=10.0%|lvl4=13.0%|lvl5=16.0%|lvl6=19.0%|lvl7=22.0%|lvl8=25.0%}}
+|line2={{LevelUpRow|field=Stun Chance|unit=%|lvl1=25|lvl2=30|lvl3=35|lvl4=40|lvl5=45|lvl6=50|lvl7=55|lvl8=60}}
+}}}}
+|skill4={{SkillInfo
+|name=Dark Ritual
+|info=
+Gain Health when enemies die around you.
+|trigger=Special
+|heal=15
+|extra=Add Health based on Max Health
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Multiplier|lvl1=3.0%|lvl2=4.0%|lvl3=5.0%|lvl4=6.0%|lvl5=7.0%|lvl6=8.0%|lvl7=9.0%|lvl8=10.0%}}
+|line2={{LevelUpRow|field=Radius|lvl1=220.0|lvl2=260.0|lvl3=300.0|lvl4=340.0|lvl5=380.0|lvl6=420.0|lvl7=460.0|lvl8=500.0}}
+}}}}
+|skill5={{SkillInfo
+|name=Death and Decay
+|info=
+Damage All in Area
+|trigger=Ultimate
+|target=Location
+|range=600
+|radius=200
+|cooldown=20.0
+|extra=5% Max Health Damage
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl1=4.0|lvl2=5.0|lvl3=6.0|lvl4=8.0|lvl5=10.0|lvl6=12.0|lvl7=14.0|lvl8=16.0}}
+}}}}
+}}

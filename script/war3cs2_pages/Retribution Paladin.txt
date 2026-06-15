@@ -1,0 +1,92 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Retribution Paladin
+|image=[[File:Retribution Paladin.webp]]
+|category=WoW
+|max=42
+|level=1990
+|weapons=
+MP5-SD<br>
+Five-Seven<br>
+Knife
+|restricted=All
+}}
+|skill1={{SkillInfo
+|name=Hammer of Wrath
+|info=
+Increase Damage to weak Enemies
+|trigger=Attack
+|damage=+60.0%
+|cooldown=5.0
+|extra=Triggers when below 40% Health.
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Increase|unit=sec.|lvl1=8.0|lvl2=7.0|lvl3=6.0|lvl4=5.0|lvl5=4.0|lvl6=3.0}}
+}}}}
+|skill2={{SkillInfo
+|name=Hammer of Justice
+|info=
+Bash
+|trigger=Attack
+|chance=20
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl1=0.1|lvl2=0.2|lvl3=0.3|lvl4=0.4|lvl5=0.5|lvl6=0.6}}
+}}}}
+|skill3={{SkillInfo
+|name=Sanctity Aura
+|info=
+Increase Dealt Magic Damage for allies
+|trigger=Aura
+|extra=Increase Damage by 20%
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Radius|lvl1=275.0|lvl2=300.0|lvl3=325.0|lvl4=350.0|lvl5=375.0|lvl6=400.0}}
+}}}}
+|skill4={{SkillInfo
+|name=Pursuit of Justice
+|info=
+Increase Health
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Health|unit=HP|lvl1=10|lvl2=18|lvl3=26|lvl4=34|lvl5=42|lvl6=50}}
+}}}}
+|skill5={{SkillInfo
+|name=Flash of Light
+|info=
+Heal ally, Increased Heal when weak
+|trigger=Ability1
+|target=Target_Ally
+|range=500
+|cooldown=20.0
+|extra=Increased Heal when you are below 40% health and you target an Ally. Applies to self if no target
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Heal|unit=HP|lvl1=10|lvl2=12|lvl3=14|lvl4=16|lvl5=18|lvl6=20}}
+}}}}
+|skill6={{SkillInfo
+|name=Blessing of Freedom
+|info=
+Cleanse, Increase Speed
+|trigger=Ability2
+|target=Self
+|buffs=
+<p>
+Speed: +20%
+</p>
+|cooldown=15.0
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl1=5.0|lvl2=5.6|lvl3=6.2|lvl4=6.8|lvl5=7.4|lvl6=8.0}}
+}}}}
+|skill7={{SkillInfo
+|name=Divine Protection
+|info=
+Take Reduced Weapon Damage
+|trigger=Ultimate
+|target=Self
+|buffs=
+<p>
+Weapon Damage: -40%
+</p>
+|cooldown=30.0
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl1=2.5|lvl2=3.0|lvl3=3.5|lvl4=4.0|lvl5=4.5|lvl6=5.0}}
+}}}}
+}}

@@ -1,0 +1,61 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Riki
+|image=[[File:Riki.webp]]
+|category=DotA-Agility
+|max=32
+|level=2340
+|weapons=
+Knife<br>
+Smoke Grenade
+|restricted=All
+}}
+|skill1={{SkillInfo
+|name=Smoke Screen
+|info=
+Smoke Silences, Weakens and Decrease Accuracy
+|trigger=Special
+|duration=5
+|buffs=
+<p>
+Weapon Damage: +10%
+</p>
+|extra=33% chance to miss on Weapon Damage
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Quantity|lvl1=3|lvl2=4|lvl3=5|lvl4=6|lvl5=7|lvl6=8|lvl7=9|lvl8=10}}
+}}}}
+|skill2={{SkillInfo
+|name=Blink Strike
+|info=
+Teleport to where you aim
+|trigger=Ability1
+|target=Location
+|cooldown=10.0
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Range|lvl1=500.0|lvl2=520.0|lvl3=540.0|lvl4=560.0|lvl5=580.0|lvl6=600.0|lvl7=620.0|lvl8=640.0}}
+}}}}
+|skill3={{SkillInfo
+|name=Cloak and Dagger
+|info=
+Crouch to Remain Invisible
+|trigger=Special
+|tickrate=0.1
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Delay|unit=sec.|lvl1=4.3|lvl2=3.9|lvl3=3.5|lvl4=3.1|lvl5=2.7|lvl6=2.3|lvl7=1.9|lvl8=1.5}}
+}}}}
+|skill4={{SkillInfo
+|name=Tricks of the Trade
+|info=
+Hide while attacking random enemies, Teleport to location
+|trigger=Ultimate
+|target=Location
+|duration=4
+|range=700
+|radius=400
+|cooldown=30.0
+|extra=Random Damage between 20 and ...
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Damage|lvl1=20|lvl2=22|lvl3=24|lvl4=26|lvl5=28|lvl6=30|lvl7=32|lvl8=34}}
+}}}}
+}}

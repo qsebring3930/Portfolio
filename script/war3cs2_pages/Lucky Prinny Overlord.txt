@@ -1,0 +1,106 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Lucky Prinny Overlord
+|image=[[File:Lucky Prinny Overlord.webp]]
+|category=Player
+|max=35
+|level=925
+|team=1
+}}
+|skill1={{SkillInfo
+|name=All the Chaos
+|info=
+<p>
+Random Effects<br>
+Speed<br>
+Health<br>
+Visibility<br>
+Gravity<br>
+Color<br>
+Longjump<br>
+Bonus Damage<br>
+Money
+</p>
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Quantity|lvl1=1|lvl2=2|lvl3=3|lvl4=4|lvl5=5}}
+}}}}
+|skill2={{SkillInfo
+|name=Random Generosity
+|info=
+Give Weapons to Allies
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Chance|unit=%|lvl1=15|lvl2=30|lvl3=45|lvl4=60|lvl5=75}}
+}}}}
+|skill3={{SkillInfo
+|name=Entity Engine
+|info=
+Throw an object
+|trigger=Ability1
+|target=Object
+|force=1.2
+|cooldown=5.0
+|extra=Damage between 5 and ...
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Damage|lvl1=10|lvl2=15|lvl3=20|lvl4=25|lvl5=30}}
+}}}}
+|skill4={{SkillInfo
+|name=Why always my head?
+|info=
+Decrease Headshot Damage
+|trigger=Victim
+|extra=Decrease between 0 and ...
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Decrease|lvl1=20.0%|lvl2=40.0%|lvl3=60.0%|lvl4=80.0%|lvl5=100.0%}}
+}}}}
+|skill5={{SkillInfo
+|name=Tactics and Abilities
+|info=
+<p>
+Place Random Ward or Trap<br>
+Mine<br>
+Damage<br>
+Highlight<br>
+Heal<br>
+Silence<br>
+Slow
+</p>
+|trigger=Ability2
+|target=Self
+|duration=10
+|radius=300
+|extra=
+<p>
+<u>Effects:</u><br>
+Mine: Trap that explodes dealing between 20 and 40 to those around it<br>
+Damage: Damage enemies nearby for 10<br>
+Heal: Heal Allies for 10HP<br>
+Slow: Decrease Speed by 40%
+</p>
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Cooldown|unit=sec.|lvl1=25.0|lvl2=22.5|lvl3=20.0|lvl4=17.5|lvl5=15.0}}
+}}}}
+|skill6={{SkillInfo
+|name=Here, Pikachu
+|info=
+AoE Damage on Knife Attack
+|trigger=Victim
+|chance=50
+|radius=200
+|extra=Damage between 5 and ...
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Damage|lvl1=15|lvl2=30|lvl3=45|lvl4=60|lvl5=75}}
+}}}}
+|skill7={{SkillInfo
+|name=I made you
+|info=
+Summon Random Race
+|trigger=Ultimate
+|target=Random_Ally
+|cooldown=20.0
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Chance|unit=%|lvl1=60|lvl2=70|lvl3=80|lvl4=90|lvl5=100}}
+}}}}
+}}

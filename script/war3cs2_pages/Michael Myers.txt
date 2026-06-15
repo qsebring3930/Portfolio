@@ -1,0 +1,77 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Michael Myers
+|image=[[File:Michael Myers.webp]]
+|category=Holiday - Halloween
+|max=25
+|level=345
+|weapons=
+Knife
+|restricted=All
+|items=
+Amulet of the Cat
+|team=1
+|passive=
+<p>
+Weapon Fire: disabled
+</p>
+}}
+|skill1={{SkillInfo
+|name=Boogeyman
+|info=
+<p>
+Shake Screen, Bash and Highlight those you look at<br>
+Press Ability2 to disable for a short time
+</p>
+|trigger=Special
+|duration=6
+|range=1500
+|cooldown=10.0
+|levelup={{LevelUpInfo|levels=5|zero=1
+|line1={{LevelUpRow|field=Chance|unit=%|lvl0=5|lvl1=10|lvl2=15|lvl3=20|lvl4=25|lvl5=30}}
+}}}}
+|skill2={{SkillInfo
+|name=Terrifying Presence
+|info=
+Spin
+|trigger=Aura
+|tickrate=1.5
+|radius=300
+|extra=Disabled when not hiding
+|levelup={{LevelUpInfo|levels=5|zero=1
+|line1={{LevelUpRow|field=Chance|unit=%|lvl0=5|lvl1=10|lvl2=15|lvl3=20|lvl4=25|lvl5=30}}
+}}}}
+|skill3={{SkillInfo
+|name=From the Shadows
+|info=
+Hide or Reveal yourself to unsuspecting enemies
+|trigger=Ability1
+|target=Self
+|buffs=
+<p>
+Spell Immunity: 100%<br>
+Skill Immunity: 100%
+</p>
+|extra=Only works if no enemy sees you. Breaks if you get hit
+|levelup={{LevelUpInfo|levels=5|zero=1
+|line1={{LevelUpRow|field=Cooldown|unit=sec.|lvl0=12.0|lvl1=10.0|lvl2=8.0|lvl3=6.0|lvl4=4.0|lvl5=2.0}}
+}}}}
+|skill4={{SkillInfo
+|name=Curse of Thorn
+|info=
+Revive if enemies look away
+|trigger=Death
+|extra=Chance is increased by 5% every Tick they look away. Headshot kill negates this skill.
+|levelup={{LevelUpInfo|levels=5|zero=1
+|line1={{LevelUpRow|field=Chance|unit=%|lvl0=5|lvl1=10|lvl2=15|lvl3=20|lvl4=25|lvl5=30}}
+}}}}
+|skill5={{SkillInfo
+|name=Stabbing
+|info=
+Instantly kill
+|trigger=Attack
+|levelup={{LevelUpInfo|levels=5|zero=1
+|line1={{LevelUpRow|field=Chance|lvl0=0.0%|lvl1=2.0%|lvl2=4.0%|lvl3=6.0%|lvl4=8.0%|lvl5=10.0%}}
+}}}}
+}}

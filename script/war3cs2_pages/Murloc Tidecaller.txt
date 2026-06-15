@@ -1,0 +1,75 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Murloc Tidecaller
+|image=[[File:Murloc Tidecaller.webp]]
+|category=WC3-Murloc
+|max=30
+|level=240
+|weapons=
+Knife
+|restricted=All
+|team=2
+|passive=
+<p>
+Size: -30%
+</p>
+}}
+|skill1={{SkillInfo
+|name=Pack Leader
+|info=
+Increase Health
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Health|unit=HP|lvl0=10|lvl1=20|lvl2=28|lvl3=36|lvl4=44|lvl5=52|lvl6=60}}
+}}}}
+|skill2={{SkillInfo
+|name=Lead the Tides
+|info=
+Increase Speed, Fire Rate per Summon
+|trigger=Passive
+|extra=Stacks 6 times
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Speed|lvl0=2.5%|lvl1=5.0%|lvl2=6.0%|lvl3=7.0%|lvl4=8.0%|lvl5=9.0%|lvl6=10.0%}}
+|line2={{LevelUpRow|field=Fire Rate|lvl0=2.5%|lvl1=5.0%|lvl2=6.0%|lvl3=7.0%|lvl4=8.0%|lvl5=9.0%|lvl6=10.0%}}
+}}}}
+|skill3={{SkillInfo
+|name=Water Bolt
+|info=
+Throw water
+|trigger=Ability1
+|target=Object
+|force=1.8
+|cooldown=4.0
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Damage|lvl0=10|lvl1=15|lvl2=16|lvl3=17|lvl4=18|lvl5=19|lvl6=20}}
+}}}}
+|skill4={{SkillInfo
+|name=Tidecaller
+|info=
+Summon Murlocs
+|trigger=Ability2
+|target=Random_Ally
+|quantity=2
+|cooldown=20.0
+|extra=Reduce chance by half per roll.
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Chance|unit=%|lvl0=40|lvl1=55|lvl2=60|lvl3=65|lvl4=70|lvl5=75|lvl6=80}}
+}}}}
+|skill5={{SkillInfo
+|name=Whirlpool
+|info=
+Throw Whirlpool Grenade, Ward: Pull and Damage
+|trigger=Ultimate
+|target=Object
+|damage=5
+|tickrate=0.5
+|radius=400
+|explrad=300
+|force=600
+|cooldown=20.0
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Magnitude|unit=%|lvl1=75|lvl2=85|lvl3=95|lvl4=105|lvl5=115|lvl6=125}}
+|line2={{LevelUpRow|field=Duration|unit=sec.|lvl1=5.0|lvl2=5.5|lvl3=6.0|lvl4=6.5|lvl5=7.0|lvl6=7.5}}
+}}}}
+}}

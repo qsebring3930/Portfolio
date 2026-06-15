@@ -1,0 +1,89 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Wizard (D&D)
+|image=[[File:Wizard (D&D).webp]]
+|category=D&D Casters
+|max=30
+|level=3470
+|items=
+Gloves of Warmth<br>
+Ring of Regeneration<br>
+Ring of Armor<br>
+Armor of Protection
+}}
+|skill1={{SkillInfo
+|name=Mage Armor
+|info=
+Decrease Magic Damage, Healback Weapon Damage if armored
+|trigger=Victim
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Decrease|lvl1=15.0%|lvl2=30.0%|lvl3=45.0%|lvl4=60.0%|lvl5=75.0%}}
+|line2={{LevelUpRow|field=Healback|lvl1=10.0%|lvl2=20.0%|lvl3=30.0%|lvl4=40.0%|lvl5=50.0%}}
+}}}}
+|skill2={{SkillInfo
+|name=Ray of Frost
+|info=
+Deal Magic Damage, Slow
+|trigger=Attack
+|chance=33
+|duration=3
+|buffs=
+<p>
+Speed: -35%
+</p>
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Damage|lvl1=6.0%|lvl2=12.0%|lvl3=18.0%|lvl4=24.0%|lvl5=30.0%}}
+}}}}
+|skill3={{SkillInfo
+|name=Detect Magic
+|info=
+Highlight Spell Casters and Summons
+|trigger=Aura
+|duration=5
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Radius|lvl1=150.0|lvl2=300.0|lvl3=450.0|lvl4=600.0|lvl5=750.0}}
+}}}}
+|skill4={{SkillInfo
+|name=Magic Missile
+|info=
+Unleash Tracking Missiles on Grenade Detonation
+|trigger=Special
+|damage=15
+|duration=6
+|radius=500
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Quantity|lvl1=2|lvl2=3|lvl3=4|lvl4=5|lvl5=6}}
+}}}}
+|skill5={{SkillInfo
+|name=Grease
+|info=
+Place Wards in a Line, Ward: Remove Friction, chance to remove movement
+|trigger=Ability1
+|target=Location
+|chance=50
+|duration=8
+|radius=75
+|cooldown=20.0
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Quantity|lvl1=4|lvl2=5|lvl3=6|lvl4=7|lvl5=8}}
+}}}}
+|skill6={{SkillInfo
+|name=Wall of Water
+|info=
+<p>
+Spawn a Water Barrier in front of you<br>
+Hinder enemies who walk through<br>
+Lower Weapon Damage if shot through
+</p>
+|trigger=Ultimate
+|target=Location
+|duration=15
+|range=300
+|cooldown=30.0
+|extra=Freezes Solid if hit by Frost Ray
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Hinder|lvl1=10.0%|lvl2=20.0%|lvl3=30.0%|lvl4=40.0%|lvl5=50.0%}}
+|line2={{LevelUpRow|field=Decrease|lvl1=7.0%|lvl2=14.0%|lvl3=21.0%|lvl4=28.0%|lvl5=35.0%}}
+}}}}
+}}

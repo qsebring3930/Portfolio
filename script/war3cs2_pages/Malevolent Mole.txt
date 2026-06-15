@@ -1,0 +1,60 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Malevolent Mole
+|image=[[File:Malevolent Mole.webp]]
+|category=Pet
+|max=35
+|level=1810
+|weapons=
+P90
+|restricted=All
+|items=
+Amulet of the Cat
+}}
+|skill1={{SkillInfo
+|name=Mole
+|info=
+Mole
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=7
+|line1={{LevelUpRow|field=Chance|unit=%|lvl1=10|lvl2=12|lvl3=14|lvl4=16|lvl5=19|lvl6=22|lvl7=25}}
+}}}}
+|skill2={{SkillInfo
+|name=Bury
+|info=
+Bury
+|trigger=Attack
+|duration=3
+|levelup={{LevelUpInfo|levels=7
+|line1={{LevelUpRow|field=Chance|lvl1=8.0%|lvl2=10.0%|lvl3=12.0%|lvl4=14.0%|lvl5=16.0%|lvl6=18.0%|lvl7=20.0%}}
+}}}}
+|skill3={{SkillInfo
+|name=Strong Senses
+|info=
+Reveal
+|trigger=Attack
+|duration=3
+|levelup={{LevelUpInfo|levels=7
+|line1={{LevelUpRow|field=Chance|lvl1=45.0%|lvl2=50.0%|lvl3=55.0%|lvl4=60.0%|lvl5=65.0%|lvl6=70.0%|lvl7=75.0%}}
+}}}}
+|skill4={{SkillInfo
+|name=Thick Hide
+|info=
+Regen HP
+|trigger=Passive
+|heal=3
+|levelup={{LevelUpInfo|levels=7
+|line1={{LevelUpRow|field=Tickrate|unit=sec.|lvl1=4.0|lvl2=3.5|lvl3=3.0|lvl4=2.5|lvl5=2.0|lvl6=1.5|lvl7=1.0}}
+}}}}
+|skill5={{SkillInfo
+|name=Burrow
+|info=
+Toggle to Become Invisible, Can't Attack
+|trigger=Ultimate
+|target=Self
+|cooldown=5.0
+|levelup={{LevelUpInfo|levels=7
+|line1={{LevelUpRow|field=Slow|lvl1=55.0%|lvl2=45.0%|lvl3=35.0%|lvl4=25.0%|lvl5=15.0%|lvl6=5.0%|lvl7=0.0%}}
+}}}}
+}}

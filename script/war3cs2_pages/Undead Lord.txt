@@ -1,0 +1,75 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Undead Lord
+|image=[[File:Undead Lord.webp]]
+|category=Hero
+|max=36
+|level=1500
+|weapons=
+Glock-18<br>
+P2000<br>
+USP-S<br>
+P250<br>
+Five-Seven<br>
+Desert Eagle<br>
+Dual Berettas
+|restricted=All
+}}
+|skill1={{SkillInfo
+|name=Bone Holster
+|info=
+<p>
+Better Pistol<br>
+Use Settings to change default behavior
+</p>
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Weapon|lvl1=P2000|lvl2=USP-S|lvl3=P250|lvl4=Five-Seven|lvl5=Desert Eagle|lvl6=Dual Berettas}}
+}}}}
+|skill2={{SkillInfo
+|name=Renegade
+|info=
+Increase Speed, Health
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Speed|lvl1=5.0%|lvl2=8.0%|lvl3=11.0%|lvl4=14.0%|lvl5=17.0%|lvl6=20.0%}}
+|line2={{LevelUpRow|field=Health|unit=HP|lvl1=25|lvl2=30|lvl3=35|lvl4=40|lvl5=45|lvl6=50}}
+}}}}
+|skill3={{SkillInfo
+|name=Bone Clip
+|info=
+Increase Clip
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Clip|lvl1=50.0%|lvl2=60.0%|lvl3=70.0%|lvl4=80.0%|lvl5=90.0%|lvl6=100.0%}}
+}}}}
+|skill4={{SkillInfo
+|name=Bone Bullets
+|info=
+Increase Weapon Damage
+|trigger=Attack
+|chance=24
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Increase|lvl1=5.0%|lvl2=10.0%|lvl3=15.0%|lvl4=20.0%|lvl5=25.0%|lvl6=30.0%}}
+}}}}
+|skill5={{SkillInfo
+|name=Bone Wall
+|info=
+Healback
+|trigger=Victim
+|extra=Random Heal between 5 and ...
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Heal|unit=HP|lvl1=8|lvl2=10|lvl3=12|lvl4=14|lvl5=16|lvl6=18}}
+}}}}
+|skill6={{SkillInfo
+|name=Scavenge
+|info=
+Steal weapons around you
+|trigger=Ultimate
+|target=AoE_Self
+|cooldown=20.0
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Radius|lvl1=250.0|lvl2=300.0|lvl3=350.0|lvl4=400.0|lvl5=450.0|lvl6=500.0}}
+}}}}
+}}

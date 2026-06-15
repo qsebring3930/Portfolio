@@ -1,0 +1,119 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Hesaketvmesē
+|image=[[File:Hesaketvmesē.webp]]
+|category=Holiday - Thanksgiving
+|max=35
+|level=395
+|weapons=
+USP-S
+|restricted=All
+}}
+|skill1={{SkillInfo
+|name=Corn Woman
+|info=
+<p>
+Passive: Regen Clip while moving<br>
+Aura: Regen Clip<br>
+Victim: Regain Clip based on damage
+</p>
+|trigger=Special
+|radius=200
+|extra=Self: 2, Allies: 1
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Damage Convert|lvl1=5.0%|lvl2=10.0%|lvl3=15.0%|lvl4=20.0%|lvl5=25.0%}}
+}}}}
+|skill2={{SkillInfo
+|name=Stomp Dance
+|info=
+Channel to Place Wards in a Line, Ward: Chance to be bashed randomly
+|trigger=Ability1
+|target=Location
+|duration=7
+|radius=75
+|cooldown=30.0
+|extra=Channel Time: 1.5 sec., Bash Duration: 0.5 sec., Random time between 2.0 and 3.0 sec.
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Effect Duration|unit=sec.|lvl1=2.0|lvl2=3.0|lvl3=4.0|lvl4=5.0|lvl5=6.0}}
+}}}}
+|skill3={{SkillInfo
+|name=Sapi & Assi
+|info=
+Sacrifice health to cleanse, restore armor and regen HP over time
+|trigger=Ability2
+|target=Self
+|damage=10
+|duration=7
+|cooldown=20.0
+|extra=Heals less each time used
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Heal|unit=HP|lvl1=2|lvl2=4|lvl3=6|lvl4=8|lvl5=10}}
+}}}}
+|skill4={{SkillInfo
+|name=Third Rite
+|info=
+<p>
+Passive: Increase Sleep & Bash Immunity and Vision Resistance<br>
+Victim: Decrease Magic Damage
+</p>
+|trigger=Special
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Immunity|unit=%|lvl1=22|lvl2=33|lvl3=44|lvl4=55|lvl5=66}}
+|line2={{LevelUpRow|field=Resistance|lvl1=22.0%|lvl2=33.0%|lvl3=44.0%|lvl4=55.0%|lvl5=66.0%}}
+|line3={{LevelUpRow|field=Decrease|lvl1=15.0%|lvl2=28.0%|lvl3=41.0%|lvl4=54.0%|lvl5=67.0%}}
+}}}}
+|skill5={{SkillInfo
+|name=Walk Among Men
+|info=
+Increase Speed and Disguise
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Speed|lvl1=15.0%|lvl2=20.0%|lvl3=25.0%|lvl4=30.0%|lvl5=35.0%}}
+|line2={{LevelUpRow|field=Disguise|unit=%|lvl1=20|lvl2=40|lvl3=60|lvl4=80|lvl5=100}}
+}}}}
+|skill6={{SkillInfo
+|name=Hold Life's Breath
+|info=
+Disable and DoT
+|trigger=Attack
+|damage=3
+|duration=1.5
+|tickrate=0.5
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Chance|lvl1=4.0%|lvl2=8.0%|lvl3=12.0%|lvl4=16.0%|lvl5=20.0%}}
+}}}}
+|skill7={{SkillInfo
+|name=The Tie Snake and Horned Serpent
+|info=
+<p>
+Random Effect<br>
+Fire Immunity to Allies<br>
+Sacrifice self to respawn allies<br>
+Burn Enemies<br>
+Control Enemy<br>
+Teleport Enemy to spawn<br>
+Increase Max Health<br>
+Increase Gun Damage<br>
+Polymorph Enemy<br>
+Spawn Chickens<br>
+Reflect Weapon Damage
+</p>
+|trigger=Ultimate
+|target=All
+|extra=
+<p>
+<u>Properties:</u><br>
+Fire Immunity: 100%, 10.0 sec.<br>
+Respawns 3 Allies<br>
+Burn Duration: 3.0 sec.<br>
+Max Health: +60HP<br>
+Increase: +5, 15.0 sec.<br>
+Poly Duration: 6.0 sec.<br>
+Chicken Count: 6<br>
+Reflect Damage: 40%, 10.0 sec.
+</p>
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Cooldown|unit=sec.|lvl1=60.0|lvl2=55.0|lvl3=50.0|lvl4=45.0|lvl5=40.0}}
+}}}}
+}}

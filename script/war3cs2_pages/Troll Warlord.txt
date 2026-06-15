@@ -1,0 +1,87 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Troll Warlord
+|image=[[File:Troll Warlord.webp]]
+|category=DotA-Agility
+|max=32
+|level=2340
+|weapons=
+UMP-45<br>
+Knife
+|restricted=All
+|passive=
+<p>
+Clip Size: 50
+</p>
+}}
+|skill1={{SkillInfo
+|name=Whirling Axes
+|info=
+<p>
+Damage and affect Enemies based on Stance<br>
+Melee: Around you and Blind<br>
+Range: In front of you and Slow
+</p>
+|trigger=Ability1
+|target=Special
+|duration=5
+|range=500
+|cone=50
+|radius=250
+|buffs=
+<p>
+Speed: -20%
+</p>
+|cooldown=15.0
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Damage|lvl1=18|lvl2=19|lvl3=20|lvl4=21|lvl5=22|lvl6=23|lvl7=24|lvl8=25}}
+}}}}
+|skill2={{SkillInfo
+|name=Fervor
+|info=
+Increase Fire Rate when attacking continuously, slowly losing stacks
+|trigger=Attack
+|tickrate=2
+|extra=Maximum 10 Stacks
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Increase|lvl1=2.5%|lvl2=3.0%|lvl3=3.5%|lvl4=4.0%|lvl5=4.5%|lvl6=5.0%|lvl7=5.5%|lvl8=6.0%}}
+}}}}
+|skill3={{SkillInfo
+|name=Berserker's Rage
+|info=
+<p>
+Switch Weapon To Switch Stance<br>
+Melee: Increase Speed, Bash<br>
+Ranged: Increase Weapon Damage and Hinder
+</p>
+|trigger=Special
+|chance=20
+|duration=1
+|buffs=
+<p>
+Speed: -20%<br>
+Fire Rate: -20%
+</p>
+|extra=Bash Duration: 1 sec., Hinder Duration: 3 sec.
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Speed|lvl1=10.0%|lvl2=12.0%|lvl3=15.0%|lvl4=18.0%|lvl5=21.0%|lvl6=24.0%|lvl7=27.0%|lvl8=30.0%}}
+|line2={{LevelUpRow|field=Increase|lvl1=6.0%|lvl2=8.0%|lvl3=10.0%|lvl4=12.0%|lvl5=14.0%|lvl6=16.0%|lvl7=18.0%|lvl8=20.0%}}
+}}}}
+|skill4={{SkillInfo
+|name=Battle Trance
+|info=
+Increase Speed and Fire Rate, Cleanse, Life Steal.
+|trigger=Ultimate
+|target=Self
+|buffs=
+<p>
+Speed: +20%<br>
+Fire Rate: +70%<br>
+Life Steal: 20%
+</p>
+|cooldown=30.0
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl1=4.5|lvl2=5.0|lvl3=5.5|lvl4=6.0|lvl5=6.5|lvl6=7.0|lvl7=7.5|lvl8=8.0}}
+}}}}
+}}

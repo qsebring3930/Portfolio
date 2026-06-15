@@ -1,0 +1,72 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Jason Voorhees
+|image=[[File:Jason Voorhees.webp]]
+|category=Holiday - Halloween
+|max=25
+|level=345
+|weapons=
+Knife
+|restricted=All
+|items=
+Armor of Protection<br>
+Boots of Evasion<br>
+Boots of Zephyr
+|team=1
+}}
+|skill1={{SkillInfo
+|name=Feral Mind
+|info=
+Decrease Weapon Damage, Skill Immunity
+|trigger=Victim
+|levelup={{LevelUpInfo|levels=5|zero=1
+|line1={{LevelUpRow|field=Decrease|lvl0=20.0%|lvl1=40.0%|lvl2=50.0%|lvl3=60.0%|lvl4=70.0%|lvl5=80.0%}}
+|line2={{LevelUpRow|field=Chance|unit=%|lvl0=10|lvl1=20|lvl2=30|lvl3=40|lvl4=50|lvl5=60}}
+}}}}
+|skill2={{SkillInfo
+|name=Signature Weapon
+|info=
+Increase Knife Damage, can crit
+|trigger=Attack
+|buffs=
+<p>
+Damage: +20%
+</p>
+|extra=Crit chance is half of regular chance. Doubles increase.
+|levelup={{LevelUpInfo|levels=5|zero=1
+|line1={{LevelUpRow|field=Chance|lvl0=2.5%|lvl1=5.0%|lvl2=10.0%|lvl3=15.0%|lvl4=20.0%|lvl5=25.0%}}
+}}}}
+|skill3={{SkillInfo
+|name=Camp Crystal Lake
+|info=
+Revive
+|trigger=Death
+|extra=Every Revive increases revive time by 5 sec.
+|levelup={{LevelUpInfo|levels=5|zero=1
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl0=35.0|lvl1=30.0|lvl2=27.0|lvl3=24.0|lvl4=21.0|lvl5=18.0}}
+}}}}
+|skill4={{SkillInfo
+|name=Machete Toss
+|info=
+Throw Knife
+|trigger=Ability1
+|target=Object
+|duration=6
+|force=2
+|cooldown=5.0
+|extra=You lose your knife, you can pick up your knife where it landed
+|levelup={{LevelUpInfo|levels=5|zero=1
+|line1={{LevelUpRow|field=Damage|lvl0=15|lvl1=20|lvl2=25|lvl3=30|lvl4=35|lvl5=40}}
+}}}}
+|skill5={{SkillInfo
+|name=Stalking
+|info=
+Teleport Invisible behind random enemy but can't attack
+|trigger=Ultimate
+|target=Random_Enemy
+|extra=Random Duration between 2 and 5 sec.
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Cooldown|unit=sec.|lvl1=40.0|lvl2=36.0|lvl3=32.0|lvl4=28.0|lvl5=24.0}}
+}}}}
+}}

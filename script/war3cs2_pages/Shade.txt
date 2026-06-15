@@ -1,0 +1,66 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Shade
+|image=[[File:Shade.webp]]
+|category=Legendary
+|max=30
+|level=3705
+|weapons=
+M4A1-S<br>
+Knife
+|restricted=All
+}}
+|skill1={{SkillInfo
+|name=Hunt Shadow
+|info=
+Decrease visibility
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Visibility|lvl1=25.0%|lvl2=30.0%|lvl3=35.0%|lvl4=40.0%|lvl5=45.0%|lvl6=50.0%}}
+}}}}
+|skill2={{SkillInfo
+|name=Power of the Shadows
+|info=
+Steal Health, Increase Speed, Loses Stacks Slowly
+|trigger=Attack
+|quantity=6
+|chance=66
+|tickrate=4
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Steal|lvl1=10.0%|lvl2=12.0%|lvl3=14.0%|lvl4=16.0%|lvl5=18.0%|lvl6=20.0%}}
+|line2={{LevelUpRow|field=Speed|lvl1=3.0%|lvl2=4.0%|lvl3=5.0%|lvl4=6.0%|lvl5=7.0%|lvl6=8.0%}}
+}}}}
+|skill3={{SkillInfo
+|name=Intertwine Shadows
+|info=
+Couple with your enemy, Steal Ammo
+|trigger=Victim
+|quantity=3
+|duration=6
+|extra=First Steal is double the amount
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Chance|lvl1=18.0%|lvl2=21.0%|lvl3=24.0%|lvl4=27.0%|lvl5=30.0%|lvl6=33.0%}}
+}}}}
+|skill4={{SkillInfo
+|name=Shadow Destruction
+|info=
+Damage your coupled enemy
+|trigger=Death
+|chance=66
+|extra=Damage based on Max Health
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Multiplier|lvl1=25.0%|lvl2=30.0%|lvl3=35.0%|lvl4=40.0%|lvl5=45.0%|lvl6=50.0%}}
+}}}}
+|skill5={{SkillInfo
+|name=Shadow Tap
+|info=
+Steal Health from Random enemy
+|trigger=Ultimate
+|target=Random_Enemy
+|cooldown=30.0
+|extra=Amount based on health
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Multiplier|lvl1=10.0%|lvl2=12.0%|lvl3=14.0%|lvl4=16.0%|lvl5=18.0%|lvl6=20.0%}}
+}}}}
+}}

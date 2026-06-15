@@ -1,0 +1,68 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Windranger
+|image=[[File:Windranger.webp]]
+|category=DotA-Universal
+|max=32
+|level=2720
+|weapons=
+SSG 08<br>
+Smoke Grenade
+|restricted=All
+}}
+|skill1={{SkillInfo
+|name=Shackleshot
+|info=
+Bash your enemy and another nearby
+|trigger=Attack
+|chance=40
+|radius=250
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl1=0.3|lvl2=0.4|lvl3=0.5|lvl4=0.6|lvl5=0.7|lvl6=0.8|lvl7=0.9|lvl8=1.0}}
+}}}}
+|skill2={{SkillInfo
+|name=Powershot
+|info=
+Charge Shot to hit all enemies in a line
+|trigger=Ability1
+|target=Cylinder
+|duration=1
+|range=2000
+|aim=6
+|cooldown=15.0
+|extra=Damage Reduces per target
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Damage|lvl1=16|lvl2=18|lvl3=20|lvl4=22|lvl5=24|lvl6=26|lvl7=28|lvl8=30}}
+}}}}
+|skill3={{SkillInfo
+|name=Windrun
+|info=
+Increase Speed, Evade Weapon Damage
+|trigger=Ability2
+|target=Self
+|chance=70
+|buffs=
+<p>
+Speed: +50%
+</p>
+|cooldown=15.0
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl1=2.5|lvl2=3.0|lvl3=3.5|lvl4=4.0|lvl5=4.5|lvl6=5.0|lvl7=5.5|lvl8=6.0}}
+}}}}
+|skill4={{SkillInfo
+|name=Focus Fire
+|info=
+Increase Fire Rate, Reduce Weapon Damage
+|trigger=Ultimate
+|target=Self
+|duration=10
+|buffs=
+<p>
+Fire Rate: +100%
+</p>
+|cooldown=15.0
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Reduce|lvl1=60.0%|lvl2=55.0%|lvl3=50.0%|lvl4=45.0%|lvl5=40.0%|lvl6=35.0%|lvl7=30.0%|lvl8=25.0%}}
+}}}}
+}}

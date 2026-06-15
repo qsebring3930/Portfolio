@@ -1,0 +1,82 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Myconaea
+|image=[[File:Myconaea.webp]]
+|category=Monster
+|max=36
+|level=3965
+|team=1
+|passive=
+<p>
+Respawn: No
+</p>
+}}
+|skill1={{SkillInfo
+|name=Fungal Resilience
+|info=
+Increase Health
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Health|unit=HP|lvl1=5|lvl2=10|lvl3=15|lvl4=20|lvl5=25|lvl6=30}}
+}}}}
+|skill2={{SkillInfo
+|name=Scarlet Amanita
+|info=
+Spawn a 'Scarlet Amanita', Heals you and Myconids
+|trigger=Ability1
+|target=Location
+|heal=2
+|range=300
+|cooldown=20.0
+|extra=Amanitas don't expire but can be destroyed by grenades and molotovs. Smokes disable them
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Radius|lvl1=225.0|lvl2=250.0|lvl3=275.0|lvl4=300.0|lvl5=325.0|lvl6=350.0}}
+}}}}
+|skill3={{SkillInfo
+|name=Scarlet Spores
+|info=
+'Scarlet Amanita' Reduces Health
+|trigger=Special
+|damage=3
+|extra=Can't kill
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl1=0.5|lvl2=1.0|lvl3=1.5|lvl4=2.0|lvl5=2.5|lvl6=3.0}}
+}}}}
+|skill4={{SkillInfo
+|name=Psycho Spores
+|info=
+'Scarlet Amanita' Disco Vision
+|trigger=Special
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl1=0.5|lvl2=1.0|lvl3=1.5|lvl4=2.0|lvl5=2.5|lvl6=3.0}}
+}}}}
+|skill5={{SkillInfo
+|name=Sarcophilous
+|info=
+<p>
+Kill: Spawn a 'Scarlet Amanita'<br>
+Death: Spawn a 'Scarlet Amanita'<br>
+Special: Minion Myconid if they die in your spores
+</p>
+|trigger=Special
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Kill Chance|unit=%|lvl1=25|lvl2=30|lvl3=35|lvl4=40|lvl5=45|lvl6=50}}
+|line2={{LevelUpRow|field=Death Chance|unit=%|lvl1=25|lvl2=30|lvl3=35|lvl4=40|lvl5=45|lvl6=50}}
+|line3={{LevelUpRow|field=Minion Chance|unit=%|lvl1=10|lvl2=18|lvl3=26|lvl4=34|lvl5=42|lvl6=50}}
+}}}}
+|skill6={{SkillInfo
+|name=Scarlet Rot
+|info=
+<p>
+Boost 'Scarlet Spores' and 'Psycho Spores'<br>
+Scarlet Spores: Deal Damage<br>
+Psycho Spores: Drugs
+</p>
+|trigger=Ultimate
+|target=Special
+|cooldown=30.0
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl1=5.0|lvl2=6.0|lvl3=7.0|lvl4=8.0|lvl5=9.0|lvl6=10.0}}
+}}}}
+}}

@@ -1,0 +1,102 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Invoker
+|image=[[File:Invoker.webp]]
+|category=DotA-Magic
+|max=32
+|level=2540
+|weapons=
+SG 553<br>
+Knife
+|restricted=All
+|team=2
+}}
+|skill1={{SkillInfo
+|name=Cast Spell
+|info=
+Cast your chosen spell
+|trigger=Ability1
+|extra=Effects and Cooldown of the spell depends on the chosen spell
+}}
+|skill2={{SkillInfo
+|name=Switch Orb
+|info=
+<p>
+Change your active orb<br>
+Use Settings to change default behavior
+</p>
+|trigger=Ability2
+|target=Self
+|cooldown=5.0
+}}
+|skill3={{SkillInfo
+|name=Quas
+|info=
+Steal Health when active
+|trigger=Special
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Steal|lvl1=2.0%|lvl2=4.0%|lvl3=6.0%|lvl4=8.0%|lvl5=10.0%|lvl6=12.0%|lvl7=14.0%|lvl8=16.0%}}
+|line2={{LevelUpRow|field=Cold Snap - Duration|unit=sec.|lvl1=2.5|lvl2=3.0|lvl3=3.5|lvl4=4.0|lvl5=4.5|lvl6=5.0|lvl7=5.5|lvl8=6.0}}
+|line3={{LevelUpRow|field=Ghost Walk - Victim Slow|lvl1=20.0%|lvl2=24.0%|lvl3=28.0%|lvl4=32.0%|lvl5=36.0%|lvl6=40.0%|lvl7=44.0%|lvl8=48.0%}}
+|line4={{LevelUpRow|field=Tornado - Duration|unit=sec.|lvl1=5.0|lvl2=6.0|lvl3=7.0|lvl4=8.0|lvl5=9.0|lvl6=10.0|lvl7=11.0|lvl8=12.0}}
+|line5={{LevelUpRow|field=Forge Spirit - Duration|unit=sec.|lvl1=25.0|lvl2=30.0|lvl3=35.0|lvl4=40.0|lvl5=45.0|lvl6=50.0|lvl7=55.0|lvl8=60.0}}
+|line6={{LevelUpRow|field=Ice Wall - Duration|unit=sec.|lvl1=5.0|lvl2=6.0|lvl3=7.0|lvl4=8.0|lvl5=9.0|lvl6=10.0|lvl7=11.0|lvl8=12.0}}
+|line7={{LevelUpRow|field=Deafening Blast - Duration|unit=sec.|lvl1=0.2|lvl2=0.5|lvl3=0.8|lvl4=1.0|lvl5=1.2|lvl6=1.5|lvl7=1.8|lvl8=2.0}}
+}}}}
+|skill4={{SkillInfo
+|name=Wex
+|info=
+Increase Speed and Fire Rate when active
+|trigger=Special
+|buffs=
+<p>
+Speed: +15%
+</p>
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Fire Rate|lvl1=2.0%|lvl2=4.0%|lvl3=6.0%|lvl4=8.0%|lvl5=10.0%|lvl6=12.0%|lvl7=14.0%|lvl8=16.0%}}
+|line2={{LevelUpRow|field=Ghost Walk - Self Slow|lvl1=20.0%|lvl2=17.5%|lvl3=15.0%|lvl4=12.5%|lvl5=10.0%|lvl6=7.5%|lvl7=5.0%|lvl8=2.5%}}
+|line3={{LevelUpRow|field=Tornado - Damage|lvl1=2|lvl2=4|lvl3=6|lvl4=8|lvl5=10|lvl6=12|lvl7=14|lvl8=16}}
+|line4={{LevelUpRow|field=EMP - Money|lvl1=$1,250|lvl2=$1,500|lvl3=$1,750|lvl4=$2,000|lvl5=$2,250|lvl6=$2,500|lvl7=$2,750|lvl8=$3,000}}
+|line5={{LevelUpRow|field=Alacrity - Fire Rate|lvl1=2.5%|lvl2=5.0%|lvl3=7.5%|lvl4=10.0%|lvl5=12.5%|lvl6=15.0%|lvl7=17.5%|lvl8=20.0%}}
+|line6={{LevelUpRow|field=Chaos Meteor - Burn Damage|lvl1=2|lvl2=2|lvl3=3|lvl4=3|lvl5=4|lvl6=4|lvl7=5|lvl8=5}}
+|line7={{LevelUpRow|field=Deafening Blast - Range|lvl1=250.0|lvl2=300.0|lvl3=350.0|lvl4=400.0|lvl5=450.0|lvl6=500.0|lvl7=550.0|lvl8=600.0}}
+}}}}
+|skill5={{SkillInfo
+|name=Exort
+|info=
+Increase Weapon Damage when active
+|trigger=Special
+|chance=50
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Damage|lvl1=2|lvl2=4|lvl3=6|lvl4=8|lvl5=10|lvl6=12|lvl7=14|lvl8=16}}
+|line2={{LevelUpRow|field=Alacrity - Damage|lvl1=3|lvl2=4|lvl3=5|lvl4=6|lvl5=7|lvl6=8|lvl7=9|lvl8=10}}
+|line3={{LevelUpRow|field=Chaos Meteor - Impact Damage|lvl1=22|lvl2=26|lvl3=30|lvl4=34|lvl5=38|lvl6=42|lvl7=46|lvl8=40}}
+|line4={{LevelUpRow|field=Sun Strike - Damage|lvl1=15|lvl2=20|lvl3=25|lvl4=30|lvl5=35|lvl6=40|lvl7=45|lvl8=50}}
+|line5={{LevelUpRow|field=Ice Wall - Damage|lvl1=5|lvl2=6|lvl3=7|lvl4=8|lvl5=9|lvl6=10|lvl7=11|lvl8=12}}
+|line6={{LevelUpRow|field=Deafening Blast - Damage|lvl1=10|lvl2=12|lvl3=14|lvl4=16|lvl5=18|lvl6=20|lvl7=22|lvl8=24}}
+}}}}
+|skill6={{SkillInfo
+|name=Invoke
+|info=
+<p>
+Change your chosen Spell<br>
+Cold Snap: Chill enemy and those around him, Bash and Damage them on getting hit<br>
+Ghost Walk: Invisible and slow yourself, slow enemies around you<br>
+Tornado: Impale Area<br>
+EMP: Detonate area, Draining Money and dealing damage<br>
+Alacrity: Increase Fire Rate and Weapon Damage of ally<br>
+Chaos Meteor: Damage Area and place damage ward<br>
+Sun Strike: Damage Area<br>
+Forge Spirit: Summon Forged Spirits<br>
+Ice Wall: Summon Ice Walls slowing and damaging enemies<br>
+Deafening Blast: Damage, Knockback and Disable enemies<br>
+Use Settings to change default behavior
+</p>
+|trigger=Ultimate
+|target=Self
+|extra=Available spells depend on the levels of Quas, Wex and Exort
+|levelup={{LevelUpInfo|levels=8|zero=1
+|line1={{LevelUpRow|field=Cooldown|unit=sec.|lvl0=27.5|lvl1=25.0|lvl2=22.5|lvl3=20.0|lvl4=17.5|lvl5=15.0|lvl6=12.5|lvl7=10.0|lvl8=7.5}}
+}}}}
+}}

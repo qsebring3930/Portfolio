@@ -1,0 +1,98 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Rozalin
+|image=[[File:Rozalin.webp]]
+|category=Disgaea
+|max=36
+|level=2860
+|weapons=
+PP-Bizon<br>
+Desert Eagle<br>
+Knife
+|restricted=All
+|team=2
+}}
+|skill1={{SkillInfo
+|name=Rose Thorns
+|info=
+Gain Bizon
+|trigger=Ability1
+|target=Self
+|cooldown=15.0
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl1=6.0|lvl2=6.4|lvl3=6.8|lvl4=7.2|lvl5=7.6|lvl6=8.0}}
+}}}}
+|skill2={{SkillInfo
+|name=Kneel Before Me
+|info=
+Power up allies
+|trigger=Ability2
+|target=AoE_Self
+|radius=300
+|buffs=
+<p>
+Speed: +20%<br>
+Increase Dealt Weapon Damage: +20%<br>
+Decrease Received Weapon Damage: -20%
+</p>
+|cooldown=20.0
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl1=4.0|lvl2=4.5|lvl3=5.0|lvl4=5.5|lvl5=6.0|lvl6=6.5}}
+}}}}
+|skill3={{SkillInfo
+|name=Princess Glitter
+|info=
+Power up allies
+|trigger=Passive
+|buffs=
+<p>
+Increase Dealt Weapon Damage: +10%<br>
+Decrease Received Weapon Damage: -10%
+</p>
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Chance|unit=%|lvl1=30|lvl2=36|lvl3=42|lvl4=48|lvl5=54|lvl6=60}}
+}}}}
+|skill4={{SkillInfo
+|name=Princess Hope
+|info=
+Chance to deal Critical Damage for allies
+|trigger=Passive
+|chance=20
+|buffs=
+<p>
+Increase: +40%
+</p>
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Chance|unit=%|lvl1=10|lvl2=14|lvl3=18|lvl4=22|lvl5=26|lvl6=30}}
+}}}}
+|skill5={{SkillInfo
+|name=Princess Order
+|info=
+Increase Magic Damage for allies
+|trigger=Passive
+|buffs=
+<p>
+Increase: +20%
+</p>
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Chance|unit=%|lvl1=30|lvl2=36|lvl3=42|lvl4=48|lvl5=54|lvl6=60}}
+}}}}
+|skill6={{SkillInfo
+|name=Rose Liberation
+|info=
+<p>
+Damage Area with multiple attacks over time<br>
+First Attack Pulls Enemies to the center<br>
+Second Attack Bashes<br>
+Third Attack Explodes
+</p>
+|trigger=Ultimate
+|target=Location
+|range=600
+|cooldown=30.0
+|extra=First Attack Deals 10 Damage. Second Deals 20 Damage. Third Deals Explosive Damage between 20 and ...
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Damage|lvl1=20|lvl2=24|lvl3=28|lvl4=32|lvl5=36|lvl6=40}}
+}}}}
+}}

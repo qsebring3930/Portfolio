@@ -1,0 +1,74 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Yosuke Hanamaru
+|image=[[File:Yosuke Hanamaru.webp]]
+|category=Persona 4
+|max=35
+|level=4915
+|weapons=
+P2000<br>
+Knife
+|restricted=All
+|team=1
+|passive=
+<p>
+Speed: +20%
+</p>
+}}
+|skill1={{SkillInfo
+|name=Wind Magic
+|info=
+Damage, Impale
+|trigger=Ability1
+|target=Target_Enemy
+|range=600
+|force=300
+|cooldown=20.0
+|extra=Levels 2, 4 and 6 are AoE with radius 300.
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Damage|lvl1=20|lvl2=15|lvl3=25|lvl4=20|lvl5=30|lvl6=25}}
+}}}}
+|skill2={{SkillInfo
+|name=Wind Boost
+|info=
+Increase 'Wind Magic' Efficiency
+|trigger=Special
+|levelup={{LevelUpInfo|levels=10
+|line1={{LevelUpRow|field=Damage|lvl1=1|lvl2=2|lvl3=3|lvl4=4|lvl5=5|lvl6=6|lvl7=7|lvl8=8|lvl9=9|lvl10=10}}
+|line2={{LevelUpRow|field=Force|lvl1=10.0|lvl2=20.0|lvl3=30.0|lvl4=40.0|lvl5=50.0|lvl6=60.0|lvl7=70.0|lvl8=80.0|lvl9=90.0|lvl10=100.0}}
+}}}}
+|skill3={{SkillInfo
+|name=Physical Attack
+|info=
+Increase Weapon Damage
+|trigger=Attack
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Increase|lvl1=10.0%|lvl2=13.0%|lvl3=16.0%|lvl4=19.0%|lvl5=22.0%|lvl6=25.0%}}
+}}}}
+|skill4={{SkillInfo
+|name=Healing Magic
+|info=
+Heal your Allies
+|trigger=Ability2
+|target=Target_Ally
+|duration=5
+|range=600
+|cooldown=20.0
+|extra=Applies to self if no target. Level 7 is an AoE with radius 400 and gives a 20% Chance to Evade Weapon Damage
+|levelup={{LevelUpInfo|levels=7
+|line1={{LevelUpRow|field=Heal|unit=HP|lvl1=20|lvl2=24|lvl3=28|lvl4=32|lvl5=36|lvl6=40|lvl7=30}}
+}}}}
+|skill5={{SkillInfo
+|name=All Out Attack
+|info=
+Damage enemies around you. Evolves if Teddie is close by.
+|trigger=Ultimate
+|target=AoE_Self
+|radius=500
+|cooldown=30.0
+|extra=Junes Bomber increases Damage by 30% and Radius by 100
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Damage|lvl1=10|lvl2=14|lvl3=18|lvl4=22|lvl5=26|lvl6=30}}
+}}}}
+}}

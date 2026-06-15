@@ -1,0 +1,58 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Spy Goblin
+|image=[[File:Spy Goblin.webp]]
+|category=Goblin
+|max=24
+|level=875
+|weapons=
+Grenade<br>
+Knife
+|restricted=All
+|items=
+Gloves of Warmth
+}}
+|skill1={{SkillInfo
+|name=Goblin Sneakers
+|info=
+Increase Speed
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Speed|lvl0=5.0%|lvl1=10.0%|lvl2=20.0%|lvl3=30.0%|lvl4=40.0%|lvl5=50.0%|lvl6=60.0%}}
+}}}}
+|skill2={{SkillInfo
+|name=Not very subtle
+|info=
+Increase Grenade Damage
+|trigger=Attack
+|extra=Random Increase between 10% and ...
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Increase|lvl0=20.0%|lvl1=40.0%|lvl2=60.0%|lvl3=80.0%|lvl4=100.0%|lvl5=120.0%|lvl6=140.0%}}
+}}}}
+|skill3={{SkillInfo
+|name=Goblins cloak
+|info=
+Decrease Visibility
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Visibility|lvl0=25.0%|lvl1=35.0%|lvl2=40.0%|lvl3=45.0%|lvl4=50.0%|lvl5=55.0%|lvl6=60.0%}}
+}}}}
+|skill4={{SkillInfo
+|name=Tinkerers Frenzy
+|info=
+Gain Grenades, Speed, Slow Resistance
+|trigger=Ultimate
+|target=Self
+|quantity=5
+|buffs=
+<p>
+Speed: +60%<br>
+Slow Resistance: +100%
+</p>
+|cooldown=25.0
+|extra=Duration between 2.0 sec. and ...
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl1=2.5|lvl2=3.0|lvl3=3.5|lvl4=4.0|lvl5=4.5|lvl6=5.0}}
+}}}}
+}}

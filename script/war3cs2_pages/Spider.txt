@@ -1,0 +1,82 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Spider
+|image=[[File:Spider.webp]]
+|category=Pet
+|max=49
+|level=1810
+|weapons=
+Knife
+|restricted=All
+|items=
+Boots of Evasion
+}}
+|skill1={{SkillInfo
+|name=Irritating Hair
+|info=
+Disarm
+|trigger=Victim
+|levelup={{LevelUpInfo|levels=7
+|line1={{LevelUpRow|field=Chance|lvl1=8.0%|lvl2=10.0%|lvl3=12.0%|lvl4=14.0%|lvl5=16.0%|lvl6=18.0%|lvl7=20.0%}}
+}}}}
+|skill2={{SkillInfo
+|name=Web
+|info=
+Bash
+|trigger=Victim
+|chance=33
+|levelup={{LevelUpInfo|levels=7
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl1=0.7|lvl2=0.8|lvl3=0.8|lvl4=0.9|lvl5=0.9|lvl6=0.9|lvl7=1.0}}
+}}}}
+|skill3={{SkillInfo
+|name=Leap
+|info=
+Increase Longjump, Decrease Gravity
+|trigger=Passive
+|buffs=
+<p>
+Gravity: -10%
+</p>
+|levelup={{LevelUpInfo|levels=7
+|line1={{LevelUpRow|field=Longjump|lvl1=20.0%|lvl2=25.0%|lvl3=30.0%|lvl4=35.0%|lvl5=40.0%|lvl6=45.0%|lvl7=50.0%}}
+}}}}
+|skill4={{SkillInfo
+|name=Poisonous Venom
+|info=
+DoT, Banish
+|trigger=Attack
+|damage=3
+|duration=5
+|levelup={{LevelUpInfo|levels=7
+|line1={{LevelUpRow|field=Chance|lvl1=38.0%|lvl2=40.0%|lvl3=42.0%|lvl4=44.0%|lvl5=46.0%|lvl6=48.0%|lvl7=50.0%}}
+}}}}
+|skill5={{SkillInfo
+|name=Large
+|info=
+Increase Health
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=7
+|line1={{LevelUpRow|field=Health|unit=HP|lvl1=20|lvl2=40|lvl3=60|lvl4=80|lvl5=100|lvl6=120|lvl7=140}}
+}}}}
+|skill6={{SkillInfo
+|name=Icky
+|info=
+Evade Weapon Damage
+|trigger=Victim
+|levelup={{LevelUpInfo|levels=7
+|line1={{LevelUpRow|field=Chance|lvl1=18.0%|lvl2=20.0%|lvl3=22.0%|lvl4=24.0%|lvl5=26.0%|lvl6=28.0%|lvl7=30.0%}}
+}}}}
+|skill7={{SkillInfo
+|name=Trap Door
+|info=
+Toggle to Hide under the ground
+|trigger=Ultimate
+|target=Self
+|radius=300
+|cooldown=3.0
+|extra=Highlight enemies who walk above you
+|levelup={{LevelUpInfo|levels=7
+|line1={{LevelUpRow|field=Chance|unit=%|lvl1=70|lvl2=75|lvl3=80|lvl4=85|lvl5=90|lvl6=95|lvl7=100}}
+}}}}
+}}

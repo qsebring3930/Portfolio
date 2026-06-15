@@ -1,0 +1,74 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Test Subject 1498
+|image=[[File:Test Subject 1498.webp]]
+|category=Portal
+|max=25
+|level=3615
+|team=2
+}}
+|skill1={{SkillInfo
+|name=Advanced Knee Replacement
+|info=
+Decrease Gravity, Fall Damage
+|trigger=Passive
+|buffs=
+<p>
+Gravity: -25%
+</p>
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Fall Damage|lvl1=60.0%|lvl2=70.0%|lvl3=80.0%|lvl4=90.0%|lvl5=100.0%}}
+}}}}
+|skill2={{SkillInfo
+|name=ASHPD
+|info=
+Use Ability1 and Ability2 to spawn portals
+|trigger=Special
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Cooldown|unit=sec.|lvl1=7.0|lvl2=6.0|lvl3=5.0|lvl4=4.0|lvl5=3.0}}
+}}}}
+|skill3={{SkillInfo
+|name=Blue Portal
+|info=
+Place your Blue Portal
+|trigger=Ability1
+|target=Location
+|range=2000
+}}
+|skill4={{SkillInfo
+|name=Orange Portal
+|info=
+Place your Orange Portal
+|trigger=Ability2
+|target=Location
+|range=2000
+}}
+|skill5={{SkillInfo
+|name=Experimentation
+|info=
+Evade Weapon Damage
+|trigger=Victim
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Chance|lvl1=15.0%|lvl2=17.5%|lvl3=20.0%|lvl4=22.5%|lvl5=25.0%}}
+}}}}
+|skill6={{SkillInfo
+|name=Still Alive
+|info=
+Respawn
+|trigger=Death
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Chance|unit=%|lvl1=5|lvl2=12|lvl3=19|lvl4=26|lvl5=33}}
+}}}}
+|skill7={{SkillInfo
+|name=Weighted Companion Cube
+|info=
+Throw Cube, Impact Damages
+|trigger=Ultimate
+|target=Object
+|force=1.2
+|cooldown=15.0
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Damage|lvl1=20|lvl2=25|lvl3=30|lvl4=35|lvl5=40}}
+}}}}
+}}

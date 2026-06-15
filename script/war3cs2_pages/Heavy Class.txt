@@ -1,0 +1,85 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Heavy Class
+|image=[[File:Heavy Class.webp]]
+|category=XCOM
+|max=42
+|level=4675
+|weapons=
+M249<br>
+Grenade
+|restricted=All
+}}
+|skill1={{SkillInfo
+|name=Fire Rocket
+|info=
+Launch Rocket, Impact: Explodes
+|trigger=Ability1
+|target=Object
+|force=1.5
+|cooldown=20.0
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Magnitude|lvl1=50|lvl2=54|lvl3=58|lvl4=62|lvl5=66|lvl6=70}}
+}}}}
+|skill2={{SkillInfo
+|name=Bullet Swarm
+|info=
+Increase Fire Rate and Magazine
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Fire Rate|lvl1=10.0%|lvl2=12.0%|lvl3=14.0%|lvl4=16.0%|lvl5=18.0%|lvl6=20.0%}}
+|line2={{LevelUpRow|field=Magazine|lvl1=20|lvl2=40|lvl3=60|lvl4=80|lvl5=100|lvl6=120}}
+}}}}
+|skill3={{SkillInfo
+|name=Shredder Rocket
+|info=
+Launch Rocket, Impact: Explodes and Receive more Weapon Damage
+|trigger=Ability2
+|target=Object
+|expldmg=30
+|force=1.5
+|buffs=
+<p>
+Increase: +33%
+</p>
+|cooldown=15.0
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl1=3.5|lvl2=3.8|lvl3=4.1|lvl4=4.4|lvl5=4.7|lvl6=5.0}}
+}}}}
+|skill4={{SkillInfo
+|name=HEAT Ammo
+|info=
+Increase Gun Damage
+|trigger=Attack
+|chance=33
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Increase|lvl1=10.0%|lvl2=12.0%|lvl3=14.0%|lvl4=16.0%|lvl5=18.0%|lvl6=20.0%}}
+}}}}
+|skill5={{SkillInfo
+|name=Grenadier
+|info=
+Increase Grenade Potential and get more Grenades
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Damage|lvl1=10|lvl2=12|lvl3=14|lvl4=16|lvl5=18|lvl6=20}}
+|line2={{LevelUpRow|field=Quantity|lvl1=1|lvl2=2|lvl3=2|lvl4=3|lvl5=3|lvl6=4}}
+}}}}
+|skill6={{SkillInfo
+|name=Will to Survive
+|info=
+Decrease Gun Damage
+|trigger=Victim
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Decrease|lvl1=5.0%|lvl2=10.0%|lvl3=15.0%|lvl4=20.0%|lvl5=25.0%|lvl6=30.0%}}
+}}}}
+|skill7={{SkillInfo
+|name=Rocketeer
+|info=
+Increase Rocket Radius and get more Rockets
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Radius|lvl0=180.0|lvl1=200.0|lvl2=220.0|lvl3=240.0|lvl4=260.0|lvl5=280.0|lvl6=300.0}}
+|line2={{LevelUpRow|field=Quantity|lvl0=1|lvl1=1|lvl2=1|lvl3=2|lvl4=2|lvl5=2|lvl6=3}}
+}}}}
+}}

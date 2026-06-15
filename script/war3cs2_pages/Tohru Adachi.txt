@@ -1,0 +1,79 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Tohru Adachi
+|image=[[File:Tohru Adachi.webp]]
+|category=Persona 4
+|max=38
+|level=4915
+|weapons=
+R8 Revolver<br>
+Knife
+|restricted=All
+|team=1
+}}
+|skill1={{SkillInfo
+|name=Chaotic Magic
+|info=
+Damage, Randomly Hinder, Bash, Burn, Impale or set to low health
+|trigger=Ability1
+|target=AoE_Self
+|chance=20
+|duration=2.5
+|radius=400
+|force=300
+|buffs=
+<p>
+Hinder: -20%<br>
+Bash Duration: 1.0 sec.
+</p>
+|cooldown=25.0
+|extra=Set Health to 20% of Max Health.
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Damage|lvl1=15|lvl2=17|lvl3=19|lvl4=21|lvl5=23|lvl6=25}}
+}}}}
+|skill2={{SkillInfo
+|name=Atom Smasher
+|info=
+AoE Gun Damage, Inflict Fear
+|trigger=Attack
+|chance=40
+|duration=2
+|radius=400
+|extra=Proc 3 times with a 40% chance to hit. 10% chance to inflict fear
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Damage|lvl1=3|lvl2=4|lvl3=5|lvl4=6|lvl5=7|lvl6=8|lvl7=9|lvl8=10}}
+}}}}
+|skill3={{SkillInfo
+|name=Evil Smile
+|info=
+Inflict Fear on those around you. Silence or Hex if that fails
+|trigger=Ability2
+|target=AoE_Enemy
+|duration=5
+|radius=500
+|cooldown=25.0
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Fear Chance|unit=%|lvl1=10|lvl2=12|lvl3=14|lvl4=16|lvl5=18|lvl6=20}}
+}}}}
+|skill4={{SkillInfo
+|name=Fear Boost
+|info=
+Increase 'Fear' Efficiency
+|trigger=Special
+|levelup={{LevelUpInfo|levels=10
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl1=1.2|lvl2=1.4|lvl3=1.6|lvl4=1.8|lvl5=2.0|lvl6=2.2|lvl7=2.4|lvl8=2.6|lvl9=2.8|lvl10=3.0}}
+|line2={{LevelUpRow|field=Chance|unit=%|lvl1=1|lvl2=2|lvl3=3|lvl4=4|lvl5=5|lvl6=6|lvl7=7|lvl8=8|lvl9=9|lvl10=10}}
+}}}}
+|skill5={{SkillInfo
+|name=Ghastly Wail
+|info=
+Set health to critical for those who are afraid near you.
+|trigger=Ultimate
+|target=AoE_Self
+|radius=500
+|cooldown=40.0
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Radius|lvl1=400.0|lvl2=450.0|lvl3=500.0|lvl4=550.0|lvl5=600.0|lvl6=650.0|lvl7=700.0|lvl8=750.0}}
+}}}}
+}}

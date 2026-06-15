@@ -1,0 +1,103 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Jack Skellington
+|image=[[File:Jack Skellington.webp]]
+|category=Holiday - Halloween
+|max=35
+|level=345
+|items=
+Gloves of Warmth
+|team=2
+|passive=
+<p>
+Grenade Donate Time: +3.0 sec.<br>
+Gain Grenade: 3.0 sec.
+</p>
+}}
+|skill1={{SkillInfo
+|name=This is Halloween!
+|info=
+Immunity to Fire Damage. Burn Enemies when burning
+|trigger=Special
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Chance|unit=%|lvl1=60|lvl2=70|lvl3=80|lvl4=90|lvl5=100}}
+}}}}
+|skill2={{SkillInfo
+|name=Skeleton Agility
+|info=
+Increase Speed and Longjump
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Speed|lvl1=3.0%|lvl2=6.0%|lvl3=9.0%|lvl4=12.0%|lvl5=15.0%}}
+|line2={{LevelUpRow|field=Longjump|lvl1=14.0%|lvl2=18.0%|lvl3=22.0%|lvl4=26.0%|lvl5=30.0%}}
+}}}}
+|skill3={{SkillInfo
+|name=Soul Robber
+|info=
+<p>
+Give Knife special properties<br>
+Kill enemies to collect their soul, depending on the color buff the knife property<br>
+Left Click: Pull and disable enemy or leap. Blue Soul resets cooldown on landing.<br>
+Right Click: Knockback Enemy. Red Soul adds cone attack
+</p>
+|trigger=Special
+|damage=15
+|cone=40
+|cooldown=4.0
+|extra=Soul Steal Chance: 33%, Hook Range: 750, Hook Disable: 1.0 sec., Soul Knock Force: 1.5
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Soul Duration|unit=sec.|lvl1=6.0|lvl2=7.0|lvl3=8.0|lvl4=9.0|lvl5=10.0}}
+|line2={{LevelUpRow|field=Hook Force|lvl1=2.0|lvl2=2.2|lvl3=2.5|lvl4=2.8|lvl5=3.0}}
+|line3={{LevelUpRow|field=Cone Range|lvl1=200.0|lvl2=220.0|lvl3=240.0|lvl4=260.0|lvl5=280.0}}
+}}}}
+|skill4={{SkillInfo
+|name=Frog Gun
+|info=
+Pistol Bullet Impact leaves Ward. Ward: DoT
+|trigger=Special
+|damage=3
+|duration=5
+|radius=75
+|cooldown=0.5
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=DoT Duration|unit=sec.|lvl1=1.0|lvl2=2.0|lvl3=3.0|lvl4=4.0|lvl5=5.0}}
+}}}}
+|skill5={{SkillInfo
+|name=Bat Boomerang
+|info=
+Damage, Increase Fire Rate
+|trigger=Ability1
+|target=Target_Enemy
+|damage=15
+|duration=5
+|range=750
+|cooldown=8.0
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Fire Rate|lvl1=5.0%|lvl2=10.0%|lvl3=15.0%|lvl4=20.0%|lvl5=25.0%}}
+}}}}
+|skill6={{SkillInfo
+|name=Pumpkin Bomb
+|info=
+Explode your grenades early
+|trigger=Ability2
+|target=Object
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Cooldown|unit=sec.|lvl1=9.0|lvl2=8.0|lvl3=7.0|lvl4=6.0|lvl5=5.0}}
+}}}}
+|skill7={{SkillInfo
+|name=Call Zero
+|info=
+<p>
+Sacrifice Health to Summon Zero<br>
+Zero Kills will heal you
+</p>
+|trigger=Ultimate
+|target=Random_Ally
+|cooldown=15.0
+|extra=You can only have one Zero
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Cost|unit=HP|lvl1=30|lvl2=25|lvl3=20|lvl4=15|lvl5=10}}
+|line2={{LevelUpRow|field=Heal|unit=HP|lvl1=2|lvl2=4|lvl3=6|lvl4=8|lvl5=10}}
+}}}}
+}}

@@ -1,0 +1,60 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Mage Hunter
+|image=[[File:Mage Hunter.webp]]
+|category=Misc
+|max=25
+|level=785
+|items=
+Ring of Resistance
+|team=2
+|passive=
+<p>
+Decrease Magic Damage: 30%
+</p>
+}}
+|skill1={{SkillInfo
+|name=Boots of Speed
+|info=
+Increase Speed
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Speed|lvl1=5.0%|lvl2=10.0%|lvl3=15.0%|lvl4=20.0%|lvl5=25.0%}}
+}}}}
+|skill2={{SkillInfo
+|name=Amulet of Countersight
+|info=
+Mark your enemy when they do the same to you
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Chance|unit=%|lvl1=15|lvl2=30|lvl3=45|lvl4=60|lvl5=75}}
+}}}}
+|skill3={{SkillInfo
+|name=Armor of Nullification
+|info=
+Skill Immunity
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Chance|unit=%|lvl1=15|lvl2=30|lvl3=45|lvl4=60|lvl5=75}}
+}}}}
+|skill4={{SkillInfo
+|name=Feedback Loop
+|info=
+Damage those casting spells near you
+|trigger=Aura
+|radius=750
+|extra=Deal 50% extra damage when its an ultimate
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Damage|lvl1=8|lvl2=11|lvl3=14|lvl4=17|lvl5=20}}
+}}}}
+|skill5={{SkillInfo
+|name=Arcana Non Imperii
+|info=
+Prevent Respawns and Summons
+|trigger=Aura
+|radius=1000
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Cooldown|unit=sec.|lvl1=30.0|lvl2=26.0|lvl3=22.0|lvl4=18.0|lvl5=15.0}}
+}}}}
+}}

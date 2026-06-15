@@ -1,0 +1,75 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Void Highlord
+|image=[[File:Void Highlord.webp]]
+|category=AQW
+|max=30
+|level=4345
+}}
+|skill1={{SkillInfo
+|name=Shackle
+|info=
+Sacrifice Health to Shackle closest enemy
+|trigger=Ability1
+|target=AoE_Self
+|damage=25
+|duration=8
+|cooldown=15.0
+|extra=Shackled Enemy deals 30% less damage to you
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Radius|lvl1=350.0|lvl2=450.0|lvl3=550.0|lvl4=650.0|lvl5=750.0}}
+}}}}
+|skill2={{SkillInfo
+|name=Contract
+|info=
+Regen HP while Shackle is active
+|trigger=Special
+|required=
+Shackle - Level 1
+|duration=6
+|extra=Regen lasts longer if you kill the Shackled
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Heal|unit=HP|lvl1=1|lvl2=2|lvl3=3|lvl4=4|lvl5=5}}
+}}}}
+|skill3={{SkillInfo
+|name=Unshackle
+|info=
+Increase Weapon Damage when you kill the Shackled
+|trigger=Kill
+|required=
+Shackle - Level 1
+|duration=8
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Increase|lvl1=10.0%|lvl2=20.0%|lvl3=30.0%|lvl4=40.0%|lvl5=50.0%}}
+}}}}
+|skill4={{SkillInfo
+|name=Highlord's Gaze
+|info=
+Bash those you look at
+|trigger=Special
+|duration=0.5
+|range=1500
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Chance|unit=%|lvl1=6|lvl2=12|lvl3=18|lvl4=24|lvl5=30}}
+}}}}
+|skill5={{SkillInfo
+|name=Relentless Onslaught
+|info=
+Return Bullets
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Chance|unit=%|lvl1=7|lvl2=14|lvl3=21|lvl4=28|lvl5=35}}
+}}}}
+|skill6={{SkillInfo
+|name=Undying Highlord
+|info=
+Increase Health. Increased Further per kill, double stack on Shackled Kill
+|trigger=Passive
+|quantity=5
+|extra=Lose 2 stacks on initial spawn
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Health|unit=HP|lvl1=5|lvl2=10|lvl3=15|lvl4=20|lvl5=25}}
+|line2={{LevelUpRow|field=Health per Stack|unit=HP|lvl1=2|lvl2=4|lvl3=6|lvl4=8|lvl5=10}}
+}}}}
+}}

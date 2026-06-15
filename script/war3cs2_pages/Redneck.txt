@@ -1,0 +1,64 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Redneck
+|image=[[File:Redneck.webp]]
+|category=Human
+|max=25
+|level=445
+|weapons=
+Sawed-Off
+|restricted=All
+}}
+|skill1={{SkillInfo
+|name=Pickup Truck
+|info=
+Increase Health, Speed
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Health|unit=HP|lvl1=15|lvl2=30|lvl3=45|lvl4=60|lvl5=75}}
+|line2={{LevelUpRow|field=Speed|lvl1=10.0%|lvl2=15.0%|lvl3=20.0%|lvl4=25.0%|lvl5=30.0%}}
+}}}}
+|skill2={{SkillInfo
+|name=Gunpowder & Lead
+|info=
+Increase Gun Damage
+|trigger=Attack
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Increase|lvl1=10.0%|lvl2=12.5%|lvl3=15.0%|lvl4=17.5%|lvl5=20.0%}}
+}}}}
+|skill3={{SkillInfo
+|name=Keep it Flowing
+|info=
+Gain Flow Stack. Increase Speed, Become more Drunk Per Stack
+|trigger=Kill
+|tickrate=5
+|buffs=
+<p>
+Speed: +10%
+</p>
+|levelup={{LevelUpInfo|levels=5|zero=1
+|line1={{LevelUpRow|field=Quantity|lvl0=1|lvl1=2|lvl2=3|lvl3=4|lvl4=5|lvl5=6}}
+}}}}
+|skill4={{SkillInfo
+|name=Reckless Abandon
+|info=
+Increase Dealt and Received Weapon Damage per Stack
+|trigger=Special
+|buffs=
+<p>
+Received: 7%
+</p>
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Increase|lvl1=2.0%|lvl2=4.0%|lvl3=6.0%|lvl4=8.0%|lvl5=10.0%}}
+}}}}
+|skill5={{SkillInfo
+|name=I Traded Her for Ammo
+|info=
+Regain Clip & Ammo
+|trigger=Kill
+|quantity=5
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Chance|unit=%|lvl1=10|lvl2=20|lvl3=30|lvl4=40|lvl5=50}}
+}}}}
+}}

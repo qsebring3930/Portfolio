@@ -1,0 +1,80 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Gun Gamer
+|image=[[File:Gun Gamer.webp]]
+|category=Counter-Strike
+|max=40
+|level=575
+|weapons=
+P250<br>
+Knife<br>
+Grenade<br>
+MAC-10<br>
+Nova<br>
+MP9<br>
+MAG-7<br>
+MP7<br>
+XM1014<br>
+AK-47<br>
+M4A1-S<br>
+AWP
+|restricted=All
+}}
+|skill1={{SkillInfo
+|name=Level Up
+|info=
+Better Primary
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=8|zero=1
+|line1={{LevelUpRow|field=Weapon|lvl0=MAC-10|lvl1=Nova|lvl2=MP9|lvl3=MAG-7|lvl4=MP7|lvl5=XM1014|lvl6=AK-47|lvl7=M4A1-S|lvl8=AWP}}
+}}}}
+|skill2={{SkillInfo
+|name=Gun Level
+|info=
+<p>
+Random Effect<br>
+Increase Damage<br>
+Burn<br>
+Slow<br>
+Blind<br>
+Steal Health
+</p>
+|trigger=Attack
+|chance=15
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Increase|lvl1=15.0%|lvl2=20.0%|lvl3=25.0%|lvl4=30.0%|lvl5=35.0%|lvl6=40.0%|lvl7=45.0%|lvl8=50.0%}}
+|line2={{LevelUpRow|field=Fire Duration|unit=sec.|lvl1=1.0|lvl2=1.3|lvl3=1.6|lvl4=1.9|lvl5=2.1|lvl6=2.4|lvl7=2.7|lvl8=3.0}}
+|line3={{LevelUpRow|field=Slow Duration|unit=sec.|lvl1=0.8|lvl2=0.9|lvl3=1.0|lvl4=1.1|lvl5=1.2|lvl6=1.3|lvl7=1.4|lvl8=1.5}}
+|line4={{LevelUpRow|field=Steal|lvl1=10.0%|lvl2=14.0%|lvl3=18.0%|lvl4=22.0%|lvl5=26.0%|lvl6=30.0%|lvl7=34.0%|lvl8=38.0%}}
+}}}}
+|skill3={{SkillInfo
+|name=Grenade Level
+|info=
+Grenade burns area
+|trigger=Attack
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Chance|unit=%|lvl1=30|lvl2=40|lvl3=50|lvl4=60|lvl5=70|lvl6=80|lvl7=90|lvl8=100}}
+}}}}
+|skill4={{SkillInfo
+|name=Knife Level
+|info=
+Knife Increase Speed
+|trigger=Attack
+|buffs=
+<p>
+Speed: +50%
+</p>
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl1=3.5|lvl2=4.0|lvl3=4.5|lvl4=5.0|lvl5=5.5|lvl6=6.0|lvl7=6.5|lvl8=7.0}}
+}}}}
+|skill5={{SkillInfo
+|name=Tactics
+|info=
+Increase Health, Speed
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Health|unit=HP|lvl1=25|lvl2=30|lvl3=35|lvl4=40|lvl5=45|lvl6=50|lvl7=55|lvl8=60}}
+|line2={{LevelUpRow|field=Speed|lvl1=9.0%|lvl2=12.0%|lvl3=15.0%|lvl4=18.0%|lvl5=21.0%|lvl6=24.0%|lvl7=27.0%|lvl8=30.0%}}
+}}}}
+}}

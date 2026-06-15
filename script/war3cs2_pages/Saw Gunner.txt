@@ -1,0 +1,66 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Saw Gunner
+|image=[[File:Saw Gunner.webp]]
+|category=Military
+|max=25
+|level=1680
+|weapons=
+M249<br>
+Knife
+|restricted=All
+}}
+|skill1={{SkillInfo
+|name=Well Prepared
+|info=
+Increase Clip
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Clip|lvl1=20|lvl2=40|lvl3=60|lvl4=80|lvl5=100}}
+}}}}
+|skill2={{SkillInfo
+|name=Camouflage
+|info=
+Decrease Visibility
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Visibility|lvl1=30.0%|lvl2=35.0%|lvl3=40.0%|lvl4=45.0%|lvl5=50.0%}}
+}}}}
+|skill3={{SkillInfo
+|name=Medical Treatment
+|info=
+Regen HP for allies
+|trigger=Aura
+|tickrate=5
+|radius=200
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Heal|unit=HP|lvl1=1|lvl2=2|lvl3=3|lvl4=4|lvl5=5}}
+}}}}
+|skill4={{SkillInfo
+|name=Tactical Advantage
+|info=
+Increase Weapon Damage
+|trigger=Attack
+|chance=25
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Increase|lvl1=10.0%|lvl2=15.0%|lvl3=20.0%|lvl4=25.0%|lvl5=30.0%}}
+}}}}
+|skill5={{SkillInfo
+|name=Adrenaline Rush
+|info=
+Increase Speed, Heal Health, Gain Slow Resistance
+|trigger=Ultimate
+|target=Self
+|buffs=
+<p>
+Speed: +20%<br>
+Slow Resistance: +100%
+</p>
+|cooldown=25.0
+|extra=Duration between 2.0 and ... , Health between 10 and ...
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl1=2.0|lvl2=3.0|lvl3=4.0|lvl4=5.0|lvl5=6.0}}
+|line2={{LevelUpRow|field=Heal|unit=HP|lvl1=10|lvl2=20|lvl3=30|lvl4=40|lvl5=50}}
+}}}}
+}}

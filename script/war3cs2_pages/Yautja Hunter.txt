@@ -1,0 +1,73 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Yautja Hunter
+|image=[[File:Yautja Hunter.webp]]
+|category=AVP
+|max=35
+|level=3495
+|weapons=
+Desert Eagle<br>
+Knife
+|restricted=All
+|passive=
+<p>
+Cloaked: 3 sec.
+</p>
+}}
+|skill1={{SkillInfo
+|name=Bone Armor
+|info=
+Increase Health and Speed
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=7
+|line1={{LevelUpRow|field=Health|unit=HP|lvl1=20|lvl2=25|lvl3=30|lvl4=35|lvl5=40|lvl6=45|lvl7=50}}
+|line2={{LevelUpRow|field=Speed|lvl1=10.0%|lvl2=15.0%|lvl3=20.0%|lvl4=25.0%|lvl5=30.0%|lvl6=35.0%|lvl7=40.0%}}
+}}}}
+|skill2={{SkillInfo
+|name=Handheld Plasma Caster
+|info=
+Convert Gun Damage to Magic Damage. AoE Gun Damage
+|trigger=Passive
+|radius=250
+|levelup={{LevelUpInfo|levels=7
+|line1={{LevelUpRow|field=Convert|lvl1=5.0%|lvl2=10.0%|lvl3=15.0%|lvl4=20.0%|lvl5=25.0%|lvl6=30.0%|lvl7=35.0%}}
+}}}}
+|skill3={{SkillInfo
+|name=Bear Trap
+|info=
+Place Trap. Trap: Damage And Bash Enemy
+|trigger=Ability1
+|target=Self
+|duration=30
+|cooldown=15.0
+|extra=Doesn't expire once triggerd until destroyed
+|levelup={{LevelUpInfo|levels=7
+|line1={{LevelUpRow|field=Damage|lvl1=5|lvl2=10|lvl3=15|lvl4=20|lvl5=25|lvl6=30|lvl7=35}}
+|line2={{LevelUpRow|field=Health|unit=HP|lvl1=10|lvl2=20|lvl3=30|lvl4=40|lvl5=50|lvl6=60|lvl7=70}}
+}}}}
+|skill4={{SkillInfo
+|name=Tracker
+|info=
+<p>
+Bear Trap: Highlight enemies trapped<br>
+Enemies Bleed
+</p>
+|trigger=Special
+|duration=10
+|levelup={{LevelUpInfo|levels=7
+|line1={{LevelUpRow|field=Bleed Duration|unit=sec.|lvl1=2.0|lvl2=2.5|lvl3=3.0|lvl4=3.5|lvl5=4.0|lvl6=4.5|lvl7=5.0}}
+}}}}
+|skill5={{SkillInfo
+|name=Healing Kit
+|info=
+Channel to Heal
+|trigger=Ultimate
+|target=Self
+|quantity=3
+|duration=3
+|cooldown=10.0
+|levelup={{LevelUpInfo|levels=7
+|line1={{LevelUpRow|field=Heal|unit=HP|lvl1=10|lvl2=20|lvl3=30|lvl4=40|lvl5=50|lvl6=60|lvl7=70}}
+}}}}
+}}

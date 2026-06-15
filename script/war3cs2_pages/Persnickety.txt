@@ -1,0 +1,68 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Persnickety
+|image=[[File:Persnickety.webp]]
+|category=Misc
+|max=30
+|level=785
+|weapons=
+CZ75-Auto<br>
+Knife
+|restricted=All
+}}
+|skill1={{SkillInfo
+|name=Critic
+|info=
+Increase Speed
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Speed|lvl1=10.0%|lvl2=15.0%|lvl3=20.0%|lvl4=25.0%|lvl5=30.0%}}
+}}}}
+|skill2={{SkillInfo
+|name=Extra Ammo
+|info=
+Increase Clip and Ammo
+|trigger=Passive
+|extra=Only affects first clip
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Clip|lvl1=20|lvl2=25|lvl3=30|lvl4=35|lvl5=40}}
+|line2={{LevelUpRow|field=Ammo|lvl1=60|lvl2=70|lvl3=80|lvl4=90|lvl5=100}}
+}}}}
+|skill3={{SkillInfo
+|name=Fussy
+|info=
+Gain Bullet
+|trigger=Attack
+|quantity=1
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Chance|lvl1=10.0%|lvl2=20.0%|lvl3=30.0%|lvl4=40.0%|lvl5=50.0%}}
+}}}}
+|skill4={{SkillInfo
+|name=Drain
+|info=
+Steal Health
+|trigger=Attack
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Steal|lvl1=9.0%|lvl2=13.0%|lvl3=17.0%|lvl4=21.0%|lvl5=25.0%}}
+}}}}
+|skill5={{SkillInfo
+|name=Perfection
+|info=
+Increase Gun Damage
+|trigger=Attack
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Increase|lvl1=3.0%|lvl2=6.0%|lvl3=9.0%|lvl4=12.0%|lvl5=15.0%}}
+}}}}
+|skill6={{SkillInfo
+|name=Ammo Check
+|info=
+Trigger 'Extra Ammo' to refill your ammo and increase your current clip
+|trigger=Ultimate
+|target=Self
+|cooldown=5.0
+|extra=Requires you to take damage to use. Resets on use
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Damage Taken|lvl1=58|lvl2=51|lvl3=44|lvl4=37|lvl5=30}}
+}}}}
+}}

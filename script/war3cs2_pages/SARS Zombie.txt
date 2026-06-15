@@ -1,0 +1,71 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=SARS Zombie
+|image=[[File:SARS Zombie.webp]]
+|category=Zombie
+|max=40
+|level=4605
+|weapons=
+Knife
+|restricted=All
+|items=
+Sock of Feathers<br>
+Blademail<br>
+Armor of Protection<br>
+Boots of Zephyr<br>
+Ring of Armor
+|team=1
+}}
+|skill1={{SkillInfo
+|name=Zombie Resistance
+|info=
+Increase Health, Decrease Speed
+|trigger=Passive
+|extra=Health Increase is Halved with lower player count
+|levelup={{LevelUpInfo|levels=8|zero=1
+|line1={{LevelUpRow|field=Health|unit=HP|lvl0=100|lvl1=400|lvl2=900|lvl3=1400|lvl4=1900|lvl5=2400|lvl6=2900|lvl7=3400|lvl8=3900}}
+|line2={{LevelUpRow|field=Speed|lvl0=10.0%|lvl1=15.0%|lvl2=20.0%|lvl3=25.0%|lvl4=30.0%|lvl5=35.0%|lvl6=40.0%|lvl7=45.0%|lvl8=50.0%}}
+}}}}
+|skill2={{SkillInfo
+|name=Consume
+|info=
+Heal
+|trigger=Kill
+|levelup={{LevelUpInfo|levels=8|zero=1
+|line1={{LevelUpRow|field=Health|unit=HP|lvl0=20|lvl1=60|lvl2=80|lvl3=100|lvl4=120|lvl5=140|lvl6=160|lvl7=180|lvl8=200}}
+}}}}
+|skill3={{SkillInfo
+|name=Infection
+|info=
+Return Weapon Damage, Minion Infected
+|trigger=Victim
+|extra=Headshot: 10, Knife: 4, Other: 2
+|levelup={{LevelUpInfo|levels=8|zero=1
+|line1={{LevelUpRow|field=Chance|lvl0=10.0%|lvl1=15.0%|lvl2=20.0%|lvl3=25.0%|lvl4=30.0%|lvl5=35.0%|lvl6=40.0%|lvl7=45.0%|lvl8=50.0%}}
+}}}}
+|skill4={{SkillInfo
+|name=Carnivorous Impulse
+|info=
+Leap Forward
+|trigger=Ability1
+|target=Self
+|force=2
+|cooldown=10.0
+|levelup={{LevelUpInfo|levels=8|zero=1
+|line1={{LevelUpRow|field=Range|lvl0=200.0|lvl1=220.0|lvl2=240.0|lvl3=260.0|lvl4=280.0|lvl5=300.0|lvl6=320.0|lvl7=340.0|lvl8=360.0}}
+}}}}
+|skill5={{SkillInfo
+|name=Septic Swarm
+|info=
+Decrease Speed and Damage enemies around you
+|trigger=Ultimate
+|target=AoE_Self
+|damage=20
+|duration=10
+|cooldown=30.0
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Radius|lvl1=400.0|lvl2=450.0|lvl3=500.0|lvl4=550.0|lvl5=600.0|lvl6=650.0|lvl7=700.0|lvl8=750.0}}
+|line2={{LevelUpRow|field=Speed|lvl1=15.0%|lvl2=20.0%|lvl3=25.0%|lvl4=30.0%|lvl5=35.0%|lvl6=40.0%|lvl7=45.0%|lvl8=50.0%}}
+}}}}
+}}

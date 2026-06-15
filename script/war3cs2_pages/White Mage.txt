@@ -1,0 +1,85 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=White Mage
+|image=[[File:White Mage.webp]]
+|category=Final Fantasy
+|max=36
+|level=4815
+|weapons=
+P2000
+|restricted=All
+|team=1
+}}
+|skill1={{SkillInfo
+|name=Heal
+|info=
+Heal Allies
+|trigger=Ability1
+|target=Location
+|range=600
+|radius=300
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Heal|lvl1=10|lvl2=12|lvl3=20|lvl4=24|lvl5=30|lvl6=36}}
+|line2={{LevelUpRow|field=Cooldown|unit=sec.|lvl1=10.0|lvl2=12.0|lvl3=14.0|lvl4=16.0|lvl5=18.0|lvl6=20.0}}
+}}}}
+|skill2={{SkillInfo
+|name=Protect
+|info=
+Reduce Received Damage for Allies
+|trigger=Ability2
+|target=Location
+|duration=6
+|range=600
+|radius=300
+|extra=Reduces Weapon Damage, on higher levels also reduces Magic Damage. Reduces damage by another 10% if damage was originally increased.
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Weapon|lvl1=10.0%|lvl2=20.0%|lvl3=30.0%|lvl4=40.0%|lvl5=40.0%|lvl6=40.0%}}
+|line2={{LevelUpRow|field=Magic|lvl1=0.0%|lvl2=0.0%|lvl3=0.0%|lvl4=0.0%|lvl5=20.0%|lvl6=40.0%}}
+|line3={{LevelUpRow|field=Cooldown|unit=sec.|lvl1=15.0|lvl2=17.0|lvl3=19.0|lvl4=21.0|lvl5=23.0|lvl6=25.0}}
+}}}}
+|skill3={{SkillInfo
+|name=Revive
+|info=
+Revive first Ally to die with lower health
+|trigger=Special
+|extra=On Higher Level also revive yourself on first death
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Chance|unit=%|lvl1=30|lvl2=40|lvl3=50|lvl4=60|lvl5=70|lvl6=80}}
+|line2={{LevelUpRow|field=Health|lvl1=40.0%|lvl2=50.0%|lvl3=60.0%|lvl4=70.0%|lvl5=80.0%|lvl6=90.0%}}
+}}}}
+|skill4={{SkillInfo
+|name=Regen
+|info=
+Regen HP for Allies who get hurt near you
+|trigger=Special
+|heal=5
+|duration=5
+|radius=500
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Cooldown|unit=sec.|lvl1=16.0|lvl2=14.0|lvl3=12.0|lvl4=10.0|lvl5=8.0|lvl6=6.0}}
+}}}}
+|skill5={{SkillInfo
+|name=Esuna
+|info=
+Cleanse Allies
+|trigger=Aura
+|radius=500
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Tick Rate|unit=sec.|lvl1=20.0|lvl2=18.0|lvl3=16.0|lvl4=14.0|lvl5=12.0|lvl6=10.0}}
+}}}}
+|skill6={{SkillInfo
+|name=Holy
+|info=
+Damage and Dispel. Increase Damage if Summon
+|trigger=Ultimate
+|target=Location
+|duration=5
+|range=800
+|radius=400
+|cooldown=30.0
+|extra=+100% extra Damage on Summons
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Damage|lvl1=30|lvl2=34|lvl3=38|lvl4=42|lvl5=46|lvl6=50}}
+}}}}
+}}

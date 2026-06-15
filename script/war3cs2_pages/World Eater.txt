@@ -1,0 +1,68 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=World Eater
+|image=[[File:World Eater.webp]]
+|category=God
+|max=40
+|level=3020
+|weapons=
+Desert Eagle<br>
+AWP
+|restricted=All
+|items=
+Infiltrator
+|team=2
+}}
+|skill1={{SkillInfo
+|name=Gravity Manipulation
+|info=
+Decrease and then Increase Gravity
+|trigger=Attack
+|chance=15
+|duration=8
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Gravity|lvl1=55.0%|lvl2=60.0%|lvl3=65.0%|lvl4=70.0%|lvl5=75.0%|lvl6=80.0%|lvl7=85.0%|lvl8=90.0%}}
+}}}}
+|skill2={{SkillInfo
+|name=Teleport Space
+|info=
+Launch and Explode
+|trigger=Attack
+|duration=2.5
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Chance|lvl1=0.5%|lvl2=1.0%|lvl3=1.5%|lvl4=2.0%|lvl5=2.5%|lvl6=3.0%|lvl7=3.5%|lvl8=4.0%}}
+}}}}
+|skill3={{SkillInfo
+|name=World Eaters Knowledge
+|info=
+Random Buffs
+|trigger=Passive
+|quantity=5
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Speed|lvl1=2.5%|lvl2=2.5%|lvl3=5.0%|lvl4=5.0%|lvl5=7.5%|lvl6=7.5%|lvl7=10.0%|lvl8=10.0%}}
+|line2={{LevelUpRow|field=Long Jump|lvl1=3.0%|lvl2=4.0%|lvl3=5.0%|lvl4=6.0%|lvl5=7.0%|lvl6=8.0%|lvl7=9.0%|lvl8=10.0%}}
+|line3={{LevelUpRow|field=Health|unit=HP|lvl1=3|lvl2=4|lvl3=5|lvl4=6|lvl5=7|lvl6=8|lvl7=9|lvl8=10}}
+}}}}
+|skill4={{SkillInfo
+|name=Superior Technology
+|info=
+Increase Gun Damage
+|trigger=Attack
+|chance=50
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Increase|lvl1=4.0%|lvl2=8.0%|lvl3=10.0%|lvl4=12.0%|lvl5=14.0%|lvl6=16.0%|lvl7=18.0%|lvl8=20.0%}}
+}}}}
+|skill5={{SkillInfo
+|name=Blackhole
+|info=
+Create Blackhole
+|trigger=Death
+|chance=20
+|radius=1000
+|force=1200
+|extra=Starts after 3 seconds
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl1=1.5|lvl2=2.0|lvl3=2.5|lvl4=3.0|lvl5=3.5|lvl6=4.0|lvl7=4.5|lvl8=5.0}}
+}}}}
+}}

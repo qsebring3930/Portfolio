@@ -1,0 +1,66 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Vengeful Spirit
+|image=[[File:Vengeful Spirit.webp]]
+|category=DotA-Agility
+|max=32
+|level=2340
+}}
+|skill1={{SkillInfo
+|name=Magic Missile
+|info=
+Damage and Stun Enemy, Bounces to second enemy
+|trigger=Ability1
+|target=Target_Enemy
+|duration=0.8
+|range=500
+|radius=250
+|cooldown=20.0
+|extra=The bounce loses half its power
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Damage|lvl1=6|lvl2=8|lvl3=10|lvl4=12|lvl5=14|lvl6=16|lvl7=18|lvl8=20}}
+}}}}
+|skill2={{SkillInfo
+|name=Wave of Terror
+|info=
+Damage, Reveal and Lower Weapon Damage Enemies
+|trigger=Ability2
+|target=Cone
+|damage=10
+|range=500
+|cone=20
+|cooldown=20.0
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl1=2.5|lvl2=3.0|lvl3=3.5|lvl4=4.0|lvl5=4.5|lvl6=5.0|lvl7=5.5|lvl8=6.0}}
+|line2={{LevelUpRow|field=Decrease|lvl1=4.0%|lvl2=8.0%|lvl3=12.0%|lvl4=16.0%|lvl5=20.0%|lvl6=24.0%|lvl7=28.0%|lvl8=32.0%}}
+}}}}
+|skill3={{SkillInfo
+|name=Vengeance Aura
+|info=
+Increase Weapon Damage of your allies, Summon a Spirit of Vengeance on Death
+|trigger=Passive
+|radius=400
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Increase|lvl1=6.0%|lvl2=8.0%|lvl3=10.0%|lvl4=12.0%|lvl5=14.0%|lvl6=16.0%|lvl7=18.0%|lvl8=20.0%}}
+|line2={{LevelUpRow|field=Chance|unit=%|lvl1=25|lvl2=30|lvl3=35|lvl4=40|lvl5=45|lvl6=50|lvl7=55|lvl8=60}}
+}}}}
+|skill4={{SkillInfo
+|name=Nether Swap
+|info=
+<p>
+Swap places with your target<br>
+Damage if enemy<br>
+Decrease Weapon Damage if ally
+</p>
+|trigger=Ultimate
+|target=Target_Any
+|duration=6
+|range=1000
+|cooldown=30.0
+|extra=You always buff yourself
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Damage|lvl1=10|lvl2=12|lvl3=14|lvl4=16|lvl5=18|lvl6=20|lvl7=22|lvl8=24}}
+|line2={{LevelUpRow|field=Decrease|lvl1=9.0%|lvl2=12.0%|lvl3=15.0%|lvl4=18.0%|lvl5=21.0%|lvl6=24.0%|lvl7=27.0%|lvl8=30.0%}}
+}}}}
+}}

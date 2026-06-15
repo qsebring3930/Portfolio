@@ -1,0 +1,68 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Kobold Geomancer
+|image=[[File:Kobold Geomancer.webp]]
+|category=WC3-Creep
+|max=30
+|level=210
+|weapons=
+Sawed-Off<br>
+Knife
+|restricted=All
+}}
+|skill1={{SkillInfo
+|name=Geomancy
+|info=
+Increase Health, Speed
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Health|unit=HP|lvl1=10|lvl2=20|lvl3=30|lvl4=40|lvl5=50|lvl6=60}}
+|line2={{LevelUpRow|field=Speed|lvl1=3.0%|lvl2=6.0%|lvl3=9.0%|lvl4=12.0%|lvl5=15.0%|lvl6=18.0%}}
+}}}}
+|skill2={{SkillInfo
+|name=Magic Candle
+|info=
+Highlight Enemies Casting Spells
+|trigger=Aura
+|radius=750
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl1=1.0|lvl2=2.0|lvl3=3.0|lvl4=4.0|lvl5=5.0|lvl6=6.0}}
+}}}}
+|skill3={{SkillInfo
+|name=Slow
+|info=
+Slow
+|trigger=Attack
+|duration=5
+|buffs=
+<p>
+Speed: -30%
+</p>
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Chance|lvl1=5.0%|lvl2=10.0%|lvl3=15.0%|lvl4=20.0%|lvl5=25.0%|lvl6=30.0%}}
+}}}}
+|skill4={{SkillInfo
+|name=Abolish Magic
+|info=
+Dispel, Increase Damage if Summon
+|trigger=Attack
+|duration=5
+|extra=50% extra Damage on Summons
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Chance|lvl1=4.0%|lvl2=8.0%|lvl3=12.0%|lvl4=16.0%|lvl5=20.0%|lvl6=24.0%}}
+}}}}
+|skill5={{SkillInfo
+|name=Landslide
+|info=
+Damage Enemies in Cone
+|trigger=Ultimate
+|target=Cone
+|range=400
+|cone=30
+|cooldown=30.0
+|extra=Damage reduces by distance
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Damage|lvl1=30|lvl2=34|lvl3=38|lvl4=42|lvl5=46|lvl6=50}}
+}}}}
+}}

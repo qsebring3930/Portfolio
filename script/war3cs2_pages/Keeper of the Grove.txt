@@ -1,0 +1,58 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Keeper of the Grove
+|image=[[File:Keeper of the Grove.webp]]
+|category=WC3-Elf
+|max=32
+|level=130
+}}
+|skill1={{SkillInfo
+|name=Entangling Roots
+|info=
+Bash and DoT
+|trigger=Ability1
+|target=Target_Enemy
+|damage=3
+|tickrate=0.5
+|range=750
+|cooldown=15.0
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl1=1.5|lvl2=2.0|lvl3=2.5|lvl4=3.0|lvl5=3.5|lvl6=4.0|lvl7=4.5|lvl8=5.0}}
+}}}}
+|skill2={{SkillInfo
+|name=Force of Nature
+|info=
+Throw seed, Places Damaging Tree where it lands
+|trigger=Ability2
+|target=Object
+|damage=5
+|radius=300
+|force=0.8
+|cooldown=15.0
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl1=5.0|lvl2=6.0|lvl3=7.0|lvl4=8.0|lvl5=9.0|lvl6=10.0|lvl7=11.0|lvl8=12.0}}
+}}}}
+|skill3={{SkillInfo
+|name=Thorns Aura
+|info=
+Return Knife Damage for allies
+|trigger=Aura
+|radius=250
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Return|lvl1=5.0%|lvl2=10.0%|lvl3=15.0%|lvl4=20.0%|lvl5=25.0%|lvl6=30.0%|lvl7=35.0%|lvl8=40.0%}}
+}}}}
+|skill4={{SkillInfo
+|name=Tranquility
+|info=
+Channel to Heal Allies
+|trigger=Ultimate
+|target=Location
+|heal=5
+|duration=10
+|cooldown=20.0
+|extra=Press again to cancel early
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Radius|lvl1=275.0|lvl2=300.0|lvl3=325.0|lvl4=350.0|lvl5=375.0|lvl6=400.0|lvl7=425.0|lvl8=450.0}}
+}}}}
+}}

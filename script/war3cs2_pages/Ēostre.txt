@@ -1,0 +1,84 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Ēostre
+|image=[[File:Ēostre.webp]]
+|category=Holiday - Easter
+|max=30
+|level=305
+|passive=
+<p>
+Special: Heal yourself when you burn people
+</p>
+}}
+|skill1={{SkillInfo
+|name=Feast
+|info=
+Ward: Increase Max Health
+|trigger=Ability1
+|target=Self
+|duration=15
+|radius=100
+|cooldown=25.0
+|extra=Only works once per teammate per round
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Max Health|unit=HP|lvl1=10|lvl2=20|lvl3=30|lvl4=40|lvl5=50}}
+}}}}
+|skill2={{SkillInfo
+|name=Goddess of Fertility
+|info=
+<p>
+Ward: Heals Allies<br>
+Revive Allies if you die in the ward
+</p>
+|trigger=Victim
+|target=Self
+|heal=5
+|duration=10
+|radius=300
+|cooldown=10.0
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Proc Chance|lvl1=4.0%|lvl2=8.0%|lvl3=12.0%|lvl4=16.0%|lvl5=20.0%}}
+|line2={{LevelUpRow|field=Revive Chance|unit=%|lvl1=6|lvl2=12|lvl3=18|lvl4=24|lvl5=30}}
+|line3={{LevelUpRow|field=Quantiy|lvl1=1|lvl2=1|lvl3=2|lvl4=2|lvl5=3}}
+}}}}
+|skill3={{SkillInfo
+|name=Spring Cleansing
+|info=
+Burn, Dispel Enemy. Cleanse yourself
+|trigger=Attack
+|duration=5
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Chance|lvl1=5.0%|lvl2=10.0%|lvl3=15.0%|lvl4=20.0%|lvl5=25.0%}}
+}}}}
+|skill4={{SkillInfo
+|name=Move Amongst Nature
+|info=
+Increase Speed for allies
+|trigger=Aura
+|radius=300
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Speed|lvl1=5.0%|lvl2=10.0%|lvl3=15.0%|lvl4=20.0%|lvl5=25.0%}}
+}}}}
+|skill5={{SkillInfo
+|name=Sunrise
+|info=
+Ward: Reveal and Burn
+|trigger=Ability2
+|target=Self
+|duration=6
+|radius=500
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Cooldown|unit=sec.|lvl1=26.0|lvl2=24.0|lvl3=22.0|lvl4=20.0|lvl5=18.0}}
+}}}}
+|skill6={{SkillInfo
+|name=Equinox
+|info=
+Toggle Flight, Blind Enemies that hurt you
+|trigger=Ultimate
+|target=Toggle
+|cooldown=1.0
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl1=0.5|lvl2=0.8|lvl3=1.0|lvl4=1.2|lvl5=1.5}}
+}}}}
+}}

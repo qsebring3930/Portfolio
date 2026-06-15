@@ -1,0 +1,84 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Rogue (D&D)
+|image=[[File:Rogue (D&D).webp]]
+|category=D&D Martials
+|max=30
+|level=3370
+|restricted=
+R8 Revolver<br>
+SCAR-20<br>
+G3SG1
+}}
+|skill1={{SkillInfo
+|name=Expertise
+|info=
+Increase Health, Speed
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Health|unit=HP|lvl1=2|lvl2=4|lvl3=6|lvl4=8|lvl5=10}}
+|line2={{LevelUpRow|field=Speed|lvl1=5.0%|lvl2=10.0%|lvl3=15.0%|lvl4=20.0%|lvl5=25.0%}}
+}}}}
+|skill2={{SkillInfo
+|name=Sneak Attack
+|info=
+Increase Weapon Damage if they have not damaged you yet
+|trigger=Attack
+|extra=Double effect with pistol
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Increase|lvl1=4.0%|lvl2=8.0%|lvl3=12.0%|lvl4=16.0%|lvl5=20.0%}}
+}}}}
+|skill3={{SkillInfo
+|name=Weapon Mastery
+|info=
+<p>
+Effect based on used weapon<br>
+Attack: Pistol - Decrease Fire Rate on Non-Headshots<br>
+Special: Knife - Right Click to throw your knife
+</p>
+|trigger=Special
+|target=Object
+|damage=65
+|duration=3
+|force=1.8
+|extra=Backstab deals double damage
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Attack Speed|lvl1=15.0%|lvl2=20.0%|lvl3=25.0%|lvl4=30.0%|lvl5=35.0%}}
+|line2={{LevelUpRow|field=Knife Damage Modifier|lvl1=20.0%|lvl2=40.0%|lvl3=60.0%|lvl4=80.0%|lvl5=100.0%}}
+}}}}
+|skill4={{SkillInfo
+|name=Cunning Action
+|info=
+<p>
+Effect based on weapon<br>
+Knife: Decrease Visibility<br>
+Pistol: Refill Clip, next shot deals extra damage<br>
+Other: Refill Clip
+</p>
+|trigger=Ability1
+|target=Self
+|cooldown=20.0
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Visibility|lvl1=18.0%|lvl2=36.0%|lvl3=54.0%|lvl4=72.0%|lvl5=90.0%}}
+|line2={{LevelUpRow|field=Duration|unit=sec.|lvl1=1.0|lvl2=2.0|lvl3=3.0|lvl4=4.0|lvl5=5.0}}
+|line3={{LevelUpRow|field=Clip|lvl1=20.0%|lvl2=40.0%|lvl3=60.0%|lvl4=80.0%|lvl5=100.0%}}
+|line4={{LevelUpRow|field=Increase|lvl1=8.0%|lvl2=16.0%|lvl3=24.0%|lvl4=32.0%|lvl5=40.0%}}
+}}}}
+|skill5={{SkillInfo
+|name=Steady Aim
+|info=
+Headshots trigger 'Sneak Attack'
+|trigger=Attack
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Chance|lvl1=10.0%|lvl2=20.0%|lvl3=30.0%|lvl4=40.0%|lvl5=50.0%}}
+}}}}
+|skill6={{SkillInfo
+|name=Uncanny Dodge
+|info=
+Evade Weapon Damage
+|trigger=Victim
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Cooldown|unit=sec.|lvl1=9.0|lvl2=8.0|lvl3=7.0|lvl4=6.0|lvl5=5.0}}
+}}}}
+}}

@@ -1,0 +1,69 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Pudge
+|image=[[File:Pudge.webp]]
+|category=DotA-Strength
+|max=32
+|level=2180
+|weapons=
+Knife
+|restricted=All
+|passive=
+<p>
+Speed: -20%<br>
+Health: +50HP
+</p>
+}}
+|skill1={{SkillInfo
+|name=Meat Hook
+|info=
+Left Click to drag Enemy to you
+|trigger=Special
+|target=Target_Enemy
+|range=1000
+|aim=15
+|force=3
+|cooldown=8.0
+|levelup={{LevelUpInfo|levels=8|zero=1
+|line1={{LevelUpRow|field=Damage|lvl0=5|lvl1=12|lvl2=16|lvl3=20|lvl4=24|lvl5=28|lvl6=32|lvl7=36|lvl8=40}}
+}}}}
+|skill2={{SkillInfo
+|name=Rot
+|info=
+Toggle Damage and Hinder Aura
+|trigger=Ability1
+|target=Toggle
+|duration=2
+|radius=300
+|buffs=
+<p>
+Speed: -40%<br>
+Fire Rate: -25%
+</p>
+|cooldown=2.0
+|extra=Deals damage to yourself too
+|levelup={{LevelUpInfo|levels=8|zero=1
+|line1={{LevelUpRow|field=Damage|lvl0=1|lvl1=3|lvl2=4|lvl3=5|lvl4=6|lvl5=7|lvl6=8|lvl7=9|lvl8=10}}
+}}}}
+|skill3={{SkillInfo
+|name=Meat Shield
+|info=
+Protect from damage
+|trigger=Kill
+|levelup={{LevelUpInfo|levels=8|zero=1
+|line1={{LevelUpRow|field=Damage|lvl0=15|lvl1=22|lvl2=26|lvl3=30|lvl4=34|lvl5=38|lvl6=42|lvl7=46|lvl8=50}}
+}}}}
+|skill4={{SkillInfo
+|name=Dismember
+|info=
+Next Attack will Stun and Regen HP
+|trigger=Ultimate
+|target=Self
+|tickrate=0.5
+|cooldown=20.0
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Heal|unit=HP|lvl1=4|lvl2=5|lvl3=6|lvl4=6|lvl5=7|lvl6=7|lvl7=8|lvl8=8}}
+|line2={{LevelUpRow|field=Duration|unit=sec.|lvl1=1.0|lvl2=1.0|lvl3=1.0|lvl4=1.5|lvl5=1.5|lvl6=2.0|lvl7=2.0|lvl8=2.5}}
+}}}}
+}}

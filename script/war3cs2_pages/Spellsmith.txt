@@ -1,0 +1,96 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Spellsmith
+|image=[[File:Spellsmith.webp]]
+|category=AQW
+|max=30
+|level=4345
+|weapons=
+P250<br>
+Knife
+|restricted=All
+|items=
+Tome of Experience<br>
+Tome of Gambling<br>
+Tome of Opportunity
+|passive=
+<p>
+Max Health: +50HP
+</p>
+}}
+|skill1={{SkillInfo
+|name=Energy Arc
+|info=
+Damage Enemies around your target
+|trigger=Attack
+|damage=25
+|quantity=4
+|radius=500
+|extra=Damage reduces by 5 and Radius reduces by 75 each jump
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Chance|lvl1=4.0%|lvl2=8.0%|lvl3=12.0%|lvl4=16.0%|lvl5=20.0%}}
+}}}}
+|skill2={{SkillInfo
+|name=Frost Flame
+|info=
+Decrease Speed, Damage and Bash
+|trigger=Attack
+|damage=10
+|chance=15
+|buffs=
+<p>
+Bash: 1.0 sec.
+</p>
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Speed|lvl1=10.0%|lvl2=15.0%|lvl3=20.0%|lvl4=25.0%|lvl5=30.0%}}
+|line2={{LevelUpRow|field=Frost Duration|unit=sec.|lvl1=3.0|lvl2=3.5|lvl3=4.0|lvl4=4.5|lvl5=5.0}}
+}}}}
+|skill3={{SkillInfo
+|name=Focus Energy
+|info=
+<p>
+Heal by sacrificing Money<br>
+Gain Money Passively over time
+</p>
+|trigger=Ability1
+|target=Self
+|cooldown=20.0
+|extra=Stop healing when you run out of money or are fully healed. Healing cost is $500 per second
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Heal|unit=HP|lvl1=2|lvl2=4|lvl3=6|lvl4=8|lvl5=10}}
+|line2={{LevelUpRow|field=Money|lvl1=$100|lvl2=$125|lvl3=$150|lvl4=$175|lvl5=$200}}
+}}}}
+|skill4={{SkillInfo
+|name=Shift Fate
+|info=
+Prevent Killing Blow and return damage
+|trigger=Victim
+|damage=20.0%
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Chance|unit=%|lvl1=21|lvl2=24|lvl3=27|lvl4=30|lvl5=33}}
+}}}}
+|skill5={{SkillInfo
+|name=Control
+|info=
+Chance to Increase Magic Damage
+|trigger=Special
+|buffs=
+<p>
+Magic Damage: +50%
+</p>
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Chance|unit=%|lvl1=18|lvl2=21|lvl3=24|lvl4=27|lvl5=30}}
+}}}}
+|skill6={{SkillInfo
+|name=Weakness Sigils
+|info=
+Increase Magic Damage
+|trigger=Ultimate
+|target=Self
+|duration=10
+|cooldown=30.0
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Increase|lvl1=10.0%|lvl2=20.0%|lvl3=30.0%|lvl4=40.0%|lvl5=50.0%}}
+}}}}
+}}

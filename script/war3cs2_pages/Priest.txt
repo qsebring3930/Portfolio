@@ -1,0 +1,51 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Priest
+|image=[[File:Priest.webp]]
+|category=WC3-Human
+|max=32
+|level=50
+|passive=
+<p>
+Max HP: +50HP
+</p>
+}}
+|skill1={{SkillInfo
+|name=Heal
+|info=
+Regen HP for Allies
+|trigger=Aura
+|tickrate=5
+|radius=400
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Health|unit=HP|lvl1=8|lvl2=9|lvl3=10|lvl4=11|lvl5=12|lvl6=13|lvl7=14|lvl8=15}}
+}}}}
+|skill2={{SkillInfo
+|name=Dispel Magic
+|info=
+Dispel and Blind. Increase Damage if Summon
+|trigger=Attack
+|chance=25
+|extra=50% extra Damage on Summons
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl1=2.5|lvl2=3.0|lvl3=3.5|lvl4=4.0|lvl5=4.5|lvl6=5.0|lvl7=5.5|lvl8=6.0}}
+}}}}
+|skill3={{SkillInfo
+|name=Resist Magic
+|info=
+Spell Immunity
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Chance|unit=%|lvl1=26|lvl2=28|lvl3=30|lvl4=32|lvl5=34|lvl6=36|lvl7=38|lvl8=40}}
+}}}}
+|skill4={{SkillInfo
+|name=Mass Revive
+|info=
+Revive Allies near you
+|trigger=Death
+|chance=33
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Radius|lvl1=400.0|lvl2=450.0|lvl3=500.0|lvl4=550.0|lvl5=600.0|lvl6=650.0|lvl7=700.0|lvl8=750.0}}
+}}}}
+}}

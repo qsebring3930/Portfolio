@@ -1,0 +1,62 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Lurker
+|image=[[File:Lurker.webp]]
+|category=Misc
+|max=25
+|level=785
+|weapons=
+USP-S
+|restricted=All
+|items=
+Amulet of the Cat
+|team=2
+}}
+|skill1={{SkillInfo
+|name=Undead Legs
+|info=
+Increase Speed
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Speed|lvl1=20.0%|lvl2=30.0%|lvl3=40.0%|lvl4=50.0%|lvl5=60.0%}}
+}}}}
+|skill2={{SkillInfo
+|name=Cloak of hiding
+|info=
+Decrease Health, Visibility, Fall Damage
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Health|unit=HP|lvl1=-20|lvl2=-40|lvl3=-60|lvl4=-80|lvl5=-99}}
+|line2={{LevelUpRow|field=Visibility|lvl1=40.0%|lvl2=55.0%|lvl3=70.0%|lvl4=85.0%|lvl5=100.0%}}
+|line3={{LevelUpRow|field=Fall Damage|lvl1=40.0%|lvl2=55.0%|lvl3=70.0%|lvl4=85.0%|lvl5=100.0%}}
+}}}}
+|skill3={{SkillInfo
+|name=Silent Strike
+|info=
+Increase Weapon Damage
+|trigger=Attack
+|extra=Increase Damage between 1 and ...
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Damage|lvl1=5|lvl2=7|lvl3=8|lvl4=9|lvl5=10}}
+}}}}
+|skill4={{SkillInfo
+|name=Sneak Attack
+|info=
+Increase Weapon Damage
+|trigger=Attack
+|chance=20
+|extra=Damage is random
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Min Damage|lvl1=10|lvl2=12|lvl3=15|lvl4=18|lvl5=20}}
+|line2={{LevelUpRow|field=Max Damage|lvl1=20|lvl2=25|lvl3=30|lvl4=35|lvl5=40}}
+}}}}
+|skill5={{SkillInfo
+|name=Skill Protection
+|info=
+Skill and Spell Immunity
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Chance|unit=%|lvl1=60|lvl2=70|lvl3=80|lvl4=90|lvl5=100}}
+}}}}
+}}

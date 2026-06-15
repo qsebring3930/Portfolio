@@ -1,0 +1,59 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Spectre
+|image=[[File:Spectre.webp]]
+|category=DotA-Universal
+|max=32
+|level=2720
+|team=3
+}}
+|skill1={{SkillInfo
+|name=Spectral Dagger
+|info=
+Place Wards in a Line. Ward: Slow & Damage. No collision while in area
+|trigger=Ability1
+|target=Location
+|duration=10
+|range=600
+|radius=50
+|buffs=
+<p>
+Speed: -30%
+</p>
+|cooldown=15.0
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Damage|lvl1=5|lvl2=6|lvl3=7|lvl4=8|lvl5=9|lvl6=10|lvl7=11|lvl8=12}}
+}}}}
+|skill2={{SkillInfo
+|name=Desolate
+|info=
+Increase Gun Damage to enemies with no allies nearby
+|trigger=Attack
+|radius=300
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Increase|lvl1=2|lvl2=4|lvl3=6|lvl4=8|lvl5=10|lvl6=12|lvl7=14|lvl8=16}}
+}}}}
+|skill3={{SkillInfo
+|name=Dispersion
+|info=
+Return Weapon Damage, Reduces effect based on distance
+|trigger=Victim
+|range=800
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Return|lvl1=10.0%|lvl2=12.0%|lvl3=14.0%|lvl4=16.0%|lvl5=18.0%|lvl6=20.0%|lvl7=22.0%|lvl8=24.0%}}
+}}}}
+|skill4={{SkillInfo
+|name=Haunt
+|info=
+Channel to Track Enemies, Press Again while aiming at a tracked enemy to teleport behind them and damage the others
+|trigger=Ultimate
+|target=AoE_Self
+|damage=15
+|duration=3
+|aim=6
+|cooldown=35.0
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Radius|lvl1=800.0|lvl2=900.0|lvl3=1000.0|lvl4=1100.0|lvl5=1200.0|lvl6=1300.0|lvl7=1400.0|lvl8=1500.0}}
+}}}}
+}}

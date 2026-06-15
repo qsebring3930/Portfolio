@@ -1,0 +1,82 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Logickal
+|image=[[File:Logickal.webp]]
+|category=Player
+|max=26
+|level=925
+|weapons=
+Knife
+|restricted=All
+|passive=
+<p>
+Visibility: 60%<br>
+Alt Weapon Fire: disabled
+</p>
+}}
+|skill1={{SkillInfo
+|name=Gotta Go Faster!
+|info=
+Increase Speed, Longjump. Decrease Gravity
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=5|zero=1
+|line1={{LevelUpRow|field=Speed|lvl0=10.0%|lvl1=14.0%|lvl2=18.0%|lvl3=22.0%|lvl4=26.0%|lvl5=30.0%}}
+|line2={{LevelUpRow|field=Long Jump|lvl0=10.0%|lvl1=14.0%|lvl2=18.0%|lvl3=22.0%|lvl4=26.0%|lvl5=30.0%}}
+|line3={{LevelUpRow|field=Gravity|lvl0=10.0%|lvl1=14.0%|lvl2=18.0%|lvl3=22.0%|lvl4=26.0%|lvl5=30.0%}}
+}}}}
+|skill2={{SkillInfo
+|name=Sneaky Stabby
+|info=
+Increase Knife Damage and decrease visibility based on walking or standing still. Disables Gotta Go Faster
+|trigger=Attack
+|extra=1 sec. of walking or 2 sec. of standing still to activate. Effects doubles on standing still
+|levelup={{LevelUpInfo|levels=5|zero=1
+|line1={{LevelUpRow|field=Increase|lvl0=6.0%|lvl1=12.0%|lvl2=24.0%|lvl3=36.0%|lvl4=48.0%|lvl5=60.0%}}
+|line2={{LevelUpRow|field=Visibility|lvl0=2.0%|lvl1=4.0%|lvl2=8.0%|lvl3=12.0%|lvl4=16.0%|lvl5=20.0%}}
+}}}}
+|skill3={{SkillInfo
+|name=I'm Here!
+|info=
+Teleport to your target, teleport to where you aim if no target
+|trigger=Ability1
+|target=Target_Enemy
+|range=800
+|extra=Range is halved if no target
+|levelup={{LevelUpInfo|levels=5|zero=1
+|line1={{LevelUpRow|field=Cooldown|unit=sec.|lvl0=30.0|lvl1=26.0|lvl2=22.0|lvl3=18.0|lvl4=14.0|lvl5=10.0}}
+}}}}
+|skill4={{SkillInfo
+|name=Boop!
+|info=
+Activate Sneaky Stabby Damage after using 'I'm Here'
+|trigger=Attack
+|duration=5
+|extra=Cancels when you deal damage
+|levelup={{LevelUpInfo|levels=5|zero=1
+|line1={{LevelUpRow|field=Cooldown|unit=sec.|lvl0=30.0|lvl1=28.0|lvl2=26.0|lvl3=24.0|lvl4=22.0|lvl5=20.0}}
+}}}}
+|skill5={{SkillInfo
+|name=It's Not Over!
+|info=
+Summon a Logi Minion
+|trigger=Death
+|levelup={{LevelUpInfo|levels=5|zero=1
+|line1={{LevelUpRow|field=Chance|unit=%|lvl0=20|lvl1=30|lvl2=40|lvl3=50|lvl4=60|lvl5=70}}
+}}}}
+|skill6={{SkillInfo
+|name=Say My Name
+|info=
+Empty Everyones Clip
+|trigger=Ultimate
+|required=
+<p>
+Gotta Go Faster! - Level 5<br>
+Sneaky Stabby - Level 5<br>
+I'm Here! - Level 5<br>
+It's Not Over! - Level 5
+</p>
+|target=All
+|cooldown=60.0
+}}
+}}

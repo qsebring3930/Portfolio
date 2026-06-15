@@ -1,0 +1,70 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Kanji Tatsumi
+|image=[[File:Kanji Tatsumi.webp]]
+|category=Persona 4
+|max=34
+|level=4915
+|weapons=
+Dual Berettas<br>
+Knife
+|restricted=All
+|team=1
+}}
+|skill1={{SkillInfo
+|name=Elec Magic
+|info=
+Damage, Bash
+|trigger=Ability1
+|target=Target_Enemy
+|chance=20
+|duration=1
+|range=600
+|cooldown=20.0
+|extra=Levels 2, 4 and 6 are AoE with radius 300.
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Damage|lvl1=20|lvl2=15|lvl3=25|lvl4=20|lvl5=30|lvl6=25}}
+}}}}
+|skill2={{SkillInfo
+|name=Elec Boost
+|info=
+Increase 'Elec Magic' Efficiency
+|trigger=Special
+|levelup={{LevelUpInfo|levels=10
+|line1={{LevelUpRow|field=Damage|lvl1=1|lvl2=2|lvl3=3|lvl4=4|lvl5=5|lvl6=6|lvl7=7|lvl8=8|lvl9=9|lvl10=10}}
+|line2={{LevelUpRow|field=Chance|unit=%|lvl1=1|lvl2=2|lvl3=3|lvl4=4|lvl5=5|lvl6=6|lvl7=7|lvl8=8|lvl9=9|lvl10=10}}
+}}}}
+|skill3={{SkillInfo
+|name=Physical Attack
+|info=
+Increase Weapon Damage
+|trigger=Attack
+|chance=33
+|extra=Level 1 proc 3 times with a 60% chance to hit
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Increase|lvl1=5.0%|lvl2=15.0%|lvl3=17.5%|lvl4=20.0%|lvl5=22.5%|lvl6=25.0%}}
+}}}}
+|skill4={{SkillInfo
+|name=Combat Boost
+|info=
+Increase HP and Regen
+|trigger=Passive
+|tickrate=1
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=HP|unit=HP|lvl1=5|lvl2=10|lvl3=15|lvl4=20|lvl5=25|lvl6=30}}
+|line2={{LevelUpRow|field=Heal|unit=HP|lvl1=1|lvl2=2|lvl3=3|lvl4=4|lvl5=5|lvl6=6}}
+}}}}
+|skill5={{SkillInfo
+|name=All Out Attack
+|info=
+Damage enemies around you. Evolves if Naoto is close by.
+|trigger=Ultimate
+|target=AoE_Self
+|radius=500
+|cooldown=30.0
+|extra=Beauty & The Beast increases Damage by 30% and Radius by 100
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Damage|lvl1=10|lvl2=14|lvl3=18|lvl4=22|lvl5=26|lvl6=30}}
+}}}}
+}}

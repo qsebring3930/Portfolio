@@ -1,0 +1,81 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Turkey
+|image=[[File:Turkey.webp]]
+|category=Pet
+|max=42
+|level=1810
+|weapons=
+Knife
+|restricted=All
+|items=
+Boots of Evasion<br>
+Boots of Zephyr
+}}
+|skill1={{SkillInfo
+|name=Turkey Legs
+|info=
+Increase Speed
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=7
+|line1={{LevelUpRow|field=Speed|lvl1=50.0%|lvl2=55.0%|lvl3=60.0%|lvl4=65.0%|lvl5=70.0%|lvl6=75.0%|lvl7=80.0%}}
+}}}}
+|skill2={{SkillInfo
+|name=Peck
+|info=
+Increase Weapon Damage on Left Click
+|trigger=Attack
+|chance=10
+|levelup={{LevelUpInfo|levels=7
+|line1={{LevelUpRow|field=Increase|lvl1=50.0%|lvl2=75.0%|lvl3=100.0%|lvl4=125.0%|lvl5=150.0%|lvl6=175.0%|lvl7=200.0%}}
+}}}}
+|skill3={{SkillInfo
+|name=Wishbone
+|info=
+<p>
+Random Effect on Left Click<br>
+Extra Damage<br>
+Drug<br>
+Steal Money<br>
+Steal Life<br>
+Burn<br>
+Impale<br>
+Blind<br>
+Shake
+</p>
+|trigger=Attack
+|chance=33
+|levelup={{LevelUpInfo|levels=7
+|line1={{LevelUpRow|field=Power|lvl1=2.0|lvl2=3.0|lvl3=4.0|lvl4=5.0|lvl5=6.0|lvl6=7.0|lvl7=8.0}}
+}}}}
+|skill4={{SkillInfo
+|name=Bird Flu
+|info=
+Turkey Minion
+|trigger=Kill
+|levelup={{LevelUpInfo|levels=7
+|line1={{LevelUpRow|field=Chance|unit=%|lvl1=22|lvl2=25|lvl3=28|lvl4=31|lvl5=34|lvl6=37|lvl7=40}}
+}}}}
+|skill5={{SkillInfo
+|name=Salmonella
+|info=
+DoT on Left Click
+|trigger=Attack
+|damage=1
+|duration=6
+|extra=Each tick increases damage
+|levelup={{LevelUpInfo|levels=7
+|line1={{LevelUpRow|field=Chance|lvl1=28.0%|lvl2=30.0%|lvl3=32.0%|lvl4=34.0%|lvl5=36.0%|lvl6=38.0%|lvl7=40.0%}}
+}}}}
+|skill6={{SkillInfo
+|name=Turkey Coma
+|info=
+Sleep on Right Click
+|trigger=Attack
+|cooldown=6.0
+|extra=Right Click deals little damage
+|levelup={{LevelUpInfo|levels=7
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl1=1.2|lvl2=1.5|lvl3=1.8|lvl4=2.1|lvl5=2.4|lvl6=2.7|lvl7=3.0}}
+}}}}
+}}

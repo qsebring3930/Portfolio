@@ -1,0 +1,84 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Mario Bros
+|image=[[File:Mario Bros.webp]]
+|category=Nintendo
+|max=30
+|level=3280
+|weapons=
+Knife
+|restricted=All
+|passive=
+<p>
+Fire Rate: -25%
+</p>
+}}
+|skill1={{SkillInfo
+|name=Brothers
+|info=
+<p>
+Gain buffs based on brother<br>
+Mario: Faster but lower health<br>
+Luigi: Higher health and Longjump but slower
+</p>
+|trigger=Passive
+|buffs=
+<p>
+Mario Speed: +50%<br>
+Luigi Speed: +30%
+</p>
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Mario Health|unit=HP|lvl0=20|lvl1=50|lvl2=60|lvl3=70|lvl4=80|lvl5=90|lvl6=100}}
+|line2={{LevelUpRow|field=Luigi Health|unit=HP|lvl0=40|lvl1=75|lvl2=90|lvl3=105|lvl4=120|lvl5=135|lvl6=150}}
+|line3={{LevelUpRow|field=Luigi Longjump|lvl0=10.0%|lvl1=15.0%|lvl2=18.0%|lvl3=21.0%|lvl4=24.0%|lvl5=27.0%|lvl6=30.0%}}
+}}}}
+|skill2={{SkillInfo
+|name=Fire Flower
+|info=
+Left Click to throw Fireballs and Burn Enemies
+|trigger=Special
+|target=Target_Enemy
+|duration=1
+|range=1000
+|aim=15
+|extra=Damage based on Max Health
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Damage|lvl0=1.0%|lvl1=2.0%|lvl2=3.0%|lvl3=4.0%|lvl4=5.0%|lvl5=6.0%|lvl6=7.0%}}
+}}}}
+|skill3={{SkillInfo
+|name=Double Jump
+|info=
+Decrease Gravity
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Gravity|lvl0=20.0%|lvl1=25.0%|lvl2=30.0%|lvl3=35.0%|lvl4=40.0%|lvl5=45.0%|lvl6=50.0%}}
+}}}}
+|skill4={{SkillInfo
+|name=Air Drop
+|info=
+Drop Down and hurt enemies around you
+|trigger=Ability1
+|target=Self
+|radius=150
+|cooldown=10.0
+|extra=Full Damage when you land on their head, otherwise reduced damage based on distance
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Damage|lvl0=20|lvl1=25|lvl2=30|lvl3=35|lvl4=40|lvl5=45|lvl6=50}}
+}}}}
+|skill5={{SkillInfo
+|name=Star Power
+|info=
+Increase Speed and Slow Resistance while being invincible
+|trigger=Ultimate
+|target=Self
+|buffs=
+<p>
+Speed: +30%<br>
+Slow Resistance: +100%
+</p>
+|cooldown=40.0
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl1=3.5|lvl2=4.0|lvl3=4.5|lvl4=5.0|lvl5=5.5|lvl6=6.0}}
+}}}}
+}}

@@ -1,0 +1,52 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Human Alliance
+|image=[[File:Human Alliance.webp]]
+|category=Default
+|max=32
+|level=0
+|items=
+Sock of Feathers
+}}
+|skill1={{SkillInfo
+|name=Invisibility
+|info=
+Decrease visibility
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Visibility|lvl1=20.0%|lvl2=24.0%|lvl3=27.0%|lvl4=30.0%|lvl5=33.0%|lvl6=36.0%|lvl7=39.0%|lvl8=42.0%}}
+}}}}
+|skill2={{SkillInfo
+|name=Devotion Aura
+|info=
+Increase health
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Health|unit=HP|lvl1=15|lvl2=20|lvl3=25|lvl4=30|lvl5=35|lvl6=40|lvl7=45|lvl8=50}}
+}}}}
+|skill3={{SkillInfo
+|name=Bash
+|info=
+Bash
+|trigger=Attack
+|chance=25
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl1=0.1|lvl2=0.2|lvl3=0.3|lvl4=0.4|lvl5=0.5|lvl6=0.6|lvl7=0.7|lvl8=0.8}}
+}}}}
+|skill4={{SkillInfo
+|name=Teleport
+|info=
+Leap Forward
+|trigger=Ultimate
+|target=Self
+|force=2
+|buffs=
+<p>
+Fall Resistance: 70.0%
+</p>
+|cooldown=10.0
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Range|lvl1=365.0|lvl2=380.0|lvl3=395.0|lvl4=410.0|lvl5=425.0|lvl6=440.0|lvl7=455.0|lvl8=470.0}}
+}}}}
+}}

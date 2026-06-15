@@ -1,0 +1,69 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Succubus Hunter
+|image=[[File:Succubus Hunter.webp]]
+|category=Misc
+|max=25
+|level=785
+}}
+|skill1={{SkillInfo
+|name=Demonic Knife
+|info=
+Increase Knife Damage per Skull
+|trigger=Attack
+|extra=Increase up to 80%
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Increase|lvl1=4.0%|lvl2=5.0%|lvl3=6.0%|lvl4=7.0%|lvl5=8.0%}}
+}}}}
+|skill2={{SkillInfo
+|name=Head Hunter
+|info=
+<p>
+Attack: Increase Gun Damage<br>
+Kill: Gain Skull
+</p>
+|trigger=Special
+|chance=40
+|extra=Rolls per Skull, Increase up to 40%
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Increase|lvl1=1.0%|lvl2=2.0%|lvl3=3.0%|lvl4=4.0%|lvl5=5.0%}}
+|line2={{LevelUpRow|field=Skull Chance|unit=%|lvl1=80|lvl2=85|lvl3=90|lvl4=95|lvl5=100}}
+}}}}
+|skill3={{SkillInfo
+|name=Assault Tackle
+|info=
+Increase Longjump
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Jump|lvl1=18.0%|lvl2=21.0%|lvl3=24.0%|lvl4=27.0%|lvl5=30.0%}}
+}}}}
+|skill4={{SkillInfo
+|name=Totem Incantation
+|info=
+Increase Health and Money per Skull
+|trigger=Passive
+|extra=Increase Health up to 80
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Health|unit=HP|lvl1=1|lvl2=2|lvl3=3|lvl4=4|lvl5=5}}
+|line2={{LevelUpRow|field=Money|lvl1=$5|lvl2=$10|lvl3=$15|lvl4=$20|lvl5=$25}}
+}}}}
+|skill5={{SkillInfo
+|name=Demonic Transformation
+|info=
+Sacrifice Skulls to Increase Health and Speed, Decrease Visibility and Gravity
+|trigger=Ultimate
+|target=Self
+|quantity=3
+|duration=20
+|buffs=
+<p>
+Speed: +20%<br>
+Gravity: -20%
+</p>
+|cooldown=15.0
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Health|unit=HP|lvl1=20|lvl2=25|lvl3=30|lvl4=35|lvl5=40}}
+|line2={{LevelUpRow|field=Visibility|lvl1=28.0%|lvl2=36.0%|lvl3=44.0%|lvl4=52.0%|lvl5=60.0%}}
+}}}}
+}}

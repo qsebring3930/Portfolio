@@ -1,0 +1,52 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Orcish Horde
+|image=[[File:Orcish Horde.webp]]
+|category=Default
+|max=32
+|level=0
+|items=
+Gloves of Warmth
+}}
+|skill1={{SkillInfo
+|name=Critical Strike
+|info=
+Increase Gun Damage
+|trigger=Attack
+|chance=25
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Increase|lvl1=15.0%|lvl2=20.0%|lvl3=25.0%|lvl4=30.0%|lvl5=35.0%|lvl6=40.0%|lvl7=45.0%|lvl8=50.0%}}
+}}}}
+|skill2={{SkillInfo
+|name=Critical Grenade
+|info=
+Increase Grenade Damage
+|trigger=Attack
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Increase|lvl1=80.0%|lvl2=90.0%|lvl3=100.0%|lvl4=110.0%|lvl5=120.0%|lvl6=130.0%|lvl7=140.0%|lvl8=150.0%}}
+}}}}
+|skill3={{SkillInfo
+|name=Reincarnation
+|info=
+Respawn with random health
+|trigger=Death
+|chance=50
+|extra=Reduced HP between 0 and ...
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=HP|unit=HP|lvl1=35|lvl2=30|lvl3=25|lvl4=20|lvl5=15|lvl6=10|lvl7=5|lvl8=0}}
+}}}}
+|skill4={{SkillInfo
+|name=Chain Lightning
+|info=
+Damage Enemies around you
+|trigger=Ultimate
+|target=AoE_Self
+|damage=33
+|cooldown=20.0
+|extra=Damage reduces by 3 and Radius reduces by 75 each jump
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Targets|lvl1=1|lvl2=2|lvl3=3|lvl4=4|lvl5=5|lvl6=6|lvl7=7|lvl8=8}}
+|line2={{LevelUpRow|field=Radius|lvl1=575.0|lvl2=600.0|lvl3=625.0|lvl4=650.0|lvl5=675.0|lvl6=700.0|lvl7=725.0|lvl8=750.0}}
+}}}}
+}}

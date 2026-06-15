@@ -1,0 +1,86 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Thief of Hours
+|image=[[File:Thief of Hours.webp]]
+|category=AQW
+|max=30
+|level=4345
+|weapons=
+Knife
+|restricted=All
+|passive=
+<p>
+Speed: +20%<br>
+Longjump: +25%<br>
+Accelerating Stacks: 6
+</p>
+}}
+|skill1={{SkillInfo
+|name=Steal Seconds
+|info=
+<p>
+On Weapon Damage Events gain Accelerating Stack and Remove Ammo<br>
+Accelerating Stacks Increase Speed and Evade Weapon Damage per Stack
+</p>
+|trigger=Special
+|buffs=
+<p>
+Evade: 3% Per Stack
+</p>
+|levelup={{LevelUpInfo|levels=5|zero=1
+|line1={{LevelUpRow|field=Quantity|lvl0=1|lvl1=2|lvl2=3|lvl3=4|lvl4=5|lvl5=6}}
+|line2={{LevelUpRow|field=Speed|lvl0=1.0%|lvl1=2.0%|lvl2=3.0%|lvl3=4.0%|lvl4=5.0%|lvl5=6.0%}}
+}}}}
+|skill2={{SkillInfo
+|name=Sonic Piledriver
+|info=
+Sacrifice Accelerating Stacks to Drain Health and Knock Back
+|trigger=Ability1
+|target=Target_Enemy
+|range=500
+|force=2
+|cooldown=5.0
+|extra=Drain is based on stacks
+|levelup={{LevelUpInfo|levels=5|zero=1
+|line1={{LevelUpRow|field=Drain|unit=HP|lvl0=1|lvl1=2|lvl2=3|lvl3=4|lvl4=5|lvl5=6}}
+}}}}
+|skill3={{SkillInfo
+|name=Timestream
+|info=
+Gain Accelerating Stacks, Reset Future Foreseen Cooldown
+|trigger=Ability2
+|target=Self
+|cooldown=20.0
+|levelup={{LevelUpInfo|levels=5|zero=1
+|line1={{LevelUpRow|field=Quantity|lvl0=1|lvl1=2|lvl2=3|lvl3=4|lvl4=5|lvl5=6}}
+}}}}
+|skill4={{SkillInfo
+|name=Future Foreseen
+|info=
+Evade Weapon Damage
+|trigger=Victim
+|levelup={{LevelUpInfo|levels=5|zero=1
+|line1={{LevelUpRow|field=Cooldown|unit=sec.|lvl0=10.0|lvl1=9.0|lvl2=8.0|lvl3=7.0|lvl4=6.0|lvl5=5.0}}
+}}}}
+|skill5={{SkillInfo
+|name=Regenerative Rebirth
+|info=
+Prevent One Killing Blow, Become Invincible and Heal Over Time. No Weapon
+|trigger=Victim
+|heal=10
+|levelup={{LevelUpInfo|levels=5|zero=1
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl0=1.0|lvl1=2.0|lvl2=3.0|lvl3=4.0|lvl4=5.0|lvl5=6.0}}
+}}}}
+|skill6={{SkillInfo
+|name=Temporal Insanity
+|info=
+Ward: Divert Weapon Damage to random person in ward
+|trigger=Ultimate
+|target=Self
+|radius=500
+|cooldown=30.0
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Increase|unit=sec.|lvl1=2.0|lvl2=3.0|lvl3=4.0|lvl4=5.0|lvl5=6.0}}
+}}}}
+}}

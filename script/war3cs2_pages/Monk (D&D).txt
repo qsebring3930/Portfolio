@@ -1,0 +1,78 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Monk (D&D)
+|image=[[File:Monk (D&D).webp]]
+|category=D&D Martials
+|max=30
+|level=3370
+}}
+|skill1={{SkillInfo
+|name=Unarmored Defense
+|info=
+<p>
+Victim: Evade Weapon Damage, Increase Chance while unarmored<br>
+Special: Stand still with your knife to reduce armor
+</p>
+|trigger=Special
+|quantity=35
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Chance|lvl1=5.0%|lvl2=7.5%|lvl3=10.0%|lvl4=12.5%|lvl5=15.0%}}
+}}}}
+|skill2={{SkillInfo
+|name=Monk's Focus
+|info=
+Gain Focus
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=5|zero=1
+|line1={{LevelUpRow|field=Quantity|lvl0=1|lvl1=2|lvl2=3|lvl3=4|lvl4=5|lvl5=6}}
+}}}}
+|skill3={{SkillInfo
+|name=Flurry of Blows
+|info=
+Sacrifice Focus to Increase Fire Rate, Return Bullets
+|trigger=Ability1
+|target=Self
+|duration=5
+|cooldown=13.0
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Fire Rate|lvl1=5.0%|lvl2=10.0%|lvl3=15.0%|lvl4=20.0%|lvl5=25.0%}}
+|line2={{LevelUpRow|field=Chance|unit=%|lvl1=10|lvl2=20|lvl3=30|lvl4=40|lvl5=50}}
+}}}}
+|skill4={{SkillInfo
+|name=Extra Attack
+|info=
+Increase Gun Damage
+|trigger=Attack
+|chance=50
+|extra=SMG's have 2 rolls. Increase between 1 and ...
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Max Damage|lvl1=2|lvl2=3|lvl3=4|lvl4=5|lvl5=6}}
+}}}}
+|skill5={{SkillInfo
+|name=Deflect Attacks
+|info=
+Sacrifice Focus to Return Damage on Evade
+|trigger=Ability2
+|target=Self
+|cooldown=12.0
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl1=1.0|lvl2=1.5|lvl3=2.0|lvl4=2.5|lvl5=3.0}}
+|line2={{LevelUpRow|field=Damage|lvl1=3|lvl2=6|lvl3=9|lvl4=12|lvl5=15}}
+}}}}
+|skill6={{SkillInfo
+|name=Step of the Wind
+|info=
+<p>
+Passive: Increase Speed<br>
+Ability3: Sacrifice Focus to further Increase Speed
+</p>
+|trigger=Ability3
+|target=Self
+|duration=5
+|cooldown=13.0
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Base Speed|lvl1=5.0%|lvl2=10.0%|lvl3=15.0%|lvl4=20.0%|lvl5=25.0%}}
+|line2={{LevelUpRow|field=Active Speed|lvl1=10.0%|lvl2=20.0%|lvl3=30.0%|lvl4=40.0%|lvl5=50.0%}}
+}}}}
+}}

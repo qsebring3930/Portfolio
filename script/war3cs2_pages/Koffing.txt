@@ -1,0 +1,72 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Koffing
+|image=[[File:Koffing.webp]]
+|category=Pokémon - Grass
+|max=25
+|level=675
+|weapons=
+Knife<br>
+Smoke Grenade
+|restricted=All
+|team=1
+|passive=
+<p>
+Speed: +40%<br>
+Gravity: -20%<br>
+Gain Smoke: On 'Poison Cloud' or 'Smog' Kill
+</p>
+}}
+|skill1={{SkillInfo
+|name=Neutralizing Gas
+|info=
+Smoke Dispels
+|trigger=Special
+|levelup={{LevelUpInfo|levels=5|zero=1
+|line1={{LevelUpRow|field=Chance|unit=%|lvl0=10|lvl1=28|lvl2=46|lvl3=64|lvl4=82|lvl5=100}}
+}}}}
+|skill2={{SkillInfo
+|name=Poison Gas
+|info=
+Smoke Deals Damage
+|trigger=Special
+|extra=Damage is based on Max Health. Damage is increased by 50% if no armor
+|levelup={{LevelUpInfo|levels=5|zero=1
+|line1={{LevelUpRow|field=Multiplier|lvl0=1.0%|lvl1=2.8%|lvl2=4.6%|lvl3=6.4%|lvl4=8.2%|lvl5=10.0%}}
+}}}}
+|skill3={{SkillInfo
+|name=Smog
+|info=
+Damage Enemies
+|trigger=Aura
+|extra=Damage is 50% of 'Poison Gas'
+|levelup={{LevelUpInfo|levels=5|zero=1
+|line1={{LevelUpRow|field=Radius|lvl0=100.0|lvl1=140.0|lvl2=180.0|lvl3=220.0|lvl4=260.0|lvl5=300.0}}
+}}}}
+|skill4={{SkillInfo
+|name=Smokescreen
+|info=
+Throw Smoke Grenade
+|trigger=Ability1
+|target=Object
+|levelup={{LevelUpInfo|levels=5|zero=1
+|line1={{LevelUpRow|field=Cooldown|unit=sec.|lvl0=25.0|lvl1=23.0|lvl2=21.0|lvl3=19.0|lvl4=17.0|lvl5=15.0}}
+}}}}
+|skill5={{SkillInfo
+|name=Acid Spray
+|info=
+<p>
+Special: 'Smog' and Smoke also damage armor<br>
+Ability: Damage Armor
+</p>
+|trigger=Ability2
+|target=Cone
+|range=500
+|cone=40
+|cooldown=20.0
+|levelup={{LevelUpInfo|levels=5|zero=1
+|line1={{LevelUpRow|field=Multiplier|lvl0=10.0%|lvl1=28.0%|lvl2=46.0%|lvl3=64.0%|lvl4=82.0%|lvl5=100.0%}}
+|line2={{LevelUpRow|field=Damage|lvl0=15|lvl1=30|lvl2=45|lvl3=60|lvl4=75|lvl5=90}}
+}}}}
+}}

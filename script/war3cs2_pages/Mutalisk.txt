@@ -1,0 +1,79 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Mutalisk
+|image=[[File:Mutalisk.webp]]
+|category=SC-Zerg
+|max=36
+|level=1305
+|access=Beta
+|weapons=
+No Weapon
+|restricted=All
+|items=
+Ring of Regeneration
+|passive=
+<p>
+Speed: +30%<br>
+Max Health: +50HP<br>
+Flying: True
+</p>
+}}
+|skill1={{SkillInfo
+|name=Biomass Gathering
+|info=
+Gain Biomass, Gain Extra Biomass on Bounces
+|trigger=Attack
+|quantity=1
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Bounce Gain|lvl0=1|lvl1=2|lvl2=3|lvl3=4|lvl4=5|lvl5=6|lvl6=7}}
+}}}}
+|skill2={{SkillInfo
+|name=Biomass Recovery
+|info=
+Regen HP with Biomass
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Heal|unit=HP|lvl0=1|lvl1=2|lvl2=3|lvl3=4|lvl4=5|lvl5=6|lvl6=7}}
+}}}}
+|skill3={{SkillInfo
+|name=Glaive Wurm
+|info=
+Left Click to Damage, Bounces to nearby Enemies
+|trigger=Special
+|damage=10
+|quantity=5
+|tickrate=0.5
+|cooldown=1.0
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Range|lvl0=500.0|lvl1=550.0|lvl2=600.0|lvl3=650.0|lvl4=700.0|lvl5=750.0|lvl6=800.0}}
+}}}}
+|skill4={{SkillInfo
+|name=Vicious Glaive
+|info=
+Increase 'Glaive Wurm' Bounce Radius, Increase Initial Damage if no bounces
+|trigger=Special
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Radius|lvl0=200.0|lvl1=250.0|lvl2=300.0|lvl3=350.0|lvl4=400.0|lvl5=450.0|lvl6=500.0}}
+|line2={{LevelUpRow|field=Damage|lvl0=3|lvl1=5|lvl2=7|lvl3=9|lvl4=11|lvl5=13|lvl6=15}}
+}}}}
+|skill5={{SkillInfo
+|name=Sundering Glaive
+|info=
+Increase 'Glaive Wurm' Damage on each Bounce
+|trigger=Special
+|extra=Damage Increase Between 1 and ...
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Damage|lvl0=1|lvl1=2|lvl2=3|lvl3=4|lvl4=5|lvl5=6|lvl6=7}}
+}}}}
+|skill6={{SkillInfo
+|name=Acidic Blood
+|info=
+DoT Enemies Below You
+|trigger=Victim
+|duration=7
+|radius=300
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Damage|lvl0=1|lvl1=2|lvl2=3|lvl3=4|lvl4=5|lvl5=6|lvl6=7}}
+}}}}
+}}

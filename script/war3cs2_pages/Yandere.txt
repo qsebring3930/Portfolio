@@ -1,0 +1,80 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Yandere
+|image=[[File:Yandere.webp]]
+|category=Holiday - Valentine
+|max=30
+|level=265
+|weapons=
+Smoke Grenade<br>
+Knife
+|restricted=All
+}}
+|skill1={{SkillInfo
+|name=Stalking Workout
+|info=
+Increase Speed and Health
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=5|zero=1
+|line1={{LevelUpRow|field=Speed|lvl0=5.0%|lvl1=10.0%|lvl2=15.0%|lvl3=20.0%|lvl4=25.0%|lvl5=30.0%}}
+|line2={{LevelUpRow|field=Health|unit=HP|lvl0=10|lvl1=20|lvl2=30|lvl3=40|lvl4=50|lvl5=60}}
+}}}}
+|skill2={{SkillInfo
+|name=Sanity
+|info=
+<p>
+Change Behavior based on Sanity<br>
+Sane: Regen HP, Reduce Received Weapon Damage<br>
+Insane: Skill Immune, Increase Dealt Weapon Damage
+</p>
+|trigger=Special
+|heal=2
+|extra=Sanity Increases when out of combat, Decreases if you attack or kill people
+|levelup={{LevelUpInfo|levels=5|zero=1
+|line1={{LevelUpRow|field=Sane Damage Reduction|lvl0=10.0%|lvl1=20.0%|lvl2=25.0%|lvl3=30.0%|lvl4=35.0%|lvl5=40.0%}}
+|line2={{LevelUpRow|field=Insane Damage Increase|lvl0=10.0%|lvl1=20.0%|lvl2=25.0%|lvl3=30.0%|lvl4=35.0%|lvl5=40.0%}}
+}}}}
+|skill3={{SkillInfo
+|name=No Body No Crime
+|info=
+Block Summons and Respawns
+|trigger=Kill
+|levelup={{LevelUpInfo|levels=5|zero=1
+|line1={{LevelUpRow|field=Chance|unit=%|lvl0=10|lvl1=20|lvl2=40|lvl3=60|lvl4=80|lvl5=100}}
+}}}}
+|skill4={{SkillInfo
+|name=Chemistry of Love
+|info=
+Smokes have random effects
+|trigger=Special
+|damage=5
+|duration=4
+|extra=Slow, Drug, Fire, Poison
+|levelup={{LevelUpInfo|levels=5|zero=1
+|line1={{LevelUpRow|field=Quantity|lvl0=1|lvl1=2|lvl2=3|lvl3=4|lvl4=5|lvl5=6}}
+}}}}
+|skill5={{SkillInfo
+|name=Senpai ... Why?
+|info=
+Return Damage to Senpai if he attacks you, kill him if he kills you
+|trigger=Victim
+|duration=7
+|levelup={{LevelUpInfo|levels=5|zero=1
+|line1={{LevelUpRow|field=Return|lvl0=10.0%|lvl1=30.0%|lvl2=38.0%|lvl3=46.0%|lvl4=52.0%|lvl5=60.0%}}
+|line2={{LevelUpRow|field=Chance to Kill|unit=%|lvl0=10|lvl1=20|lvl2=25|lvl3=30|lvl4=35|lvl5=40}}
+}}}}
+|skill6={{SkillInfo
+|name=Rival Takedown
+|info=
+Damage and disable healing to an enemy close to Senpai
+|trigger=Ultimate
+|target=Random_Enemy
+|duration=15
+|radius=500
+|cooldown=30.0
+|extra=Look for a new senpai instead if he died
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Damage|lvl1=20|lvl2=25|lvl3=30|lvl4=35|lvl5=40}}
+}}}}
+}}

@@ -1,0 +1,78 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Mountain King
+|image=[[File:Mountain King.webp]]
+|category=WC3-Human
+|max=32
+|level=50
+|weapons=
+Knife
+|restricted=All
+|items=
+Sock of Feathers
+|passive=
+<p>
+Size: -20%
+</p>
+}}
+|skill1={{SkillInfo
+|name=Storm Bolt
+|info=
+Throw Hammer, Stun
+|trigger=Ability1
+|target=Object
+|duration=1
+|force=1
+|cooldown=10.0
+|levelup={{LevelUpInfo|levels=8|zero=1
+|line1={{LevelUpRow|field=Damage|lvl0=8|lvl1=16|lvl2=18|lvl3=20|lvl4=22|lvl5=24|lvl6=26|lvl7=28|lvl8=30}}
+}}}}
+|skill2={{SkillInfo
+|name=Thunderclap
+|info=
+Damage and Slow Enemies around you
+|trigger=Ability2
+|target=AoE_Self
+|duration=3
+|radius=400
+|buffs=
+<p>
+Speed: -30%<br>
+Fire Rate: -30%
+</p>
+|cooldown=10.0
+|levelup={{LevelUpInfo|levels=8|zero=1
+|line1={{LevelUpRow|field=Damage|lvl0=4|lvl1=6|lvl2=8|lvl3=10|lvl4=12|lvl5=14|lvl6=16|lvl7=18|lvl8=20}}
+}}}}
+|skill3={{SkillInfo
+|name=Heroic Leap
+|info=
+Leap Forward, Damage Enemies around you on landing
+|trigger=Ability3
+|target=Self
+|damage=15
+|radius=250
+|force=2
+|cooldown=8.0
+|levelup={{LevelUpInfo|levels=8|zero=1
+|line1={{LevelUpRow|field=Range|lvl0=150.0|lvl1=210.0|lvl2=230.0|lvl3=250.0|lvl4=270.0|lvl5=290.0|lvl6=310.0|lvl7=330.0|lvl8=350.0}}
+}}}}
+|skill4={{SkillInfo
+|name=Avatar
+|info=
+Increase Health, Speed, Spell Immune
+|trigger=Ultimate
+|target=Self
+|duration=7.5
+|force=2
+|buffs=
+<p>
+Speed: +20%<br>
+Spell Immunity: 100%
+</p>
+|cooldown=30.0
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Health|unit=HP|lvl1=25|lvl2=50|lvl3=75|lvl4=100|lvl5=125|lvl6=150|lvl7=175|lvl8=200}}
+}}}}
+}}

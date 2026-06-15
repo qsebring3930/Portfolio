@@ -1,0 +1,72 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=High Templar
+|image=[[File:High Templar.webp]]
+|category=SC-Protoss
+|max=30
+|level=1395
+|weapons=
+P2000
+|restricted=All
+}}
+|skill1={{SkillInfo
+|name=Plasma Shields
+|info=
+Absorb Damage, Trigger 'Feedback'
+|trigger=Victim
+|chance=50
+|extra=Regen Shield after 3.0 sec.
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Health|unit=HP|lvl1=15|lvl2=22|lvl3=29|lvl4=36|lvl5=43|lvl6=50}}
+|line2={{LevelUpRow|field=Heal|unit=HP|lvl1=1|lvl2=2|lvl3=3|lvl4=4|lvl5=5|lvl6=6}}
+}}}}
+|skill2={{SkillInfo
+|name=Psi Blast
+|info=
+Increase Weapon Damage
+|trigger=Attack
+|damage=10
+|extra=Extra Damage is Magic Damage. Reduces Psionic Storm Cooldown by 5.0 sec.
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Chance|lvl1=15.0%|lvl2=20.0%|lvl3=25.0%|lvl4=30.0%|lvl5=35.0%|lvl6=40.0%}}
+}}}}
+|skill3={{SkillInfo
+|name=Feedback
+|info=
+Mana Burn
+|trigger=Ability1
+|target=Target_Enemy
+|chance=20
+|range=750
+|cooldown=18.0
+|extra=Chance to deal self damage on attack. Damage between 10 and ...
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl1=3.5|lvl2=4.0|lvl3=4.5|lvl4=5.0|lvl5=5.5|lvl6=6.0}}
+|line2={{LevelUpRow|field=Shot Max Damage|lvl1=10|lvl2=12|lvl3=14|lvl4=16|lvl5=18|lvl6=20}}
+|line3={{LevelUpRow|field=Ability Damage|lvl1=2|lvl2=4|lvl3=6|lvl4=8|lvl5=10|lvl6=12}}
+|line4={{LevelUpRow|field=Ultimate Damage|lvl1=3|lvl2=6|lvl3=9|lvl4=12|lvl5=15|lvl6=18}}
+}}}}
+|skill4={{SkillInfo
+|name=Plasma Surge
+|info=
+'Psionic Storm' Recovers Shield for allies
+|trigger=Special
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Heal|unit=HP|lvl1=5|lvl2=6|lvl3=7|lvl4=8|lvl5=9|lvl6=10}}
+}}}}
+|skill5={{SkillInfo
+|name=Psionic Storm
+|info=
+Ward: Damage Enemies
+|trigger=Ultimate
+|target=Location
+|duration=6
+|tickrate=0.5
+|range=1000
+|radius=250
+|cooldown=30.0
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Damage|lvl1=5|lvl2=6|lvl3=7|lvl4=8|lvl5=9|lvl6=10}}
+}}}}
+}}

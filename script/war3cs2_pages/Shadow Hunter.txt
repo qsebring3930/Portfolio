@@ -1,0 +1,57 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Shadow Hunter
+|image=[[File:Shadow Hunter.webp]]
+|category=WC3-Orc
+|max=32
+|level=90
+}}
+|skill1={{SkillInfo
+|name=Healing Wave
+|info=
+Regen HP for Allies
+|trigger=Aura
+|tickrate=7
+|radius=300
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Health|unit=HP|lvl1=3|lvl2=4|lvl3=5|lvl4=6|lvl5=7|lvl6=8|lvl7=9|lvl8=10}}
+}}}}
+|skill2={{SkillInfo
+|name=Hex
+|info=
+Hinder
+|trigger=Attack
+|chance=20
+|buffs=
+<p>
+Speed: -50%<br>
+Attack: -50%
+</p>
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl1=1.5|lvl2=2.0|lvl3=2.5|lvl4=3.0|lvl5=3.5|lvl6=4.0|lvl7=4.5|lvl8=5.0}}
+}}}}
+|skill3={{SkillInfo
+|name=Serpent Ward
+|info=
+Ward: Damages Enemies
+|trigger=Ability1
+|target=Self
+|quantity=6
+|duration=10
+|radius=250
+|cooldown=5.0
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Damage|lvl1=3|lvl2=4|lvl3=5|lvl4=6|lvl5=7|lvl6=8|lvl7=9|lvl8=10}}
+}}}}
+|skill4={{SkillInfo
+|name=Big Bad Voodoo
+|info=
+Become Invincible
+|trigger=Ultimate
+|target=Self
+|cooldown=25.0
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl1=1.4|lvl2=1.7|lvl3=2.0|lvl4=2.3|lvl5=2.6|lvl6=2.9|lvl7=3.2|lvl8=3.5}}
+}}}}
+}}

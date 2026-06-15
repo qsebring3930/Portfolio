@@ -1,0 +1,69 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Queen Of Pain
+|image=[[File:Queen Of Pain.webp]]
+|category=DotA-Magic
+|max=32
+|level=2540
+}}
+|skill1={{SkillInfo
+|name=Shadow Strike
+|info=
+DoT and Slow
+|trigger=Attack
+|damage=5
+|duration=6
+|tickrate=2
+|buffs=
+<p>
+Speed: -33%
+</p>
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Chance|lvl1=3.0%|lvl2=6.0%|lvl3=9.0%|lvl4=12.0%|lvl5=15.0%|lvl6=18.0%|lvl7=21.0%|lvl8=24.0%}}
+}}}}
+|skill2={{SkillInfo
+|name=Blink
+|info=
+Throw Dagger, Press again to teleport to it. Reduce Weapon Damage
+|trigger=Ability1
+|target=Object
+|duration=3
+|force=1.3
+|buffs=
+<p>
+Weapon Damage: -50%
+</p>
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Cooldown|unit=sec.|lvl1=20.0|lvl2=19.0|lvl3=18.0|lvl4=16.0|lvl5=15.0|lvl6=14.0|lvl7=13.0|lvl8=12.0}}
+}}}}
+|skill3={{SkillInfo
+|name=Scream of Pain
+|info=
+Damage and weaken enemies around you
+|trigger=Victim
+|chance=50
+|duration=5
+|radius=300
+|buffs=
+<p>
+Weapon Damage: -33%
+</p>
+|cooldown=5.0
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Damage|lvl1=6|lvl2=8|lvl3=10|lvl4=12|lvl5=14|lvl6=16|lvl7=18|lvl8=20}}
+}}}}
+|skill4={{SkillInfo
+|name=Sonic Wave
+|info=
+Damage and Push enemies away from you
+|trigger=Ultimate
+|target=Cone
+|range=500
+|cone=40
+|force=2
+|cooldown=25.0
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Damage|lvl1=20|lvl2=22|lvl3=24|lvl4=26|lvl5=28|lvl6=30|lvl7=31|lvl8=33}}
+}}}}
+}}

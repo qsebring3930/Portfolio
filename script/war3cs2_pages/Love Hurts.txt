@@ -1,0 +1,83 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Love Hurts
+|image=[[File:Love Hurts.webp]]
+|category=Holiday - Valentine
+|max=35
+|level=265
+|items=
+Ring of Regeneration<br>
+Mask of Death<br>
+Book of Cannibalism<br>
+Sandvich
+|team=1
+}}
+|skill1={{SkillInfo
+|name=Death
+|info=
+Heal Allies
+|trigger=Attack
+|chance=33
+|extra=Heal between 4 and ...
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Health|unit=HP|lvl1=8|lvl2=10|lvl3=12|lvl4=14|lvl5=16}}
+}}}}
+|skill2={{SkillInfo
+|name=Succumb
+|info=
+Steal Health
+|trigger=Attack
+|chance=66
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Steal|lvl1=15.0%|lvl2=17.5%|lvl3=20.0%|lvl4=22.5%|lvl5=25.0%}}
+}}}}
+|skill3={{SkillInfo
+|name=Forbidden
+|info=
+Revive Ally
+|trigger=Kill
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Chance|unit=%|lvl1=7|lvl2=9|lvl3=11|lvl4=13|lvl5=15}}
+}}}}
+|skill4={{SkillInfo
+|name=Hazardous
+|info=
+Knife Steal Health
+|trigger=Attack
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Steal|lvl1=20.0%|lvl2=30.0%|lvl3=40.0%|lvl4=50.0%|lvl5=60.0%}}
+}}}}
+|skill5={{SkillInfo
+|name=Shady
+|info=
+Increase Speed, Stacks
+|trigger=Attack
+|chance=33
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Speed|lvl1=6.0%|lvl2=7.0%|lvl3=8.0%|lvl4=9.0%|lvl5=10.0%}}
+}}}}
+|skill6={{SkillInfo
+|name=Sacrifice
+|info=
+Sacrifice Health to Heal Allies
+|trigger=Ability1
+|target=Allies
+|health=30
+|cooldown=20.0
+|extra=Reduce Healing Power if you sacrifice yourself
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Health|unit=HP|lvl1=20|lvl2=25|lvl3=30|lvl4=35|lvl5=40}}
+}}}}
+|skill7={{SkillInfo
+|name=Angel of Death
+|info=
+Sacrifice Health to Revive Ally
+|trigger=Ultimate
+|target=Random_Ally
+|health=50
+|extra=Reduce Success Chance if you sacrifice yourself
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Cooldown|unit=sec.|lvl1=60.0|lvl2=50.0|lvl3=40.0|lvl4=30.0|lvl5=20.0}}
+}}}}
+}}

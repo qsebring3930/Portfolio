@@ -1,0 +1,78 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Slowpoke
+|image=[[File:Slowpoke.webp]]
+|category=Pokémon - Psychic
+|max=25
+|level=705
+|items=
+Infiltrator<br>
+Blademail
+|team=1
+}}
+|skill1={{SkillInfo
+|name=Slow Reaction
+|info=
+Delay Received Damage
+|trigger=Victim
+|duration=5
+|extra=Extra triggers reduce existing delays by 0.2 sec.
+}}
+|skill2={{SkillInfo
+|name=Oblivious
+|info=
+Minion, Disarm and Disable Immunity
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Immunity|unit=%|lvl1=20|lvl2=40|lvl3=60|lvl4=80|lvl5=100}}
+}}}}
+|skill3={{SkillInfo
+|name=Confusion
+|info=
+Banish, Confuse
+|trigger=Attack
+|chance=20
+|extra=
+<p>
+Banish Duration: 1.0 sec.<br>
+Chance to deal self damage on attack. Damage between 10 and 20
+</p>
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Self Dmg Chance|unit=%|lvl1=4|lvl2=8|lvl3=12|lvl4=16|lvl5=20}}
+|line2={{LevelUpRow|field=Self Dmg Duration|unit=sec.|lvl1=1.0|lvl2=2.0|lvl3=3.0|lvl4=4.0|lvl5=5.0}}
+}}}}
+|skill4={{SkillInfo
+|name=Amnesia
+|info=
+Increase Gun Damage, Lose Slow Reaction Stack
+|trigger=Attack
+|chance=25
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Increase|lvl1=5.0%|lvl2=10.0%|lvl3=15.0%|lvl4=20.0%|lvl5=25.0%}}
+}}}}
+|skill5={{SkillInfo
+|name=Disable
+|info=
+Disarm
+|trigger=Attack
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Chance|lvl1=3.0%|lvl2=6.0%|lvl3=9.0%|lvl4=12.0%|lvl5=15.0%}}
+}}}}
+|skill6={{SkillInfo
+|name=Slack Off
+|info=
+Slow yourself before gaining Health
+|trigger=Ultimate
+|target=Self
+|duration=7
+|buffs=
+<p>
+Speed: -75%
+</p>
+|cooldown=20.0
+|extra=Health doesn't go above 200HP
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Heal|unit=HP|lvl1=60|lvl2=70|lvl3=80|lvl4=90|lvl5=100}}
+}}}}
+}}

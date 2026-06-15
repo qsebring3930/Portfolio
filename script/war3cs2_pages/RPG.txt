@@ -1,0 +1,85 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=RPG
+|image=[[File:RPG.webp]]
+|category=Counter-Strike
+|max=64
+|level=575
+}}
+|skill1={{SkillInfo
+|name=Health
+|info=
+Increase Health
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Health|unit=HP|lvl1=15|lvl2=20|lvl3=25|lvl4=30|lvl5=35|lvl6=40|lvl7=45|lvl8=50}}
+}}}}
+|skill2={{SkillInfo
+|name=Longjump
+|info=
+Increase Longjump
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Longjump|lvl1=16.0%|lvl2=18.0%|lvl3=20.0%|lvl4=22.0%|lvl5=24.0%|lvl6=26.0%|lvl7=28.0%|lvl8=30.0%}}
+}}}}
+|skill3={{SkillInfo
+|name=Vampire
+|info=
+Steal Health
+|trigger=Attack
+|chance=50
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Steal|lvl1=13.0%|lvl2=14.0%|lvl3=15.0%|lvl4=16.0%|lvl5=17.0%|lvl6=18.0%|lvl7=19.0%|lvl8=20.0%}}
+}}}}
+|skill4={{SkillInfo
+|name=Fire Bomb
+|info=
+Grenade Burns
+|trigger=Attack
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl1=1.0|lvl2=2.0|lvl3=3.0|lvl4=4.0|lvl5=5.0|lvl6=6.0|lvl7=7.0|lvl8=8.0}}
+}}}}
+|skill5={{SkillInfo
+|name=Ice Dagger
+|info=
+Knife Hinders
+|trigger=Attack
+|buffs=
+<p>
+Speed: -30%<br>
+Fire Rate: -30%
+</p>
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl1=0.5|lvl2=1.0|lvl3=1.5|lvl4=2.0|lvl5=2.5|lvl6=3.0|lvl7=3.5|lvl8=4.0}}
+}}}}
+|skill6={{SkillInfo
+|name=Reincarnation
+|info=
+Respawn with random health
+|trigger=Death
+|chance=33
+|extra=Reduced HP between 0 and ...
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Health|unit=HP|lvl1=35|lvl2=30|lvl3=25|lvl4=20|lvl5=15|lvl6=10|lvl7=5|lvl8=0}}
+}}}}
+|skill7={{SkillInfo
+|name=Stealth
+|info=
+Decrease Visibility
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Visibility|lvl1=20.0%|lvl2=23.0%|lvl3=26.0%|lvl4=29.0%|lvl5=32.0%|lvl6=35.0%|lvl7=38.0%|lvl8=41.0%}}
+}}}}
+|skill8={{SkillInfo
+|name=Impulse
+|info=
+Increase Speed, Stacks
+|trigger=Victim
+|chance=75
+|tickrate=1.5
+|extra=Max Speed is 30%
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Speed|lvl1=1.0%|lvl2=2.0%|lvl3=3.0%|lvl4=4.0%|lvl5=5.0%|lvl6=6.0%|lvl7=7.0%|lvl8=8.0%}}
+}}}}
+}}

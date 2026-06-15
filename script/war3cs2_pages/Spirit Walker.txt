@@ -1,0 +1,60 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Spirit Walker
+|image=[[File:Spirit Walker.webp]]
+|category=WC3-Orc
+|max=40
+|level=90
+|weapons=
+MAC-10
+|restricted=All
+}}
+|skill1={{SkillInfo
+|name=Spirit Link
+|info=
+Reduce Damage, Spread to Allies
+|trigger=Victim
+|chance=25
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Radius|lvl1=160.0|lvl2=180.0|lvl3=200.0|lvl4=220.0|lvl5=240.0|lvl6=260.0|lvl7=280.0|lvl8=300.0}}
+}}}}
+|skill2={{SkillInfo
+|name=Disenchant
+|info=
+Dispel and Increase Weapon Damage, Doubled if Summon.
+|trigger=Attack
+|damage=25
+|duration=6
+|extra=Double Damage on Summons
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Chance|lvl1=12.0%|lvl2=15.0%|lvl3=18.0%|lvl4=21.0%|lvl5=24.0%|lvl6=27.0%|lvl7=30.0%|lvl8=33.0%}}
+}}}}
+|skill3={{SkillInfo
+|name=Ancestral Spirit
+|info=
+Revive Ally
+|trigger=Ability1
+|target=Random_Ally
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Cooldown|unit=sec.|lvl1=40.0|lvl2=38.0|lvl3=36.0|lvl4=34.0|lvl5=32.0|lvl6=30.0|lvl7=28.0|lvl8=26.0}}
+}}}}
+|skill4={{SkillInfo
+|name=Resistant Skin
+|info=
+Skill Immunity
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Chance|unit=%|lvl1=10|lvl2=20|lvl3=30|lvl4=40|lvl5=50|lvl6=60|lvl7=70|lvl8=80}}
+}}}}
+|skill5={{SkillInfo
+|name=Ethereal Form
+|info=
+Become Invincible, Disabled
+|trigger=Ultimate
+|target=Self
+|duration=6
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Cooldown|unit=sec.|lvl1=26.0|lvl2=24.0|lvl3=22.0|lvl4=20.0|lvl5=18.0|lvl6=16.0|lvl7=14.0|lvl8=12.0}}
+}}}}
+}}

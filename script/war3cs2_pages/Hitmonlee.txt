@@ -1,0 +1,92 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Hitmonlee
+|image=[[File:Hitmonlee.webp]]
+|category=Pokémon - Fighting
+|max=25
+|level=735
+|weapons=
+Sawed-Off<br>
+Nova<br>
+MAG-7<br>
+Glock-18<br>
+P2000<br>
+USP-S<br>
+P250<br>
+Five-Seven<br>
+Desert Eagle<br>
+Tec-9<br>
+CZ75-Auto<br>
+Knife
+|restricted=All
+|passive=
+<p>
+High Jump: +60%
+</p>
+}}
+|skill1={{SkillInfo
+|name=Limber
+|info=
+Increase Health, Speed
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Health|unit=HP|lvl1=4|lvl2=8|lvl3=12|lvl4=16|lvl5=20}}
+|line2={{LevelUpRow|field=Speed|lvl1=6.0%|lvl2=12.0%|lvl3=18.0%|lvl4=24.0%|lvl5=30.0%}}
+}}}}
+|skill2={{SkillInfo
+|name=Body Slam
+|info=
+Drop Down, Damage, Bash and Slow if you land on an enemy
+|trigger=Ability1
+|target=Self
+|extra=
+<p>
+Bash: Duration: 0.5 sec.<br>
+Slow: -50% - Duration: 3.0 sec.
+</p>
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Damage|lvl1=10|lvl2=15|lvl3=20|lvl4=25|lvl5=30}}
+|line2={{LevelUpRow|field=Cooldown|unit=sec.|lvl1=15.0|lvl2=12.0|lvl3=9.0|lvl4=6.0|lvl5=3.0}}
+}}}}
+|skill3={{SkillInfo
+|name=Throat Chop
+|info=
+Empty Clip
+|trigger=Ability2
+|target=AoE_Self
+|cooldown=30.0
+|extra=Target is the nearest enemy
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Radius|lvl1=300.0|lvl2=350.0|lvl3=400.0|lvl4=450.0|lvl5=500.0}}
+}}}}
+|skill4={{SkillInfo
+|name=Work Up
+|info=
+<p>
+Attack: Increase Dealt Weapon Damage while in the Air<br>
+Victim: Evade Weapon Damage while in the Air
+</p>
+|trigger=Special
+|damage=+20.0%
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Attack Chance|lvl1=8.0%|lvl2=16.0%|lvl3=24.0%|lvl4=32.0%|lvl5=40.0%}}
+|line2={{LevelUpRow|field=Defence Chance|lvl1=4.0%|lvl2=8.0%|lvl3=12.0%|lvl4=16.0%|lvl5=20.0%}}
+}}}}
+|skill5={{SkillInfo
+|name=Double Kick
+|info=
+Your Next Attack will Bash and Drug with delays and deal extra damage
+|trigger=Ultimate
+|target=Self
+|duration=2
+|tickrate=1
+|extra=
+<p>
+Bash: Duration: 0.5 sec. - Damage: 15%<br>
+Drug: Duration: 1.5 sec. - Damage: 15%
+</p>
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Cooldown|unit=sec.|lvl1=20.0|lvl2=18.0|lvl3=16.0|lvl4=14.0|lvl5=12.0}}
+}}}}
+}}

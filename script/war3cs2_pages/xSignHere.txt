@@ -1,0 +1,75 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=xSignHere
+|image=[[File:xSignHere.webp]]
+|category=Player
+|max=30
+|level=925
+}}
+|skill1={{SkillInfo
+|name=Host Advantage
+|info=
+Evade Weapon Damage, Become Invisible
+|trigger=Victim
+|duration=1
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Chance|lvl1=4.0%|lvl2=8.0%|lvl3=12.0%|lvl4=16.0%|lvl5=20.0%}}
+}}}}
+|skill2={{SkillInfo
+|name=Compiling
+|info=
+Regen Health, Regen Clip
+|trigger=Passive
+|tickrate=2
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Health|unit=HP|lvl1=1|lvl2=2|lvl3=3|lvl4=4|lvl5=5}}
+|line2={{LevelUpRow|field=Quantity|lvl1=1|lvl2=2|lvl3=3|lvl4=4|lvl5=5}}
+}}}}
+|skill3={{SkillInfo
+|name=Broken Sigs
+|info=
+Bash
+|trigger=Attack
+|duration=0.3
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Chance|lvl1=4.0%|lvl2=8.0%|lvl3=12.0%|lvl4=16.0%|lvl5=20.0%}}
+}}}}
+|skill4={{SkillInfo
+|name=Nav Tools
+|info=
+Track Enemies
+|trigger=Aura
+|radius=1000
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Tickrate|unit=sec.|lvl1=10.0|lvl2=9.0|lvl3=8.0|lvl4=7.0|lvl5=6.0}}
+}}}}
+|skill5={{SkillInfo
+|name=Particle Effects
+|info=
+Damage and Slow Area
+|trigger=Ability1
+|target=Location
+|duration=6
+|range=1000
+|radius=300
+|buffs=
+<p>
+Speed: -30%
+</p>
+|cooldown=20.0
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Damage|lvl1=3|lvl2=4|lvl3=5|lvl4=6|lvl5=7}}
+}}}}
+|skill6={{SkillInfo
+|name=Go for a Smoke
+|info=
+Teleport to where you aim, Become Invisible
+|trigger=Ultimate
+|target=Location
+|duration=2
+|cooldown=25.0
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Range|lvl1=400.0|lvl2=475.0|lvl3=550.0|lvl4=625.0|lvl5=700.0}}
+}}}}
+}}

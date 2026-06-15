@@ -1,0 +1,91 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Prinny
+|image=[[File:Prinny.webp]]
+|category=Disgaea
+|max=36
+|level=2860
+|weapons=
+Knife
+|restricted=All
+|items=
+Sock of Feathers<br>
+Infiltrator
+|passive=
+<p>
+Health: +100HP<br>
+Speed: +10%<br>
+Fire Rate: +50%<br>
+Gravity: -20%<br>
+Fall Damage: -80%
+</p>
+}}
+|skill1={{SkillInfo
+|name=Prinny Barrage
+|info=
+Left Click to Throw Garbage
+|trigger=Special
+|target=Object
+|extra=Force is between 1.0 and 2.0
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Damage|lvl0=2|lvl1=5|lvl2=6|lvl3=7|lvl4=8|lvl5=9|lvl6=10}}
+}}}}
+|skill2={{SkillInfo
+|name=Prinny Dance
+|info=
+Chance to Bash, Silence and DoT
+|trigger=Attack
+|extra=Each effect has 30% chance to proc
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Chance|lvl0=10.0%|lvl1=15.0%|lvl2=18.0%|lvl3=21.0%|lvl4=24.0%|lvl5=27.0%|lvl6=30.0%}}
+}}}}
+|skill3={{SkillInfo
+|name=Prinny Bomb
+|info=
+Damage enemies around you
+|trigger=Victim
+|damage=20
+|radius=200
+|cooldown=5.0
+|extra=You lose 10 health yourself
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Chance|lvl0=4.0%|lvl1=12.0%|lvl2=14.0%|lvl3=18.0%|lvl4=22.0%|lvl5=26.0%|lvl6=30.0%}}
+}}}}
+|skill4={{SkillInfo
+|name=Pringer Beam
+|info=
+Damage and Knockback enemies
+|trigger=Ability1
+|target=Location
+|duration=2
+|range=600
+|radius=300
+|force=1.5
+|cooldown=20.0
+|extra=Charges for 2 sec.
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Damage|lvl0=5|lvl1=10|lvl2=12|lvl3=14|lvl4=16|lvl5=18|lvl6=20}}
+}}}}
+|skill5={{SkillInfo
+|name=Prinny Lover
+|info=
+Increase Explosive Nature Damage
+|trigger=Special
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Multiplier|lvl0=50.0%|lvl1=60.0%|lvl2=62.0%|lvl3=64.0%|lvl4=66.0%|lvl5=68.0%|lvl6=70.0%}}
+}}}}
+|skill6={{SkillInfo
+|name=Explosive Nature
+|info=
+Push yourself forward and explode on landing
+|trigger=Ultimate
+|target=Self
+|radius=400
+|force=2
+|cooldown=10.0
+|extra=Damage is based on your health and Prinny Lover. Explosion is weaker if you die before landing
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Range|lvl0=200.0|lvl1=260.0|lvl2=280.0|lvl3=300.0|lvl4=320.0|lvl5=340.0|lvl6=360.0}}
+}}}}
+}}

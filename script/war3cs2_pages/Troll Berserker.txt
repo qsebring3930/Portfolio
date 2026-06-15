@@ -1,0 +1,63 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Troll Berserker
+|image=[[File:Troll Berserker.webp]]
+|category=WC3-Orc
+|max=32
+|level=90
+|weapons=
+Knife
+|restricted=All
+|passive=
+<p>
+Alt Fire Rate: -25%
+</p>
+}}
+|skill1={{SkillInfo
+|name=Berserker
+|info=
+Increase Health and Speed.
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=8|zero=1
+|line1={{LevelUpRow|field=Health|unit=HP|lvl0=5|lvl1=10|lvl2=20|lvl3=30|lvl4=40|lvl5=50|lvl6=60|lvl7=70|lvl8=80}}
+|line2={{LevelUpRow|field=Speed|lvl0=1.0%|lvl1=3.0%|lvl2=6.0%|lvl3=9.0%|lvl4=12.0%|lvl5=15.0%|lvl6=18.0%|lvl7=21.0%|lvl8=25.0%}}
+}}}}
+|skill2={{SkillInfo
+|name=Troll Regeneration
+|info=
+Regen HP
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=8|zero=1
+|line1={{LevelUpRow|field=Heal|unit=HP|lvl0=1|lvl1=1|lvl2=2|lvl3=2|lvl4=3|lvl5=3|lvl6=4|lvl7=4|lvl8=5}}
+|line2={{LevelUpRow|field=Tickrate|unit=sec.|lvl0=5.0|lvl1=3.0|lvl2=3.0|lvl3=2.5|lvl4=2.5|lvl5=2.0|lvl6=2.0|lvl7=1.5|lvl8=1.5}}
+}}}}
+|skill3={{SkillInfo
+|name=Envenomed Spear
+|info=
+Left Click to Throw Spear, DoT
+|trigger=Special
+|target=Object
+|damage=4
+|duration=5
+|force=2.2
+|extra=Damage between ... and ...
+|levelup={{LevelUpInfo|levels=8|zero=1
+|line1={{LevelUpRow|field=Min Damage|lvl0=3|lvl1=6|lvl2=7|lvl3=8|lvl4=9|lvl5=10|lvl6=11|lvl7=12|lvl8=13}}
+|line2={{LevelUpRow|field=Max Damage|lvl0=6|lvl1=13|lvl2=14|lvl3=15|lvl4=16|lvl5=17|lvl6=18|lvl7=19|lvl8=20}}
+}}}}
+|skill4={{SkillInfo
+|name=Liquid Fire
+|info=
+Right Click to Throw Bottle, Explodes on Impact, Ward: Damage And Burn
+|trigger=Special
+|target=Object
+|damage=5
+|expldmg=20
+|duration=6
+|tickrate=0.5
+|force=1
+|levelup={{LevelUpInfo|levels=8|zero=1
+|line1={{LevelUpRow|field=Radius|lvl0=50.0|lvl1=80.0|lvl2=90.0|lvl3=100.0|lvl4=110.0|lvl5=120.0|lvl6=130.0|lvl7=140.0|lvl8=150.0}}
+}}}}
+}}

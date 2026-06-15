@@ -1,0 +1,86 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Shaco
+|image=[[File:Shaco.webp]]
+|category=LoL-Slayer
+|max=30
+|level=4195
+|weapons=
+Knife
+|restricted=All
+|passive=
+<p>
+Decrease Non-Backstab Damage: -30% +1.0% per Level
+</p>
+}}
+|skill1={{SkillInfo
+|name=Backstab
+|info=
+Increase Backstab Damage. Also procs on Two-Shiv Poison
+|trigger=Attack
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Increase|lvl0=10.0%|lvl1=25.0%|lvl2=30.0%|lvl3=35.0%|lvl4=40.0%|lvl5=45.0%|lvl6=50.0%}}
+}}}}
+|skill2={{SkillInfo
+|name=Deceive
+|info=
+Teleport and Become Invisible
+|trigger=Ability1
+|target=Location
+|range=600
+|extra=Cancels when you attack, Your Attack under this effect will count as a Backstab
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl0=1.6|lvl1=2.0|lvl2=2.4|lvl3=2.8|lvl4=3.2|lvl5=3.6|lvl6=4.0}}
+|line2={{LevelUpRow|field=Cooldown|unit=sec.|lvl0=18.0|lvl1=17.0|lvl2=16.0|lvl3=15.0|lvl4=14.0|lvl5=13.0|lvl6=12.0}}
+}}}}
+|skill3={{SkillInfo
+|name=Jack in the Box
+|info=
+Trap: Slow and Spin. Create Ward that Damages Enemies
+|trigger=Ability2
+|target=Location
+|health=75
+|duration=10
+|range=500
+|buffs=
+<p>
+Speed: -20%
+</p>
+|cooldown=15.0
+|extra=Trigger Radius is 75% of radius. Increase damage by 3 if only one target in radius. Ward remains active for 5 sec.
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Damage|lvl0=1|lvl1=2|lvl2=3|lvl3=4|lvl4=5|lvl5=6|lvl6=7}}
+|line2={{LevelUpRow|field=Radius|lvl0=200.0|lvl1=250.0|lvl2=260.0|lvl3=270.0|lvl4=280.0|lvl5=290.0|lvl6=300.0}}
+}}}}
+|skill4={{SkillInfo
+|name=Two-Shiv Poison
+|info=
+Left Click to Throw a Shiv. Impact Damages and Slows. Regular Attack also Slows
+|trigger=Special
+|target=Object
+|duration=3
+|force=2
+|cooldown=8.0
+|extra=Increase Shiv damage by 150% if enemy is below 30% Total Health
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Damage|lvl0=12|lvl1=15|lvl2=18|lvl3=21|lvl4=24|lvl5=27|lvl6=30}}
+|line2={{LevelUpRow|field=Slow|lvl0=4.0%|lvl1=10.0%|lvl2=14.0%|lvl3=18.0%|lvl4=22.0%|lvl5=26.0%|lvl6=30.0%}}
+}}}}
+|skill5={{SkillInfo
+|name=Hallucinate
+|info=
+Totem: Attack Enemies, Press Again to Move. Spawns 3 weaker 'Jack in the Box' on Death
+|trigger=Ultimate
+|target=Location
+|duration=20
+|range=300
+|radius=200
+|cooldown=20.0
+|extra=Gain Hidden Buff while Clone is active
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Clone Health|unit=HP|lvl1=100|lvl2=110|lvl3=120|lvl4=130|lvl5=140|lvl6=150}}
+|line2={{LevelUpRow|field=Clone Damage|lvl1=10|lvl2=12|lvl3=14|lvl4=16|lvl5=18|lvl6=20}}
+|line3={{LevelUpRow|field=Box Health|unit=HP|lvl1=25|lvl2=30|lvl3=35|lvl4=40|lvl5=45|lvl6=50}}
+}}}}
+}}

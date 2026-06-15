@@ -1,0 +1,68 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Pigeonius Maximus
+|image=[[File:Pigeonius Maximus.webp]]
+|category=Pet
+|max=35
+|level=1810
+|weapons=
+Knife
+|restricted=All
+|team=1
+|passive=
+<p>
+Health: -60HP<br>
+Flying: Always<br>
+Alt Weapon Fire: disabled
+</p>
+}}
+|skill1={{SkillInfo
+|name=Coo-ordinated Chaos
+|info=
+Evade Weapon Damage and Decrease Magic Damage. Increases further with ally pigeons
+|trigger=Victim
+|quantity=5
+|levelup={{LevelUpInfo|levels=7|zero=1
+|line1={{LevelUpRow|field=Evade Chance|lvl0=1.0%|lvl1=2.0%|lvl2=3.0%|lvl3=4.0%|lvl4=5.0%|lvl5=6.0%|lvl6=7.0%|lvl7=8.0%}}
+|line2={{LevelUpRow|field=Decrease|lvl0=1.0%|lvl1=2.0%|lvl2=3.0%|lvl3=4.0%|lvl4=5.0%|lvl5=6.0%|lvl6=7.0%|lvl7=8.0%}}
+}}}}
+|skill2={{SkillInfo
+|name=Heavenly Payload
+|info=
+Drop Active Grenade
+|trigger=Ability1
+|target=Self
+|levelup={{LevelUpInfo|levels=7|zero=1
+|line1={{LevelUpRow|field=Cooldown|unit=sec.|lvl0=22.0|lvl1=20.0|lvl2=18.0|lvl3=16.0|lvl4=14.0|lvl5=12.0|lvl6=10.0|lvl7=8.0}}
+}}}}
+|skill3={{SkillInfo
+|name=Small Pecker
+|info=
+Increase Fire Rate
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=7|zero=1
+|line1={{LevelUpRow|field=Fire Rate|lvl0=10.0%|lvl1=20.0%|lvl2=30.0%|lvl3=40.0%|lvl4=50.0%|lvl5=60.0%|lvl6=70.0%|lvl7=80.0%}}
+}}}}
+|skill4={{SkillInfo
+|name=Got Bread?
+|info=
+Lunge Forward. Pick up Bread to heal and gain Charges
+|trigger=Ability2
+|target=Location
+|quantity=2
+|range=1000
+|cooldown=5.0
+|levelup={{LevelUpInfo|levels=7|zero=1
+|line1={{LevelUpRow|field=Heal|unit=HP|lvl0=3|lvl1=4|lvl2=5|lvl3=6|lvl4=7|lvl5=8|lvl6=9|lvl7=10}}
+}}}}
+|skill5={{SkillInfo
+|name=Eggsecution
+|info=
+Spawn Pigeons in grenade
+|trigger=Special
+|extra=10% Chance to spawn another Pigeonius
+|levelup={{LevelUpInfo|levels=7
+|line1={{LevelUpRow|field=Chance|unit=%|lvl1=6|lvl2=10|lvl3=14|lvl4=18|lvl5=22|lvl6=26|lvl7=30}}
+}}}}
+}}

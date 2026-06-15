@@ -1,0 +1,59 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Zealot
+|image=[[File:Zealot.webp]]
+|category=SC-Protoss
+|max=24
+|level=1395
+|weapons=
+Knife
+|restricted=All
+}}
+|skill1={{SkillInfo
+|name=Furinax Power Suit
+|info=
+<p>
+Passive: Decrease HP<br>
+Victim: Evade Weapon Damage
+</p>
+|trigger=Special
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Health|unit=HP|lvl0=-8|lvl1=-10|lvl2=-12|lvl3=-14|lvl4=-16|lvl5=-18|lvl6=-20}}
+|line2={{LevelUpRow|field=Chance|lvl0=5.0%|lvl1=10.0%|lvl2=14.0%|lvl3=18.0%|lvl4=22.0%|lvl5=26.0%|lvl6=30.0%}}
+}}}}
+|skill2={{SkillInfo
+|name=Psi-Blades
+|info=
+Convert Knife Damage to Magic Damage. Increase Magic Damage
+|trigger=Attack
+|extra=Converts 50%. Up To 25 Damage
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Increase|lvl0=10.0%|lvl1=20.0%|lvl2=30.0%|lvl3=40.0%|lvl4=50.0%|lvl5=60.0%|lvl6=70.0%}}
+}}}}
+|skill3={{SkillInfo
+|name=Plasma Shields
+|info=
+Absorb Damage, While Active Increases 'Furinax Power Suit' Evade Chance
+|trigger=Victim
+|extra=Increase Evade Chance by 30% while active. Regen Shield after 3.0 sec. Evade Damages the shield for 10%.
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Health|unit=HP|lvl0=15|lvl1=25|lvl2=30|lvl3=35|lvl4=40|lvl5=45|lvl6=50}}
+|line2={{LevelUpRow|field=Heal|unit=HP|lvl0=1|lvl1=3|lvl2=4|lvl3=5|lvl4=6|lvl5=7|lvl6=8}}
+}}}}
+|skill4={{SkillInfo
+|name=Charge
+|info=
+<p>
+Passive: Increase Speed<br>
+Ultimate: Increase Speed Further
+</p>
+|trigger=Ultimate
+|target=Self
+|duration=4
+|cooldown=11.0
+|extra=Active Increases Passive Speed 3 times
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Speed|lvl0=5.0%|lvl1=10.0%|lvl2=14.0%|lvl3=18.0%|lvl4=22.0%|lvl5=26.0%|lvl6=30.0%}}
+}}}}
+}}

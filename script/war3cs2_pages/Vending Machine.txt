@@ -1,0 +1,98 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Vending Machine
+|image=[[File:Vending Machine.webp]]
+|category=Object
+|max=30
+|level=535
+|weapons=
+Knife
+|restricted=All
+|team=2
+|passive=
+<p>
+Fire Rate: -25%
+</p>
+}}
+|skill1={{SkillInfo
+|name=Soda Can
+|info=
+Left Click to Throw a Soda Can, Effect based on type
+|trigger=Special
+|damage=5
+|duration=6
+|extra=Soda Cans that miss will stay for a while
+|levelup={{LevelUpInfo|levels=5|zero=1
+|line1={{LevelUpRow|field=Force|lvl0=1.0|lvl1=1.2|lvl2=1.4|lvl3=1.6|lvl4=1.8|lvl5=2.0}}
+}}}}
+|skill2={{SkillInfo
+|name=Soda Type
+|info=
+<p>
+Increase Effects of Soda<br>
+FrostBite: Bash<br>
+Inferno: Burn<br>
+Berry Blast: Damage<br>
+Nightshade: DoT
+</p>
+|trigger=Special
+|extra=Berry Blast Damage between 10 and ...; Nightshade Damage is 5
+|levelup={{LevelUpInfo|levels=5|zero=1
+|line1={{LevelUpRow|field=Bash Duration|unit=sec.|lvl0=0.2|lvl1=0.4|lvl2=0.6|lvl3=0.7|lvl4=0.9|lvl5=1.0}}
+|line2={{LevelUpRow|field=Burn Duration|unit=sec.|lvl0=0.5|lvl1=1.0|lvl2=1.5|lvl3=2.0|lvl4=2.5|lvl5=3.0}}
+|line3={{LevelUpRow|field=Berry Blast Damage|lvl0=10|lvl1=12|lvl2=14|lvl3=16|lvl4=18|lvl5=20}}
+|line4={{LevelUpRow|field=Nightshade Duration|unit=sec.|lvl0=0.5|lvl1=1.0|lvl2=1.5|lvl3=2.0|lvl4=2.5|lvl5=3.0}}
+}}}}
+|skill3={{SkillInfo
+|name=Made of Metal
+|info=
+Increase Health, Decrease Speed
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=5|zero=1
+|line1={{LevelUpRow|field=Health|unit=HP|lvl0=50|lvl1=100|lvl2=150|lvl3=200|lvl4=250|lvl5=300}}
+|line2={{LevelUpRow|field=Speed|lvl0=0.0%|lvl1=8.0%|lvl2=16.0%|lvl3=24.0%|lvl4=32.0%|lvl5=40.0%}}
+}}}}
+|skill4={{SkillInfo
+|name=Defect
+|info=
+<p>
+Throw a Soda Bottle.<br>
+Explodes on Impact and creates Ward: Slow
+</p>
+|trigger=Ability1
+|target=Object
+|expldmg=20
+|duration=5
+|radius=250
+|force=1.2
+|cooldown=15.0
+|levelup={{LevelUpInfo|levels=5|zero=1
+|line1={{LevelUpRow|field=Speed|lvl0=10.0%|lvl1=18.0%|lvl2=26.0%|lvl3=34.0%|lvl4=42.0%|lvl5=50.0%}}
+}}}}
+|skill5={{SkillInfo
+|name=Recycled Cans
+|info=
+<p>
+Relaunch Soda Cans that missed<br>
+Aim for enemies who are close by
+</p>
+|trigger=Ability2
+|target=Self
+|radius=150
+|levelup={{LevelUpInfo|levels=5|zero=1
+|line1={{LevelUpRow|field=Cooldown|unit=sec.|lvl0=15.0|lvl1=14.0|lvl2=13.0|lvl3=12.0|lvl4=11.0|lvl5=10.0}}
+}}}}
+|skill6={{SkillInfo
+|name=Snack Machine
+|info=
+Spawn Vending Machine Decoy
+|trigger=Ultimate
+|target=Location
+|duration=10
+|range=600
+|cooldown=15.0
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Health|unit=HP|lvl1=100|lvl2=125|lvl3=150|lvl4=175|lvl5=200}}
+}}}}
+}}

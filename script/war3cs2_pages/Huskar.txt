@@ -1,0 +1,58 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Huskar
+|image=[[File:Huskar.webp]]
+|category=DotA-Strength
+|max=32
+|level=2180
+}}
+|skill1={{SkillInfo
+|name=Inner Fire
+|info=
+Sacrifice Health to Damage, Hex and Silence those around you
+|trigger=Ability1
+|target=AoE_Self
+|duration=5
+|radius=200
+|cooldown=15.0
+|extra=Deal 15HP Damage to yourself
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Damage|lvl1=16|lvl2=18|lvl3=20|lvl4=22|lvl5=24|lvl6=26|lvl7=28|lvl8=30}}
+}}}}
+|skill2={{SkillInfo
+|name=Burning Spear
+|info=
+Toggle Sacrifice health for Burn, Increased Weapon Damage
+|trigger=Ability2
+|target=Toggle
+|duration=2.5
+|cooldown=5.0
+|extra=Each hit deals 4% of Max HP to yourself
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Damage|lvl1=1|lvl2=2|lvl3=3|lvl4=4|lvl5=5|lvl6=6|lvl7=7|lvl8=8}}
+}}}}
+|skill3={{SkillInfo
+|name=Berserker's Blood
+|info=
+Regen HP, Increase Fire Rate and Reduce Magic Damage if weaker
+|trigger=Passive
+|extra=Every 15% health lost increases the effect
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Fire Rate|lvl1=1.5%|lvl2=2.0%|lvl3=2.5%|lvl4=3.0%|lvl5=3.5%|lvl6=4.0%|lvl7=4.5%|lvl8=5.0%}}
+|line2={{LevelUpRow|field=Reduce|lvl1=5.0%|lvl2=6.0%|lvl3=7.0%|lvl4=8.0%|lvl5=9.0%|lvl6=10.0%|lvl7=11.0%|lvl8=12.0%}}
+}}}}
+|skill4={{SkillInfo
+|name=Life Break
+|info=
+Sacrifice Health for Damage
+|trigger=Ultimate
+|target=Target_Enemy
+|range=600
+|aim=18
+|cooldown=25.0
+|extra=Damage based on Max Health to both players
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Damage|lvl1=12.0%|lvl2=16.0%|lvl3=20.0%|lvl4=24.0%|lvl5=28.0%|lvl6=32.0%|lvl7=36.0%|lvl8=40.0%}}
+}}}}
+}}

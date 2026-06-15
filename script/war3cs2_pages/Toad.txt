@@ -1,0 +1,110 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Toad
+|image=[[File:Toad.webp]]
+|category=Player
+|max=30
+|level=925
+|weapons=
+M4A1-S<br>
+Nova<br>
+Five-Seven<br>
+CZ75-Auto<br>
+Knife<br>
+Smoke Grenade<br>
+Grenade
+|restricted=All
+}}
+|skill1={{SkillInfo
+|name=BadgerToad
+|info=
+<p>
+Change Form<br>
+Gain Weapons based on form<br>
+Badger: M4A1S, Five Seven, Knife, Smoke<br>
+Toad: Nova, CZ75, Knife, Grenade
+</p>
+|trigger=Ability1
+|target=Self
+|cooldown=10.0
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=M4A1 Clip|lvl1=2|lvl2=4|lvl3=6|lvl4=8|lvl5=10}}
+|line2={{LevelUpRow|field=Five Seven Clip|lvl1=4|lvl2=8|lvl3=12|lvl4=16|lvl5=20}}
+|line3={{LevelUpRow|field=Nova Clip|lvl1=1|lvl2=2|lvl3=3|lvl4=4|lvl5=5}}
+|line4={{LevelUpRow|field=CZ75 Clip|lvl1=3|lvl2=6|lvl3=9|lvl4=12|lvl5=15}}
+}}}}
+|skill2={{SkillInfo
+|name=BetterToad
+|info=
+<p>
+Different Weapon Damage Increase based on weapon<br>
+M4A1: Increase Damage based on fullness clip<br>
+Nova: Increase Damage by distance<br>
+Five Seven: Chance to deal Extra Damage<br>
+CZ75: Increase Damage on consecutive hits
+</p>
+|trigger=Attack
+|extra=
+<p>
+M4A1: Bonus Damage - bullets missing<br>
+Five Seven: +25%<br>
+Nova: Increase added every 500 units<br>
+CZ75: Expires after 3 seconds without hitting or missing
+</p>
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=M4A1 - Bonus Damage|lvl1=2|lvl2=4|lvl3=6|lvl4=8|lvl5=10}}
+|line2={{LevelUpRow|field=Nova - Range Damage|lvl1=10.0%|lvl2=15.0%|lvl3=20.0%|lvl4=25.0%|lvl5=30.0%}}
+|line3={{LevelUpRow|field=FS - Chance|lvl1=10.0%|lvl2=20.0%|lvl3=30.0%|lvl4=40.0%|lvl5=50.0%}}
+|line4={{LevelUpRow|field=CZ75 - Damage|lvl1=1|lvl2=2|lvl3=3|lvl4=4|lvl5=5}}
+}}}}
+|skill3={{SkillInfo
+|name=Definitely not Undead
+|info=
+<p>
+Passive: Increase Speed on Spawn<br>
+Attack: Steal Health
+</p>
+|trigger=Special
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Steal|lvl1=9.5%|lvl2=11.0%|lvl3=12.5%|lvl4=14.0%|lvl5=15.5%}}
+|line2={{LevelUpRow|field=Speed|lvl1=10.0%|lvl2=15.0%|lvl3=20.0%|lvl4=25.0%|lvl5=30.0%}}
+}}}}
+|skill4={{SkillInfo
+|name=Luna Badger
+|info=
+Heal Back Spell Damage based on Luna Storage
+|trigger=Victim
+|extra=Gain Storage with 'Definitely not Undead' and 'Fucking Stay Dead'
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Steal Conversion|lvl1=20.0%|lvl2=40.0%|lvl3=60.0%|lvl4=80.0%|lvl5=100.0%}}
+}}}}
+|skill5={{SkillInfo
+|name=Fucking Stay Dead
+|info=
+Penalize enemies you kill who are revived
+|trigger=Kill
+|duration=6
+|buffs=
+<p>
+Speed: -50%<br>
+Fire Rate: -50%<br>
+Highlight: yes<br>
+True Damage: yes
+</p>
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Decrease Damage|lvl1=10.0%|lvl2=20.0%|lvl3=30.0%|lvl4=40.0%|lvl5=50.0%}}
+|line2={{LevelUpRow|field=Luna Charge|lvl1=5|lvl2=10|lvl3=15|lvl4=20|lvl5=25}}
+}}}}
+|skill6={{SkillInfo
+|name=WingedToad
+|info=
+Fly, No fall Damage
+|trigger=Ultimate
+|target=Self
+|cooldown=14.0
+|extra=Press again to end early
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl1=2.0|lvl2=3.0|lvl3=4.0|lvl4=5.0|lvl5=6.0}}
+}}}}
+}}

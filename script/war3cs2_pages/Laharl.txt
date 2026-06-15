@@ -1,0 +1,73 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Laharl
+|image=[[File:Laharl.webp]]
+|category=Disgaea
+|max=36
+|level=2860
+}}
+|skill1={{SkillInfo
+|name=Blazing Knuckles
+|info=
+Damage and Knockback enemies
+|trigger=Ability1
+|target=AoE_Self
+|radius=250
+|force=2
+|cooldown=15.0
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Damage|lvl1=10|lvl2=12|lvl3=14|lvl4=16|lvl5=18|lvl6=20}}
+}}}}
+|skill2={{SkillInfo
+|name=Overlords Wrath
+|info=
+Damage Area
+|trigger=Ability2
+|target=Location
+|range=600
+|radius=250
+|cooldown=20.0
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Damage|lvl1=20|lvl2=22|lvl3=24|lvl4=26|lvl5=28|lvl6=30}}
+}}}}
+|skill3={{SkillInfo
+|name=Furious Rage
+|info=
+Increase Weapon Damage when receiving Weapon Damage
+|trigger=Special
+|extra=Cap is 50%
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Increase|lvl1=2.0%|lvl2=4.0%|lvl3=6.0%|lvl4=8.0%|lvl5=10.0%|lvl6=12.0%}}
+}}}}
+|skill4={{SkillInfo
+|name=Suppression Stare
+|info=
+Decrease Weapon Damage from wounded enemies
+|trigger=Victim
+|extra=Procs once the attacker has less than half health
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Reduce|lvl1=20.0%|lvl2=23.0%|lvl3=26.0%|lvl4=29.0%|lvl5=32.0%|lvl6=35.0%}}
+}}}}
+|skill5={{SkillInfo
+|name=Tyrant Soul
+|info=
+Increase Magic Damage
+|trigger=Attack
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Increase|lvl1=5.0%|lvl2=10.0%|lvl3=15.0%|lvl4=20.0%|lvl5=25.0%|lvl6=30.0%}}
+}}}}
+|skill6={{SkillInfo
+|name=Meteor Impact
+|info=
+Fly on a meteor before crashing down and damaging those around you
+|trigger=Ultimate
+|target=Self
+|duration=5
+|cooldown=30.0
+|extra=Press again to end early
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Impact Damage|lvl1=30|lvl2=34|lvl3=38|lvl4=42|lvl5=46|lvl6=50}}
+|line2={{LevelUpRow|field=Radius|lvl1=200.0|lvl2=280.0|lvl3=360.0|lvl4=440.0|lvl5=520.0|lvl6=600.0}}
+}}}}
+}}

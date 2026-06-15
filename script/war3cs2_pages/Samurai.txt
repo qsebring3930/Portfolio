@@ -1,0 +1,73 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Samurai
+|image=[[File:Samurai.webp]]
+|category=Human
+|max=30
+|level=445
+|weapons=
+Knife
+|restricted=All
+}}
+|skill1={{SkillInfo
+|name=Kendo
+|info=
+Increase Health, Speed
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=5|zero=1
+|line1={{LevelUpRow|field=Health|unit=HP|lvl0=20|lvl1=40|lvl2=50|lvl3=60|lvl4=70|lvl5=80}}
+|line2={{LevelUpRow|field=Speed|lvl0=5.0%|lvl1=10.0%|lvl2=20.0%|lvl3=30.0%|lvl4=40.0%|lvl5=50.0%}}
+}}}}
+|skill2={{SkillInfo
+|name=Kiri Keishi
+|info=
+Evade Weapon Damage, Return Knife Damage
+|trigger=Victim
+|damage=50.0%
+|extra=Double Chance on Knife Attack
+|levelup={{LevelUpInfo|levels=5|zero=1
+|line1={{LevelUpRow|field=Chance|lvl0=10.0%|lvl1=15.0%|lvl2=17.5%|lvl3=20.0%|lvl4=22.5%|lvl5=25.0%}}
+}}}}
+|skill3={{SkillInfo
+|name=Nukitsuke
+|info=
+Increase Knife Damage
+|trigger=Attack
+|cooldown=10.0
+|extra=Damage between 20 and ...
+|levelup={{LevelUpInfo|levels=5|zero=1
+|line1={{LevelUpRow|field=Damage|lvl0=20|lvl1=22|lvl2=24|lvl3=26|lvl4=28|lvl5=30}}
+}}}}
+|skill4={{SkillInfo
+|name=Tsuki
+|info=
+Right Click to Increase Knife Damage based on Max Health
+|trigger=Attack
+|chance=50
+|levelup={{LevelUpInfo|levels=5|zero=1
+|line1={{LevelUpRow|field=Multiplier|lvl0=10.0%|lvl1=12.0%|lvl2=14.0%|lvl3=16.0%|lvl4=18.0%|lvl5=20.0%}}
+}}}}
+|skill5={{SkillInfo
+|name=Kuzushi
+|info=
+Left Click to Impale
+|trigger=Attack
+|force=300
+|levelup={{LevelUpInfo|levels=5|zero=1
+|line1={{LevelUpRow|field=Chance|lvl0=15.0%|lvl1=21.0%|lvl2=24.0%|lvl3=27.0%|lvl4=30.0%|lvl5=33.0%}}
+}}}}
+|skill6={{SkillInfo
+|name=Kyujutsu
+|info=
+Shoot Arrow at Enemy
+|trigger=Ultimate
+|target=Target_Enemy
+|range=600
+|aim=15
+|cooldown=10.0
+|extra=Damage between 20 and ...
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Damage|lvl1=22|lvl2=24|lvl3=26|lvl4=28|lvl5=30}}
+}}}}
+}}

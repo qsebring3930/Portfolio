@@ -1,0 +1,69 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=James Bond
+|image=[[File:James Bond.webp]]
+|category=Nintendo
+|max=36
+|level=3280
+|weapons=
+R8 Revolver<br>
+Knife
+|restricted=All
+|team=2
+}}
+|skill1={{SkillInfo
+|name=Golden Gun
+|info=
+Increase Gun Damage
+|trigger=Attack
+|extra=Only 1 Bullet. Gain Extra Bullet on hit. Knife kill gives extra bullet if none are left.
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Increase|lvl1=200|lvl2=220|lvl3=240|lvl4=260|lvl5=280|lvl6=300}}
+}}}}
+|skill2={{SkillInfo
+|name=Run
+|info=
+Equip Knife to increase Speed
+|trigger=Special
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Speed|lvl1=15.0%|lvl2=20.0%|lvl3=25.0%|lvl4=30.0%|lvl5=35.0%|lvl6=40.0%}}
+}}}}
+|skill3={{SkillInfo
+|name=Bullet Proof Vest
+|info=
+Increase Health
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Heal|unit=HP|lvl1=10|lvl2=20|lvl3=30|lvl4=40|lvl5=50|lvl6=60}}
+}}}}
+|skill4={{SkillInfo
+|name=Karate Chop
+|info=
+Increase Knife Damage
+|trigger=Attack
+|chance=50
+|extra=Increase Between 10 and ...
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Increase|lvl1=15|lvl2=20|lvl3=25|lvl4=30|lvl5=35|lvl6=40}}
+}}}}
+|skill5={{SkillInfo
+|name=Sex Appeal
+|info=
+Knife Attacks Drop Weapon
+|trigger=Attack
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Chance|lvl1=18.0%|lvl2=21.0%|lvl3=24.0%|lvl4=27.0%|lvl5=30.0%|lvl6=33.0%}}
+}}}}
+|skill6={{SkillInfo
+|name=Gamble
+|info=
+Gain Random Effects by sacrificing health
+|trigger=Ultimate
+|target=Self
+|cooldown=20.0
+|extra=Lose between 5 and 20 Health. Effect Random between Gain/Lose Health, Gain/Lose Money or ...
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Effects|lvl1=Invisibility|lvl2=Drunk|lvl3=Longjump|lvl4=Extra Bullet|lvl5=Silent Footstep|lvl6=Berserk}}
+}}}}
+}}

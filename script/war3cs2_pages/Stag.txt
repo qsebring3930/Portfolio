@@ -1,0 +1,91 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Stag
+|image=[[File:Stag.webp]]
+|category=Holiday - Valentine
+|max=30
+|level=265
+|weapons=
+CZ75-Auto<br>
+M4A4
+|restricted=All
+|team=1
+}}
+|skill1={{SkillInfo
+|name=Out on the Town
+|info=
+Increase Speed for allies
+|trigger=Aura
+|buffs=
+<p>
+Speed: +5%%
+</p>
+|extra=Needs at least 1 ally, each ally increases speed bonus. Max +30%%
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Radius|lvl1=300.0|lvl2=350.0|lvl3=400.0|lvl4=450.0|lvl5=500.0}}
+}}}}
+|skill2={{SkillInfo
+|name=Bring in the Strippers
+|info=
+Give XP and Money to the other allies near you on a kill by any of them
+|trigger=Aura
+|radius=500
+|extra=Needs at least 1 ally. XP Between 25 and ... , Money between 250 and ...
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=XP|unit=XP|lvl1=60|lvl2=70|lvl3=80|lvl4=90|lvl5=100}}
+|line2={{LevelUpRow|field=Money|lvl1=$600|lvl2=$700|lvl3=$800|lvl4=$900|lvl5=$1,000}}
+}}}}
+|skill3={{SkillInfo
+|name=My Friends are Paying
+|info=
+Give Clip and Ammo bullets to those who can afford it
+|trigger=Ability1
+|target=AoE_Self
+|radius=500
+|cooldown=30.0
+|extra=The allies need to pay $1,000.
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Clip|lvl1=1|lvl2=2|lvl3=3|lvl4=4|lvl5=5}}
+|line2={{LevelUpRow|field=Ammo|lvl1=10|lvl2=15|lvl3=20|lvl4=25|lvl5=30}}
+}}}}
+|skill4={{SkillInfo
+|name=Raucous Rally
+|info=
+Increase Dealt Weapon Damage for Allies
+|trigger=Ability2
+|target=AoE_Self
+|duration=6
+|radius=500
+|cooldown=20.0
+|extra=Needs at least 1 ally.
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Increase|lvl1=5.0%|lvl2=10.0%|lvl3=15.0%|lvl4=20.0%|lvl5=25.0%}}
+}}}}
+|skill5={{SkillInfo
+|name=Last Man Standing
+|info=
+Gain Speed, Health, weapons, Damage Dealt and Received if you are the last man standing
+|trigger=Passive
+|extra=Gain M4A1 and an upgraded CZ75 with a clip of 24 bullets
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Speed|lvl1=10.0%|lvl2=15.0%|lvl3=20.0%|lvl4=25.0%|lvl5=30.0%}}
+|line2={{LevelUpRow|field=Health|unit=HP|lvl1=10|lvl2=20|lvl3=30|lvl4=40|lvl5=50}}
+|line3={{LevelUpRow|field=Clip|lvl1=34|lvl2=38|lvl3=42|lvl4=46|lvl5=50}}
+|line4={{LevelUpRow|field=Damage Dealt|lvl1=4.0%|lvl2=8.0%|lvl3=12.0%|lvl4=16.0%|lvl5=20.0%}}
+|line5={{LevelUpRow|field=Damage Received|lvl1=2.0%|lvl2=4.0%|lvl3=6.0%|lvl4=8.0%|lvl5=10.0%}}
+}}}}
+|skill6={{SkillInfo
+|name=Party Crashers
+|info=
+Revive Allies, Drug Yourself
+|trigger=Ultimate
+|target=Random_Ally
+|quantity=2
+|duration=4
+|cooldown=30.0
+|extra=Reduce chance by half per roll. Respawn near you.
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Chance|unit=%|lvl1=60|lvl2=65|lvl3=70|lvl4=75|lvl5=80}}
+}}}}
+}}

@@ -1,0 +1,74 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Kinetic Blade
+|image=[[File:Kinetic Blade.webp]]
+|category=Mental
+|max=30
+|level=3845
+|weapons=
+Knife
+|restricted=All
+}}
+|skill1={{SkillInfo
+|name=Elementokinesis
+|info=
+<p>
+Use Random Element with unique effect<br>
+Fire: Burn<br>
+Air: Impale<br>
+Earth: Shake<br>
+Water: Hinder<br>
+Lightning: Bash<br>
+Light: Blind<br>
+Dark: Sleep
+</p>
+|trigger=Ability1
+|target=Target_Enemy
+|range=750
+|cooldown=10.0
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Damage|lvl0=5|lvl1=10|lvl2=12|lvl3=14|lvl4=16|lvl5=18|lvl6=20}}
+}}}}
+|skill2={{SkillInfo
+|name=Biokinesis
+|info=
+Increase Speed and Health. Deal And Receive more Damage
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Speed|lvl0=0.0%|lvl1=15.0%|lvl2=20.0%|lvl3=25.0%|lvl4=30.0%|lvl5=35.0%|lvl6=40.0%}}
+|line2={{LevelUpRow|field=Health|unit=HP|lvl0=15|lvl1=30|lvl2=45|lvl3=60|lvl4=75|lvl5=90|lvl6=105}}
+|line3={{LevelUpRow|field=Increase|lvl0=5.0%|lvl1=10.0%|lvl2=12.0%|lvl3=14.0%|lvl4=16.0%|lvl5=18.0%|lvl6=20.0%}}
+}}}}
+|skill3={{SkillInfo
+|name=Photokinesis
+|info=
+Become Invisible
+|trigger=Ability2
+|target=Self
+|cooldown=20.0
+|extra=Cancels when you attack
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl0=3.0|lvl1=3.5|lvl2=4.0|lvl3=4.5|lvl4=5.0|lvl5=5.5|lvl6=6.0}}
+}}}}
+|skill4={{SkillInfo
+|name=Vitakinesis
+|info=
+Regen HP
+|trigger=Passive
+|tickrate=2
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Heal|unit=HP|lvl0=1|lvl1=2|lvl2=3|lvl3=4|lvl4=5|lvl5=6|lvl6=7}}
+}}}}
+|skill5={{SkillInfo
+|name=Elemental Storm
+|info=
+Attack Enemies Around you with elements
+|trigger=Ultimate
+|target=AoE_Self
+|damage=20
+|cooldown=30.0
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Radius|lvl1=375.0|lvl2=450.0|lvl3=525.0|lvl4=600.0|lvl5=675.0|lvl6=750.0}}
+}}}}
+}}
