@@ -59,8 +59,23 @@ title: War3CS2 Stats
   width: 100%;
 }
 
+.war3-stats th .header-label {
+  float: left;
+}
+
 .war3-stats th {
   cursor: pointer;
+  position: relative;
+}
+
+.war3-stats th .header-sort {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  text-align: center;
+  opacity: 0.7;
 }
 </style>
 
@@ -76,6 +91,25 @@ function prettyName(str) {
   return str.replaceAll("_", " ").replace(/\b\w/g, c => c.toUpperCase());
 }
 
+function formatLocalTime(utcString) {
+  if (!utcString) return "";
+
+  let fixed = String(utcString);
+
+  if (!fixed.endsWith("Z") && !fixed.includes("+")) {
+    fixed += "Z";
+  }
+
+  return new Date(fixed).toLocaleString(undefined, {
+    year: "numeric",
+    month: "short",
+    day: "numeric",
+    hour: "numeric",
+    minute: "2-digit",
+    second: "2-digit"
+  });
+}
+
 function getRaceColumns(data) {
   if (!data.length) return [];
 
@@ -88,14 +122,26 @@ function getRaceColumns(data) {
 const sortStates = {};
 
 function renderTable(tableId, columns, rows) {
-
   const table = document.getElementById(tableId);
+
+  const getArrow = (key) => {
+    const stateKey = `${tableId}:${key}`;
+
+    if (!(stateKey in sortStates)) {
+      return "↕";
+    }
+
+    return sortStates[stateKey] ? "↑" : "↓";
+  };
 
   table.innerHTML = `
     <thead>
       <tr>
         ${columns.map(col =>
-          `<th data-key="${col.key}">${col.label} ↕</th>`
+          `<th data-key="${col.key}">
+            <span class="header-label">${col.label}</span>
+            <span class="header-sort">${getArrow(col.key)}</span>
+          </th>`
         ).join("")}
       </tr>
     </thead>
@@ -111,18 +157,22 @@ function renderTable(tableId, columns, rows) {
   `;
 
   table.querySelectorAll("th").forEach(th => {
-
     th.addEventListener("click", () => {
-
       const key = th.dataset.key;
       const stateKey = `${tableId}:${key}`;
+      const currentState = sortStates[stateKey] || false;
 
-      sortStates[stateKey] = !sortStates[stateKey];
+      Object.keys(sortStates).forEach(k => {
+        if (k.startsWith(`${tableId}:`)) {
+          delete sortStates[k];
+        }
+      });
+
+      sortStates[stateKey] = !currentState;
 
       const asc = sortStates[stateKey];
 
       rows.sort((a, b) => {
-
         const av = a[key] ?? "";
         const bv = b[key] ?? "";
 
@@ -130,9 +180,7 @@ function renderTable(tableId, columns, rows) {
         const bNum = Number(bv);
 
         if (!isNaN(aNum) && !isNaN(bNum)) {
-          return asc
-            ? aNum - bNum
-            : bNum - aNum;
+          return asc ? aNum - bNum : bNum - aNum;
         }
 
         return asc
@@ -165,7 +213,7 @@ function renderMapStats() {
     .map(row => ({
       map_name: row.map_name,
       minutes_played: Number(row.minutes_played || 0),
-      last_seen: row.last_seen || ""
+      last_seen: formatLocalTime(row.last_seen)
     }))
     .sort((a, b) => b.minutes_played - a.minutes_played);
 
