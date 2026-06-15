@@ -91,6 +91,18 @@ function prettyName(str) {
   return str.replaceAll("_", " ").replace(/\b\w/g, c => c.toUpperCase());
 }
 
+function forceUtc(utcString) {
+  if (!utcString) return "";
+
+  let fixed = String(utcString);
+
+  if (!fixed.endsWith("Z") && !fixed.includes("+")) {
+    fixed += "Z";
+  }
+
+  return fixed;
+}
+
 function formatLocalTime(utcString) {
   if (!utcString) return "";
 
@@ -100,7 +112,7 @@ function formatLocalTime(utcString) {
     fixed += "Z";
   }
 
-  return new Date(fixed).toLocaleString(undefined, {
+  return new Date(forceUtc(fixed)).toLocaleString(undefined, {
     year: "numeric",
     month: "short",
     day: "numeric",
@@ -159,6 +171,7 @@ function renderTable(tableId, columns, rows) {
   table.querySelectorAll("th").forEach(th => {
     th.addEventListener("click", () => {
       const key = th.dataset.key;
+      const sortKey = columns.find(col => col.key === key)?.sortKey || key;
       const stateKey = `${tableId}:${key}`;
       const currentState = sortStates[stateKey] || false;
 
@@ -173,8 +186,8 @@ function renderTable(tableId, columns, rows) {
       const asc = sortStates[stateKey];
 
       rows.sort((a, b) => {
-        const av = a[key] ?? "";
-        const bv = b[key] ?? "";
+        const av = a[sortKey] ?? "";
+        const bv = b[sortKey] ?? "";
 
         const aNum = Number(av);
         const bNum = Number(bv);
@@ -213,14 +226,15 @@ function renderMapStats() {
     .map(row => ({
       map_name: row.map_name,
       minutes_played: Number(row.minutes_played || 0),
-      last_seen: formatLocalTime(row.last_seen)
+      last_seen: formatLocalTime(row.last_seen),
+      last_seen_sort: new Date(forceUtc(row.last_seen)).getTime()
     }))
     .sort((a, b) => b.minutes_played - a.minutes_played);
 
   renderTable("mapStats", [
     { key: "map_name", label: "Map Name" },
     { key: "minutes_played", label: "Minutes Played" },
-    { key: "last_seen", label: "Last Seen" }
+    { key: "last_seen", label: "Last Seen", sortKey: "last_seen_sort" }
   ], rows);
 }
 
