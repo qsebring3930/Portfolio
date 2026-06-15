@@ -23,11 +23,6 @@ row = cursor.fetchone()
 print("Connected successfully!")
 print(row[0][:200])
 
-cursor.close()
-conn.close()
-
-cursor = conn.cursor()
-
 cursor.execute("""
 IF OBJECT_ID('race_playtime', 'U') IS NULL
 CREATE TABLE race_playtime (
@@ -60,6 +55,8 @@ CREATE TABLE map_playtime (
 """)
 
 conn.commit()
+cursor.close()
+conn.close()
 
 print("Tables created or already exist.")
 
