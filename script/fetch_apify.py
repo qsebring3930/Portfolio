@@ -3,18 +3,36 @@ import pyodbc
 import re
 from apify_client import ApifyClient
 from pathlib import Path
+import time
 
 print("Testing Azure SQL connection...")
 
-conn = pyodbc.connect(
-    "DRIVER={ODBC Driver 18 for SQL Server};"
-    f"SERVER=tcp:{os.environ['AZURE_SQL_SERVER']},1433;"
-    f"DATABASE={os.environ['AZURE_SQL_DATABASE']};"
-    f"UID={os.environ['AZURE_SQL_USERNAME']};"
-    f"PWD={os.environ['AZURE_SQL_PASSWORD']};"
-    "Encrypt=yes;"
-    "TrustServerCertificate=no;"
-)
+def connect_with_retry(max_attempts=5):
+    last_error = None
+
+    for attempt in range(1, max_attempts + 1):
+        try:
+            print(f"Connecting to Azure SQL, attempt {attempt}/{max_attempts}...")
+
+            return pyodbc.connect(
+                "DRIVER={ODBC Driver 18 for SQL Server};"
+                f"SERVER=tcp:{os.environ['AZURE_SQL_SERVER']},1433;"
+                f"DATABASE={os.environ['AZURE_SQL_DATABASE']};"
+                f"UID={os.environ['AZURE_SQL_USERNAME']};"
+                f"PWD={os.environ['AZURE_SQL_PASSWORD']};"
+                "Encrypt=yes;"
+                "TrustServerCertificate=no;"
+                "Connection Timeout=60;"
+            )
+
+        except pyodbc.Error as e:
+            last_error = e
+            print(f"Connection failed: {e}")
+            time.sleep(10)
+
+    raise last_error
+
+conn = connect_with_retry()
 
 cursor = conn.cursor()
 
