@@ -68,6 +68,14 @@ CREATE TABLE map_playtime (
 );
 """)
 
+cursor.execute("""
+IF OBJECT_ID('processed_snapshots', 'U') IS NULL
+CREATE TABLE processed_snapshots (
+    snapshot_id NVARCHAR(100) NOT NULL PRIMARY KEY,
+    processed_at DATETIME2 NOT NULL DEFAULT SYSUTCDATETIME()
+);
+""")
+
 conn.commit()
 print("Tables created or already exist.")
 
@@ -170,6 +178,17 @@ def update_stats(cursor, item):
         return
 
     timestamp = embed.get("timestamp") or item.get("timestamp")
+    message_id = str(item.get("messageId") or item.get("id"))
+    snapshot_id = f"{message_id}:{timestamp}"
+
+    cursor.execute("""
+    SELECT 1 FROM processed_snapshots
+    WHERE snapshot_id = ?
+    """, snapshot_id)
+    
+    if cursor.fetchone():
+        print(f"Skipping already processed snapshot: {message_id}")
+        return
 
     map_name = get_map_name(embed)
     players = parse_team_players(embed)
@@ -240,6 +259,10 @@ def update_stats(cursor, item):
             player["level"],
             timestamp,
         ))
+    cursor.execute("""
+    INSERT INTO processed_snapshots (snapshot_id)
+    VALUES (?)
+    """, snapshot_id)
 
 
 client = ApifyClient(os.environ["APIFY_TOKEN"])
@@ -252,7 +275,6 @@ run_input = {
 run = client.actor("wUoh2wdO7k9mnzL9d").call(run_input=run_input)
 
 for item in client.dataset(run.default_dataset_id).iterate_items():
-    print(item)
     update_stats(cursor, item)
 
 conn.commit()
