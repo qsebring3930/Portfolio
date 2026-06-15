@@ -1,0 +1,63 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Cupid
+|image=[[File:Cupid.webp]]
+|category=Holiday - Valentine
+|max=25
+|level=265
+|weapons=
+Knife
+|restricted=All
+}}
+|skill1={{SkillInfo
+|name=Small and Light
+|info=
+Decrease Gravity
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=5|zero=1
+|line1={{LevelUpRow|field=Gravity|lvl0=10.0%|lvl1=20.0%|lvl2=30.0%|lvl3=40.0%|lvl4=50.0%|lvl5=60.0%}}
+}}}}
+|skill2={{SkillInfo
+|name=Chocolate Hearts
+|info=
+Regen HP for Allies
+|trigger=Aura
+|duration=5
+|radius=300
+|levelup={{LevelUpInfo|levels=5|zero=1
+|line1={{LevelUpRow|field=Health|unit=HP|lvl0=10|lvl1=11|lvl2=12|lvl3=13|lvl4=14|lvl5=15}}
+}}}}
+|skill3={{SkillInfo
+|name=Soulmates
+|info=
+Return Weapon Damage
+|trigger=Victim
+|chance=50
+|levelup={{LevelUpInfo|levels=5|zero=1
+|line1={{LevelUpRow|field=Return|lvl0=25.0%|lvl1=35.0%|lvl2=45.0%|lvl3=55.0%|lvl4=65.0%|lvl5=75.0%}}
+}}}}
+|skill4={{SkillInfo
+|name=Extended Quiver
+|info=
+More Arrows
+|trigger=Passive
+|extra=Have between 8 and ...
+|levelup={{LevelUpInfo|levels=5|zero=1
+|line1={{LevelUpRow|field=Quantity|lvl0=8|lvl1=12|lvl2=14|lvl3=16|lvl4=18|lvl5=20}}
+}}}}
+|skill5={{SkillInfo
+|name=Cupids Arrow
+|info=
+Heal Health, Disarm Enemy
+|trigger=Ultimate
+|target=Target_Enemy
+|range=1000
+|aim=18
+|cooldown=5.0
+|extra=Duration between 1 and ...
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Health|unit=HP|lvl1=16|lvl2=22|lvl3=28|lvl4=34|lvl5=40}}
+|line2={{LevelUpRow|field=Duration|unit=sec.|lvl1=2.0|lvl2=2.5|lvl3=3.0|lvl4=3.5|lvl5=4.0}}
+}}}}
+}}

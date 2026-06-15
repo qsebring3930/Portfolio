@@ -1,0 +1,71 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Charizard
+|image=[[File:Charizard.webp]]
+|category=Pokémon - Fire
+|max=25
+|level=625
+|weapons=
+Desert Eagle
+|restricted=All
+}}
+|skill1={{SkillInfo
+|name=Blaze
+|info=
+<p>
+Passive: Increase Health<br>
+Attacker: Increase Damage if Low Health
+</p>
+|trigger=Special
+|extra=Increase Damage by 33% when below 35% Health
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Health|unit=HP|lvl1=6|lvl2=12|lvl3=18|lvl4=24|lvl5=30}}
+}}}}
+|skill2={{SkillInfo
+|name=Air Slash
+|info=
+Bash When in the Air
+|trigger=Attack
+|duration=1
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Chance|lvl1=10.0%|lvl2=20.0%|lvl3=30.0%|lvl4=40.0%|lvl5=50.0%}}
+}}}}
+|skill3={{SkillInfo
+|name=Fire Spin
+|info=
+Ward: Damage, Impale and Burn
+|trigger=Ability1
+|target=Location
+|damage=3
+|duration=5
+|range=750
+|force=300
+|cooldown=15.0
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Radius|lvl1=150.0|lvl2=175.0|lvl3=200.0|lvl4=225.0|lvl5=250.0}}
+}}}}
+|skill4={{SkillInfo
+|name=Fly
+|info=
+Toggle Flight, Increase Air Accuracy
+|trigger=Ability2
+|target=Self
+|cooldown=1.0
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Air Accuracy|lvl1=48.0%|lvl2=56.0%|lvl3=64.0%|lvl4=72.0%|lvl5=80.0%}}
+}}}}
+|skill5={{SkillInfo
+|name=Flare Blitz
+|info=
+Sacrifice Health to Crash Down While Flying, Damage and Impale Enemies on Landing
+|trigger=Ultimate
+|target=Self
+|damage=35
+|radius=300
+|force=300
+|cooldown=20.0
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Cost|unit=HP|lvl1=36|lvl2=32|lvl3=28|lvl4=24|lvl5=20}}
+}}}}
+}}

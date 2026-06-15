@@ -1,0 +1,55 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Death Knight
+|image=[[File:Death Knight.webp]]
+|category=WC3-Undead
+|max=32
+|level=10
+}}
+|skill1={{SkillInfo
+|name=Death Coil
+|info=
+Heal Ally or Damage Enemy
+|trigger=Ability1
+|target=Target_Any
+|range=600
+|cooldown=15.0
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Heal|unit=HP|lvl1=16|lvl2=18|lvl3=20|lvl4=22|lvl5=24|lvl6=26|lvl7=28|lvl8=30}}
+|line2={{LevelUpRow|field=Damage|lvl1=10|lvl2=11|lvl3=12|lvl4=13|lvl5=14|lvl6=16|lvl7=18|lvl8=20}}
+}}}}
+|skill2={{SkillInfo
+|name=Death Pact
+|info=
+Drain health
+|trigger=Ability2
+|target=Target_Enemy
+|range=600
+|cooldown=20.0
+|extra=Based on current Health
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Steal|lvl1=6.0%|lvl2=8.0%|lvl3=10.0%|lvl4=12.0%|lvl5=14.0%|lvl6=16.0%|lvl7=18.0%|lvl8=20.0%}}
+}}}}
+|skill3={{SkillInfo
+|name=Unholy Aura
+|info=
+Increase Speed, Regen HP for Allies
+|trigger=Aura
+|heal=2
+|tickrate=2
+|radius=400
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Speed|lvl1=9.0%|lvl2=12.0%|lvl3=15.0%|lvl4=18.0%|lvl5=21.0%|lvl6=24.0%|lvl7=27.0%|lvl8=30.0%}}
+}}}}
+|skill4={{SkillInfo
+|name=Animate Dead
+|info=
+Revive Allies near you
+|trigger=Death
+|target=AoE_Self
+|radius=700
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Chance|unit=%|lvl1=5|lvl2=10|lvl3=15|lvl4=20|lvl5=25|lvl6=30|lvl7=35|lvl8=40}}
+}}}}
+}}

@@ -1,0 +1,95 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Arms Race
+|image=[[File:Arms Race.webp]]
+|category=Counter-Strike
+|max=48
+|level=575
+|weapons=
+Glock-18<br>
+Knife<br>
+Grenade<br>
+P2000<br>
+P250<br>
+Dual Berettas<br>
+Five-Seven<br>
+Tec-9<br>
+Desert Eagle<br>
+MAC-10<br>
+MP9<br>
+UMP-45<br>
+PP-Bizon<br>
+MP7<br>
+P90<br>
+Nova<br>
+MAG-7<br>
+XM1014<br>
+Galil AR<br>
+M4A1-S<br>
+AK-47<br>
+AUG<br>
+SG 553<br>
+SSG 08<br>
+SCAR-20<br>
+G3SG1<br>
+AWP<br>
+M249
+|restricted=All
+|items=
+Gloves of Warmth
+}}
+|skill1={{SkillInfo
+|name=Command and Control
+|info=
+Increase Speed
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Speed|lvl1=12.0%|lvl2=16.0%|lvl3=20.0%|lvl4=24.0%|lvl5=28.0%|lvl6=32.0%|lvl7=36.0%|lvl8=40.0%}}
+}}}}
+|skill2={{SkillInfo
+|name=Marksman
+|info=
+Increase Headshot Damage
+|trigger=Attack
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Increase|lvl1=5.0%|lvl2=10.0%|lvl3=15.0%|lvl4=20.0%|lvl5=25.0%|lvl6=30.0%|lvl7=35.0%|lvl8=40.0%}}
+}}}}
+|skill3={{SkillInfo
+|name=Insurgent
+|info=
+Steal Money on Knife
+|trigger=Attack
+|extra=Steal half on Left Click
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Money|lvl1=$125|lvl2=$250|lvl3=$375|lvl4=$500|lvl5=$625|lvl6=$750|lvl7=$875|lvl8=$1,000}}
+}}}}
+|skill4={{SkillInfo
+|name=Born Ready
+|info=
+Increase Grenade Damage
+|trigger=Attack
+|extra=Gain an extra grenade once when you hit people
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Increase|lvl1=12.5%|lvl2=25.0%|lvl3=37.5%|lvl4=50.0%|lvl5=62.5%|lvl6=75.0%|lvl7=87.5%|lvl8=100.0%}}
+}}}}
+|skill5={{SkillInfo
+|name=The Professional
+|info=
+Gain Level for Objective. Revive on death
+|trigger=Special
+|extra=You need to kill someone to gain the revive. Revives once per round.
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Level Chance|unit=%|lvl1=30|lvl2=40|lvl3=50|lvl4=60|lvl5=70|lvl6=80|lvl7=90|lvl8=100}}
+|line2={{LevelUpRow|field=Revive Chance|unit=%|lvl1=15|lvl2=20|lvl3=25|lvl4=30|lvl5=35|lvl6=40|lvl7=45|lvl8=50}}
+}}}}
+|skill6={{SkillInfo
+|name=Gungamer
+|info=
+Gain XP or a Credit for completing the cycle
+|trigger=Special
+|extra=XP is 10% of your Required XP. 
+|levelup={{LevelUpInfo|levels=8|zero=1
+|line1={{LevelUpRow|field=Credit Chance|unit=%|lvl0=2|lvl1=6|lvl2=8|lvl3=10|lvl4=12|lvl5=14|lvl6=16|lvl7=18|lvl8=20}}
+}}}}
+}}

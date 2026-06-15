@@ -1,0 +1,74 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Dragon Knight
+|image=[[File:Dragon Knight.webp]]
+|category=AQW
+|max=30
+|level=4345
+|weapons=
+Molotov<br>
+Knife
+|restricted=All
+}}
+|skill1={{SkillInfo
+|name=Dragonhide
+|info=
+Increase Health, Reduce Received Magic Damage
+|trigger=Special
+|levelup={{LevelUpInfo|levels=5|zero=1
+|line1={{LevelUpRow|field=Health|unit=HP|lvl0=5|lvl1=10|lvl2=20|lvl3=30|lvl4=40|lvl5=50}}
+|line2={{LevelUpRow|field=Decrease|lvl0=3.0%|lvl1=7.0%|lvl2=14.0%|lvl3=21.0%|lvl4=28.0%|lvl5=35.0%}}
+}}}}
+|skill2={{SkillInfo
+|name=Dance of Blades
+|info=
+Increase Speed, Evade Weapon Damage
+|trigger=Special
+|levelup={{LevelUpInfo|levels=5|zero=1
+|line1={{LevelUpRow|field=Speed|lvl0=2.5%|lvl1=5.0%|lvl2=10.0%|lvl3=15.0%|lvl4=20.0%|lvl5=25.0%}}
+|line2={{LevelUpRow|field=Chance|lvl0=2.5%|lvl1=5.0%|lvl2=10.0%|lvl3=15.0%|lvl4=20.0%|lvl5=25.0%}}
+}}}}
+|skill3={{SkillInfo
+|name=Swordplay
+|info=
+Double Dance of Blades Evade Chance
+|trigger=Attack
+|levelup={{LevelUpInfo|levels=5|zero=1
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl0=1.0|lvl1=2.0|lvl2=3.0|lvl3=4.0|lvl4=5.0|lvl5=6.0}}
+}}}}
+|skill4={{SkillInfo
+|name=Dragon's Fire
+|info=
+Get an Incendiary Grenade. Increase Speed if enemies are burning
+|trigger=Ability1
+|target=Self
+|levelup={{LevelUpInfo|levels=5|zero=1
+|line1={{LevelUpRow|field=Speed|lvl0=3.0%|lvl1=6.0%|lvl2=12.0%|lvl3=18.0%|lvl4=24.0%|lvl5=30.0%}}
+|line2={{LevelUpRow|field=Cooldown|unit=sec.|lvl0=22.0|lvl1=20.0|lvl2=18.0|lvl3=16.0|lvl4=14.0|lvl5=12.0}}
+}}}}
+|skill5={{SkillInfo
+|name=Dragon's Might
+|info=
+AoE Shake Screen. Increase Weapon Damage if Enemy is burning
+|trigger=Attack
+|chance=50
+|levelup={{LevelUpInfo|levels=5|zero=1
+|line1={{LevelUpRow|field=Radius|lvl0=100.0|lvl1=150.0|lvl2=200.0|lvl3=250.0|lvl4=300.0|lvl5=350.0}}
+|line2={{LevelUpRow|field=Damage|lvl0=3|lvl1=6|lvl2=12|lvl3=18|lvl4=24|lvl5=30}}
+}}}}
+|skill6={{SkillInfo
+|name=Dragon Breath
+|info=
+Damage and Burn Enemies in a cone
+|trigger=Ultimate
+|target=Cone
+|duration=3
+|tickrate=0.25
+|range=400
+|cone=40
+|cooldown=30.0
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Damage|lvl1=1|lvl2=2|lvl3=3|lvl4=4|lvl5=5}}
+}}}}
+}}

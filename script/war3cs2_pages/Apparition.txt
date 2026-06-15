@@ -1,0 +1,78 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Apparition
+|image=[[File:Apparition.webp]]
+|category=Ghost
+|max=48
+|level=505
+|weapons=
+Knife
+|restricted=All
+|items=
+Infiltrator
+|passive=
+<p>
+Speed: -15%
+</p>
+}}
+|skill1={{SkillInfo
+|name=Skeptic
+|info=
+Beacon Enemy
+|trigger=Victim
+|duration=8
+|levelup={{LevelUpInfo|levels=8|zero=1
+|line1={{LevelUpRow|field=Chance|lvl0=25.0%|lvl1=40.0%|lvl2=45.0%|lvl3=50.0%|lvl4=55.0%|lvl5=60.0%|lvl6=65.0%|lvl7=70.0%|lvl8=75.0%}}
+}}}}
+|skill2={{SkillInfo
+|name=Deceased
+|info=
+Evade Weapon Damage
+|trigger=Victim
+|tickrate=2
+|extra=Evade lowers by 5% each evaded shot, Regain Evasion slowly. Minimum Evade is 15%
+|levelup={{LevelUpInfo|levels=8|zero=1
+|line1={{LevelUpRow|field=Chance|lvl0=50.0%|lvl1=65.0%|lvl2=70.0%|lvl3=75.0%|lvl4=80.0%|lvl5=85.0%|lvl6=90.0%|lvl7=95.0%|lvl8=100.0%}}
+}}}}
+|skill3={{SkillInfo
+|name=Paranormal
+|info=
+Increase Health
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=8|zero=1
+|line1={{LevelUpRow|field=Health|unit=HP|lvl0=5|lvl1=15|lvl2=20|lvl3=25|lvl4=30|lvl5=35|lvl6=40|lvl7=45|lvl8=50}}
+}}}}
+|skill4={{SkillInfo
+|name=Other Plane
+|info=
+Create Black Hole
+|trigger=Death
+|duration=2
+|tickrate=0.1
+|radius=500
+|force=800
+|extra=Chance is influenced by Deceased Fatigue
+|levelup={{LevelUpInfo|levels=8|zero=1
+|line1={{LevelUpRow|field=Chance|unit=%|lvl0=10|lvl1=16|lvl2=18|lvl3=20|lvl4=22|lvl5=24|lvl6=26|lvl7=28|lvl8=30}}
+}}}}
+|skill5={{SkillInfo
+|name=Icy Breath
+|info=
+AoE Darken Vision
+|trigger=Attack
+|radius=250
+|levelup={{LevelUpInfo|levels=8|zero=1
+|line1={{LevelUpRow|field=Chance|lvl0=30.0%|lvl1=45.0%|lvl2=50.0%|lvl3=55.0%|lvl4=60.0%|lvl5=65.0%|lvl6=70.0%|lvl7=75.0%|lvl8=80.0%}}
+}}}}
+|skill6={{SkillInfo
+|name=Floating
+|info=
+Toggle Flight, Gain Health
+|trigger=Ultimate
+|target=Self
+|cooldown=5.0
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Health|unit=HP|lvl1=50|lvl2=55|lvl3=60|lvl4=65|lvl5=70|lvl6=75|lvl7=80|lvl8=85}}
+}}}}
+}}

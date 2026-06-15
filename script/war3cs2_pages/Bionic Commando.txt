@@ -1,0 +1,72 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Bionic Commando
+|image=[[File:Bionic Commando.webp]]
+|category=Nintendo
+|max=36
+|level=3280
+|items=
+Sock of Feathers
+}}
+|skill1={{SkillInfo
+|name=Medical System
+|info=
+Heal when weak
+|trigger=Victim
+|duration=6
+|extra=Activates when below 25%. Heals between 20 and ...
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Heal|unit=HP|lvl1=30|lvl2=32|lvl3=34|lvl4=36|lvl5=38|lvl6=40}}
+}}}}
+|skill2={{SkillInfo
+|name=Bionic Strength
+|info=
+Increase Health, Speed
+|trigger=Passive
+|buffs=
+<p>
+Speed: +10%
+</p>
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Health|unit=HP|lvl1=25|lvl2=30|lvl3=35|lvl4=40|lvl5=45|lvl6=50}}
+}}}}
+|skill3={{SkillInfo
+|name=Mechanical Rebuild
+|info=
+Respawn with random health
+|trigger=Death
+|chance=40
+|extra=Reduced HP between 0 and ...
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=HP|unit=HP|lvl1=35|lvl2=30|lvl3=25|lvl4=20|lvl5=15|lvl6=10}}
+}}}}
+|skill4={{SkillInfo
+|name=Biological Attack
+|info=
+Bash
+|trigger=Attack
+|chance=33
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl1=0.2|lvl2=0.3|lvl3=0.3|lvl4=0.4|lvl5=0.4|lvl6=0.5}}
+}}}}
+|skill5={{SkillInfo
+|name=Life Units
+|info=
+Heal HP
+|trigger=Kill
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Heal|unit=HP|lvl1=10|lvl2=12|lvl3=14|lvl4=16|lvl5=18|lvl6=20}}
+}}}}
+|skill6={{SkillInfo
+|name=Bionic Arm
+|info=
+Pull enemy to you or push yourself forward
+|trigger=Ultimate
+|target=Target_Enemy
+|range=750
+|cooldown=15.0
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Force|lvl1=1.8|lvl2=2.0|lvl3=2.2|lvl4=2.5|lvl5=2.8|lvl6=3.0}}
+}}}}
+}}

@@ -1,0 +1,76 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Civil Protector
+|image=[[File:Civil Protector.webp]]
+|category=Half-Life
+|max=36
+|level=2070
+|weapons=
+MP7<br>
+USP-S<br>
+Knife<br>
+Flashbang
+|restricted=All
+}}
+|skill1={{SkillInfo
+|name=Pursuit of Suspect
+|info=
+Increase Speed
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Speed|lvl1=5.0%|lvl2=10.0%|lvl3=15.0%|lvl4=20.0%|lvl5=25.0%|lvl6=30.0%}}
+}}}}
+|skill2={{SkillInfo
+|name=Combat Armor
+|info=
+Increase Health
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Health|unit=HP|lvl1=10|lvl2=20|lvl3=30|lvl4=40|lvl5=50|lvl6=60}}
+}}}}
+|skill3={{SkillInfo
+|name=Stand Down
+|info=
+Bash
+|trigger=Attack
+|chance=30
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl1=0.2|lvl2=0.3|lvl3=0.4|lvl4=0.6|lvl5=0.8|lvl6=0.9}}
+}}}}
+|skill4={{SkillInfo
+|name=Stun Gear
+|info=
+Knife Disables and Knock Back. Flashbang Decreases Fire Rate
+|trigger=Attack
+|force=3
+|buffs=
+<p>
+Fire Rate: -30%
+</p>
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Disable Duration|unit=sec.|lvl1=0.5|lvl2=1.0|lvl3=1.5|lvl4=2.0|lvl5=2.0|lvl6=2.5}}
+|line2={{LevelUpRow|field=Fire Rate Duration|unit=sec.|lvl1=1.0|lvl2=2.0|lvl3=3.0|lvl4=4.0|lvl5=5.0|lvl6=6.0}}
+}}}}
+|skill5={{SkillInfo
+|name=Emplacement Gun
+|info=
+Stay rooted with a negev, Receive Reduced Damage
+|trigger=Ability1
+|target=Toggle
+|cooldown=20.0
+|extra=Press again to cancel early
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Reduce|lvl1=10.0%|lvl2=20.0%|lvl3=30.0%|lvl4=40.0%|lvl5=50.0%|lvl6=60.0%}}
+}}}}
+|skill6={{SkillInfo
+|name=Deployable Manhack
+|info=
+Summon Manhack
+|trigger=Ultimate
+|target=Random_Ally
+|cooldown=40.0
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Chance|unit=%|lvl1=50|lvl2=60|lvl3=70|lvl4=80|lvl5=90|lvl6=100}}
+}}}}
+}}

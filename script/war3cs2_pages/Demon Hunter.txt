@@ -1,0 +1,69 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Demon Hunter
+|image=[[File:Demon Hunter.webp]]
+|category=WC3-Elf
+|max=32
+|level=130
+|weapons=
+Knife
+|restricted=All
+|passive=
+<p>
+Speed: +20%
+</p>
+}}
+|skill1={{SkillInfo
+|name=Mana Burn
+|info=
+DoT, Mana Burn
+|trigger=Ability1
+|target=Target_Enemy
+|damage=2.0%
+|range=800
+|cooldown=15.0
+|extra=DoT Damage based on Max Health, Mana Burn: Using spells deals damage, Ultimate deals extra damage
+|levelup={{LevelUpInfo|levels=8|zero=1
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl0=2.5|lvl1=5.0|lvl2=6.0|lvl3=7.0|lvl4=8.0|lvl5=9.0|lvl6=10.0|lvl7=11.0|lvl8=12.0}}
+|line2={{LevelUpRow|field=Spell Damage|lvl0=4|lvl1=8|lvl2=9|lvl3=10|lvl4=11|lvl5=12|lvl6=13|lvl7=14|lvl8=15}}
+}}}}
+|skill2={{SkillInfo
+|name=Immolation
+|info=
+Burn Enemies
+|trigger=Aura
+|damage=5.0%
+|radius=300
+|extra=Damage based on Max Health
+|levelup={{LevelUpInfo|levels=8|zero=1
+|line1={{LevelUpRow|field=Tick Rate|unit=sec.|lvl0=7.5|lvl1=5.5|lvl2=5.0|lvl3=4.5|lvl4=4.0|lvl5=3.5|lvl6=3.0|lvl7=2.5|lvl8=2.0}}
+}}}}
+|skill3={{SkillInfo
+|name=Evasion
+|info=
+Evade Weapon Damage
+|trigger=Victim
+|levelup={{LevelUpInfo|levels=8|zero=1
+|line1={{LevelUpRow|field=Chance|lvl0=2.5%|lvl1=5.0%|lvl2=10.0%|lvl3=15.0%|lvl4=20.0%|lvl5=25.0%|lvl6=30.0%|lvl7=35.0%|lvl8=40.0%}}
+}}}}
+|skill4={{SkillInfo
+|name=Metamorphosis
+|info=
+Transform into a Demon
+|trigger=Ultimate
+|target=Self
+|duration=10
+|range=200
+|cone=30
+|buffs=
+<p>
+LongJump: +20%
+</p>
+|cooldown=30.0
+|extra=Left Click to do Damage enemies in a Cone
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Health|unit=HP|lvl1=15|lvl2=30|lvl3=45|lvl4=60|lvl5=75|lvl6=90|lvl7=105|lvl8=120}}
+|line2={{LevelUpRow|field=Damage|lvl1=8|lvl2=9|lvl3=10|lvl4=11|lvl5=12|lvl6=13|lvl7=14|lvl8=15}}
+}}}}
+}}

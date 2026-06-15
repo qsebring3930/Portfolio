@@ -1,0 +1,101 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Achoo Herald of Spring
+|image=[[File:Achoo Herald of Spring.webp]]
+|category=Holiday - Easter
+|max=35
+|level=305
+|weapons=
+Glock-18<br>
+Decoy Grenade<br>
+Knife
+|restricted=All
+|team=2
+|passive=
+<p>
+Allergy Tickrate: 5.0 sec.<br>
+Max Allergy: 5
+</p>
+}}
+|skill1={{SkillInfo
+|name=Allergies
+|info=
+Add Allergy Stack, Hinder based on stacks
+|trigger=Attack
+|duration=5
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Hinder|lvl1=4.0%|lvl2=5.0%|lvl3=6.0%|lvl4=7.0%|lvl5=8.0%}}
+}}}}
+|skill2={{SkillInfo
+|name=Spring Bloom
+|info=
+Increase Health, Heal when enemies with Allergy Stacks are near
+|trigger=Passive
+|tickrate=1.5
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Health|unit=HP|lvl1=20|lvl2=30|lvl3=40|lvl4=50|lvl5=60}}
+|line2={{LevelUpRow|field=Heal|unit=HP|lvl1=2|lvl2=3|lvl3=4|lvl4=5|lvl5=6}}
+|line3={{LevelUpRow|field=Radius|lvl1=300.0|lvl2=350.0|lvl3=400.0|lvl4=450.0|lvl5=500.0}}
+}}}}
+|skill3={{SkillInfo
+|name=Hay Fever
+|info=
+Disco
+|trigger=Attack
+|extra=Chance is 5% + Allergy Stacks * 2
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl1=0.5|lvl2=1.0|lvl3=1.5|lvl4=2.0|lvl5=2.5}}
+}}}}
+|skill4={{SkillInfo
+|name=Sinus Infection
+|info=
+Gain Decoy Grenade and Explode your Enemy to Add more Allergy Stacks
+|trigger=Kill
+|explrad=300
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Explosion Damage|lvl1=30|lvl2=35|lvl3=40|lvl4=45|lvl5=50}}
+|line2={{LevelUpRow|field=Stacks|lvl1=1|lvl2=1|lvl3=2|lvl4=2|lvl5=3}}
+}}}}
+|skill5={{SkillInfo
+|name=Disturbed Petals
+|info=
+On Knife Attack trigger 'Allergies' around you
+|trigger=Victim
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Chance|lvl1=60.0%|lvl2=70.0%|lvl3=80.0%|lvl4=90.0%|lvl5=100.0%}}
+|line2={{LevelUpRow|field=Radius|lvl1=100.0|lvl2=125.0|lvl3=150.0|lvl4=175.0|lvl5=200.0}}
+}}}}
+|skill6={{SkillInfo
+|name=Pollen Burst
+|info=
+Decoy bounces leave flower wards that Add Allergy Stacks
+|trigger=Special
+|quantity=3
+|duration=4
+|radius=250
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Stack Limit|lvl1=1|lvl2=1|lvl3=2|lvl4=2|lvl5=3}}
+}}}}
+|skill7={{SkillInfo
+|name=Peak Season
+|info=
+Affect Enemies based on their Allergy Stacks
+|trigger=Ultimate
+|target=AoE_Self
+|cooldown=30.0
+|extra=
+<p>
+The Effect per Stack is:<br>
+1: Bash for 1.0 sec.<br>
+2: Reveal<br>
+3: Steal Health<br>
+4: Silence<br>
+5: Sleep
+</p>
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Radius|lvl1=350.0|lvl2=450.0|lvl3=550.0|lvl4=650.0|lvl5=750.0}}
+|line2={{LevelUpRow|field=Duration|unit=sec.|lvl1=2.0|lvl2=2.5|lvl3=3.0|lvl4=3.5|lvl5=4.0}}
+|line3={{LevelUpRow|field=Steal|unit=HP|lvl1=22|lvl2=24|lvl3=26|lvl4=28|lvl5=30}}
+}}}}
+}}

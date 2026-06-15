@@ -1,0 +1,90 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Demolitionist
+|image=[[File:Demolitionist.webp]]
+|category=Counter-Strike
+|max=40
+|level=575
+|weapons=
+MAG-7<br>
+Grenade<br>
+Knife
+|restricted=All
+|items=
+Gloves of Warmth<br>
+Boots of Zephyr<br>
+Blastproof Plate
+|team=2
+|passive=
+<p>
+Speed: -15%
+</p>
+}}
+|skill1={{SkillInfo
+|name=Grenadier
+|info=
+Increase Potency and Radius Grenades, DoT
+|trigger=Special
+|damage=5
+|chance=33
+|duration=3
+|levelup={{LevelUpInfo|levels=10
+|line1={{LevelUpRow|field=Magnitude|lvl1=3.0%|lvl2=6.0%|lvl3=9.0%|lvl4=12.0%|lvl5=15.0%|lvl6=18.0%|lvl7=21.0%|lvl8=24.0%|lvl9=27.0%|lvl10=30.0%}}
+|line2={{LevelUpRow|field=Radius|lvl1=5.0%|lvl2=10.0%|lvl3=15.0%|lvl4=20.0%|lvl5=25.0%|lvl6=30.0%|lvl7=35.0%|lvl8=40.0%|lvl9=45.0%|lvl10=50.0%}}
+}}}}
+|skill2={{SkillInfo
+|name=Flak Jacket
+|info=
+Increase Health, Decrease Received Explosion Damage
+|trigger=Special
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Health|unit=HP|lvl1=10|lvl2=20|lvl3=30|lvl4=40|lvl5=50}}
+|line2={{LevelUpRow|field=Decrease|lvl1=30.0%|lvl2=40.0%|lvl3=50.0%|lvl4=60.0%|lvl5=70.0%}}
+}}}}
+|skill3={{SkillInfo
+|name=Fragger Rounds
+|info=
+Exploding Bullets
+|trigger=Special
+|damage=5
+|radius=100
+|levelup={{LevelUpInfo|levels=10
+|line1={{LevelUpRow|field=Chance|unit=%|lvl1=10|lvl2=11|lvl3=12|lvl4=13|lvl5=14|lvl6=15|lvl7=16|lvl8=18|lvl9=19|lvl10=20}}
+}}}}
+|skill4={{SkillInfo
+|name=Landmine
+|info=
+Channel to Place Mine, Trap: Explodes when moved off when active
+|trigger=Ability1
+|target=Self
+|damage=25
+|quantity=3
+|duration=1
+|radius=150
+|cooldown=20.0
+|extra=Must be on ground. Deals % of Max Health as extra damage. Bashes shortly as warning.
+|levelup={{LevelUpInfo|levels=10
+|line1={{LevelUpRow|field=Multiplier|lvl1=2.5%|lvl2=5.0%|lvl3=7.5%|lvl4=10.0%|lvl5=12.5%|lvl6=15.0%|lvl7=17.5%|lvl8=20.0%|lvl9=22.5%|lvl10=25.0%}}
+}}}}
+|skill5={{SkillInfo
+|name=Suicide Vest
+|info=
+<p>
+Channel to gain Suicide Explode but Knife only, Decrease Speed and Gain Slow Resistance<br>
+Press again to explode
+</p>
+|trigger=Ultimate
+|target=Self
+|duration=5
+|radius=600
+|buffs=
+<p>
+Speed: -40%<br>
+Slow Resistance: +100%
+</p>
+|extra=Trigger again to explode early, Knife Only
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Magnitude|lvl1=200|lvl2=225|lvl3=250|lvl4=275|lvl5=300}}
+}}}}
+}}

@@ -1,0 +1,57 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Demonic Canine
+|image=[[File:Demonic Canine.webp]]
+|category=Pet
+|max=28
+|level=1810
+|weapons=
+Knife
+|restricted=All
+}}
+|skill1={{SkillInfo
+|name=Canine
+|info=
+Increase Speed, Attack Rate
+|trigger=Passive
+|buffs=
+<p>
+Attack Rate: +50%
+</p>
+|levelup={{LevelUpInfo|levels=7
+|line1={{LevelUpRow|field=Speed|lvl1=10.0%|lvl2=15.0%|lvl3=20.0%|lvl4=25.0%|lvl5=30.0%|lvl6=35.0%|lvl7=40.0%}}
+}}}}
+|skill2={{SkillInfo
+|name=Bite
+|info=
+Increase Damage, Disarm
+|trigger=Attack
+|extra=Increase damage by 30%
+|levelup={{LevelUpInfo|levels=7
+|line1={{LevelUpRow|field=Chance|lvl1=20.0%|lvl2=25.0%|lvl3=30.0%|lvl4=35.0%|lvl5=40.0%|lvl6=45.0%|lvl7=50.0%}}
+}}}}
+|skill3={{SkillInfo
+|name=Tracker
+|info=
+Track Enemies
+|trigger=Aura
+|tickrate=2
+|levelup={{LevelUpInfo|levels=7
+|line1={{LevelUpRow|field=Radius|lvl1=300.0|lvl2=325.0|lvl3=350.0|lvl4=375.0|lvl5=400.0|lvl6=425.0|lvl7=450.0}}
+}}}}
+|skill4={{SkillInfo
+|name=Attack Dog
+|info=
+Increase Speed
+|trigger=Ultimate
+|target=Self
+|buffs=
+<p>
+Speed: +40%
+</p>
+|cooldown=15.0
+|levelup={{LevelUpInfo|levels=7
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl1=3.2|lvl2=3.5|lvl3=3.8|lvl4=4.1|lvl5=4.4|lvl6=4.7|lvl7=5.0}}
+}}}}
+}}

@@ -1,0 +1,118 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Chameleon
+|image=[[File:Chameleon.webp]]
+|category=Legendary
+|max=30
+|level=3705
+}}
+|skill1={{SkillInfo
+|name=Passive Skill
+|info=
+<p>
+Get a random passive skill<br>
+Increase Health<br>
+Increase Speed<br>
+Increase Longjump, Decrease Gravity<br>
+Mole<br>
+Regen HP
+</p>
+|trigger=Passive
+|buffs=
+<p>
+Gravity: -20%
+</p>
+|extra=Mole Time between 3.0 and ...
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Health|unit=HP|lvl1=25|lvl2=30|lvl3=35|lvl4=40|lvl5=45|lvl6=50}}
+|line2={{LevelUpRow|field=Speed|lvl1=15.0%|lvl2=18.0%|lvl3=21.0%|lvl4=24.0%|lvl5=27.0%|lvl6=30.0%}}
+|line3={{LevelUpRow|field=Longjump|lvl1=25.0%|lvl2=28.0%|lvl3=31.0%|lvl4=34.0%|lvl5=37.0%|lvl6=40.0%}}
+|line4={{LevelUpRow|field=Mole Time|unit=sec.|lvl1=5.5|lvl2=6.0|lvl3=6.5|lvl4=7.0|lvl5=7.5|lvl6=8.0}}
+|line5={{LevelUpRow|field=Heal|unit=HP|lvl1=2|lvl2=2|lvl3=3|lvl4=3|lvl5=4|lvl6=4}}
+}}}}
+|skill2={{SkillInfo
+|name=Attacker Skill
+|info=
+<p>
+Get a random attack skill<br>
+Increase Weapon Damage<br>
+Burn<br>
+Bash<br>
+Blind<br>
+Steal Health
+</p>
+|trigger=Attack
+|chance=33
+|extra=Blind Duration: 1.5 sec.
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Increase|lvl1=18.0%|lvl2=21.0%|lvl3=24.0%|lvl4=27.0%|lvl5=30.0%|lvl6=33.0%}}
+|line2={{LevelUpRow|field=Burn Time|unit=sec.|lvl1=1.5|lvl2=1.8|lvl3=2.1|lvl4=2.4|lvl5=2.7|lvl6=3.0}}
+|line3={{LevelUpRow|field=Bash Time|unit=sec.|lvl1=0.5|lvl2=0.6|lvl3=0.7|lvl4=0.8|lvl5=0.9|lvl6=1.0}}
+|line4={{LevelUpRow|field=Blind|lvl1=60.0%|lvl2=65.0%|lvl3=70.0%|lvl4=75.0%|lvl5=80.0%|lvl6=85.0%}}
+|line5={{LevelUpRow|field=Steal|lvl1=11.0%|lvl2=13.0%|lvl3=15.0%|lvl4=17.0%|lvl5=19.0%|lvl6=21.0%}}
+}}}}
+|skill3={{SkillInfo
+|name=Victim Skill
+|info=
+<p>
+Get a random victim skill<br>
+Evade Weapon Damage<br>
+Decrease Weapon Damage<br>
+Return Weapon Damage<br>
+Hinder<br>
+Invisible
+</p>
+|trigger=Victim
+|chance=33
+|extra=Hinder Duration: 2.5 sec.
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Evade Chance|lvl1=18.0%|lvl2=21.0%|lvl3=24.0%|lvl4=27.0%|lvl5=30.0%|lvl6=33.0%}}
+|line2={{LevelUpRow|field=Decrease|lvl1=10.0%|lvl2=15.0%|lvl3=20.0%|lvl4=25.0%|lvl5=30.0%|lvl6=25.0%}}
+|line3={{LevelUpRow|field=Return|lvl1=18.0%|lvl2=21.0%|lvl3=24.0%|lvl4=27.0%|lvl5=30.0%|lvl6=33.0%}}
+|line4={{LevelUpRow|field=Hinder|lvl1=15.0%|lvl2=20.0%|lvl3=25.0%|lvl4=30.0%|lvl5=35.0%|lvl6=40.0%}}
+|line5={{LevelUpRow|field=Invisible Duration|unit=sec.|lvl1=1.0|lvl2=1.2|lvl3=1.5|lvl4=1.8|lvl5=2.0|lvl6=2.2}}
+}}}}
+|skill4={{SkillInfo
+|name=Death Skill
+|info=
+<p>
+Get a random death skill<br>
+Damage Enemies Around you<br>
+Respawn with random health<br>
+Revive Allies Around You<br>
+Possess Enemy<br>
+Heal all allies
+</p>
+|trigger=Death
+|chance=66
+|extra=Explode Radius: 300, Mass Revive Radius: 500, Respawn: Reduced HP between 0 and ...
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Explode Damage|lvl1=75|lvl2=100|lvl3=125|lvl4=150|lvl5=175|lvl6=200}}
+|line2={{LevelUpRow|field=HP|unit=HP|lvl1=30|lvl2=26|lvl3=22|lvl4=18|lvl5=14|lvl6=10}}
+|line3={{LevelUpRow|field=Mass Revive Chance|unit=%|lvl1=18|lvl2=21|lvl3=24|lvl4=27|lvl5=30|lvl6=33}}
+|line4={{LevelUpRow|field=Possess Chance|unit=%|lvl1=10|lvl2=12|lvl3=14|lvl4=16|lvl5=18|lvl6=20}}
+|line5={{LevelUpRow|field=Heal|unit=HP|lvl1=15|lvl2=18|lvl3=21|lvl4=24|lvl5=27|lvl6=30}}
+}}}}
+|skill5={{SkillInfo
+|name=Ultimate Skill
+|info=
+<p>
+Get a random ultimate<br>
+Bash Enemies around you<br>
+Push to where you aim<br>
+Chain Damage enemies around you<br>
+Heal<br>
+Throw Bomb, Explode on Impact
+</p>
+|trigger=Ultimate
+|cooldown=15.0
+|extra=Bash Duration: Between 1.0 and 3.0 sec.; Chain Radius: 600, Damage reduces by 3 and Radius reduces by 60 each jump; Heal between 10 and ...; Bomb Radius: 250
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Bash Radius|lvl1=350.0|lvl2=400.0|lvl3=450.0|lvl4=500.0|lvl5=550.0|lvl6=600.0}}
+|line2={{LevelUpRow|field=Push Range|lvl1=325.0|lvl2=350.0|lvl3=375.0|lvl4=400.0|lvl5=425.0|lvl6=450.0}}
+|line3={{LevelUpRow|field=Chain Qty|lvl1=3|lvl2=4|lvl3=5|lvl4=6|lvl5=7|lvl6=8}}
+|line4={{LevelUpRow|field=Heal|unit=HP|lvl1=20|lvl2=24|lvl3=28|lvl4=32|lvl5=36|lvl6=40}}
+|line5={{LevelUpRow|field=Explosion Damage|lvl1=18|lvl2=21|lvl3=24|lvl4=27|lvl5=30|lvl6=33}}
+}}}}
+}}

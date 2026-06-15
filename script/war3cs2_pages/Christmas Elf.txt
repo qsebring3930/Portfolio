@@ -1,0 +1,73 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Christmas Elf
+|image=[[File:Christmas Elf.webp]]
+|category=Holiday - Christmas
+|max=25
+|level=405
+|weapons=
+P250<br>
+Knife
+|restricted=All
+|team=2
+|passive=
+<p>
+Size: -25%
+</p>
+}}
+|skill1={{SkillInfo
+|name=Busy in the Workshop
+|info=
+Give Random Grenades to allies
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Chance|unit=%|lvl1=10|lvl2=15|lvl3=20|lvl4=25|lvl5=30}}
+|line2={{LevelUpRow|field=Quantity|lvl1=1|lvl2=2|lvl3=3|lvl4=4|lvl5=5}}
+}}}}
+|skill2={{SkillInfo
+|name=Santa's Scout
+|info=
+Increase Speed, Reduce Gravity
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Speed|lvl1=10.0%|lvl2=15.0%|lvl3=20.0%|lvl4=25.0%|lvl5=30.0%}}
+|line2={{LevelUpRow|field=Gravity|lvl1=30.0%|lvl2=35.0%|lvl3=40.0%|lvl4=45.0%|lvl5=50.0%}}
+}}}}
+|skill3={{SkillInfo
+|name=Holiday Jumper
+|info=
+<p>
+Reduce Weapon Damage<br>
+Give Allies Reduce Received Weapon Damage
+</p>
+|trigger=Special
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Self Chance|lvl1=10.0%|lvl2=15.0%|lvl3=20.0%|lvl4=25.0%|lvl5=30.0%}}
+|line2={{LevelUpRow|field=Self Reduction|lvl1=20.0%|lvl2=25.0%|lvl3=30.0%|lvl4=35.0%|lvl5=40.0%}}
+|line3={{LevelUpRow|field=Ally Chance|unit=%|lvl1=10|lvl2=15|lvl3=20|lvl4=25|lvl5=30}}
+|line4={{LevelUpRow|field=Ally Reduction|lvl1=3.0%|lvl2=6.0%|lvl3=9.0%|lvl4=12.0%|lvl5=15.0%}}
+}}}}
+|skill4={{SkillInfo
+|name=Report Card to Santa
+|info=
+Give Random Item to Ally or Random Debuff to Enemy
+|trigger=Ability1
+|target=Target_Any
+|duration=5
+|range=500
+|extra=Debuffs are Speed, Fire Rate, Dealt Weapon Damage or Gravity. The value is 30%
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Cooldown|unit=sec.|lvl1=30.0|lvl2=28.0|lvl3=26.0|lvl4=24.0|lvl5=22.0}}
+}}}}
+|skill5={{SkillInfo
+|name=Spread Christmas Cheer
+|info=
+Share your money with your allies, gain XP
+|trigger=Ultimate
+|target=Allies
+|extra=Exchange Rate is based on the amount of money
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Cooldown|unit=sec.|lvl1=35.0|lvl2=34.0|lvl3=32.0|lvl4=31.0|lvl5=30.0}}
+}}}}
+}}

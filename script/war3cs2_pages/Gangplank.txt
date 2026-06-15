@@ -1,0 +1,95 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Gangplank
+|image=[[File:Gangplank.webp]]
+|category=LoL-Specialist
+|max=30
+|level=4285
+|weapons=
+R8 Revolver<br>
+Knife
+|restricted=All
+|passive=
+<p>
+Health: +2HP per Level
+</p>
+}}
+|skill1={{SkillInfo
+|name=Trial by Fire
+|info=
+Knife Attacks Burn and Increase Your Speed with Chance to Crit
+|trigger=Attack
+|chance=33
+|duration=5
+|buffs=
+<p>
+Increase: 25%
+</p>
+|extra=Crit Chance also applies to Powder Kegs
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Speed|lvl0=10.0%|lvl1=15.0%|lvl2=18.0%|lvl3=21.0%|lvl4=24.0%|lvl5=27.0%|lvl6=30.0%}}
+}}}}
+|skill2={{SkillInfo
+|name=Parrrley
+|info=
+Increase Gun Damage with Chance to Crit, Steal Money on Kill
+|trigger=Attack
+|chance=25
+|buffs=
+<p>
+Increase: 50%
+</p>
+|cooldown=5.0
+|extra=Regains bullet after cooldown. Crit Chance also applies to Powder Kegs
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Damage|lvl0=5|lvl1=10|lvl2=14|lvl3=18|lvl4=22|lvl5=26|lvl6=30}}
+|line2={{LevelUpRow|field=Steal|lvl0=$500|lvl1=$1,000|lvl2=$1,400|lvl3=$1,800|lvl4=$2,200|lvl5=$2,600|lvl6=$3,000}}
+}}}}
+|skill3={{SkillInfo
+|name=Remove Scurvy
+|info=
+Heal and Cleanse
+|trigger=Ability1
+|target=Self
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Heal|unit=HP|lvl0=5|lvl1=10|lvl2=15|lvl3=20|lvl4=25|lvl5=30|lvl6=35}}
+|line2={{LevelUpRow|field=Cooldown|unit=sec.|lvl0=35.0|lvl1=30.0|lvl2=27.0|lvl3=24.0|lvl4=21.0|lvl5=18.0|lvl6=15.0}}
+}}}}
+|skill4={{SkillInfo
+|name=Powder Keg
+|info=
+Spawn Explosive Keg
+|trigger=Ability2
+|target=Location
+|tickrate=10
+|range=500
+|explrad=250
+|cooldown=5.0
+|extra=Regain to your limit over time. Setting off one chains destroys all other kegs if you do it. Procs Trial by Fire.
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Quantity|lvl0=1|lvl1=2|lvl2=3|lvl3=3|lvl4=4|lvl5=4|lvl6=5}}
+|line2={{LevelUpRow|field=Damage|lvl0=25|lvl1=50|lvl2=60|lvl3=70|lvl4=80|lvl5=90|lvl6=100}}
+}}}}
+|skill5={{SkillInfo
+|name=Cannon Barrage
+|info=
+Spawns Random Magic Explosions that slow
+|trigger=Ultimate
+|target=Location
+|quantity=3
+|duration=8
+|tickrate=2
+|range=1500
+|radius=500
+|explrad=150
+|buffs=
+<p>
+Speed: -30%
+</p>
+|cooldown=30.0
+|extra=Activates Trial by Fire
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Damage|lvl1=30|lvl2=32|lvl3=34|lvl4=36|lvl5=38|lvl6=40}}
+}}}}
+}}

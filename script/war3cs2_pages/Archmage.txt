@@ -1,0 +1,55 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Archmage
+|image=[[File:Archmage.webp]]
+|category=WC3-Human
+|max=32
+|level=50
+}}
+|skill1={{SkillInfo
+|name=Blizzard
+|info=
+Ward: Damage and Decrease Speed
+|trigger=Ability1
+|target=Location
+|damage=5
+|range=1000
+|radius=300
+|buffs=
+<p>
+Speed: -20%
+</p>
+|cooldown=15.0
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl1=5.0|lvl2=6.0|lvl3=7.0|lvl4=8.0|lvl5=9.0|lvl6=10.0|lvl7=11.0|lvl8=12.0}}
+}}}}
+|skill2={{SkillInfo
+|name=Summon Elemental
+|info=
+Summon Water Elemental
+|trigger=Ability2
+|target=Random_Ally
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Cooldown|unit=sec.|lvl1=40.0|lvl2=38.0|lvl3=36.0|lvl4=34.0|lvl5=33.0|lvl6=32.0|lvl7=31.0|lvl8=30.0}}
+}}}}
+|skill3={{SkillInfo
+|name=Brilliance Aura
+|info=
+Regen HP for Allies
+|trigger=Aura
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Radius|lvl1=125.0|lvl2=150.0|lvl3=175.0|lvl4=200.0|lvl5=225.0|lvl6=250.0|lvl7=275.0|lvl8=300.0}}
+|line2={{LevelUpRow|field=Health|unit=HP|lvl1=1|lvl2=1|lvl3=2|lvl4=2|lvl5=3|lvl6=3|lvl7=4|lvl8=4}}
+}}}}
+|skill4={{SkillInfo
+|name=Mass Teleport
+|info=
+Teleport to where you aim
+|trigger=Ultimate
+|target=Location
+|cooldown=20.0
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Range|lvl1=700.0|lvl2=720.0|lvl3=740.0|lvl4=760.0|lvl5=780.0|lvl6=800.0|lvl7=820.0|lvl8=840.0}}
+}}}}
+}}

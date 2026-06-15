@@ -1,0 +1,54 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Dwarven Rifleman
+|image=[[File:Dwarven Rifleman.webp]]
+|category=WC3-Human
+|max=32
+|level=50
+|weapons=
+AWP<br>
+Smoke Grenade
+|restricted=All
+|items=
+Boots of Zephyr
+}}
+|skill1={{SkillInfo
+|name=Armaments
+|info=
+Increase Clip, Lower Fire Rate
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Quantity|lvl1=7|lvl2=9|lvl3=11|lvl4=13|lvl5=15|lvl6=17|lvl7=19|lvl8=21}}
+}}}}
+|skill2={{SkillInfo
+|name=Long Rifle
+|info=
+Increase Damage by more distance
+|trigger=Attack
+|range=750
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Chance|lvl1=50.0%|lvl2=55.0%|lvl3=60.0%|lvl4=65.0%|lvl5=70.0%|lvl6=75.0%|lvl7=80.0%|lvl8=85.0%}}
+}}}}
+|skill3={{SkillInfo
+|name=Studded Leather Armor
+|info=
+Increase Health, Decrease Speed
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Health|unit=HP|lvl1=10|lvl2=30|lvl3=50|lvl4=70|lvl5=90|lvl6=110|lvl7=130|lvl8=150}}
+|line2={{LevelUpRow|field=Speed|lvl1=2.0%|lvl2=4.0%|lvl3=6.0%|lvl4=8.0%|lvl5=10.0%|lvl6=12.0%|lvl7=14.0%|lvl8=16.0%}}
+}}}}
+|skill4={{SkillInfo
+|name=Dwarven Ale
+|info=
+Heal HP, Drug yourself
+|trigger=Ultimate
+|target=Self
+|duration=2
+|cooldown=15.0
+|extra=Heal between 10 and ...
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Health|unit=HP|lvl1=12|lvl2=16|lvl3=20|lvl4=24|lvl5=28|lvl6=32|lvl7=36|lvl8=40}}
+}}}}
+}}

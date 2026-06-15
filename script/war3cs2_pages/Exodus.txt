@@ -1,0 +1,91 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Exodus
+|image=[[File:Exodus.webp]]
+|category=God
+|max=56
+|level=3020
+}}
+|skill1={{SkillInfo
+|name=Rivers of Blood
+|info=
+Steal Health
+|trigger=Attack
+|chance=15
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Steal|lvl1=11.0%|lvl2=13.0%|lvl3=15.0%|lvl4=17.0%|lvl5=19.0%|lvl6=21.0%|lvl7=23.0%|lvl8=25.0%}}
+}}}}
+|skill2={{SkillInfo
+|name=Scalp Eating Lice
+|info=
+Banish
+|trigger=Attack
+|chance=15
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl1=0.5|lvl2=0.6|lvl3=0.7|lvl4=0.8|lvl5=0.9|lvl6=1.0|lvl7=1.1|lvl8=1.2}}
+}}}}
+|skill3={{SkillInfo
+|name=Wilderness Adrenaline
+|info=
+Increase Health and Speed
+|trigger=Passive
+|buffs=
+<p>
+Speed: +10%
+</p>
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Health|unit=HP|lvl1=25|lvl2=30|lvl3=35|lvl4=40|lvl5=45|lvl6=50|lvl7=55|lvl8=60}}
+}}}}
+|skill4={{SkillInfo
+|name=Unleashed Disease
+|info=
+DoT, spread to other enemies on end
+|trigger=Attack
+|damage=3
+|chance=15
+|duration=3
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Radius|lvl1=125.0|lvl2=150.0|lvl3=175.0|lvl4=200.0|lvl5=225.0|lvl6=250.0|lvl7=275.0|lvl8=300.0}}
+}}}}
+|skill5={{SkillInfo
+|name=Unhealable Boils
+|info=
+Burn
+|trigger=Attack
+|chance=15
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl1=0.9|lvl2=1.2|lvl3=1.5|lvl4=1.8|lvl5=2.1|lvl6=2.4|lvl7=2.7|lvl8=3.0}}
+}}}}
+|skill6={{SkillInfo
+|name=Hail and Fire
+|info=
+Ward: Damage, Burn and Decrease Speed
+|trigger=Ability1
+|target=Location
+|duration=5
+|range=800
+|radius=300
+|buffs=
+<p>
+Speed: -20%
+</p>
+|cooldown=15.0
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Damage|lvl1=3|lvl2=4|lvl3=5|lvl4=6|lvl5=7|lvl6=8|lvl7=9|lvl8=10}}
+}}}}
+|skill7={{SkillInfo
+|name=Locust Swarm
+|info=
+Ward: Damage
+|trigger=Ultimate
+|target=Location
+|duration=5
+|range=750
+|radius=300
+|cooldown=30.0
+|extra=Damage based on Max Health
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Damage|lvl1=3.0%|lvl2=4.0%|lvl3=5.0%|lvl4=6.0%|lvl5=7.0%|lvl6=8.0%|lvl7=9.0%|lvl8=10.0%}}
+}}}}
+}}

@@ -1,0 +1,59 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Error
+|image=[[File:Error.webp]]
+|category=Misc
+|max=25
+|level=785
+}}
+|skill1={{SkillInfo
+|name=Lag
+|info=
+Rubberband
+|trigger=Attack
+|duration=3
+|tickrate=0.5
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Chance|lvl1=21.0%|lvl2=24.0%|lvl3=27.0%|lvl4=30.0%|lvl5=33.0%}}
+}}}}
+|skill2={{SkillInfo
+|name=Corrupt Files
+|info=
+DoT
+|trigger=Attack
+|damage=5
+|duration=3
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Chance|lvl1=30.0%|lvl2=35.0%|lvl3=40.0%|lvl4=45.0%|lvl5=50.0%}}
+}}}}
+|skill3={{SkillInfo
+|name=Hack
+|info=
+Respawn with random health
+|trigger=Death
+|chance=50
+|extra=Reduced HP between 0 and ...
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Health|unit=HP|lvl1=40|lvl2=30|lvl3=20|lvl4=10|lvl5=0}}
+}}}}
+|skill4={{SkillInfo
+|name=Crash Out
+|info=
+Increase Speed
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Speed|lvl1=10.0%|lvl2=15.0%|lvl3=20.0%|lvl4=25.0%|lvl5=30.0%}}
+}}}}
+|skill5={{SkillInfo
+|name=ALT F4
+|info=
+Self destruct
+|trigger=Ultimate
+|target=AoE_Self
+|duration=2
+|explrad=300
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Magnitude|lvl1=300|lvl2=325|lvl3=350|lvl4=375|lvl5=400}}
+}}}}
+}}

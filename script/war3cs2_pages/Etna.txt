@@ -1,0 +1,80 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Etna
+|image=[[File:Etna.webp]]
+|category=Disgaea
+|max=36
+|level=2860
+|weapons=
+MP5-SD<br>
+P2000<br>
+Knife
+|restricted=All
+|team=2
+}}
+|skill1={{SkillInfo
+|name=Prinny Raid
+|info=
+Summon a Prinny
+|trigger=Ability1
+|target=All
+|cooldown=20.0
+|extra=50% Chance to summon Minion instead
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Chance|unit=%|lvl1=40|lvl2=48|lvl3=56|lvl4=64|lvl5=72|lvl6=80}}
+}}}}
+|skill2={{SkillInfo
+|name=Sexy Beam
+|info=
+Blind and Decrease Weapon Damage
+|trigger=Aura
+|buffs=
+<p>
+Decrease: -50%
+</p>
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Radius|lvl1=200.0|lvl2=220.0|lvl3=240.0|lvl4=260.0|lvl5=280.0|lvl6=300.0}}
+}}}}
+|skill3={{SkillInfo
+|name=Dominant Smile
+|info=
+Increase Health and Weapon Damage for Prinnies
+|trigger=Special
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Health|unit=HP|lvl1=20|lvl2=22|lvl3=24|lvl4=26|lvl5=28|lvl6=30}}
+|line2={{LevelUpRow|field=Increase|lvl1=5.0%|lvl2=8.0%|lvl3=11.0%|lvl4=14.0%|lvl5=17.0%|lvl6=20.0%}}
+}}}}
+|skill4={{SkillInfo
+|name=Ecstasy
+|info=
+Gain XP
+|trigger=Kill
+|chance=50
+|extra=Proc chance and amount reduces once the race is maxed
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=XP|unit=XP|lvl1=250|lvl2=300|lvl3=350|lvl4=400|lvl5=450|lvl6=500}}
+}}}}
+|skill5={{SkillInfo
+|name=Sadistic
+|info=
+Increase Weapon Damage on healthy enemies
+|trigger=Attack
+|chance=50
+|extra=Increase is adjusted based on missing health
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Max Increase|lvl1=10.0%|lvl2=14.0%|lvl3=18.0%|lvl4=22.0%|lvl5=26.0%|lvl6=30.0%}}
+}}}}
+|skill6={{SkillInfo
+|name=Chaos Impact
+|info=
+Damage those around you
+|trigger=Ultimate
+|target=AoE_Self
+|radius=250
+|cooldown=30.0
+|extra=Damage between 30 and ...
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Damage|lvl1=30|lvl2=32|lvl3=34|lvl4=36|lvl5=38|lvl6=40}}
+}}}}
+}}

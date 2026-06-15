@@ -1,0 +1,72 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Electric Eagle
+|image=[[File:Electric Eagle.webp]]
+|category=Pet
+|max=35
+|level=1810
+|weapons=
+Knife
+|restricted=All
+|items=
+Boots of Evasion
+|team=1
+|passive=
+<p>
+Health: -34HP<br>
+Flying: True
+</p>
+}}
+|skill1={{SkillInfo
+|name=Evasive Flight
+|info=
+Evade Weapon Damage
+|trigger=Victim
+|levelup={{LevelUpInfo|levels=7
+|line1={{LevelUpRow|field=Chance|lvl1=10.0%|lvl2=15.0%|lvl3=20.0%|lvl4=25.0%|lvl5=30.0%|lvl6=35.0%|lvl7=40.0%}}
+}}}}
+|skill2={{SkillInfo
+|name=Electric Aura
+|info=
+Steal Life and Impale
+|trigger=Aura
+|damage=5
+|duration=3
+|force=280
+|levelup={{LevelUpInfo|levels=7
+|line1={{LevelUpRow|field=Radius|lvl1=140.0|lvl2=150.0|lvl3=160.0|lvl4=170.0|lvl5=180.0|lvl6=190.0|lvl7=200.0}}
+}}}}
+|skill3={{SkillInfo
+|name=Talons
+|info=
+Increase Weapon Damage
+|trigger=Attack
+|chance=50
+|extra=Random Damage between 1 and ...
+|levelup={{LevelUpInfo|levels=7
+|line1={{LevelUpRow|field=Damage|lvl1=3|lvl2=5|lvl3=7|lvl4=9|lvl5=11|lvl6=13|lvl7=15}}
+}}}}
+|skill4={{SkillInfo
+|name=Fast Flight
+|info=
+Increase Speed
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=7
+|line1={{LevelUpRow|field=Speed|lvl1=10.0%|lvl2=12.0%|lvl3=14.0%|lvl4=16.0%|lvl5=18.0%|lvl6=20.0%|lvl7=22.0%}}
+}}}}
+|skill5={{SkillInfo
+|name=Swoop
+|info=
+Charge Enemy and Impale
+|trigger=Ultimate
+|target=Target_Enemy
+|range=1500
+|aim=23
+|force=500
+|cooldown=7.5
+|extra=Random Damage between 5 and ...
+|levelup={{LevelUpInfo|levels=7
+|line1={{LevelUpRow|field=Damage|lvl1=13|lvl2=15|lvl3=17|lvl4=19|lvl5=21|lvl6=23|lvl7=25}}
+}}}}
+}}

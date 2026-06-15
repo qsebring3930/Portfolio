@@ -1,0 +1,86 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Assault Class
+|image=[[File:Assault Class.webp]]
+|category=XCOM
+|max=42
+|level=4675
+|weapons=
+Nova<br>
+P2000<br>
+Grenade
+|restricted=All
+|passive=
+<p>
+Crit Damage: +40.00%
+</p>
+}}
+|skill1={{SkillInfo
+|name=Run & Gun
+|info=
+Increase Speed
+|trigger=Ability1
+|target=Self
+|buffs=
+<p>
+Speed: +40%
+</p>
+|cooldown=15.0
+|extra=Duration is between 2.5 and ...
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl1=3.5|lvl2=4.0|lvl3=4.5|lvl4=5.0|lvl5=5.5|lvl6=6.0}}
+}}}}
+|skill2={{SkillInfo
+|name=Aggression
+|info=
+Increase Crit Chance by Enemies in Cone
+|trigger=Attack
+|cone=60
+|extra=10% per enemy, 30% max
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Range|lvl1=200.0|lvl2=240.0|lvl3=280.0|lvl4=320.0|lvl5=360.0|lvl6=400.0}}
+}}}}
+|skill3={{SkillInfo
+|name=Close and Personal
+|info=
+Increase Crit Chance Decreased by Distance
+|trigger=Attack
+|extra=30% Crit Chance
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Range|lvl1=200.0|lvl2=240.0|lvl3=280.0|lvl4=320.0|lvl5=360.0|lvl6=400.0}}
+}}}}
+|skill4={{SkillInfo
+|name=Rapid Fire
+|info=
+Increase Fire Rate
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Fire Rate|lvl1=5.0%|lvl2=10.0%|lvl3=15.0%|lvl4=20.0%|lvl5=25.0%|lvl6=30.0%}}
+}}}}
+|skill5={{SkillInfo
+|name=Bring 'Em On
+|info=
+Increase Crit Damage by Spotted Enemies
+|trigger=Attack
+|extra=Max is 50%
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Increase|lvl1=2.0%|lvl2=4.0%|lvl3=6.0%|lvl4=8.0%|lvl5=10.0%|lvl6=12.0%}}
+}}}}
+|skill6={{SkillInfo
+|name=Extra Conditioning
+|info=
+Increase Health
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Health|unit=HP|lvl1=10|lvl2=20|lvl3=30|lvl4=40|lvl5=50|lvl6=60}}
+}}}}
+|skill7={{SkillInfo
+|name=Killer Instinct
+|info=
+Increase Crit Chance when Run & Gun is active
+|trigger=Attack
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Chance|lvl1=10.0%|lvl2=18.0%|lvl3=26.0%|lvl4=34.0%|lvl5=42.0%|lvl6=50.0%}}
+}}}}
+}}

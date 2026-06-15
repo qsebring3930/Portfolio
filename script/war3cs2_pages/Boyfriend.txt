@@ -1,0 +1,103 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Boyfriend
+|image=[[File:Boyfriend.webp]]
+|category=Human
+|max=30
+|level=445
+|weapons=
+Nova
+|restricted=All
+|passive=
+<p>
+Partner Radius: 500
+</p>
+}}
+|skill1={{SkillInfo
+|name=Co-dependant / Controlling
+|info=
+<p>
+Increase Health<br>
+Love: Regen HP and Ammo if close to your partner<br>
+Hate: Highlight Ex and Hinder those around him
+</p>
+|trigger=Passive
+|radius=300
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Health|unit=HP|lvl1=15|lvl2=30|lvl3=45|lvl4=60|lvl5=75}}
+|line2={{LevelUpRow|field=Love: Heal|unit=HP|lvl1=1|lvl2=2|lvl3=3|lvl4=4|lvl5=5}}
+|line3={{LevelUpRow|field=Love: Ammo|lvl1=1|lvl2=2|lvl3=3|lvl4=4|lvl5=5}}
+|line4={{LevelUpRow|field=Hate: Hinder|lvl1=5.0%|lvl2=10.0%|lvl3=15.0%|lvl4=20.0%|lvl5=25.0%}}
+}}}}
+|skill2={{SkillInfo
+|name=Unconditional Love / Shut Down
+|info=
+<p>
+Love: Heal Partner if close<br>
+Hate: Destroy ammo
+</p>
+|trigger=Attack
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Love: Heal|lvl1=4.0%|lvl2=8.0%|lvl3=12.0%|lvl4=16.0%|lvl5=20.0%}}
+|line2={{LevelUpRow|field=Hate: Ammo|lvl1=1|lvl2=2|lvl3=3|lvl4=4|lvl5=5}}
+}}}}
+|skill3={{SkillInfo
+|name=Handy / Lazy
+|info=
+<p>
+Love: Upgrade your Partner's weapon<br>
+Hate: Empty Clip of random enemy
+</p>
+|trigger=Ability1
+|target=Special
+|extra=Love: Cooldown 25 sec. Hate: Cooldown 18 sec.
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Love: Duration|unit=sec.|lvl1=10.0|lvl2=12.5|lvl3=15.0|lvl4=17.5|lvl5=20.0}}
+|line2={{LevelUpRow|field=Hate: Radius|lvl1=500.0|lvl2=550.0|lvl3=600.0|lvl4=650.0|lvl5=700.0}}
+}}}}
+|skill4={{SkillInfo
+|name=Protective / Abusive
+|info=
+<p>
+Love: Return Magic Damage dealt to your Partner if you are close<br>
+Hate: Damages Spell Usage to those you control
+</p>
+|trigger=Attack
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Love: Max Damage|lvl1=5|lvl2=10|lvl3=15|lvl4=20|lvl5=25}}
+|line2={{LevelUpRow|field=Hate: Damage|lvl1=3|lvl2=6|lvl3=9|lvl4=12|lvl5=15}}
+}}}}
+|skill5={{SkillInfo
+|name=Confident / Arrogant
+|info=
+<p>
+Love: Double effects of skills with Partner<br>
+Hate: Set health of target to critical level
+</p>
+|trigger=Ability2
+|target=Special
+|range=500
+|extra=Love: Cooldown 20 sec. Hate: Cooldown 30 sec.
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Love: Duration|unit=sec.|lvl1=1.0|lvl2=2.0|lvl3=3.0|lvl4=4.0|lvl5=5.0}}
+|line2={{LevelUpRow|field=Hate: Duration|unit=sec.|lvl1=0.5|lvl2=1.0|lvl3=1.5|lvl4=2.0|lvl5=2.5}}
+}}}}
+|skill6={{SkillInfo
+|name=Stoic / Crash Out
+|info=
+<p>
+Love: Make your Partner Invincible if they are close<br>
+Hate: DoT and Impale your Ex and those you control
+</p>
+|trigger=Ultimate
+|target=Enemies
+|damage=5
+|tickrate=0.5
+|force=300
+|cooldown=30.0
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Love: Duration|unit=sec.|lvl1=1.0|lvl2=1.5|lvl3=2.0|lvl4=2.5|lvl5=3.0}}
+|line2={{LevelUpRow|field=Hate: Duration|unit=sec.|lvl1=0.5|lvl2=1.0|lvl3=1.5|lvl4=2.0|lvl5=2.5}}
+}}}}
+}}

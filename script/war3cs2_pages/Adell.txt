@@ -1,0 +1,87 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Adell
+|image=[[File:Adell.webp]]
+|category=Disgaea
+|max=36
+|level=2860
+|weapons=
+Knife
+|restricted=All
+|passive=
+<p>
+Health: +60HP<br>
+Speed: +30%
+</p>
+}}
+|skill1={{SkillInfo
+|name=Crimson Flame
+|info=
+Cone Splash and Burn
+|trigger=Attack
+|damage=10
+|duration=2
+|cone=40
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Range|lvl0=150.0|lvl1=200.0|lvl2=220.0|lvl3=240.0|lvl4=260.0|lvl5=280.0|lvl6=300.0}}
+}}}}
+|skill2={{SkillInfo
+|name=Soaring Fire
+|info=
+Jump up and damage and burn those around you on landing
+|trigger=Ability1
+|target=AoE_Self
+|duration=3
+|range=300
+|radius=250
+|cooldown=10.0
+|extra=Press again while in the air to charge forward
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Damage|lvl0=5|lvl1=10|lvl2=12|lvl3=14|lvl4=16|lvl5=18|lvl6=20}}
+}}}}
+|skill3={{SkillInfo
+|name=Fair and Square
+|info=
+Decrease all but Knife Damage
+|trigger=Victim
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Decrease|lvl0=5.0%|lvl1=10.0%|lvl2=14.0%|lvl3=18.0%|lvl4=22.0%|lvl5=26.0%|lvl6=30.0%}}
+}}}}
+|skill4={{SkillInfo
+|name=Mercy
+|info=
+Minion
+|trigger=Kill
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Chance|unit=%|lvl0=2|lvl1=5|lvl2=7|lvl3=9|lvl4=11|lvl5=13|lvl6=15}}
+}}}}
+|skill5={{SkillInfo
+|name=Striker Guild
+|info=
+Increase Knife Damage based on Knife Allies
+|trigger=Attack
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Increase|lvl0=2.5%|lvl1=5.0%|lvl2=6.0%|lvl3=7.0%|lvl4=8.0%|lvl5=9.0%|lvl6=10.0%}}
+}}}}
+|skill6={{SkillInfo
+|name=Vulcan Blaze
+|info=
+<p>
+Increase Fire Rate and Speed, Reduce Dealt Knife Damage.<br>
+Next Attack After duration deals extra damage
+</p>
+|trigger=Ultimate
+|target=Self
+|buffs=
+<p>
+Fire Rate: +50%<br>
+Secondary Fire Rate: +25%<br>
+Speed: +50%
+</p>
+|cooldown=20.0
+|extra=Damage During between 40% and 80%. Next Attack between 150% and 200%
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl1=7.0|lvl2=8.0|lvl3=9.0|lvl4=10.0|lvl5=11.0|lvl6=12.0}}
+}}}}
+}}

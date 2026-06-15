@@ -1,0 +1,124 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Crazy Dave
+|image=[[File:Crazy Dave.webp]]
+|category=PVZ
+|max=30
+|level=4775
+|weapons=
+Smoke Grenade
+|restricted=All
+|items=
+Tome of Experience<br>
+Tome of Gambling<br>
+Tome of Opportunity
+|team=1
+|passive=
+<p>
+Health: +10HP per Level
+</p>
+}}
+|skill1={{SkillInfo
+|name=The Sun
+|info=
+Increase Money, Gain Money over Time
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=5|zero=1
+|line1={{LevelUpRow|field=Spawn Money|lvl0=$500|lvl1=$600|lvl2=$700|lvl3=$800|lvl4=$900|lvl5=$1,000}}
+|line2={{LevelUpRow|field=Regen Money|lvl0=$50|lvl1=$75|lvl2=$100|lvl3=$125|lvl4=$150|lvl5=$175}}
+}}}}
+|skill2={{SkillInfo
+|name=Garden Warfare
+|info=
+<p>
+Sacrifice Money to Spawn Chosen Plant<br>
+Totem: Action Based on Plant
+</p>
+|trigger=Ability1
+|target=Location
+|range=800
+|cooldown=5.0
+|extra=Oldest Plant vanishes when limit is reached
+|levelup={{LevelUpInfo|levels=5|zero=1
+|line1={{LevelUpRow|field=Limit|lvl0=1|lvl1=2|lvl2=3|lvl3=4|lvl4=5|lvl5=6}}
+}}}}
+|skill3={{SkillInfo
+|name=Plant Store
+|info=
+Switch Plant
+|trigger=Ability2
+|target=Self
+|cooldown=1.0
+|extra=
+<p>
+<u>Attack:</u><br>
+Normal Pea: Cost: $1,000 - HP: 100 - Damage: 10 - Radius: 500.0 - Info: Attack Enemy<br>
+Ice Pea: Cost: $2,500 - HP: 100 - Damage: 10 - Radius: 500.0 - Duration: 5.0 sec. - Info: Attack and Hinder Enemy by 35%<br>
+Toxic Pea: Cost: $5,000 - HP: 100 - Damage: 5 - Radius: 500.0 - Info: Attack and DoT Enemy for 5 for 2.0 sec.<br>
+Electric Pea: Cost: $7,000 - HP: 100 - Damage: 10 - Radius: 500.0 - Info: Attack Enemy, 33% Chance to bash for 0.5 sec.<br>
+Mini Gun Pea: Cost: $20,000 - HP: 100 - Damage: 5 - Radius: 500.0 - Tickrate: 0.25 sec. - Info: Attack Enemy<br>
+<u>Defense:</u><br>
+Walnut: Cost: $3,000 - HP: 350 - Radius: 250.0 - Info: Healback Plants for 20% of their Max Health<br>
+Chomper: Cost: $4,500 - HP: 350 - Radius: 150.0 - Tickrate: 0.50 sec. - Damage: 5% - Info: Attack Enemy, Insta Kill when below 25%<br>
+<u>Utility:</u><br>
+Sun Flower: Cost: $750 - HP: 50 - Info: Gain $200 over Time<br>
+Cactus: Cost: $3,500 - HP: 100 - Radius: 2000.0 - Damage: 5% of Distance from Ground - Info: Attack Enemy
+</p>
+|levelup={{LevelUpInfo|levels=5|zero=1
+|line1={{LevelUpRow|field=Attack Plant Radius|lvl0=0.0|lvl1=10.0|lvl2=20.0|lvl3=30.0|lvl4=40.0|lvl5=50.0}}
+|line2={{LevelUpRow|field=Defense Plant Defense|unit=HP|lvl0=0|lvl1=20|lvl2=40|lvl3=60|lvl4=80|lvl5=100}}
+|line3={{LevelUpRow|field=Utility Plant Cost Reduction|lvl0=0.0%|lvl1=5.0%|lvl2=10.0%|lvl3=15.0%|lvl4=20.0%|lvl5=25.0%}}
+}}}}
+|skill4={{SkillInfo
+|name=Dave's Taco
+|info=
+<p>
+Heal and Cleanse<br>
+Passive: Regen HP
+</p>
+|trigger=Ability3
+|target=Self
+|tickrate=5
+|cooldown=20.0
+|levelup={{LevelUpInfo|levels=5|zero=1
+|line1={{LevelUpRow|field=Heal|unit=HP|lvl0=10|lvl1=20|lvl2=30|lvl3=40|lvl4=50|lvl5=60}}
+|line2={{LevelUpRow|field=Regen|unit=HP|lvl0=5|lvl1=7|lvl2=9|lvl3=11|lvl4=13|lvl5=15}}
+}}}}
+|skill5={{SkillInfo
+|name=Green Thumb
+|info=
+Heal your Plants
+|trigger=Aura
+|radius=600
+|levelup={{LevelUpInfo|levels=5|zero=1
+|line1={{LevelUpRow|field=Heal|unit=HP|lvl0=1|lvl1=2|lvl2=3|lvl3=4|lvl4=5|lvl5=6}}
+}}}}
+|skill6={{SkillInfo
+|name=Plant Food
+|info=
+Enchant the plant you aim at
+|trigger=Ultimate
+|duration=4
+|cooldown=30.0
+|extra=
+<p>
+<u>Attack:</u><br>
+Normal Pea: Increase Tick Rate to 0.5 sec.<br>
+Ice Pea: Increase Hinder to 70%<br>
+Toxic Pea: Increase DoT Duration to 7.0 sec.<br>
+Electric Pea: Change Bash to Stun for 1.0 sec.<br>
+Mini Gun Pea: Add Knockback Force<br>
+<u>Defense:</u><br>
+Walnut: Add Return Damage between 5 and 10<br>
+Chomper: Swallow Next Enemy Dealing 5% Damage for 5.0 sec.<br>
+<u>Utility:</u><br>
+Sun Flower: Instantly Gain $4,000<br>
+Cactus: Impale with Force 300.0
+</p>
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Attack Plant Duration|unit=sec.|lvl1=1.0|lvl2=2.0|lvl3=3.0|lvl4=4.0|lvl5=5.0}}
+|line2={{LevelUpRow|field=Defense Plant Increase Health|unit=HP|lvl1=20|lvl2=40|lvl3=60|lvl4=80|lvl5=100}}
+|line3={{LevelUpRow|field=Utility Plant Increase Effect|lvl1=5.0%|lvl2=10.0%|lvl3=15.0%|lvl4=20.0%|lvl5=25.0%}}
+}}}}
+}}

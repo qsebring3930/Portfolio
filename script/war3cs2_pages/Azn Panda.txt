@@ -1,0 +1,68 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Azn Panda
+|image=[[File:Azn Panda.webp]]
+|category=Pet
+|max=35
+|level=1810
+|items=
+Boots of Evasion<br>
+Boots of Zephyr
+}}
+|skill1={{SkillInfo
+|name=Fatty
+|info=
+Increase Health, Decrease Speed
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=7
+|line1={{LevelUpRow|field=Health|unit=HP|lvl1=15|lvl2=30|lvl3=40|lvl4=55|lvl5=70|lvl6=85|lvl7=100}}
+|line2={{LevelUpRow|field=Speed|lvl1=5.0%|lvl2=10.0%|lvl3=15.0%|lvl4=20.0%|lvl5=25.0%|lvl6=30.0%|lvl7=35.0%}}
+}}}}
+|skill2={{SkillInfo
+|name=Cutie
+|info=
+Bash
+|trigger=Victim
+|chance=25
+|levelup={{LevelUpInfo|levels=7
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl1=0.9|lvl2=1.0|lvl3=1.1|lvl4=1.2|lvl5=1.3|lvl6=1.4|lvl7=1.5}}
+}}}}
+|skill3={{SkillInfo
+|name=Bamboo Cover
+|info=
+Decrease visibility
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=7
+|line1={{LevelUpRow|field=Visibility|lvl1=8.0%|lvl2=16.0%|lvl3=24.0%|lvl4=32.0%|lvl5=40.0%|lvl6=48.0%|lvl7=56.0%}}
+}}}}
+|skill4={{SkillInfo
+|name=Bear Hug
+|info=
+Shake Screen
+|trigger=Attack
+|chance=33
+|levelup={{LevelUpInfo|levels=7
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl1=1.0|lvl2=2.0|lvl3=3.0|lvl4=4.0|lvl5=5.0|lvl6=6.0|lvl7=7.0}}
+}}}}
+|skill5={{SkillInfo
+|name=Primal Rage
+|info=
+<p>
+Knife Only<br>
+Increase Speed, Gain Weapon Damage Reduction and Slow Resistance.<br>
+Lower Health Increases Duration
+</p>
+|trigger=Ultimate
+|target=Self
+|buffs=
+<p>
+Speed: +80%<br>
+Slow Resistance: +100%<br>
+Weapon Damage: -80%
+</p>
+|cooldown=30.0
+|levelup={{LevelUpInfo|levels=7
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl1=5.0|lvl2=5.5|lvl3=6.0|lvl4=6.5|lvl5=7.0|lvl6=7.5|lvl7=8.0}}
+}}}}
+}}

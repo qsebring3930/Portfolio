@@ -1,0 +1,61 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Dark Archon
+|image=[[File:Dark Archon.webp]]
+|category=SC-Protoss
+|max=24
+|level=1395
+|weapons=
+Smoke Grenade
+|restricted=All
+|team=1
+}}
+|skill1={{SkillInfo
+|name=Mind Control
+|info=
+Control Enemy
+|trigger=Ability1
+|target=Target_Enemy
+|range=750
+|aim=12
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Cooldown|unit=sec.|lvl0=34.0|lvl1=31.0|lvl2=28.0|lvl3=25.0|lvl4=22.0|lvl5=19.0|lvl6=16.0}}
+}}}}
+|skill2={{SkillInfo
+|name=Feedback
+|info=
+Mana Burn
+|trigger=Ability2
+|target=Target_Enemy
+|range=750
+|cooldown=18.0
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl0=3.0|lvl1=3.5|lvl2=4.0|lvl3=4.5|lvl4=5.0|lvl5=5.5|lvl6=6.0}}
+|line2={{LevelUpRow|field=Ability Damage|lvl0=2|lvl1=4|lvl2=6|lvl3=8|lvl4=10|lvl5=12|lvl6=14}}
+|line3={{LevelUpRow|field=Ultimate Damage|lvl0=3|lvl1=6|lvl2=9|lvl3=12|lvl4=15|lvl5=18|lvl6=21}}
+}}}}
+|skill3={{SkillInfo
+|name=Advanced Plasma Shields
+|info=
+Absorb Damage, While Active Return Weapon Damage
+|trigger=Victim
+|extra=Regen Shield after 3.0 sec. Return Damage is 100%
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Health|unit=HP|lvl0=20|lvl1=40|lvl2=60|lvl3=80|lvl4=100|lvl5=120|lvl6=140}}
+|line2={{LevelUpRow|field=Heal|unit=HP|lvl0=1|lvl1=2|lvl2=3|lvl3=4|lvl4=5|lvl5=6|lvl6=7}}
+|line3={{LevelUpRow|field=Chance|lvl0=10.0%|lvl1=15.0%|lvl2=20.0%|lvl3=25.0%|lvl4=30.0%|lvl5=35.0%|lvl6=40.0%}}
+}}}}
+|skill4={{SkillInfo
+|name=Psionic Maelstrom
+|info=
+Damage and Darken Around You
+|trigger=Ultimate
+|target=AoE_Self
+|damage=32
+|duration=4
+|cooldown=25.0
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Radius|lvl1=325.0|lvl2=400.0|lvl3=475.0|lvl4=550.0|lvl5=625.0|lvl6=700.0}}
+}}}}
+}}

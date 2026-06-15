@@ -1,0 +1,60 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Druid of the Talon
+|image=[[File:Druid of the Talon.webp]]
+|category=WC3-Elf
+|max=32
+|level=130
+|weapons=
+Knife<br>
+Five-Seven
+|restricted=All
+}}
+|skill1={{SkillInfo
+|name=Druid Training
+|info=
+Increase Health
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Health|unit=HP|lvl1=15|lvl2=20|lvl3=25|lvl4=30|lvl5=35|lvl6=40|lvl7=45|lvl8=50}}
+}}}}
+|skill2={{SkillInfo
+|name=Faerie Fire
+|info=
+Highlight and Increase Damage Received
+|trigger=Ability1
+|target=Target_Enemy
+|duration=8
+|range=750
+|buffs=
+<p>
+Weapon Damage: +25%
+</p>
+|cooldown=10.0
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Radius|lvl1=125.0|lvl2=150.0|lvl3=175.0|lvl4=200.0|lvl5=225.0|lvl6=250.0|lvl7=275.0|lvl8=300.0}}
+}}}}
+|skill3={{SkillInfo
+|name=Cyclone
+|info=
+Impale Area
+|trigger=Ability2
+|target=Location
+|damage=15
+|range=1000
+|radius=200
+|cooldown=20.0
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl1=5.0|lvl2=6.0|lvl3=7.0|lvl4=8.0|lvl5=9.0|lvl6=10.0|lvl7=11.0|lvl8=12.0}}
+}}}}
+|skill4={{SkillInfo
+|name=Crow Form
+|info=
+Transform into Crow
+|trigger=Ultimate
+|target=Self
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Cooldown|unit=sec.|lvl1=5.5|lvl2=5.0|lvl3=4.5|lvl4=4.0|lvl5=3.5|lvl6=3.0|lvl7=2.5|lvl8=2.0}}
+}}}}
+}}

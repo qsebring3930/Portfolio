@@ -1,0 +1,53 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Far Seer
+|image=[[File:Far Seer.webp]]
+|category=WC3-Orc
+|max=32
+|level=90
+}}
+|skill1={{SkillInfo
+|name=Far Sight
+|info=
+Track Enemies
+|trigger=Aura
+|tickrate=4
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Radius|lvl1=800.0|lvl2=900.0|lvl3=1000.0|lvl4=1100.0|lvl5=1200.0|lvl6=1300.0|lvl7=1400.0|lvl8=1500.0}}
+}}}}
+|skill2={{SkillInfo
+|name=Chain Lightning
+|info=
+Damage Enemies around you
+|trigger=Ability1
+|target=AoE_Self
+|damage=20
+|cooldown=20.0
+|extra=Radius reduces by 25 each jump
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Targets|lvl1=1|lvl2=2|lvl3=3|lvl4=4|lvl5=5|lvl6=6|lvl7=7|lvl8=8}}
+|line2={{LevelUpRow|field=Radius|lvl1=325.0|lvl2=350.0|lvl3=375.0|lvl4=400.0|lvl5=425.0|lvl6=450.0|lvl7=475.0|lvl8=500.0}}
+}}}}
+|skill3={{SkillInfo
+|name=Feral Spirit
+|info=
+Summon Wolf
+|trigger=Ability2
+|target=Random_Ally
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Cooldown|unit=sec.|lvl1=40.0|lvl2=38.0|lvl3=36.0|lvl4=34.0|lvl5=32.0|lvl6=30.0|lvl7=28.0|lvl8=26.0}}
+}}}}
+|skill4={{SkillInfo
+|name=Earthquake
+|info=
+Shake Area
+|trigger=Ultimate
+|target=Self
+|damage=10
+|duration=6
+|radius=400
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Cooldown|unit=sec.|lvl1=35.0|lvl2=32.0|lvl3=29.0|lvl4=26.0|lvl5=23.0|lvl6=20.0|lvl7=17.0|lvl8=15.0}}
+}}}}
+}}

@@ -1,0 +1,64 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Counter-Sniper
+|image=[[File:Counter-Sniper.webp]]
+|category=Counter-Strike
+|max=40
+|level=575
+|weapons=
+SG 553<br>
+CZ75-Auto<br>
+Smoke Grenade<br>
+Decoy Grenade
+|restricted=All
+}}
+|skill1={{SkillInfo
+|name=Stealth and Tactics
+|info=
+Equip Rifle to Decrease Visibility otherwise Increase Speed
+|trigger=Special
+|levelup={{LevelUpInfo|levels=10
+|line1={{LevelUpRow|field=Visibility|lvl1=5.0%|lvl2=10.0%|lvl3=15.0%|lvl4=20.0%|lvl5=25.0%|lvl6=30.0%|lvl7=35.0%|lvl8=40.0%|lvl9=45.0%|lvl10=50.0%}}
+|line2={{LevelUpRow|field=Speed|lvl1=3.0%|lvl2=6.0%|lvl3=9.0%|lvl4=12.0%|lvl5=15.0%|lvl6=18.0%|lvl7=21.0%|lvl8=24.0%|lvl9=27.0%|lvl10=30.0%}}
+}}}}
+|skill2={{SkillInfo
+|name=Armored Tactical Vest
+|info=
+Decrease Sniper Damage, Decrease Headshot Damage further
+|trigger=Victim
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Decrease|lvl1=10.0%|lvl2=20.0%|lvl3=30.0%|lvl4=40.0%|lvl5=50.0%}}
+|line2={{LevelUpRow|field=Head Decrease|lvl1=50.0%|lvl2=60.0%|lvl3=70.0%|lvl4=80.0%|lvl5=90.0%}}
+}}}}
+|skill3={{SkillInfo
+|name=Weapon Training
+|info=
+Increase Rifle Damage based on distance, Increase Pistol Clip Size
+|trigger=Attack
+|extra=Maximum Modifier: 50%
+|levelup={{LevelUpInfo|levels=10
+|line1={{LevelUpRow|field=Distance Multiplier|lvl1=9,500.0%|lvl2=9,000.0%|lvl3=8,500.0%|lvl4=8,000.0%|lvl5=7,500.0%|lvl6=7,000.0%|lvl7=6,500.0%|lvl8=6,000.0%|lvl9=5,500.0%|lvl10=5,000.0%}}
+|line2={{LevelUpRow|field=Clip|lvl1=1|lvl2=2|lvl3=3|lvl4=4|lvl5=5|lvl6=6|lvl7=7|lvl8=8|lvl9=9|lvl10=10}}
+}}}}
+|skill4={{SkillInfo
+|name=Locate Snipers
+|info=
+Track Snipers who Zoom or Fire
+|trigger=Aura
+|duration=3
+|levelup={{LevelUpInfo|levels=10
+|line1={{LevelUpRow|field=Radius|lvl1=1600.0|lvl2=1700.0|lvl3=1800.0|lvl4=1900.0|lvl5=2000.0|lvl6=2100.0|lvl7=2200.0|lvl8=2300.0|lvl9=2400.0|lvl10=2500.0}}
+}}}}
+|skill5={{SkillInfo
+|name=Disable Scopes
+|info=
+Disable Scoping
+|trigger=Ultimate
+|target=Enemies
+|duration=5
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Chance|unit=%|lvl1=55|lvl2=60|lvl3=65|lvl4=70|lvl5=75}}
+|line2={{LevelUpRow|field=Cooldown|unit=sec.|lvl1=30.0|lvl2=27.5|lvl3=25.0|lvl4=22.5|lvl5=20.0}}
+}}}}
+}}

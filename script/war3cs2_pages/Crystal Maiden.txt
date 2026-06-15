@@ -1,0 +1,80 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Crystal Maiden
+|image=[[File:Crystal Maiden.webp]]
+|category=DotA-Magic
+|max=32
+|level=2540
+|weapons=
+Tec-9
+|restricted=All
+|team=2
+|passive=
+<p>
+Speed: -10%<br>
+Dealt Damage: -20%
+</p>
+}}
+|skill1={{SkillInfo
+|name=Crystal Nova
+|info=
+Damage and Hinder Enemies
+|trigger=Ability1
+|target=Location
+|duration=4
+|range=700
+|radius=400
+|cooldown=20.0
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Damage|lvl1=6|lvl2=9|lvl3=12|lvl4=15|lvl5=18|lvl6=21|lvl7=24|lvl8=27}}
+|line2={{LevelUpRow|field=Hinder|lvl1=5.0%|lvl2=10.0%|lvl3=15.0%|lvl4=20.0%|lvl5=25.0%|lvl6=30.0%|lvl7=35.0%|lvl8=40.0%}}
+}}}}
+|skill2={{SkillInfo
+|name=Frostbite
+|info=
+Bash and DoT
+|trigger=Ability2
+|target=Target_Enemy
+|damage=5
+|tickrate=0.5
+|range=600
+|cooldown=15.0
+|extra=Damage doubled on summons
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl1=0.5|lvl2=1.0|lvl3=1.5|lvl4=2.0|lvl5=2.5|lvl6=3.0|lvl7=3.5|lvl8=4.0}}
+}}}}
+|skill3={{SkillInfo
+|name=Crystal Clone
+|info=
+<p>
+Teleport Backwards, Leave Clone Behind<br>
+Clone Casts Frostbite when it expires
+</p>
+|trigger=Ability3
+|target=Location
+|duration=6
+|range=500
+|cooldown=20.0
+|extra=Clone has your health
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Radius|lvl1=260.0|lvl2=280.0|lvl3=300.0|lvl4=320.0|lvl5=340.0|lvl6=360.0|lvl7=380.0|lvl8=400.0}}
+}}}}
+|skill4={{SkillInfo
+|name=Freezing Field
+|info=
+Channel to Spawn Random Magic Explosions Around you that Hinder
+|trigger=Ultimate
+|target=AoE_Self
+|quantity=6
+|duration=10
+|tickrate=0.5
+|radius=800
+|explrad=150
+|cooldown=30.0
+|extra=Press again to cancel early
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Explosion Damage|lvl1=16|lvl2=18|lvl3=20|lvl4=22|lvl5=24|lvl6=26|lvl7=28|lvl8=30}}
+|line2={{LevelUpRow|field=Hinder|lvl1=5.0%|lvl2=10.0%|lvl3=15.0%|lvl4=20.0%|lvl5=25.0%|lvl6=30.0%|lvl7=35.0%|lvl8=40.0%}}
+}}}}
+}}

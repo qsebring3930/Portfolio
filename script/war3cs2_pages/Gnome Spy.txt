@@ -1,0 +1,78 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Gnome Spy
+|image=[[File:Gnome Spy.webp]]
+|category=Hero
+|max=42
+|level=1500
+|weapons=
+MP9<br>
+USP-S
+|restricted=All
+|items=
+Boots of Evasion
+}}
+|skill1={{SkillInfo
+|name=Short Steps
+|info=
+Increase Speed
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Speed|lvl1=15.0%|lvl2=20.0%|lvl3=25.0%|lvl4=30.0%|lvl5=35.0%|lvl6=40.0%}}
+}}}}
+|skill2={{SkillInfo
+|name=Small Target
+|info=
+Evade Weapon Damage
+|trigger=Victim
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Chance|lvl1=20.0%|lvl2=22.0%|lvl3=24.0%|lvl4=26.0%|lvl5=28.0%|lvl6=30.0%}}
+}}}}
+|skill3={{SkillInfo
+|name=Blinding Shot
+|info=
+Blind
+|trigger=Attack
+|duration=2
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Chance|lvl1=22.0%|lvl2=24.0%|lvl3=26.0%|lvl4=28.0%|lvl5=30.0%|lvl6=32.0%}}
+}}}}
+|skill4={{SkillInfo
+|name=Drugged Bullet
+|info=
+Drug
+|trigger=Attack
+|duration=2
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Chance|lvl1=22.0%|lvl2=24.0%|lvl3=26.0%|lvl4=28.0%|lvl5=30.0%|lvl6=32.0%}}
+}}}}
+|skill5={{SkillInfo
+|name=Reveal Enemy
+|info=
+Reveal
+|trigger=Attack
+|duration=2
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Chance|lvl1=30.0%|lvl2=40.0%|lvl3=50.0%|lvl4=60.0%|lvl5=70.0%|lvl6=80.0%}}
+}}}}
+|skill6={{SkillInfo
+|name=Discovered
+|info=
+Hide in Smoke
+|trigger=Victim
+|chance=33
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl1=1.5|lvl2=2.0|lvl3=2.5|lvl4=3.0|lvl5=3.5|lvl6=4.0}}
+}}}}
+|skill7={{SkillInfo
+|name=Hide
+|info=
+Turn Into a Random Object
+|trigger=Ultimate
+|target=Self
+|cooldown=5.0
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Chance|unit=%|lvl1=50|lvl2=60|lvl3=70|lvl4=80|lvl5=90|lvl6=100}}
+}}}}
+}}

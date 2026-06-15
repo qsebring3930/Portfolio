@@ -1,0 +1,65 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Gengar
+|image=[[File:Gengar.webp]]
+|category=Pokémon - Psychic
+|max=25
+|level=705
+}}
+|skill1={{SkillInfo
+|name=Levitate
+|info=
+Decrease Gravity. Increase Gravity Resistance and Movement Skill Immunity
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Gravity|lvl1=8.0%|lvl2=16.0%|lvl3=24.0%|lvl4=32.0%|lvl5=40.0%}}
+|line2={{LevelUpRow|field=Gravity Resistance|lvl1=20.0%|lvl2=40.0%|lvl3=60.0%|lvl4=80.0%|lvl5=100.0%}}
+|line3={{LevelUpRow|field=Move Immunity|unit=%|lvl1=20|lvl2=40|lvl3=60|lvl4=80|lvl5=100}}
+}}}}
+|skill2={{SkillInfo
+|name=Lick
+|info=
+Decrease Speed, Chance to block spellcasting and bash
+|trigger=Attack
+|duration=3
+|buffs=
+<p>
+Speed: -34%
+</p>
+|extra=33% to block a spell for 3.0 sec. and Bash for 1.0 sec.
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Chance|lvl1=6.0%|lvl2=12.0%|lvl3=18.0%|lvl4=24.0%|lvl5=30.0%}}
+}}}}
+|skill3={{SkillInfo
+|name=Hypnosis
+|info=
+Drowsy
+|trigger=Attack
+|extra=Sleep lasts for 3.0 sec.
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Chance|lvl1=22.0%|lvl2=33.0%|lvl3=44.0%|lvl4=55.0%|lvl5=66.0%}}
+|line2={{LevelUpRow|field=Drowsy|lvl1=5|lvl2=10|lvl3=15|lvl4=20|lvl5=25}}
+|line3={{LevelUpRow|field=DrowsyDur|unit=sec.|lvl1=3.0|lvl2=4.0|lvl3=5.0|lvl4=6.0|lvl5=7.0}}
+}}}}
+|skill4={{SkillInfo
+|name=Night Shade
+|info=
+Increase Weapon Damage
+|trigger=Attack
+|extra=Damage based on level
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Chance|lvl1=3.0%|lvl2=6.0%|lvl3=9.0%|lvl4=12.0%|lvl5=15.0%}}
+}}}}
+|skill5={{SkillInfo
+|name=Dream Eater
+|info=
+Damage all Drowsy and Sleeping Enemies. Heal based on damage dealt
+|trigger=Ultimate
+|target=Enemies
+|extra=Heals for 50% damage dealt
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Damage|lvl1=13|lvl2=16|lvl3=19|lvl4=22|lvl5=25}}
+|line2={{LevelUpRow|field=Cooldown|unit=sec.|lvl1=22.0|lvl2=20.0|lvl3=18.0|lvl4=16.0|lvl5=14.0}}
+}}}}
+}}

@@ -1,0 +1,92 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Fire Golem
+|image=[[File:Fire Golem.webp]]
+|category=Golem
+|max=48
+|level=1085
+|weapons=
+Knife
+|restricted=All
+|items=
+Boots of Evasion<br>
+Boots of Zephyr
+|team=1
+}}
+|skill1={{SkillInfo
+|name=Fiery Core
+|info=
+Increase Health, Speed
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Health|unit=HP|lvl0=50|lvl1=100|lvl2=140|lvl3=180|lvl4=220|lvl5=260|lvl6=300}}
+|line2={{LevelUpRow|field=Speed|lvl0=10.0%|lvl1=20.0%|lvl2=24.0%|lvl3=28.0%|lvl4=32.0%|lvl5=36.0%|lvl6=40.0%}}
+}}}}
+|skill2={{SkillInfo
+|name=Molten Heart
+|info=
+Reduce Gun Damage
+|trigger=Victim
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Reduce|lvl0=10.0%|lvl1=15.0%|lvl2=18.0%|lvl3=21.0%|lvl4=24.0%|lvl5=27.0%|lvl6=30.0%}}
+}}}}
+|skill3={{SkillInfo
+|name=Enflame
+|info=
+Burn
+|trigger=Attack
+|chance=25
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl0=2.0|lvl1=2.5|lvl2=3.0|lvl3=3.5|lvl4=4.0|lvl5=4.5|lvl6=5.0}}
+}}}}
+|skill4={{SkillInfo
+|name=Scorched Earth
+|info=
+Ward: Damage and Burn
+|trigger=Ability1
+|target=Self
+|duration=6
+|radius=150
+|cooldown=10.0
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Damage|lvl0=4|lvl1=5|lvl2=6|lvl3=7|lvl4=8|lvl5=9|lvl6=10}}
+}}}}
+|skill5={{SkillInfo
+|name=Fiery Touch
+|info=
+Increase Damage
+|trigger=Attack
+|chance=25
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Increase|lvl0=15.0%|lvl1=18.0%|lvl2=21.0%|lvl3=24.0%|lvl4=27.0%|lvl5=30.0%|lvl6=33.0%}}
+}}}}
+|skill6={{SkillInfo
+|name=Scalding to the touch
+|info=
+Reduce Knife Damage, Return Knife Damage
+|trigger=Victim
+|extra=Return damage between 1 and ...
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Reduce|lvl0=10.0%|lvl1=15.0%|lvl2=18.0%|lvl3=21.0%|lvl4=24.0%|lvl5=27.0%|lvl6=30.0%}}
+|line2={{LevelUpRow|field=Damage|lvl0=5|lvl1=10|lvl2=12|lvl3=14|lvl4=16|lvl5=18|lvl6=20}}
+}}}}
+|skill7={{SkillInfo
+|name=Melt Weapon
+|info=
+Disarm
+|trigger=Attack
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Chance|lvl0=7.0%|lvl1=10.0%|lvl2=13.0%|lvl3=16.0%|lvl4=19.0%|lvl5=22.0%|lvl6=25.0%}}
+}}}}
+|skill8={{SkillInfo
+|name=Ambient Heat
+|info=
+Damage Enemies
+|trigger=Aura
+|tickrate=2
+|radius=150
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Damage|lvl0=9|lvl1=10|lvl2=11|lvl3=12|lvl4=13|lvl5=14|lvl6=15}}
+}}}}
+}}

@@ -1,0 +1,126 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Doctor Eggman
+|image=[[File:Doctor Eggman.webp]]
+|category=Sonic
+|max=36
+|level=5195
+|weapons=
+Glock-18<br>
+P2000<br>
+P250<br>
+Five-Seven<br>
+Desert Eagle<br>
+R8 Revolver<br>
+Dual Berettas<br>
+CZ75-Auto<br>
+PP-Bizon<br>
+Nova<br>
+AWP<br>
+Knife<br>
+Grenade
+|restricted=All
+|items=
+Tome of Experience<br>
+Tome of Gambling<br>
+Tome of Opportunity
+|team=2
+}}
+|skill1={{SkillInfo
+|name=Base Income
+|info=
+Gain Money
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=7|zero=1
+|line1={{LevelUpRow|field=Money|lvl0=$50|lvl1=$100|lvl2=$150|lvl3=$200|lvl4=$250|lvl5=$300|lvl6=$350|lvl7=$400}}
+}}}}
+|skill2={{SkillInfo
+|name=Gadgets
+|info=
+Better Weapon on Foot
+|trigger=Passive
+|extra=Use Settings to change default behavior
+|levelup={{LevelUpInfo|levels=7|zero=1
+|line1={{LevelUpRow|field=Weapon|lvl0=Glock-18|lvl1=P2000|lvl2=P250|lvl3=Five-Seven|lvl4=Desert Eagle|lvl5=R8 Revolver|lvl6=Dual Berettas|lvl7=CZ75-Auto}}
+}}}}
+|skill3={{SkillInfo
+|name=Bulky
+|info=
+<p>
+Passive: Increase Health<br>
+Victim: Decrease Weapon Damage on Foot
+</p>
+|trigger=Special
+|levelup={{LevelUpInfo|levels=7
+|line1={{LevelUpRow|field=Health|unit=HP|lvl1=10|lvl2=20|lvl3=30|lvl4=40|lvl5=50|lvl6=60|lvl7=70}}
+|line2={{LevelUpRow|field=Decrease|lvl1=5.0%|lvl2=10.0%|lvl3=15.0%|lvl4=20.0%|lvl5=25.0%|lvl6=30.0%|lvl7=35.0%}}
+}}}}
+|skill4={{SkillInfo
+|name=Flee / Swap Weapon / Thruster
+|info=
+<p>
+Ability changes depending on what Robot you are using<br>
+Flee (On Foot): Increase Speed but No Weapons<br>
+Swap Weapon (In Mech): Swap Between Gatling Gun, Laser and Cluster Rockets Primary<br>
+Thruster (In Pod): Leap Forward
+</p>
+|trigger=Ability1
+|target=Self
+|extra=
+<p>
+<u>Flee:</u><br>
+Speed: +80%, Duration: 4.0 sec.<br>
+<u>Swap Weapon:</u><br>
+Gatling Gun: Bizon with Decreased Gun Damage: -20%<br>
+Laser: AWP with Increase Gun Damage by Penetration: +10<br>
+Clurster Rockets: Nova<br>
+<u>Thruster:</u><br>
+Range: 400, Force: 2.0
+</p>
+|levelup={{LevelUpInfo|levels=7
+|line1={{LevelUpRow|field=Cooldown|unit=sec.|lvl1=18.0|lvl2=16.0|lvl3=14.0|lvl4=12.0|lvl5=10.0|lvl6=8.0|lvl7=6.0}}
+}}}}
+|skill5={{SkillInfo
+|name=Egg Laser / Egg Bomb / Egg Missile
+|info=
+<p>
+Sacrifice Money to use an ability depending on what Robot you are using<br>
+Egg Laser (On Foot): Damage Area<br>
+Egg Bomb (In Mech): Launch Bomb, Impact: Explodes<br>
+Egg Missile (In Pod): Launch Missile, Impact: Explodes
+</p>
+|trigger=Ability2
+|target=Special
+|cooldown=5.0
+|extra=
+<p>
+<u>Egg Laser:</u><br>
+Range: 750, Radius: 250, Damage: 25<br>
+<u>Egg Bomb:</u><br>
+Force: 0.75, Damage: 60, Radius: 300<br>
+<u>Egg Missile:</u><br>
+Force: 1.75, Damage: 40, Radius: 200
+</p>
+|levelup={{LevelUpInfo|levels=7
+|line1={{LevelUpRow|field=Money|lvl1=$4,200|lvl2=$4,000|lvl3=$3,800|lvl4=$3,600|lvl5=$3,400|lvl6=$3,200|lvl7=$3,000}}
+}}}}
+|skill6={{SkillInfo
+|name=Enter Robot
+|info=
+Switch Between Robots
+|trigger=Ultimate
+|target=Self
+|cooldown=15.0
+|extra=
+<p>
+<u>On Foot:</u><br>
+Need $10,000 to get in a robot when on foot.<br>
+<u>In Mech:</u><br>
+Max HP: +100HP, Size: +20%<br>
+Decrease Received Weapon Damage: 30%<br>
+<u>In Pod:</u><br>
+Max HP: +50HP
+</p>
+}}
+}}

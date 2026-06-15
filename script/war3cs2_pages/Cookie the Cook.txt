@@ -1,0 +1,103 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Cookie the Cook
+|image=[[File:Cookie the Cook.webp]]
+|category=WC3-Murloc
+|max=36
+|level=240
+|weapons=
+Knife
+|restricted=All
+|team=2
+|passive=
+<p>
+Size: -40%
+</p>
+}}
+|skill1={{SkillInfo
+|name=Cookie's Tablecloth
+|info=
+Increase Health, Speed
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Health|unit=HP|lvl0=5|lvl1=10|lvl2=18|lvl3=26|lvl4=34|lvl5=42|lvl6=50}}
+|line2={{LevelUpRow|field=Speed|lvl0=5.0%|lvl1=10.0%|lvl2=12.0%|lvl3=14.0%|lvl4=16.0%|lvl5=18.0%|lvl6=20.0%}}
+}}}}
+|skill2={{SkillInfo
+|name=Pack Tactics
+|info=
+Decrease Gravity per Ally Murlocs
+|trigger=Aura
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Gravity|lvl0=1.0%|lvl1=3.0%|lvl2=4.0%|lvl3=5.0%|lvl4=6.0%|lvl5=7.0%|lvl6=8.0%}}
+}}}}
+|skill3={{SkillInfo
+|name=Cookie's Tenderizer
+|info=
+Increase Knife Damage
+|trigger=Attack
+|buffs=
+<p>
+Damage: +100%
+</p>
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Chance|lvl0=10.0%|lvl1=15.0%|lvl2=20.0%|lvl3=25.0%|lvl4=30.0%|lvl5=35.0%|lvl6=40.0%}}
+}}}}
+|skill4={{SkillInfo
+|name=Acid Splash
+|info=
+Throw DoT Grenade
+|trigger=Ability1
+|target=Self
+|damage=3
+|expldmg=70
+|tickrate=0.4
+|explrad=350
+|cooldown=15.0
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl0=0.8|lvl1=1.2|lvl2=1.6|lvl3=2.0|lvl4=2.4|lvl5=2.8|lvl6=3.2}}
+}}}}
+|skill5={{SkillInfo
+|name=Cookie's Stirring Rod
+|info=
+Add Random Effect to Cookie's Cooking
+|trigger=Ability2
+|target=Self
+|extra=
+<p>
+<u>Effects:</u><br>
+Damage<br>
+Slow<br>
+DoT<br>
+Smoke<br>
+Speed<br>
+Blind<br>
+Polymorph<br>
+Heal<br>
+Invisible<br>
+Summon Skeleton<br>
+Summon Murloc<br>
+Silence<br>
+Bash<br>
+No Friction<br>
+Impale<br>
+Spin<br>
+Switch Locations<br>
+Drug
+</p>
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Cooldown|unit=sec.|lvl0=12.0|lvl1=10.0|lvl2=9.0|lvl3=8.0|lvl4=7.0|lvl5=6.0|lvl6=5.0}}
+}}}}
+|skill6={{SkillInfo
+|name=Cookie's Cooking
+|info=
+Release all Effects, Increases Capacity
+|trigger=Ultimate
+|target=AoE_Self
+|radius=750
+|cooldown=10.0
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Quantity|lvl0=1|lvl1=2|lvl2=3|lvl3=4|lvl4=5|lvl5=6|lvl6=7}}
+}}}}
+}}

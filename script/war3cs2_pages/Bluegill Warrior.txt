@@ -1,0 +1,78 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Bluegill Warrior
+|image=[[File:Bluegill Warrior.webp]]
+|category=WC3-Murloc
+|max=36
+|level=240
+|weapons=
+Knife
+|restricted=All
+|items=
+Sock of Feathers
+|passive=
+<p>
+Size: -25%<br>
+Alt Weapon Fire: disabled
+</p>
+}}
+|skill1={{SkillInfo
+|name=Toughened Scales
+|info=
+Increase Health, Decrease Speed
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Health|unit=HP|lvl0=50|lvl1=100|lvl2=120|lvl3=140|lvl4=160|lvl5=180|lvl6=200}}
+|line2={{LevelUpRow|field=Speed|lvl0=0.0%|lvl1=2.5%|lvl2=5.0%|lvl3=7.5%|lvl4=10.0%|lvl5=12.5%|lvl6=15.0%}}
+}}}}
+|skill2={{SkillInfo
+|name=Pack Tactics
+|info=
+Increase Speed per Ally Murlocs
+|trigger=Aura
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Speed|lvl0=1.5%|lvl1=2.0%|lvl2=2.4%|lvl3=2.8%|lvl4=3.2%|lvl5=3.6%|lvl6=4.0%}}
+}}}}
+|skill3={{SkillInfo
+|name=Heavy Strike
+|info=
+Increase Knife Damage, Decrease Fire Rate
+|trigger=Attack
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Increase|lvl0=10.0%|lvl1=20.0%|lvl2=30.0%|lvl3=40.0%|lvl4=50.0%|lvl5=60.0%|lvl6=70.0%}}
+|line2={{LevelUpRow|field=Fire Rate|lvl0=0.0%|lvl1=5.0%|lvl2=10.0%|lvl3=15.0%|lvl4=20.0%|lvl5=25.0%|lvl6=30.0%}}
+}}}}
+|skill4={{SkillInfo
+|name=Hamstring
+|info=
+Slow
+|trigger=Attack
+|duration=3
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Speed|lvl0=10.0%|lvl1=20.0%|lvl2=24.0%|lvl3=28.0%|lvl4=32.0%|lvl5=36.0%|lvl6=40.0%}}
+}}}}
+|skill5={{SkillInfo
+|name=Stone Throw
+|info=
+Throw rock, Bash
+|trigger=Ability1
+|target=Object
+|duration=1
+|force=1
+|cooldown=6.0
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Damage|lvl0=15|lvl1=20|lvl2=24|lvl3=28|lvl4=32|lvl5=36|lvl6=40}}
+}}}}
+|skill6={{SkillInfo
+|name=Lunge
+|info=
+Push to where you aim
+|trigger=Ultimate
+|target=Self
+|range=250
+|force=4
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Cooldown|unit=sec.|lvl1=15.0|lvl2=14.0|lvl3=13.0|lvl4=12.0|lvl5=11.0|lvl6=10.0}}
+}}}}
+}}

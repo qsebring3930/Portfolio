@@ -1,0 +1,62 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Chen
+|image=[[File:Chen.webp]]
+|category=DotA-Magic
+|max=32
+|level=2540
+|team=1
+}}
+|skill1={{SkillInfo
+|name=Penitence
+|info=
+Slow and Highlight
+|trigger=Attack
+|duration=5
+|cooldown=10.0
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Slow|lvl1=12.5%|lvl2=15.0%|lvl3=17.5%|lvl4=20.0%|lvl5=22.5%|lvl6=25.0%|lvl7=27.5%|lvl8=30.0%}}
+}}}}
+|skill2={{SkillInfo
+|name=Holy Persuasion
+|info=
+Control Minions in Combat. Increase Minion Max Health, Weapon Damage and Speed
+|trigger=Special
+|cooldown=10.0
+|extra=Works both as attack and victim skill.
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Health|unit=HP|lvl1=9|lvl2=12|lvl3=15|lvl4=18|lvl5=21|lvl6=24|lvl7=27|lvl8=30}}
+|line2={{LevelUpRow|field=Damage|lvl1=1|lvl2=2|lvl3=3|lvl4=4|lvl5=5|lvl6=6|lvl7=7|lvl8=8}}
+|line3={{LevelUpRow|field=Speed|lvl1=4.0%|lvl2=7.0%|lvl3=10.0%|lvl4=13.0%|lvl5=16.0%|lvl6=19.0%|lvl7=22.0%|lvl8=25.0%}}
+}}}}
+|skill3={{SkillInfo
+|name=Divine Favor
+|info=
+Give Ally Regen HP, Increase Restoration, Reduce Weapon Damage
+|trigger=Ability1
+|target=Target_Ally
+|duration=5
+|range=600
+|buffs=
+<p>
+Restoration: +20%
+</p>
+|cooldown=15.0
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Heal|lvl1=1|lvl2=2|lvl3=2|lvl4=3|lvl5=3|lvl6=4|lvl7=4|lvl8=5}}
+|line2={{LevelUpRow|field=Reduce|lvl1=2.5%|lvl2=5.0%|lvl3=7.5%|lvl4=10.0%|lvl5=12.5%|lvl6=15.0%|lvl7=17.5%|lvl8=20.0%}}
+}}}}
+|skill4={{SkillInfo
+|name=Hand of God
+|info=
+Heal all Allies and give Regen HP
+|trigger=Ultimate
+|target=Allies
+|heal=3
+|duration=10
+|cooldown=40.0
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Heal|unit=HP|lvl1=10|lvl2=12|lvl3=15|lvl4=18|lvl5=21|lvl6=24|lvl7=27|lvl8=30}}
+}}}}
+}}

@@ -1,0 +1,79 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Ghost
+|image=[[File:Ghost.webp]]
+|category=SC-Terran
+|max=30
+|level=1215
+|weapons=
+SSG 08<br>
+Smoke Grenade
+|restricted=All
+}}
+|skill1={{SkillInfo
+|name=Steady Targeting
+|info=
+Increase Weapon Damage on Scope
+|trigger=Attack
+|quantity=5
+|extra=Damage increased the longer scoped. +10% Weapon Damage per charge.
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl1=1.0|lvl2=0.9|lvl3=0.8|lvl4=0.7|lvl5=0.6|lvl6=0.5}}
+}}}}
+|skill2={{SkillInfo
+|name=EMP Shot
+|info=
+Silence and Dispel in Area. Damage Summons.
+|trigger=Ability1
+|target=Location
+|damage=40
+|range=1500
+|radius=400
+|cooldown=15.0
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl1=1.0|lvl2=1.8|lvl3=2.6|lvl4=3.4|lvl5=4.2|lvl6=5.0}}
+}}}}
+|skill3={{SkillInfo
+|name=Crius Suit Cloaking
+|info=
+Toggle Low Visibility
+|trigger=Ability2
+|target=Self
+|buffs=
+<p>
+Visibility: -80%
+</p>
+|cooldown=20.0
+|extra=Halves Duration on Shots Fired. Press again to end early and shorten cooldown.
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl1=10.0|lvl2=11.0|lvl3=12.0|lvl4=13.0|lvl5=14.0|lvl6=15.0}}
+}}}}
+|skill4={{SkillInfo
+|name=Ocular Implants
+|info=
+Highlight
+|trigger=Attack
+|duration=3
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Chance|lvl1=20.0%|lvl2=30.0%|lvl3=40.0%|lvl4=50.0%|lvl5=60.0%|lvl6=70.0%}}
+}}}}
+|skill5={{SkillInfo
+|name=Nuclear Strike
+|info=
+Explode Area leaves Ward, Ward: DoT and damaged vision
+|trigger=Ultimate
+|target=Location
+|range=2000
+|radius=500
+|explrad=600
+|cooldown=60.0
+|extra=
+<p>
+Ward: Duration 6.0 sec.<br>
+DoT: Duration 4.0 sec. - Damage 5
+</p>
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Explosion Damage|lvl1=100|lvl2=140|lvl3=180|lvl4=220|lvl5=260|lvl6=300}}
+}}}}
+}}

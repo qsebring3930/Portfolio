@@ -1,0 +1,70 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Coldlight Oracle
+|image=[[File:Coldlight Oracle.webp]]
+|category=WC3-Murloc
+|max=36
+|level=240
+|weapons=
+Knife<br>
+Smoke Grenade
+|restricted=All
+|team=2
+|passive=
+<p>
+Size: -40%
+</p>
+}}
+|skill1={{SkillInfo
+|name=Coldlight Murloc
+|info=
+Increase Health, Decrease Visibility
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Health|unit=HP|lvl0=15|lvl1=25|lvl2=30|lvl3=35|lvl4=40|lvl5=45|lvl6=50}}
+|line2={{LevelUpRow|field=Visibility|lvl0=5.0%|lvl1=10.0%|lvl2=18.0%|lvl3=26.0%|lvl4=34.0%|lvl5=42.0%|lvl6=50.0%}}
+}}}}
+|skill2={{SkillInfo
+|name=Pack Tactics
+|info=
+Increase Speed, Decrease Visibility per Ally Murlocs
+|trigger=Aura
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Speed|lvl0=1.5%|lvl1=2.5%|lvl2=3.0%|lvl3=3.5%|lvl4=4.0%|lvl5=4.5%|lvl6=5.0%}}
+|line2={{LevelUpRow|field=Visibility|lvl0=1.5%|lvl1=2.5%|lvl2=3.0%|lvl3=3.5%|lvl4=4.0%|lvl5=4.5%|lvl6=5.0%}}
+}}}}
+|skill3={{SkillInfo
+|name=Murky Waters
+|info=
+Gain Smokes
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Tick Rate|unit=sec.|lvl0=24.0|lvl1=22.0|lvl2=20.0|lvl3=18.0|lvl4=16.0|lvl5=14.0|lvl6=12.0}}
+}}}}
+|skill4={{SkillInfo
+|name=Luminescent Fin
+|info=
+Blind Enemies near Smoke Detonation
+|trigger=Special
+|duration=3
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Radius|lvl0=250.0|lvl1=300.0|lvl2=350.0|lvl3=400.0|lvl4=450.0|lvl5=500.0|lvl6=550.0}}
+}}}}
+|skill5={{SkillInfo
+|name=Oracle's Eye
+|info=
+Highlight Enemies in smokes
+|trigger=Special
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl0=0.6|lvl1=0.8|lvl2=1.0|lvl3=1.2|lvl4=1.4|lvl5=1.6|lvl6=1.8}}
+}}}}
+|skill6={{SkillInfo
+|name=From the Abyss
+|info=
+Spawn Murloc Tidehunter in smoke
+|trigger=Special
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Chance|unit=%|lvl0=10|lvl1=15|lvl2=18|lvl3=21|lvl4=24|lvl5=27|lvl6=30}}
+}}}}
+}}

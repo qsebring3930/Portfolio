@@ -1,0 +1,68 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Abaddon
+|image=[[File:Abaddon.webp]]
+|category=DotA-Universal
+|max=32
+|level=2720
+|weapons=
+Knife
+|restricted=All
+|passive=
+<p>
+Speed: +15%<br>
+HP: +20HP
+</p>
+}}
+|skill1={{SkillInfo
+|name=Mist Coil
+|info=
+Sacrifice Health to Heal Ally or Damage Enemy
+|trigger=Ability1
+|target=Target_Any
+|range=600
+|cooldown=10.0
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Heal/Damage|lvl1=16|lvl2=18|lvl3=20|lvl4=22|lvl5=24|lvl6=26|lvl7=28|lvl8=30}}
+|line2={{LevelUpRow|field=Self Damage|lvl1=10|lvl2=11|lvl3=12|lvl4=13|lvl5=14|lvl6=16|lvl7=18|lvl8=20}}
+}}}}
+|skill2={{SkillInfo
+|name=Aphotic Shield
+|info=
+<p>
+Protect Ally from Weapon Damage<br>
+Explodes based on absorbed damage
+</p>
+|trigger=Ability2
+|target=Target_Ally
+|duration=8
+|range=500
+|radius=400
+|cooldown=20.0
+|extra=Applies to self if no target
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Shield|unit=HP|lvl1=25|lvl2=30|lvl3=35|lvl4=40|lvl5=45|lvl6=50|lvl7=55|lvl8=60}}
+}}}}
+|skill3={{SkillInfo
+|name=Curse of Avernus
+|info=
+Slow and DoT
+|trigger=Attack
+|damage=3
+|duration=3
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Slow|lvl1=12.0%|lvl2=16.0%|lvl3=20.0%|lvl4=24.0%|lvl5=28.0%|lvl6=32.0%|lvl7=36.0%|lvl8=40.0%}}
+}}}}
+|skill4={{SkillInfo
+|name=Borrowed Time
+|info=
+Convert Weapon Damage to Health and Cleanse
+|trigger=Ultimate
+|target=Self
+|cooldown=40.0
+|extra=Activates automatically if low on health
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl1=2.5|lvl2=3.0|lvl3=3.5|lvl4=4.0|lvl5=4.5|lvl6=5.0|lvl7=5.5|lvl8=6.0}}
+}}}}
+}}

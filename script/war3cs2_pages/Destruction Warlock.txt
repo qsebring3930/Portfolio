@@ -1,0 +1,77 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Destruction Warlock
+|image=[[File:Destruction Warlock.webp]]
+|category=WoW
+|max=36
+|level=1990
+}}
+|skill1={{SkillInfo
+|name=Curse of the Elements
+|info=
+Increase Magic Damage
+|trigger=Attack
+|buffs=
+<p>
+Magic Damage: +25%
+</p>
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Chance|unit=%|lvl1=10|lvl2=18|lvl3=26|lvl4=34|lvl5=42|lvl6=50}}
+}}}}
+|skill2={{SkillInfo
+|name=Death Coil
+|info=
+Disco Vision, Steal Health
+|trigger=Attack
+|duration=2
+|extra=Leech 20% of Damage
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Chance|lvl1=10.0%|lvl2=13.0%|lvl3=16.0%|lvl4=19.0%|lvl5=22.0%|lvl6=25.0%}}
+}}}}
+|skill3={{SkillInfo
+|name=Shadowfury
+|info=
+AoE Damage and Bash
+|trigger=Attack
+|chance=20
+|duration=0.5
+|radius=300
+|extra=Random Damage between ... and 25
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Damage|lvl1=3|lvl2=4|lvl3=6|lvl4=7|lvl5=9|lvl6=10}}
+}}}}
+|skill4={{SkillInfo
+|name=Immolate
+|info=
+DoT
+|trigger=Attack
+|chance=15
+|duration=5
+|extra=Random Damage between 5 and ...
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Damage|lvl1=5|lvl2=6|lvl3=7|lvl4=8|lvl5=9|lvl6=10}}
+}}}}
+|skill5={{SkillInfo
+|name=Conflagrate
+|info=
+Consume Immolate for instant Damage
+|trigger=Attack
+|chance=33
+|extra=Random Damage between 20 and ...
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Damage|lvl1=70|lvl2=80|lvl3=90|lvl4=100|lvl5=110|lvl6=120}}
+}}}}
+|skill6={{SkillInfo
+|name=Ruin
+|info=
+Increase Magic Damage
+|trigger=Attack
+|buffs=
+<p>
+Magic Damage: +100%
+</p>
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Chance|unit=%|lvl1=5|lvl2=6|lvl3=7|lvl4=8|lvl5=9|lvl6=10}}
+}}}}
+}}

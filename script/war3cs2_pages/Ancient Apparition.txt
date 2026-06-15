@@ -1,0 +1,64 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Ancient Apparition
+|image=[[File:Ancient Apparition.webp]]
+|category=DotA-Magic
+|max=32
+|level=2540
+}}
+|skill1={{SkillInfo
+|name=Cold Feet
+|info=
+Force Enemy to move or be stunned
+|trigger=Attack
+|chance=33
+|duration=1
+|extra=4 seconds until it triggers
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Radius|lvl1=100.0|lvl2=125.0|lvl3=150.0|lvl4=175.0|lvl5=200.0|lvl6=225.0|lvl7=250.0|lvl8=275.0}}
+}}}}
+|skill2={{SkillInfo
+|name=Ice Vortex
+|info=
+Ward: Deals Damage and Increases Received Magical Damage
+|trigger=Attack
+|damage=4
+|radius=250
+|buffs=
+<p>
+Magic Damage: +25%
+</p>
+|cooldown=3.0
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl1=2.5|lvl2=3.0|lvl3=3.5|lvl4=4.0|lvl5=4.5|lvl6=5.0|lvl7=5.5|lvl8=6.0}}
+}}}}
+|skill3={{SkillInfo
+|name=Chilling Touch
+|info=
+Convert Weapon Damage to Magical Damage
+|trigger=Attack
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Convert|lvl1=15.0%|lvl2=20.0%|lvl3=25.0%|lvl4=30.0%|lvl5=35.0%|lvl6=40.0%|lvl7=45.0%|lvl8=50.0%}}
+}}}}
+|skill4={{SkillInfo
+|name=Ice Blast
+|info=
+<p>
+Throw Ice Bomb. Press again to detonate it<br>
+Stops Regen on enemies hit
+</p>
+|trigger=Ultimate
+|target=Object
+|duration=10
+|radius=200
+|force=1
+|buffs=
+<p>
+Restoration: -100%
+</p>
+|cooldown=20.0
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Damage|lvl1=22|lvl2=26|lvl3=30|lvl4=34|lvl5=38|lvl6=42|lvl7=46|lvl8=50}}
+}}}}
+}}

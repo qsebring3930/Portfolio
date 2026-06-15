@@ -1,0 +1,84 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Flonne
+|image=[[File:Flonne.webp]]
+|category=Disgaea
+|max=36
+|level=2860
+|weapons=
+SSG 08<br>
+AWP<br>
+Knife
+|restricted=All
+}}
+|skill1={{SkillInfo
+|name=Power of Love
+|info=
+Heal and Cleanse Allies
+|trigger=Ability1
+|target=AoE_Self
+|radius=300
+|cooldown=15.0
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Heal|unit=HP|lvl1=20|lvl2=22|lvl3=24|lvl4=26|lvl5=28|lvl6=30}}
+}}}}
+|skill2={{SkillInfo
+|name=Holy Arrows
+|info=
+AoE Damage, Dispel. Deal extra damage to summons
+|trigger=Attack
+|damage=20
+|duration=2.5
+|radius=150
+|extra=Damage is doubled if summon
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Cooldown|unit=sec.|lvl1=12.0|lvl2=11.0|lvl3=10.0|lvl4=9.0|lvl5=8.0|lvl6=7.0}}
+}}}}
+|skill3={{SkillInfo
+|name=Natural Oafy Aura
+|info=
+Reduce Magic Damage for allies
+|trigger=Aura
+|radius=500
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Reduce|lvl1=5.0%|lvl2=10.0%|lvl3=15.0%|lvl4=20.0%|lvl5=25.0%|lvl6=30.0%}}
+}}}}
+|skill4={{SkillInfo
+|name=Love Field
+|info=
+Regen HP for allies
+|trigger=Aura
+|extra=Heals 2% Max Health
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Radius|lvl1=400.0|lvl2=420.0|lvl3=440.0|lvl4=460.0|lvl5=480.0|lvl6=500.0}}
+}}}}
+|skill5={{SkillInfo
+|name=Healing Paradise
+|info=
+Increase your healing powers
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Multiplier|lvl1=5.0%|lvl2=10.0%|lvl3=15.0%|lvl4=20.0%|lvl5=25.0%|lvl6=30.0%}}
+}}}}
+|skill6={{SkillInfo
+|name=Flonnezilla
+|info=
+<p>
+Gain AWP, Increase Health and boost your other skills<br>
+Power of Love: Increase Radius<br>
+Holy Arrow: Increase Radius<br>
+Natural Oafy Aura: Increase Reduction<br>
+Love Field: Increase Healing
+</p>
+|trigger=Ultimate
+|target=Self
+|buffs=
+<p>
+Health: +50HP
+</p>
+|cooldown=20.0
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl1=10.0|lvl2=11.0|lvl3=12.0|lvl4=13.0|lvl5=14.0|lvl6=15.0}}
+}}}}
+}}

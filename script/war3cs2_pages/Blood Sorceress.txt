@@ -1,0 +1,95 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Blood Sorceress
+|image=[[File:Blood Sorceress.webp]]
+|category=AQW
+|max=30
+|level=4345
+|items=
+Armor of Protection
+|team=2
+|passive=
+<p>
+Health: -50HP
+</p>
+}}
+|skill1={{SkillInfo
+|name=Curse of the Beautiful
+|info=
+Increase Health, Evade Weapon Damage, Increase Received Weapon Damage
+|trigger=Special
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Health|unit=HP|lvl1=5|lvl2=10|lvl3=15|lvl4=20|lvl5=25}}
+|line2={{LevelUpRow|field=Evade|lvl1=5.0%|lvl2=10.0%|lvl3=15.0%|lvl4=20.0%|lvl5=25.0%}}
+|line3={{LevelUpRow|field=Increase|lvl1=4.0%|lvl2=8.0%|lvl3=12.0%|lvl4=16.0%|lvl5=20.0%}}
+}}}}
+|skill2={{SkillInfo
+|name=Red Lust
+|info=
+Convert Weapon Damage to Magic Damage. Lifesteal Magic Damage
+|trigger=Attack
+|buffs=
+<p>
+Steal: 50%
+</p>
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Convert|lvl1=10.0%|lvl2=15.0%|lvl3=20.0%|lvl4=25.0%|lvl5=30.0%}}
+}}}}
+|skill3={{SkillInfo
+|name=Blood Pulse
+|info=
+Sacrifice Health to Damage Those Around you and Increase Received Magic Damage
+|trigger=Ability1
+|target=AoE_Self
+|duration=8
+|radius=500
+|buffs=
+<p>
+Increase: +50%
+</p>
+|cooldown=20.0
+|extra=Sacrifice is 15HP
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Damage|lvl1=4|lvl2=8|lvl3=12|lvl4=16|lvl5=20}}
+}}}}
+|skill4={{SkillInfo
+|name=Mirroring Magic
+|info=
+Block Spells, Lifesteal
+|trigger=Aura
+|duration=5
+|radius=500
+|cooldown=5.0
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Steal|unit=HP|lvl1=3|lvl2=6|lvl3=9|lvl4=12|lvl5=15}}
+}}}}
+|skill5={{SkillInfo
+|name=Enmity
+|info=
+Blood Pulse Decreases Fire Rate and Mirroring Magic Hexes
+|trigger=Special
+|duration=3
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Fire Rate|lvl1=5.0%|lvl2=10.0%|lvl3=15.0%|lvl4=20.0%|lvl5=25.0%}}
+}}}}
+|skill6={{SkillInfo
+|name=Blood Ritual
+|info=
+<p>
+Regen HP, Increase Magic Damage and Speed<br>
+Turns Curse of the Beautiful Increase Damage into Decrease Damage
+</p>
+|trigger=Ultimate
+|target=Self
+|duration=5
+|buffs=
+<p>
+Increase: +50%
+</p>
+|cooldown=30.0
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Heal|unit=HP|lvl1=1|lvl2=2|lvl3=3|lvl4=4|lvl5=5}}
+|line2={{LevelUpRow|field=Speed|lvl1=6.0%|lvl2=12.0%|lvl3=18.0%|lvl4=24.0%|lvl5=30.0%}}
+}}}}
+}}

@@ -1,0 +1,50 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Assault Soldier
+|image=[[File:Assault Soldier.webp]]
+|category=Military
+|max=20
+|level=1680
+}}
+|skill1={{SkillInfo
+|name=Heavy Strike
+|info=
+Increase Damage
+|trigger=Attack
+|chance=33
+|extra=Damage between 7 and ...
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Damage|lvl1=11|lvl2=12|lvl3=13|lvl4=14|lvl5=15}}
+}}}}
+|skill2={{SkillInfo
+|name=True Strike
+|info=
+Increase Damage
+|trigger=Attack
+|chance=33
+|extra=Damage between 7 and ...
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Damage|lvl1=11|lvl2=12|lvl3=13|lvl4=14|lvl5=15}}
+}}}}
+|skill3={{SkillInfo
+|name=Death Strike
+|info=
+Increase Damage
+|trigger=Attack
+|chance=20
+|extra=Damage between 10 and ...
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Damage|lvl1=12|lvl2=14|lvl3=16|lvl4=18|lvl5=20}}
+}}}}
+|skill4={{SkillInfo
+|name=I shall never die
+|info=
+Respawn with random health
+|trigger=Death
+|chance=50
+|extra=Reduced HP between 0 and ...
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Health|unit=HP|lvl1=40|lvl2=30|lvl3=25|lvl4=20|lvl5=10}}
+}}}}
+}}

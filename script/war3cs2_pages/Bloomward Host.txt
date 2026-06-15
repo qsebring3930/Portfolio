@@ -1,0 +1,81 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Bloomward Host
+|image=[[File:Bloomward Host.webp]]
+|category=Holiday - Easter
+|max=25
+|level=305
+|weapons=
+SSG 08<br>
+Smoke Grenade
+|restricted=All
+}}
+|skill1={{SkillInfo
+|name=Bloom Stance
+|info=
+Increase Health, Speed
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Health|unit=HP|lvl1=5|lvl2=10|lvl3=15|lvl4=20|lvl5=25}}
+|line2={{LevelUpRow|field=Speed|lvl1=15.0%|lvl2=20.0%|lvl3=25.0%|lvl4=30.0%|lvl5=35.0%}}
+}}}}
+|skill2={{SkillInfo
+|name=Life’s Echo
+|info=
+<p>
+Gain Charges on Allies dying near you<br>
+Attack Ally: Heal by using charge<br>
+Attack Enemy: Increase Damage by using charge
+</p>
+|trigger=Special
+|radius=400
+|extra=Charge Value is based on allies level
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Quantity|lvl1=1|lvl2=2|lvl3=3|lvl4=4|lvl5=5}}
+}}}}
+|skill3={{SkillInfo
+|name=Verdant Growth
+|info=
+Ward: Heal and Weapon Evade for Allies
+|trigger=Ability1
+|target=Location
+|heal=2
+|duration=8
+|range=750
+|radius=250
+|cooldown=6.0
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Evade|lvl1=3.0%|lvl2=6.0%|lvl3=9.0%|lvl4=12.0%|lvl5=15.0%}}
+}}}}
+|skill4={{SkillInfo
+|name=Bloom
+|info=
+'Verdant Growth' Damages and Discos
+|trigger=Ability2
+|target=Special
+|cooldown=12.0
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Damage|lvl1=2|lvl2=4|lvl3=6|lvl4=8|lvl5=10}}
+}}}}
+|skill5={{SkillInfo
+|name=Renewal Grove
+|info=
+<p>
+Place an Archway That has an effect when walked through<br>
+Ally: Respawn if killed shortly after<br>
+Enemy: Control Summons, give Regen and Increase Speed
+</p>
+|trigger=Ultimate
+|target=Location
+|duration=10
+|range=400
+|extra=
+<p>
+Ally - Duration: 5.0 sec.<br>
+Enemy - Heal: 2HP, Speed: +10%
+</p>
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Cooldown|unit=sec.|lvl1=60.0|lvl2=55.0|lvl3=50.0|lvl4=45.0|lvl5=40.0}}
+}}}}
+}}

@@ -1,0 +1,65 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Bane
+|image=[[File:Bane.webp]]
+|category=DotA-Universal
+|max=32
+|level=2720
+|weapons=
+MAC-10<br>
+Glock-18<br>
+Knife
+|restricted=All
+}}
+|skill1={{SkillInfo
+|name=Enfeeble
+|info=
+Weaken
+|trigger=Attack
+|duration=5
+|buffs=
+<p>
+Weapon Damage: -50%
+</p>
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Chance|lvl1=12.0%|lvl2=15.0%|lvl3=18.0%|lvl4=21.0%|lvl5=24.0%|lvl6=27.0%|lvl7=30.0%|lvl8=33.0%}}
+}}}}
+|skill2={{SkillInfo
+|name=Brain Sap
+|info=
+Drain Health
+|trigger=Ability1
+|target=Target_Enemy
+|range=600
+|cooldown=15.0
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Steal|unit=HP|lvl1=10|lvl2=12|lvl3=14|lvl4=16|lvl5=18|lvl6=20|lvl7=22|lvl8=24}}
+}}}}
+|skill3={{SkillInfo
+|name=Nightmare
+|info=
+Put enemy to sleep
+|trigger=Ability2
+|target=Target_Enemy
+|range=500
+|aim=15
+|cooldown=20.0
+|extra=Duration between 1.0 and ...
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl1=1.5|lvl2=2.0|lvl3=2.5|lvl4=3.0|lvl5=3.5|lvl6=4.0|lvl7=4.5|lvl8=5.0}}
+}}}}
+|skill4={{SkillInfo
+|name=Fiend's Grip
+|info=
+Channel to Stun, Damage and Steal Money from your enemy
+|trigger=Ultimate
+|target=Target_Enemy
+|duration=5
+|range=600
+|cooldown=25.0
+|extra=Drain is 10% of money per tick. Press again to cancel
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Damage|lvl1=3|lvl2=4|lvl3=5|lvl4=6|lvl5=7|lvl6=8|lvl7=9|lvl8=10}}
+}}}}
+}}

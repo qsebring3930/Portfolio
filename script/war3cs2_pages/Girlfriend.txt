@@ -1,0 +1,106 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Girlfriend
+|image=[[File:Girlfriend.webp]]
+|category=Human
+|max=30
+|level=445
+|weapons=
+MAC-10
+|restricted=All
+|passive=
+<p>
+Partner Radius: 500
+</p>
+}}
+|skill1={{SkillInfo
+|name=Co-dependant / Paranoid
+|info=
+<p>
+Increase Speed<br>
+Love: Regen HP and Clip if close to your partner<br>
+Hate: Highlight Ex and those around him
+</p>
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Speed|lvl1=6.0%|lvl2=12.0%|lvl3=18.0%|lvl4=24.0%|lvl5=30.0%}}
+|line2={{LevelUpRow|field=Love: Heal|unit=HP|lvl1=1|lvl2=2|lvl3=3|lvl4=4|lvl5=5}}
+|line3={{LevelUpRow|field=Love: Clip|lvl1=1|lvl2=2|lvl3=3|lvl4=4|lvl5=5}}
+|line4={{LevelUpRow|field=Hate: Radius|lvl1=200.0|lvl2=225.0|lvl3=250.0|lvl4=275.0|lvl5=300.0}}
+}}}}
+|skill2={{SkillInfo
+|name=Unconditional Love / Heartbreak
+|info=
+<p>
+Love: Heal Partner if close<br>
+Hate: Increase Weapon Damage, Increase further to those you marked
+</p>
+|trigger=Attack
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Love: Heal|lvl1=4.0%|lvl2=8.0%|lvl3=12.0%|lvl4=16.0%|lvl5=20.0%}}
+|line2={{LevelUpRow|field=Hate: Increase|lvl1=4.0%|lvl2=8.0%|lvl3=12.0%|lvl4=16.0%|lvl5=20.0%}}
+}}}}
+|skill3={{SkillInfo
+|name=Thoughtful Gift / Bought With Your Card
+|info=
+<p>
+Love: Upgrade your Partner's weapon<br>
+Hate: Remove Money, Give Scout
+</p>
+|trigger=Ability1
+|target=Special
+|radius=600
+|extra=Love: Cooldown 25 sec. Hate: Cooldown 20 sec.
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Love: Duration|unit=sec.|lvl1=10.0|lvl2=12.5|lvl3=15.0|lvl4=17.5|lvl5=20.0}}
+|line2={{LevelUpRow|field=Hate: Money|lvl1=$300|lvl2=$600|lvl3=$900|lvl4=$1,200|lvl5=$1,500}}
+}}}}
+|skill4={{SkillInfo
+|name=Clingy / Too Clingy
+|info=
+<p>
+Love: Decrease Received Weapon Damage if close to your Partner<br>
+Hate: DoT Ex
+</p>
+|trigger=Attack
+|damage=1
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Love: Decrease|lvl1=6.0%|lvl2=12.0%|lvl3=18.0%|lvl4=24.0%|lvl5=30.0%}}
+|line2={{LevelUpRow|field=Hate: Chance|unit=%|lvl1=60|lvl2=70|lvl3=80|lvl4=90|lvl5=100}}
+}}}}
+|skill5={{SkillInfo
+|name=Encouraging / Manipulative
+|info=
+<p>
+Love: Increase Partners Weapon Damage if they are close<br>
+Hate: Heal if ex deals damage, or set your health temporarily to max health if he is dead
+</p>
+|trigger=Ability2
+|target=Special
+|buffs=
+<p>
+Love: Increase: +100%<br>
+Hate: Heal: 50%
+</p>
+|cooldown=20.0
+|extra=Love: Cooldown 25 sec. Hate: Cooldown 20 sec.
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Love: Duration|unit=sec.|lvl1=1.0|lvl2=2.0|lvl3=3.0|lvl4=4.0|lvl5=5.0}}
+|line2={{LevelUpRow|field=Hate: Duration|unit=sec.|lvl1=1.0|lvl2=2.0|lvl3=3.0|lvl4=4.0|lvl5=5.0}}
+}}}}
+|skill6={{SkillInfo
+|name=Emotional Support / I'm Not Ready
+|info=
+<p>
+Love: Heal and Cleanse yourself and your Partner if you are close<br>
+Hate: Bash those your marked
+</p>
+|trigger=Ultimate
+|target=Enemies
+|cooldown=25.0
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Love: Heal|unit=HP|lvl1=7|lvl2=14|lvl3=21|lvl4=28|lvl5=34}}
+|line2={{LevelUpRow|field=Hate: Duration|unit=sec.|lvl1=1.0|lvl2=1.5|lvl3=2.0|lvl4=2.5|lvl5=3.0}}
+}}}}
+}}

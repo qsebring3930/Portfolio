@@ -1,0 +1,70 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Alien
+|image=[[File:Alien.webp]]
+|category=AVP
+|max=35
+|level=3495
+|weapons=
+Knife
+|restricted=All
+|passive=
+<p>
+Health: +50HP
+</p>
+}}
+|skill1={{SkillInfo
+|name=Tail Whip
+|info=
+Left Click to Increase Knife Damage, Impale
+|trigger=Attack
+|chance=33
+|force=300
+|extra=Damage between 3 and ...
+|levelup={{LevelUpInfo|levels=7|zero=1
+|line1={{LevelUpRow|field=Damage|lvl0=3|lvl1=4|lvl2=5|lvl3=6|lvl4=7|lvl5=8|lvl6=9|lvl7=10}}
+}}}}
+|skill2={{SkillInfo
+|name=External Teeth
+|info=
+Right Click to Increase Knife Damage
+|trigger=Attack
+|chance=33
+|extra=Damage between 5 and ...
+|levelup={{LevelUpInfo|levels=7|zero=1
+|line1={{LevelUpRow|field=Damage|lvl0=5|lvl1=10|lvl2=15|lvl3=20|lvl4=25|lvl5=30|lvl6=35|lvl7=40}}
+}}}}
+|skill3={{SkillInfo
+|name=Xenomorph Blood
+|info=
+DoT to enemies close to you when hit by weapons
+|trigger=Victim
+|chance=50
+|duration=6
+|radius=250
+|extra=Knife Attacks always proc blood. Distance from alien determines chance to be hit by blood. Damage between 5 and ...
+|levelup={{LevelUpInfo|levels=7|zero=1
+|line1={{LevelUpRow|field=Damage|lvl0=10|lvl1=14|lvl2=15|lvl3=16|lvl4=17|lvl5=18|lvl6=19|lvl7=20}}
+}}}}
+|skill4={{SkillInfo
+|name=Implant Facehugger
+|info=
+DoT, Revive when target dies
+|trigger=Death
+|damage=10.0%
+|extra=Damage based on Max Health
+|levelup={{LevelUpInfo|levels=7|zero=1
+|line1={{LevelUpRow|field=Chance|unit=%|lvl0=2|lvl1=4|lvl2=5|lvl3=6|lvl4=7|lvl5=8|lvl6=9|lvl7=10}}
+}}}}
+|skill5={{SkillInfo
+|name=Articulated Limbs
+|info=
+Increase Speed, Longjump, Decrease Gravity
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=7|zero=1
+|line1={{LevelUpRow|field=Speed|lvl0=5.0%|lvl1=10.0%|lvl2=15.0%|lvl3=20.0%|lvl4=25.0%|lvl5=30.0%|lvl6=35.0%|lvl7=40.0%}}
+|line2={{LevelUpRow|field=Longjump|lvl0=10.0%|lvl1=16.0%|lvl2=20.0%|lvl3=24.0%|lvl4=28.0%|lvl5=32.0%|lvl6=36.0%|lvl7=40.0%}}
+|line3={{LevelUpRow|field=Gravity|lvl0=3.0%|lvl1=6.0%|lvl2=9.0%|lvl3=12.0%|lvl4=15.0%|lvl5=18.0%|lvl6=21.0%|lvl7=24.0%}}
+}}}}
+}}

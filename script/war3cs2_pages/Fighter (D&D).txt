@@ -1,0 +1,113 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Fighter (D&D)
+|image=[[File:Fighter (D&D).webp]]
+|category=D&D Martials
+|max=30
+|level=3370
+}}
+|skill1={{SkillInfo
+|name=Fighting Style
+|info=
+<p>
+Change Style depending on Wielded Weapon Type<br>
+Assault Rifles: Protection<br>
+SMG: Two-Weapon Fighting<br>
+Shotgun or LMG: Great Weapon Fighting<br>
+Sniper: Archery<br>
+No Primary: Dueling
+</p>
+|trigger=Special
+|extra=
+<p>
+Protection: Reduce Allies Received Weapon Damage, Radius: 500<br>
+Two-Weapon Fighting: Chance to Deal Gun Damage Twice<br>
+Great Weapon Fighting: Chance to Increase Gun Damage between 1 and 5 and shake their screen for 1.5 sec.<br>
+Archery: Increase Gun Damage<br>
+Dueling: Reduce Received Headshot Damage, Increase Dealt Headshot Damage
+</p>
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Protection Reduce|lvl1=5.0%|lvl2=10.0%|lvl3=15.0%|lvl4=20.0%|lvl5=25.0%}}
+|line2={{LevelUpRow|field=Two-Weapon Chance|lvl1=5.0%|lvl2=10.0%|lvl3=15.0%|lvl4=20.0%|lvl5=25.0%}}
+|line3={{LevelUpRow|field=Great Weapon Chance|lvl1=6.0%|lvl2=12.0%|lvl3=18.0%|lvl4=24.0%|lvl5=30.0%}}
+|line4={{LevelUpRow|field=Archery Increase|lvl1=10.0%|lvl2=15.0%|lvl3=20.0%|lvl4=25.0%|lvl5=30.0%}}
+|line5={{LevelUpRow|field=Dueling Decrease Chance|lvl1=10.0%|lvl2=20.0%|lvl3=30.0%|lvl4=40.0%|lvl5=50.0%}}
+|line6={{LevelUpRow|field=Dueling Increase|lvl1=6.0%|lvl2=12.0%|lvl3=18.0%|lvl4=24.0%|lvl5=30.0%}}
+}}}}
+|skill2={{SkillInfo
+|name=Second Wind
+|info=
+Sacrifice a 'Second Wind' to Heal
+|trigger=Ability1
+|target=Self
+|cooldown=15.0
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Quantity|lvl1=1|lvl2=1|lvl3=2|lvl4=2|lvl5=3}}
+|line2={{LevelUpRow|field=Heal|unit=HP|lvl1=6|lvl2=12|lvl3=18|lvl4=24|lvl5=30}}
+}}}}
+|skill3={{SkillInfo
+|name=Weapon Mastery
+|info=
+<p>
+Change Skill depending on 'Fighting Style'<br>
+Protection: Sap<br>
+Two-Weapon Fighting: Nick<br>
+Great Weapon Fighting: Graze<br>
+Archery: Slow<br>
+Dueling: Vex
+</p>
+|trigger=Special
+|required=
+Fighting Style - Level 1
+|extra=
+<p>
+Sap: Decrease Attack Speed by 20% for 3.0 sec.<br>
+Nick: Increase Gun Damage if Double Attack Doesn't proc by between 1 and ...<br>
+Graze: Add AoE Damage on Missed Attacks, Radius: 75<br>
+Slow: Decrease Speed for 3.0 sec.<br>
+Vex: Hex and Curse for 3.0 sec. 25% chance to miss Weapon Damage
+</p>
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Sap Chance|lvl1=5.0%|lvl2=10.0%|lvl3=15.0%|lvl4=20.0%|lvl5=25.0%}}
+|line2={{LevelUpRow|field=Nick Max Damage|lvl1=1|lvl2=2|lvl3=3|lvl4=4|lvl5=5}}
+|line3={{LevelUpRow|field=Graze Damage|lvl1=1|lvl2=2|lvl3=3|lvl4=4|lvl5=5}}
+|line4={{LevelUpRow|field=Slow Speed|lvl1=10.0%|lvl2=20.0%|lvl3=30.0%|lvl4=40.0%|lvl5=50.0%}}
+|line5={{LevelUpRow|field=Vex Chance|lvl1=6.0%|lvl2=12.0%|lvl3=18.0%|lvl4=24.0%|lvl5=30.0%}}
+}}}}
+|skill4={{SkillInfo
+|name=ASI
+|info=
+Increase Health, Speed, Long Jump. Decrease Gravity
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Health|unit=HP|lvl1=5|lvl2=10|lvl3=15|lvl4=20|lvl5=25}}
+|line2={{LevelUpRow|field=Speed|lvl1=4.0%|lvl2=8.0%|lvl3=12.0%|lvl4=16.0%|lvl5=20.0%}}
+|line3={{LevelUpRow|field=Long Jump|lvl1=3.0%|lvl2=6.0%|lvl3=9.0%|lvl4=12.0%|lvl5=15.0%}}
+|line4={{LevelUpRow|field=Gravity|lvl1=98.0%|lvl2=96.0%|lvl3=94.0%|lvl4=92.0%|lvl5=90.0%}}
+}}}}
+|skill5={{SkillInfo
+|name=Action Surge
+|info=
+Sacrifice a 'Second Wind' to boost your ASI and reduce Ammo Consumption
+|trigger=Ability2
+|required=
+Second Wind - Level 1
+|target=Self
+|chance=33
+|cooldown=10.0
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl1=1.0|lvl2=2.0|lvl3=3.0|lvl4=4.0|lvl5=5.0}}
+}}}}
+|skill6={{SkillInfo
+|name=Tactical Shift
+|info=
+Strafe Dash in the air by jumping
+|trigger=Special
+|range=200
+|force=2
+|extra=Press left or right to dash left or right
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Cooldown|unit=sec.|lvl1=9.0|lvl2=8.0|lvl3=7.0|lvl4=6.0|lvl5=5.0}}
+}}}}
+}}

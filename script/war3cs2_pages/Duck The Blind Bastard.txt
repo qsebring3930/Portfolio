@@ -1,0 +1,72 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Duck The Blind Bastard
+|image=[[File:Duck The Blind Bastard.webp]]
+|category=Player
+|max=80
+|level=925
+|weapons=
+PP-Bizon
+|restricted=All
+|passive=
+<p>
+Levelbank: No
+</p>
+}}
+|skill1={{SkillInfo
+|name=Hollow
+|info=
+Evade Gun and Knife Damage
+|trigger=Ability1
+|target=Self
+|cooldown=15.0
+|levelup={{LevelUpInfo|levels=16
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl1=1.5|lvl2=1.6|lvl3=1.7|lvl4=1.8|lvl5=1.9|lvl6=2.0|lvl7=2.1|lvl8=2.2|lvl9=2.3|lvl10=2.4|lvl11=2.5|lvl12=2.6|lvl13=2.7|lvl14=2.8|lvl15=2.9|lvl16=3.0}}
+}}}}
+|skill2={{SkillInfo
+|name=Force of Will
+|info=
+Spell Immunity
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=16
+|line1={{LevelUpRow|field=Immunity|unit=%|lvl1=10|lvl2=16|lvl3=22|lvl4=28|lvl5=34|lvl6=40|lvl7=46|lvl8=52|lvl9=58|lvl10=64|lvl11=70|lvl12=76|lvl13=82|lvl14=88|lvl15=94|lvl16=100}}
+}}}}
+|skill3={{SkillInfo
+|name=Diamond Mind
+|info=
+Skill Immunity
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=16
+|line1={{LevelUpRow|field=Immunity|unit=%|lvl1=10|lvl2=16|lvl3=22|lvl4=28|lvl5=34|lvl6=40|lvl7=46|lvl8=52|lvl9=58|lvl10=64|lvl11=70|lvl12=76|lvl13=82|lvl14=88|lvl15=94|lvl16=100}}
+}}}}
+|skill4={{SkillInfo
+|name=Silent Hatred
+|info=
+Silent Step, Increase Weapon Damage
+|trigger=Special
+|buffs=
+<p>
+Increase: +100%
+</p>
+|levelup={{LevelUpInfo|levels=16
+|line1={{LevelUpRow|field=Silent Step Chance|unit=%|lvl1=10|lvl2=16|lvl3=22|lvl4=28|lvl5=34|lvl6=40|lvl7=46|lvl8=52|lvl9=58|lvl10=64|lvl11=70|lvl12=76|lvl13=82|lvl14=88|lvl15=94|lvl16=100}}
+|line2={{LevelUpRow|field=Chance|lvl1=2.0%|lvl2=3.0%|lvl3=3.0%|lvl4=4.0%|lvl5=4.0%|lvl6=5.0%|lvl7=5.0%|lvl8=6.0%|lvl9=6.0%|lvl10=7.0%|lvl11=7.0%|lvl12=8.0%|lvl13=8.0%|lvl14=9.0%|lvl15=9.0%|lvl16=10.0%}}
+}}}}
+|skill5={{SkillInfo
+|name=Empathy
+|info=
+Slowly Blind those near you
+|trigger=Aura
+|levelup={{LevelUpInfo|levels=16
+|line1={{LevelUpRow|field=Radius|lvl1=375.0|lvl2=400.0|lvl3=425.0|lvl4=450.0|lvl5=475.0|lvl6=500.0|lvl7=525.0|lvl8=550.0|lvl9=575.0|lvl10=600.0|lvl11=625.0|lvl12=650.0|lvl13=675.0|lvl14=700.0|lvl15=725.0|lvl16=750.0}}
+}}}}
+|skill6={{SkillInfo
+|name=Sense
+|info=
+Can't see but Hightlight Enemies who are close or are looking at you
+|trigger=Aura
+|range=2000
+|radius=750
+}}
+}}

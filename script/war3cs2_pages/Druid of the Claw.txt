@@ -1,0 +1,63 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Druid of the Claw
+|image=[[File:Druid of the Claw.webp]]
+|category=WC3-Elf
+|max=32
+|level=130
+|weapons=
+Knife<br>
+P2000
+|restricted=All
+}}
+|skill1={{SkillInfo
+|name=Rejuvenation
+|info=
+Regen HP Ally
+|trigger=Ability1
+|target=Target_Ally
+|duration=5
+|range=500
+|cooldown=15.0
+|extra=Applies to self if no target
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Health|unit=HP|lvl1=6|lvl2=8|lvl3=10|lvl4=12|lvl5=14|lvl6=16|lvl7=18|lvl8=20}}
+}}}}
+|skill2={{SkillInfo
+|name=Roar
+|info=
+Increase Damage Allies
+|trigger=Ability2
+|target=AoE_Self
+|duration=5
+|buffs=
+<p>
+Weapon Damage: +25%
+</p>
+|cooldown=10.0
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Radius|lvl1=260.0|lvl2=280.0|lvl3=300.0|lvl4=320.0|lvl5=340.0|lvl6=360.0|lvl7=380.0|lvl8=400.0}}
+}}}}
+|skill3={{SkillInfo
+|name=Mark of the Claw
+|info=
+Decrease Damage while Bear
+|trigger=Victim
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Decrease|lvl1=8.0%|lvl2=14.0%|lvl3=22.0%|lvl4=30.0%|lvl5=38.0%|lvl6=46.0%|lvl7=54.0%|lvl8=60.0%}}
+}}}}
+|skill4={{SkillInfo
+|name=Bear Form
+|info=
+Transform into Bear
+|trigger=Ultimate
+|target=Self
+|buffs=
+<p>
+Speed: +20%
+</p>
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Cooldown|unit=sec.|lvl1=6.5|lvl2=6.0|lvl3=5.5|lvl4=5.0|lvl5=4.5|lvl6=4.0|lvl7=3.5|lvl8=3.0}}
+}}}}
+}}

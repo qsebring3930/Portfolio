@@ -1,0 +1,49 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Brood Lord
+|image=[[File:Brood Lord.webp]]
+|category=SC-Zerg
+|max=24
+|level=1305
+|weapons=
+Knife<br>
+Grenade
+|restricted=All
+|items=
+Gloves of Warmth
+}}
+|skill1={{SkillInfo
+|name=Porous Cartilage
+|info=
+Increase Health
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Health|unit=HP|lvl1=10|lvl2=20|lvl3=30|lvl4=40|lvl5=50|lvl6=60}}
+}}}}
+|skill2={{SkillInfo
+|name=Swarm Seeds
+|info=
+Spawn Broodling in grenade
+|trigger=Special
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Chance|unit=%|lvl1=10|lvl2=15|lvl3=20|lvl4=25|lvl5=30|lvl6=35}}
+}}}}
+|skill3={{SkillInfo
+|name=Broodling Strike
+|info=
+Gain Grenades
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Time|unit=sec.|lvl0=14.0|lvl1=13.0|lvl2=12.0|lvl3=11.0|lvl4=10.0|lvl5=9.0|lvl6=8.0}}
+}}}}
+|skill4={{SkillInfo
+|name=Biological Bombardment
+|info=
+Increase Grenade Damage based on distance
+|trigger=Attack
+|extra=Increase damage each 100 units
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Increase|lvl1=1.0%|lvl2=2.0%|lvl3=3.0%|lvl4=4.0%|lvl5=5.0%|lvl6=6.0%}}
+}}}}
+}}

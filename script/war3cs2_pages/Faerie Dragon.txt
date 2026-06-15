@@ -1,0 +1,66 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Faerie Dragon
+|image=[[File:Faerie Dragon.webp]]
+|category=WC3-Elf
+|max=24
+|level=130
+|weapons=
+No Weapon
+|restricted=All
+|passive=
+<p>
+Health: -25HP<br>
+Flying: Always<br>
+Size: -40%
+</p>
+}}
+|skill1={{SkillInfo
+|name=Phase Shift
+|info=
+Become Invisible and Invincible
+|trigger=Victim
+|duration=2
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Cooldown|unit=sec.|lvl0=7.5|lvl1=5.5|lvl2=5.0|lvl3=4.5|lvl4=4.0|lvl5=3.5|lvl6=3.0}}
+}}}}
+|skill2={{SkillInfo
+|name=Mana Flare
+|info=
+Ward: Damages spell usage and weapon fire
+|trigger=Ability1
+|target=Location
+|damage=5
+|duration=15
+|range=750
+|radius=250
+|cooldown=10.0
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Ability Damage|lvl0=5|lvl1=15|lvl2=18|lvl3=21|lvl4=24|lvl5=27|lvl6=30}}
+|line2={{LevelUpRow|field=Ultimate Damage|lvl0=25|lvl1=35|lvl2=38|lvl3=41|lvl4=44|lvl5=47|lvl6=50}}
+}}}}
+|skill3={{SkillInfo
+|name=Skill Immunity
+|info=
+Skill Immunity
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Chance|unit=%|lvl0=10|lvl1=30|lvl2=40|lvl3=50|lvl4=60|lvl5=70|lvl6=80}}
+}}}}
+|skill4={{SkillInfo
+|name=Fireball
+|info=
+Damage Enemy, burn those around him
+|trigger=Ultimate
+|target=Target_Enemy
+|duration=2
+|range=400
+|aim=15
+|radius=100
+|cooldown=2.0
+|extra=Damage based on Max Health
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Damage|lvl0=2.5%|lvl1=5.0%|lvl2=6.0%|lvl3=7.0%|lvl4=8.0%|lvl5=9.0%|lvl6=10.0%}}
+}}}}
+}}

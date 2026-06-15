@@ -1,0 +1,96 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Freakazoid
+|image=[[File:Freakazoid.webp]]
+|category=Hero
+|max=42
+|level=1500
+|weapons=
+Decoy Grenade<br>
+Knife
+|restricted=All
+}}
+|skill1={{SkillInfo
+|name=Superior Intellect!
+|info=
+Highlight Enemies
+|trigger=Aura
+|quantity=3
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Tick Rate|unit=sec.|lvl0=4.0|lvl1=5.0|lvl2=6.0|lvl3=7.0|lvl4=8.0|lvl5=9.0|lvl6=10.0}}
+|line2={{LevelUpRow|field=Radius|lvl0=200.0|lvl1=250.0|lvl2=300.0|lvl3=350.0|lvl4=400.0|lvl5=450.0|lvl6=500.0}}
+}}}}
+|skill2={{SkillInfo
+|name=Lightning Speed!
+|info=
+Increase Speed
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Speed|lvl0=10.0%|lvl1=20.0%|lvl2=26.0%|lvl3=32.0%|lvl4=38.0%|lvl5=44.0%|lvl6=50.0%}}
+}}}}
+|skill3={{SkillInfo
+|name=Cave Guy Strength!
+|info=
+Varying Increase Knife Damage
+|trigger=Special
+|tickrate=15
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Min Increase|lvl0=1.0%|lvl1=5.0%|lvl2=11.0%|lvl3=17.0%|lvl4=23.0%|lvl5=29.0%|lvl6=35.0%}}
+|line2={{LevelUpRow|field=Max Increase|lvl0=10.0%|lvl1=20.0%|lvl2=26.0%|lvl3=32.0%|lvl4=38.0%|lvl5=44.0%|lvl6=50.0%}}
+}}}}
+|skill4={{SkillInfo
+|name=Dance of Doom!
+|info=
+Teleport Randomly
+|trigger=Ability1
+|target=Self
+|duration=2
+|tickrate=0.4
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Radius|lvl0=50.0|lvl1=100.0|lvl2=140.0|lvl3=180.0|lvl4=220.0|lvl5=260.0|lvl6=300.0}}
+|line2={{LevelUpRow|field=Cooldown|unit=sec.|lvl0=45.0|lvl1=40.0|lvl2=36.0|lvl3=32.0|lvl4=28.0|lvl5=24.0|lvl6=20.0}}
+}}}}
+|skill5={{SkillInfo
+|name=Breaking the 4th!
+|info=
+Damage and Silence
+|trigger=Ability2
+|target=AoE_Self
+|duration=6
+|radius=300
+|cooldown=20.0
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Damage|lvl0=15|lvl1=18|lvl2=21|lvl3=24|lvl4=27|lvl5=30|lvl6=33}}
+}}}}
+|skill6={{SkillInfo
+|name=Lucky Bonk!
+|info=
+Throw Hammer, Impact: Damage
+|trigger=Ability3
+|required=
+Freak Out! - Level 1
+|target=Object
+|force=1.75
+|cooldown=8.0
+|extra=Can only be used while you are Freaking Out
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Damage|lvl0=10|lvl1=15|lvl2=20|lvl3=25|lvl4=30|lvl5=35|lvl6=40}}
+}}}}
+|skill7={{SkillInfo
+|name=Freak Out!
+|info=
+Increase Speed and Knife Damage, Enable 'Lucky Bonk!'
+|trigger=Ultimate
+|target=Self
+|duration=10
+|buffs=
+<p>
+Speed: +20%
+</p>
+|cooldown=40.0
+|extra=Damage Increase is for the rest of the round and stacks
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Increase|lvl1=5.0%|lvl2=6.0%|lvl3=7.0%|lvl4=8.0%|lvl5=9.0%|lvl6=10.0%}}
+}}}}
+}}

@@ -1,0 +1,71 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Enforcer
+|image=[[File:Enforcer.webp]]
+|category=Hero
+|max=36
+|level=1500
+|weapons=
+AK-47<br>
+Five-Seven<br>
+Knife
+|restricted=All
+}}
+|skill1={{SkillInfo
+|name=Companion: Ralph
+|info=
+Steal Health
+|trigger=Attack
+|chance=50
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Steal|lvl1=10.0%|lvl2=12.0%|lvl3=14.0%|lvl4=16.0%|lvl5=18.0%|lvl6=20.0%}}
+}}}}
+|skill2={{SkillInfo
+|name=Companion: Ape
+|info=
+Increase Clip
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Quantity|lvl1=5|lvl2=6|lvl3=7|lvl4=8|lvl5=9|lvl6=10}}
+}}}}
+|skill3={{SkillInfo
+|name=Enforce
+|info=
+Bash
+|trigger=Attack
+|chance=10
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl1=0.5|lvl2=0.6|lvl3=0.7|lvl4=0.8|lvl5=0.9|lvl6=1.0}}
+}}}}
+|skill4={{SkillInfo
+|name=Scavenger: Ralph
+|info=
+Increase Health
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Health|unit=HP|lvl1=25|lvl2=30|lvl3=35|lvl4=40|lvl5=45|lvl6=50}}
+}}}}
+|skill5={{SkillInfo
+|name=Scavenger: Ape
+|info=
+Steal Ammo
+|trigger=Attack
+|quantity=10
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Chance|lvl1=15.0%|lvl2=17.0%|lvl3=19.0%|lvl4=21.0%|lvl5=23.0%|lvl6=25.0%}}
+}}}}
+|skill6={{SkillInfo
+|name=Battle Gear
+|info=
+Increase Speed, Longjump, Decrease Gravity
+|trigger=Passive
+|buffs=
+<p>
+Gravity: -10%<br>
+LongJump: +20%
+</p>
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Speed|lvl1=10.0%|lvl2=12.0%|lvl3=14.0%|lvl4=16.0%|lvl5=18.0%|lvl6=20.0%}}
+}}}}
+}}

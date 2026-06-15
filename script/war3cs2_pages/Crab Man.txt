@@ -1,0 +1,101 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Crab Man
+|image=[[File:Crab Man.webp]]
+|category=Monster
+|max=48
+|level=3965
+|weapons=
+Knife
+|restricted=All
+|passive=
+<p>
+Speed when not strafing: -75%<br>
+Health Per Crab Man: +10HP
+</p>
+}}
+|skill1={{SkillInfo
+|name=Only Move Sideways
+|info=
+Increase Speed when strafing
+|trigger=Special
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Speed|lvl0=10.0%|lvl1=25.0%|lvl2=40.0%|lvl3=55.0%|lvl4=70.0%|lvl5=85.0%|lvl6=100.0%}}
+}}}}
+|skill2={{SkillInfo
+|name=Exo-Skeleton
+|info=
+Increase Armor. Decrease Weapon Damage if armored
+|trigger=Victim
+|buffs=
+<p>
+Decrease: -50%
+</p>
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Armor|lvl0=50|lvl1=100|lvl2=180|lvl3=260|lvl4=340|lvl5=420|lvl6=500}}
+|line2={{LevelUpRow|field=Loss Multiplier|lvl0=90.0%|lvl1=80.0%|lvl2=74.0%|lvl3=68.0%|lvl4=62.0%|lvl5=56.0%|lvl6=50.0%}}
+}}}}
+|skill3={{SkillInfo
+|name=No Head, Only Face
+|info=
+Convert Headshots into Body Shots
+|trigger=Victim
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Chance|lvl0=60.0%|lvl1=75.0%|lvl2=80.0%|lvl3=85.0%|lvl4=90.0%|lvl5=95.0%|lvl6=100.0%}}
+}}}}
+|skill4={{SkillInfo
+|name=Carcinization
+|info=
+Force your enemy to only strafe
+|trigger=Attack
+|duration=6
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Chance|lvl0=5.0%|lvl1=15.0%|lvl2=25.0%|lvl3=35.0%|lvl4=45.0%|lvl5=55.0%|lvl6=65.0%}}
+}}}}
+|skill5={{SkillInfo
+|name=Pinchers
+|info=
+Left Click to Bash and Disable
+|trigger=Attack
+|duration=0.5
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Chance|lvl0=15.0%|lvl1=25.0%|lvl2=30.0%|lvl3=35.0%|lvl4=40.0%|lvl5=45.0%|lvl6=50.0%}}
+}}}}
+|skill6={{SkillInfo
+|name=Crab With a Knife
+|info=
+Right Click to Increase Knife Damage
+|trigger=Attack
+|buffs=
+<p>
+Increase: +100%
+</p>
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Chance|lvl0=4.0%|lvl1=12.0%|lvl2=20.0%|lvl3=28.0%|lvl4=36.0%|lvl5=42.0%|lvl6=50.0%}}
+}}}}
+|skill7={{SkillInfo
+|name=Smoke Break
+|info=
+Channel to regen HP
+|trigger=Ability1
+|target=Self
+|heal=5
+|cooldown=5.0
+|extra=Heals double each second tick. Press Again to cancel
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Quantity|lvl0=1|lvl1=2|lvl2=3|lvl3=4|lvl4=5|lvl5=6|lvl6=7}}
+}}}}
+|skill8={{SkillInfo
+|name=Crab Rave
+|info=
+Increase Speed by vibing with fellow crabs
+|trigger=Ultimate
+|target=AoE_Self
+|duration=5
+|cooldown=2.0
+|extra=Fellow Crab has to rave as well. Does not stack
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Radius|lvl1=220.0|lvl2=240.0|lvl3=260.0|lvl4=280.0|lvl5=300.0|lvl6=320.0}}
+}}}}
+}}

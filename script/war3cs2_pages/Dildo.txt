@@ -1,0 +1,66 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Dildo
+|image=[[File:Dildo.webp]]
+|category=Holiday - Valentine
+|max=20
+|level=265
+|weapons=
+Knife
+|restricted=All
+}}
+|skill1={{SkillInfo
+|name=Teasing
+|info=
+Gain Health, Increase Speed, Damage, Decrease Gravity
+|trigger=Special
+|buffs=
+<p>
+Weapon Damage: +10%
+</p>
+|extra=Passive gain and on abilities and attacks.
+|levelup={{LevelUpInfo|levels=5|zero=1
+|line1={{LevelUpRow|field=Health|unit=HP|lvl0=5|lvl1=10|lvl2=15|lvl3=20|lvl4=25|lvl5=30}}
+|line2={{LevelUpRow|field=Speed|lvl0=0.5%|lvl1=1.0%|lvl2=2.0%|lvl3=3.0%|lvl4=4.0%|lvl5=5.0%}}
+|line3={{LevelUpRow|field=Gravity|lvl0=0.5%|lvl1=1.0%|lvl2=2.0%|lvl3=3.0%|lvl4=4.0%|lvl5=5.0%}}
+}}}}
+|skill2={{SkillInfo
+|name=G-Spot
+|info=
+Increase Damage, Spin
+|trigger=Ability1
+|target=Self
+|cooldown=15.0
+|levelup={{LevelUpInfo|levels=5|zero=1
+|line1={{LevelUpRow|field=Damage|lvl0=5|lvl1=10|lvl2=15|lvl3=20|lvl4=25|lvl5=30}}
+}}}}
+|skill3={{SkillInfo
+|name=Sexperiment
+|info=
+Ward: DoT and Slow Enemies
+|trigger=Ability2
+|target=Self
+|duration=12
+|radius=200
+|buffs=
+<p>
+Speed: -40%
+</p>
+|cooldown=15.0
+|extra=DoT duration is 5 sec.
+|levelup={{LevelUpInfo|levels=5|zero=1
+|line1={{LevelUpRow|field=Damage|lvl0=1|lvl1=2|lvl2=3|lvl3=4|lvl4=5|lvl5=6}}
+}}}}
+|skill4={{SkillInfo
+|name=Orgasm
+|info=
+Bash, Shake and Disarm on Enemies around you
+|trigger=Ultimate
+|target=AoE_Self
+|radius=500
+|cooldown=30.0
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl1=0.5|lvl2=0.8|lvl3=1.1|lvl4=1.4|lvl5=1.7}}
+}}}}
+}}

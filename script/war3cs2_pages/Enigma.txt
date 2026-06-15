@@ -1,0 +1,97 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Enigma
+|image=[[File:Enigma.webp]]
+|category=DotA-Universal
+|max=40
+|level=2720
+|access=Beta
+|weapons=
+Dual Berettas
+|restricted=All
+|team=1
+}}
+|skill1={{SkillInfo
+|name=Malefice
+|info=
+<p>
+DoT and Bash<br>
+Shard: Summon Eidolon
+</p>
+|trigger=Attack
+|duration=4
+|tickrate=2
+|buffs=
+<p>
+Speed: -20%
+</p>
+|cooldown=15.0
+|extra=Summons only if enemy survives
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Chance|lvl1=6.0%|lvl2=8.0%|lvl3=10.0%|lvl4=12.0%|lvl5=14.0%|lvl6=16.0%|lvl7=18.0%|lvl8=20.0%}}
+|line2={{LevelUpRow|field=Bash Duration|unit=sec.|lvl1=0.1|lvl2=0.2|lvl3=0.2|lvl4=0.2|lvl5=0.3|lvl6=0.3|lvl7=0.4|lvl8=0.4}}
+|line3={{LevelUpRow|field=Damage|lvl1=1|lvl2=2|lvl3=3|lvl4=4|lvl5=5|lvl6=6|lvl7=7|lvl8=8}}
+}}}}
+|skill2={{SkillInfo
+|name=Midnight Pulse
+|info=
+Ward: Damage
+|trigger=Ability1
+|target=Location
+|damage=5
+|duration=10
+|range=800
+|radius=600
+|extra=Damage increased by remaining Health
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Damage|lvl1=3.0%|lvl2=4.0%|lvl3=5.0%|lvl4=6.0%|lvl5=7.0%|lvl6=8.0%|lvl7=9.0%|lvl8=10.0%}}
+|line2={{LevelUpRow|field=Cooldown|unit=sec.|lvl1=34.0|lvl2=32.0|lvl3=30.0|lvl4=28.0|lvl5=26.0|lvl6=24.0|lvl7=22.0|lvl8=20.0}}
+}}}}
+|skill3={{SkillInfo
+|name=Demonic Summoning
+|info=
+Sacrifice Health to Summon Eidolons and empower them
+|trigger=Ability2
+|target=Random_Ally
+|quantity=2
+|duration=40
+|extra=All Eidolons summoned are your Eidolons, Eidolons die when Enigma dies
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Cost|unit=HP|lvl1=9|lvl2=12|lvl3=15|lvl4=18|lvl5=21|lvl6=24|lvl7=27|lvl8=30}}
+|line2={{LevelUpRow|field=HP Bonus|unit=HP|lvl1=3|lvl2=4|lvl3=5|lvl4=6|lvl5=7|lvl6=8|lvl7=9|lvl8=10}}
+|line3={{LevelUpRow|field=Magic Resistance Bonus|lvl1=25.0%|lvl2=30.0%|lvl3=35.0%|lvl4=40.0%|lvl5=45.0%|lvl6=50.0%|lvl7=55.0%|lvl8=60.0%}}
+|line4={{LevelUpRow|field=Cooldown|unit=sec.|lvl1=44.0|lvl2=42.0|lvl3=40.0|lvl4=38.0|lvl5=36.0|lvl6=34.0|lvl7=32.0|lvl8=30.0}}
+}}}}
+|skill4={{SkillInfo
+|name=Event Horizon
+|info=
+Decrease Speed from those running away from you
+|trigger=Special
+|buffs=
+<p>
+Speed: -20%
+</p>
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Radius|lvl1=425.0|lvl2=450.0|lvl3=475.0|lvl4=500.0|lvl5=525.0|lvl6=550.0|lvl7=575.0|lvl8=600.0}}
+}}}}
+|skill5={{SkillInfo
+|name=Black Hole
+|info=
+<p>
+Channel to Ward: Damage, Disable, Hex and Pull<br>
+Scepter: Increase Damage and Pull Radius
+</p>
+|trigger=Ultimate
+|target=Location
+|duration=4
+|tickrate=0.5
+|range=300
+|radius=400
+|force=1200
+|extra=Increase Damage is 2% of Max Health, Pull Radius is increased by 200%
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Damage|lvl1=5|lvl2=6|lvl3=7|lvl4=8|lvl5=9|lvl6=10|lvl7=10|lvl8=10}}
+|line2={{LevelUpRow|field=Cooldown|unit=sec.|lvl1=130.0|lvl2=120.0|lvl3=110.0|lvl4=100.0|lvl5=90.0|lvl6=80.0|lvl7=70.0|lvl8=60.0}}
+}}}}
+}}

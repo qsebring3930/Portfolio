@@ -1,0 +1,100 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Chansey
+|image=[[File:Chansey.webp]]
+|category=Pokémon - Normal
+|max=25
+|level=745
+|weapons=
+Knife<br>
+Grenade
+|restricted=All
+|items=
+Gloves of Warmth<br>
+Boots of Zephyr<br>
+Blademail
+|passive=
+<p>
+Health: +400HP<br>
+Speed: -25%
+</p>
+}}
+|skill1={{SkillInfo
+|name=Healer
+|info=
+Cleanse Allies, Heal them for each Cleanse
+|trigger=Aura
+|heal=5
+|radius=300
+|levelup={{LevelUpInfo|levels=5|zero=1
+|line1={{LevelUpRow|field=Tick Rate|unit=sec.|lvl0=6.0|lvl1=5.0|lvl2=4.0|lvl3=3.0|lvl4=2.0|lvl5=1.0}}
+}}}}
+|skill2={{SkillInfo
+|name=Covet
+|info=
+Steal Item
+|trigger=Ability1
+|target=Target_Enemy
+|cooldown=15.0
+|extra=Gain a Random item if the enemy has no items
+|levelup={{LevelUpInfo|levels=5|zero=1
+|line1={{LevelUpRow|field=Range|lvl0=500.0|lvl1=550.0|lvl2=600.0|lvl3=650.0|lvl4=700.0|lvl5=750.0}}
+}}}}
+|skill3={{SkillInfo
+|name=Life Dew
+|info=
+Heal allies
+|trigger=Ability2
+|target=AoE_Self
+|radius=500
+|cooldown=18.0
+|extra=Heals based on Maximum Health
+|levelup={{LevelUpInfo|levels=5|zero=1
+|line1={{LevelUpRow|field=Multiplier|lvl0=5.0%|lvl1=10.0%|lvl2=15.0%|lvl3=20.0%|lvl4=25.0%|lvl5=30.0%}}
+}}}}
+|skill4={{SkillInfo
+|name=Fling
+|info=
+<p>
+Attack: Use Shopmenu Items to enhance your grenades<br>
+Ability3: Choose what item to use
+</p>
+|trigger=Ability3
+|target=Self
+|cooldown=5.0
+|extra=
+<p>
+Effect is based on Item Type. If no item is chosen your last item will be used<br>
+<u>Type:</u><br>
+Immunity: Silence and Hex<br>
+Mobility: Hinder by 35%<br>
+Healing: Decrease Restoration by 100%<br>
+Passive: Gain XP<br>
+Attack: Increase Damage<br>
+Defense: Heal<br>
+Kill: Increase Damage, Multiply by 2 if they are summons<br>
+Death: Prevent Respawn
+</p>
+|levelup={{LevelUpInfo|levels=5|zero=1
+|line1={{LevelUpRow|field=Immunity Duration|unit=sec.|lvl0=1.0|lvl1=2.0|lvl2=3.0|lvl3=4.0|lvl4=5.0|lvl5=6.0}}
+|line2={{LevelUpRow|field=Mobility Duration|unit=sec.|lvl0=1.0|lvl1=2.0|lvl2=3.0|lvl3=4.0|lvl4=5.0|lvl5=6.0}}
+|line3={{LevelUpRow|field=Healing Duration|unit=sec.|lvl0=1.0|lvl1=2.0|lvl2=3.0|lvl3=4.0|lvl4=5.0|lvl5=6.0}}
+|line4={{LevelUpRow|field=Passive XP|unit=XP|lvl0=10|lvl1=20|lvl2=30|lvl3=40|lvl4=50|lvl5=60}}
+|line5={{LevelUpRow|field=Attack Increase|lvl0=10.0%|lvl1=20.0%|lvl2=30.0%|lvl3=40.0%|lvl4=50.0%|lvl5=60.0%}}
+|line6={{LevelUpRow|field=Defense Heal|unit=HP|lvl0=5|lvl1=7|lvl2=9|lvl3=11|lvl4=13|lvl5=15}}
+|line7={{LevelUpRow|field=Kill Damage|lvl0=5|lvl1=8|lvl2=11|lvl3=14|lvl4=17|lvl5=20}}
+|line8={{LevelUpRow|field=Death Duration|unit=sec.|lvl0=1.0|lvl1=2.0|lvl2=3.0|lvl3=4.0|lvl4=5.0|lvl5=6.0}}
+}}}}
+|skill5={{SkillInfo
+|name=Soft-Boiled
+|info=
+Heal and Gain Grenades
+|trigger=Ultimate
+|target=Self
+|cooldown=20.0
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Heal|unit=HP|lvl1=10|lvl2=20|lvl3=30|lvl4=40|lvl5=50}}
+|line2={{LevelUpRow|field=Quantity|lvl1=1|lvl2=2|lvl3=3|lvl4=4|lvl5=5}}
+}}}}
+}}

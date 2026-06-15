@@ -1,0 +1,65 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Giant
+|image=[[File:Giant.webp]]
+|category=Monster
+|max=30
+|level=3965
+|weapons=
+Knife
+|restricted=All
+|passive=
+<p>
+Size: +50%
+</p>
+}}
+|skill1={{SkillInfo
+|name=Gigantic
+|info=
+Increase Health
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Health|unit=HP|lvl0=25|lvl1=50|lvl2=100|lvl3=150|lvl4=200|lvl5=250|lvl6=300}}
+}}}}
+|skill2={{SkillInfo
+|name=Fearsome
+|info=
+Shake Screen
+|trigger=Aura
+|tickrate=3
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Radius|lvl0=250.0|lvl1=300.0|lvl2=320.0|lvl3=340.0|lvl4=360.0|lvl5=380.0|lvl6=400.0}}
+}}}}
+|skill3={{SkillInfo
+|name=Massive
+|info=
+Healback
+|trigger=Victim
+|extra=Heal between 5 and ...
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Health|unit=HP|lvl0=5|lvl1=10|lvl2=14|lvl3=18|lvl4=22|lvl5=26|lvl6=30}}
+}}}}
+|skill4={{SkillInfo
+|name=Insatiable Appetite
+|info=
+Impale, Heal and Kill if you catch them
+|trigger=Attack
+|heal=100
+|force=600
+|extra=Lower Proc chance on Knife Races
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Chance|lvl0=15.0%|lvl1=30.0%|lvl2=32.0%|lvl3=34.0%|lvl4=36.0%|lvl5=38.0%|lvl6=40.0%}}
+}}}}
+|skill5={{SkillInfo
+|name=Stomp
+|info=
+Damage and Drop Weapons on Enemies around you
+|trigger=Ultimate
+|target=AoE_Self
+|damage=30
+|cooldown=20.0
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Radius|lvl1=275.0|lvl2=300.0|lvl3=325.0|lvl4=350.0|lvl5=375.0|lvl6=400.0}}
+}}}}
+}}

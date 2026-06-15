@@ -1,0 +1,109 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Death
+|image=[[File:Death.webp]]
+|category=God
+|max=56
+|level=3020
+}}
+|skill1={{SkillInfo
+|name=Soul Collector
+|info=
+Gain Souls
+|trigger=Kill
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Chance|unit=%|lvl1=55|lvl2=60|lvl3=65|lvl4=70|lvl5=75|lvl6=80|lvl7=85|lvl8=90}}
+}}}}
+|skill2={{SkillInfo
+|name=Death's Chains
+|info=
+Increase Gravity per Soul
+|trigger=Attack
+|chance=33
+|duration=10
+|extra=Up to 300%% gravity
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Gravity|lvl1=6.0%|lvl2=8.0%|lvl3=10.0%|lvl4=12.0%|lvl5=14.0%|lvl6=16.0%|lvl7=18.0%|lvl8=20.0%}}
+}}}}
+|skill3={{SkillInfo
+|name=Reanimate
+|info=
+Sacrifice Souls to Respawn
+|trigger=Death
+|duration=15
+|extra=Sacrifice 1 Soul to respawn where you died. Sacrifice 2 Souls to respawn at spawn. Health is based on your Max Health and where you spawn
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Location Health|lvl1=8.0%|lvl2=16.0%|lvl3=24.0%|lvl4=32.0%|lvl5=40.0%|lvl6=48.0%|lvl7=56.0%|lvl8=64.0%}}
+|line2={{LevelUpRow|field=Spawn Health|lvl1=4.0%|lvl2=8.0%|lvl3=12.0%|lvl4=16.0%|lvl5=20.0%|lvl6=24.0%|lvl7=28.0%|lvl8=32.0%}}
+}}}}
+|skill4={{SkillInfo
+|name=Death's Scythe
+|info=
+<p>
+Attack: Increase Knife Damage per Soul against Summons<br>
+Knife: Right Click Cone Damage, Range And Cone Increase per Soul
+</p>
+|trigger=Special
+|damage=65
+|extra=
+<p>
+Min Range is 65. Max Range is 250.<br>
+Min Cone is 20. Max Cone is 40.<br>
+Damage Decreases by 40% per Target.
+</p>
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Damage|lvl1=1|lvl2=2|lvl3=3|lvl4=4|lvl5=5|lvl6=6|lvl7=7|lvl8=8}}
+|line2={{LevelUpRow|field=Range|lvl1=3.0|lvl2=4.0|lvl3=5.0|lvl4=6.0|lvl5=7.0|lvl6=8.0|lvl7=9.0|lvl8=10.0}}
+}}}}
+|skill5={{SkillInfo
+|name=Death's Touch
+|info=
+Increase Gun Damage per Soul
+|trigger=Attack
+|damage=20.0%
+|extra=Chance starts at 2% and is increased per Soul. Can Proc Multiple times if over 100% with reduced increase
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Chance|lvl1=1.0%|lvl2=2.0%|lvl3=3.0%|lvl4=4.0%|lvl5=5.0%|lvl6=6.0%|lvl7=7.0%|lvl8=8.0%}}
+}}}}
+|skill6={{SkillInfo
+|name=Death's Shroud
+|info=
+Sacrifice Souls to Place Ward. Ward: Restrict the Vision of All
+|trigger=Ability1
+|target=Location
+|quantity=1
+|duration=8
+|tickrate=0.5
+|range=500
+|cooldown=20.0
+|extra=Ally Vision Reduction: 200. Enemy Vision Reduction: 150
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Radius|lvl1=150.0|lvl2=200.0|lvl3=250.0|lvl4=300.0|lvl5=350.0|lvl6=400.0|lvl7=450.0|lvl8=500.0}}
+}}}}
+|skill7={{SkillInfo
+|name=Soul Box
+|info=
+Sacrifice Souls to Heal yourself if injured or become stronger if uninjured
+|trigger=Ultimate
+|target=Self
+|quantity=1
+|cooldown=10.0
+|extra=
+<p>
+Boost remains active and stack, boosts cannot go higher then 4 Stacks.<br>
+<u>Boosts</u><br>
+Health: Increase Health<br>
+Speed: Increase Speed<br>
+Mobility: Increase Long Jump, Decrease Gravity<br>
+Invisibility: Decrease Visibility
+</p>
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Heal|unit=HP|lvl1=5|lvl2=10|lvl3=15|lvl4=20|lvl5=25|lvl6=30|lvl7=35|lvl8=40}}
+|line2={{LevelUpRow|field=Health|unit=HP|lvl1=2|lvl2=4|lvl3=6|lvl4=8|lvl5=10|lvl6=12|lvl7=14|lvl8=16}}
+|line3={{LevelUpRow|field=Speed|lvl1=3.0%|lvl2=4.0%|lvl3=5.0%|lvl4=6.0%|lvl5=7.0%|lvl6=8.0%|lvl7=9.0%|lvl8=10.0%}}
+|line4={{LevelUpRow|field=Long Jump|lvl1=0.7%|lvl2=1.5%|lvl3=2.3%|lvl4=3.0%|lvl5=3.8%|lvl6=4.5%|lvl7=5.2%|lvl8=6.0%}}
+|line5={{LevelUpRow|field=Gravity|lvl1=0.7%|lvl2=1.5%|lvl3=2.3%|lvl4=3.0%|lvl5=3.8%|lvl6=4.5%|lvl7=5.2%|lvl8=6.0%}}
+|line6={{LevelUpRow|field=Visibility|lvl1=2.0%|lvl2=4.0%|lvl3=6.0%|lvl4=8.0%|lvl5=10.0%|lvl6=12.0%|lvl7=14.0%|lvl8=16.0%}}
+}}}}
+}}

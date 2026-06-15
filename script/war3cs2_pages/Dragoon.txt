@@ -1,0 +1,89 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Dragoon
+|image=[[File:Dragoon.webp]]
+|category=Final Fantasy
+|max=36
+|level=4815
+|items=
+Sock of Feathers
+}}
+|skill1={{SkillInfo
+|name=High Jump
+|info=
+Jump High
+|trigger=Ability1
+|target=Self
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Force|lvl1=440.0|lvl2=460.0|lvl3=480.0|lvl4=500.0|lvl5=520.0|lvl6=540.0}}
+|line2={{LevelUpRow|field=Cooldown|unit=sec.|lvl1=10.0|lvl2=9.0|lvl3=8.0|lvl4=7.0|lvl5=6.0|lvl6=5.0}}
+}}}}
+|skill2={{SkillInfo
+|name=Life Surge
+|info=
+Steal Health
+|trigger=Attack
+|extra=Steal: 50%
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Chance|lvl1=10.0%|lvl2=15.0%|lvl3=20.0%|lvl4=25.0%|lvl5=30.0%|lvl6=35.0%}}
+}}}}
+|skill3={{SkillInfo
+|name=Dragon Breath
+|info=
+<p>
+Random Breath Attack<br>
+Fire: Burn<br>
+Ice: Hinder<br>
+Lightning: Bash<br>
+Holy: Dispel & Increase Damage on Summons<br>
+Dark: Steal Health
+</p>
+|trigger=Attack
+|target=Cone
+|duration=5
+|range=400
+|cone=40
+|buffs=
+<p>
+Hinder: -20%
+</p>
+|extra=Bash Duration is 1 sec. Holy deals 300% damage to summons. Dark deals between 50% and 150% damage
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Chance|lvl1=7.5%|lvl2=10.0%|lvl3=12.5%|lvl4=15.0%|lvl5=17.5%|lvl6=20.0%}}
+|line2={{LevelUpRow|field=Damage|lvl1=2|lvl2=4|lvl3=6|lvl4=8|lvl5=10|lvl6=12}}
+}}}}
+|skill4={{SkillInfo
+|name=Blood Bath
+|info=
+Heal Yourself and a Random Ally
+|trigger=Attack
+|heal=25
+|radius=400
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Chance|lvl1=7.5%|lvl2=10.0%|lvl3=12.5%|lvl4=15.0%|lvl5=17.5%|lvl6=20.0%}}
+}}}}
+|skill5={{SkillInfo
+|name=Dragon Hearth
+|info=
+Increase Health, Speed, Fall Damage Resistance
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Health|unit=HP|lvl1=10|lvl2=18|lvl3=26|lvl4=34|lvl5=42|lvl6=50}}
+|line2={{LevelUpRow|field=Speed|lvl1=10.0%|lvl2=14.0%|lvl3=18.0%|lvl4=22.0%|lvl5=26.0%|lvl6=30.0%}}
+|line3={{LevelUpRow|field=Resist|lvl1=15.0%|lvl2=30.0%|lvl3=45.0%|lvl4=60.0%|lvl5=75.0%|lvl6=90.0%}}
+}}}}
+|skill6={{SkillInfo
+|name=Dragon Dive
+|info=
+Drop Down and hurt enemies around you
+|trigger=Ultimate
+|target=Self
+|radius=500
+|force=600
+|cooldown=15.0
+|extra=Damage Based on Distance to floor
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Dmg Modifier|lvl1=5.0%|lvl2=8.0%|lvl3=11.0%|lvl4=14.0%|lvl5=17.0%|lvl6=20.0%}}
+}}}}
+}}

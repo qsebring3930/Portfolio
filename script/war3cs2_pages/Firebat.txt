@@ -1,0 +1,72 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Firebat
+|image=[[File:Firebat.webp]]
+|category=SC-Terran
+|max=30
+|level=1215
+|access=Beta
+|weapons=
+MP9
+|restricted=All
+}}
+|skill1={{SkillInfo
+|name=Flamethrower
+|info=
+<p>
+Attack: Burn<br>
+Special: Right Click to spray flame wards. Ward: Damage and Burn
+</p>
+|trigger=Special
+|damage=5
+|range=100
+|radius=100
+|cooldown=15.0
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Burn Duration|unit=sec.|lvl1=0.3|lvl2=0.6|lvl3=0.9|lvl4=1.2|lvl5=1.5|lvl6=1.8}}
+|line2={{LevelUpRow|field=Ward Duration|unit=sec.|lvl1=3.5|lvl2=4.0|lvl3=4.5|lvl4=5.0|lvl5=5.5|lvl6=6.0}}
+}}}}
+|skill2={{SkillInfo
+|name=Juggernaut Plating
+|info=
+Increase Health, Speed
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Health|unit=HP|lvl1=10|lvl2=18|lvl3=26|lvl4=34|lvl5=42|lvl6=50}}
+|line2={{LevelUpRow|field=Speed|lvl1=5.0%|lvl2=8.0%|lvl3=11.0%|lvl4=14.0%|lvl5=17.0%|lvl6=20.0%}}
+}}}}
+|skill3={{SkillInfo
+|name=Incinerator Gauntlets
+|info=
+Increase 'Flame Ward' Radius
+|trigger=Special
+|required=
+Flamethrower - Level 1
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Radius|lvl1=15.0|lvl2=20.0|lvl3=25.0|lvl4=30.0|lvl5=35.0|lvl6=40.0}}
+}}}}
+|skill4={{SkillInfo
+|name=Flametank
+|info=
+Increase Clip
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Quantity|lvl1=5|lvl2=10|lvl3=15|lvl4=20|lvl5=25|lvl6=30}}
+}}}}
+|skill5={{SkillInfo
+|name=Stim Pack
+|info=
+Sacrifice Health to Increase Speed
+|trigger=Ultimate
+|target=Self
+|duration=8
+|buffs=
+<p>
+Speed: +40%
+</p>
+|cooldown=15.0
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Health|unit=HP|lvl1=30|lvl2=28|lvl3=26|lvl4=24|lvl5=22|lvl6=20}}
+}}}}
+}}

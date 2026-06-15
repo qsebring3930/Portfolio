@@ -1,0 +1,88 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Engineering Goblin
+|image=[[File:Engineering Goblin.webp]]
+|category=Goblin
+|max=36
+|level=875
+|weapons=
+Smoke Grenade
+|restricted=All
+|team=1
+|passive=
+<p>
+Health: -67HP
+</p>
+}}
+|skill1={{SkillInfo
+|name=Invisicloak
+|info=
+Gain periods of full Invisibility and Spell and Skill Immunity
+|trigger=Passive
+|extra=Inactive for 2.0 seconds
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Invis Tick|unit=sec.|lvl0=4.0|lvl1=5.5|lvl2=6.0|lvl3=6.5|lvl4=7.0|lvl5=7.5|lvl6=8.0}}
+}}}}
+|skill2={{SkillInfo
+|name=Heart Stop
+|info=
+Damage Enemies around you
+|trigger=Death
+|explrad=300
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Chance|unit=%|lvl0=32|lvl1=40|lvl2=48|lvl3=56|lvl4=64|lvl5=72|lvl6=80}}
+|line2={{LevelUpRow|field=Magnitude|lvl0=50|lvl1=100|lvl2=120|lvl3=140|lvl4=160|lvl5=180|lvl6=200}}
+}}}}
+|skill3={{SkillInfo
+|name=Mine Dispenser
+|info=
+Gain Mines over time
+|trigger=Passive
+|extra=Gain a Sticky, Reproducing and Explosive Mines
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Tick|unit=sec.|lvl0=22.0|lvl1=20.0|lvl2=18.0|lvl3=16.0|lvl4=14.0|lvl5=12.0|lvl6=10.0}}
+}}}}
+|skill4={{SkillInfo
+|name=Explosive Mine
+|info=
+Place Mine, Damage and Bash Enemy and Damage those around him
+|trigger=Ability1
+|target=Location
+|duration=20
+|range=600
+|explrad=200
+|cooldown=5.0
+|extra=Explosion Damage between 25 and ...
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Explosion Damage|lvl0=25|lvl1=30|lvl2=36|lvl3=42|lvl4=48|lvl5=54|lvl6=60}}
+}}}}
+|skill5={{SkillInfo
+|name=Reproducing Mine
+|info=
+Place Mine, Blind Enemy, Create 4 Explosive Mines
+|trigger=Ability2
+|target=Location
+|duration=20
+|range=600
+|cooldown=5.0
+|extra=Explosive Mines Damage for 25% of Max Health, Stay for 10.0 sec.
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Blind Duration|unit=sec.|lvl0=0.1|lvl1=0.5|lvl2=1.0|lvl3=1.5|lvl4=2.0|lvl5=2.5|lvl6=3.0}}
+}}}}
+|skill6={{SkillInfo
+|name=Sticky Mine
+|info=
+Place Mine, Bash Enemy, Stick Proximity Mine on Enemy
+|trigger=Ability3
+|target=Location
+|duration=20
+|range=600
+|radius=200
+|cooldown=5.0
+|extra=Proximity deals 15 to self and 50 around. Detection last for 15 sec.
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Bash Duration|unit=sec.|lvl0=0.8|lvl1=1.0|lvl2=1.2|lvl3=1.4|lvl4=1.6|lvl5=1.8|lvl6=2.0}}
+|line2={{LevelUpRow|field=Impact Radius|lvl0=100.0|lvl1=200.0|lvl2=220.0|lvl3=240.0|lvl4=260.0|lvl5=280.0|lvl6=300.0}}
+}}}}
+}}

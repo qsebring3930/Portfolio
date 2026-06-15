@@ -1,0 +1,52 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Blood Mage
+|image=[[File:Blood Mage.webp]]
+|category=WC3-Human
+|max=32
+|level=50
+}}
+|skill1={{SkillInfo
+|name=Phoenix
+|info=
+Revive first Ally to die
+|trigger=Special
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Chance|unit=%|lvl1=65|lvl2=70|lvl3=75|lvl4=80|lvl5=85|lvl6=90|lvl7=95|lvl8=100}}
+}}}}
+|skill2={{SkillInfo
+|name=Banish
+|info=
+Banish
+|trigger=Attack
+|chance=33
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl1=0.7|lvl2=1.0|lvl3=1.2|lvl4=1.5|lvl5=1.7|lvl6=2.0|lvl7=2.2|lvl8=2.5}}
+}}}}
+|skill3={{SkillInfo
+|name=Siphon Mana
+|info=
+Steal Health and Money
+|trigger=Attack
+|chance=33
+|extra=Steal between 100 and ...
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Money|lvl1=$175|lvl2=$200|lvl3=$225|lvl4=$250|lvl5=$275|lvl6=$300|lvl7=$325|lvl8=$350}}
+|line2={{LevelUpRow|field=Steal|lvl1=9.5%|lvl2=11.0%|lvl3=12.5%|lvl4=14.0%|lvl5=15.5%|lvl6=17.0%|lvl7=18.5%|lvl8=20.0%}}
+}}}}
+|skill4={{SkillInfo
+|name=Flame Strike
+|info=
+Ward: Damage and Burn
+|trigger=Ultimate
+|target=Location
+|duration=10
+|range=500
+|radius=250
+|cooldown=20.0
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Damage|lvl1=1|lvl2=2|lvl3=3|lvl4=4|lvl5=5|lvl6=6|lvl7=7|lvl8=8}}
+|line2={{LevelUpRow|field=Burn|unit=sec.|lvl1=0.3|lvl2=0.9|lvl3=1.5|lvl4=2.1|lvl5=2.7|lvl6=3.3|lvl7=3.9|lvl8=4.5}}
+}}}}
+}}

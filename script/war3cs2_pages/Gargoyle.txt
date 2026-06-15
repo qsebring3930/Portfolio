@@ -1,0 +1,61 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Gargoyle
+|image=[[File:Gargoyle.webp]]
+|category=WC3-Undead
+|max=32
+|level=10
+|weapons=
+Knife
+|restricted=All
+|items=
+Armor of Protection<br>
+Ring of Resistance<br>
+Blastproof Plate
+}}
+|skill1={{SkillInfo
+|name=Creature Attack
+|info=
+Increase Knife Damage. Increases further with more Gargoyles
+|trigger=Attack
+|levelup={{LevelUpInfo|levels=8|zero=1
+|line1={{LevelUpRow|field=Increase|lvl0=1|lvl1=3|lvl2=4|lvl3=5|lvl4=6|lvl5=7|lvl6=8|lvl7=9|lvl8=10}}
+}}}}
+|skill2={{SkillInfo
+|name=Creature Carapace
+|info=
+Increase Health, Speed. Decrease Received Magic Damage
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=8|zero=1
+|line1={{LevelUpRow|field=Health|unit=HP|lvl0=5|lvl1=15|lvl2=20|lvl3=25|lvl4=30|lvl5=35|lvl6=40|lvl7=45|lvl8=50}}
+|line2={{LevelUpRow|field=Speed|lvl0=5.0%|lvl1=9.0%|lvl2=12.0%|lvl3=15.0%|lvl4=18.0%|lvl5=21.0%|lvl6=24.0%|lvl7=27.0%|lvl8=30.0%}}
+|line3={{LevelUpRow|field=Decrease|lvl0=5.0%|lvl1=15.0%|lvl2=20.0%|lvl3=25.0%|lvl4=30.0%|lvl5=35.0%|lvl6=40.0%|lvl7=45.0%|lvl8=50.0%}}
+}}}}
+|skill3={{SkillInfo
+|name=Stone Form
+|info=
+Turn to Stone to heal back to full health.
+|trigger=Ability1
+|target=Self
+|heal=5
+|buffs=
+<p>
+Decrease Weapon Damage: -70%
+</p>
+|cooldown=15.0
+|extra=Reduce Received Weapon Damage but can't attack. Revert when fully healed. Carefull in the air
+|levelup={{LevelUpInfo|levels=8|zero=1
+|line1={{LevelUpRow|field=Tickrate|unit=sec.|lvl0=1.0|lvl1=0.9|lvl2=0.8|lvl3=0.7|lvl4=0.6|lvl5=0.5|lvl6=0.4|lvl7=0.3|lvl8=0.2}}
+}}}}
+|skill4={{SkillInfo
+|name=Flight
+|info=
+Toggle Flight, Gain Speed
+|trigger=Ultimate
+|target=Toggle
+|cooldown=1.0
+|levelup={{LevelUpInfo|levels=8|zero=1
+|line1={{LevelUpRow|field=Speed|lvl0=15.0%|lvl1=25.0%|lvl2=30.0%|lvl3=35.0%|lvl4=40.0%|lvl5=45.0%|lvl6=50.0%|lvl7=55.0%|lvl8=60.0%}}
+}}}}
+}}

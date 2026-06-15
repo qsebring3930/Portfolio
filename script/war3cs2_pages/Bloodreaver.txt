@@ -1,0 +1,83 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Bloodreaver
+|image=[[File:Bloodreaver.webp]]
+|category=Hero
+|max=35
+|level=1500
+|items=
+Mask of Death
+}}
+|skill1={{SkillInfo
+|name=Feast
+|info=
+Steal Health
+|trigger=Attack
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Steal|lvl1=14.0%|lvl2=18.0%|lvl3=22.0%|lvl4=26.0%|lvl5=30.0%}}
+}}}}
+|skill2={{SkillInfo
+|name=Vials of Blood
+|info=
+Gain Vial
+|trigger=Attack
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Chance|lvl1=24.0%|lvl2=28.0%|lvl3=32.0%|lvl4=36.0%|lvl5=40.0%}}
+|line2={{LevelUpRow|field=Capacity|lvl1=16|lvl2=22|lvl3=28|lvl4=34|lvl5=40}}
+}}}}
+|skill3={{SkillInfo
+|name=Preparedness
+|info=
+Increase Health per Vial
+|trigger=Passive
+|health=2
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Max Health|unit=HP|lvl1=15|lvl2=30|lvl3=45|lvl4=60|lvl5=75}}
+}}}}
+|skill4={{SkillInfo
+|name=Blood-Smeared Weapon
+|info=
+Sacrifice Vials to Increase Dealt Gun Damage
+|trigger=Ability1
+|target=Self
+|duration=5
+|cooldown=15.0
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Cost|lvl1=8|lvl2=7|lvl3=6|lvl4=5|lvl5=4}}
+|line2={{LevelUpRow|field=Increase|lvl1=20.0%|lvl2=25.0%|lvl3=30.0%|lvl4=35.0%|lvl5=40.0%}}
+}}}}
+|skill5={{SkillInfo
+|name=Rise From the Grave
+|info=
+Respawn
+|trigger=Death
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Chance|unit=%|lvl1=18|lvl2=26|lvl3=34|lvl4=42|lvl5=50}}
+}}}}
+|skill6={{SkillInfo
+|name=Desperate Ignition
+|info=
+Damage Enemies around you
+|trigger=Death
+|target=AoE_Self
+|explrad=300
+|extra=Increase chance by 1% per Vial
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Chance|unit=%|lvl1=20|lvl2=25|lvl3=30|lvl4=35|lvl5=40}}
+|line2={{LevelUpRow|field=Magnitude|lvl1=120|lvl2=140|lvl3=160|lvl4=180|lvl5=200}}
+}}}}
+|skill7={{SkillInfo
+|name=Blood Consumption
+|info=
+Sacrifice Vials to Increase Speed and Heal
+|trigger=Ultimate
+|target=Self
+|duration=5
+|cooldown=10.0
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Cost|lvl1=10|lvl2=9|lvl3=8|lvl4=7|lvl5=6}}
+|line2={{LevelUpRow|field=Heal|unit=HP|lvl1=5|lvl2=10|lvl3=15|lvl4=20|lvl5=25}}
+|line3={{LevelUpRow|field=Speed|lvl1=16.0%|lvl2=22.0%|lvl3=28.0%|lvl4=34.0%|lvl5=40.0%}}
+}}}}
+}}

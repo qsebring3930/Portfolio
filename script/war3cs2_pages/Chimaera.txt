@@ -1,0 +1,106 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Chimaera
+|image=[[File:Chimaera.webp]]
+|category=Legendary
+|max=36
+|level=3705
+|weapons=
+Nova<br>
+Knife
+|restricted=All
+}}
+|skill1={{SkillInfo
+|name=Corrosive Breath
+|info=
+DoT
+|trigger=Attack
+|damage=5
+|duration=5
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Chance|lvl1=40.0%|lvl2=44.0%|lvl3=48.0%|lvl4=52.0%|lvl5=56.0%|lvl6=60.0%}}
+}}}}
+|skill2={{SkillInfo
+|name=Fire Breath
+|info=
+Burn
+|trigger=Attack
+|duration=3
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Chance|lvl1=40.0%|lvl2=44.0%|lvl3=48.0%|lvl4=52.0%|lvl5=56.0%|lvl6=60.0%}}
+}}}}
+|skill3={{SkillInfo
+|name=Poison Breath
+|info=
+Growing DoT
+|trigger=Attack
+|damage=2
+|duration=5
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Chance|lvl1=30.0%|lvl2=32.0%|lvl3=34.0%|lvl4=36.0%|lvl5=38.0%|lvl6=40.0%}}
+}}}}
+|skill4={{SkillInfo
+|name=Vampiric Breath
+|info=
+Steal Health
+|trigger=Attack
+|damage=25.0%
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Chance|lvl1=30.0%|lvl2=32.0%|lvl3=34.0%|lvl4=36.0%|lvl5=38.0%|lvl6=40.0%}}
+}}}}
+|skill5={{SkillInfo
+|name=Adjust Flight
+|info=
+Adjust Gravity with ability1/2/3
+|trigger=Special
+|target=Self
+|extra=Press the same ability twice to reset your gravity
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Cooldown|unit=sec.|lvl1=10.0|lvl2=9.0|lvl3=8.0|lvl4=7.0|lvl5=6.0|lvl6=5.0}}
+}}}}
+|skill6={{SkillInfo
+|name=Low Flight
+|info=
+Toggle Gravity
+|trigger=Ability1
+|target=Self
+|buffs=
+<p>
+Gravity: -25%
+</p>
+}}
+|skill7={{SkillInfo
+|name=Medium Flight
+|info=
+Toggle Gravity
+|trigger=Ability2
+|target=Self
+|buffs=
+<p>
+Gravity: -50%
+</p>
+}}
+|skill8={{SkillInfo
+|name=High Flight
+|info=
+Toggle Gravity
+|trigger=Ability3
+|target=Self
+|buffs=
+<p>
+Gravity: -75%
+</p>
+}}
+|skill9={{SkillInfo
+|name=Tail Whip
+|info=
+Impale those around you
+|trigger=Ultimate
+|target=AoE_Self
+|force=500
+|cooldown=30.0
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Radius|lvl1=250.0|lvl2=300.0|lvl3=350.0|lvl4=400.0|lvl5=450.0|lvl6=500.0}}
+}}}}
+}}

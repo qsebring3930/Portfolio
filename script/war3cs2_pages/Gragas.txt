@@ -1,0 +1,80 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Gragas
+|image=[[File:Gragas.webp]]
+|category=LoL-Tank
+|max=30
+|level=4255
+|weapons=
+Knife
+|restricted=All
+|passive=
+<p>
+Drunken Reduction: +0.5% per Level
+</p>
+}}
+|skill1={{SkillInfo
+|name=Happy Hour
+|info=
+Increase Health. Heal when using spells
+|trigger=Passive
+|extra=Heal is 20% of your Max Health
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Health|unit=HP|lvl0=10|lvl1=25|lvl2=40|lvl3=55|lvl4=70|lvl5=85|lvl6=100}}
+|line2={{LevelUpRow|field=Cooldown|unit=sec.|lvl0=12.0|lvl1=11.0|lvl2=10.0|lvl3=9.0|lvl4=8.0|lvl5=7.0|lvl6=6.0}}
+}}}}
+|skill2={{SkillInfo
+|name=Barrel Roll
+|info=
+Trap: Explodes and Slow Enemies. Highlights Enemies while Charging
+|trigger=Ability1
+|target=Location
+|duration=4
+|range=750
+|radius=300
+|cooldown=15.0
+|extra=Press again to Detonate Early with reduced effect
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Damage|lvl0=20|lvl1=25|lvl2=30|lvl3=35|lvl4=40|lvl5=45|lvl6=50}}
+|line2={{LevelUpRow|field=Slow|lvl0=20.0%|lvl1=25.0%|lvl2=30.0%|lvl3=35.0%|lvl4=40.0%|lvl5=45.0%|lvl6=50.0%}}
+}}}}
+|skill3={{SkillInfo
+|name=Drunken Rage
+|info=
+Reduce Received Weapon Damage and Next Attack deals AoE Damage on Happy Hour
+|trigger=Special
+|duration=5
+|radius=250
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Reduce|lvl0=2.0%|lvl1=5.0%|lvl2=8.0%|lvl3=11.0%|lvl4=14.0%|lvl5=17.0%|lvl6=20.0%}}
+|line2={{LevelUpRow|field=Damage|lvl0=5|lvl1=10|lvl2=14|lvl3=18|lvl4=22|lvl5=26|lvl6=30}}
+}}}}
+|skill4={{SkillInfo
+|name=Body Slam
+|info=
+Leap Forward, Damage Enemies around you on Touch or Landing
+|trigger=Ability2
+|target=Self
+|duration=1
+|range=300
+|radius=200
+|force=2
+|cooldown=15.0
+|extra=Stun on Touch, Cooldown is halved when you hit enemies
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Damage|lvl0=10|lvl1=15|lvl2=18|lvl3=21|lvl4=24|lvl5=27|lvl6=30}}
+}}}}
+|skill5={{SkillInfo
+|name=Explosive Cask
+|info=
+Launch Barrel, Impact: Explodes and Knock Back
+|trigger=Ultimate
+|target=Object
+|radius=300
+|force=2
+|cooldown=30.0
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Damage|lvl1=35|lvl2=40|lvl3=45|lvl4=50|lvl5=55|lvl6=60}}
+}}}}
+}}

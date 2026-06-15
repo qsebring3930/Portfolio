@@ -1,0 +1,98 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Chaos Shaper
+|image=[[File:Chaos Shaper.webp]]
+|category=AQW
+|max=30
+|level=4345
+|weapons=
+M4A4<br>
+USP-S<br>
+Knife
+|restricted=All
+}}
+|skill1={{SkillInfo
+|name=Chaotic Strength
+|info=
+Increase Health
+|trigger=Passive
+|extra=Health between 1 and ...
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Health|unit=HP|lvl1=10|lvl2=20|lvl3=30|lvl4=40|lvl5=50}}
+}}}}
+|skill2={{SkillInfo
+|name=Chaotic Touch
+|info=
+Increase Weapon Damage
+|trigger=Attack
+|extra=Damage between 1 and ...
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Damage|lvl1=2|lvl2=4|lvl3=6|lvl4=8|lvl5=10}}
+}}}}
+|skill3={{SkillInfo
+|name=Evocation
+|info=
+Gain Entropy
+|trigger=Special
+|tickrate=10
+|extra=Gain on Attack and over time
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Attack Chance|lvl1=15.0%|lvl2=30.0%|lvl3=45.0%|lvl4=60.0%|lvl5=75.0%}}
+}}}}
+|skill4={{SkillInfo
+|name=Extrication
+|info=
+<p>
+Chaos: Hex and Hinder Enemies around you<br>
+Unity: Heal, Increase Fire Rate And Give Chaotic Touch to allies around you
+</p>
+|trigger=Ability1
+|target=AoE_Self
+|heal=25
+|quantity=4
+|duration=5
+|buffs=
+<p>
+Chaos Speed: -30%<br>
+Chaos Fire Rate: -30%<br>
+Unity Fire Rate: +30%
+</p>
+|cooldown=20.0
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Radius|lvl1=250.0|lvl2=350.0|lvl3=450.0|lvl4=550.0|lvl5=650.0}}
+}}}}
+|skill5={{SkillInfo
+|name=Synthesis
+|info=
+<p>
+Chaos: Increase Magic Damage<br>
+Unity: Heal and Increase Speed
+</p>
+|trigger=Ability2
+|target=Self
+|quantity=4
+|duration=8
+|cooldown=20.0
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Increase|lvl1=10.0%|lvl2=20.0%|lvl3=30.0%|lvl4=40.0%|lvl5=50.0%}}
+|line2={{LevelUpRow|field=Heal|unit=HP|lvl1=6|lvl2=12|lvl3=18|lvl4=24|lvl5=30}}
+|line3={{LevelUpRow|field=Speed|lvl1=5.0%|lvl2=10.0%|lvl3=15.0%|lvl4=20.0%|lvl5=25.0%}}
+}}}}
+|skill6={{SkillInfo
+|name=Realignment
+|info=
+<p>
+Use all Entropy to change Stance and cast an enchanted Extrication<br>
+Chaos: Heal allies based on Entropy<br>
+Unity: Damage enemies based on Entropy
+</p>
+|trigger=Ultimate
+|target=Self
+|quantity=4
+|cooldown=40.0
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Heal|unit=HP|lvl1=2|lvl2=4|lvl3=6|lvl4=8|lvl5=10}}
+|line2={{LevelUpRow|field=Damage|lvl1=2|lvl2=4|lvl3=6|lvl4=8|lvl5=10}}
+}}}}
+}}

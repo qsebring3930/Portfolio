@@ -1,0 +1,77 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Broodmother
+|image=[[File:Broodmother.webp]]
+|category=DotA-Agility
+|max=32
+|level=2340
+|weapons=
+Knife
+|restricted=All
+|team=1
+|passive=
+<p>
+Health: +50HP
+</p>
+}}
+|skill1={{SkillInfo
+|name=Spawn Spiderlings
+|info=
+Deal Damage, Minion Spider
+|trigger=Ability1
+|target=Target_Enemy
+|duration=10
+|range=750
+|cooldown=15.0
+|extra=Enemy Becomes Spider Minion on Death
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Damage|lvl1=16|lvl2=18|lvl3=20|lvl4=22|lvl5=24|lvl6=26|lvl7=28|lvl8=30}}
+}}}}
+|skill2={{SkillInfo
+|name=Spin Web
+|info=
+<p>
+Place Web<br>
+Increase Speed and Regen Health for spiders<br>
+Slow Enemies
+</p>
+|trigger=Ability2
+|target=Location
+|quantity=4
+|range=600
+|radius=250
+|buffs=
+<p>
+Slow: 10%
+</p>
+|extra=Once you reached your limit it will remove the oldest web
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Speed|lvl1=16.0%|lvl2=18.0%|lvl3=20.0%|lvl4=22.0%|lvl5=24.0%|lvl6=26.0%|lvl7=28.0%|lvl8=30.0%}}
+|line2={{LevelUpRow|field=Heal|unit=HP|lvl1=1|lvl2=2|lvl3=3|lvl4=4|lvl5=5|lvl6=6|lvl7=7|lvl8=8}}
+|line3={{LevelUpRow|field=Cooldown|unit=sec.|lvl1=24.0|lvl2=22.0|lvl3=20.0|lvl4=18.0|lvl5=16.0|lvl6=14.0|lvl7=12.0|lvl8=10.0}}
+}}}}
+|skill3={{SkillInfo
+|name=Incapacitating Bite
+|info=
+Increase Knife Damage, Lower Accuracy and Slow enemy
+|trigger=Attack
+|duration=3
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Miss Chance|lvl1=11.0%|lvl2=13.0%|lvl3=15.0%|lvl4=17.0%|lvl5=19.0%|lvl6=21.0%|lvl7=23.0%|lvl8=25.0%}}
+|line2={{LevelUpRow|field=Slow|lvl1=5.0%|lvl2=10.0%|lvl3=15.0%|lvl4=20.0%|lvl5=25.0%|lvl6=30.0%|lvl7=35.0%|lvl8=40.0%}}
+|line3={{LevelUpRow|field=Increase|lvl1=3|lvl2=4|lvl3=5|lvl4=6|lvl5=7|lvl6=8|lvl7=9|lvl8=10}}
+}}}}
+|skill4={{SkillInfo
+|name=Insatiable Hunger
+|info=
+Increase Knife Damage, Life Steal
+|trigger=Ultimate
+|target=Self
+|duration=10
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Steal|lvl1=40.0%|lvl2=44.0%|lvl3=48.0%|lvl4=52.0%|lvl5=56.0%|lvl6=60.0%|lvl7=64.0%|lvl8=68.0%}}
+|line2={{LevelUpRow|field=Cooldown|unit=sec.|lvl1=30.0|lvl2=28.0|lvl3=26.0|lvl4=24.0|lvl5=23.0|lvl6=22.0|lvl7=21.0|lvl8=20.0}}
+|line3={{LevelUpRow|field=Increase|lvl1=6|lvl2=8|lvl3=10|lvl4=12|lvl5=14|lvl6=16|lvl7=18|lvl8=20}}
+}}}}
+}}

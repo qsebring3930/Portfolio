@@ -1,0 +1,71 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Alchemist
+|image=[[File:Alchemist.webp]]
+|category=WC3-Neutral
+|max=32
+|level=175
+|weapons=
+Knife<br>
+Five-Seven
+|restricted=All
+|passive=
+<p>
+Health: +20HP
+</p>
+}}
+|skill1={{SkillInfo
+|name=Healing Spray
+|info=
+Heal Players
+|trigger=Ability1
+|target=Location
+|heal=20
+|duration=5
+|tickrate=0.5
+|cooldown=15.0
+|extra=8 sprays, Range Between 500 and 700
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Radius|lvl1=100.0|lvl2=110.0|lvl3=125.0|lvl4=140.0|lvl5=155.0|lvl6=170.0|lvl7=185.0|lvl8=200.0}}
+}}}}
+|skill2={{SkillInfo
+|name=Chemical Rage
+|info=
+Increase Speed and Decrease Cooldown when low Health
+|trigger=Passive
+|buffs=
+<p>
+Speed: +40%<br>
+Cooldown: -5 sec.
+</p>
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Health Trigger|unit=HP|lvl1=40|lvl2=45|lvl3=50|lvl4=55|lvl5=60|lvl6=65|lvl7=70|lvl8=75}}
+}}}}
+|skill3={{SkillInfo
+|name=Acid Bomb
+|info=
+Throw Acid Bomb, Impact creates Damage Ward
+|trigger=Ability2
+|target=Object
+|duration=6
+|radius=200
+|force=1
+|cooldown=15.0
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Damage|lvl1=8|lvl2=9|lvl3=10|lvl4=11|lvl5=12|lvl6=13|lvl7=14|lvl8=15}}
+}}}}
+|skill4={{SkillInfo
+|name=Transmute
+|info=
+Damage Enemy, Bonus on Kill
+|trigger=Ultimate
+|target=Target_Enemy
+|duration=3
+|range=600
+|cooldown=30.0
+|extra=Gain Money, XP or Health. Small bonus based on situation
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Damage|lvl1=15|lvl2=20|lvl3=25|lvl4=30|lvl5=35|lvl6=40|lvl7=45|lvl8=50}}
+}}}}
+}}

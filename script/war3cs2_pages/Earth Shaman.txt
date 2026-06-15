@@ -1,0 +1,59 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Earth Shaman
+|image=[[File:Earth Shaman.webp]]
+|category=Hero
+|max=30
+|level=1500
+}}
+|skill1={{SkillInfo
+|name=Earth's Movement
+|info=
+Increase Longjump
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Longjump|lvl1=20.0%|lvl2=22.0%|lvl3=24.0%|lvl4=26.0%|lvl5=28.0%|lvl6=30.0%}}
+}}}}
+|skill2={{SkillInfo
+|name=Earth's Cycle
+|info=
+Heal
+|trigger=Kill
+|chance=66
+|extra=Overheals. Random between 25 and ...
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Heal|unit=HP|lvl1=30|lvl2=34|lvl3=38|lvl4=42|lvl5=46|lvl6=50}}
+}}}}
+|skill3={{SkillInfo
+|name=Earth's Laws
+|info=
+Ground and Increase Gravity
+|trigger=Attack
+|chance=20
+|buffs=
+<p>
+Gravity: +300%
+</p>
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl1=1.0|lvl2=2.0|lvl3=3.0|lvl4=4.0|lvl5=5.0|lvl6=6.0}}
+}}}}
+|skill4={{SkillInfo
+|name=Earth's Protection
+|info=
+Increase Slow Resistance, Immunity to Bash and Movement
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Slow Resistance|lvl1=25.0%|lvl2=40.0%|lvl3=55.0%|lvl4=70.0%|lvl5=85.0%|lvl6=100.0%}}
+|line2={{LevelUpRow|field=Bash Immunity|unit=%|lvl1=25|lvl2=40|lvl3=55|lvl4=70|lvl5=85|lvl6=100}}
+|line3={{LevelUpRow|field=Movement Immunity|unit=%|lvl1=25|lvl2=40|lvl3=55|lvl4=70|lvl5=85|lvl6=100}}
+}}}}
+|skill5={{SkillInfo
+|name=Earth's Balance
+|info=
+Increase Gun Damage on High Health Enemies
+|trigger=Attack
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Increase|lvl1=10.0%|lvl2=18.0%|lvl3=26.0%|lvl4=34.0%|lvl5=42.0%|lvl6=50.0%}}
+}}}}
+}}

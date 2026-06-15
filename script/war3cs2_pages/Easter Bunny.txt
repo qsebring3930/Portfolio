@@ -1,0 +1,74 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Easter Bunny
+|image=[[File:Easter Bunny.webp]]
+|category=Holiday - Easter
+|max=30
+|level=305
+|weapons=
+Knife<br>
+Grenade
+|restricted=All
+|items=
+Gloves of Warmth
+|team=1
+}}
+|skill1={{SkillInfo
+|name=Bunny Legs
+|info=
+Increase Speed
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=5|zero=1
+|line1={{LevelUpRow|field=Speed|lvl0=5.0%|lvl1=9.0%|lvl2=13.0%|lvl3=17.0%|lvl4=21.0%|lvl5=25.0%}}
+}}}}
+|skill2={{SkillInfo
+|name=Bunny Hop
+|info=
+Increase Longjump
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=5|zero=1
+|line1={{LevelUpRow|field=Longjump|lvl0=10.0%|lvl1=14.0%|lvl2=18.0%|lvl3=22.0%|lvl4=26.0%|lvl5=30.0%}}
+}}}}
+|skill3={{SkillInfo
+|name=Secret Recipe
+|info=
+Egg Potency and Radius
+|trigger=Special
+|levelup={{LevelUpInfo|levels=5|zero=1
+|line1={{LevelUpRow|field=Magnitude|lvl0=25|lvl1=30|lvl2=35|lvl3=40|lvl4=45|lvl5=50}}
+|line2={{LevelUpRow|field=Radius|lvl0=200.0|lvl1=220.0|lvl2=240.0|lvl3=260.0|lvl4=280.0|lvl5=300.0}}
+}}}}
+|skill4={{SkillInfo
+|name=Crunchy Chocolate
+|info=
+Frag Grenades
+|trigger=Special
+|chance=60
+|extra=Chance to be duds
+|levelup={{LevelUpInfo|levels=5|zero=1
+|line1={{LevelUpRow|field=Quantity|lvl0=1|lvl1=2|lvl2=3|lvl3=4|lvl4=5|lvl5=6}}
+}}}}
+|skill5={{SkillInfo
+|name=Find eggs
+|info=
+Gain Grenades
+|trigger=Passive
+|tickrate=2
+|levelup={{LevelUpInfo|levels=5|zero=1
+|line1={{LevelUpRow|field=Chance|unit=%|lvl0=10|lvl1=12|lvl2=14|lvl3=16|lvl4=18|lvl5=20}}
+}}}}
+|skill6={{SkillInfo
+|name=Eggbasket
+|info=
+Summon Many Eggs
+|trigger=Ultimate
+|target=Location
+|chance=75
+|tickrate=0.3
+|range=600
+|cooldown=15.0
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl1=3.6|lvl2=4.2|lvl3=4.8|lvl4=5.4|lvl5=6.0}}
+}}}}
+}}

@@ -1,0 +1,60 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Bot
+|image=[[File:Bot.webp]]
+|category=Counter-Strike
+|max=40
+|level=575
+}}
+|skill1={{SkillInfo
+|name=Enemy Spotted
+|info=
+Reveal
+|trigger=Attack
+|duration=3
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Chance|lvl1=65.0%|lvl2=70.0%|lvl3=75.0%|lvl4=80.0%|lvl5=85.0%|lvl6=90.0%|lvl7=95.0%|lvl8=100.0%}}
+}}}}
+|skill2={{SkillInfo
+|name=Storm the front
+|info=
+Periods of Increased Speed and Slow Resistance
+|trigger=Passive
+|buffs=
+<p>
+Speed: +50%<br>
+Slow Resistance: +100%
+</p>
+|extra=Cooldown is 5.0 sec. Duration Between 5 and ...
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl1=9.0|lvl2=10.0|lvl3=11.0|lvl4=12.0|lvl5=13.0|lvl6=14.0|lvl7=15.0|lvl8=16.0}}
+}}}}
+|skill3={{SkillInfo
+|name=Radar
+|info=
+Spot Enemies who make noise near you
+|trigger=Aura
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Radius|lvl1=800.0|lvl2=900.0|lvl3=1000.0|lvl4=1100.0|lvl5=1200.0|lvl6=1300.0|lvl7=1400.0|lvl8=1500.0}}
+}}}}
+|skill4={{SkillInfo
+|name=Fire in the hole
+|info=
+Increase Grenade Potency per Bounce
+|trigger=Attack
+|extra=Chance Roles against every bounce to double it. Potency increases by 30 per bounce.
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Chance|unit=%|lvl1=65|lvl2=70|lvl3=75|lvl4=80|lvl5=85|lvl6=90|lvl7=95|lvl8=100}}
+}}}}
+|skill5={{SkillInfo
+|name=Need backup
+|info=
+Revive Ally
+|trigger=Ultimate
+|target=Random_Ally
+|cooldown=30.0
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Chance|unit=%|lvl1=65|lvl2=70|lvl3=75|lvl4=80|lvl5=85|lvl6=90|lvl7=95|lvl8=100}}
+}}}}
+}}

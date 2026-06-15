@@ -1,0 +1,96 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Amy Rose
+|image=[[File:Amy Rose.webp]]
+|category=Sonic
+|max=42
+|level=5195
+|weapons=
+Knife
+|restricted=All
+|items=
+Tome of Experience<br>
+Tome of Gambling<br>
+Tome of Opportunity
+|team=2
+|passive=
+<p>
+Gravity: -25%<br>
+Max Speed: +50%<br>
+Speed: +10% per sec. running<br>
+Double Jump: True
+</p>
+}}
+|skill1={{SkillInfo
+|name=Find Rings
+|info=
+Gain Money
+|trigger=Passive
+|quantity=50
+|tickrate=0.1
+|levelup={{LevelUpInfo|levels=7|zero=1
+|line1={{LevelUpRow|field=Chance|unit=%|lvl0=30|lvl1=40|lvl2=50|lvl3=60|lvl4=70|lvl5=80|lvl6=90|lvl7=100}}
+}}}}
+|skill2={{SkillInfo
+|name=Lose Rings
+|info=
+Decrease Damage with Money
+|trigger=Victim
+|cooldown=0.4
+|extra=Reduce Damage by 70% if you have enough money
+|levelup={{LevelUpInfo|levels=7|zero=1
+|line1={{LevelUpRow|field=Multiplier|lvl0=100.0%|lvl1=70.0%|lvl2=65.0%|lvl3=60.0%|lvl4=55.0%|lvl5=50.0%|lvl6=45.0%|lvl7=40.0%}}
+}}}}
+|skill3={{SkillInfo
+|name=Lasting Rings
+|info=
+'Lose Rings' drops rings, Can be picked up to regain Money
+|trigger=Special
+|duration=9
+|extra=Drop Between 1 and ... Rings
+|levelup={{LevelUpInfo|levels=7|zero=1
+|line1={{LevelUpRow|field=Quantity|lvl0=1|lvl1=2|lvl2=3|lvl3=4|lvl4=5|lvl5=6|lvl6=7|lvl7=8}}
+}}}}
+|skill4={{SkillInfo
+|name=Invisibility
+|info=
+Become Invisible
+|trigger=Ability1
+|target=Self
+|cooldown=15.0
+|levelup={{LevelUpInfo|levels=7|zero=1
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl0=1.2|lvl1=1.6|lvl2=2.0|lvl3=2.4|lvl4=2.8|lvl5=3.2|lvl6=3.6|lvl7=4.0}}
+}}}}
+|skill5={{SkillInfo
+|name=Blow Kiss
+|info=
+Heal, Increase Speed and Decrease Gravity of an Ally
+|trigger=Ability2
+|target=Target_Ally
+|duration=6
+|range=600
+|buffs=
+<p>
+Speed: +20%<br>
+Gravity: -20%
+</p>
+|cooldown=15.0
+|extra=Half the heal overheals
+|levelup={{LevelUpInfo|levels=7|zero=1
+|line1={{LevelUpRow|field=Heal|unit=HP|lvl0=9|lvl1=12|lvl2=15|lvl3=18|lvl4=21|lvl5=24|lvl6=27|lvl7=30}}
+}}}}
+|skill6={{SkillInfo
+|name=Storming Hearts
+|info=
+Sacrifice Money to Damage And Darken Vision of Enemies
+|trigger=Ultimate
+|target=AoE_Self
+|damage=20
+|duration=6
+|radius=600
+|cooldown=30.0
+|levelup={{LevelUpInfo|levels=7
+|line1={{LevelUpRow|field=Money|lvl1=$10,000|lvl2=$9,500|lvl3=$9,000|lvl4=$8,500|lvl5=$8,000|lvl6=$7,500|lvl7=$7,000}}
+}}}}
+}}

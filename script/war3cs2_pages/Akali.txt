@@ -1,0 +1,105 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Akali
+|image=[[File:Akali.webp]]
+|category=LoL-Slayer
+|max=30
+|level=4195
+|weapons=
+Knife
+|restricted=All
+|team=2
+|passive=
+<p>
+Gravity: -15%<br>
+Fall Damage: 0%<br>
+Speed: +1% per Odd Level<br>
+Longjump: +2% per Even Level
+</p>
+}}
+|skill1={{SkillInfo
+|name=Assassin's Mark
+|info=
+<p>
+Attack: Create Energy Ring<br>
+Special: Increase Speed in the ring and on leaving ring<br>
+Special: and Increase Next Knife Attack on leaving ring
+</p>
+|trigger=Special
+|damage=30
+|duration=5
+|radius=500
+|cooldown=1.0
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Speed|lvl0=14.0%|lvl1=20.0%|lvl2=26.0%|lvl3=32.0%|lvl4=38.0%|lvl5=44.0%|lvl6=50.0%}}
+}}}}
+|skill2={{SkillInfo
+|name=Five Point Strike
+|info=
+Damage and Decrease Speed
+|trigger=Ability1
+|target=Cone
+|duration=5
+|range=500
+|cone=35
+|buffs=
+<p>
+Speed: -25%
+</p>
+|cooldown=8.0
+|extra=Double Effect near the outer edge
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Damage|lvl0=2|lvl1=5|lvl2=8|lvl3=11|lvl4=14|lvl5=17|lvl6=20}}
+}}}}
+|skill3={{SkillInfo
+|name=Shuriken Flip
+|info=
+<p>
+Throw a Shuriken and push yourself backwards or leap towards the marked enemy<br>
+Impact: Damage and Mark on hit or nearby
+</p>
+|trigger=Ability2
+|target=Object
+|damage=10
+|radius=75
+|force=1.8
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Mark Duration|unit=sec.|lvl0=1.0|lvl1=1.5|lvl2=2.0|lvl3=2.5|lvl4=3.0|lvl5=3.5|lvl6=4.0}}
+|line2={{LevelUpRow|field=Cooldown|unit=sec.|lvl0=18.0|lvl1=17.0|lvl2=16.0|lvl3=15.0|lvl4=14.0|lvl5=13.0|lvl6=12.0}}
+}}}}
+|skill4={{SkillInfo
+|name=Twilight Shroud
+|info=
+<p>
+Summon Expanding Smoke Ring to conceal yourself<br>
+Heal, Become Invisible, Increase Speed and Mark and Reveal Immunity while in smoke
+</p>
+|trigger=Ability3
+|target=Self
+|duration=8
+|buffs=
+<p>
+Mark Immunity: +100%<br>
+Reveal Immunity: +100%
+</p>
+|cooldown=20.0
+|extra=Inner Radius is 150, Outer Radius is 450. Speed Gain is based on 'Assassin's Mark'
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Heal|unit=HP|lvl0=1|lvl1=2|lvl2=3|lvl3=4|lvl4=5|lvl5=6|lvl6=7}}
+}}}}
+|skill5={{SkillInfo
+|name=Perfect Execution
+|info=
+Rush Forward, Damaging those in front of you. Use again quickly to rush again
+|trigger=Ultimate
+|target=Location
+|duration=7.5
+|range=650
+|aim=50
+|cooldown=30.0
+|extra=Second Rush has a range of 750 and deals extra damage based on missing health
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Damage|lvl1=5|lvl2=8|lvl3=11|lvl4=14|lvl5=17|lvl6=20}}
+}}}}
+}}

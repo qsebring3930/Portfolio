@@ -1,0 +1,74 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Frosty The Snowman
+|image=[[File:Frosty The Snowman.webp]]
+|category=Holiday - Christmas
+|max=20
+|level=405
+|weapons=
+Knife
+|restricted=All
+|team=1
+|passive=
+<p>
+Alt Fire Rate: -50%
+</p>
+}}
+|skill1={{SkillInfo
+|name=Snow Core
+|info=
+Increase Health, Reduce Received Weapon Damage
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=5|zero=1
+|line1={{LevelUpRow|field=Health|unit=HP|lvl0=10|lvl1=20|lvl2=30|lvl3=40|lvl4=50|lvl5=60}}
+|line2={{LevelUpRow|field=Reduction|lvl0=5.0%|lvl1=10.0%|lvl2=15.0%|lvl3=20.0%|lvl4=25.0%|lvl5=30.0%}}
+}}}}
+|skill2={{SkillInfo
+|name=Winter's Wrath
+|info=
+<p>
+Left Click Throws Icicles, Right Click Throws Snowball<br>
+Snowball: Explodes, Hinders and Blinds Enemies<br>
+Icicle: DoT on hit target
+</p>
+|trigger=Special
+|target=Object
+|damage=15
+|duration=3
+|buffs=
+<p>
+Hinder: -25%
+</p>
+|levelup={{LevelUpInfo|levels=5|zero=1
+|line1={{LevelUpRow|field=Radius|lvl0=150.0|lvl1=200.0|lvl2=212.0|lvl3=224.0|lvl4=236.0|lvl5=250.0}}
+|line2={{LevelUpRow|field=DoT|lvl0=1|lvl1=2|lvl2=3|lvl3=4|lvl4=5|lvl5=6}}
+}}}}
+|skill3={{SkillInfo
+|name=Winter's Spirit
+|info=
+Totem: Revive Allies as Frosty
+|trigger=Ability1
+|target=Location
+|quantity=3
+|range=300
+|cooldown=20.0
+|levelup={{LevelUpInfo|levels=5|zero=1
+|line1={{LevelUpRow|field=Chance|unit=%|lvl0=15|lvl1=30|lvl2=40|lvl3=50|lvl4=60|lvl5=70}}
+|line2={{LevelUpRow|field=Totem HP|unit=HP|lvl0=50|lvl1=100|lvl2=125|lvl3=150|lvl4=175|lvl5=200}}
+}}}}
+|skill4={{SkillInfo
+|name=Winter's Fury
+|info=
+Hinder and give zero friction to all enemies
+|trigger=Ultimate
+|target=Enemies
+|buffs=
+<p>
+Hinder: -40%
+</p>
+|cooldown=30.0
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl1=2.0|lvl2=2.5|lvl3=3.0|lvl4=3.5|lvl5=4.0}}
+}}}}
+}}

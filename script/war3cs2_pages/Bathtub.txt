@@ -1,0 +1,85 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Bathtub
+|image=[[File:Bathtub.webp]]
+|category=Object
+|max=30
+|level=535
+|weapons=
+Knife
+|restricted=All
+|passive=
+<p>
+Health: +30HP<br>
+Speed: +10%
+</p>
+}}
+|skill1={{SkillInfo
+|name=Porcelain
+|info=
+Reduce Weapon Damage
+|trigger=Victim
+|levelup={{LevelUpInfo|levels=5|zero=1
+|line1={{LevelUpRow|field=Reduce|lvl0=10.0%|lvl1=20.0%|lvl2=25.0%|lvl3=30.0%|lvl4=35.0%|lvl5=40.0%}}
+}}}}
+|skill2={{SkillInfo
+|name=Wash behind your ears
+|info=
+DoT
+|trigger=Attack
+|chance=50
+|duration=5
+|levelup={{LevelUpInfo|levels=5|zero=1
+|line1={{LevelUpRow|field=Damage|lvl0=1|lvl1=2|lvl2=3|lvl3=4|lvl4=5|lvl5=6}}
+}}}}
+|skill3={{SkillInfo
+|name=Splish Splash
+|info=
+Damage Vision
+|trigger=Aura
+|duration=1
+|tickrate=1.5
+|radius=300
+|levelup={{LevelUpInfo|levels=5|zero=1
+|line1={{LevelUpRow|field=Chance|unit=%|lvl0=5|lvl1=10|lvl2=20|lvl3=30|lvl4=40|lvl5=50}}
+}}}}
+|skill4={{SkillInfo
+|name=Scruba Dub Dub
+|info=
+Spell and Skill Immunity
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=5|zero=1
+|line1={{LevelUpRow|field=Chance|unit=%|lvl0=10|lvl1=20|lvl2=30|lvl3=40|lvl4=50|lvl5=60}}
+}}}}
+|skill5={{SkillInfo
+|name=Dirty Water
+|info=
+Damage Enemies, Knockback, Lose Friction around you
+|trigger=Ability1
+|target=AoE_Self
+|duration=5
+|radius=300
+|force=0.75
+|cooldown=16.0
+|levelup={{LevelUpInfo|levels=5|zero=1
+|line1={{LevelUpRow|field=Damage|lvl0=6|lvl1=12|lvl2=14|lvl3=16|lvl4=18|lvl5=20}}
+}}}}
+|skill6={{SkillInfo
+|name=Soap on the floor
+|info=
+Damage Aura, No Friction
+|trigger=Ultimate
+|target=AoE_Self
+|damage=5.0%
+|radius=300
+|buffs=
+<p>
+Speed: +25%
+</p>
+|cooldown=25.0
+|extra=Damage Based on Max Health
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl1=6.0|lvl2=7.0|lvl3=8.0|lvl4=9.0|lvl5=10.0}}
+}}}}
+}}

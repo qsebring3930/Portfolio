@@ -1,0 +1,69 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Faceless Void
+|image=[[File:Faceless Void.webp]]
+|category=DotA-Agility
+|max=32
+|level=2340
+}}
+|skill1={{SkillInfo
+|name=Time Walk
+|info=
+Increase Speed, Regain recently lost health
+|trigger=Ability1
+|target=Self
+|buffs=
+<p>
+Speed: +20%
+</p>
+|cooldown=15.0
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl1=4.0|lvl2=4.5|lvl3=5.0|lvl4=5.5|lvl5=6.0|lvl6=6.5|lvl7=7.0|lvl8=7.5}}
+}}}}
+|skill2={{SkillInfo
+|name=Time Dilation
+|info=
+Increase Cooldowns and Hinder of enemies around you
+|trigger=Ability2
+|target=AoE_Self
+|radius=300
+|buffs=
+<p>
+Cooldown: +10 sec.<br>
+Speed: -25%<br>
+Fire Rate: -25%
+</p>
+|cooldown=20.0
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl1=2.5|lvl2=3.0|lvl3=3.5|lvl4=4.0|lvl5=4.5|lvl6=5.0|lvl7=5.5|lvl8=6.0}}
+}}}}
+|skill3={{SkillInfo
+|name=Time Lock
+|info=
+Stun
+|trigger=Attack
+|duration=0.2
+|cooldown=5.0
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Chance|lvl1=4.0%|lvl2=6.0%|lvl3=8.0%|lvl4=10.0%|lvl5=12.0%|lvl6=14.0%|lvl7=16.0%|lvl8=18.0%}}
+}}}}
+|skill4={{SkillInfo
+|name=Chronosphere
+|info=
+Ward: Hinder and Force skills into cooldown.
+|trigger=Ultimate
+|target=Self
+|tickrate=0.2
+|radius=400
+|buffs=
+<p>
+Speed: -30%<br>
+Fire Rate: -30%
+</p>
+|cooldown=25.0
+|extra=Duration of Effects is as long as the remaining time on the ward
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl1=4.0|lvl2=4.5|lvl3=5.0|lvl4=5.5|lvl5=6.0|lvl6=6.5|lvl7=7.0|lvl8=7.5}}
+}}}}
+}}

@@ -1,0 +1,88 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Blaze Binder
+|image=[[File:Blaze Binder.webp]]
+|category=AQW
+|max=30
+|level=4345
+|weapons=
+MP9<br>
+Incendiary Grenade<br>
+Smoke Grenade<br>
+Knife
+|restricted=All
+|items=
+Fire Tunic
+|passive=
+<p>
+Max Health: +50HP
+</p>
+}}
+|skill1={{SkillInfo
+|name=Fire Bolt
+|info=
+Burn, Deal Extra Damage on Burning Enemy
+|trigger=Attack
+|damage=5
+|duration=5
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Chance|lvl1=16.0%|lvl2=22.0%|lvl3=28.0%|lvl4=34.0%|lvl5=40.0%}}
+}}}}
+|skill2={{SkillInfo
+|name=Combustion Blaze
+|info=
+Burning Enemies spread burn
+|trigger=Special
+|duration=2.5
+|radius=300
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Chance|unit=%|lvl1=14|lvl2=18|lvl3=22|lvl4=26|lvl5=30}}
+}}}}
+|skill3={{SkillInfo
+|name=Choking Shadow Smoke
+|info=
+Burn Enemies in smokes
+|trigger=Special
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl1=0.5|lvl2=1.0|lvl3=1.5|lvl4=2.0|lvl5=2.5}}
+}}}}
+|skill4={{SkillInfo
+|name=Fire in Your Skin
+|info=
+<p>
+Increase Speed, Evade Weapon Damage, Increase Gun Damage based on burning enemies if you are burning.<br>
+Heal and Trigger Combustion Blaze if you kill a burning enemy
+</p>
+|trigger=Special
+|quantity=5
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Speed|lvl1=3.0%|lvl2=6.0%|lvl3=9.0%|lvl4=12.0%|lvl5=15.0%}}
+|line2={{LevelUpRow|field=Chance|lvl1=2.0%|lvl2=4.0%|lvl3=6.0%|lvl4=8.0%|lvl5=10.0%}}
+|line3={{LevelUpRow|field=Increase|lvl1=2.0%|lvl2=4.0%|lvl3=6.0%|lvl4=8.0%|lvl5=10.0%}}
+|line4={{LevelUpRow|field=Heal|unit=HP|lvl1=5|lvl2=10|lvl3=15|lvl4=20|lvl5=25}}
+}}}}
+|skill5={{SkillInfo
+|name=Dark Fire
+|info=
+Burn Summons more severely
+|trigger=Special
+|extra=Burn damage is tripled
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl1=0.5|lvl2=1.0|lvl3=1.5|lvl4=2.0|lvl5=2.5}}
+}}}}
+|skill6={{SkillInfo
+|name=Burn at Both Ends
+|info=
+<p>
+Burning Heals you instead. Increase Burn Damage to Enemies.<br>
+Trigger Combustion Blaze and Extend Burns
+</p>
+|trigger=Ultimate
+|target=Self
+|cooldown=20.0
+|extra=Heals three times the burn damage
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl1=4.0|lvl2=5.0|lvl3=6.0|lvl4=7.0|lvl5=8.0}}
+}}}}
+}}

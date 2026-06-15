@@ -1,0 +1,80 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Barbarian (D&D)
+|image=[[File:Barbarian (D&D).webp]]
+|category=D&D Martials
+|max=30
+|level=3370
+|access=Beta
+|restricted=
+Armor
+}}
+|skill1={{SkillInfo
+|name=Unarmored Defense
+|info=
+<p>
+Passive: Increase Health<br>
+Victim: Decrease Weapon Damage
+</p>
+|trigger=Special
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Health|unit=HP|lvl1=60|lvl2=70|lvl3=80|lvl4=90|lvl5=100}}
+|line2={{LevelUpRow|field=Decrease|lvl1=7.0%|lvl2=14.0%|lvl3=21.0%|lvl4=28.0%|lvl5=35.0%}}
+}}}}
+|skill2={{SkillInfo
+|name=Danger Sense
+|info=
+Mark Attacking Enemies
+|trigger=Aura
+|duration=1
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Radius|lvl1=600.0|lvl2=700.0|lvl3=800.0|lvl4=900.0|lvl5=1000.0}}
+}}}}
+|skill3={{SkillInfo
+|name=Extra Attack
+|info=
+Increase Gun Damage
+|trigger=Attack
+|chance=50
+|radius=300
+|extra=Shotguns deals AoE Damage based on extra damage. Increase between 1 and ...
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Max Damage|lvl1=1|lvl2=2|lvl3=3|lvl4=4|lvl5=5}}
+}}}}
+|skill4={{SkillInfo
+|name=Rage
+|info=
+Toggle 'Unarmored Defense' or 'Extra Attack' having an extra roll
+|trigger=Ability1
+|target=Self
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Chance|lvl1=18.0%|lvl2=26.0%|lvl3=34.0%|lvl4=42.0%|lvl5=50.0%}}
+}}}}
+|skill5={{SkillInfo
+|name=Feral Instinct
+|info=
+Marking Weakened Enemies Increases Speed
+|trigger=Special
+|duration=5
+|buffs=
+<p>
+Speed: +30%
+</p>
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Health|lvl1=10.0%|lvl2=20.0%|lvl3=30.0%|lvl4=40.0%|lvl5=50.0%}}
+}}}}
+|skill6={{SkillInfo
+|name=Primal Knowledge
+|info=
+Rage gives Decreased Received Magic Damage, 'Danger Sense' procs on spellcasters
+|trigger=Special
+|required=
+<p>
+Danger Sense - Level 1<br>
+Rage - Level 1
+</p>
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Decrease|lvl1=10.0%|lvl2=20.0%|lvl3=30.0%|lvl4=40.0%|lvl5=50.0%}}
+}}}}
+}}

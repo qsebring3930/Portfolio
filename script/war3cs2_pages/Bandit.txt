@@ -1,0 +1,72 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Bandit
+|image=[[File:Bandit.webp]]
+|category=Stalker
+|max=48
+|level=1175
+|weapons=
+Nova<br>
+Glock-18<br>
+Knife<br>
+Grenade
+|restricted=All
+|items=
+Gloves of Warmth<br>
+Boots of Evasion
+}}
+|skill1={{SkillInfo
+|name=Ambush
+|info=
+Increase Nova Damage when attacking from the back
+|trigger=Attack
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Increase|lvl1=5.0%|lvl2=10.0%|lvl3=15.0%|lvl4=20.0%|lvl5=25.0%|lvl6=30.0%|lvl7=35.0%|lvl8=40.0%}}
+}}}}
+|skill2={{SkillInfo
+|name=Travel Light
+|info=
+Increase Speed
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Speed|lvl1=12.0%|lvl2=15.0%|lvl3=18.0%|lvl4=21.0%|lvl5=24.0%|lvl6=27.0%|lvl7=30.0%|lvl8=33.0%}}
+}}}}
+|skill3={{SkillInfo
+|name=Highwayman
+|info=
+Evade Weapon Damage
+|trigger=Victim
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Chance|lvl1=9.0%|lvl2=12.0%|lvl3=15.0%|lvl4=18.0%|lvl5=21.0%|lvl6=24.0%|lvl7=27.0%|lvl8=30.0%}}
+}}}}
+|skill4={{SkillInfo
+|name=Flechette Rounds
+|info=
+Nova DoT and Damage Armor
+|trigger=Passive
+|damage=20
+|duration=3
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=DoT|lvl1=1|lvl2=2|lvl3=3|lvl4=4|lvl5=5|lvl6=6|lvl7=7|lvl8=8}}
+}}}}
+|skill5={{SkillInfo
+|name=Irradiated Grenade
+|info=
+Grenade DoT and Burns
+|trigger=Attack
+|damage=5
+|duration=3
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Chance|lvl1=18.0%|lvl2=24.0%|lvl3=30.0%|lvl4=36.0%|lvl5=42.0%|lvl6=48.0%|lvl7=54.0%|lvl8=60.0%}}
+}}}}
+|skill6={{SkillInfo
+|name=Jury-rigged Explosives
+|info=
+Increase Magnitude and Radius Grenades
+|trigger=Special
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Magnitude|lvl1=5.0%|lvl2=10.0%|lvl3=12.5%|lvl4=15.0%|lvl5=17.5%|lvl6=20.0%|lvl7=22.5%|lvl8=25.0%}}
+|line2={{LevelUpRow|field=Radius|lvl1=6.0%|lvl2=12.0%|lvl3=15.0%|lvl4=18.0%|lvl5=21.0%|lvl6=24.0%|lvl7=27.0%|lvl8=30.0%}}
+}}}}
+}}

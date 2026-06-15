@@ -1,0 +1,79 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Ancient Evil
+|image=[[File:Ancient Evil.webp]]
+|category=Monster
+|max=36
+|level=3965
+|weapons=
+Knife
+|restricted=All
+|team=1
+}}
+|skill1={{SkillInfo
+|name=Fading Presence
+|info=
+Fade in and out of Complete Invisibility
+|trigger=Passive
+|tickrate=0.1
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Stay Invisible|unit=sec.|lvl0=0.5|lvl1=1.0|lvl2=1.4|lvl3=1.8|lvl4=2.2|lvl5=2.6|lvl6=3.0}}
+}}}}
+|skill2={{SkillInfo
+|name=Crushing Presence
+|info=
+Damage Enemies
+|trigger=Aura
+|tickrate=2
+|radius=250
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Damage|lvl0=3|lvl1=5|lvl2=7|lvl3=9|lvl4=11|lvl5=13|lvl6=15}}
+}}}}
+|skill3={{SkillInfo
+|name=Horrifying Presence
+|info=
+Decrease Speed and Darken Vision
+|trigger=Aura
+|duration=2
+|buffs=
+<p>
+Speed: -33%
+</p>
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Radius|lvl0=150.0|lvl1=200.0|lvl2=220.0|lvl3=240.0|lvl4=260.0|lvl5=280.0|lvl6=300.0}}
+}}}}
+|skill4={{SkillInfo
+|name=Commanding Presence
+|info=
+Pull To You
+|trigger=Aura
+|tickrate=3
+|force=3
+|extra=Pull force decreases if closer
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Radius|lvl0=150.0|lvl1=200.0|lvl2=220.0|lvl3=240.0|lvl4=260.0|lvl5=280.0|lvl6=300.0}}
+}}}}
+|skill5={{SkillInfo
+|name=Ancient Presence
+|info=
+Reduce Weapon Damage, Headshot Returns Damage
+|trigger=Victim
+|extra=Reduction is based on Damage Received
+|levelup={{LevelUpInfo|levels=6|zero=1
+|line1={{LevelUpRow|field=Decrease Multiplier|lvl0=2.0%|lvl1=5.0%|lvl2=6.0%|lvl3=7.0%|lvl4=8.0%|lvl5=9.0%|lvl6=10.0%}}
+|line2={{LevelUpRow|field=Return Multiplier|lvl0=10.0%|lvl1=20.0%|lvl2=24.0%|lvl3=28.0%|lvl4=32.0%|lvl5=36.0%|lvl6=40.0%}}
+}}}}
+|skill6={{SkillInfo
+|name=Ancient Evil
+|info=
+Gain Health based on enemies around you
+|trigger=Ultimate
+|target=AoE_Self
+|radius=300
+|cooldown=20.0
+|extra=Heal based on their health
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Multiplier|lvl1=20.0%|lvl2=24.0%|lvl3=28.0%|lvl4=32.0%|lvl5=36.0%|lvl6=40.0%}}
+}}}}
+}}

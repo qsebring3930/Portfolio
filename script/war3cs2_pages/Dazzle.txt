@@ -1,0 +1,90 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Dazzle
+|image=[[File:Dazzle.webp]]
+|category=DotA-Universal
+|max=40
+|level=2720
+|weapons=
+Famas
+|restricted=All
+}}
+|skill1={{SkillInfo
+|name=Poison Touch
+|info=
+DoT and Decrease Speed
+|trigger=Attack
+|damage=2
+|chance=20
+|tickrate=0.5
+|buffs=
+<p>
+Speed: -40%
+</p>
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl1=0.5|lvl2=1.0|lvl3=1.5|lvl4=2.0|lvl5=2.5|lvl6=3.0|lvl7=3.5|lvl8=4.0}}
+}}}}
+|skill2={{SkillInfo
+|name=Shallow Grave
+|info=
+Prevent Death on Ally, Increase Restoration
+|trigger=Ability1
+|target=Target_Ally
+|range=500
+|buffs=
+<p>
+Restoration: +50%
+</p>
+|cooldown=25.0
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl1=0.5|lvl2=1.0|lvl3=1.5|lvl4=2.0|lvl5=2.5|lvl6=3.0|lvl7=3.5|lvl8=4.0}}
+}}}}
+|skill3={{SkillInfo
+|name=Shadow Wave
+|info=
+Heal allies around you, Enemies close to the ally take damage
+|trigger=Ability2
+|target=AoE_Self
+|heal=20
+|radius=500
+|cooldown=20.0
+|extra=Decrease Heal by 4HP each Jump upto minimum 5HP. Damage Radius is 200 Damage to Enemies equals the heal to the ally
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Targets|lvl1=2|lvl2=3|lvl3=4|lvl4=5|lvl5=6|lvl6=7|lvl7=8|lvl8=9}}
+}}}}
+|skill4={{SkillInfo
+|name=Weave
+|info=
+<p>
+Affect Enemies and Allies hit by your skills, Stacks<br>
+Enemies: Increase Taken Damage<br>
+Allies: Decrease Taken Damage
+</p>
+|trigger=Special
+|quantity=10
+|duration=8
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Increase|lvl1=1.0%|lvl2=2.0%|lvl3=3.0%|lvl4=4.0%|lvl5=5.0%|lvl6=6.0%|lvl7=7.0%|lvl8=8.0%}}
+|line2={{LevelUpRow|field=Decrease|lvl1=1.0%|lvl2=2.0%|lvl3=3.0%|lvl4=4.0%|lvl5=5.0%|lvl6=6.0%|lvl7=7.0%|lvl8=8.0%}}
+}}}}
+|skill5={{SkillInfo
+|name=Bad Juju
+|info=
+Sacrifice Health to Boost your other skills
+|trigger=Ultimate
+|target=Self
+|cooldown=5.0
+|extra=
+<p>
+Cost increases by 50% each time used<br>
+Poison Touch: Also Hexes. Deals 3 times more damage to Summons<br>
+Shallow Grave: Heal 35HP when it expires<br>
+Shadow Wave: Increase Radius by 100%
+</p>
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Cost|unit=HP|lvl1=24|lvl2=22|lvl3=20|lvl4=18|lvl5=16|lvl6=14|lvl7=12|lvl8=10}}
+|line2={{LevelUpRow|field=Duration|unit=sec.|lvl1=3.0|lvl2=4.0|lvl3=5.0|lvl4=6.0|lvl5=7.0|lvl6=8.0|lvl7=9.0|lvl8=10.0}}
+|line3={{LevelUpRow|field=Cooldown Reduction|lvl1=6.0%|lvl2=12.0%|lvl3=18.0%|lvl4=24.0%|lvl5=30.0%|lvl6=36.0%|lvl7=42.0%|lvl8=48.0%}}
+}}}}
+}}

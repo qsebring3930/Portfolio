@@ -1,0 +1,55 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Ghoul
+|image=[[File:Ghoul.webp]]
+|category=WC3-Undead
+|max=32
+|level=10
+|weapons=
+Knife
+|restricted=All
+|items=
+Claws of Attack
+|passive=
+<p>
+Size: -35%
+</p>
+}}
+|skill1={{SkillInfo
+|name=Cannibalize
+|info=
+Ward: Heal near dead bodies
+|trigger=Special
+|duration=10
+|radius=100
+|extra=Only works if you are not moving
+|levelup={{LevelUpInfo|levels=8|zero=1
+|line1={{LevelUpRow|field=Heal|unit=HP|lvl0=8|lvl1=13|lvl2=14|lvl3=15|lvl4=16|lvl5=17|lvl6=18|lvl7=19|lvl8=20}}
+}}}}
+|skill2={{SkillInfo
+|name=Frenzy
+|info=
+Increase Fire Rate and Speed
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=8|zero=1
+|line1={{LevelUpRow|field=Speed|lvl0=15.0%|lvl1=30.0%|lvl2=32.0%|lvl3=35.0%|lvl4=38.0%|lvl5=41.0%|lvl6=44.0%|lvl7=47.0%|lvl8=50.0%}}
+|line2={{LevelUpRow|field=Fire Rate|lvl0=25.0%|lvl1=45.0%|lvl2=50.0%|lvl3=55.0%|lvl4=60.0%|lvl5=65.0%|lvl6=70.0%|lvl7=75.0%|lvl8=80.0%}}
+}}}}
+|skill3={{SkillInfo
+|name=Unholy Strength
+|info=
+Increase Knife Damage
+|trigger=Attack
+|levelup={{LevelUpInfo|levels=8|zero=1
+|line1={{LevelUpRow|field=Increase|lvl0=2.5%|lvl1=7.5%|lvl2=10.0%|lvl3=12.5%|lvl4=15.0%|lvl5=17.5%|lvl6=20.0%|lvl7=22.5%|lvl8=25.0%}}
+}}}}
+|skill4={{SkillInfo
+|name=Unholy Armor
+|info=
+Increase Max Health
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=8|zero=1
+|line1={{LevelUpRow|field=Max Health|unit=HP|lvl0=10|lvl1=30|lvl2=40|lvl3=50|lvl4=60|lvl5=70|lvl6=80|lvl7=90|lvl8=100}}
+}}}}
+}}

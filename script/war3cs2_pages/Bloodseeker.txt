@@ -1,0 +1,61 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Bloodseeker
+|image=[[File:Bloodseeker.webp]]
+|category=DotA-Agility
+|max=32
+|level=2340
+|weapons=
+Tec-9<br>
+Knife
+|restricted=All
+}}
+|skill1={{SkillInfo
+|name=Bloodrage
+|info=
+Steal Health
+|trigger=Attack
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Steal|lvl1=11.0%|lvl2=13.0%|lvl3=15.0%|lvl4=17.0%|lvl5=19.0%|lvl6=21.0%|lvl7=23.0%|lvl8=25.0%}}
+}}}}
+|skill2={{SkillInfo
+|name=Blood Rite
+|info=
+Ward: Damage and Silence Enemies
+|trigger=Ability1
+|target=Location
+|duration=8
+|range=700
+|radius=250
+|cooldown=15.0
+|extra=Damage based on Current Health
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Damage|lvl1=8.0%|lvl2=9.0%|lvl3=10.0%|lvl4=11.0%|lvl5=12.0%|lvl6=13.0%|lvl7=14.0%|lvl8=15.0%}}
+}}}}
+|skill3={{SkillInfo
+|name=Thirst
+|info=
+Increase Speed if wounded enemies are close
+|trigger=Passive
+|tickrate=2
+|radius=750
+|extra=Increase is based on missing health.
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Max Speed|lvl1=25.0%|lvl2=30.0%|lvl3=35.0%|lvl4=40.0%|lvl5=45.0%|lvl6=50.0%|lvl7=55.0%|lvl8=60.0%}}
+}}}}
+|skill4={{SkillInfo
+|name=Rupture
+|info=
+Damage Enemy, deals further damage if enemy moves
+|trigger=Ultimate
+|target=Target_Enemy
+|damage=20
+|duration=5
+|tickrate=0.5
+|range=600
+|cooldown=25.0
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Distance Multiplier|lvl1=1.5%|lvl2=2.0%|lvl3=2.5%|lvl4=3.0%|lvl5=3.5%|lvl6=4.0%|lvl7=4.5%|lvl8=5.0%}}
+}}}}
+}}

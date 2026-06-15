@@ -1,0 +1,89 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Black Mage
+|image=[[File:Black Mage.webp]]
+|category=Final Fantasy
+|max=36
+|level=4815
+|weapons=
+Glock-18<br>
+Knife
+|restricted=All
+|team=2
+}}
+|skill1={{SkillInfo
+|name=Magic
+|info=
+Use Random Magic to Damage and Burn, Decrease Speed or Fire Rate
+|trigger=Ability1
+|target=Location
+|range=800
+|radius=300
+|extra=Reduce Damage if 'Flare' is in cooldown
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Damage|lvl1=16|lvl2=20|lvl3=26|lvl4=30|lvl5=36|lvl6=40}}
+|line2={{LevelUpRow|field=Duration|unit=sec.|lvl1=1.0|lvl2=2.0|lvl3=3.0|lvl4=4.0|lvl5=5.0|lvl6=6.0}}
+|line3={{LevelUpRow|field=Decrease|lvl1=10.0%|lvl2=15.0%|lvl3=25.0%|lvl4=30.0%|lvl5=45.0%|lvl6=50.0%}}
+|line4={{LevelUpRow|field=Cooldown|unit=sec.|lvl1=8.0|lvl2=8.0|lvl3=16.0|lvl4=16.0|lvl5=20.0|lvl6=20.0}}
+}}}}
+|skill2={{SkillInfo
+|name=Poison
+|info=
+DoT
+|trigger=Attack
+|damage=5.0%
+|duration=4
+|extra=Damage Based on Max Health
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Chance|lvl1=20.0%|lvl2=22.0%|lvl3=24.0%|lvl4=26.0%|lvl5=28.0%|lvl6=30.0%}}
+}}}}
+|skill3={{SkillInfo
+|name=Death
+|info=
+<p>
+Kill & Assist: Block Summons and Respawns<br>
+Special: Steal Respawns and Summons to revive an ally
+</p>
+|trigger=Special
+|cooldown=20.0
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Kill Chance|unit=%|lvl1=30|lvl2=40|lvl3=50|lvl4=60|lvl5=70|lvl6=80}}
+|line2={{LevelUpRow|field=Assist Chance|unit=%|lvl1=15|lvl2=20|lvl3=25|lvl4=30|lvl5=35|lvl6=40}}
+|line3={{LevelUpRow|field=Steal Chance|unit=%|lvl1=15|lvl2=20|lvl3=25|lvl4=30|lvl5=35|lvl6=40}}
+}}}}
+|skill4={{SkillInfo
+|name=Magick Counter
+|info=
+Return Magic Damage
+|trigger=Victim
+|cooldown=5.0
+|extra=Damage needs to be at least 8
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Return|lvl1=50.0%|lvl2=60.0%|lvl3=70.0%|lvl4=80.0%|lvl5=90.0%|lvl6=100.0%}}
+}}}}
+|skill5={{SkillInfo
+|name=Mana Font
+|info=
+Reduce Cooldowns on Damage, Healback if Magic Damage
+|trigger=Victim
+|damage=60.0%
+|duration=5
+|extra=Damage needs to be at least 8
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Chance|lvl1=25.0%|lvl2=35.0%|lvl3=45.0%|lvl4=55.0%|lvl5=65.0%|lvl6=75.0%}}
+}}}}
+|skill6={{SkillInfo
+|name=Flare
+|info=
+Magic Explosion
+|trigger=Ultimate
+|target=Location
+|range=800
+|explrad=500
+|cooldown=40.0
+|extra=Reduced Damage if 'Magic' is in cooldown
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Explosive Damage|lvl1=40|lvl2=44|lvl3=48|lvl4=52|lvl5=56|lvl6=60}}
+}}}}
+}}

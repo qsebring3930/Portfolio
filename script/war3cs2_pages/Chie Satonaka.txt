@@ -1,0 +1,113 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Chie Satonaka
+|image=[[File:Chie Satonaka.webp]]
+|category=Persona 4
+|max=34
+|level=4915
+|weapons=
+Knife
+|restricted=All
+|team=1
+}}
+|skill1={{SkillInfo
+|name=Ice Magic
+|info=
+Damage, Hinder
+|trigger=Ability1
+|target=Target_Enemy
+|duration=3
+|range=600
+|buffs=
+<p>
+Hinder: -20%
+</p>
+|cooldown=20.0
+|levelup={{LevelUpInfo|levels=5|zero=1
+|line1={{LevelUpRow|field=Damage|lvl0=10|lvl1=14|lvl2=18|lvl3=22|lvl4=26|lvl5=30}}
+}}}}
+|skill2={{SkillInfo
+|name=Ice Boost
+|info=
+Increase 'Ice Magic' Efficiency
+|trigger=Special
+|levelup={{LevelUpInfo|levels=4|zero=1
+|line1={{LevelUpRow|field=Damage|lvl0=1|lvl1=2|lvl2=3|lvl3=4|lvl4=5}}
+|line2={{LevelUpRow|field=Hinder|lvl0=10.0%|lvl1=12.5%|lvl2=15.0%|lvl3=17.5%|lvl4=20.0%}}
+}}}}
+|skill3={{SkillInfo
+|name=Physical Attack
+|info=
+Increase Knife Damage
+|trigger=Attack
+|chance=40
+|extra=Levels 2, 4, 6 and 9 are AoE with radius 300. Levels 2 and 9 proc 3 times with a 60% chance to hit
+|levelup={{LevelUpInfo|levels=9|zero=1
+|line1={{LevelUpRow|field=Damage|lvl0=10|lvl1=13|lvl2=7|lvl3=15|lvl4=10|lvl5=18|lvl6=13|lvl7=21|lvl8=24|lvl9=16}}
+}}}}
+|skill4={{SkillInfo
+|name=Combat Boost
+|info=
+<p>
+Passive: Increase Speed and Health<br>
+Attack: Increase Knife Damage<br>
+Victim: Evade and Return Weapon Damage
+</p>
+|trigger=Special
+|buffs=
+<p>
+Increase: 50%<br>
+Return: 50%
+</p>
+|levelup={{LevelUpInfo|levels=5|zero=1
+|line1={{LevelUpRow|field=Speed|lvl0=10.0%|lvl1=14.0%|lvl2=18.0%|lvl3=22.0%|lvl4=26.0%|lvl5=30.0%}}
+|line2={{LevelUpRow|field=Health|unit=HP|lvl0=10|lvl1=20|lvl2=30|lvl3=40|lvl4=50|lvl5=60}}
+|line3={{LevelUpRow|field=Attack Chance|lvl0=20.0%|lvl1=25.0%|lvl2=30.0%|lvl3=35.0%|lvl4=40.0%|lvl5=45.0%}}
+|line4={{LevelUpRow|field=Victim Chance|lvl0=5.0%|lvl1=10.0%|lvl2=15.0%|lvl3=20.0%|lvl4=25.0%|lvl5=30.0%}}
+}}}}
+|skill5={{SkillInfo
+|name=Support Magic
+|info=
+<p>
+Support Ally based on Level<br>
+Tarukaja: Boost Allys Weapon Damage<br>
+Auto-Tarukaja: Passively Boost Your Knife Damage<br>
+Power Charge: Boost Next Attack<br>
+Rebellion: Give Ally chance to deal critical Weapon Damage<br>
+Revolution: Give Allies chance to deal critical Weapon Damage<br>
+Dragon Hustle: Give Allies Inreased Dealt Weapon Damage and Decrease Received Weapon Damage
+</p>
+|trigger=Ability2
+|target=Target_Ally
+|duration=5
+|range=600
+|radius=400
+|buffs=
+<p>
+Tarukaja Increase: 10%<br>
+Power Charge Increase: 50%<br>
+Rebellion Chance: 20%<br>
+Revolution Chance: 25%<br>
+Crit Damage: 50%<br>
+Dragon Hustle Increase: 20%<br>
+Dragon Hustle Decrease: 20%
+</p>
+|cooldown=15.0
+|extra=Applies to self if no target. Revolution and Dragon Hustle are Aoe
+|levelup={{LevelUpInfo|levels=5|zero=1
+|line1={{LevelUpRow|field=Skill|lvl0=Tarukaja|lvl1=Auto-Tarukaja|lvl2=Power Charge|lvl3=Rebellion|lvl4=Revolution|lvl5=Dragon Hustle}}
+}}}}
+|skill6={{SkillInfo
+|name=All Out Attack
+|info=
+Damage enemies around you. Evolves if Yukiko is close by.
+|trigger=Ultimate
+|target=AoE_Self
+|radius=500
+|cooldown=30.0
+|extra=Twin Dragon increases Damage by 30% and Radius by 100
+|levelup={{LevelUpInfo|levels=6
+|line1={{LevelUpRow|field=Damage|lvl1=10|lvl2=14|lvl3=18|lvl4=22|lvl5=26|lvl6=30}}
+}}}}
+}}

@@ -1,0 +1,119 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Adventurer
+|image=[[File:Adventurer.webp]]
+|category=Human
+|max=30
+|level=445
+|weapons=
+SSG 08<br>
+Nova<br>
+Desert Eagle<br>
+Smoke Grenade<br>
+Knife
+|restricted=All
+}}
+|skill1={{SkillInfo
+|name=Select Adventurer
+|info=
+<p>
+Switch Class<br>
+Ranger: Scout and Smoke Grenade<br>
+Cleric: Deagle and Knife<br>
+Barbarian: Nova and Knife<br>
+Rogue: Knife<br>
+Use Settings to change default behavior
+</p>
+|trigger=Ability1
+|target=Self
+|levelup={{LevelUpInfo|levels=5|zero=1
+|line1={{LevelUpRow|field=Cooldown|unit=sec.|lvl0=15.0|lvl1=13.0|lvl2=11.0|lvl3=9.0|lvl4=7.0|lvl5=5.0}}
+}}}}
+|skill2={{SkillInfo
+|name=Adventuring Boots
+|info=
+<p>
+Mobility Perk Based on Class<br>
+Ranger: Decrease Gravity<br>
+Cleric: Increased Speed<br>
+Barbarian: Increased Longjump<br>
+Rogue: Increased Speed
+</p>
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Gravity|lvl1=30.0%|lvl2=35.0%|lvl3=40.0%|lvl4=45.0%|lvl5=50.0%}}
+|line2={{LevelUpRow|field=Speed|lvl1=5.0%|lvl2=10.0%|lvl3=15.0%|lvl4=20.0%|lvl5=25.0%}}
+|line3={{LevelUpRow|field=Longjump|lvl1=30.0%|lvl2=35.0%|lvl3=40.0%|lvl4=45.0%|lvl5=50.0%}}
+|line4={{LevelUpRow|field=Speed|lvl1=30.0%|lvl2=35.0%|lvl3=40.0%|lvl4=45.0%|lvl5=50.0%}}
+}}}}
+|skill3={{SkillInfo
+|name=Lucky Ring
+|info=
+<p>
+Passive Perk Based on Class<br>
+Ranger: Increase Fire Rate<br>
+Cleric: Regen HP for Allies<br>
+Barbarian: Increase Clip<br>
+Rogue: Decrease Visibility
+</p>
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Fire Rate|lvl1=10.0%|lvl2=15.0%|lvl3=20.0%|lvl4=25.0%|lvl5=30.0%}}
+|line2={{LevelUpRow|field=Health|unit=HP|lvl1=2|lvl2=3|lvl3=4|lvl4=5|lvl5=6}}
+|line3={{LevelUpRow|field=Clip|lvl1=12|lvl2=14|lvl3=16|lvl4=18|lvl5=20}}
+|line4={{LevelUpRow|field=Visibility|lvl1=30.0%|lvl2=35.0%|lvl3=40.0%|lvl4=45.0%|lvl5=50.0%}}
+}}}}
+|skill4={{SkillInfo
+|name=Magic Weapon
+|info=
+<p>
+Attack Perk Based on Class<br>
+Ranger: DoT<br>
+Cleric: Hinder<br>
+Barbarian: Increase Damage<br>
+Rogue: Empty Clip
+</p>
+|trigger=Attack
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Chance|lvl1=22.0%|lvl2=24.0%|lvl3=26.0%|lvl4=28.0%|lvl5=30.0%}}
+|line2={{LevelUpRow|field=Chance|lvl1=14.0%|lvl2=18.0%|lvl3=22.0%|lvl4=26.0%|lvl5=30.0%}}
+|line3={{LevelUpRow|field=Chance|lvl1=21.0%|lvl2=24.0%|lvl3=27.0%|lvl4=30.0%|lvl5=33.0%}}
+|line4={{LevelUpRow|field=Chance|lvl1=14.0%|lvl2=18.0%|lvl3=22.0%|lvl4=26.0%|lvl5=30.0%}}
+}}}}
+|skill5={{SkillInfo
+|name=Dragonscale Armor
+|info=
+<p>
+Victim Perk Based on Class<br>
+Ranger: Return Weapon Damage<br>
+Cleric: Healback<br>
+Barbarian: Reduced Weapon Damage<br>
+Rogue: Evade Weapon Damage
+</p>
+|trigger=Victim
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Return|lvl1=4.0%|lvl2=8.0%|lvl3=12.0%|lvl4=16.0%|lvl5=20.0%}}
+|line2={{LevelUpRow|field=Chance|lvl1=20.0%|lvl2=25.0%|lvl3=30.0%|lvl4=35.0%|lvl5=40.0%}}
+|line3={{LevelUpRow|field=Reduce|lvl1=10.0%|lvl2=15.0%|lvl3=20.0%|lvl4=25.0%|lvl5=30.0%}}
+|line4={{LevelUpRow|field=Chance|lvl1=30.0%|lvl2=35.0%|lvl3=40.0%|lvl4=45.0%|lvl5=50.0%}}
+}}}}
+|skill6={{SkillInfo
+|name=Sacred Trinket
+|info=
+<p>
+Ultimate Based on Class<br>
+Ranger: Push to where you aim<br>
+Cleric: Heal Allies<br>
+Barbarian: Increase Boosts<br>
+Rogue: Throw Dagger
+</p>
+|trigger=Ultimate
+|cooldown=20.0
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Range|lvl1=340.0|lvl2=355.0|lvl3=370.0|lvl4=385.0|lvl5=400.0}}
+|line2={{LevelUpRow|field=Health|unit=HP|lvl1=20|lvl2=25|lvl3=30|lvl4=35|lvl5=40}}
+|line3={{LevelUpRow|field=Duration|unit=sec.|lvl1=4.0|lvl2=5.0|lvl3=6.0|lvl4=7.0|lvl5=8.0}}
+|line4={{LevelUpRow|field=Damage|lvl1=30|lvl2=35|lvl3=40|lvl4=45|lvl5=50}}
+}}}}
+}}
