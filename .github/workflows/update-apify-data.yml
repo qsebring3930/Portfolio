@@ -1,5 +1,8 @@
 name: Run Apify Pull
 
+permissions:
+  contents: write
+
 on:
   schedule:
     - cron: "* * * * *"
@@ -24,6 +27,17 @@ jobs:
       - run: pip install -r requirements.txt
 
       - run: python script/getwar3races.py
+
+      - name: Commit race pages
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git add script/war3cs2_pages
+
+          git commit -m "Update race pages" || echo "No changes"
+
+          git push
       
       - run: python script/fetch_apify.py
         env:
