@@ -10,72 +10,183 @@ title: War3CS2 Stats
 
     <section>
       <h2>Map Stats</h2>
-      <table id="mapStats"></table>
+      <div class="stats-table-wrap">
+        <table id="mapStats"></table>
+      </div>
     </section>
 
     <section>
       <h2>Highest Race Level</h2>
       <label for="raceLevelInput">Race:</label>
-      <input id="raceLevelInput" list="raceList" placeholder="Type or select a race">
-      <datalist id="raceList"></datalist>
-      <table id="highestRaceLevel"></table>
+      <div class="race-select-wrap">
+        <select id="raceLevelInput" placeholder="Type or select a race"></select>
+        <button type="button" class="race-select-button" data-target="raceLevelInput">▼</button>
+      </div>
+      <div class="stats-table-wrap">
+        <table id="highestRaceLevel"></table>
+      </div>
     </section>
 
     <section>
       <h2>Highest Level of Any Race</h2>
-      <table id="highestAnyRace"></table>
+      <div class="stats-table-wrap">
+        <table id="highestAnyRace"></table>
+      </div>
     </section>
 
     <section>
       <h2>Highest Total Levels</h2>
-      <table id="highestTotalLevels"></table>
+      <div class="stats-table-wrap">
+        <table id="highestTotalLevels"></table>
+      </div>
     </section>
 
     <section>
       <h2>Time Wasted On Race</h2>
       <label for="raceTimeInput">Race:</label>
-      <input id="raceTimeInput" list="raceList" placeholder="Type or select a race">
-      <table id="raceTimeTable"></table>
+      <div class="race-select-wrap">
+        <select id="raceTimeInput" placeholder="Type or select a race"></select>
+        <button type="button" class="race-select-button" data-target="raceTimeInput">▼</button>
+      </div>
+      <div class="stats-table-wrap">
+        <table id="raceTimeTable"></table>
+      </div>
     </section>
 
     <section>
       <h2>Time Wasted Total ;)</h2>
-      <table id="totalTimeTable"></table>
+      <div class="stats-table-wrap">
+        <table id="totalTimeTable"></table>
+      </div>
     </section>
 
   </div>
 </div>
 
+<link href="https://cdn.jsdelivr.net/npm/tom-select/dist/css/tom-select.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/tom-select/dist/js/tom-select.complete.min.js"></script>
+
 <style>
+.war3-stats input {
+  margin: 0.5rem 0 1rem;
+  max-width: 100%;
+}
+
 .war3-stats section {
   margin-bottom: 2rem;
 }
 
-.war3-stats input {
-  margin: 0.5rem 0 1rem;
+.stats-table-wrap {
+  max-height: 14lh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 .war3-stats table {
   width: 100%;
+  max-width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  display: table;
+  font-size: clamp(.5rem, 1.2vw, 1rem);
 }
 
-.war3-stats th .header-label {
-  float: left;
+.war3-stats thead {
+  display: table-header-group;
+}
+
+.war3-stats tbody {
+  display: table-row-group;
+}
+
+.war3-stats tr {
+  display: table-row;
+}
+
+.war3-stats th,
+.war3-stats td {
+  display: table-cell;
+  width: auto;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  word-break: normal;
+  vertical-align: top;
+  box-sizing: border-box;
+  padding: 0.5em 0.75em;
+  line-height: 1.25;
 }
 
 .war3-stats th {
   cursor: pointer;
-  position: relative;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+.war3-stats th .header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.war3-stats th .header-label {
+  flex: 1 1 auto;
+  min-width: 0;
 }
 
 .war3-stats th .header-sort {
-  position: absolute;
-  right: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 20px;
+  flex: 0 0 1.25em;
+  width: 1.25em;
   text-align: center;
   opacity: 0.7;
+}
+
+.race-select-wrap {
+  display: flex;
+  width: 100%;
+  max-width: 100%;
+  margin: 0.5rem 0 1rem;
+  font-size: clamp(.5rem, 1.2vw, 1rem);
+}
+
+.race-select-wrap .ts-wrapper {
+  flex: 1 1 auto;
+  min-width: 0;
+  width: 100%;
+}
+
+.race-select-wrap .ts-control {
+  width: 100%;
+  min-height: 0;
+  padding: 0.5em 0.75em;
+  font-size: inherit;
+  line-height: 1.25;
+}
+
+.race-select-wrap .ts-control input {
+  font-size: inherit;
+}
+
+.race-select-button {
+  flex: 0 0 clamp(1.5rem, 3vw, 2.5rem);
+  width: clamp(1.5rem, 3vw, 2.5rem);
+  padding: 0;
+  font-size: inherit;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.ts-control::after {
+  margin-left: auto;
+  opacity: 0.7;
+  font-size: 0.75em;
+}
+
+.ts-control {
+  cursor: pointer;
 }
 </style>
 
@@ -151,9 +262,10 @@ function renderTable(tableId, columns, rows) {
       <tr>
         ${columns.map(col =>
           `<th data-key="${col.key}">
-            <span class="header-label">${col.label}</span>
-            <span class="header-sort">${getArrow(col.key)}</span>
-          </th>`
+          <span class="header-inner">
+          <span class="header-label">${col.label}</span>
+          <span class="header-sort">${getArrow(col.key)}</span>
+          </span></th>`
         ).join("")}
       </tr>
     </thead>
@@ -207,19 +319,57 @@ function renderTable(tableId, columns, rows) {
 }
 
 function setupRaceDropdown() {
-  document.getElementById("raceList").innerHTML = raceColumns
-    .map(race => `<option value="${prettyName(race)}">`)
-    .join("");
+  const options = raceColumns.map(race => ({
+    value: race,
+    text: prettyName(race)
+  }));
+
+  new TomSelect("#raceLevelInput", {
+    options,
+    valueField: "value",
+    labelField: "text",
+    searchField: "text",
+    create: false,
+    maxOptions: null,
+    openOnFocus: false,
+    onType: function () {
+      this.open();
+    },
+    onChange: value => {
+      if (value) renderHighestRaceLevel(value);
+    }
+  });
+
+  new TomSelect("#raceTimeInput", {
+    options,
+    valueField: "value",
+    labelField: "text",
+    searchField: "text",
+    create: false,
+    maxOptions: null,
+    openOnFocus: false,
+    onType: function () {
+      this.open();
+    },
+    onChange: value => {
+      if (value) renderRaceTime(value);
+    }
+  });
 }
 
-function raceInputToColumn(value) {
-  const race = value
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, "_")
-    .replace(/^_+|_+$/g, "");
+document.querySelectorAll(".race-select-button").forEach(button => {
+  button.addEventListener("click", () => {
+    const select = document.getElementById(button.dataset.target);
+    const tom = select.tomselect;
 
-  return raceColumns.includes(race) ? race : null;
-}
+    if (tom.isOpen) {
+      tom.close();
+    } else {
+      tom.open();
+      tom.focus();
+    }
+  });
+});
 
 function renderMapStats() {
   const rows = mapPlaytime
@@ -329,12 +479,6 @@ function renderTotalTime() {
   ], rows);
 }
 
-function forceDropdownOnFocus(input) {
-  input.addEventListener("focus", () => {
-    input.value = "";
-  });
-}
-
 async function init() {
   [mapPlaytime, racePlaytime, raceLevels] = await Promise.all([
     fetch(DATA_PATH + "map_playtime.json").then(r => r.json()),
@@ -359,15 +503,8 @@ async function init() {
     renderRaceTime(defaultRace);
   }
 
-  document.getElementById("raceLevelInput").addEventListener("input", e => {
-    const race = raceInputToColumn(e.target.value);
-    if (race) renderHighestRaceLevel(race);
-  });
-
-  document.getElementById("raceTimeInput").addEventListener("input", e => {
-    const race = raceInputToColumn(e.target.value);
-    if (race) renderRaceTime(race);
-  });
+  document.getElementById("raceLevelInput").tomselect.clear();
+  document.getElementById("raceTimeInput").tomselect.clear();
 
   forceDropdownOnFocus(document.getElementById("raceLevelInput"));
   forceDropdownOnFocus(document.getElementById("raceTimeInput"));
