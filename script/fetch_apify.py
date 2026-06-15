@@ -2,6 +2,7 @@ import os
 import pyodbc
 import re
 from apify_client import ApifyClient
+from pathlib import Path
 
 print("Testing Azure SQL connection...")
 
@@ -27,22 +28,16 @@ print(row[0][:200])
 cursor.execute("""
 IF OBJECT_ID('race_playtime', 'U') IS NULL
 CREATE TABLE race_playtime (
-    player_name NVARCHAR(255) NOT NULL,
-    race_name NVARCHAR(255) NOT NULL,
-    minutes_played INT NOT NULL DEFAULT 0,
-    last_seen DATETIME2 NULL,
-    PRIMARY KEY (player_name, race_name)
+    player_name NVARCHAR(255) NOT NULL PRIMARY KEY,
+    last_seen DATETIME2 NULL
 );
 """)
 
 cursor.execute("""
 IF OBJECT_ID('race_levels', 'U') IS NULL
 CREATE TABLE race_levels (
-    player_name NVARCHAR(255) NOT NULL,
-    race_name NVARCHAR(255) NOT NULL,
-    level INT NOT NULL,
-    last_seen DATETIME2 NULL,
-    PRIMARY KEY (player_name, race_name)
+    player_name NVARCHAR(255) NOT NULL PRIMARY KEY,
+    last_seen DATETIME2 NULL
 );
 """)
 
@@ -58,9 +53,50 @@ CREATE TABLE map_playtime (
 conn.commit()
 print("Tables created or already exist.")
 
+VALID_RACE_COLUMNS = ensure_known_race_columns(cursor)
+conn.commit()
 
 
 SNAPSHOT_MINUTES = 5
+
+def race_to_column(race_name):
+    col = race_name.lower()
+    col = re.sub(r"[^a-z0-9]+", "_", col).strip("_")
+    return col[:120] if col else "saboteur"
+
+
+def ensure_column(cursor, table_name, column_name, column_type):
+    cursor.execute(f"""
+    IF COL_LENGTH('{table_name}', ?) IS NULL
+    BEGIN
+        ALTER TABLE {table_name}
+        ADD [{column_name}] {column_type}
+    END
+    """, column_name)
+
+
+def get_valid_race_columns():
+    script_dir = Path(__file__).resolve().parent
+    race_pages_dir = script_dir / "war3cs2_pages"
+
+    valid_columns = {
+        race_to_column(path.stem)
+        for path in race_pages_dir.glob("*.txt")
+    }
+
+    valid_columns.add("saboteur")
+    return valid_columns
+
+
+def ensure_known_race_columns(cursor):
+    valid_columns = get_valid_race_columns()
+
+    for race_col in valid_columns:
+        ensure_column(cursor, "race_playtime", race_col, "INT NOT NULL DEFAULT 0")
+        ensure_column(cursor, "race_levels", race_col, "INT NULL")
+
+    print(f"Ensured {len(valid_columns)} race columns.")
+    return valid_columns
 
 
 def get_embed(item):
@@ -144,62 +180,50 @@ def update_stats(cursor, item):
         ))
 
     for player in players:
-        cursor.execute("""
+        race_col = race_to_column(player["race_name"])
+
+        if race_col not in VALID_RACE_COLUMNS:
+            race_col = "saboteur"
+
+        cursor.execute(f"""
             MERGE race_playtime AS target
-            USING (
-                SELECT ? AS player_name, ? AS race_name
-            ) AS source
+            USING (SELECT ? AS player_name) AS source
             ON target.player_name = source.player_name
-            AND target.race_name = source.race_name
             WHEN MATCHED THEN
                 UPDATE SET
-                    minutes_played = minutes_played + ?,
+                    [{race_col}] = [{race_col}] + ?,
                     last_seen = TRY_CONVERT(DATETIME2, ?)
             WHEN NOT MATCHED THEN
-                INSERT (player_name, race_name, minutes_played, last_seen)
-                VALUES (?, ?, ?, TRY_CONVERT(DATETIME2, ?));
+                INSERT (player_name, [{race_col}], last_seen)
+                VALUES (?, ?, TRY_CONVERT(DATETIME2, ?));
         """, (
             player["player_name"],
-            player["race_name"],
             SNAPSHOT_MINUTES,
             timestamp,
             player["player_name"],
-            player["race_name"],
             SNAPSHOT_MINUTES,
             timestamp,
         ))
 
-        cursor.execute("""
+        cursor.execute(f"""
             MERGE race_levels AS target
-            USING (
-                SELECT ? AS player_name, ? AS race_name
-            ) AS source
+            USING (SELECT ? AS player_name) AS source
             ON target.player_name = source.player_name
-            AND target.race_name = source.race_name
             WHEN MATCHED THEN
                 UPDATE SET
-                    level = ?,
+                    [{race_col}] = ?,
                     last_seen = TRY_CONVERT(DATETIME2, ?)
             WHEN NOT MATCHED THEN
-                INSERT (player_name, race_name, level, last_seen)
-                VALUES (?, ?, ?, TRY_CONVERT(DATETIME2, ?));
+                INSERT (player_name, [{race_col}], last_seen)
+                VALUES (?, ?, TRY_CONVERT(DATETIME2, ?));
         """, (
             player["player_name"],
-            player["race_name"],
             player["level"],
             timestamp,
             player["player_name"],
-            player["race_name"],
             player["level"],
             timestamp,
         ))
-
-
-
-
-
-
-
 
 
 client = ApifyClient(os.environ["APIFY_TOKEN"])
