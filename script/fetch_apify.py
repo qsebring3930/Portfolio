@@ -218,7 +218,6 @@ for item in client.dataset(run.default_dataset_id).iterate_items():
 cursor.execute("""
 DROP TABLE race_playtime;
 DROP TABLE race_levels;
-);
 """)
 
 conn.commit()
