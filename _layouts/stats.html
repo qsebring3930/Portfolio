@@ -519,9 +519,9 @@ function renderTotalTime() {
 
 async function init() {
   [mapPlaytime, racePlaytime, raceLevels] = await Promise.all([
-    fetch(DATA_PATH + "map_playtime.json").then(r => r.json()),
-    fetch(DATA_PATH + "race_playtime.json").then(r => r.json()),
-    fetch(DATA_PATH + "race_levels.json").then(r => r.json())
+    fetch(DATA_PATH + "map_playtime.json?v=" + Date.now(), { cache: "no-store" }).then(r => r.json()),
+    fetch(DATA_PATH + "race_playtime.json?v=" + Date.now(), { cache: "no-store" }).then(r => r.json()),
+    fetch(DATA_PATH + "race_levels.json?v=" + Date.now(), { cache: "no-store" }).then(r => r.json())
   ]);
 
   raceColumns = getRaceColumns(racePlaytime)
