@@ -47,4 +47,15 @@ jobs:
           AZURE_SQL_DATABASE: ${{ secrets.AZURE_SQL_DATABASE }}
           AZURE_SQL_USERNAME: ${{ secrets.AZURE_SQL_USERNAME }}
           AZURE_SQL_PASSWORD: ${{ secrets.AZURE_SQL_PASSWORD }}
+
+      - name: Commit JSON exports
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+      
+          git add assets/data/*.json
+      
+          git commit -m "Update stats JSON" || echo "No changes"
+      
+          git push
           
