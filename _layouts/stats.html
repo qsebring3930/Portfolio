@@ -8,53 +8,58 @@ title: War3CS2 Stats
 
   <div class="war3-stats">
 
-    <section>
-      <h2>Map Stats</h2>
+    <div class="stats-tabs">
+      <button class="stats-tab active" data-tab="maps">Map Stats</button>
+      <button class="stats-tab" data-tab="race-level">Highest Race Level</button>
+      <button class="stats-tab" data-tab="any-race">Highest Any Race</button>
+      <button class="stats-tab" data-tab="total-levels">Highest Total Levels</button>
+      <button class="stats-tab" data-tab="race-time">Race Time</button>
+      <button class="stats-tab" data-tab="total-time">Total Time</button>
+    </div>
+
+    <section class="stats-panel active" data-panel="maps">
       <div class="stats-table-wrap">
         <table id="mapStats"></table>
       </div>
     </section>
 
-    <section>
-      <h2>Highest Race Level</h2>
+    <section class="stats-panel" data-panel="race-level">
       <label for="raceLevelInput">Race:</label>
       <div class="race-select-wrap">
-        <select id="raceLevelInput" placeholder="Type or select a race"></select>
+        <select id="raceLevelInput"></select>
         <button type="button" class="race-select-button" data-target="raceLevelInput">▼</button>
       </div>
+
       <div class="stats-table-wrap">
         <table id="highestRaceLevel"></table>
       </div>
     </section>
 
-    <section>
-      <h2>Highest Level of Any Race</h2>
+    <section class="stats-panel" data-panel="any-race">
       <div class="stats-table-wrap">
         <table id="highestAnyRace"></table>
       </div>
     </section>
 
-    <section>
-      <h2>Highest Total Levels</h2>
+    <section class="stats-panel" data-panel="total-levels">
       <div class="stats-table-wrap">
         <table id="highestTotalLevels"></table>
       </div>
     </section>
 
-    <section>
-      <h2>Time Wasted On Race</h2>
+    <section class="stats-panel" data-panel="race-time">
       <label for="raceTimeInput">Race:</label>
       <div class="race-select-wrap">
-        <select id="raceTimeInput" placeholder="Type or select a race"></select>
+        <select id="raceTimeInput"></select>
         <button type="button" class="race-select-button" data-target="raceTimeInput">▼</button>
       </div>
+
       <div class="stats-table-wrap">
         <table id="raceTimeTable"></table>
       </div>
     </section>
 
-    <section>
-      <h2>Time Wasted Total ;)</h2>
+    <section class="stats-panel" data-panel="total-time">
       <div class="stats-table-wrap">
         <table id="totalTimeTable"></table>
       </div>
@@ -66,7 +71,40 @@ title: War3CS2 Stats
 <link href="https://cdn.jsdelivr.net/npm/tom-select/dist/css/tom-select.css" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/tom-select/dist/js/tom-select.complete.min.js"></script>
 
+
 <style>
+.stats-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(0.1rem, 0.4vw, 0.25rem);
+  margin-bottom: clamp(0.5rem, 1.2vw, 1rem);
+}
+
+.stats-tab {
+  cursor: pointer;
+  padding: clamp(0.2rem, 0.6vw, 0.4rem) clamp(0.35rem, 1vw, 0.75rem);
+  font-size: clamp(0.45rem, 1.2vw, 1rem);
+  line-height: 1.15;
+  border: 1px solid #666;
+  border-bottom: none;
+  background: #2b2b2b;
+  color: inherit;
+  white-space: normal;
+}
+
+.stats-tab.active {
+  font-weight: bold;
+  background: #444;
+}
+
+.stats-panel {
+  display: none;
+}
+
+.stats-panel.active {
+  display: block;
+}
+
 .war3-stats input {
   margin: 0.5rem 0 1rem;
   max-width: 100%;
@@ -505,10 +543,27 @@ async function init() {
 
   document.getElementById("raceLevelInput").tomselect.clear();
   document.getElementById("raceTimeInput").tomselect.clear();
-
-  forceDropdownOnFocus(document.getElementById("raceLevelInput"));
-  forceDropdownOnFocus(document.getElementById("raceTimeInput"));
 }
+
+document.addEventListener("click", (e) => {
+
+  const tab = e.target.closest(".stats-tab");
+
+  if (!tab) return;
+
+  const target = tab.dataset.tab;
+
+  document.querySelectorAll(".stats-tab").forEach(btn => {
+    btn.classList.toggle("active", btn === tab);
+  });
+
+  document.querySelectorAll(".stats-panel").forEach(panel => {
+    panel.classList.toggle(
+      "active",
+      panel.dataset.panel === target
+    );
+  });
+});
 
 init();
 </script>
