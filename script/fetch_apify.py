@@ -71,7 +71,7 @@ CREATE TABLE map_playtime (
 conn.commit()
 print("Tables created or already exist.")
 
-SNAPSHOT_MINUTES = 5
+SNAPSHOT_MINUTES = 1
 
 def race_to_column(race_name):
     col = race_name.lower()
