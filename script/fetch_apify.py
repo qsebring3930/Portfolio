@@ -1,5 +1,30 @@
 import os
+import pyodbc
 from apify_client import ApifyClient
+
+print("Testing Azure SQL connection...")
+
+conn = pyodbc.connect(
+    "DRIVER={ODBC Driver 18 for SQL Server};"
+    f"SERVER={os.environ['AZURE_SQL_SERVER']};"
+    f"DATABASE={os.environ['AZURE_SQL_DATABASE']};"
+    f"UID={os.environ['AZURE_SQL_USERNAME']};"
+    f"PWD={os.environ['AZURE_SQL_PASSWORD']};"
+    "Encrypt=yes;"
+    "TrustServerCertificate=no;"
+)
+
+cursor = conn.cursor()
+
+cursor.execute("SELECT @@VERSION")
+
+row = cursor.fetchone()
+
+print("Connected successfully!")
+print(row[0][:200])
+
+cursor.close()
+conn.close()
 
 client = ApifyClient(os.environ["APIFY_TOKEN"])
 
