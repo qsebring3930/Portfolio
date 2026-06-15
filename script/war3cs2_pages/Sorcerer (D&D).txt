@@ -1,0 +1,127 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Sorcerer (D&D)
+|image=[[File:Sorcerer (D&D).webp]]
+|category=D&D Casters
+|max=30
+|level=3470
+|access=Beta
+|items=
+Gloves of Warmth
+|passive=
+<p>
+Flashbang: Drugs
+</p>
+}}
+|skill1={{SkillInfo
+|name=Innate Sorcery
+|info=
+Increase Skill Immunity, Gain Sorcery Points
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Skill Immunity|unit=%|lvl1=10|lvl2=20|lvl3=30|lvl4=40|lvl5=50}}
+|line2={{LevelUpRow|field=Sorcery Points|lvl1=1|lvl2=2|lvl3=3|lvl4=4|lvl5=5}}
+}}}}
+|skill2={{SkillInfo
+|name=Chromatic Orb
+|info=
+<p>
+Passive: Gain Grenades over time<br>
+Attack: Grenades have Random Effects<br>
+Acid: Increase Damage and Damage Armor<br>
+Cold: Increase Damage and Decrease Speed<br>
+Fire: Increase Damage<br>
+Poison: DoT<br>
+Lightning: Increase Damage<br>
+Thunder: Increase Damage and Impale
+</p>
+|trigger=Special
+|tickrate=10
+|extra=
+<p>
+Acid: Removes Armor based on damage received<br>
+Ice: Speed -35% - Duration 3.0 sec.<br>
+Fire: Duration 5.0 sec.<br>
+Poison: Damage 5<br>
+Thunder: Force 300.0
+</p>
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Acid Increase|lvl1=5.0%|lvl2=10.0%|lvl3=15.0%|lvl4=20.0%|lvl5=25.0%}}
+|line2={{LevelUpRow|field=Cold Increase|lvl1=5.0%|lvl2=10.0%|lvl3=15.0%|lvl4=20.0%|lvl5=25.0%}}
+|line3={{LevelUpRow|field=Fire Increase|lvl1=5.0%|lvl2=10.0%|lvl3=15.0%|lvl4=20.0%|lvl5=25.0%}}
+|line4={{LevelUpRow|field=Poison Duration|unit=sec.|lvl1=2.0|lvl2=3.0|lvl3=4.0|lvl4=5.0|lvl5=6.0}}
+|line5={{LevelUpRow|field=Lightning Increase|lvl1=15.0%|lvl2=30.0%|lvl3=45.0%|lvl4=60.0%|lvl5=75.0%}}
+|line6={{LevelUpRow|field=Thunder Increase|lvl1=5.0%|lvl2=10.0%|lvl3=15.0%|lvl4=20.0%|lvl5=25.0%}}
+}}}}
+|skill3={{SkillInfo
+|name=Thunderwave
+|info=
+Damage and Knockback enemies
+|trigger=Ability1
+|target=AoE_Self
+|radius=300
+|force=2
+|cooldown=15.0
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Damage|lvl1=6|lvl2=12|lvl3=18|lvl4=24|lvl5=30}}
+}}}}
+|skill4={{SkillInfo
+|name=Rime's Binding Ice
+|info=
+Bash and Damage
+|trigger=Ability2
+|target=Cone
+|range=400
+|cone=40
+|cooldown=18.0
+|extra=Shoot Ice to get free quicker
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Damage|lvl1=5|lvl2=10|lvl3=15|lvl4=20|lvl5=25}}
+|line2={{LevelUpRow|field=Duration|unit=sec.|lvl1=1.0|lvl2=2.0|lvl3=3.0|lvl4=4.0|lvl5=5.0}}
+}}}}
+|skill5={{SkillInfo
+|name=Ability: Gain Decoy
+|info=
+Special: Decoy sticks to surface and explodes
+|trigger=Ability3
+|target=Special
+|duration=2
+|explrad=300
+|cooldown=30.0
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Explosive Damage|lvl1=30|lvl2=60|lvl3=90|lvl4=120|lvl5=150}}
+}}}}
+|skill6={{SkillInfo
+|name=Metamagic
+|info=
+<p>
+Sacrifice Sorcery Points to Empower your next spell with the chosen attribute<br>
+Distance: Increase Radius<br>
+Empower: Increase Damage<br>
+Extend: Increase Duration<br>
+Heighten: Spells might ignore Spell Immunity<br>
+Quicken: Reduce Cooldown<br>
+Twin: Dual Cast
+</p>
+|trigger=Ultimate
+|target=Self
+|cooldown=15.0
+|extra=
+<p>
+Distance: 1 Points<br>
+Empower: 1 Points<br>
+Extend: 1 Points<br>
+Heighten: 1 Points<br>
+Quicken: 1 Points<br>
+Twin: 1 Points
+</p>
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Distance Radius|lvl1=10.0%|lvl2=20.0%|lvl3=30.0%|lvl4=40.0%|lvl5=50.0%}}
+|line2={{LevelUpRow|field=Empower Increase|lvl1=10.0%|lvl2=20.0%|lvl3=30.0%|lvl4=40.0%|lvl5=50.0%}}
+|line3={{LevelUpRow|field=Extend Duration|lvl1=10.0%|lvl2=20.0%|lvl3=30.0%|lvl4=40.0%|lvl5=50.0%}}
+|line4={{LevelUpRow|field=Heighten Chance|unit=%|lvl1=10|lvl2=20|lvl3=30|lvl4=40|lvl5=50}}
+|line5={{LevelUpRow|field=Quicken Reduction|lvl1=10.0%|lvl2=20.0%|lvl3=30.0%|lvl4=40.0%|lvl5=50.0%}}
+|line6={{LevelUpRow|field=Twin Delay|unit=sec.|lvl1=6.0|lvl2=5.0|lvl3=4.0|lvl4=3.0|lvl5=2.0}}
+}}}}
+}}
