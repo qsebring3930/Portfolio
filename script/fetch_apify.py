@@ -82,6 +82,14 @@ print("Tables created or already exist.")
 
 SNAPSHOT_MINUTES = 1
 
+def normalize_player_name(player_name):
+    name = player_name.strip()
+
+    if name.upper().startswith("BOT "):
+        return "BOT"
+
+    return name
+
 def race_to_column(race_name):
     col = race_name.lower()
     col = re.sub(r"[^a-z0-9]+", "_", col).strip("_")
@@ -161,7 +169,7 @@ def parse_team_players(embed):
             if not match:
                 continue
 
-            player_name = match.group(1).strip()
+            player_name = normalize_player_name(match.group(1))
             race_name = match.group(2).strip()
             level = int(match.group(3))
 
@@ -186,7 +194,7 @@ def update_stats(cursor, item):
     SELECT 1 FROM processed_snapshots
     WHERE snapshot_id = ?
     """, snapshot_id)
-    
+
     if cursor.fetchone():
         print(f"Skipping already processed snapshot: {message_id}")
         return
