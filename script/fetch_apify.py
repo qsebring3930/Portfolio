@@ -4,6 +4,7 @@ import re
 from apify_client import ApifyClient
 from pathlib import Path
 import time
+import json
 
 print("Testing Azure SQL connection...")
 
@@ -276,6 +277,20 @@ run = client.actor("wUoh2wdO7k9mnzL9d").call(run_input=run_input)
 
 for item in client.dataset(run.default_dataset_id).iterate_items():
     update_stats(cursor, item)
+
+os.makedirs("assets/data", exist_ok=True)
+for table in ["map_playtime", "race_playtime", "race_levels"]:
+    cursor.execute(f"SELECT * FROM {table}")
+
+    columns = [c[0] for c in cursor.description]
+
+    rows = [
+        dict(zip(columns, row))
+        for row in cursor.fetchall()
+    ]
+
+    with open(f"assets/data/{table}.json", "w", encoding="utf-8") as f:
+        json.dump(rows, f, indent=2, default=str)
 
 conn.commit()
 print("Stats updated.")
