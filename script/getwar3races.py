@@ -7,6 +7,9 @@ from urllib.request import Request, urlopen
 
 BASE = "https://war3cs2.wiki.gg"
 
+PAGE_PREFIXES = ["Races/", "Champions/"]
+
+
 def fetch_json(params):
     url = BASE + "/api.php?" + urlencode(params)
     req = Request(url, headers={"User-Agent": "War3CS2RacePageDumper/1.0"})
@@ -14,12 +17,18 @@ def fetch_json(params):
     with urlopen(req, timeout=20) as response:
         return json.loads(response.read().decode("utf-8"))
 
+
 def safe_filename(title):
-    name = title.replace("Races/", "")
+    name = title
+
+    for prefix in PAGE_PREFIXES:
+        name = name.replace(prefix, "")
+
     name = re.sub(r'[<>:"/\\|?*]', "_", name)
     return name + ".txt"
 
-def get_all_race_pages():
+
+def get_pages_from_category(category_name):
     pages = []
     cont = None
 
@@ -27,7 +36,7 @@ def get_all_race_pages():
         params = {
             "action": "query",
             "list": "categorymembers",
-            "cmtitle": "Category:Races",
+            "cmtitle": category_name,
             "cmlimit": "500",
             "format": "json"
         }
@@ -39,14 +48,26 @@ def get_all_race_pages():
 
         for item in data["query"]["categorymembers"]:
             title = item["title"]
-            if title.startswith("Races/"):
+
+            if any(title.startswith(prefix) for prefix in PAGE_PREFIXES):
                 pages.append(title)
 
         cont = data.get("continue", {}).get("cmcontinue")
+
         if not cont:
             break
 
     return pages
+
+
+def get_all_pages():
+    pages = []
+
+    pages.extend(get_pages_from_category("Category:Races"))
+    pages.extend(get_pages_from_category("Category:Champions"))
+
+    return sorted(set(pages))
+
 
 def get_page_text(title):
     data = fetch_json({
@@ -66,6 +87,7 @@ def get_page_text(title):
 
     return page["revisions"][0]["slots"]["main"]["content"]
 
+
 def main():
     script_dir = os.path.dirname(os.path.abspath(__file__))
     output_dir = os.path.join(script_dir, "war3cs2_pages")
@@ -74,23 +96,23 @@ def main():
     print("Saving pages to:")
     print(output_dir)
 
-    race_pages = get_all_race_pages()
-    print(f"\nFound {len(race_pages)} race pages\n")
+    pages = get_all_pages()
+    print(f"\nFound {len(pages)} race/champion pages\n")
 
     downloaded = 0
     skipped = 0
     failed = 0
 
-    for i, title in enumerate(race_pages, start=1):
+    for i, title in enumerate(pages, start=1):
         filename = safe_filename(title)
         path = os.path.join(output_dir, filename)
 
         if os.path.exists(path):
-            print(f"[{i}/{len(race_pages)}] Skipping existing: {title}")
+            print(f"[{i}/{len(pages)}] Skipping existing: {title}")
             skipped += 1
             continue
 
-        print(f"[{i}/{len(race_pages)}] Downloading: {title}")
+        print(f"[{i}/{len(pages)}] Downloading: {title}")
 
         try:
             text = get_page_text(title)
@@ -110,6 +132,7 @@ def main():
     print(f"Downloaded: {downloaded}")
     print(f"Skipped existing: {skipped}")
     print(f"Failed: {failed}")
+
 
 if __name__ == "__main__":
     main()
