@@ -237,11 +237,6 @@ for item in client.dataset(run.default_dataset_id).iterate_items():
     print(item)
     update_stats(cursor, item)
 
-cursor.execute("""
-DROP TABLE race_playtime;
-DROP TABLE race_levels;
-""")
-
 conn.commit()
 print("Stats updated.")
 
