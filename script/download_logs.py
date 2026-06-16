@@ -669,7 +669,9 @@ CURSE_PATTERNS = [
 
     # piss/crap
     r"\bpiss+\w*\b",
-    r"\bcrap+\w*\b",
+
+    # cum
+    r"\bcum+\w*\b",
 
     # bastard
     r"\bbastard\w*\b",
