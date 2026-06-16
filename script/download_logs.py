@@ -761,9 +761,230 @@ def build_top_curse_users(cursor):
 
     return rows[:50]
 
+IGNORED_ADMIN_TARGETS = {
+    "@all",
+    "all",
+    "@ct",
+    "ct",
+    "@t",
+    "t",
+    "@spec",
+    "spec",
+    "spectator",
+    "spectators",
+    "me",
+}
+
+
+def normalize_target_name(name):
+    if not name:
+        return ""
+
+    name = clean_export_name(name)
+    name = name.strip()
+
+    return name
+
+
+def get_chat_player_profiles(cursor):
+    cursor.execute("""
+        SELECT
+            player_name,
+            COUNT(*) AS message_count
+        FROM chat_messages
+        WHERE player_name IS NOT NULL
+          AND player_name <> ''
+        GROUP BY player_name;
+    """)
+
+    profiles_by_name = {}
+
+    for player_name, message_count in cursor.fetchall():
+        clean_name = clean_export_name(player_name)
+
+        if not clean_name:
+            continue
+
+        key = normalize_name_for_match(clean_name)
+
+        if not key:
+            continue
+
+        if key not in profiles_by_name:
+            profiles_by_name[key] = {
+                "player_name": clean_name,
+                "normalized": key,
+                "tokens": get_name_tokens(clean_name),
+                "message_count": 0,
+            }
+
+        profiles_by_name[key]["message_count"] += int(message_count or 0)
+
+        # Prefer the longer/prettier version of the name.
+        if len(clean_name) > len(profiles_by_name[key]["player_name"]):
+            profiles_by_name[key]["player_name"] = clean_name
+            profiles_by_name[key]["tokens"] = get_name_tokens(clean_name)
+
+    return list(profiles_by_name.values())
+
+
+def score_target_against_player(target_name, player_profile):
+    target_clean = normalize_target_name(target_name)
+    target_norm = normalize_name_for_match(target_clean)
+
+    if not target_norm:
+        return None
+
+    player_norm = player_profile["normalized"]
+    player_tokens = player_profile["tokens"]
+
+    if not player_norm:
+        return None
+
+    # Exact full-name match.
+    if target_norm == player_norm:
+        return 100
+
+    # Exact token inside a multi-word real username.
+    # Examples:
+    # ben -> Princess Ben
+    # princess -> Princess Ben
+    # cum -> cum kisses
+    if len(target_norm) >= 3 and len(player_tokens) >= 2 and target_norm in player_tokens:
+        return 120 + len(player_norm) / 100
+
+    # Prefix match for single-word names.
+    # Examples:
+    # logi -> Logickal
+    # logic -> Logickal
+    # logick -> Logickal
+    if len(target_norm) >= 4 and player_norm.startswith(target_norm):
+        return 90 + len(target_norm)
+
+    # Conservative fuzzy match for longer names only.
+    if len(target_norm) >= 6:
+        ratio = SequenceMatcher(None, target_norm, player_norm).ratio()
+
+        if ratio >= 0.90:
+            return 80 + (ratio * 10)
+
+    return None
+
+
+def resolve_target_to_chat_player(target_name, player_profiles):
+    target_clean = normalize_target_name(target_name)
+
+    if not target_clean:
+        return None
+
+    if target_clean.lower() in IGNORED_ADMIN_TARGETS:
+        return None
+
+    best_profile = None
+    best_score = None
+
+    for profile in player_profiles:
+        score = score_target_against_player(target_clean, profile)
+
+        if score is None:
+            continue
+
+        if best_score is None:
+            best_profile = profile
+            best_score = score
+            continue
+
+        # Tie-breakers:
+        # 1. higher match score
+        # 2. longer real username
+        # 3. more chat messages
+        if (
+            score > best_score
+            or (
+                score == best_score
+                and len(profile["normalized"]) > len(best_profile["normalized"])
+            )
+            or (
+                score == best_score
+                and len(profile["normalized"]) == len(best_profile["normalized"])
+                and profile["message_count"] > best_profile["message_count"]
+            )
+        ):
+            best_profile = profile
+            best_score = score
+
+    if best_profile:
+        return best_profile["player_name"]
+
+    # No safe match found. Keep the cleaned admin target as its own name.
+    return target_clean
+
+
+def consolidate_admin_target_rows(rows, player_profiles, count_field, extra_sum_fields=None):
+    if extra_sum_fields is None:
+        extra_sum_fields = []
+
+    grouped = {}
+
+    for row in rows:
+        raw_name = row.get("player_name")
+        clean_name = normalize_target_name(raw_name)
+
+        if not clean_name:
+            continue
+
+        if clean_name.lower() in IGNORED_ADMIN_TARGETS:
+            continue
+
+        resolved_name = resolve_target_to_chat_player(clean_name, player_profiles)
+
+        if not resolved_name:
+            continue
+
+        key = normalize_name_for_match(resolved_name)
+
+        if key not in grouped:
+            grouped[key] = {
+                "player_name": resolved_name,
+                count_field: 0,
+                "aliases": set(),
+            }
+
+            for field in extra_sum_fields:
+                grouped[key][field] = 0
+
+        grouped[key][count_field] += int(row.get(count_field) or 0)
+        grouped[key]["aliases"].add(clean_name)
+
+        if clean_name != resolved_name:
+            grouped[key]["aliases"].add(resolved_name)
+
+        for field in extra_sum_fields:
+            grouped[key][field] += int(row.get(field) or 0)
+
+    output_rows = []
+
+    for group in grouped.values():
+        output = {
+            "player_name": group["player_name"],
+            count_field: group[count_field],
+            "aliases": sorted(group["aliases"], key=lambda name: normalize_name_for_match(name)),
+        }
+
+        for field in extra_sum_fields:
+            output[field] = group[field]
+
+        output_rows.append(output)
+
+    output_rows.sort(key=lambda row: row[count_field], reverse=True)
+
+    return output_rows
+
 def export_log_jsons(cursor):
     data_dir = Path(__file__).resolve().parent.parent / "assets" / "data"
     data_dir.mkdir(parents=True, exist_ok=True)
+    player_profiles = get_chat_player_profiles(cursor)
+    print(f"Loaded {len(player_profiles)} chat player profiles for alias matching.")
 
     print(f"Exporting log JSON files to {data_dir}")
 
@@ -779,9 +1000,9 @@ def export_log_jsons(cursor):
     write_json(data_dir / "top_chatters.json", rows_to_dicts(cursor))
 
     # Top curse users.
-   # Top curse users
     curse_rows = build_top_curse_users(cursor)
     write_json(data_dir / "top_curse_users.json", curse_rows)
+  
     # Most slain players
     cursor.execute("""
         SELECT
@@ -795,7 +1016,11 @@ def export_log_jsons(cursor):
     """)
     
     slain_rows = rows_to_dicts(cursor)
-    slain_rows = consolidate_player_rows(slain_rows, "slain_count")
+    slain_rows = consolidate_admin_target_rows(
+        slain_rows,
+        player_profiles,
+        "slain_count",
+    )
     write_json(data_dir / "most_slain_players.json", slain_rows[:50])
 
     # Most slapped players
@@ -812,13 +1037,15 @@ def export_log_jsons(cursor):
     """)
     
     slapped_rows = rows_to_dicts(cursor)
-    slapped_rows = consolidate_player_rows(
+    slapped_rows = consolidate_admin_target_rows(
         slapped_rows,
+        player_profiles,
         "slapped_count",
         extra_sum_fields=["total_slap_damage"],
     )
     write_json(data_dir / "most_slapped_players.json", slapped_rows[:50])
 
+    #Admin total command usage
     cursor.execute("""
         SELECT
             admin_name,
