@@ -492,18 +492,17 @@ def mark_log_file_processed(cursor, file_name):
         VALUES (?)
     """, file_name)
 
-
 def import_server_logs(cursor):
-    logs_dir = Path("logs")
+    logs_dir = Path(__file__).resolve().parent / "logs"
 
     if not logs_dir.exists():
-        print("No logs folder found, skipping server log import.")
+        print(f"No logs folder found at {logs_dir}, skipping server log import.")
         return
 
-    log_files = sorted(logs_dir.glob("*.txt"))
+    log_files = sorted(logs_dir.glob("log-all*.txt"))
 
     if not log_files:
-        print("No .txt logs found, skipping server log import.")
+        print(f"No log-all*.txt logs found in {logs_dir}, skipping server log import.")
         return
 
     chat_count = 0
@@ -611,7 +610,8 @@ def import_server_logs(cursor):
 
         mark_log_file_processed(cursor, log_file.name)
 
-    print(f"Server log import complete.")
+    print("Server log import complete.")
+    print(f"Logs folder: {logs_dir}")
     print(f"Processed log files: {len(log_files) - skipped_files}")
     print(f"Skipped log files: {skipped_files}")
     print(f"Stored chat messages: {chat_count}")
@@ -637,8 +637,6 @@ for table in [
     "map_playtime",
     "race_playtime",
     "race_levels",
-    "chat_messages",
-    "admin_actions",
 ]:
     cursor.execute(f"SELECT * FROM {table}")
 
