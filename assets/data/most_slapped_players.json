@@ -1,19 +1,11 @@
 [
   {
-    "player_name": "aim",
-    "slapped_count": 111,
+    "player_name": "hex",
+    "slapped_count": 96,
     "aliases": [
-      "aim",
-      "@all",
-      "bro",
-      "buk",
-      "cab",
-      "cum",
-      "god",
-      "hex",
-      "ren"
+      "hex"
     ],
-    "total_slap_damage": 186
+    "total_slap_damage": 0
   },
   {
     "player_name": "curry",
@@ -37,6 +29,14 @@
     "total_slap_damage": 139
   },
   {
+    "player_name": "@all",
+    "slapped_count": 4,
+    "aliases": [
+      "@all"
+    ],
+    "total_slap_damage": 3
+  },
+  {
     "player_name": "commando",
     "slapped_count": 3,
     "aliases": [
@@ -47,6 +47,14 @@
     "total_slap_damage": 0
   },
   {
+    "player_name": "cum",
+    "slapped_count": 3,
+    "aliases": [
+      "cum"
+    ],
+    "total_slap_damage": 156
+  },
+  {
     "player_name": "David West",
     "slapped_count": 3,
     "aliases": [
@@ -54,6 +62,14 @@
       "Gucci Wade"
     ],
     "total_slap_damage": 0
+  },
+  {
+    "player_name": "ren",
+    "slapped_count": 3,
+    "aliases": [
+      "ren"
+    ],
+    "total_slap_damage": 1
   },
   {
     "player_name": "argy",
@@ -79,6 +95,46 @@
       "1600 microsoft points needed"
     ],
     "total_slap_damage": 1
+  },
+  {
+    "player_name": "aim",
+    "slapped_count": 1,
+    "aliases": [
+      "aim"
+    ],
+    "total_slap_damage": 6
+  },
+  {
+    "player_name": "bro",
+    "slapped_count": 1,
+    "aliases": [
+      "bro"
+    ],
+    "total_slap_damage": 0
+  },
+  {
+    "player_name": "buk",
+    "slapped_count": 1,
+    "aliases": [
+      "buk"
+    ],
+    "total_slap_damage": 10
+  },
+  {
+    "player_name": "cab",
+    "slapped_count": 1,
+    "aliases": [
+      "cab"
+    ],
+    "total_slap_damage": 10
+  },
+  {
+    "player_name": "god",
+    "slapped_count": 1,
+    "aliases": [
+      "god"
+    ],
+    "total_slap_damage": 0
   },
   {
     "player_name": "ObsidianStorm",
