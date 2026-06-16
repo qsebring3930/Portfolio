@@ -68,7 +68,10 @@ jobs:
           git config user.email "github-actions@github.com"
 
           git add -A script/logs/
-          git add assets/data/
+          git add -A assets/data/
+
+          echo "Git status before commit:"
+          git status --short
 
           if git diff --cached --quiet; then
             echo "No changes to commit."
@@ -76,5 +79,6 @@ jobs:
           fi
 
           git commit -m "Update server log stats"
-          git pull --rebase origin master
+
+          git pull --rebase --autostash origin master
           git push origin master
