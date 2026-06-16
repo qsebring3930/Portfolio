@@ -5,7 +5,7 @@ import paramiko
 
 
 def download_logs_from_sftp():
-    local_logs_dir = Path(__file__).resolve().parent.parent / "logs"
+    local_logs_dir = Path(__file__).resolve().parent / "logs"
     local_logs_dir.mkdir(parents=True, exist_ok=True)
 
     required_sftp_vars = [
