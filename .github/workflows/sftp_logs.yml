@@ -45,23 +45,6 @@ jobs:
           AZURE_SQL_USERNAME: ${{ secrets.AZURE_SQL_USERNAME }}
           AZURE_SQL_PASSWORD: ${{ secrets.AZURE_SQL_PASSWORD }}
 
-      - name: Commit downloaded logs
-        run: |
-          git config user.name "github-actions"
-          git config user.email "github-actions@github.com"
-
-          git add script/logs/
-
-          if git diff --cached --quiet; then
-            echo "No log changes to commit."
-            exit 0
-          fi
-
-          git commit -m "Update server logs"
-
-          git pull --rebase origin master
-          git push origin master
-
       - name: Commit downloaded logs and JSON data
         run: |
           git config user.name "github-actions"
