@@ -1,7 +1,6 @@
 import os
 import pyodbc
 import re
-from apify_client import ApifyClient
 from pathlib import Path
 import time
 import json
