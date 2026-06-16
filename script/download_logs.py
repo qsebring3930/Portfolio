@@ -84,6 +84,8 @@ def download_logs_from_sftp():
         skipped = 0
         ignored = 0
 
+        processed_files_to_delete = []
+
         for remote_file in remote_files:
             log_all_files = [
                 remote_file
@@ -171,12 +173,20 @@ ISSUED_COMMAND_RE = re.compile(
     r"plugin:CS2-SimpleAdmin .*? (?P<admin>.*?) issued command `(?P<command>[^`]+)`"
 )
 
+def clean_export_name(name):
+    if not name:
+        return ""
+
+    name = clean_text(name)
+    name = re.sub(r"^\s*-\s*", "", name)
+    name = re.sub(r"\s*-\s*$", "", name)
+    return clean_text(name)
+
 def clean_text(value):
     value = CONTROL_CHARS_RE.sub("", value)
     value = value.replace("\u200b", "")
     value = MULTISPACE_RE.sub(" ", value)
     return value.strip()
-
 
 def clean_player_name(name):
     name = clean_text(name)
@@ -185,7 +195,16 @@ def clean_player_name(name):
     name = re.sub(r"\((CT|T|SPEC|SPECTATOR)\)", "", name, flags=re.IGNORECASE)
     name = re.sub(r"\[[^\]]+\]", "", name)
 
-    return clean_text(name)
+    # Remove dangling separator dashes like:
+    # "Princess Ben -"
+    # "- Princess Ben"
+    name = re.sub(r"^\s*-\s*", "", name)
+    name = re.sub(r"\s*-\s*$", "", name)
+
+    # Collapse whitespace again after cleanup
+    name = clean_text(name)
+
+    return name
 
 
 def get_log_timestamp(line):
@@ -313,18 +332,32 @@ def mark_log_file_processed(cursor, file_name):
         VALUES (?)
     """, file_name)
 
+def delete_imported_logs(log_files):
+    deleted = 0
+
+    for log_file in log_files:
+        try:
+            if log_file.exists():
+                print(f"Deleting imported log file: {log_file}")
+                log_file.unlink()
+                deleted += 1
+        except Exception as e:
+            print(f"Failed to delete log file {log_file}: {type(e).__name__}: {e}")
+
+    print(f"Deleted imported log files: {deleted}")
+
 def import_server_logs(cursor):
     logs_dir = Path(__file__).resolve().parent / "logs"
 
     if not logs_dir.exists():
         print(f"No logs folder found at {logs_dir}, skipping server log import.")
-        return
+        return []
 
     log_files = sorted(logs_dir.glob("log-all*.txt"))
 
     if not log_files:
         print(f"No log-all*.txt logs found in {logs_dir}, skipping server log import.")
-        return
+        return []
 
     chat_count = 0
     admin_count = 0
@@ -430,6 +463,8 @@ def import_server_logs(cursor):
                     admin_count += 1
 
         mark_log_file_processed(cursor, log_file.name)
+        processed_files_to_delete.append(log_file)
+        return processed_files_to_delete
 
     print("Server log import complete.")
     print(f"Logs folder: {logs_dir}")
@@ -451,6 +486,7 @@ def normalize_name_for_match(name):
     if not name:
         return ""
 
+    name = clean_export_name(name)
     name = name.lower()
     name = re.sub(r"[^a-z0-9]+", "", name)
     return name.strip()
@@ -487,9 +523,8 @@ def names_are_probably_same(a, b):
 
 
 def choose_best_name(names):
-    # Prefer the longest name because "Princess Ben" is better than "ben",
-    # and "Logickal" is better than "logic".
-    return max(names, key=lambda name: len(normalize_name_for_match(name)))
+    best = max(names, key=lambda name: len(normalize_name_for_match(name)))
+    return clean_export_name(best)
 
 
 def consolidate_player_rows(rows, count_field, extra_sum_fields=None):
@@ -531,7 +566,10 @@ def consolidate_player_rows(rows, count_field, extra_sum_fields=None):
     consolidated = []
 
     for group in groups:
-        aliases = sorted(group["aliases"], key=lambda name: normalize_name_for_match(name))
+        aliases = sorted(
+            {clean_export_name(name) for name in group["aliases"] if clean_export_name(name)},
+            key=lambda name: normalize_name_for_match(name)
+        )
 
         output = {
             "player_name": choose_best_name(aliases),
@@ -754,22 +792,42 @@ def export_log_jsons(cursor):
     )
     write_json(data_dir / "most_slapped_players.json", slapped_rows[:50])
 
-    # Optional: admin command leaderboard
     cursor.execute("""
-        SELECT TOP 50
+        SELECT
             admin_name,
             command,
             COUNT(*) AS command_count
         FROM admin_actions
-        GROUP BY admin_name, command
-        ORDER BY command_count DESC;
+        GROUP BY admin_name, command;
     """)
-    write_json(data_dir / "admin_command_usage.json", rows_to_dicts(cursor))
-
-    print("Finished exporting log JSON files.")
+    
+    admin_rows = rows_to_dicts(cursor)
+    
+    grouped = {}
+    
+    for row in admin_rows:
+        admin_name = clean_export_name(row["admin_name"])
+        command = row["command"]
+        count = int(row["command_count"] or 0)
+    
+        key = (admin_name, command)
+    
+        if key not in grouped:
+            grouped[key] = {
+                "admin_name": admin_name,
+                "command": command,
+                "command_count": 0,
+            }
+    
+        grouped[key]["command_count"] += count
+    
+    admin_rows = list(grouped.values())
+    admin_rows.sort(key=lambda row: row["command_count"], reverse=True)
+    
+    write_json(data_dir / "admin_command_usage.json", admin_rows[:50])
 
 if __name__ == "__main__":
-    # download_logs_from_sftp()
+    download_logs_from_sftp()
 
     print("Testing Azure SQL connection...")
     conn = connect_with_retry()
@@ -781,12 +839,16 @@ if __name__ == "__main__":
     print("Connected successfully!")
     print(row[0][:200])
 
-    import_server_logs(cursor)
+    processed_log_files = import_server_logs(cursor)
+
     conn.commit()
+    print("SQL import committed successfully.")
+
+    delete_imported_logs(processed_log_files)
 
     export_log_jsons(cursor)
 
     cursor.close()
     conn.close()
 
-    print("Imported logs into SQL and exported JSON files.")
+    print("Imported logs into SQL, deleted imported logs, and exported JSON files.")
