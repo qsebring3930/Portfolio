@@ -1,3 +1,6 @@
+import os
+from pathlib import Path
+
 import paramiko
 
 
@@ -116,3 +119,6 @@ def download_logs_from_sftp():
         if transport:
             print("Closing SFTP transport...")
             transport.close()
+
+if __name__ == "__main__":
+    download_logs_from_sftp()
