@@ -1,5 +1,11 @@
 import os
+import pyodbc
+import re
+from apify_client import ApifyClient
 from pathlib import Path
+import time
+import json
+import hashlib
 
 import paramiko
 
@@ -118,5 +124,326 @@ def download_logs_from_sftp():
             print("Closing SFTP transport...")
             transport.close()
 
+def connect_with_retry(max_attempts=5):
+    last_error = None
+
+    for attempt in range(1, max_attempts + 1):
+        try:
+            print(f"Connecting to Azure SQL, attempt {attempt}/{max_attempts}...")
+
+            return pyodbc.connect(
+                "DRIVER={ODBC Driver 18 for SQL Server};"
+                f"SERVER=tcp:{os.environ['AZURE_SQL_SERVER']},1433;"
+                f"DATABASE={os.environ['AZURE_SQL_DATABASE']};"
+                f"UID={os.environ['AZURE_SQL_USERNAME']};"
+                f"PWD={os.environ['AZURE_SQL_PASSWORD']};"
+                "Encrypt=yes;"
+                "TrustServerCertificate=no;"
+                "Connection Timeout=60;"
+            )
+
+        except pyodbc.Error as e:
+            last_error = e
+            print(f"Connection failed: {e}")
+            time.sleep(10)
+
+    raise last_error
+
+
+CONTROL_CHARS_RE = re.compile(r"[\x00-\x08\x0b-\x1f\x7f]")
+MULTISPACE_RE = re.compile(r"\s+")
+TIMESTAMP_RE = re.compile(
+    r"^(?P<timestamp>\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}\.\d+ \+00:00)"
+)
+
+ISSUED_COMMAND_RE = re.compile(
+    r"plugin:CS2-SimpleAdmin .*? (?P<admin>.*?) issued command `(?P<command>[^`]+)`"
+)
+
+def clean_text(value):
+    value = CONTROL_CHARS_RE.sub("", value)
+    value = value.replace("\u200b", "")
+    value = MULTISPACE_RE.sub(" ", value)
+    return value.strip()
+
+
+def clean_player_name(name):
+    name = clean_text(name)
+
+    name = name.replace("*DEAD*", "")
+    name = re.sub(r"\((CT|T|SPEC|SPECTATOR)\)", "", name, flags=re.IGNORECASE)
+    name = re.sub(r"\[[^\]]+\]", "", name)
+
+    return clean_text(name)
+
+
+def get_log_timestamp(line):
+    match = TIMESTAMP_RE.search(line)
+    return match.group("timestamp") if match else None
+
+
+def make_event_id(source_file, line_number, line):
+    raw = f"{source_file}:{line_number}:{line}".encode("utf-8", errors="replace")
+    return hashlib.sha1(raw).hexdigest()
+
+
+def parse_chat_line(line, source_file, line_number):
+    if "plugin:Warcraft 3 Counter-Strike 2" not in line:
+        return None
+
+    non_chat_markers = [
+        "Fetched Event Data",
+        "Fetched Player Rank Data",
+        "Fetched Race Rank Data",
+        "Successfully added MOTD string",
+        "Cleared database",
+        "Timer Exception",
+        "has disconnected due to timeout",
+    ]
+
+    if any(marker in line for marker in non_chat_markers):
+        return None
+
+    timestamp = get_log_timestamp(line)
+
+    try:
+        body = line.split("plugin:Warcraft 3 Counter-Strike 2", 1)[1]
+    except IndexError:
+        return None
+
+    body_clean = clean_text(body)
+
+    if ":" not in body_clean:
+        return None
+
+    raw_player_name, message = body_clean.split(":", 1)
+
+    player_name = clean_player_name(raw_player_name)
+    message = clean_text(message)
+
+    if not player_name or not message:
+        return None
+
+    return {
+        "event_id": make_event_id(source_file, line_number, line),
+        "source_file": source_file,
+        "line_number": line_number,
+        "timestamp": timestamp,
+        "player_name": player_name,
+        "raw_player_name": clean_text(raw_player_name),
+        "message": message,
+        "is_dead": 1 if "*DEAD*" in body else 0,
+    }
+
+
+def parse_admin_action(line, source_file, line_number):
+    if "issued command `" not in line:
+        return None
+
+    cleaned_line = clean_text(line)
+    match = ISSUED_COMMAND_RE.search(cleaned_line)
+
+    if not match:
+        return None
+
+    timestamp = get_log_timestamp(line)
+
+    raw_admin_name = clean_text(match.group("admin"))
+    admin_name = clean_player_name(raw_admin_name)
+
+    full_command = clean_text(match.group("command"))
+    parts = full_command.split(maxsplit=1)
+
+    command = parts[0].lower()
+    command_args = parts[1] if len(parts) > 1 else ""
+
+    target_name = None
+    amount = None
+
+    if command in {"css_slay", "css_slap"} and command_args:
+        target_text = command_args
+
+        if command == "css_slap":
+            possible = command_args.rsplit(maxsplit=1)
+
+            if len(possible) == 2 and possible[1].lstrip("-").isdigit():
+                target_text = possible[0]
+                amount = int(possible[1])
+
+        target_name = clean_player_name(target_text)
+
+    return {
+        "event_id": make_event_id(source_file, line_number, line),
+        "source_file": source_file,
+        "line_number": line_number,
+        "timestamp": timestamp,
+        "admin_name": admin_name,
+        "raw_admin_name": raw_admin_name,
+        "command": command,
+        "command_args": command_args,
+        "target_name": target_name,
+        "amount": amount,
+    }
+
+
+def already_processed_log_file(cursor, file_name):
+    cursor.execute("""
+        SELECT 1
+        FROM processed_log_files
+        WHERE file_name = ?
+    """, file_name)
+
+    return cursor.fetchone() is not None
+
+
+def mark_log_file_processed(cursor, file_name):
+    cursor.execute("""
+        INSERT INTO processed_log_files (file_name)
+        VALUES (?)
+    """, file_name)
+
+def import_server_logs(cursor):
+    logs_dir = Path(__file__).resolve().parent / "logs"
+
+    if not logs_dir.exists():
+        print(f"No logs folder found at {logs_dir}, skipping server log import.")
+        return
+
+    log_files = sorted(logs_dir.glob("log-all*.txt"))
+
+    if not log_files:
+        print(f"No log-all*.txt logs found in {logs_dir}, skipping server log import.")
+        return
+
+    chat_count = 0
+    admin_count = 0
+    skipped_files = 0
+
+    for log_file in log_files:
+        if already_processed_log_file(cursor, log_file.name):
+            skipped_files += 1
+            print(f"Skipping already processed log: {log_file.name}")
+            continue
+
+        print(f"Processing log file: {log_file.name}")
+
+        with log_file.open("r", encoding="utf-8", errors="replace") as f:
+            for line_number, line in enumerate(f, start=1):
+                chat = parse_chat_line(line, log_file.name, line_number)
+
+                if chat:
+                    cursor.execute("""
+                        IF NOT EXISTS (
+                            SELECT 1 FROM chat_messages WHERE event_id = ?
+                        )
+                        INSERT INTO chat_messages (
+                            event_id,
+                            source_file,
+                            line_number,
+                            timestamp,
+                            player_name,
+                            raw_player_name,
+                            message,
+                            is_dead
+                        )
+                        VALUES (
+                            ?,
+                            ?,
+                            ?,
+                            TRY_CONVERT(DATETIME2, ?),
+                            ?,
+                            ?,
+                            ?,
+                            ?
+                        )
+                    """, (
+                        chat["event_id"],
+                        chat["event_id"],
+                        chat["source_file"],
+                        chat["line_number"],
+                        chat["timestamp"],
+                        chat["player_name"],
+                        chat["raw_player_name"],
+                        chat["message"],
+                        chat["is_dead"],
+                    ))
+
+                    chat_count += 1
+                    continue
+
+                admin_action = parse_admin_action(line, log_file.name, line_number)
+
+                if admin_action:
+                    cursor.execute("""
+                        IF NOT EXISTS (
+                            SELECT 1 FROM admin_actions WHERE event_id = ?
+                        )
+                        INSERT INTO admin_actions (
+                            event_id,
+                            source_file,
+                            line_number,
+                            timestamp,
+                            admin_name,
+                            raw_admin_name,
+                            command,
+                            command_args,
+                            target_name,
+                            amount
+                        )
+                        VALUES (
+                            ?,
+                            ?,
+                            ?,
+                            TRY_CONVERT(DATETIME2, ?),
+                            ?,
+                            ?,
+                            ?,
+                            ?,
+                            ?,
+                            ?
+                        )
+                    """, (
+                        admin_action["event_id"],
+                        admin_action["event_id"],
+                        admin_action["source_file"],
+                        admin_action["line_number"],
+                        admin_action["timestamp"],
+                        admin_action["admin_name"],
+                        admin_action["raw_admin_name"],
+                        admin_action["command"],
+                        admin_action["command_args"],
+                        admin_action["target_name"],
+                        admin_action["amount"],
+                    ))
+
+                    admin_count += 1
+
+        mark_log_file_processed(cursor, log_file.name)
+
+    print("Server log import complete.")
+    print(f"Logs folder: {logs_dir}")
+    print(f"Processed log files: {len(log_files) - skipped_files}")
+    print(f"Skipped log files: {skipped_files}")
+    print(f"Stored chat messages: {chat_count}")
+    print(f"Stored admin actions: {admin_count}")
+
 if __name__ == "__main__":
     download_logs_from_sftp()
+
+    print("Testing Azure SQL connection...")
+    conn = connect_with_retry()
+    cursor = conn.cursor()
+
+    cursor.execute("SELECT @@VERSION")
+    row = cursor.fetchone()
+
+    print("Connected successfully!")
+    print(row[0][:200])
+
+    import_server_logs(cursor)
+
+    conn.commit()
+    cursor.close()
+    conn.close()
+
+    print("Downloaded logs and imported them into SQL.")
