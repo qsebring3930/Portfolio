@@ -339,16 +339,6 @@ def update_stats(cursor, item):
     VALUES (?)
     """, snapshot_id)
 
-CONTROL_CHARS_RE = re.compile(r"[\x00-\x08\x0b-\x1f\x7f]")
-MULTISPACE_RE = re.compile(r"\s+")
-TIMESTAMP_RE = re.compile(
-    r"^(?P<timestamp>\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}\.\d+ \+00:00)"
-)
-
-ISSUED_COMMAND_RE = re.compile(
-    r"plugin:CS2-SimpleAdmin .*? (?P<admin>.*?) issued command `(?P<command>[^`]+)`"
-)
-
 client = ApifyClient(os.environ["APIFY_TOKEN"])
 
 run_input = {
