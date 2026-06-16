@@ -331,8 +331,12 @@ def mark_log_file_processed(cursor, file_name):
         INSERT INTO processed_log_files (file_name)
         VALUES (?)
     """, file_name)
-
+  
 def delete_imported_logs(log_files):
+    if not log_files:
+        print("No imported log files to delete.")
+        return
+
     deleted = 0
 
     for log_file in log_files:
@@ -362,6 +366,7 @@ def import_server_logs(cursor):
     chat_count = 0
     admin_count = 0
     skipped_files = 0
+    processed_files_to_delete = []
 
     for log_file in log_files:
         if already_processed_log_file(cursor, log_file.name):
@@ -464,14 +469,15 @@ def import_server_logs(cursor):
 
         mark_log_file_processed(cursor, log_file.name)
         processed_files_to_delete.append(log_file)
-        return processed_files_to_delete
 
     print("Server log import complete.")
     print(f"Logs folder: {logs_dir}")
-    print(f"Processed log files: {len(log_files) - skipped_files}")
+    print(f"Processed log files: {len(processed_files_to_delete)}")
     print(f"Skipped log files: {skipped_files}")
     print(f"Stored chat messages: {chat_count}")
     print(f"Stored admin actions: {admin_count}")
+
+    return processed_files_to_delete
 
 def write_json(path, rows):
     with path.open("w", encoding="utf-8") as f:
