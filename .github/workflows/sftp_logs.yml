@@ -1,0 +1,42 @@
+name: Download server logs
+
+on:
+  schedule:
+    - cron: "0 8 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  download-logs:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install paramiko
+
+      - name: Download logs from SFTP
+        run: python script/download_logs.py
+        env:
+          SFTP_HOST: ${{ secrets.SFTP_HOST }}
+          SFTP_PORT: ${{ secrets.SFTP_PORT }}
+          SFTP_USERNAME: ${{ secrets.SFTP_USERNAME }}
+          SFTP_PASSWORD: ${{ secrets.SFTP_PASSWORD }}
+          SFTP_REMOTE_LOG_DIR: ${{ secrets.SFTP_REMOTE_LOG_DIR }}
+
+      - name: Commit downloaded logs
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add logs/
+          git diff --cached --quiet || git commit -m "Update server logs"
+          git push
