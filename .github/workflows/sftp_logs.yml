@@ -61,3 +61,20 @@ jobs:
 
           git pull --rebase origin master
           git push origin master
+
+      - name: Commit downloaded logs and JSON data
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+
+          git add script/logs/
+          git add assets/data/
+
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+            exit 0
+          fi
+
+          git commit -m "Update server logs and stats JSON"
+          git pull --rebase origin master
+          git push origin master
