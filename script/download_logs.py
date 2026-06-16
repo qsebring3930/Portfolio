@@ -478,6 +478,14 @@ def rows_to_dicts(cursor):
     columns = [c[0] for c in cursor.description]
     return [dict(zip(columns, row)) for row in cursor.fetchall()]
 
+def get_name_tokens(name):
+    name = clean_export_name(name).lower()
+    return [
+        token
+        for token in re.split(r"[^a-z0-9]+", name)
+        if token
+    ]
+
 def normalize_name_for_match(name):
     if not name:
         return ""
@@ -489,8 +497,11 @@ def normalize_name_for_match(name):
 
 
 def names_are_probably_same(a, b):
-    a_norm = normalize_name_for_match(a)
-    b_norm = normalize_name_for_match(b)
+    a_clean = clean_export_name(a)
+    b_clean = clean_export_name(b)
+
+    a_norm = normalize_name_for_match(a_clean)
+    b_norm = normalize_name_for_match(b_clean)
 
     if not a_norm or not b_norm:
         return False
@@ -501,19 +512,35 @@ def names_are_probably_same(a, b):
     shorter = min(a_norm, b_norm, key=len)
     longer = max(a_norm, b_norm, key=len)
 
-    # Handles:
+    longer_original = a_clean if len(a_norm) >= len(b_norm) else b_clean
+    longer_tokens = get_name_tokens(longer_original)
+
+    # Do NOT allow generic 1-2 character merges.
+    if len(shorter) < 3:
+        return False
+
+    # Good:
+    # cum -> cum kisses
+    # ben -> Princess Ben
+    # princess -> Princess Ben
+    if shorter in longer_tokens:
+        return True
+
+    # Good:
     # logic -> logickal
     # logi -> logickal
-    # princess -> princessben
-    # ben -> princessben
-    if len(shorter) >= 3 and shorter in longer:
+    # logick -> logickal
+    #
+    # Safer than "shorter in longer" because it only allows prefixes,
+    # not random internal matches.
+    if len(shorter) >= 4 and longer.startswith(shorter):
         return True
 
-    # Handles close misspellings.
-    ratio = SequenceMatcher(None, a_norm, b_norm).ratio()
-
-    if len(shorter) >= 5 and ratio >= 0.78:
-        return True
+    # Good for real misspellings, but only on longer names.
+    if len(shorter) >= 5:
+        ratio = SequenceMatcher(None, a_norm, b_norm).ratio()
+        if ratio >= 0.84:
+            return True
 
     return False
 
@@ -530,7 +557,7 @@ def consolidate_player_rows(rows, count_field, extra_sum_fields=None):
     groups = []
 
     for row in rows:
-        player_name = row.get("player_name")
+        player_name = clean_export_name(row.get("player_name"))
 
         if not player_name:
             continue
@@ -538,7 +565,9 @@ def consolidate_player_rows(rows, count_field, extra_sum_fields=None):
         matched_group = None
 
         for group in groups:
-            if any(names_are_probably_same(player_name, existing) for existing in group["aliases"]):
+            canonical = choose_best_name(group["aliases"])
+
+            if names_are_probably_same(player_name, canonical):
                 matched_group = group
                 break
 
@@ -563,8 +592,12 @@ def consolidate_player_rows(rows, count_field, extra_sum_fields=None):
 
     for group in groups:
         aliases = sorted(
-            {clean_export_name(name) for name in group["aliases"] if clean_export_name(name)},
-            key=lambda name: normalize_name_for_match(name)
+            {
+                clean_export_name(name)
+                for name in group["aliases"]
+                if clean_export_name(name)
+            },
+            key=lambda name: normalize_name_for_match(name),
         )
 
         output = {
