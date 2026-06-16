@@ -1,0 +1,418 @@
+2026-05-28 04:05:15.224 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_ban` with aliases: `css_ban`
+2026-05-28 04:05:15.231 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_addban` with aliases: `css_addban`
+2026-05-28 04:05:15.232 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_banip` with aliases: `css_banip`
+2026-05-28 04:05:15.232 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_unban` with aliases: `css_unban`
+2026-05-28 04:05:15.232 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_warn` with aliases: `css_warn`
+2026-05-28 04:05:15.232 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_unwarn` with aliases: `css_unwarn`
+2026-05-28 04:05:15.232 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_asay` with aliases: `css_asay`
+2026-05-28 04:05:15.232 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_cssay` with aliases: `css_cssay`
+2026-05-28 04:05:15.232 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_say` with aliases: `css_say`
+2026-05-28 04:05:15.232 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_psay` with aliases: `css_psay`
+2026-05-28 04:05:15.232 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_csay` with aliases: `css_csay`
+2026-05-28 04:05:15.232 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_hsay` with aliases: `css_hsay`
+2026-05-28 04:05:15.232 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_penalties` with aliases: `css_penalties, css_mypenalties, css_comms`
+2026-05-28 04:05:15.232 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_admin` with aliases: `css_admin`
+2026-05-28 04:05:15.232 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_adminhelp` with aliases: `css_adminhelp`
+2026-05-28 04:05:15.232 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_addadmin` with aliases: `css_addadmin`
+2026-05-28 04:05:15.232 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_deladmin` with aliases: `css_deladmin`
+2026-05-28 04:05:15.232 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_addgroup` with aliases: `css_addgroup`
+2026-05-28 04:05:15.232 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_delgroup` with aliases: `css_delgroup`
+2026-05-28 04:05:15.232 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_reloadadmins` with aliases: `css_reloadadmins`
+2026-05-28 04:05:15.232 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_reloadbans` with aliases: `css_reloadbans`
+2026-05-28 04:05:15.232 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_hide` with aliases: `css_hide, css_stealth`
+2026-05-28 04:05:15.232 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_hidecomms` with aliases: `css_hidecomms`
+2026-05-28 04:05:15.232 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_who` with aliases: `css_who`
+2026-05-28 04:05:15.232 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_disconnected` with aliases: `css_disconnected, css_last`
+2026-05-28 04:05:15.232 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_warns` with aliases: `css_warns`
+2026-05-28 04:05:15.232 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_players` with aliases: `css_players`
+2026-05-28 04:05:15.232 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_kick` with aliases: `css_kick`
+2026-05-28 04:05:15.232 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_map` with aliases: `css_map, css_changemap`
+2026-05-28 04:05:15.232 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_wsmap` with aliases: `css_wsmap, css_changewsmap, css_workshop`
+2026-05-28 04:05:15.232 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_cvar` with aliases: `css_cvar`
+2026-05-28 04:05:15.232 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_rcon` with aliases: `css_rcon`
+2026-05-28 04:05:15.232 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_rr` with aliases: `css_rr, css_rg, css_restart, css_restartgame`
+2026-05-28 04:05:15.232 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_gag` with aliases: `css_gag`
+2026-05-28 04:05:15.233 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_addgag` with aliases: `css_addgag`
+2026-05-28 04:05:15.233 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_ungag` with aliases: `css_ungag`
+2026-05-28 04:05:15.233 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_mute` with aliases: `css_mute`
+2026-05-28 04:05:15.233 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_addmute` with aliases: `css_addmute`
+2026-05-28 04:05:15.233 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_unmute` with aliases: `css_unmute`
+2026-05-28 04:05:15.233 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_silence` with aliases: `css_silence`
+2026-05-28 04:05:15.233 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_addsilence` with aliases: `css_addsilence`
+2026-05-28 04:05:15.233 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_unsilence` with aliases: `css_unsilence`
+2026-05-28 04:05:15.233 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_vote` with aliases: `css_vote`
+2026-05-28 04:05:15.233 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_noclip` with aliases: `css_noclip`
+2026-05-28 04:05:15.233 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_freeze` with aliases: `css_freeze`
+2026-05-28 04:05:15.233 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_unfreeze` with aliases: `css_unfreeze`
+2026-05-28 04:05:15.233 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_godmode` with aliases: `css_godmode`
+2026-05-28 04:05:15.233 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_slay` with aliases: `css_slay`
+2026-05-28 04:05:15.233 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_slap` with aliases: `css_slap`
+2026-05-28 04:05:15.233 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_give` with aliases: `css_give`
+2026-05-28 04:05:15.233 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_strip` with aliases: `css_strip`
+2026-05-28 04:05:15.233 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_hp` with aliases: `css_hp`
+2026-05-28 04:05:15.233 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_speed` with aliases: `css_speed`
+2026-05-28 04:05:15.233 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_gravity` with aliases: `css_gravity`
+2026-05-28 04:05:15.233 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_resize` with aliases: `css_resize, css_size`
+2026-05-28 04:05:15.233 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_money` with aliases: `css_money`
+2026-05-28 04:05:15.233 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_team` with aliases: `css_team`
+2026-05-28 04:05:15.233 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_rename` with aliases: `css_rename`
+2026-05-28 04:05:15.233 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_prename` with aliases: `css_prename`
+2026-05-28 04:05:15.233 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_respawn` with aliases: `css_respawn`
+2026-05-28 04:05:15.233 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_tp` with aliases: `css_tp, css_tpto, css_goto`
+2026-05-28 04:05:15.233 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_bring` with aliases: `css_bring, css_tphere`
+2026-05-28 04:05:15.233 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_pluginsmanager` with aliases: `css_pluginsmanager, css_pluginmanager`
+2026-05-28 04:05:15.233 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_adminvoice` with aliases: `css_adminvoice, css_listenall`
+2026-05-28 04:05:15.255 +00:00 [WARN] plugin:CS2-SimpleAdmin (RELEASE) Plugin is outdated! Check https://github.com/daffyyyy/CS2-SimpleAdmin
+2026-05-28 04:05:38.412 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Loaded server with ip 192.64.81.118
+2026-05-28 04:05:39.790 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Loaded admins!
+2026-05-28 04:05:43.431 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Loaded admins!
+2026-05-28 04:05:57.062 +00:00 [WARN] plugin:CS2-SimpleAdmin (RELEASE) Plugin is outdated! Check https://github.com/daffyyyy/CS2-SimpleAdmin
+2026-05-28 04:05:57.088 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_ban` with aliases: `css_ban`
+2026-05-28 04:05:57.089 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_addban` with aliases: `css_addban`
+2026-05-28 04:05:57.089 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_banip` with aliases: `css_banip`
+2026-05-28 04:05:57.089 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_unban` with aliases: `css_unban`
+2026-05-28 04:05:57.089 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_warn` with aliases: `css_warn`
+2026-05-28 04:05:57.089 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_unwarn` with aliases: `css_unwarn`
+2026-05-28 04:05:57.089 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_asay` with aliases: `css_asay`
+2026-05-28 04:05:57.089 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_cssay` with aliases: `css_cssay`
+2026-05-28 04:05:57.089 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_say` with aliases: `css_say`
+2026-05-28 04:05:57.089 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_psay` with aliases: `css_psay`
+2026-05-28 04:05:57.089 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_csay` with aliases: `css_csay`
+2026-05-28 04:05:57.089 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_hsay` with aliases: `css_hsay`
+2026-05-28 04:05:57.089 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_penalties` with aliases: `css_penalties, css_mypenalties, css_comms`
+2026-05-28 04:05:57.089 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_admin` with aliases: `css_admin`
+2026-05-28 04:05:57.089 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_adminhelp` with aliases: `css_adminhelp`
+2026-05-28 04:05:57.089 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_addadmin` with aliases: `css_addadmin`
+2026-05-28 04:05:57.089 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_deladmin` with aliases: `css_deladmin`
+2026-05-28 04:05:57.089 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_addgroup` with aliases: `css_addgroup`
+2026-05-28 04:05:57.089 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_delgroup` with aliases: `css_delgroup`
+2026-05-28 04:05:57.089 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_reloadadmins` with aliases: `css_reloadadmins`
+2026-05-28 04:05:57.089 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_reloadbans` with aliases: `css_reloadbans`
+2026-05-28 04:05:57.089 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_hide` with aliases: `css_hide, css_stealth`
+2026-05-28 04:05:57.089 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_hidecomms` with aliases: `css_hidecomms`
+2026-05-28 04:05:57.089 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_who` with aliases: `css_who`
+2026-05-28 04:05:57.089 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_disconnected` with aliases: `css_disconnected, css_last`
+2026-05-28 04:05:57.089 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_warns` with aliases: `css_warns`
+2026-05-28 04:05:57.089 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_players` with aliases: `css_players`
+2026-05-28 04:05:57.089 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_kick` with aliases: `css_kick`
+2026-05-28 04:05:57.089 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_map` with aliases: `css_map, css_changemap`
+2026-05-28 04:05:57.089 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_wsmap` with aliases: `css_wsmap, css_changewsmap, css_workshop`
+2026-05-28 04:05:57.090 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_cvar` with aliases: `css_cvar`
+2026-05-28 04:05:57.090 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_rcon` with aliases: `css_rcon`
+2026-05-28 04:05:57.090 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_rr` with aliases: `css_rr, css_rg, css_restart, css_restartgame`
+2026-05-28 04:05:57.090 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_gag` with aliases: `css_gag`
+2026-05-28 04:05:57.090 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_addgag` with aliases: `css_addgag`
+2026-05-28 04:05:57.090 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_ungag` with aliases: `css_ungag`
+2026-05-28 04:05:57.090 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_mute` with aliases: `css_mute`
+2026-05-28 04:05:57.090 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_addmute` with aliases: `css_addmute`
+2026-05-28 04:05:57.090 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_unmute` with aliases: `css_unmute`
+2026-05-28 04:05:57.090 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_silence` with aliases: `css_silence`
+2026-05-28 04:05:57.090 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_addsilence` with aliases: `css_addsilence`
+2026-05-28 04:05:57.090 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_unsilence` with aliases: `css_unsilence`
+2026-05-28 04:05:57.090 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_vote` with aliases: `css_vote`
+2026-05-28 04:05:57.090 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_noclip` with aliases: `css_noclip`
+2026-05-28 04:05:57.090 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_freeze` with aliases: `css_freeze`
+2026-05-28 04:05:57.090 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_unfreeze` with aliases: `css_unfreeze`
+2026-05-28 04:05:57.090 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_godmode` with aliases: `css_godmode`
+2026-05-28 04:05:57.090 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_slay` with aliases: `css_slay`
+2026-05-28 04:05:57.090 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_slap` with aliases: `css_slap`
+2026-05-28 04:05:57.090 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_give` with aliases: `css_give`
+2026-05-28 04:05:57.090 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_strip` with aliases: `css_strip`
+2026-05-28 04:05:57.090 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_hp` with aliases: `css_hp`
+2026-05-28 04:05:57.090 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_speed` with aliases: `css_speed`
+2026-05-28 04:05:57.090 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_gravity` with aliases: `css_gravity`
+2026-05-28 04:05:57.090 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_resize` with aliases: `css_resize, css_size`
+2026-05-28 04:05:57.090 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_money` with aliases: `css_money`
+2026-05-28 04:05:57.090 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_team` with aliases: `css_team`
+2026-05-28 04:05:57.090 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_rename` with aliases: `css_rename`
+2026-05-28 04:05:57.090 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_prename` with aliases: `css_prename`
+2026-05-28 04:05:57.090 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_respawn` with aliases: `css_respawn`
+2026-05-28 04:05:57.090 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_tp` with aliases: `css_tp, css_tpto, css_goto`
+2026-05-28 04:05:57.090 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_bring` with aliases: `css_bring, css_tphere`
+2026-05-28 04:05:57.090 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_pluginsmanager` with aliases: `css_pluginsmanager, css_pluginmanager`
+2026-05-28 04:05:57.090 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_adminvoice` with aliases: `css_adminvoice, css_listenall`
+2026-05-28 04:06:01.428 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Loaded server with ip 192.64.81.118
+2026-05-28 04:06:02.802 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Loaded admins!
+2026-05-28 04:06:06.458 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Loaded admins!
+2026-05-28 07:48:53.375 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) TwistedSquiddy - [World Eater | Lvl. 74] issued command `css_slay @all` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 08:21:32.505 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) TwistedSquiddy - [Night Elf | Lvl. 107] issued command `css_speed zick 3` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 08:24:23.624 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) TwistedSquiddy - [Night Elf | Lvl. 107] issued command `css_respawn twist` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 08:45:04.060 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) TwistedSquiddy issued command `css_slay sham` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 08:53:55.981 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) TwistedSquiddy - [Night Elf | Lvl. 108] issued command `css_respawn twist` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 08:54:11.433 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) TwistedSquiddy - [Night Elf | Lvl. 108] issued command `css_slay shark` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 09:11:07.286 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) TwistedSquiddy - [Night Elf | Lvl. 108] issued command `css_respawn zic` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 09:11:10.720 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) TwistedSquiddy - [Night Elf | Lvl. 108] issued command `css_slay zic` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 09:15:01.183 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) TwistedSquiddy - [Night Elf | Lvl. 108] issued command `css_respawn twist` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 09:17:56.320 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) TwistedSquiddy - [Night Elf | Lvl. 108] issued command `css_slay twist` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 09:25:13.331 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) TwistedSquiddy - [Night Elf | Lvl. 108] issued command `css_slay sol` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 09:34:29.416 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) TwistedSquiddy - [Night Elf | Lvl. 108] issued command `css_slay sham` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 09:45:11.994 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) TwistedSquiddy - [Night Elf | Lvl. 108] issued command `css_speed luna 2.0` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 09:50:51.205 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) TwistedSquiddy - [Night Elf | Lvl. 108] issued command `css_slay @all` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 09:59:24.487 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) TwistedSquiddy - [Geode the Raging Ravine | Lvl. 4] issued command `css_strip sold` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 09:59:38.788 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) TwistedSquiddy - [Geode the Raging Ravine | Lvl. 4] issued command `css_give sold knife` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 09:59:45.377 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) TwistedSquiddy - [Geode the Raging Ravine | Lvl. 4] issued command `css_give sold weapon_c4` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 10:01:34.610 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) TwistedSquiddy - [Geode the Raging Ravine | Lvl. 4] issued command `css_slay zic` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 10:17:37.901 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) TwistedSquiddy - [Night Elf | Lvl. 108] issued command `css_respawn twist` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 10:17:41.758 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) TwistedSquiddy - [Night Elf | Lvl. 108] issued command `css_bring zic` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 10:20:20.976 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) TwistedSquiddy - [Night Elf | Lvl. 108] issued command `css_respawn twist` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 10:20:25.207 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) TwistedSquiddy - [Night Elf | Lvl. 108] issued command `css_bring zic` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 10:20:33.960 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) TwistedSquiddy - [Night Elf | Lvl. 108] issued command `css_respawn twist` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 10:20:42.837 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) TwistedSquiddy - [Night Elf | Lvl. 108] issued command `css_respawn twist` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 10:34:27.082 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) TwistedSquiddy issued command `css_respawn twist` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 10:41:07.879 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) TwistedSquiddy - [Night Elf | Lvl. 108] issued command `css_slay @t` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 10:42:26.572 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) TwistedSquiddy - [Night Elf | Lvl. 108] issued command `css_slay @t` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 11:01:52.557 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) TwistedSquiddy - [Night Elf | Lvl. 108] issued command `css_slay rick` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 11:07:36.508 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) TwistedSquiddy - [Night Elf | Lvl. 108] issued command `css_respawn twist` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 13:47:34.189 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Hexette - [Hexette | Lvl. 80] issued command `css_slap ObsidianStorm - [Geode the Raging Ravine | Lvl. 55] 0` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 15:19:33.831 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Logick - [Voidwalker | Lvl. 77] issued command `css_slay @all` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 15:28:27.607 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Logick - [Voidwalker | Lvl. 78] issued command `css_say butt taker - No` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 15:38:44.181 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Logick - [Voidwalker | Lvl. 78] issued command `css_slap cum 18` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 15:39:41.189 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Logick - [Voidwalker | Lvl. 78] issued command `css_respawn @all` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 15:39:47.495 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Logick - [Voidwalker | Lvl. 78] issued command `css_respawn @me` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 15:50:34.101 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Logick - [Voidwalker | Lvl. 78] issued command `css_respawn @me` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 15:57:35.207 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Logick - [Voidwalker | Lvl. 78] issued command `css_slay Gen` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 15:57:46.646 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Logick - [Voidwalker | Lvl. 78] issued command `css_respawn gen` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 16:04:06.331 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Logick issued command `css_respawn @me` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 16:04:14.970 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Logick - [Voidwalker | Lvl. 78] issued command `css_respawn @me` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 16:04:34.113 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Console issued command `css_slay logic` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 16:04:47.330 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Logick - [Voidwalker | Lvl. 78] issued command `css_say  BASTARD` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 16:05:15.095 +00:00 [WARN] plugin:CS2-SimpleAdmin (RELEASE) Plugin is outdated! Check https://github.com/daffyyyy/CS2-SimpleAdmin
+2026-05-28 16:05:15.105 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_ban` with aliases: `css_ban`
+2026-05-28 16:05:15.106 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_addban` with aliases: `css_addban`
+2026-05-28 16:05:15.106 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_banip` with aliases: `css_banip`
+2026-05-28 16:05:15.106 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_unban` with aliases: `css_unban`
+2026-05-28 16:05:15.106 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_warn` with aliases: `css_warn`
+2026-05-28 16:05:15.106 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_unwarn` with aliases: `css_unwarn`
+2026-05-28 16:05:15.106 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_asay` with aliases: `css_asay`
+2026-05-28 16:05:15.106 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_cssay` with aliases: `css_cssay`
+2026-05-28 16:05:15.106 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_say` with aliases: `css_say`
+2026-05-28 16:05:15.106 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_psay` with aliases: `css_psay`
+2026-05-28 16:05:15.106 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_csay` with aliases: `css_csay`
+2026-05-28 16:05:15.106 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_hsay` with aliases: `css_hsay`
+2026-05-28 16:05:15.106 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_penalties` with aliases: `css_penalties, css_mypenalties, css_comms`
+2026-05-28 16:05:15.106 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_admin` with aliases: `css_admin`
+2026-05-28 16:05:15.106 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_adminhelp` with aliases: `css_adminhelp`
+2026-05-28 16:05:15.106 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_addadmin` with aliases: `css_addadmin`
+2026-05-28 16:05:15.106 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_deladmin` with aliases: `css_deladmin`
+2026-05-28 16:05:15.106 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_addgroup` with aliases: `css_addgroup`
+2026-05-28 16:05:15.106 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_delgroup` with aliases: `css_delgroup`
+2026-05-28 16:05:15.106 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_reloadadmins` with aliases: `css_reloadadmins`
+2026-05-28 16:05:15.106 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_reloadbans` with aliases: `css_reloadbans`
+2026-05-28 16:05:15.106 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_hide` with aliases: `css_hide, css_stealth`
+2026-05-28 16:05:15.106 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_hidecomms` with aliases: `css_hidecomms`
+2026-05-28 16:05:15.106 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_who` with aliases: `css_who`
+2026-05-28 16:05:15.107 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_disconnected` with aliases: `css_disconnected, css_last`
+2026-05-28 16:05:15.107 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_warns` with aliases: `css_warns`
+2026-05-28 16:05:15.107 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_players` with aliases: `css_players`
+2026-05-28 16:05:15.107 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_kick` with aliases: `css_kick`
+2026-05-28 16:05:15.107 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_map` with aliases: `css_map, css_changemap`
+2026-05-28 16:05:15.107 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_wsmap` with aliases: `css_wsmap, css_changewsmap, css_workshop`
+2026-05-28 16:05:15.107 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_cvar` with aliases: `css_cvar`
+2026-05-28 16:05:15.107 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_rcon` with aliases: `css_rcon`
+2026-05-28 16:05:15.107 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_rr` with aliases: `css_rr, css_rg, css_restart, css_restartgame`
+2026-05-28 16:05:15.107 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_gag` with aliases: `css_gag`
+2026-05-28 16:05:15.107 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_addgag` with aliases: `css_addgag`
+2026-05-28 16:05:15.107 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_ungag` with aliases: `css_ungag`
+2026-05-28 16:05:15.107 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_mute` with aliases: `css_mute`
+2026-05-28 16:05:15.107 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_addmute` with aliases: `css_addmute`
+2026-05-28 16:05:15.107 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_unmute` with aliases: `css_unmute`
+2026-05-28 16:05:15.107 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_silence` with aliases: `css_silence`
+2026-05-28 16:05:15.107 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_addsilence` with aliases: `css_addsilence`
+2026-05-28 16:05:15.107 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_unsilence` with aliases: `css_unsilence`
+2026-05-28 16:05:15.108 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_vote` with aliases: `css_vote`
+2026-05-28 16:05:15.108 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_noclip` with aliases: `css_noclip`
+2026-05-28 16:05:15.108 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_freeze` with aliases: `css_freeze`
+2026-05-28 16:05:15.108 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_unfreeze` with aliases: `css_unfreeze`
+2026-05-28 16:05:15.108 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_godmode` with aliases: `css_godmode`
+2026-05-28 16:05:15.108 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_slay` with aliases: `css_slay`
+2026-05-28 16:05:15.108 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_slap` with aliases: `css_slap`
+2026-05-28 16:05:15.108 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_give` with aliases: `css_give`
+2026-05-28 16:05:15.108 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_strip` with aliases: `css_strip`
+2026-05-28 16:05:15.108 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_hp` with aliases: `css_hp`
+2026-05-28 16:05:15.108 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_speed` with aliases: `css_speed`
+2026-05-28 16:05:15.108 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_gravity` with aliases: `css_gravity`
+2026-05-28 16:05:15.108 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_resize` with aliases: `css_resize, css_size`
+2026-05-28 16:05:15.108 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_money` with aliases: `css_money`
+2026-05-28 16:05:15.108 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_team` with aliases: `css_team`
+2026-05-28 16:05:15.108 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_rename` with aliases: `css_rename`
+2026-05-28 16:05:15.108 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_prename` with aliases: `css_prename`
+2026-05-28 16:05:15.108 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_respawn` with aliases: `css_respawn`
+2026-05-28 16:05:15.108 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_tp` with aliases: `css_tp, css_tpto, css_goto`
+2026-05-28 16:05:15.108 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_bring` with aliases: `css_bring, css_tphere`
+2026-05-28 16:05:15.108 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_pluginsmanager` with aliases: `css_pluginsmanager, css_pluginmanager`
+2026-05-28 16:05:15.108 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_adminvoice` with aliases: `css_adminvoice, css_listenall`
+2026-05-28 16:05:22.727 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Loaded server with ip 192.64.81.118
+2026-05-28 16:05:24.137 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Loaded admins!
+2026-05-28 16:05:27.762 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Loaded admins!
+2026-05-28 16:06:06.158 +00:00 [WARN] plugin:CS2-SimpleAdmin (RELEASE) Plugin is outdated! Check https://github.com/daffyyyy/CS2-SimpleAdmin
+2026-05-28 16:06:06.181 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_ban` with aliases: `css_ban`
+2026-05-28 16:06:06.181 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_addban` with aliases: `css_addban`
+2026-05-28 16:06:06.181 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_banip` with aliases: `css_banip`
+2026-05-28 16:06:06.181 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_unban` with aliases: `css_unban`
+2026-05-28 16:06:06.181 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_warn` with aliases: `css_warn`
+2026-05-28 16:06:06.181 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_unwarn` with aliases: `css_unwarn`
+2026-05-28 16:06:06.181 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_asay` with aliases: `css_asay`
+2026-05-28 16:06:06.182 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_cssay` with aliases: `css_cssay`
+2026-05-28 16:06:06.182 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_say` with aliases: `css_say`
+2026-05-28 16:06:06.182 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_psay` with aliases: `css_psay`
+2026-05-28 16:06:06.182 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_csay` with aliases: `css_csay`
+2026-05-28 16:06:06.182 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_hsay` with aliases: `css_hsay`
+2026-05-28 16:06:06.182 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_penalties` with aliases: `css_penalties, css_mypenalties, css_comms`
+2026-05-28 16:06:06.182 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_admin` with aliases: `css_admin`
+2026-05-28 16:06:06.182 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_adminhelp` with aliases: `css_adminhelp`
+2026-05-28 16:06:06.182 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_addadmin` with aliases: `css_addadmin`
+2026-05-28 16:06:06.182 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_deladmin` with aliases: `css_deladmin`
+2026-05-28 16:06:06.182 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_addgroup` with aliases: `css_addgroup`
+2026-05-28 16:06:06.182 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_delgroup` with aliases: `css_delgroup`
+2026-05-28 16:06:06.182 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_reloadadmins` with aliases: `css_reloadadmins`
+2026-05-28 16:06:06.182 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_reloadbans` with aliases: `css_reloadbans`
+2026-05-28 16:06:06.182 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_hide` with aliases: `css_hide, css_stealth`
+2026-05-28 16:06:06.182 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_hidecomms` with aliases: `css_hidecomms`
+2026-05-28 16:06:06.182 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_who` with aliases: `css_who`
+2026-05-28 16:06:06.182 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_disconnected` with aliases: `css_disconnected, css_last`
+2026-05-28 16:06:06.182 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_warns` with aliases: `css_warns`
+2026-05-28 16:06:06.182 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_players` with aliases: `css_players`
+2026-05-28 16:06:06.182 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_kick` with aliases: `css_kick`
+2026-05-28 16:06:06.182 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_map` with aliases: `css_map, css_changemap`
+2026-05-28 16:06:06.182 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_wsmap` with aliases: `css_wsmap, css_changewsmap, css_workshop`
+2026-05-28 16:06:06.182 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_cvar` with aliases: `css_cvar`
+2026-05-28 16:06:06.182 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_rcon` with aliases: `css_rcon`
+2026-05-28 16:06:06.182 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_rr` with aliases: `css_rr, css_rg, css_restart, css_restartgame`
+2026-05-28 16:06:06.182 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_gag` with aliases: `css_gag`
+2026-05-28 16:06:06.182 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_addgag` with aliases: `css_addgag`
+2026-05-28 16:06:06.182 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_ungag` with aliases: `css_ungag`
+2026-05-28 16:06:06.182 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_mute` with aliases: `css_mute`
+2026-05-28 16:06:06.182 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_addmute` with aliases: `css_addmute`
+2026-05-28 16:06:06.182 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_unmute` with aliases: `css_unmute`
+2026-05-28 16:06:06.182 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_silence` with aliases: `css_silence`
+2026-05-28 16:06:06.182 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_addsilence` with aliases: `css_addsilence`
+2026-05-28 16:06:06.182 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_unsilence` with aliases: `css_unsilence`
+2026-05-28 16:06:06.182 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_vote` with aliases: `css_vote`
+2026-05-28 16:06:06.182 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_noclip` with aliases: `css_noclip`
+2026-05-28 16:06:06.183 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_freeze` with aliases: `css_freeze`
+2026-05-28 16:06:06.183 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_unfreeze` with aliases: `css_unfreeze`
+2026-05-28 16:06:06.183 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_godmode` with aliases: `css_godmode`
+2026-05-28 16:06:06.183 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_slay` with aliases: `css_slay`
+2026-05-28 16:06:06.183 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_slap` with aliases: `css_slap`
+2026-05-28 16:06:06.183 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_give` with aliases: `css_give`
+2026-05-28 16:06:06.183 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_strip` with aliases: `css_strip`
+2026-05-28 16:06:06.183 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_hp` with aliases: `css_hp`
+2026-05-28 16:06:06.183 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_speed` with aliases: `css_speed`
+2026-05-28 16:06:06.183 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_gravity` with aliases: `css_gravity`
+2026-05-28 16:06:06.183 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_resize` with aliases: `css_resize, css_size`
+2026-05-28 16:06:06.183 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_money` with aliases: `css_money`
+2026-05-28 16:06:06.183 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_team` with aliases: `css_team`
+2026-05-28 16:06:06.183 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_rename` with aliases: `css_rename`
+2026-05-28 16:06:06.183 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_prename` with aliases: `css_prename`
+2026-05-28 16:06:06.183 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_respawn` with aliases: `css_respawn`
+2026-05-28 16:06:06.183 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_tp` with aliases: `css_tp, css_tpto, css_goto`
+2026-05-28 16:06:06.183 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_bring` with aliases: `css_bring, css_tphere`
+2026-05-28 16:06:06.183 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_pluginsmanager` with aliases: `css_pluginsmanager, css_pluginmanager`
+2026-05-28 16:06:06.183 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Registering command: `css_adminvoice` with aliases: `css_adminvoice, css_listenall`
+2026-05-28 16:06:10.480 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Loaded server with ip 192.64.81.118
+2026-05-28 16:06:11.920 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Loaded admins!
+2026-05-28 16:06:15.543 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Loaded admins!
+2026-05-28 16:09:57.071 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Lucky Prinny Overlord - [Monk (D&D) | Lvl. 0] issued command `css_respawn argy` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 16:10:10.013 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Logick - [Voidwalker | Lvl. 78] issued command `css_slay argy` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 16:22:31.866 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Lucky Prinny Overlord - [Monk (D&D) | Lvl. 4] issued command `css_slay logic` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 16:22:42.467 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Logick - [Voidwalker | Lvl. 78] issued command `css_respawn @me` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 16:22:55.135 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Logick - [Voidwalker | Lvl. 78] issued command `css_respawn @me` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 16:22:59.428 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Lucky Prinny Overlord - [Monk (D&D) | Lvl. 4] issued command `css_slay logic` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 16:30:57.029 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Lucky Prinny Overlord - [Monk (D&D) | Lvl. 7] issued command `css_slay logic` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 16:42:29.979 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Lucky Prinny Overlord - [Monk (D&D) | Lvl. 7] issued command `css_slap logic` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 16:42:38.149 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Lucky Prinny Overlord - [Monk (D&D) | Lvl. 7] issued command `CSs_slap logic` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 16:42:39.210 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Lucky Prinny Overlord - [Monk (D&D) | Lvl. 7] issued command `CSs_slap logic` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 16:42:39.398 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Lucky Prinny Overlord - [Monk (D&D) | Lvl. 7] issued command `CSs_slap logic` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 16:42:39.570 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Lucky Prinny Overlord - [Monk (D&D) | Lvl. 7] issued command `CSs_slap logic` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 16:42:39.727 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Lucky Prinny Overlord - [Monk (D&D) | Lvl. 7] issued command `CSs_slap logic` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 16:42:39.882 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Lucky Prinny Overlord - [Monk (D&D) | Lvl. 7] issued command `CSs_slap logic` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 16:42:40.070 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Lucky Prinny Overlord - [Monk (D&D) | Lvl. 7] issued command `CSs_slap logic` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 16:42:40.226 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Lucky Prinny Overlord - [Monk (D&D) | Lvl. 7] issued command `CSs_slap logic` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 16:42:40.398 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Lucky Prinny Overlord - [Monk (D&D) | Lvl. 7] issued command `CSs_slap logic` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 16:42:40.554 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Lucky Prinny Overlord - [Monk (D&D) | Lvl. 7] issued command `CSs_slap logic` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 16:42:40.726 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Lucky Prinny Overlord - [Monk (D&D) | Lvl. 7] issued command `CSs_slap logic` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 16:42:40.898 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Lucky Prinny Overlord - [Monk (D&D) | Lvl. 7] issued command `CSs_slap logic` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 16:42:42.273 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Lucky Prinny Overlord - [Monk (D&D) | Lvl. 7] issued command `CSs_slap logic` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 16:42:44.226 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Lucky Prinny Overlord - [Monk (D&D) | Lvl. 7] issued command `CSs_slap logic 1` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 16:42:44.883 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Lucky Prinny Overlord - [Monk (D&D) | Lvl. 7] issued command `CSs_slap logic 1` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 16:42:45.085 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Lucky Prinny Overlord - [Monk (D&D) | Lvl. 7] issued command `CSs_slap logic 1` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 16:42:45.257 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Lucky Prinny Overlord - [Monk (D&D) | Lvl. 7] issued command `CSs_slap logic 1` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 16:42:45.429 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Lucky Prinny Overlord - [Monk (D&D) | Lvl. 7] issued command `CSs_slap logic 1` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 16:42:45.585 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Lucky Prinny Overlord - [Monk (D&D) | Lvl. 7] issued command `CSs_slap logic 1` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 16:42:45.773 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Lucky Prinny Overlord - [Monk (D&D) | Lvl. 7] issued command `CSs_slap logic 1` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 16:42:45.945 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Lucky Prinny Overlord - [Monk (D&D) | Lvl. 7] issued command `CSs_slap logic 1` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 16:42:46.117 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Lucky Prinny Overlord - [Monk (D&D) | Lvl. 7] issued command `CSs_slap logic 1` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 16:42:46.257 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Lucky Prinny Overlord - [Monk (D&D) | Lvl. 7] issued command `CSs_slap logic 1` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 16:42:46.414 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Lucky Prinny Overlord - [Monk (D&D) | Lvl. 7] issued command `CSs_slap logic 1` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 16:42:46.616 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Lucky Prinny Overlord - [Monk (D&D) | Lvl. 7] issued command `CSs_slap logic 1` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 16:42:46.773 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Lucky Prinny Overlord - [Monk (D&D) | Lvl. 7] issued command `CSs_slap logic 1` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 16:42:46.961 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Lucky Prinny Overlord - [Monk (D&D) | Lvl. 7] issued command `CSs_slap logic 1` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 16:42:47.133 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Lucky Prinny Overlord - [Monk (D&D) | Lvl. 7] issued command `CSs_slap logic 1` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 16:42:47.320 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Lucky Prinny Overlord - [Monk (D&D) | Lvl. 7] issued command `CSs_slap logic 1` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 16:42:47.492 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Lucky Prinny Overlord - [Monk (D&D) | Lvl. 7] issued command `CSs_slap logic 1` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 16:42:47.679 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Lucky Prinny Overlord - [Monk (D&D) | Lvl. 7] issued command `CSs_slap logic 1` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 16:42:47.851 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Lucky Prinny Overlord - [Monk (D&D) | Lvl. 7] issued command `CSs_slap logic 1` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 16:42:48.039 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Lucky Prinny Overlord - [Monk (D&D) | Lvl. 7] issued command `CSs_slap logic 1` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 16:42:48.211 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Lucky Prinny Overlord - [Monk (D&D) | Lvl. 7] issued command `CSs_slap logic 1` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 16:42:48.398 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Lucky Prinny Overlord - [Monk (D&D) | Lvl. 7] issued command `CSs_slap logic 1` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 16:42:48.601 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Lucky Prinny Overlord - [Monk (D&D) | Lvl. 7] issued command `CSs_slap logic 1` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 16:42:48.773 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Lucky Prinny Overlord - [Monk (D&D) | Lvl. 7] issued command `CSs_slap logic 1` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 16:42:48.929 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Lucky Prinny Overlord - [Monk (D&D) | Lvl. 7] issued command `CSs_slap logic 1` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 16:42:49.133 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Lucky Prinny Overlord - [Monk (D&D) | Lvl. 7] issued command `CSs_slap logic 1` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 16:42:49.304 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Lucky Prinny Overlord - [Monk (D&D) | Lvl. 7] issued command `CSs_slap logic 1` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 16:42:49.492 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Lucky Prinny Overlord - [Monk (D&D) | Lvl. 7] issued command `CSs_slap logic 1` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 16:42:49.664 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Lucky Prinny Overlord - [Monk (D&D) | Lvl. 7] issued command `CSs_slap logic 1` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 16:42:49.883 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Lucky Prinny Overlord - [Monk (D&D) | Lvl. 7] issued command `CSs_slap logic 1` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 16:42:50.054 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Lucky Prinny Overlord - [Monk (D&D) | Lvl. 7] issued command `CSs_slap logic 1` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 16:42:50.258 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Lucky Prinny Overlord - [Monk (D&D) | Lvl. 7] issued command `CSs_slap logic 1` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 16:42:50.445 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Lucky Prinny Overlord - [Monk (D&D) | Lvl. 7] issued command `CSs_slap logic 1` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 16:42:50.664 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Lucky Prinny Overlord - [Monk (D&D) | Lvl. 7] issued command `CSs_slap logic 1` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 16:42:50.867 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Lucky Prinny Overlord - [Monk (D&D) | Lvl. 7] issued command `CSs_slap logic 1` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 16:42:51.071 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Lucky Prinny Overlord - [Monk (D&D) | Lvl. 7] issued command `CSs_slap logic 1` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 16:42:51.273 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Lucky Prinny Overlord - [Monk (D&D) | Lvl. 7] issued command `CSs_slap logic 1` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 16:42:51.460 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Lucky Prinny Overlord - [Monk (D&D) | Lvl. 7] issued command `CSs_slap logic 1` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 16:42:51.632 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Lucky Prinny Overlord - [Monk (D&D) | Lvl. 7] issued command `CSs_slap logic 1` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 16:42:51.805 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Lucky Prinny Overlord - [Monk (D&D) | Lvl. 7] issued command `CSs_slap logic 1` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 16:42:52.007 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Lucky Prinny Overlord - [Monk (D&D) | Lvl. 7] issued command `CSs_slap logic 1` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 16:42:54.215 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Lucky Prinny Overlord - [Monk (D&D) | Lvl. 7] issued command `CSs_slap logic 1` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 16:43:53.807 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Logick - [Logickal | Lvl. 58] issued command `css_god Logick - [Logickal | Lvl. 58]` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 16:43:58.384 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Lucky Prinny Overlord - [Monk (D&D) | Lvl. 8] issued command `CSs_slap logic 1` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 16:44:00.009 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Lucky Prinny Overlord - [Monk (D&D) | Lvl. 8] issued command `CSs_slap logic 1` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 16:44:01.399 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Lucky Prinny Overlord - [Monk (D&D) | Lvl. 8] issued command `CSs_slap logic 10` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 16:44:02.649 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Lucky Prinny Overlord - [Monk (D&D) | Lvl. 8] issued command `CSs_slap logic 10` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 16:44:03.353 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Lucky Prinny Overlord - [Monk (D&D) | Lvl. 8] issued command `CSs_slap logic 10` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 16:44:03.681 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Lucky Prinny Overlord - [Monk (D&D) | Lvl. 8] issued command `CSs_slap logic 10` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 16:44:03.978 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Lucky Prinny Overlord - [Monk (D&D) | Lvl. 8] issued command `CSs_slap logic 10` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 16:44:04.274 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Lucky Prinny Overlord - [Monk (D&D) | Lvl. 8] issued command `CSs_slap logic 10` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 16:44:04.602 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Lucky Prinny Overlord - [Monk (D&D) | Lvl. 8] issued command `CSs_slap logic 10` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 16:44:04.853 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Lucky Prinny Overlord - [Monk (D&D) | Lvl. 8] issued command `CSs_slap logic 10` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 16:44:05.103 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Lucky Prinny Overlord - [Monk (D&D) | Lvl. 8] issued command `CSs_slap logic 10` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 16:44:05.353 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Lucky Prinny Overlord - [Monk (D&D) | Lvl. 8] issued command `CSs_slap logic 10` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 16:44:05.665 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Lucky Prinny Overlord - [Monk (D&D) | Lvl. 8] issued command `CSs_slap logic 10` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 16:44:05.978 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Lucky Prinny Overlord - [Monk (D&D) | Lvl. 8] issued command `CSs_slap logic 10` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 16:44:06.290 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Lucky Prinny Overlord - [Monk (D&D) | Lvl. 8] issued command `CSs_slap logic 10` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 16:44:09.665 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Lucky Prinny Overlord - [Monk (D&D) | Lvl. 8] issued command `CSs_slap logic 80` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 16:44:12.884 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Lucky Prinny Overlord - [Monk (D&D) | Lvl. 8] issued command `CSs_slap logic 99` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 16:44:19.735 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Lucky Prinny Overlord - [Monk (D&D) | Lvl. 8] issued command `CSs_slap logic 1` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 16:44:25.779 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Logick - [Logickal | Lvl. 58] issued command `css_respawn lucky` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 16:44:28.323 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Logick - [Logickal | Lvl. 58] issued command `css_slay lucky` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 16:47:10.847 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Lucky Prinny Overlord - [Monk (D&D) | Lvl. 8] issued command `css_slap argy 99` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 16:51:51.781 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Hexette - [Hexette | Lvl. 80] issued command `css_slay awful` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 16:51:58.594 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Hexette - [Hexette | Lvl. 80] issued command `css_respawn awful` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 16:52:37.046 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) <3 Awful Aim :D - [Hexette | Lvl. 17] issued command `CSs_slay awful` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 16:52:42.454 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) <3 Awful Aim :D - [Deathbringer Saurfang | Lvl. 6] issued command `CSs_respawn awful` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 16:52:44.142 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Hexette - [Hexette | Lvl. 80] issued command `css_respawn hex` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 16:52:56.606 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Hexette - [Hexette | Lvl. 80] issued command `css_slay cum kisses` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 16:52:58.096 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Lucky Prinny Overlord - [Monk (D&D) | Lvl. 8] issued command `css_respawn cum` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 16:52:59.843 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Lucky Prinny Overlord - [Monk (D&D) | Lvl. 8] issued command `css_slay cum` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 16:52:59.862 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Hexette - [Hexette | Lvl. 80] issued command `css_respawn cum` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 16:53:01.436 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Hexette - [Hexette | Lvl. 80] issued command `css_slay cum` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 16:53:06.096 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Hexette - [Hexette | Lvl. 80] issued command `css_respawn cum` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 16:53:06.427 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Logick - [Logickal | Lvl. 58] issued command `css_respawn @all` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 16:53:07.163 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Hexette - [Hexette | Lvl. 80] issued command `css_slay cum` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 16:53:12.559 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Lucky Prinny Overlord - [Monk (D&D) | Lvl. 8] issued command `css_slay @all` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 16:53:13.768 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Hexette - [Hexette | Lvl. 80] issued command `css_slay @all` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 16:53:43.923 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Lucky Prinny Overlord - [Monk (D&D) | Lvl. 9] issued command `css_kick cum` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 16:56:59.011 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Lucky Prinny Overlord - [Monk (D&D) | Lvl. 9] issued command `css_slap logic 25` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 19:35:47.768 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Hexette - [Hexette | Lvl. 80] issued command `css_mute bukkake 10080` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
+2026-05-28 21:11:21.000 +00:00 [INFO] plugin:CS2-SimpleAdmin (RELEASE) Console issued command `css_addban 76561197983420414 "Discrimination and living in a fantasy"` on server `War3CS2 | Warcraft Mod | https://war3cs2.com | 340+ races`
