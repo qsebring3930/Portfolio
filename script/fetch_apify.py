@@ -6,62 +6,6 @@ from pathlib import Path
 import time
 import json
 import hashlib
-import paramiko
-
-def download_logs_from_sftp():
-    local_logs_dir = Path(__file__).resolve().parent.parent / "logs"
-    local_logs_dir.mkdir(parents=True, exist_ok=True)
-
-    host = os.environ["SFTP_HOST"]
-    port = int(os.environ.get("SFTP_PORT", "22"))
-    username = os.environ["SFTP_USERNAME"]
-    password = os.environ["SFTP_PASSWORD"]
-    remote_log_dir = os.environ["SFTP_REMOTE_LOG_DIR"]
-
-    print(f"Connecting to SFTP: {host}:{port}")
-
-    transport = paramiko.Transport((host, port))
-    transport.connect(username=username, password=password)
-
-    sftp = paramiko.SFTPClient.from_transport(transport)
-
-    try:
-        print(f"Reading remote log folder: {remote_log_dir}")
-        remote_files = sftp.listdir_attr(remote_log_dir)
-
-        downloaded = 0
-        skipped = 0
-
-        for remote_file in remote_files:
-            file_name = remote_file.filename
-
-            wanted_prefixes = (
-                "log-all",
-            )
-            
-            if not file_name.endswith(".txt"):
-                continue
-            
-            if not file_name.startswith(wanted_prefixes):
-                continue
-
-            remote_path = f"{remote_log_dir.rstrip('/')}/{file_name}"
-            local_path = local_logs_dir / file_name
-
-            # Skip if local file already exists and has the same size.
-            if local_path.exists() and local_path.stat().st_size == remote_file.st_size:
-                skipped += 1
-                continue
-
-            print(f"Downloading {file_name}")
-            sftp.get(remote_path, str(local_path))
-            downloaded += 1
-
-        print(f"SFTP download complete. Downloaded: {downloaded}, skipped: {skipped}")
-
-    finally:
-        sftp.close()
-        transport.close()
 
 print("Testing Azure SQL connection...")
 
@@ -686,7 +630,6 @@ run = client.actor("wUoh2wdO7k9mnzL9d").call(run_input=run_input)
 for item in client.dataset(run.default_dataset_id).iterate_items():
     update_stats(cursor, item)
 
-download_logs_from_sftp()
 import_server_logs(cursor)
 
 os.makedirs("assets/data", exist_ok=True)
