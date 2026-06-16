@@ -515,31 +515,29 @@ def names_are_probably_same(a, b):
     longer_original = a_clean if len(a_norm) >= len(b_norm) else b_clean
     longer_tokens = get_name_tokens(longer_original)
 
-    # Do NOT allow generic 1-2 character merges.
-    if len(shorter) < 3:
-        return False
+    # Never fuzzy merge tiny names.
+    # Only allow 3-letter names if they are an exact token in a longer multi-word name.
+    if len(shorter) <= 3:
+        return shorter in longer_tokens and len(longer_tokens) >= 2
 
-    # Good:
-    # cum -> cum kisses
-    # ben -> Princess Ben
-    # princess -> Princess Ben
+    # Exact token match:
+    # "ben" -> "Princess Ben"
+    # "cum" -> "cum kisses"
+    # "princess" -> "Princess Ben"
     if shorter in longer_tokens:
         return True
 
-    # Good:
-    # logic -> logickal
-    # logi -> logickal
-    # logick -> logickal
-    #
-    # Safer than "shorter in longer" because it only allows prefixes,
-    # not random internal matches.
+    # Prefix match only for 4+ chars:
+    # "logi" -> "logickal"
+    # "logic" -> "logickal"
+    # NOT random internal substring matches.
     if len(shorter) >= 4 and longer.startswith(shorter):
         return True
 
-    # Good for real misspellings, but only on longer names.
-    if len(shorter) >= 5:
+    # Fuzzy match only for reasonably long names.
+    if len(shorter) >= 6:
         ratio = SequenceMatcher(None, a_norm, b_norm).ratio()
-        if ratio >= 0.84:
+        if ratio >= 0.88:
             return True
 
     return False
