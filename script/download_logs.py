@@ -426,6 +426,97 @@ def import_server_logs(cursor):
     print(f"Stored chat messages: {chat_count}")
     print(f"Stored admin actions: {admin_count}")
 
+def write_json(path, rows):
+    with path.open("w", encoding="utf-8") as f:
+        json.dump(rows, f, indent=2, default=str)
+
+
+def rows_to_dicts(cursor):
+    columns = [c[0] for c in cursor.description]
+    return [dict(zip(columns, row)) for row in cursor.fetchall()]
+
+
+def export_log_jsons(cursor):
+    data_dir = Path(__file__).resolve().parent.parent / "assets" / "data"
+    data_dir.mkdir(parents=True, exist_ok=True)
+
+    print(f"Exporting log JSON files to {data_dir}")
+
+    # Top chatters
+    cursor.execute("""
+        SELECT TOP 50
+            player_name,
+            COUNT(*) AS message_count
+        FROM chat_messages
+        GROUP BY player_name
+        ORDER BY message_count DESC;
+    """)
+    write_json(data_dir / "top_chatters.json", rows_to_dicts(cursor))
+
+    # Top curse users.
+    # Add/remove words here however you want.
+    cursor.execute("""
+        SELECT TOP 50
+            player_name,
+            COUNT(*) AS curse_count
+        FROM chat_messages
+        WHERE
+            LOWER(message) LIKE '%fuck%'
+            OR LOWER(message) LIKE '%shit%'
+            OR LOWER(message) LIKE '%bitch%'
+            OR LOWER(message) LIKE '%asshole%'
+            OR LOWER(message) LIKE '%damn%'
+            OR LOWER(message) LIKE '%cunt%'
+            OR LOWER(message) LIKE '%dick%'
+            OR LOWER(message) LIKE '%pussy%'
+        GROUP BY player_name
+        ORDER BY curse_count DESC;
+    """)
+    write_json(data_dir / "top_curse_users.json", rows_to_dicts(cursor))
+
+    # Most slain players
+    cursor.execute("""
+        SELECT TOP 50
+            target_name AS player_name,
+            COUNT(*) AS slain_count
+        FROM admin_actions
+        WHERE command = 'css_slay'
+          AND target_name IS NOT NULL
+          AND target_name <> ''
+        GROUP BY target_name
+        ORDER BY slain_count DESC;
+    """)
+    write_json(data_dir / "most_slain_players.json", rows_to_dicts(cursor))
+
+    # Most slapped players
+    cursor.execute("""
+        SELECT TOP 50
+            target_name AS player_name,
+            COUNT(*) AS slapped_count,
+            SUM(COALESCE(amount, 0)) AS total_slap_damage
+        FROM admin_actions
+        WHERE command = 'css_slap'
+          AND target_name IS NOT NULL
+          AND target_name <> ''
+        GROUP BY target_name
+        ORDER BY slapped_count DESC;
+    """)
+    write_json(data_dir / "most_slapped_players.json", rows_to_dicts(cursor))
+
+    # Optional: admin command leaderboard
+    cursor.execute("""
+        SELECT TOP 50
+            admin_name,
+            command,
+            COUNT(*) AS command_count
+        FROM admin_actions
+        GROUP BY admin_name, command
+        ORDER BY command_count DESC;
+    """)
+    write_json(data_dir / "admin_command_usage.json", rows_to_dicts(cursor))
+
+    print("Finished exporting log JSON files.")
+
 if __name__ == "__main__":
     # download_logs_from_sftp()
 
@@ -440,9 +531,11 @@ if __name__ == "__main__":
     print(row[0][:200])
 
     import_server_logs(cursor)
-
     conn.commit()
+
+    export_log_jsons(cursor)
+
     cursor.close()
     conn.close()
 
-    print("Downloaded logs and imported them into SQL.")
+    print("Imported logs into SQL and exported JSON files.")
