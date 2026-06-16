@@ -5,6 +5,7 @@ from pathlib import Path
 import time
 import json
 import hashlib
+from difflib import SequenceMatcher
 
 import paramiko
 
@@ -446,6 +447,254 @@ def rows_to_dicts(cursor):
     columns = [c[0] for c in cursor.description]
     return [dict(zip(columns, row)) for row in cursor.fetchall()]
 
+def normalize_name_for_match(name):
+    if not name:
+        return ""
+
+    name = name.lower()
+    name = re.sub(r"[^a-z0-9]+", "", name)
+    return name.strip()
+
+
+def names_are_probably_same(a, b):
+    a_norm = normalize_name_for_match(a)
+    b_norm = normalize_name_for_match(b)
+
+    if not a_norm or not b_norm:
+        return False
+
+    if a_norm == b_norm:
+        return True
+
+    shorter = min(a_norm, b_norm, key=len)
+    longer = max(a_norm, b_norm, key=len)
+
+    # Handles:
+    # logic -> logickal
+    # logi -> logickal
+    # princess -> princessben
+    # ben -> princessben
+    if len(shorter) >= 3 and shorter in longer:
+        return True
+
+    # Handles close misspellings.
+    ratio = SequenceMatcher(None, a_norm, b_norm).ratio()
+
+    if len(shorter) >= 5 and ratio >= 0.78:
+        return True
+
+    return False
+
+
+def choose_best_name(names):
+    # Prefer the longest name because "Princess Ben" is better than "ben",
+    # and "Logickal" is better than "logic".
+    return max(names, key=lambda name: len(normalize_name_for_match(name)))
+
+
+def consolidate_player_rows(rows, count_field, extra_sum_fields=None):
+    if extra_sum_fields is None:
+        extra_sum_fields = []
+
+    groups = []
+
+    for row in rows:
+        player_name = row.get("player_name")
+
+        if not player_name:
+            continue
+
+        matched_group = None
+
+        for group in groups:
+            if any(names_are_probably_same(player_name, existing) for existing in group["aliases"]):
+                matched_group = group
+                break
+
+        if matched_group is None:
+            matched_group = {
+                "aliases": set(),
+                count_field: 0,
+            }
+
+            for field in extra_sum_fields:
+                matched_group[field] = 0
+
+            groups.append(matched_group)
+
+        matched_group["aliases"].add(player_name)
+        matched_group[count_field] += int(row.get(count_field) or 0)
+
+        for field in extra_sum_fields:
+            matched_group[field] += int(row.get(field) or 0)
+
+    consolidated = []
+
+    for group in groups:
+        aliases = sorted(group["aliases"], key=lambda name: normalize_name_for_match(name))
+
+        output = {
+            "player_name": choose_best_name(aliases),
+            count_field: group[count_field],
+            "aliases": aliases,
+        }
+
+        for field in extra_sum_fields:
+            output[field] = group[field]
+
+        consolidated.append(output)
+
+    consolidated.sort(key=lambda row: row[count_field], reverse=True)
+
+    return consolidated
+
+CURSE_PATTERNS = [
+    # fuck variants
+    r"\bf+u+c+k+\w*\b",
+    r"\bf+u+k+\w*\b",
+    r"\bf+ck+\w*\b",
+    r"\bf+\*+k+\w*\b",
+    r"\bwtf+\b",
+    r"\bmf+\b",
+    r"\bmotherfucker\w*\b",
+    r"\bmofo\w*\b",
+
+    # shit variants
+    r"\bs+h+i+t+\w*\b",
+    r"\bs+h+\*+t+\w*\b",
+    r"\bshat\b",
+    r"\bshitty\b",
+    r"\bshithead\w*\b",
+    r"\bshitbag\w*\b",
+    r"\bbullshit+\w*\b",
+    r"\bbullshitting\b",
+
+    # ass variants
+    r"\basshole\w*\b",
+    r"\basshat\w*\b",
+    r"\basswipe\w*\b",
+    r"\bdumbass\w*\b",
+    r"\bbadass\b",
+    r"\bass\b",
+
+    # bitch variants
+    r"\bb+i+t+c+h+\w*\b",
+    r"\bb+\*+t+c+h+\w*\b",
+    r"\bbish+\w*\b",
+    r"\bbitchass\w*\b",
+
+    # dick/cock/balls/etc
+    r"\bd+i+c+k+\w*\b",
+    r"\bdickhead\w*\b",
+    r"\bcock\w*\b",
+    r"\bballsack\w*\b",
+    r"\bnutsack\w*\b",
+    r"\bprick\w*\b",
+
+    # pussy/cunt/etc
+    r"\bp+u+s+s+y+\w*\b",
+    r"\bc+u+n+t+\w*\b",
+    r"\btwat\w*\b",
+
+    # damn/hell
+    r"\bdamn+\w*\b",
+    r"\bgoddamn+\w*\b",
+    r"\bhell\b",
+    r"\bhella\b",
+
+    # piss/crap
+    r"\bpiss+\w*\b",
+    r"\bcrap+\w*\b",
+
+    # bastard
+    r"\bbastard\w*\b",
+
+    # common gaming rage stuff
+    r"\bdogshit\b",
+    r"\bshitcan\w*\b",
+
+    # retard variants
+    r"\br+e+t+a+r+d+\w*\b",
+    r"\br+t+a+r+d+\w*\b",
+]
+
+CURSE_REGEXES = [
+    re.compile(pattern, re.IGNORECASE)
+    for pattern in CURSE_PATTERNS
+]
+
+
+def get_curse_hits(message):
+    hits = []
+
+    if not message:
+        return hits
+
+    for regex in CURSE_REGEXES:
+        matches = regex.findall(message)
+
+        for match in matches:
+            if isinstance(match, tuple):
+                match = match[0]
+
+            if match:
+                hits.append(match.lower())
+
+    return hits
+
+
+def build_top_curse_users(cursor):
+    cursor.execute("""
+        SELECT
+            player_name,
+            message
+        FROM chat_messages
+        WHERE message IS NOT NULL
+          AND message <> '';
+    """)
+
+    curse_counts = {}
+
+    for player_name, message in cursor.fetchall():
+        hits = get_curse_hits(message)
+
+        if not hits:
+            continue
+
+        if player_name not in curse_counts:
+            curse_counts[player_name] = {
+                "player_name": player_name,
+                "curse_count": 0,
+                "curse_messages": 0,
+                "matched_words": {},
+            }
+
+        curse_counts[player_name]["curse_count"] += len(hits)
+        curse_counts[player_name]["curse_messages"] += 1
+
+        for hit in hits:
+            curse_counts[player_name]["matched_words"][hit] = (
+                curse_counts[player_name]["matched_words"].get(hit, 0) + 1
+            )
+
+    rows = list(curse_counts.values())
+
+    for row in rows:
+        row["matched_words"] = [
+            {
+                "word": word,
+                "count": count,
+            }
+            for word, count in sorted(
+                row["matched_words"].items(),
+                key=lambda item: item[1],
+                reverse=True,
+            )
+        ]
+
+    rows.sort(key=lambda row: row["curse_count"], reverse=True)
+
+    return rows[:50]
 
 def export_log_jsons(cursor):
     data_dir = Path(__file__).resolve().parent.parent / "assets" / "data"
@@ -465,43 +714,28 @@ def export_log_jsons(cursor):
     write_json(data_dir / "top_chatters.json", rows_to_dicts(cursor))
 
     # Top curse users.
-    # Add/remove words here however you want.
-    cursor.execute("""
-        SELECT TOP 50
-            player_name,
-            COUNT(*) AS curse_count
-        FROM chat_messages
-        WHERE
-            LOWER(message) LIKE '%fuck%'
-            OR LOWER(message) LIKE '%shit%'
-            OR LOWER(message) LIKE '%bitch%'
-            OR LOWER(message) LIKE '%asshole%'
-            OR LOWER(message) LIKE '%damn%'
-            OR LOWER(message) LIKE '%cunt%'
-            OR LOWER(message) LIKE '%dick%'
-            OR LOWER(message) LIKE '%pussy%'
-        GROUP BY player_name
-        ORDER BY curse_count DESC;
-    """)
-    write_json(data_dir / "top_curse_users.json", rows_to_dicts(cursor))
-
+   # Top curse users
+    curse_rows = build_top_curse_users(cursor)
+    write_json(data_dir / "top_curse_users.json", curse_rows)
     # Most slain players
     cursor.execute("""
-        SELECT TOP 50
+        SELECT
             target_name AS player_name,
             COUNT(*) AS slain_count
         FROM admin_actions
         WHERE command = 'css_slay'
           AND target_name IS NOT NULL
           AND target_name <> ''
-        GROUP BY target_name
-        ORDER BY slain_count DESC;
+        GROUP BY target_name;
     """)
-    write_json(data_dir / "most_slain_players.json", rows_to_dicts(cursor))
+    
+    slain_rows = rows_to_dicts(cursor)
+    slain_rows = consolidate_player_rows(slain_rows, "slain_count")
+    write_json(data_dir / "most_slain_players.json", slain_rows[:50])
 
     # Most slapped players
     cursor.execute("""
-        SELECT TOP 50
+        SELECT
             target_name AS player_name,
             COUNT(*) AS slapped_count,
             SUM(COALESCE(amount, 0)) AS total_slap_damage
@@ -509,10 +743,16 @@ def export_log_jsons(cursor):
         WHERE command = 'css_slap'
           AND target_name IS NOT NULL
           AND target_name <> ''
-        GROUP BY target_name
-        ORDER BY slapped_count DESC;
+        GROUP BY target_name;
     """)
-    write_json(data_dir / "most_slapped_players.json", rows_to_dicts(cursor))
+    
+    slapped_rows = rows_to_dicts(cursor)
+    slapped_rows = consolidate_player_rows(
+        slapped_rows,
+        "slapped_count",
+        extra_sum_fields=["total_slap_damage"],
+    )
+    write_json(data_dir / "most_slapped_players.json", slapped_rows[:50])
 
     # Optional: admin command leaderboard
     cursor.execute("""
