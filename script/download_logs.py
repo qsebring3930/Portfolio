@@ -427,7 +427,7 @@ def import_server_logs(cursor):
     print(f"Stored admin actions: {admin_count}")
 
 if __name__ == "__main__":
-    download_logs_from_sftp()
+    # download_logs_from_sftp()
 
     print("Testing Azure SQL connection...")
     conn = connect_with_retry()
