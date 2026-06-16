@@ -72,8 +72,6 @@ def download_logs_from_sftp():
 
         wanted_prefixes = (
             "log-all",
-            "log-CS2-SimpleAdmin",
-            "log-War3CS2",
         )
 
         downloaded = 0
