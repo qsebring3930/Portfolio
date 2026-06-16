@@ -76,48 +76,37 @@ def download_logs_from_sftp():
 
         print(f"Found {len(remote_files)} remote files.")
 
-        wanted_prefixes = (
-            "log-all",
-        )
-
+        log_all_files = [
+            remote_file
+            for remote_file in remote_files
+            if remote_file.filename.endswith(".txt")
+            and remote_file.filename.startswith("log-all")
+        ]
+        
+        ignored = len(remote_files) - len(log_all_files)
         downloaded = 0
         skipped = 0
-        ignored = 0
-
-        processed_files_to_delete = []
-
-        for remote_file in remote_files:
-            log_all_files = [
-                remote_file
-                for remote_file in remote_files
-                if remote_file.filename.endswith(".txt")
-                and remote_file.filename.startswith("log-all")
-            ]
-            
-            ignored = len(remote_files) - len(log_all_files)
-            downloaded = 0
-            skipped = 0
-            
-            if not log_all_files:
-                print("No log-all*.txt files found on SFTP.")
+        
+        if not log_all_files:
+            print("No log-all*.txt files found on SFTP.")
+        else:
+            newest_file = max(log_all_files, key=lambda f: f.st_mtime)
+        
+            file_name = newest_file.filename
+            remote_path = f"{remote_log_dir.rstrip('/')}/{file_name}"
+            local_path = local_logs_dir / file_name
+        
+            print(f"Newest log-all file is: {file_name}")
+            print(f"Remote modified time: {newest_file.st_mtime}")
+            print(f"Remote size: {newest_file.st_size} bytes")
+        
+            if local_path.exists() and local_path.stat().st_size == newest_file.st_size:
+                print(f"Skipping newest file because it already exists locally with same size: {file_name}")
+                skipped += 1
             else:
-                newest_file = max(log_all_files, key=lambda f: f.st_mtime)
-            
-                file_name = newest_file.filename
-                remote_path = f"{remote_log_dir.rstrip('/')}/{file_name}"
-                local_path = local_logs_dir / file_name
-            
-                print(f"Newest log-all file is: {file_name}")
-                print(f"Remote modified time: {newest_file.st_mtime}")
-                print(f"Remote size: {newest_file.st_size} bytes")
-            
-                if local_path.exists() and local_path.stat().st_size == newest_file.st_size:
-                    print(f"Skipping newest file because it already exists locally with same size: {file_name}")
-                    skipped += 1
-                else:
-                    print(f"Downloading newest log-all file: {file_name} ({newest_file.st_size} bytes)...")
-                    sftp.get(remote_path, str(local_path))
-                    downloaded += 1
+                print(f"Downloading newest log-all file: {file_name} ({newest_file.st_size} bytes)...")
+                sftp.get(remote_path, str(local_path))
+                downloaded += 1
 
         print("SFTP download complete.")
         print(f"Downloaded: {downloaded}")
@@ -372,6 +361,7 @@ def import_server_logs(cursor):
         if already_processed_log_file(cursor, log_file.name):
             skipped_files += 1
             print(f"Skipping already processed log: {log_file.name}")
+            processed_files_to_delete.append(log_file)
             continue
 
         print(f"Processing log file: {log_file.name}")
