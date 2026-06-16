@@ -15,6 +15,11 @@ title: War3CS2 Stats
       <button class="stats-tab" data-tab="total-levels">Highest Total Levels</button>
       <button class="stats-tab" data-tab="race-time">Race Time</button>
       <button class="stats-tab" data-tab="total-time">Total Time</button>
+      <button class="stats-tab" data-tab="top-chatters">Top Chatters</button>
+      <button class="stats-tab" data-tab="curse-users">Curse Users</button>
+      <button class="stats-tab" data-tab="most-slain">Most Slain</button>
+      <button class="stats-tab" data-tab="most-slapped">Most Slapped</button>
+      <button class="stats-tab" data-tab="admin-commands">Admin Commands</button>
     </div>
 
     <section class="stats-panel active" data-panel="maps">
@@ -63,6 +68,44 @@ title: War3CS2 Stats
       <div class="stats-table-wrap">
         <table id="totalTimeTable"></table>
       </div>
+    </section>
+
+    <section class="stats-panel" data-panel="top-chatters">
+      <div class="stats-table-wrap">
+        <table id="topChattersTable"></table>
+      </div>
+    </section>
+
+    <section class="stats-panel" data-panel="curse-users">
+      <div class="stats-table-wrap">
+        <table id="curseUsersTable"></table>
+      </div>
+    </section>
+
+    <section class="stats-panel" data-panel="most-slain">
+      <div class="stats-table-wrap">
+        <table id="mostSlainTable"></table>
+      </div>
+    </section>
+
+    <section class="stats-panel" data-panel="most-slapped">
+      <div class="stats-table-wrap">
+        <table id="mostSlappedTable"></table>
+      </div>
+    </section>
+
+    <section class="stats-panel" data-panel="admin-commands">
+      <div class="stats-table-wrap">
+        <table id="adminCommandsTable"></table>
+      </div>
+    </section>
+
+    <section class="stats-panel" data-panel="curse-users">
+      <div class="stats-table-wrap">
+        <table id="curseUsersTable"></table>
+      </div>
+
+      <div id="cumCounter" class="cum-counter"></div>
     </section>
 
   </div>
@@ -226,6 +269,14 @@ title: War3CS2 Stats
 .ts-control {
   cursor: pointer;
 }
+
+.cum-counter {
+  margin-top: 1rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid #666;
+  background: #2b2b2b;
+  font-size: clamp(.65rem, 1.4vw, 1rem);
+}
 </style>
 
 <script>
@@ -234,7 +285,21 @@ const DATA_PATH = "/assets/data/";
 let mapPlaytime = [];
 let racePlaytime = [];
 let raceLevels = [];
+let topChatters = [];
+let topCurseUsers = [];
+let mostSlainPlayers = [];
+let mostSlappedPlayers = [];
+let adminCommandUsage = [];
 let raceColumns = [];
+
+function escapeHTML(value) {
+  return String(value ?? "")
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#039;");
+}
 
 function prettyName(str) {
   return str.replaceAll("_", " ").replace(/\b\w/g, c => c.toUpperCase());
@@ -280,6 +345,33 @@ function getRaceColumns(data) {
   );
 }
 
+function formatAliases(aliases) {
+  if (!Array.isArray(aliases) || aliases.length === 0) return "";
+  return aliases.join(", ");
+}
+
+function formatMatchedWords(words) {
+  if (!Array.isArray(words) || words.length === 0) return "";
+
+  return words
+    .slice(0, 8)
+    .map(item => `${item.word} (${item.count})`)
+    .join(", ");
+}
+
+async function fetchJson(filename) {
+  const response = await fetch(DATA_PATH + filename + "?v=" + Date.now(), {
+    cache: "no-store"
+  });
+
+  if (!response.ok) {
+    console.warn(`Could not load ${filename}`);
+    return [];
+  }
+
+  return response.json();
+}
+
 const sortStates = {};
 
 function renderTable(tableId, columns, rows) {
@@ -301,7 +393,7 @@ function renderTable(tableId, columns, rows) {
         ${columns.map(col =>
           `<th data-key="${col.key}">
           <span class="header-inner">
-          <span class="header-label">${col.label}</span>
+          <span class="header-label">${escapeHTML(col.label)}</span>
           <span class="header-sort">${getArrow(col.key)}</span>
           </span></th>`
         ).join("")}
@@ -311,7 +403,7 @@ function renderTable(tableId, columns, rows) {
       ${rows.map(row => `
         <tr>
           ${columns.map(col =>
-            `<td>${row[col.key] ?? ""}</td>`
+            `<td>${escapeHTML(row[col.key] ?? "")}</td>`
           ).join("")}
         </tr>
       `).join("")}
@@ -517,11 +609,132 @@ function renderTotalTime() {
   ], rows);
 }
 
+function renderTopChatters() {
+  const rows = topChatters
+    .map(row => ({
+      player_name: row.player_name,
+      message_count: Number(row.message_count || 0)
+    }))
+    .sort((a, b) => b.message_count - a.message_count);
+
+  renderTable("topChattersTable", [
+    { key: "player_name", label: "Player Name" },
+    { key: "message_count", label: "Messages" }
+  ], rows);
+}
+
+function renderTopCurseUsers() {
+  const rows = topCurseUsers
+    .map(row => ({
+      player_name: row.player_name,
+      curse_count: Number(row.curse_count || 0),
+      curse_messages: Number(row.curse_messages || 0),
+      matched_words_display: formatMatchedWords(row.matched_words)
+    }))
+    .sort((a, b) => b.curse_count - a.curse_count);
+
+  renderTable("curseUsersTable", [
+    { key: "player_name", label: "Player Name" },
+    { key: "curse_count", label: "Curse Count" },
+    { key: "curse_messages", label: "Messages With Curses" },
+    { key: "matched_words_display", label: "Top Words" }
+  ], rows);
+}
+
+function renderMostSlainPlayers() {
+  const rows = mostSlainPlayers
+    .map(row => ({
+      player_name: row.player_name,
+      slain_count: Number(row.slain_count || 0),
+      aliases_display: formatAliases(row.aliases)
+    }))
+    .sort((a, b) => b.slain_count - a.slain_count);
+
+  renderTable("mostSlainTable", [
+    { key: "player_name", label: "Player Name" },
+    { key: "slain_count", label: "Slays" },
+    { key: "aliases_display", label: "Aliases" }
+  ], rows);
+}
+
+function renderMostSlappedPlayers() {
+  const rows = mostSlappedPlayers
+    .map(row => ({
+      player_name: row.player_name,
+      slapped_count: Number(row.slapped_count || 0),
+      total_slap_damage: Number(row.total_slap_damage || 0),
+      aliases_display: formatAliases(row.aliases)
+    }))
+    .sort((a, b) => b.slapped_count - a.slapped_count);
+
+  renderTable("mostSlappedTable", [
+    { key: "player_name", label: "Player Name" },
+    { key: "slapped_count", label: "Slaps" },
+    { key: "total_slap_damage", label: "Total Damage" },
+    { key: "aliases_display", label: "Aliases" }
+  ], rows);
+}
+
+function renderAdminCommandUsage() {
+  const rows = adminCommandUsage
+    .map(row => ({
+      admin_name: row.admin_name,
+      command: row.command,
+      command_count: Number(row.command_count || 0)
+    }))
+    .sort((a, b) => b.command_count - a.command_count);
+
+  renderTable("adminCommandsTable", [
+    { key: "admin_name", label: "Admin" },
+    { key: "command", label: "Command" },
+    { key: "command_count", label: "Uses" }
+  ], rows);
+}
+
+function renderCumCounter() {
+  const box = document.getElementById("cumCounter");
+  if (!box) return;
+
+  let total = 0;
+  let users = 0;
+
+  topCurseUsers.forEach(player => {
+    const words = player.matched_words || [];
+    const cumEntry = words.find(item =>
+      String(item.word || "").toLowerCase().startsWith("cum")
+    );
+
+    if (cumEntry) {
+      total += Number(cumEntry.count || 0);
+      users += 1;
+    }
+  });
+
+  box.innerHTML = `
+    <strong>Cum Counter:</strong>
+    ${escapeHTML(total)} total uses from ${escapeHTML(users)} players.
+  `;
+}
+
 async function init() {
-  [mapPlaytime, racePlaytime, raceLevels] = await Promise.all([
-    fetch(DATA_PATH + "map_playtime.json?v=" + Date.now(), { cache: "no-store" }).then(r => r.json()),
-    fetch(DATA_PATH + "race_playtime.json?v=" + Date.now(), { cache: "no-store" }).then(r => r.json()),
-    fetch(DATA_PATH + "race_levels.json?v=" + Date.now(), { cache: "no-store" }).then(r => r.json())
+  [
+    mapPlaytime,
+    racePlaytime,
+    raceLevels,
+    topChatters,
+    topCurseUsers,
+    mostSlainPlayers,
+    mostSlappedPlayers,
+    adminCommandUsage
+  ] = await Promise.all([
+    fetchJson("map_playtime.json"),
+    fetchJson("race_playtime.json"),
+    fetchJson("race_levels.json"),
+    fetchJson("top_chatters.json"),
+    fetchJson("top_curse_users.json"),
+    fetchJson("most_slain_players.json"),
+    fetchJson("most_slapped_players.json"),
+    fetchJson("admin_command_usage.json")
   ]);
 
   raceColumns = getRaceColumns(racePlaytime)
@@ -533,6 +746,12 @@ async function init() {
   renderHighestAnyRace();
   renderHighestTotalLevels();
   renderTotalTime();
+  renderTopChatters();
+  renderTopCurseUsers();
+  renderMostSlainPlayers();
+  renderMostSlappedPlayers();
+  renderAdminCommandUsage();
+  renderCumCounter();
 
   const defaultRace = raceColumns[0];
 
