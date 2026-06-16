@@ -67,9 +67,22 @@ jobs:
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
 
-          echo "Git status before staging:"
+          echo "Git status before sync:"
           git status --short
 
+          # Save generated changes temporarily so pull/rebase is clean.
+          git stash push -u -m "generated log stats" || true
+
+          # Get latest remote changes.
+          git pull --rebase origin master
+
+          # Re-apply generated changes.
+          git stash pop || true
+
+          echo "Git status after sync:"
+          git status --short
+
+          # Stage EVERYTHING, including deleted logs.
           git add -A
 
           echo "Git status after staging:"
@@ -81,6 +94,4 @@ jobs:
           fi
 
           git commit -m "Update server log stats"
-
-          git pull --rebase --autostash origin master
           git push origin master
