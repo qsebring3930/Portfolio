@@ -1,132 +1,84 @@
 [
   {
-    "player_name": "hex",
-    "slapped_count": 96,
-    "total_slap_damage": 0
-  },
-  {
-    "player_name": "logic",
-    "slapped_count": 76,
-    "total_slap_damage": 379
-  },
-  {
     "player_name": "bukkake",
-    "slapped_count": 4,
-    "total_slap_damage": 129
-  },
-  {
-    "player_name": "@all",
-    "slapped_count": 4,
-    "total_slap_damage": 3
-  },
-  {
-    "player_name": "ren",
-    "slapped_count": 3,
-    "total_slap_damage": 1
-  },
-  {
-    "player_name": "horny",
-    "slapped_count": 3,
-    "total_slap_damage": 0
-  },
-  {
-    "player_name": "cum",
-    "slapped_count": 3,
-    "total_slap_damage": 156
-  },
-  {
-    "player_name": "devil",
-    "slapped_count": 3,
-    "total_slap_damage": 110
-  },
-  {
-    "player_name": "David West -",
-    "slapped_count": 2,
-    "total_slap_damage": 0
-  },
-  {
-    "player_name": "Spoxie",
-    "slapped_count": 2,
-    "total_slap_damage": 0
-  },
-  {
-    "player_name": "smug",
-    "slapped_count": 1,
-    "total_slap_damage": 0
-  },
-  {
-    "player_name": "SkyLion -",
-    "slapped_count": 1,
-    "total_slap_damage": 0
-  },
-  {
-    "player_name": "ObsidianStorm -",
-    "slapped_count": 1,
-    "total_slap_damage": 0
-  },
-  {
-    "player_name": "MistaCat -",
-    "slapped_count": 1,
-    "total_slap_damage": 0
-  },
-  {
-    "player_name": "commando",
-    "slapped_count": 1,
-    "total_slap_damage": 0
-  },
-  {
-    "player_name": "cab",
-    "slapped_count": 1,
-    "total_slap_damage": 10
-  },
-  {
-    "player_name": "Gucci Wade -",
-    "slapped_count": 1,
-    "total_slap_damage": 0
-  },
-  {
-    "player_name": "god",
-    "slapped_count": 1,
-    "total_slap_damage": 0
-  },
-  {
-    "player_name": "gen_acid",
-    "slapped_count": 1,
-    "total_slap_damage": 10
-  },
-  {
-    "player_name": "Curryman -",
-    "slapped_count": 1,
-    "total_slap_damage": 0
+    "slapped_count": 117,
+    "aliases": [
+      "aim",
+      "@all",
+      "bro",
+      "buk",
+      "bukkake",
+      "cab",
+      "cum",
+      "gen_acid",
+      "god",
+      "hex",
+      "ren",
+      "SkyLion -"
+    ],
+    "total_slap_damage": 325
   },
   {
     "player_name": "curry",
-    "slapped_count": 1,
-    "total_slap_damage": 99
+    "slapped_count": 83,
+    "aliases": [
+      "curry",
+      "devil",
+      "horny",
+      "logic"
+    ],
+    "total_slap_damage": 588
   },
   {
-    "player_name": "buk",
-    "slapped_count": 1,
-    "total_slap_damage": 10
+    "player_name": "commando",
+    "slapped_count": 3,
+    "aliases": [
+      "commando",
+      "Curryman -",
+      "MistaCat -"
+    ],
+    "total_slap_damage": 0
   },
   {
-    "player_name": "bro",
-    "slapped_count": 1,
+    "player_name": "David West -",
+    "slapped_count": 3,
+    "aliases": [
+      "David West -",
+      "Gucci Wade -"
+    ],
     "total_slap_damage": 0
   },
   {
     "player_name": "argy",
-    "slapped_count": 1,
+    "slapped_count": 2,
+    "aliases": [
+      "argy",
+      "smug"
+    ],
     "total_slap_damage": 99
   },
   {
-    "player_name": "aim",
-    "slapped_count": 1,
-    "total_slap_damage": 6
+    "player_name": "Spoxie",
+    "slapped_count": 2,
+    "aliases": [
+      "Spoxie"
+    ],
+    "total_slap_damage": 0
   },
   {
     "player_name": "1600 microsoft points needed",
     "slapped_count": 1,
+    "aliases": [
+      "1600 microsoft points needed"
+    ],
     "total_slap_damage": 1
+  },
+  {
+    "player_name": "ObsidianStorm -",
+    "slapped_count": 1,
+    "aliases": [
+      "ObsidianStorm -"
+    ],
+    "total_slap_damage": 0
   }
 ]
