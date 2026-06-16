@@ -67,10 +67,12 @@ jobs:
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
 
-          git add -A script/logs/
-          git add -A assets/data/
+          echo "Git status before staging:"
+          git status --short
 
-          echo "Git status before commit:"
+          git add -A
+
+          echo "Git status after staging:"
           git status --short
 
           if git diff --cached --quiet; then
