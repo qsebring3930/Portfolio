@@ -90,21 +90,30 @@ def download_logs_from_sftp():
         if not log_all_files:
             print("No log-all*.txt files found on SFTP.")
         else:
-            newest_file = max(log_all_files, key=lambda f: f.st_mtime)
+            newest_files = sorted(
+                log_all_files,
+                key=lambda f: f.st_mtime,
+                reverse=True
+            )[:2]
         
-            file_name = newest_file.filename
-            remote_path = f"{remote_log_dir.rstrip('/')}/{file_name}"
-            local_path = local_logs_dir / file_name
+            print("Newest log-all files selected:")
+            for selected_file in newest_files:
+                print(
+                    f"  {selected_file.filename} "
+                    f"(mtime={selected_file.st_mtime}, size={selected_file.st_size} bytes)"
+                )
         
-            print(f"Newest log-all file is: {file_name}")
-            print(f"Remote modified time: {newest_file.st_mtime}")
-            print(f"Remote size: {newest_file.st_size} bytes")
+            for remote_file in newest_files:
+                file_name = remote_file.filename
+                remote_path = f"{remote_log_dir.rstrip('/')}/{file_name}"
+                local_path = local_logs_dir / file_name
         
-            if local_path.exists() and local_path.stat().st_size == newest_file.st_size:
-                print(f"Skipping newest file because it already exists locally with same size: {file_name}")
-                skipped += 1
-            else:
-                print(f"Downloading newest log-all file: {file_name} ({newest_file.st_size} bytes)...")
+                if local_path.exists() and local_path.stat().st_size == remote_file.st_size:
+                    print(f"Skipping file because it already exists locally with same size: {file_name}")
+                    skipped += 1
+                    continue
+        
+                print(f"Downloading log-all file: {file_name} ({remote_file.st_size} bytes)...")
                 sftp.get(remote_path, str(local_path))
                 downloaded += 1
 
