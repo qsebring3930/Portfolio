@@ -94,7 +94,7 @@ def download_logs_from_sftp():
                 log_all_files,
                 key=lambda f: f.st_mtime,
                 reverse=True
-            )[:30]
+            )[:2]
         
             print("Newest log-all files selected:")
             for selected_file in newest_files:
