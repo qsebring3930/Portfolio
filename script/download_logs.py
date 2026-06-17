@@ -317,9 +317,17 @@ def already_processed_log_file(cursor, file_name):
 
 def mark_log_file_processed(cursor, file_name):
     cursor.execute("""
+        IF NOT EXISTS (
+            SELECT 1
+            FROM processed_log_files
+            WHERE file_name = ?
+        )
         INSERT INTO processed_log_files (file_name)
         VALUES (?)
-    """, file_name)
+    """, (
+        file_name,
+        file_name,
+    ))
   
 def delete_imported_logs(log_files):
     if not log_files:
@@ -338,6 +346,22 @@ def delete_imported_logs(log_files):
             print(f"Failed to delete log file {log_file}: {type(e).__name__}: {e}")
 
     print(f"Deleted imported log files: {deleted}")
+
+def append_log_for_deletion(processed_files_to_delete, log_file):
+    if not log_file.exists():
+        print(f"Not marking for deletion because file no longer exists: {log_file}")
+        return
+
+    if not log_file.is_file():
+        print(f"Not marking for deletion because path is not a file: {log_file}")
+        return
+
+    if not log_file.name.startswith("log-all") or not log_file.name.endswith(".txt"):
+        print(f"Not marking for deletion because it is not a log-all txt file: {log_file}")
+        return
+
+    print(f"Marking log for deletion after SQL commit: {log_file.name}")
+    processed_files_to_delete.append(log_file)
 
 def import_server_logs(cursor):
     logs_dir = Path(__file__).resolve().parent / "logs"
@@ -359,10 +383,10 @@ def import_server_logs(cursor):
 
     for log_file in log_files:
         if already_processed_log_file(cursor, log_file.name):
-            skipped_files += 1
-            print(f"Skipping already processed log: {log_file.name}")
-            processed_files_to_delete.append(log_file)
-            continue
+          skipped_files += 1
+          print(f"Skipping already processed log: {log_file.name}")
+          append_log_for_deletion(processed_files_to_delete, log_file)
+          continue
 
         print(f"Processing log file: {log_file.name}")
 
@@ -458,7 +482,7 @@ def import_server_logs(cursor):
                     admin_count += 1
 
         mark_log_file_processed(cursor, log_file.name)
-        processed_files_to_delete.append(log_file)
+        append_log_for_deletion(processed_files_to_delete, log_file)
 
     print("Server log import complete.")
     print(f"Logs folder: {logs_dir}")
