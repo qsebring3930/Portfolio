@@ -1,11 +1,11 @@
 import os
 import pyodbc
 import re
-from apify_client import ApifyClient
 from pathlib import Path
 import time
 import json
 import hashlib
+import requests
 
 print("Testing Azure SQL connection...")
 
@@ -339,16 +339,40 @@ def update_stats(cursor, item):
     VALUES (?)
     """, snapshot_id)
 
-client = ApifyClient(os.environ["APIFY_TOKEN"])
+def retrieve_messages(channel_id, limit=100):
+    token = os.environ["DISCORD_TOKEN"].strip()
 
-run_input = {
-    "token": os.environ["DISCORD_TOKEN"],
-    "channelInput": "https://discord.com/channels/1232410706230513814/1240609027470131261",
-}
+    headers = {
+        "Authorization": token,
+        "User-Agent": "War3CS2StatsBot/1.0",
+    }
 
-run = client.actor("wUoh2wdO7k9mnzL9d").call(run_input=run_input)
+    url = f"https://discord.com/api/v10/channels/{channel_id}/messages"
 
-for item in client.dataset(run.default_dataset_id).iterate_items():
+    response = requests.get(
+        url,
+        headers=headers,
+        params={"limit": min(limit, 100)},
+        timeout=30,
+    )
+
+    print("Discord status:", response.status_code)
+
+    if response.status_code != 200:
+        print(response.text)
+        response.raise_for_status()
+
+    messages = response.json()
+    print(f"Retrieved {len(messages)} Discord messages.")
+
+    return messages
+
+discord_channel_id = os.environ.get("DISCORD_CHANNEL_ID", "1240609027470131261")
+discord_message_limit = int(os.environ.get("DISCORD_MESSAGE_LIMIT", "1"))
+
+messages = retrieve_messages(discord_channel_id, limit=discord_message_limit)
+
+for item in messages:
     update_stats(cursor, item)
 
 os.makedirs("assets/data", exist_ok=True)
