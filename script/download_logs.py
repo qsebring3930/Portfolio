@@ -648,79 +648,79 @@ def consolidate_player_rows(rows, count_field, extra_sum_fields=None):
 
 CURSE_PATTERNS = [
     # fuck variants
-    r"\bf+u+c+k+\w*\b",
-    r"\bf+u+k+\w*\b",
-    r"\bf+ck+\w*\b",
-    r"\bf+\*+k+\w*\b",
-    r"\bwtf+\b",
-    r"\bmf+\b",
-    r"\bmotherfucker\w*\b",
-    r"\bmofo\w*\b",
+    ("fuck", r"\bf+u+c+k+\w*\b"),
+    ("fuck", r"\bf+u+k+\w*\b"),
+    ("fuck", r"\bf+ck+\w*\b"),
+    ("fuck", r"\bf+\*+k+\w*\b"),
+    ("wtf", r"\bwtf+\b"),
+    ("mf", r"\bmf+\b"),
+    ("motherfucker", r"\bmotherfucker\w*\b"),
+    ("mofo", r"\bmofo\w*\b"),
 
     # shit variants
-    r"\bs+h+i+t+\w*\b",
-    r"\bs+h+\*+t+\w*\b",
-    r"\bshat\b",
-    r"\bshitty\b",
-    r"\bshithead\w*\b",
-    r"\bshitbag\w*\b",
-    r"\bbullshit+\w*\b",
-    r"\bbullshitting\b",
+    ("shit", r"\bs+h+i+t+\w*\b"),
+    ("shit", r"\bs+h+\*+t+\w*\b"),
+    ("shat", r"\bshat\b"),
+    ("shit", r"\bshitty\b"),
+    ("shit", r"\bshithead\w*\b"),
+    ("shit", r"\bshitbag\w*\b"),
+    ("bullshit", r"\bbullshit+\w*\b"),
+    ("bullshit", r"\bbullshitting\b"),
 
     # ass variants
-    r"\basshole\w*\b",
-    r"\basshat\w*\b",
-    r"\basswipe\w*\b",
-    r"\bdumbass\w*\b",
-    r"\bbadass\b",
-    r"\bass\b",
+    ("asshole", r"\basshole\w*\b"),
+    ("asshat", r"\basshat\w*\b"),
+    ("asswipe", r"\basswipe\w*\b"),
+    ("dumbass", r"\bdumbass\w*\b"),
+    ("badass", r"\bbadass\b"),
+    ("ass", r"\bass\b"),
 
     # bitch variants
-    r"\bb+i+t+c+h+\w*\b",
-    r"\bb+\*+t+c+h+\w*\b",
-    r"\bbish+\w*\b",
-    r"\bbitchass\w*\b",
+    ("bitch", r"\bb+i+t+c+h+\w*\b"),
+    ("bitch", r"\bb+\*+t+c+h+\w*\b"),
+    ("bitch", r"\bbish+\w*\b"),
+    ("bitch", r"\bbitchass\w*\b"),
 
     # dick/cock/balls/etc
-    r"\bd+i+c+k+\w*\b",
-    r"\bdickhead\w*\b",
-    r"\bcock\w*\b",
-    r"\bballsack\w*\b",
-    r"\bnutsack\w*\b",
-    r"\bprick\w*\b",
+    ("dick", r"\bd+i+c+k+\w*\b"),
+    ("dick", r"\bdickhead\w*\b"),
+    ("cock", r"\bcock\w*\b"),
+    ("ballsack", r"\bballsack\w*\b"),
+    ("nutsack", r"\bnutsack\w*\b"),
+    ("prick", r"\bprick\w*\b"),
 
     # pussy/cunt/etc
-    r"\bp+u+s+s+y+\w*\b",
-    r"\bc+u+n+t+\w*\b",
-    r"\btwat\w*\b",
+    ("pussy", r"\bp+u+s+s+y+\w*\b"),
+    ("cunt", r"\bc+u+n+t+\w*\b"),
+    ("twat", r"\btwat\w*\b"),
 
     # damn/hell
-    r"\bdamn+\w*\b",
-    r"\bgoddamn+\w*\b",
-    r"\bhell\b",
-    r"\bhella\b",
+    ("damn", r"\bdamn+\w*\b"),
+    ("goddamn", r"\bgoddamn+\w*\b"),
+    ("hell", r"\bhell\b"),
+    ("hella", r"\bhella\b"),
 
-    # piss/crap
-    r"\bpiss+\w*\b",
+    # piss
+    ("piss", r"\bpiss+\w*\b"),
 
     # cum
-    r"\bcum+\w*\b",
+    ("cum", r"\bc+u+m+\w*\b"),
 
     # bastard
-    r"\bbastard\w*\b",
+    ("bastard", r"\bbastard\w*\b"),
 
     # common gaming rage stuff
-    r"\bdogshit\b",
-    r"\bshitcan\w*\b",
+    ("dogshit", r"\bdogshit\b"),
+    ("shit", r"\bshitcan\w*\b"),
 
     # retard variants
-    r"\br+e+t+a+r+d+\w*\b",
-    r"\br+t+a+r+d+\w*\b",
+    ("retard", r"\br+e+t+a+r+d+\w*\b"),
+    ("retard", r"\br+t+a+r+d+\w*\b"),
 ]
 
 CURSE_REGEXES = [
-    re.compile(pattern, re.IGNORECASE)
-    for pattern in CURSE_PATTERNS
+    (label, re.compile(pattern, re.IGNORECASE))
+    for label, pattern in CURSE_PATTERNS
 ]
 
 
@@ -730,15 +730,11 @@ def get_curse_hits(message):
     if not message:
         return hits
 
-    for regex in CURSE_REGEXES:
-        matches = regex.findall(message)
+    for label, regex in CURSE_REGEXES:
+        matches = list(regex.finditer(message))
 
-        for match in matches:
-            if isinstance(match, tuple):
-                match = match[0]
-
-            if match:
-                hits.append(match.lower())
+        for _ in matches:
+            hits.append(label)
 
     return hits
 
