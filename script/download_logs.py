@@ -794,7 +794,7 @@ def build_top_curse_users(cursor):
 
     rows.sort(key=lambda row: row["curse_count"], reverse=True)
 
-    return rows[:50]
+    return rows
 
 IGNORED_ADMIN_TARGETS = {
     "@all",
@@ -1025,7 +1025,7 @@ def export_log_jsons(cursor):
 
     # Top chatters
     cursor.execute("""
-        SELECT TOP 50
+        SELECT
             player_name,
             COUNT(*) AS message_count
         FROM chat_messages
@@ -1056,7 +1056,7 @@ def export_log_jsons(cursor):
         player_profiles,
         "slain_count",
     )
-    write_json(data_dir / "most_slain_players.json", slain_rows[:50])
+    write_json(data_dir / "most_slain_players.json", slain_rows)
 
     # Most slapped players
     cursor.execute("""
@@ -1078,7 +1078,7 @@ def export_log_jsons(cursor):
         "slapped_count",
         extra_sum_fields=["total_slap_damage"],
     )
-    write_json(data_dir / "most_slapped_players.json", slapped_rows[:50])
+    write_json(data_dir / "most_slapped_players.json", slapped_rows)
 
     #Admin total command usage
     cursor.execute("""
@@ -1113,7 +1113,7 @@ def export_log_jsons(cursor):
     admin_rows = list(grouped.values())
     admin_rows.sort(key=lambda row: row["command_count"], reverse=True)
     
-    write_json(data_dir / "admin_command_usage.json", admin_rows[:50])
+    write_json(data_dir / "admin_command_usage.json", admin_rows)
 
 if __name__ == "__main__":
     download_logs_from_sftp()
