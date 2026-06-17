@@ -62,7 +62,7 @@
   {
     "admin_name": "Hexette",
     "command": "css_respawn",
-    "command_count": 16
+    "command_count": 15
   },
   {
     "admin_name": "TwistedSquiddy",
@@ -80,14 +80,14 @@
     "command_count": 12
   },
   {
-    "admin_name": "Hexette",
-    "command": "css_slap",
-    "command_count": 12
-  },
-  {
     "admin_name": "TwistedSquiddy",
     "command": "css_speed",
     "command_count": 12
+  },
+  {
+    "admin_name": "Hexette",
+    "command": "css_slap",
+    "command_count": 11
   },
   {
     "admin_name": "xSignHere",
@@ -170,11 +170,6 @@
     "command_count": 3
   },
   {
-    "admin_name": "\u2665\u273fPrincessBen\u273f\u2665",
-    "command": "css_slay",
-    "command_count": 3
-  },
-  {
     "admin_name": "Th3GodKill3r",
     "command": "css_slay",
     "command_count": 3
@@ -202,6 +197,11 @@
   {
     "admin_name": "VEGETO#6969",
     "command": "css_slap",
+    "command_count": 2
+  },
+  {
+    "admin_name": "\u2665\u273fPrincessBen\u273f\u2665",
+    "command": "css_slay",
     "command_count": 2
   },
   {
