@@ -12,7 +12,7 @@
   {
     "admin_name": "TwistedSquiddy",
     "command": "css_respawn",
-    "command_count": 78
+    "command_count": 80
   },
   {
     "admin_name": "Lucky Prinny Overlord",
@@ -22,12 +22,17 @@
   {
     "admin_name": "Logick",
     "command": "css_respawn",
-    "command_count": 66
+    "command_count": 75
   },
   {
     "admin_name": "TwistedSquiddy",
     "command": "css_slay",
-    "command_count": 57
+    "command_count": 61
+  },
+  {
+    "admin_name": "Logick",
+    "command": "css_slay",
+    "command_count": 42
   },
   {
     "admin_name": "TwistedSquiddy",
@@ -36,13 +41,8 @@
   },
   {
     "admin_name": "Logick",
-    "command": "css_slay",
-    "command_count": 40
-  },
-  {
-    "admin_name": "Logick",
     "command": "css_slap",
-    "command_count": 26
+    "command_count": 27
   },
   {
     "admin_name": "Hexette",
@@ -67,7 +67,7 @@
   {
     "admin_name": "TwistedSquiddy",
     "command": "css_give",
-    "command_count": 13
+    "command_count": 14
   },
   {
     "admin_name": "TwistedSquiddy",
@@ -76,18 +76,18 @@
   },
   {
     "admin_name": "TwistedSquiddy",
-    "command": "css_speed",
-    "command_count": 12
-  },
-  {
-    "admin_name": "TwistedSquiddy",
     "command": "css_bring",
-    "command_count": 11
+    "command_count": 12
   },
   {
     "admin_name": "Hexette",
     "command": "css_slap",
-    "command_count": 11
+    "command_count": 12
+  },
+  {
+    "admin_name": "TwistedSquiddy",
+    "command": "css_speed",
+    "command_count": 12
   },
   {
     "admin_name": "xSignHere",
@@ -110,6 +110,11 @@
     "command_count": 5
   },
   {
+    "admin_name": "Logick",
+    "command": "css_god",
+    "command_count": 4
+  },
+  {
     "admin_name": "xSignHere",
     "command": "css_gravity",
     "command_count": 4
@@ -121,17 +126,22 @@
   },
   {
     "admin_name": "TwistedSquiddy",
+    "command": "css_slap",
+    "command_count": 4
+  },
+  {
+    "admin_name": "TwistedSquiddy",
     "command": "css_strip",
     "command_count": 4
   },
   {
-    "admin_name": "VEGETO#6969",
+    "admin_name": "<3 Awful Aim :D",
     "command": "css_ban",
     "command_count": 3
   },
   {
-    "admin_name": "Logick",
-    "command": "css_god",
+    "admin_name": "VEGETO#6969",
+    "command": "css_ban",
     "command_count": 3
   },
   {
@@ -146,6 +156,11 @@
   },
   {
     "admin_name": "Logick",
+    "command": "css_say",
+    "command_count": 3
+  },
+  {
+    "admin_name": "TwistedSquiddy",
     "command": "css_say",
     "command_count": 3
   },
@@ -170,7 +185,7 @@
     "command_count": 3
   },
   {
-    "admin_name": "<3 Awful Aim :D",
+    "admin_name": "Hexette",
     "command": "css_ban",
     "command_count": 2
   },
@@ -205,13 +220,13 @@
     "command_count": 2
   },
   {
-    "admin_name": "Console",
+    "admin_name": "<3 Awful Aim :D",
     "command": "css_addban",
     "command_count": 1
   },
   {
-    "admin_name": "Hexette",
-    "command": "css_ban",
+    "admin_name": "Console",
+    "command": "css_addban",
     "command_count": 1
   },
   {
@@ -222,6 +237,11 @@
   {
     "admin_name": "<3 Awful Aim :D",
     "command": "css_give",
+    "command_count": 1
+  },
+  {
+    "admin_name": "Hexette",
+    "command": "css_giveweapon",
     "command_count": 1
   },
   {
@@ -261,11 +281,6 @@
   },
   {
     "admin_name": "Console",
-    "command": "css_say",
-    "command_count": 1
-  },
-  {
-    "admin_name": "TwistedSquiddy",
     "command": "css_say",
     "command_count": 1
   },

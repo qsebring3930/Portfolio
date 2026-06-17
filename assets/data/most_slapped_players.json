@@ -71,10 +71,26 @@
     "total_slap_damage": 0
   },
   {
+    "player_name": "rex",
+    "slapped_count": 2,
+    "aliases": [
+      "rex"
+    ],
+    "total_slap_damage": 0
+  },
+  {
     "player_name": "Spoxie",
     "slapped_count": 2,
     "aliases": [
       "Spoxie"
+    ],
+    "total_slap_damage": 0
+  },
+  {
+    "player_name": "@me",
+    "slapped_count": 1,
+    "aliases": [
+      "@me"
     ],
     "total_slap_damage": 0
   },
@@ -99,8 +115,8 @@
     "player_name": "Argy",
     "slapped_count": 1,
     "aliases": [
-      "Argy",
-      "argy"
+      "argy",
+      "Argy"
     ],
     "total_slap_damage": 99
   },
@@ -147,6 +163,15 @@
     "total_slap_damage": 0
   },
   {
+    "player_name": "BOT Gen_Acid's Healer",
+    "slapped_count": 1,
+    "aliases": [
+      "BOT Gen_Acid's Healer",
+      "gen"
+    ],
+    "total_slap_damage": 99
+  },
+  {
     "player_name": "Gen_Acid",
     "slapped_count": 1,
     "aliases": [
@@ -185,6 +210,15 @@
     "slapped_count": 1,
     "aliases": [
       "ObsidianStorm"
+    ],
+    "total_slap_damage": 0
+  },
+  {
+    "player_name": "Rexxx \u2620",
+    "slapped_count": 1,
+    "aliases": [
+      "rexx",
+      "Rexxx \u2620"
     ],
     "total_slap_damage": 0
   },

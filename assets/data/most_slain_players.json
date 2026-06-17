@@ -52,6 +52,13 @@
     ]
   },
   {
+    "player_name": "@me",
+    "slain_count": 4,
+    "aliases": [
+      "@me"
+    ]
+  },
+  {
     "player_name": "Monkey Madness",
     "slain_count": 4,
     "aliases": [
@@ -64,20 +71,13 @@
     "player_name": "RANSOM",
     "slain_count": 4,
     "aliases": [
-      "Ransom",
-      "RANSOM"
-    ]
-  },
-  {
-    "player_name": "@me",
-    "slain_count": 3,
-    "aliases": [
-      "@me"
+      "RANSOM",
+      "Ransom"
     ]
   },
   {
     "player_name": "BOT Gen_Acid's Healer",
-    "slain_count": 2,
+    "slain_count": 3,
     "aliases": [
       "acid",
       "BOT Gen_Acid's Healer",
@@ -101,11 +101,20 @@
     ]
   },
   {
+    "player_name": "BOT Rock",
+    "slain_count": 2,
+    "aliases": [
+      "bot rock",
+      "BOT Rock",
+      "rock"
+    ]
+  },
+  {
     "player_name": "Brice",
     "slain_count": 2,
     "aliases": [
-      "Brice",
-      "brice"
+      "brice",
+      "Brice"
     ]
   },
   {
@@ -165,8 +174,8 @@
     "player_name": "Tony",
     "slain_count": 2,
     "aliases": [
-      "Tony",
-      "tony"
+      "tony",
+      "Tony"
     ]
   },
   {
@@ -180,8 +189,8 @@
     "player_name": "Argy",
     "slain_count": 1,
     "aliases": [
-      "Argy",
-      "argy"
+      "argy",
+      "Argy"
     ]
   },
   {
@@ -240,8 +249,8 @@
     "player_name": "Eric",
     "slain_count": 1,
     "aliases": [
-      "eric",
-      "Eric"
+      "Eric",
+      "eric"
     ]
   },
   {
@@ -359,17 +368,17 @@
     ]
   },
   {
+    "player_name": "rex",
+    "slain_count": 1,
+    "aliases": [
+      "rex"
+    ]
+  },
+  {
     "player_name": "rip",
     "slain_count": 1,
     "aliases": [
       "rip"
-    ]
-  },
-  {
-    "player_name": "rock",
-    "slain_count": 1,
-    "aliases": [
-      "rock"
     ]
   },
   {
