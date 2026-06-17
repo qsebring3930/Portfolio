@@ -437,96 +437,95 @@ def import_server_logs(cursor):
 
         for line_number, line in iter_log_entries(log_file):
             chat = parse_chat_line(line, log_file.name, line_number)
+            if chat:
+                cursor.execute("""
+                    IF NOT EXISTS (
+                        SELECT 1 FROM chat_messages WHERE event_id = ?
+                    )
+                    INSERT INTO chat_messages (
+                        event_id,
+                        source_file,
+                        line_number,
+                        timestamp,
+                        player_name,
+                        raw_player_name,
+                        message,
+                        is_dead
+                    )
+                    VALUES (
+                        ?,
+                        ?,
+                        ?,
+                        TRY_CONVERT(DATETIME2, ?),
+                        ?,
+                        ?,
+                        ?,
+                        ?
+                    )
+                """, (
+                    chat["event_id"],
+                    chat["event_id"],
+                    chat["source_file"],
+                    chat["line_number"],
+                    chat["timestamp"],
+                    chat["player_name"],
+                    chat["raw_player_name"],
+                    chat["message"],
+                    chat["is_dead"],
+                ))
 
-                if chat:
-                    cursor.execute("""
-                        IF NOT EXISTS (
-                            SELECT 1 FROM chat_messages WHERE event_id = ?
-                        )
-                        INSERT INTO chat_messages (
-                            event_id,
-                            source_file,
-                            line_number,
-                            timestamp,
-                            player_name,
-                            raw_player_name,
-                            message,
-                            is_dead
-                        )
-                        VALUES (
-                            ?,
-                            ?,
-                            ?,
-                            TRY_CONVERT(DATETIME2, ?),
-                            ?,
-                            ?,
-                            ?,
-                            ?
-                        )
-                    """, (
-                        chat["event_id"],
-                        chat["event_id"],
-                        chat["source_file"],
-                        chat["line_number"],
-                        chat["timestamp"],
-                        chat["player_name"],
-                        chat["raw_player_name"],
-                        chat["message"],
-                        chat["is_dead"],
-                    ))
+                chat_count += 1
+                continue
 
-                    chat_count += 1
-                    continue
+            admin_action = parse_admin_action(line, log_file.name, line_number)
 
-                admin_action = parse_admin_action(line, log_file.name, line_number)
+            if admin_action:
+                cursor.execute("""
+                    IF NOT EXISTS (
+                        SELECT 1 FROM admin_actions WHERE event_id = ?
+                    )
+                    INSERT INTO admin_actions (
+                        event_id,
+                        source_file,
+                        line_number,
+                        timestamp,
+                        admin_name,
+                        raw_admin_name,
+                        command,
+                        command_args,
+                        target_name,
+                        amount
+                    )
+                    VALUES (
+                        ?,
+                        ?,
+                        ?,
+                        TRY_CONVERT(DATETIME2, ?),
+                        ?,
+                        ?,
+                        ?,
+                        ?,
+                        ?,
+                        ?
+                    )
+                """, (
+                    admin_action["event_id"],
+                    admin_action["event_id"],
+                    admin_action["source_file"],
+                    admin_action["line_number"],
+                    admin_action["timestamp"],
+                    admin_action["admin_name"],
+                    admin_action["raw_admin_name"],
+                    admin_action["command"],
+                    admin_action["command_args"],
+                    admin_action["target_name"],
+                    admin_action["amount"],
+                ))
 
-                if admin_action:
-                    cursor.execute("""
-                        IF NOT EXISTS (
-                            SELECT 1 FROM admin_actions WHERE event_id = ?
-                        )
-                        INSERT INTO admin_actions (
-                            event_id,
-                            source_file,
-                            line_number,
-                            timestamp,
-                            admin_name,
-                            raw_admin_name,
-                            command,
-                            command_args,
-                            target_name,
-                            amount
-                        )
-                        VALUES (
-                            ?,
-                            ?,
-                            ?,
-                            TRY_CONVERT(DATETIME2, ?),
-                            ?,
-                            ?,
-                            ?,
-                            ?,
-                            ?,
-                            ?
-                        )
-                    """, (
-                        admin_action["event_id"],
-                        admin_action["event_id"],
-                        admin_action["source_file"],
-                        admin_action["line_number"],
-                        admin_action["timestamp"],
-                        admin_action["admin_name"],
-                        admin_action["raw_admin_name"],
-                        admin_action["command"],
-                        admin_action["command_args"],
-                        admin_action["target_name"],
-                        admin_action["amount"],
-                    ))
+                admin_count += 1
 
-                    admin_count += 1
-
-        mark_log_file_processed(cursor, log_file.name)
-        append_log_for_deletion(processed_files_to_delete, log_file)
+    mark_log_file_processed(cursor, log_file.name)
+    append_log_for_deletion(processed_files_to_delete, log_file)
 
     print("Server log import complete.")
     print(f"Logs folder: {logs_dir}")
