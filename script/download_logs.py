@@ -372,6 +372,42 @@ def append_log_for_deletion(processed_files_to_delete, log_file):
     print(f"Marking log for deletion after SQL commit: {log_file.name}")
     processed_files_to_delete.append(log_file)
 
+def iter_log_entries(log_file):
+    current_start_line = None
+    current_parts = []
+
+    with log_file.open("r", encoding="utf-8", errors="replace") as f:
+        for physical_line_number, raw_line in enumerate(f, start=1):
+            line = raw_line.rstrip("\r\n")
+
+            # New real log entry starts with timestamp.
+            if TIMESTAMP_RE.match(line):
+                if current_parts:
+                    combined = " ".join(
+                        part.strip()
+                        for part in current_parts
+                        if part.strip()
+                    )
+                    yield current_start_line, combined
+
+                current_start_line = physical_line_number
+                current_parts = [line]
+            else:
+                # Continuation line. This catches split chat messages like:
+                # timestamp/plugin line
+                # *DEAD*
+                # Player: message
+                if current_parts:
+                    current_parts.append(line)
+
+        if current_parts:
+            combined = " ".join(
+                part.strip()
+                for part in current_parts
+                if part.strip()
+            )
+            yield current_start_line, combined
+
 def import_server_logs(cursor):
     logs_dir = Path(__file__).resolve().parent / "logs"
 
@@ -399,9 +435,8 @@ def import_server_logs(cursor):
 
         print(f"Processing log file: {log_file.name}")
 
-        with log_file.open("r", encoding="utf-8", errors="replace") as f:
-            for line_number, line in enumerate(f, start=1):
-                chat = parse_chat_line(line, log_file.name, line_number)
+        for line_number, line in iter_log_entries(log_file):
+            chat = parse_chat_line(line, log_file.name, line_number)
 
                 if chat:
                     cursor.execute("""
