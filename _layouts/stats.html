@@ -700,12 +700,13 @@ function renderCumCounter() {
 
   topCurseUsers.forEach(player => {
     const words = player.matched_words || [];
-    const cumEntry = words.find(item =>
-      String(item.word || "").toLowerCase().startsWith("cum")
-    );
 
-    if (cumEntry) {
-      total += Number(cumEntry.count || 0);
+    const playerCumTotal = words
+      .filter(item => String(item.word || "").toLowerCase() === "cum")
+      .reduce((sum, item) => sum + Number(item.count || 0), 0);
+
+    if (playerCumTotal > 0) {
+      total += playerCumTotal;
       users += 1;
     }
   });
