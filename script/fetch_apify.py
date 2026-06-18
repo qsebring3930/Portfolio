@@ -146,7 +146,7 @@ ON admin_actions(target_name);
 conn.commit()
 print("Tables created or already exist.")
 
-SNAPSHOT_MINUTES = 1
+SNAPSHOT_MINUTES = 2
 
 def normalize_player_name(player_name):
     name = player_name.strip()
