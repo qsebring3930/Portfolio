@@ -32,6 +32,8 @@ title: War3CS2 Stats
       <div class="stats-table-wrap">
         <table id="mapStats"></table>
       </div>
+
+      <div id="rtvCounter" class="rtv-counter"></div>
     </section>
 
     <section class="stats-panel" data-panel="race-level">
@@ -323,7 +325,8 @@ title: War3CS2 Stats
   cursor: pointer;
 }
 
-.cum-counter {
+.cum-counter,
+.rtv-counter {
   margin-top: 1rem;
   padding: 0.75rem 1rem;
   border: 1px solid #666;
@@ -344,6 +347,7 @@ let mostSlainPlayers = [];
 let mostSlappedPlayers = [];
 let adminCommandUsage = [];
 let raceColumns = [];
+let rtvRequests = {};
 let tableFilters = {};
 
 function escapeHTML(value) {
@@ -843,26 +847,40 @@ function renderCumCounter() {
   `;
 }
 
+function renderRtvCounter() {
+  const box = document.getElementById("rtvCounter");
+  if (!box) return;
+
+  const count = Number(rtvRequests.rtv_count || 0);
+
+  box.innerHTML = `
+    People have complained about the map a total of
+    <strong>${escapeHTML(count)} times.</strong>
+  `;
+}
+
 async function init() {
   [
-    mapPlaytime,
-    racePlaytime,
-    raceLevels,
-    topChatters,
-    topCurseUsers,
-    mostSlainPlayers,
-    mostSlappedPlayers,
-    adminCommandUsage
-  ] = await Promise.all([
-    fetchJson("map_playtime.json"),
-    fetchJson("race_playtime.json"),
-    fetchJson("race_levels.json"),
-    fetchJson("top_chatters.json"),
-    fetchJson("top_curse_users.json"),
-    fetchJson("most_slain_players.json"),
-    fetchJson("most_slapped_players.json"),
-    fetchJson("admin_command_usage.json")
-  ]);
+  mapPlaytime,
+  racePlaytime,
+  raceLevels,
+  topChatters,
+  topCurseUsers,
+  mostSlainPlayers,
+  mostSlappedPlayers,
+  adminCommandUsage,
+  rtvRequests
+] = await Promise.all([
+  fetchJson("map_playtime.json"),
+  fetchJson("race_playtime.json"),
+  fetchJson("race_levels.json"),
+  fetchJson("top_chatters.json"),
+  fetchJson("top_curse_users.json"),
+  fetchJson("most_slain_players.json"),
+  fetchJson("most_slapped_players.json"),
+  fetchJson("admin_command_usage.json"),
+  fetchJson("rtv_requests.json")
+]);
 
   raceColumns = getRaceColumns(racePlaytime)
   .sort((a, b) => prettyName(a).localeCompare(prettyName(b)));
@@ -879,6 +897,7 @@ async function init() {
   setupTableSearch("adminCommandsSearch", adminCommandUsage, "admin_name", renderAdminCommandUsage);
 
   renderMapStats();
+  renderRtvCounter();
   renderHighestAnyRace();
   renderHighestTotalLevels();
   renderTotalTime();
