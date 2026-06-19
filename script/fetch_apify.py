@@ -376,6 +376,7 @@ for item in messages:
     update_stats(cursor, item)
 
 os.makedirs("assets/data", exist_ok=True)
+
 for table in [
     "map_playtime",
     "race_playtime",
@@ -392,6 +393,32 @@ for table in [
 
     with open(f"assets/data/{table}.json", "w", encoding="utf-8") as f:
         json.dump(rows, f, indent=2, default=str)
+
+
+cursor.execute("""
+SELECT COUNT(*) AS rtv_count
+FROM chat_messages
+WHERE LOWER(message) LIKE 'rtv'
+   OR LOWER(message) LIKE '.rtv'
+   OR LOWER(message) LIKE 'rtv %'
+   OR LOWER(message) LIKE '.rtv %'
+   OR LOWER(message) LIKE '% rtv'
+   OR LOWER(message) LIKE '% rtv %'
+   OR LOWER(message) LIKE '% .rtv'
+   OR LOWER(message) LIKE '% .rtv %'
+   OR LOWER(message) LIKE '%can we rtv%'
+   OR LOWER(message) LIKE '%can we rtv please%'
+   OR LOWER(message) LIKE '%change map%'
+   OR LOWER(message) LIKE '%change the map%'
+   OR LOWER(message) LIKE '%map change%'
+""")
+
+rtv_count = cursor.fetchone()[0] or 0
+
+with open("assets/data/rtv_requests.json", "w", encoding="utf-8") as f:
+    json.dump({"rtv_count": rtv_count}, f, indent=2)
+
+print(f"Exported RTV request count: {rtv_count}")
 
 conn.commit()
 print("Stats updated.")
