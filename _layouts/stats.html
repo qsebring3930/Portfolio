@@ -23,6 +23,12 @@ title: War3CS2 Stats
     </div>
 
     <section class="stats-panel active" data-panel="maps">
+      <label for="mapStatsSearch">Map:</label>
+      <div class="table-search-wrap">
+        <select id="mapStatsSearch"></select>
+        <button type="button" class="table-search-button" data-target="mapStatsSearch">▼</button>
+      </div>
+
       <div class="stats-table-wrap">
         <table id="mapStats"></table>
       </div>
@@ -41,12 +47,24 @@ title: War3CS2 Stats
     </section>
 
     <section class="stats-panel" data-panel="any-race">
+      <label for="highestAnyRaceSearch">Player:</label>
+      <div class="table-search-wrap">
+        <select id="highestAnyRaceSearch"></select>
+        <button type="button" class="table-search-button" data-target="highestAnyRaceSearch">▼</button>
+      </div>
+
       <div class="stats-table-wrap">
         <table id="highestAnyRace"></table>
       </div>
     </section>
 
     <section class="stats-panel" data-panel="total-levels">
+      <label for="highestTotalLevelsSearch">Player:</label>
+      <div class="table-search-wrap">
+        <select id="highestTotalLevelsSearch"></select>
+        <button type="button" class="table-search-button" data-target="highestTotalLevelsSearch">▼</button>
+      </div>
+
       <div class="stats-table-wrap">
         <table id="highestTotalLevels"></table>
       </div>
@@ -65,42 +83,72 @@ title: War3CS2 Stats
     </section>
 
     <section class="stats-panel" data-panel="total-time">
+      <label for="totalTimeTableSearch">Player:</label>
+      <div class="table-search-wrap">
+        <select id="totalTimeTableSearch"></select>
+        <button type="button" class="table-search-button" data-target="totalTimeTableSearch">▼</button>
+      </div>
+
       <div class="stats-table-wrap">
         <table id="totalTimeTable"></table>
       </div>
     </section>
 
     <section class="stats-panel" data-panel="top-chatters">
+      <label for="topChattersSearch">Player:</label>
+      <div class="table-search-wrap">
+        <select id="topChattersSearch"></select>
+        <button type="button" class="table-search-button" data-target="topChattersSearch">▼</button>
+      </div>
+
       <div class="stats-table-wrap">
         <table id="topChattersTable"></table>
       </div>
     </section>
 
-    <section class="stats-panel" data-panel="curse-users">
-      <div class="stats-table-wrap">
-        <table id="curseUsersTable"></table>
-      </div>
-    </section>
-
     <section class="stats-panel" data-panel="most-slain">
+      <label for="mostSlainSearch">Player:</label>
+      <div class="table-search-wrap">
+        <select id="mostSlainSearch"></select>
+        <button type="button" class="table-search-button" data-target="mostSlainSearch">▼</button>
+      </div>
+
       <div class="stats-table-wrap">
         <table id="mostSlainTable"></table>
       </div>
     </section>
 
     <section class="stats-panel" data-panel="most-slapped">
+      <label for="mostSlappedSearch">Player:</label>
+      <div class="table-search-wrap">
+        <select id="mostSlappedSearch"></select>
+        <button type="button" class="table-search-button" data-target="mostSlappedSearch">▼</button>
+      </div>
+
       <div class="stats-table-wrap">
         <table id="mostSlappedTable"></table>
       </div>
     </section>
 
     <section class="stats-panel" data-panel="admin-commands">
+      <label for="adminCommandsSearch">Admin:</label>
+      <div class="table-search-wrap">
+        <select id="adminCommandsSearch"></select>
+        <button type="button" class="table-search-button" data-target="adminCommandsSearch">▼</button>
+      </div>
+
       <div class="stats-table-wrap">
         <table id="adminCommandsTable"></table>
       </div>
     </section>
 
     <section class="stats-panel" data-panel="curse-users">
+      <label for="curseUsersSearch">Player:</label>
+      <div class="table-search-wrap">
+        <select id="curseUsersSearch"></select>
+        <button type="button" class="table-search-button" data-target="curseUsersSearch">▼</button>
+      </div>
+
       <div class="stats-table-wrap">
         <table id="curseUsersTable"></table>
       </div>
@@ -225,7 +273,8 @@ title: War3CS2 Stats
   opacity: 0.7;
 }
 
-.race-select-wrap {
+.race-select-wrap,
+.table-search-wrap {
   display: flex;
   width: 100%;
   max-width: 100%;
@@ -233,13 +282,15 @@ title: War3CS2 Stats
   font-size: clamp(.5rem, 1.2vw, 1rem);
 }
 
-.race-select-wrap .ts-wrapper {
+.race-select-wrap .ts-wrapper,
+.table-search-wrap .ts-wrapper {
   flex: 1 1 auto;
   min-width: 0;
   width: 100%;
 }
 
-.race-select-wrap .ts-control {
+.race-select-wrap .ts-control,
+.table-search-wrap .ts-control {
   width: 100%;
   min-height: 0;
   padding: 0.5em 0.75em;
@@ -247,11 +298,13 @@ title: War3CS2 Stats
   line-height: 1.25;
 }
 
-.race-select-wrap .ts-control input {
+.race-select-wrap .ts-control input,
+.table-search-wrap .ts-control input {
   font-size: inherit;
 }
 
-.race-select-button {
+.race-select-button,
+.table-search-button {
   flex: 0 0 clamp(1.5rem, 3vw, 2.5rem);
   width: clamp(1.5rem, 3vw, 2.5rem);
   padding: 0;
@@ -291,6 +344,7 @@ let mostSlainPlayers = [];
 let mostSlappedPlayers = [];
 let adminCommandUsage = [];
 let raceColumns = [];
+let tableFilters = {};
 
 function escapeHTML(value) {
   return String(value ?? "")
@@ -373,6 +427,58 @@ async function fetchJson(filename) {
 }
 
 const sortStates = {};
+
+function uniqueSortedValues(rows, key) {
+  return [...new Set(
+    rows
+      .map(row => row[key])
+      .filter(value => value !== undefined && value !== null && String(value).trim() !== "")
+      .map(value => String(value))
+  )].sort((a, b) => a.localeCompare(b));
+}
+
+function applyTableFilter(filterId, rows, key) {
+  const value = tableFilters[filterId];
+
+  if (!value) {
+    return rows;
+  }
+
+  return rows.filter(row => String(row[key] ?? "") === String(value));
+}
+
+function setupTableSearch(selectId, rows, key, onChange) {
+  const select = document.getElementById(selectId);
+  if (!select) return;
+
+  if (select.tomselect) {
+    select.tomselect.destroy();
+  }
+
+  const options = uniqueSortedValues(rows, key).map(value => ({
+    value,
+    text: value
+  }));
+
+  new TomSelect(`#${selectId}`, {
+    options,
+    valueField: "value",
+    labelField: "text",
+    searchField: "text",
+    create: false,
+    maxOptions: null,
+    allowEmptyOption: true,
+    openOnFocus: false,
+    placeholder: "Show all",
+    onType: function () {
+      this.open();
+    },
+    onChange: value => {
+      tableFilters[selectId] = value || "";
+      onChange();
+    }
+  });
+}
 
 function renderTable(tableId, columns, rows) {
   const table = document.getElementById(tableId);
@@ -487,10 +593,12 @@ function setupRaceDropdown() {
   });
 }
 
-document.querySelectorAll(".race-select-button").forEach(button => {
+document.querySelectorAll(".race-select-button, .table-search-button").forEach(button => {
   button.addEventListener("click", () => {
     const select = document.getElementById(button.dataset.target);
     const tom = select.tomselect;
+
+    if (!tom) return;
 
     if (tom.isOpen) {
       tom.close();
@@ -511,11 +619,13 @@ function renderMapStats() {
     }))
     .sort((a, b) => b.minutes_played - a.minutes_played);
 
+  const filteredRows = applyTableFilter("mapStatsSearch", rows, "map_name");
+
   renderTable("mapStats", [
     { key: "map_name", label: "Map Name" },
     { key: "minutes_played", label: "Minutes Played" },
     { key: "last_seen", label: "Last Seen", sortKey: "last_seen_sort" }
-  ], rows);
+  ], filteredRows);
 }
 
 function renderHighestRaceLevel(raceColumn) {
@@ -557,11 +667,13 @@ function renderHighestAnyRace() {
     .filter(row => row.level > 0)
     .sort((a, b) => b.level - a.level);
 
+  const filteredRows = applyTableFilter("highestAnyRaceSearch", rows, "player_name");
+
   renderTable("highestAnyRace", [
     { key: "player_name", label: "Player Name" },
     { key: "level", label: "Level" },
     { key: "race", label: "Race" }
-  ], rows);
+  ], filteredRows);
 }
 
 function renderHighestTotalLevels() {
@@ -573,10 +685,12 @@ function renderHighestTotalLevels() {
     .filter(row => row.levels > 0)
     .sort((a, b) => b.levels - a.levels);
 
+  const filteredRows = applyTableFilter("highestTotalLevelsSearch", rows, "player_name");
+
   renderTable("highestTotalLevels", [
     { key: "player_name", label: "Player Name" },
     { key: "levels", label: "Levels" }
-  ], rows);
+  ], filteredRows);
 }
 
 function renderRaceTime(raceColumn) {
@@ -603,10 +717,12 @@ function renderTotalTime() {
     .filter(row => row.minutes > 0)
     .sort((a, b) => b.minutes - a.minutes);
 
+  const filteredRows = applyTableFilter("totalTimeTableSearch", rows, "player_name");
+
   renderTable("totalTimeTable", [
     { key: "player_name", label: "Player Name" },
     { key: "minutes", label: "Minutes" }
-  ], rows);
+  ], filteredRows);
 }
 
 function renderTopChatters() {
@@ -617,10 +733,12 @@ function renderTopChatters() {
     }))
     .sort((a, b) => b.message_count - a.message_count);
 
+  const filteredRows = applyTableFilter("topChattersSearch", rows, "player_name");
+
   renderTable("topChattersTable", [
     { key: "player_name", label: "Player Name" },
     { key: "message_count", label: "Messages" }
-  ], rows);
+  ], filteredRows);
 }
 
 function renderTopCurseUsers() {
@@ -633,12 +751,14 @@ function renderTopCurseUsers() {
     }))
     .sort((a, b) => b.curse_count - a.curse_count);
 
+  const filteredRows = applyTableFilter("curseUsersSearch", rows, "player_name");
+
   renderTable("curseUsersTable", [
     { key: "player_name", label: "Player Name" },
     { key: "curse_count", label: "Curse Count" },
     { key: "curse_messages", label: "Messages With Curses" },
     { key: "matched_words_display", label: "Top Words" }
-  ], rows);
+  ], filteredRows);
 }
 
 function renderMostSlainPlayers() {
@@ -650,11 +770,13 @@ function renderMostSlainPlayers() {
     }))
     .sort((a, b) => b.slain_count - a.slain_count);
 
+  const filteredRows = applyTableFilter("mostSlainSearch", rows, "player_name");
+
   renderTable("mostSlainTable", [
     { key: "player_name", label: "Player Name" },
     { key: "slain_count", label: "Slays" },
     { key: "aliases_display", label: "Aliases" }
-  ], rows);
+  ], filteredRows);
 }
 
 function renderMostSlappedPlayers() {
@@ -667,12 +789,14 @@ function renderMostSlappedPlayers() {
     }))
     .sort((a, b) => b.slapped_count - a.slapped_count);
 
+  const filteredRows = applyTableFilter("mostSlappedSearch", rows, "player_name");
+
   renderTable("mostSlappedTable", [
     { key: "player_name", label: "Player Name" },
     { key: "slapped_count", label: "Slaps" },
     { key: "total_slap_damage", label: "Total Damage" },
     { key: "aliases_display", label: "Aliases" }
-  ], rows);
+  ], filteredRows);
 }
 
 function renderAdminCommandUsage() {
@@ -684,11 +808,13 @@ function renderAdminCommandUsage() {
     }))
     .sort((a, b) => b.command_count - a.command_count);
 
+  const filteredRows = applyTableFilter("adminCommandsSearch", rows, "admin_name");
+
   renderTable("adminCommandsTable", [
     { key: "admin_name", label: "Admin" },
     { key: "command", label: "Command" },
     { key: "command_count", label: "Uses" }
-  ], rows);
+  ], filteredRows);
 }
 
 function renderCumCounter() {
@@ -742,6 +868,15 @@ async function init() {
   .sort((a, b) => prettyName(a).localeCompare(prettyName(b)));
 
   setupRaceDropdown();
+  setupTableSearch("mapStatsSearch", mapPlaytime, "map_name", renderMapStats);
+  setupTableSearch("highestAnyRaceSearch", raceLevels, "player_name", renderHighestAnyRace);
+  setupTableSearch("highestTotalLevelsSearch", raceLevels, "player_name", renderHighestTotalLevels);
+  setupTableSearch("totalTimeTableSearch", racePlaytime, "player_name", renderTotalTime);
+  setupTableSearch("topChattersSearch", topChatters, "player_name", renderTopChatters);
+  setupTableSearch("curseUsersSearch", topCurseUsers, "player_name", renderTopCurseUsers);
+  setupTableSearch("mostSlainSearch", mostSlainPlayers, "player_name", renderMostSlainPlayers);
+  setupTableSearch("mostSlappedSearch", mostSlappedPlayers, "player_name", renderMostSlappedPlayers);
+  setupTableSearch("adminCommandsSearch", adminCommandUsage, "admin_name", renderAdminCommandUsage);
 
   renderMapStats();
   renderHighestAnyRace();
