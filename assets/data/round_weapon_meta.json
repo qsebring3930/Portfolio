@@ -4,11 +4,11 @@
     "item_name": "Kevlar Vest + Helmet",
     "item_category": "Equipment",
     "price": 1000,
-    "total_bought": 10,
-    "bought_in_wins": 4,
-    "bought_in_losses": 5,
-    "win_buy_percent": "40.00",
-    "total_spent": 10000
+    "total_bought": 17,
+    "bought_in_wins": 7,
+    "bought_in_losses": 9,
+    "win_buy_percent": "41.18",
+    "total_spent": 17000
   },
   {
     "def_index": 55,
@@ -53,6 +53,17 @@
     "bought_in_losses": 0,
     "win_buy_percent": "100.00",
     "total_spent": 1700
+  },
+  {
+    "def_index": 33,
+    "item_name": "MP7",
+    "item_category": "Mid-Tier",
+    "price": 1400,
+    "total_bought": 1,
+    "bought_in_wins": 0,
+    "bought_in_losses": 1,
+    "win_buy_percent": "0.00",
+    "total_spent": 1400
   },
   {
     "def_index": 50,
