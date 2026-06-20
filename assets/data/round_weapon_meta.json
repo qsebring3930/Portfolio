@@ -4,33 +4,55 @@
     "item_name": "Kevlar Vest + Helmet",
     "item_category": "Equipment",
     "price": 1000,
-    "total_bought": 56,
-    "bought_in_wins": 25,
-    "bought_in_losses": 30,
-    "win_buy_percent": "44.64",
-    "total_spent": 56000
-  },
-  {
-    "def_index": 55,
-    "item_name": "Defuse Kit",
-    "item_category": "Equipment",
-    "price": 400,
-    "total_bought": 14,
-    "bought_in_wins": 6,
-    "bought_in_losses": 7,
-    "win_buy_percent": "42.86",
-    "total_spent": 5600
+    "total_bought": 66,
+    "bought_in_wins": 32,
+    "bought_in_losses": 33,
+    "win_buy_percent": "48.48",
+    "total_spent": 66000
   },
   {
     "def_index": 60,
     "item_name": "M4A1-S",
     "item_category": "Rifle",
     "price": 2900,
-    "total_bought": 12,
-    "bought_in_wins": 6,
+    "total_bought": 21,
+    "bought_in_wins": 12,
+    "bought_in_losses": 9,
+    "win_buy_percent": "57.14",
+    "total_spent": 60900
+  },
+  {
+    "def_index": 55,
+    "item_name": "Defuse Kit",
+    "item_category": "Equipment",
+    "price": 400,
+    "total_bought": 21,
+    "bought_in_wins": 12,
+    "bought_in_losses": 8,
+    "win_buy_percent": "57.14",
+    "total_spent": 8400
+  },
+  {
+    "def_index": 7,
+    "item_name": "AK-47",
+    "item_category": "Rifle",
+    "price": 2700,
+    "total_bought": 17,
+    "bought_in_wins": 4,
+    "bought_in_losses": 13,
+    "win_buy_percent": "23.53",
+    "total_spent": 45900
+  },
+  {
+    "def_index": 50,
+    "item_name": "Kevlar Vest",
+    "item_category": "Equipment",
+    "price": 650,
+    "total_bought": 14,
+    "bought_in_wins": 8,
     "bought_in_losses": 6,
-    "win_buy_percent": "50.00",
-    "total_spent": 34800
+    "win_buy_percent": "57.14",
+    "total_spent": 9100
   },
   {
     "def_index": 23,
@@ -42,28 +64,6 @@
     "bought_in_losses": 6,
     "win_buy_percent": "41.67",
     "total_spent": 16800
-  },
-  {
-    "def_index": 50,
-    "item_name": "Kevlar Vest",
-    "item_category": "Equipment",
-    "price": 650,
-    "total_bought": 11,
-    "bought_in_wins": 5,
-    "bought_in_losses": 6,
-    "win_buy_percent": "45.45",
-    "total_spent": 7150
-  },
-  {
-    "def_index": 7,
-    "item_name": "AK-47",
-    "item_category": "Rifle",
-    "price": 2700,
-    "total_bought": 8,
-    "bought_in_wins": 2,
-    "bought_in_losses": 6,
-    "win_buy_percent": "25.00",
-    "total_spent": 21600
   },
   {
     "def_index": 44,

@@ -48,6 +48,22 @@
     "economy_note": "Positive unexplained money; likely betting payout"
   },
   {
+    "player_name": "TheSpaniard400HumanAllianceLvl15",
+    "steam_id": "32167233",
+    "match_id": "777ed00f4f02efc3dfb9404c186be902698bd6ccb2165f258f6b3c5273978037",
+    "source_file": "backup_round09.txt",
+    "round_number": 9,
+    "start_cash": 6300,
+    "estimated_spent": 11000,
+    "cash_after_buy": -4700,
+    "known_round_income": 6300,
+    "expected_next_cash": 1600,
+    "actual_next_cash": 8850,
+    "inferred_extra_money": 7250,
+    "inferred_betting_money": 7250,
+    "economy_note": "Positive unexplained money; likely betting payout"
+  },
+  {
     "player_name": "IceColdFrostyPaladinLvl19",
     "steam_id": "31912388",
     "match_id": "cc5b4edc819e7c3fe7c1d85b96dd87ee7aca50e8730e295840f0d1c0f29d49e0",
@@ -93,6 +109,22 @@
     "actual_next_cash": 8800,
     "inferred_extra_money": 5300,
     "inferred_betting_money": 5300,
+    "economy_note": "Positive unexplained money; likely betting payout"
+  },
+  {
+    "player_name": "STANPitLordLvl16",
+    "steam_id": "27614129",
+    "match_id": "777ed00f4f02efc3dfb9404c186be902698bd6ccb2165f258f6b3c5273978037",
+    "source_file": "backup_round09.txt",
+    "round_number": 9,
+    "start_cash": 13300,
+    "estimated_spent": 15600,
+    "cash_after_buy": -2300,
+    "known_round_income": 13300,
+    "expected_next_cash": 11000,
+    "actual_next_cash": 13800,
+    "inferred_extra_money": 2800,
+    "inferred_betting_money": 2800,
     "economy_note": "Positive unexplained money; likely betting payout"
   },
   {
