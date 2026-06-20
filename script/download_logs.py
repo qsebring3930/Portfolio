@@ -2464,124 +2464,6 @@ def export_round_backup_jsons(cursor):
     """)
     write_json(data_dir / "round_player_money_summary.json", rows_to_dicts(cursor))
 
-    cursor.execute("""
-        SELECT
-            player_name,
-            steam_id,
-            SUM(CASE WHEN economy_note <> 'Impossible extra money; ignored' THEN COALESCE(inferred_extra_money, 0) ELSE 0 END) AS total_net_bet_winnings,
-            SUM(CASE WHEN inferred_extra_money > 0 AND economy_note <> 'Impossible extra money; ignored' THEN inferred_extra_money ELSE 0 END) AS total_positive_bet_winnings,
-            SUM(CASE WHEN inferred_extra_money < 0 AND economy_note <> 'Impossible extra money; ignored' THEN inferred_extra_money ELSE 0 END) AS total_negative_bet_winnings,
-            COUNT(CASE WHEN inferred_extra_money <> 0 AND economy_note <> 'Impossible extra money; ignored' THEN 1 END) AS rounds_with_unexplained_money
-        FROM round_backup_player_economy_rounds
-        GROUP BY player_name, steam_id
-        ORDER BY total_net_bet_winnings DESC;
-    """)
-    write_json(data_dir / "round_player_betting_summary.json", rows_to_dicts(cursor))
-
-    cursor.execute("""
-        SELECT
-            player_name,
-            steam_id,
-            match_id,
-            source_file,
-            round_number,
-            start_cash,
-            estimated_spent,
-            cash_after_buy,
-            known_round_income,
-            expected_next_cash,
-            actual_next_cash,
-            inferred_extra_money,
-            inferred_betting_money,
-            economy_note
-        FROM round_backup_player_economy_rounds
-        WHERE inferred_betting_money <> 0
-        ORDER BY inferred_betting_money DESC, round_number ASC;
-    """)
-    write_json(data_dir / "round_betting_money.json", rows_to_dicts(cursor))
-
-    cursor.execute("""
-        SELECT
-            player_name,
-            steam_id,
-            match_id,
-            source_file,
-            round_number,
-            round_won,
-            result_code,
-            start_cash,
-            estimated_spent,
-            cash_after_buy,
-            known_round_income,
-            cash_earned,
-            money_saved,
-            equipment_value,
-            expected_next_cash,
-            actual_next_cash,
-            inferred_extra_money,
-            inferred_betting_money,
-            economy_note
-        FROM round_backup_player_economy_rounds
-        ORDER BY match_id ASC, round_number ASC, player_name ASC;
-    """)
-    write_json(data_dir / "round_economy_rounds.json", rows_to_dicts(cursor))
-
-    cursor.execute("""
-        SELECT
-            p.match_id,
-            p.source_file,
-            p.round_number,
-            p.team_side,
-            p.steam_id,
-            e.player_name,
-            p.def_index,
-            COALESCE(i.item_name, CONCAT('DefIndex_', p.def_index)) AS item_name,
-            i.item_category,
-            i.price,
-            p.purchase_delta,
-            p.estimated_spent,
-            e.round_won
-        FROM round_backup_purchase_deltas p
-        LEFT JOIN item_definition_prices i
-          ON i.def_index = p.def_index
-        LEFT JOIN round_backup_player_economy_rounds e
-          ON e.match_id = p.match_id
-         AND e.source_file = p.source_file
-         AND e.round_number = p.round_number
-         AND e.team_side = p.team_side
-         AND e.steam_id = p.steam_id
-        ORDER BY p.match_id ASC, p.round_number ASC, e.player_name ASC, i.item_name ASC;
-    """)
-    write_json(data_dir / "round_weapon_purchases.json", rows_to_dicts(cursor))
-
-    cursor.execute("""
-        SELECT
-            p.def_index,
-            COALESCE(i.item_name, CONCAT('DefIndex_', p.def_index)) AS item_name,
-            i.item_category,
-            i.price,
-            SUM(p.purchase_delta) AS total_bought,
-            SUM(CASE WHEN e.round_won = 1 THEN p.purchase_delta ELSE 0 END) AS bought_in_wins,
-            SUM(CASE WHEN e.round_won = 0 THEN p.purchase_delta ELSE 0 END) AS bought_in_losses,
-            CAST(
-                100.0 * SUM(CASE WHEN e.round_won = 1 THEN p.purchase_delta ELSE 0 END)
-                / NULLIF(SUM(p.purchase_delta), 0)
-                AS DECIMAL(10, 2)
-            ) AS win_buy_percent,
-            SUM(COALESCE(p.estimated_spent, 0)) AS total_spent
-        FROM round_backup_purchase_deltas p
-        LEFT JOIN item_definition_prices i
-          ON i.def_index = p.def_index
-        LEFT JOIN round_backup_player_economy_rounds e
-          ON e.match_id = p.match_id
-         AND e.source_file = p.source_file
-         AND e.round_number = p.round_number
-         AND e.team_side = p.team_side
-         AND e.steam_id = p.steam_id
-        GROUP BY p.def_index, i.item_name, i.item_category, i.price
-        ORDER BY total_bought DESC, total_spent DESC;
-    """)
-    write_json(data_dir / "round_weapon_meta.json", rows_to_dicts(cursor))
 
     cursor.execute("""
         WITH player_rounds AS (
@@ -2827,7 +2709,7 @@ if __name__ == "__main__":
         # ------------------------------------------------------------
         timed_step("Rebuild purchase deltas", rebuild_round_purchase_deltas, cursor, touched_backup_rounds)
         timed_step("Rebuild player economy", rebuild_round_player_economy, cursor, touched_backup_rounds)
-        timed_step("Rebuild inferred betting", rebuild_inferred_betting_money, cursor, touched_backup_rounds)
+        #timed_step("Rebuild inferred betting", rebuild_inferred_betting_money, cursor, touched_backup_rounds)
 
         # ------------------------------------------------------------
         # 5. Commit SQL before deleting local files.
