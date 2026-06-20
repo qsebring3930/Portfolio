@@ -841,9 +841,6 @@ def insert_round_backup_weapon_purchases(cursor, match_id, source_file, team_sid
         
         if def_index is None or purchase_count is None:
             continue
-        
-        if purchase_count <= 0:
-            continue
 
         cursor.execute("""
             IF NOT EXISTS (
