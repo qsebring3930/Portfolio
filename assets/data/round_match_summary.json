@@ -1,17 +1,17 @@
 [
   {
-    "match_id": "68cb419c4ef83eecc8d0246661f0d83d1865764d1e062f69e50de594ac585a6f",
-    "source_file": "backup_round13.txt",
-    "backup_timestamp": "2026-06-20 18:39:44",
-    "map_name": "de_cbble_csgo_final_d",
-    "current_round": 13,
+    "match_id": "cb828e2389b1b1c560c2e66bab1f6a17255f56fc25a7bcc7cc033a3e6aa71467",
+    "source_file": "backup_round12.txt",
+    "backup_timestamp": "2026-06-20 18:59:09",
+    "map_name": "de_neptune",
+    "current_round": 12,
     "team1_name": "Alliance",
     "team2_name": "Horde",
     "first_half_team1_score": 0,
     "first_half_team2_score": 0,
-    "loser_most_recent_team": "T",
-    "consecutive_t_loses": 1,
-    "consecutive_ct_loses": 2,
-    "spawn_points_cfg": -381750272
+    "loser_most_recent_team": "CT",
+    "consecutive_t_loses": null,
+    "consecutive_ct_loses": 4,
+    "spawn_points_cfg": 1890392837
   }
 ]
