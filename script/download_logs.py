@@ -2741,7 +2741,7 @@ if __name__ == "__main__":
         # 3. Import local downloaded files into SQL.
         # ------------------------------------------------------------
         processed_log_files = import_server_logs(cursor)
-        processed_backup_files, touched_backup_rounds = import_round_backups(cursor, backup_path)
+        processed_backup_files, touched_backup_rounds = import_round_backups(cursor, backup_paths)
 
         # ------------------------------------------------------------
         # 4. Rebuild derived economy/betting tables.
