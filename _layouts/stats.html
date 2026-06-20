@@ -10,9 +10,9 @@ title: War3CS2 Stats
 
     <div class="stats-tabs">
       <button class="stats-tab active" data-tab="maps">Map Stats</button>
-      <button class="stats-tab" data-tab="race-level">Highest Race Level</button>
-      <button class="stats-tab" data-tab="any-race">Highest Any Race</button>
-      <button class="stats-tab" data-tab="total-levels">Highest Total Levels</button>
+      <button class="stats-tab" data-tab="race-level">Race Top Rank</button>
+      <button class="stats-tab" data-tab="any-race">Any Race Top Rank</button>
+      <button class="stats-tab" data-tab="total-levels">Top Rank</button>
       <button class="stats-tab" data-tab="race-time">Race Time</button>
       <button class="stats-tab" data-tab="total-time">Total Time</button>
       <button class="stats-tab" data-tab="top-chatters">Top Chatters</button>
@@ -20,6 +20,11 @@ title: War3CS2 Stats
       <button class="stats-tab" data-tab="most-slain">Most Slain</button>
       <button class="stats-tab" data-tab="most-slapped">Most Slapped</button>
       <button class="stats-tab" data-tab="admin-commands">Admin Commands</button>
+      <button class="stats-tab" data-tab="combat-stats">Combat Totals</button>
+      <button class="stats-tab" data-tab="performance-stats">Performance Stats</button>
+      <button class="stats-tab" data-tab="weapon-kills">Weapon Kills</button>
+      <button class="stats-tab" data-tab="money-summary">Money / Betting</button>
+      <button class="stats-tab" data-tab="defuse-kits">Defuse Kits</button>
     </div>
 
     <section class="stats-panel active" data-panel="maps">
@@ -157,7 +162,65 @@ title: War3CS2 Stats
 
       <div id="cumCounter" class="cum-counter"></div>
     </section>
+    <section class="stats-panel" data-panel="combat-stats">
+      <label for="combatStatsSearch">Player:</label>
+      <div class="table-search-wrap">
+        <select id="combatStatsSearch"></select>
+        <button type="button" class="table-search-button" data-target="combatStatsSearch">▼</button>
+      </div>
 
+      <div class="stats-table-wrap">
+        <table id="combatStatsTable"></table>
+      </div>
+    </section>
+
+    <section class="stats-panel" data-panel="performance-stats">
+      <label for="performanceStatsSearch">Player:</label>
+      <div class="table-search-wrap">
+        <select id="performanceStatsSearch"></select>
+        <button type="button" class="table-search-button" data-target="performanceStatsSearch">▼</button>
+      </div>
+
+      <div class="stats-table-wrap">
+        <table id="performanceStatsTable"></table>
+      </div>
+    </section>
+
+    <section class="stats-panel" data-panel="weapon-kills">
+      <label for="weaponKillsSearch">Player:</label>
+      <div class="table-search-wrap">
+        <select id="weaponKillsSearch"></select>
+        <button type="button" class="table-search-button" data-target="weaponKillsSearch">▼</button>
+      </div>
+
+      <div class="stats-table-wrap">
+        <table id="weaponKillsTable"></table>
+      </div>
+    </section>
+
+    <section class="stats-panel" data-panel="money-summary">
+      <label for="moneySummarySearch">Player:</label>
+      <div class="table-search-wrap">
+        <select id="moneySummarySearch"></select>
+        <button type="button" class="table-search-button" data-target="moneySummarySearch">▼</button>
+      </div>
+
+      <div class="stats-table-wrap">
+        <table id="moneySummaryTable"></table>
+      </div>
+    </section>
+
+    <section class="stats-panel" data-panel="defuse-kits">
+      <label for="defuseKitsSearch">Player:</label>
+      <div class="table-search-wrap">
+        <select id="defuseKitsSearch"></select>
+        <button type="button" class="table-search-button" data-target="defuseKitsSearch">▼</button>
+      </div>
+
+      <div class="stats-table-wrap">
+        <table id="defuseKitsTable"></table>
+      </div>
+    </section>
   </div>
 </div>
 
@@ -349,6 +412,10 @@ let adminCommandUsage = [];
 let raceColumns = [];
 let rtvRequests = {};
 let tableFilters = {};
+let roundScoreboard = [];
+let weaponKills = [];
+let moneySummary = [];
+let defuseKits = [];
 
 function escapeHTML(value) {
   return String(value ?? "")
@@ -361,6 +428,50 @@ function escapeHTML(value) {
 
 function prettyName(str) {
   return str.replaceAll("_", " ").replace(/\b\w/g, c => c.toUpperCase());
+}
+
+function compactName(value) {
+  return String(value ?? "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "");
+}
+
+function cleanRoundPlayerName(name) {
+  let clean = String(name ?? "").trim();
+
+  if (!clean) return "";
+
+  // Remove trailing level first:
+  // ZickziiEnigmaLvl21 -> ZickziiEnigma
+  clean = clean.replace(/Lvl\d+$/i, "");
+
+  // Remove trailing race name using raceColumns:
+  // ZickziiEnigma -> Zickzii
+  // GraveyardKeeperHydralisk -> GraveyardKeeper
+  const raceNames = raceColumns
+    .flatMap(race => [
+      prettyName(race),
+      race,
+      race.replaceAll("_", ""),
+      prettyName(race).replaceAll(" ", "")
+    ])
+    .map(race => ({
+      display: race,
+      compact: compactName(race)
+    }))
+    .filter(race => race.compact.length > 0)
+    .sort((a, b) => b.compact.length - a.compact.length);
+
+  const cleanCompact = compactName(clean);
+
+  for (const race of raceNames) {
+    if (cleanCompact.endsWith(race.compact)) {
+      const cutLength = race.display.replaceAll(" ", "").length;
+      return clean.slice(0, Math.max(0, clean.length - cutLength)).trim() || clean;
+    }
+  }
+
+  return clean;
 }
 
 function forceUtc(utcString) {
@@ -482,6 +593,33 @@ function setupTableSearch(selectId, rows, key, onChange) {
       onChange();
     }
   });
+}
+
+function groupRowsByCleanPlayer(rows, numericFields) {
+  const grouped = {};
+
+  rows.forEach(row => {
+    const playerName = cleanRoundPlayerName(row.player_name);
+
+    if (!playerName) return;
+
+    if (!grouped[playerName]) {
+      grouped[playerName] = {
+        ...row,
+        player_name: playerName
+      };
+
+      numericFields.forEach(field => {
+        grouped[playerName][field] = 0;
+      });
+    }
+
+    numericFields.forEach(field => {
+      grouped[playerName][field] += Number(row[field] || 0);
+    });
+  });
+
+  return Object.values(grouped);
 }
 
 function renderTable(tableId, columns, rows) {
@@ -859,8 +997,137 @@ function renderRtvCounter() {
   `;
 }
 
+function getGroupedPlayerStats() {
+  return groupRowsByCleanPlayer(roundScoreboard, [
+    "kills",
+    "deaths",
+    "assists",
+    "mvps",
+    "score",
+    "damage",
+    "rounds_played"
+  ]).map(row => ({
+    ...row,
+    adr: Number(row.rounds_played || 0) > 0
+      ? Number((Number(row.damage || 0) / Number(row.rounds_played || 0)).toFixed(2))
+      : Number(row.adr || 0),
+    kd_ratio: Number(row.deaths || 0) > 0
+      ? Number((Number(row.kills || 0) / Number(row.deaths || 0)).toFixed(2))
+      : Number(row.kills || 0),
+    kad_ratio: Number(row.deaths || 0) > 0
+      ? Number(((Number(row.kills || 0) + Number(row.assists || 0)) / Number(row.deaths || 0)).toFixed(2))
+      : Number(row.kills || 0) + Number(row.assists || 0),
+  }));
+}
+
+function renderCombatStats() {
+  const rows = getGroupedPlayerStats()
+    .sort((a, b) => b.kills - a.kills);
+
+  const filteredRows = applyTableFilter("combatStatsSearch", rows, "player_name");
+
+  renderTable("combatStatsTable", [
+    { key: "player_name", label: "Player" },
+    { key: "kills", label: "Kills" },
+    { key: "deaths", label: "Deaths" },
+    { key: "assists", label: "Assists" },
+    { key: "mvps", label: "MVPs" },
+    { key: "score", label: "Score" }
+  ], filteredRows);
+}
+
+function renderPerformanceStats() {
+  const rows = getGroupedPlayerStats()
+    .sort((a, b) => b.adr - a.adr);
+
+  const filteredRows = applyTableFilter("performanceStatsSearch", rows, "player_name");
+
+  renderTable("performanceStatsTable", [
+    { key: "player_name", label: "Player" },
+    { key: "damage", label: "Damage" },
+    { key: "adr", label: "ADR" },
+    { key: "kd_ratio", label: "KD" },
+    { key: "kad_ratio", label: "KAD" }
+  ], filteredRows);
+}
+
+function renderWeaponKills() {
+  const grouped = {};
+
+  weaponKills.forEach(row => {
+    const playerName = cleanRoundPlayerName(row.player_name);
+    const weaponCategory = row.weapon_category || row.weapon || row.weapon_name || row.item_name || "";
+
+    if (!playerName || !weaponCategory) return;
+
+    const key = `${playerName}|||${weaponCategory}`;
+
+    if (!grouped[key]) {
+      grouped[key] = {
+        weapon_category: weaponCategory,
+        player_name: playerName,
+        kills: 0
+      };
+    }
+
+    grouped[key].kills += Number(row.kills || row.kill_count || 0);
+  });
+
+  const rows = Object.values(grouped)
+    .sort((a, b) => b.kills - a.kills);
+
+  const filteredRows = applyTableFilter("weaponKillsSearch", rows, "player_name");
+
+  renderTable("weaponKillsTable", [
+    { key: "weapon_category", label: "Weapon Category" },
+    { key: "player_name", label: "Player" },
+    { key: "kills", label: "Kills" }
+  ], filteredRows);
+}
+
+function renderMoneySummary() {
+  const rows = groupRowsByCleanPlayer(moneySummary, [
+    "money_spent",
+    "net_betting",
+    "betting_won",
+    "betting_lost"
+  ]).sort((a, b) => b.net_betting - a.net_betting);
+
+  const filteredRows = applyTableFilter("moneySummarySearch", rows, "player_name");
+
+  renderTable("moneySummaryTable", [
+    { key: "player_name", label: "Player" },
+    { key: "money_spent", label: "Money Spent" },
+    { key: "net_betting", label: "Net Betting" },
+    { key: "betting_won", label: "Betting Won" },
+    { key: "betting_lost", label: "Betting Lost" }
+  ], filteredRows);
+}
+
+function renderDefuseKits() {
+  const rows = groupRowsByCleanPlayer(defuseKits, [
+    "defuse_kits_bought",
+    "rounds_played"
+  ]).map(row => ({
+    ...row,
+    defuse_purchase_rate:
+      Number(row.rounds_played || 0) > 0
+        ? Number(((Number(row.defuse_kits_bought || 0) / Number(row.rounds_played || 0)) * 100).toFixed(2))
+        : 0
+  })).sort((a, b) => b.defuse_purchase_rate - a.defuse_purchase_rate);
+
+  const filteredRows = applyTableFilter("defuseKitsSearch", rows, "player_name");
+
+  renderTable("defuseKitsTable", [
+    { key: "player_name", label: "Player" },
+    { key: "defuse_kits_bought", label: "Kits Bought" },
+    { key: "rounds_played", label: "Rounds" },
+    { key: "defuse_purchase_rate", label: "Kit %" }
+  ], filteredRows);
+}
+
 async function init() {
-  [
+[
   mapPlaytime,
   racePlaytime,
   raceLevels,
@@ -869,7 +1136,11 @@ async function init() {
   mostSlainPlayers,
   mostSlappedPlayers,
   adminCommandUsage,
-  rtvRequests
+  rtvRequests,
+  roundScoreboard,
+  weaponKills,
+  moneySummary,
+  defuseKits
 ] = await Promise.all([
   fetchJson("map_playtime.json"),
   fetchJson("race_playtime.json"),
@@ -879,11 +1150,40 @@ async function init() {
   fetchJson("most_slain_players.json"),
   fetchJson("most_slapped_players.json"),
   fetchJson("admin_command_usage.json"),
-  fetchJson("rtv_requests.json")
+  fetchJson("rtv_requests.json"),
+  fetchJson("round_scoreboard.json"),
+  fetchJson("round_top_weapon_category_kills.json"),
+  fetchJson("round_player_money_summary.json"),
+  fetchJson("round_defuse_purchase_rate.json")
 ]);
 
   raceColumns = getRaceColumns(racePlaytime)
   .sort((a, b) => prettyName(a).localeCompare(prettyName(b)));
+
+  // Clean War3 round-backup names like ZickziiEnigmaLvl21 -> Zickzii
+  roundScoreboard = roundScoreboard.map(row => ({
+    ...row,
+    player_name: cleanRoundPlayerName(row.player_name),
+    raw_player_name: row.player_name
+  }));
+
+  weaponKills = weaponKills.map(row => ({
+    ...row,
+    player_name: cleanRoundPlayerName(row.player_name),
+    raw_player_name: row.player_name
+  }));
+
+  moneySummary = moneySummary.map(row => ({
+    ...row,
+    player_name: cleanRoundPlayerName(row.player_name),
+    raw_player_name: row.player_name
+  }));
+
+  defuseKits = defuseKits.map(row => ({
+    ...row,
+    player_name: cleanRoundPlayerName(row.player_name),
+    raw_player_name: row.player_name
+  }));
 
   setupRaceDropdown();
   setupTableSearch("mapStatsSearch", mapPlaytime, "map_name", renderMapStats);
@@ -895,6 +1195,11 @@ async function init() {
   setupTableSearch("mostSlainSearch", mostSlainPlayers, "player_name", renderMostSlainPlayers);
   setupTableSearch("mostSlappedSearch", mostSlappedPlayers, "player_name", renderMostSlappedPlayers);
   setupTableSearch("adminCommandsSearch", adminCommandUsage, "admin_name", renderAdminCommandUsage);
+  setupTableSearch("combatStatsSearch", roundScoreboard, "player_name", renderCombatStats);
+  setupTableSearch("performanceStatsSearch", roundScoreboard, "player_name", renderPerformanceStats);
+  setupTableSearch("weaponKillsSearch", weaponKills, "player_name", renderWeaponKills);
+  setupTableSearch("moneySummarySearch", moneySummary, "player_name", renderMoneySummary);
+  setupTableSearch("defuseKitsSearch", defuseKits, "player_name", renderDefuseKits);
 
   renderMapStats();
   renderRtvCounter();
@@ -907,6 +1212,11 @@ async function init() {
   renderMostSlappedPlayers();
   renderAdminCommandUsage();
   renderCumCounter();
+  renderCombatStats();
+  renderPerformanceStats();
+  renderWeaponKills();
+  renderMoneySummary();
+  renderDefuseKits();
 
   const defaultRace = raceColumns[0];
 
