@@ -1,17 +1,17 @@
 [
   {
-    "match_id": "777ed00f4f02efc3dfb9404c186be902698bd6ccb2165f258f6b3c5273978037",
-    "source_file": "backup_round13.txt",
-    "backup_timestamp": "2026-06-20 08:08:00",
-    "map_name": "de_mutiny",
-    "current_round": 13,
+    "match_id": "d11817b45a569769e182914a562154e0501a5eb6c93b6f9c7b91344a565897ee",
+    "source_file": "backup_round15.txt",
+    "backup_timestamp": "2026-06-20 08:30:13",
+    "map_name": "cs_workout_d_prefab",
+    "current_round": 15,
     "team1_name": "Alliance",
     "team2_name": "Horde",
     "first_half_team1_score": 0,
     "first_half_team2_score": 0,
-    "loser_most_recent_team": "T",
-    "consecutive_t_loses": 1,
+    "loser_most_recent_team": "CT",
+    "consecutive_t_loses": null,
     "consecutive_ct_loses": 1,
-    "spawn_points_cfg": -302960155
+    "spawn_points_cfg": 642839437
   }
 ]

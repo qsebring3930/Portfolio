@@ -4,153 +4,54 @@
     "item_name": "Kevlar Vest + Helmet",
     "item_category": "Equipment",
     "price": 1000,
-    "total_bought": 66,
-    "bought_in_wins": 32,
-    "bought_in_losses": 33,
-    "win_buy_percent": "48.48",
-    "total_spent": 66000
-  },
-  {
-    "def_index": 60,
-    "item_name": "M4A1-S",
-    "item_category": "Rifle",
-    "price": 2900,
     "total_bought": 21,
-    "bought_in_wins": 12,
-    "bought_in_losses": 9,
-    "win_buy_percent": "57.14",
-    "total_spent": 60900
+    "bought_in_wins": 8,
+    "bought_in_losses": 10,
+    "win_buy_percent": "38.10",
+    "total_spent": 21000
   },
   {
     "def_index": 55,
     "item_name": "Defuse Kit",
     "item_category": "Equipment",
     "price": 400,
-    "total_bought": 21,
-    "bought_in_wins": 12,
-    "bought_in_losses": 8,
-    "win_buy_percent": "57.14",
-    "total_spent": 8400
+    "total_bought": 9,
+    "bought_in_wins": 4,
+    "bought_in_losses": 4,
+    "win_buy_percent": "44.44",
+    "total_spent": 3600
   },
   {
     "def_index": 7,
     "item_name": "AK-47",
     "item_category": "Rifle",
     "price": 2700,
-    "total_bought": 17,
-    "bought_in_wins": 4,
-    "bought_in_losses": 13,
-    "win_buy_percent": "23.53",
-    "total_spent": 45900
-  },
-  {
-    "def_index": 50,
-    "item_name": "Kevlar Vest",
-    "item_category": "Equipment",
-    "price": 650,
-    "total_bought": 14,
-    "bought_in_wins": 8,
-    "bought_in_losses": 6,
-    "win_buy_percent": "57.14",
-    "total_spent": 9100
-  },
-  {
-    "def_index": 23,
-    "item_name": "MP5-SD",
-    "item_category": "Mid-Tier",
-    "price": 1400,
-    "total_bought": 12,
-    "bought_in_wins": 5,
-    "bought_in_losses": 6,
-    "win_buy_percent": "41.67",
-    "total_spent": 16800
-  },
-  {
-    "def_index": 44,
-    "item_name": "HE Grenade",
-    "item_category": "Grenade",
-    "price": 300,
-    "total_bought": 5,
-    "bought_in_wins": 2,
-    "bought_in_losses": 3,
-    "win_buy_percent": "40.00",
-    "total_spent": 1500
-  },
-  {
-    "def_index": 1,
-    "item_name": "Desert Eagle",
-    "item_category": "Pistol",
-    "price": 700,
-    "total_bought": 4,
-    "bought_in_wins": 2,
+    "total_bought": 3,
+    "bought_in_wins": 1,
     "bought_in_losses": 2,
-    "win_buy_percent": "50.00",
-    "total_spent": 2800
+    "win_buy_percent": "33.33",
+    "total_spent": 8100
   },
   {
-    "def_index": 46,
-    "item_name": "Molotov",
-    "item_category": "Grenade",
-    "price": 400,
-    "total_bought": 4,
-    "bought_in_wins": 2,
-    "bought_in_losses": 2,
-    "win_buy_percent": "50.00",
-    "total_spent": 1600
-  },
-  {
-    "def_index": 45,
-    "item_name": "Smoke Grenade",
-    "item_category": "Grenade",
-    "price": 300,
-    "total_bought": 4,
-    "bought_in_wins": 2,
-    "bought_in_losses": 2,
-    "win_buy_percent": "50.00",
-    "total_spent": 1200
-  },
-  {
-    "def_index": 43,
-    "item_name": "Flashbang",
-    "item_category": "Grenade",
-    "price": 200,
-    "total_bought": 4,
-    "bought_in_wins": 2,
-    "bought_in_losses": 2,
-    "win_buy_percent": "50.00",
-    "total_spent": 800
-  },
-  {
-    "def_index": 13,
-    "item_name": "Galil AR",
+    "def_index": 60,
+    "item_name": "M4A1-S",
     "item_category": "Rifle",
-    "price": 1800,
-    "total_bought": 2,
+    "price": 2900,
+    "total_bought": 1,
     "bought_in_wins": 1,
-    "bought_in_losses": 1,
-    "win_buy_percent": "50.00",
-    "total_spent": 3600
+    "bought_in_losses": 0,
+    "win_buy_percent": "100.00",
+    "total_spent": 2900
   },
   {
-    "def_index": 26,
-    "item_name": "PP-Bizon",
-    "item_category": "Mid-Tier",
-    "price": 1400,
-    "total_bought": 2,
-    "bought_in_wins": 1,
-    "bought_in_losses": 1,
-    "win_buy_percent": "50.00",
-    "total_spent": 2800
-  },
-  {
-    "def_index": 2,
-    "item_name": "Dual Berettas",
-    "item_category": "Pistol",
-    "price": 300,
+    "def_index": 40,
+    "item_name": "SSG 08",
+    "item_category": "Sniper",
+    "price": 1700,
     "total_bought": 1,
     "bought_in_wins": 0,
     "bought_in_losses": 1,
     "win_buy_percent": "0.00",
-    "total_spent": 300
+    "total_spent": 1700
   }
 ]
