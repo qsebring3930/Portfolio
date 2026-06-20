@@ -11,6 +11,11 @@ permissions:
 jobs:
   download-logs:
     runs-on: ubuntu-latest
+    timeout-minutes: 9
+
+    concurrency:
+      group: war3cs2-stats-pipeline
+      cancel-in-progress: true
 
     steps:
       - name: Checkout repo
