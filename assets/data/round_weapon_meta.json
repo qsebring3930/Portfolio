@@ -4,33 +4,33 @@
     "item_name": "Kevlar Vest + Helmet",
     "item_category": "Equipment",
     "price": 1000,
-    "total_bought": 21,
-    "bought_in_wins": 8,
-    "bought_in_losses": 10,
-    "win_buy_percent": "38.10",
-    "total_spent": 21000
+    "total_bought": 14,
+    "bought_in_wins": 4,
+    "bought_in_losses": 6,
+    "win_buy_percent": "28.57",
+    "total_spent": 14000
   },
   {
     "def_index": 55,
     "item_name": "Defuse Kit",
     "item_category": "Equipment",
     "price": 400,
-    "total_bought": 9,
-    "bought_in_wins": 4,
-    "bought_in_losses": 4,
-    "win_buy_percent": "44.44",
-    "total_spent": 3600
+    "total_bought": 8,
+    "bought_in_wins": 5,
+    "bought_in_losses": 2,
+    "win_buy_percent": "62.50",
+    "total_spent": 3200
   },
   {
-    "def_index": 7,
-    "item_name": "AK-47",
-    "item_category": "Rifle",
-    "price": 2700,
-    "total_bought": 3,
-    "bought_in_wins": 1,
-    "bought_in_losses": 2,
-    "win_buy_percent": "33.33",
-    "total_spent": 8100
+    "def_index": 23,
+    "item_name": "MP5-SD",
+    "item_category": "Mid-Tier",
+    "price": 1400,
+    "total_bought": 2,
+    "bought_in_wins": 0,
+    "bought_in_losses": 1,
+    "win_buy_percent": "0.00",
+    "total_spent": 2800
   },
   {
     "def_index": 60,
@@ -44,14 +44,25 @@
     "total_spent": 2900
   },
   {
-    "def_index": 40,
-    "item_name": "SSG 08",
-    "item_category": "Sniper",
-    "price": 1700,
+    "def_index": 7,
+    "item_name": "AK-47",
+    "item_category": "Rifle",
+    "price": 2700,
     "total_bought": 1,
     "bought_in_wins": 0,
     "bought_in_losses": 1,
     "win_buy_percent": "0.00",
-    "total_spent": 1700
+    "total_spent": 2700
+  },
+  {
+    "def_index": 50,
+    "item_name": "Kevlar Vest",
+    "item_category": "Equipment",
+    "price": 650,
+    "total_bought": 1,
+    "bought_in_wins": 0,
+    "bought_in_losses": 1,
+    "win_buy_percent": "0.00",
+    "total_spent": 650
   }
 ]
