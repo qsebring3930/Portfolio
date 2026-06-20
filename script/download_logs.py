@@ -2580,8 +2580,9 @@ def export_round_backup_jsons(cursor):
             SELECT
                 player_name,
                 steam_id,
-                COUNT(*) AS rounds_played
+                COUNT(*) AS ct_rounds_played
             FROM round_backup_player_economy_rounds
+            WHERE team_side = 'team2'
             GROUP BY player_name, steam_id
         ),
         defuse_buys AS (
@@ -2597,16 +2598,18 @@ def export_round_backup_jsons(cursor):
              AND e.team_side = p.team_side
              AND e.steam_id = p.steam_id
             WHERE p.def_index = 55
+              AND p.team_side = 'team2'
+              AND e.team_side = 'team2'
             GROUP BY e.player_name, e.steam_id
         )
         SELECT
             pr.player_name,
             pr.steam_id,
             COALESCE(d.defuse_kits_bought, 0) AS defuse_kits_bought,
-            pr.rounds_played,
+            pr.ct_rounds_played AS rounds_played,
             CAST(
                 100.0 * COALESCE(d.defuse_kits_bought, 0)
-                / NULLIF(pr.rounds_played, 0)
+                / NULLIF(pr.ct_rounds_played, 0)
                 AS DECIMAL(10, 2)
             ) AS defuse_purchase_round_percent
         FROM player_rounds pr
