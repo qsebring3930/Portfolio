@@ -1,10 +1,10 @@
 [
   {
-    "match_id": "a7052382c6661517714a10fd82051f9188963f665b9af19730a93302ca57b97c",
-    "source_file": "backup_round12.txt",
-    "backup_timestamp": "2026-06-20 14:59:19",
-    "map_name": "cs_backalley",
-    "current_round": 12,
+    "match_id": "3f5f3cf8874f499d6c2f9101b8ad9bd426cdc4c01578c6bdec6c513446f9ed2c",
+    "source_file": "backup_round05.txt",
+    "backup_timestamp": "2026-06-20 15:10:31",
+    "map_name": "cs_mansion",
+    "current_round": 5,
     "team1_name": "Alliance",
     "team2_name": "Horde",
     "first_half_team1_score": 0,
@@ -12,6 +12,6 @@
     "loser_most_recent_team": "CT",
     "consecutive_t_loses": null,
     "consecutive_ct_loses": 2,
-    "spawn_points_cfg": -1333480775
+    "spawn_points_cfg": 462974084
   }
 ]
