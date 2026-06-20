@@ -185,18 +185,20 @@ def get_sftp_connection_parts():
     return host, port, os.environ["SFTP_USERNAME"], os.environ["SFTP_PASSWORD"]
 
 
-def get_backup_round_index(file_name):
-    match = re.search(r"backup_round(\d+)\.txt$", file_name)
+def get_backup_file_round_number(file_name):
+    match = re.search(r"backup_round(\d+)\.txt$", file_name, re.IGNORECASE)
     return int(match.group(1)) if match else None
 
 
-def make_backup_snapshot_match_id(parsed_backups):
-    """
-    Creates one match_id for the downloaded backup_round00-20 set.
+def get_backup_group_key(data):
+    return (
+        data.get("map") or "",
+        data.get("team1") or "",
+        data.get("team2") or "",
+    )
 
-    This lets future maps reuse backup_round00.txt without colliding
-    with old maps.
-    """
+
+def make_backup_snapshot_match_id(parsed_backups):
     maps = sorted({
         data.get("map") or ""
         for path, file_name, data in parsed_backups
@@ -216,13 +218,154 @@ def make_backup_snapshot_match_id(parsed_backups):
         if value
     })
 
+    file_rounds = sorted({
+        get_backup_file_round_number(file_name)
+        for path, file_name, data in parsed_backups
+        if get_backup_file_round_number(file_name) is not None
+    })
+
     raw = "|".join([
         maps[0] if maps else "",
         timestamps[0] if timestamps else "",
         ",".join(teams),
+        str(file_rounds[0]) if file_rounds else "",
     ])
 
     return hashlib.sha256(raw.encode("utf-8", errors="replace")).hexdigest()
+
+
+def split_parsed_backups_into_match_groups(parsed_backups):
+    """
+    Split downloaded backup_roundXX files into safe match groups.
+
+    This protects against stale files like:
+      backup_round00-03 = new map
+      backup_round11-15 = old map
+
+    Those should not share one match_id.
+    """
+
+    decorated = []
+
+    for path, file_name, data in parsed_backups:
+        file_round = get_backup_file_round_number(file_name)
+
+        if file_round is None:
+            continue
+
+        decorated.append((file_round, path, file_name, data))
+
+    decorated.sort(key=lambda row: row[0])
+
+    groups = []
+    current_group = []
+    current_key = None
+    previous_round = None
+
+    for file_round, path, file_name, data in decorated:
+        group_key = get_backup_group_key(data)
+
+        should_start_new_group = False
+
+        if not current_group:
+            should_start_new_group = True
+        elif group_key != current_key:
+            should_start_new_group = True
+        elif previous_round is not None and file_round != previous_round + 1:
+            should_start_new_group = True
+
+        if should_start_new_group:
+            if current_group:
+                groups.append(current_group)
+
+            current_group = []
+            current_key = group_key
+
+        current_group.append((path, file_name, data))
+        previous_round = file_round
+
+    if current_group:
+        groups.append(current_group)
+
+    return groups
+
+
+def find_existing_match_id_for_backup_group(cursor, backup_group):
+    """
+    If this is a stale ending chunk from a match we already partially imported,
+    attach it to the existing match_id instead of creating a new one.
+
+    Example:
+      earlier run imported backup_round00-10
+      later run sees stale backup_round11-15
+      this links 11-15 back to the same match_id.
+    """
+
+    file_rounds = [
+        get_backup_file_round_number(file_name)
+        for path, file_name, data in backup_group
+        if get_backup_file_round_number(file_name) is not None
+    ]
+
+    timestamps = [
+        data.get("timestamp")
+        for path, file_name, data in backup_group
+        if data.get("timestamp")
+    ]
+
+    if not file_rounds or not timestamps:
+        return None
+
+    min_file_round = min(file_rounds)
+    min_timestamp = min(timestamps)
+
+    first_data = backup_group[0][2]
+    map_name = first_data.get("map")
+    team1_name = first_data.get("team1")
+    team2_name = first_data.get("team2")
+
+    # If this group starts at round 0, it is almost certainly a new match.
+    if min_file_round == 0:
+        return None
+
+    cursor.execute("""
+        SELECT TOP 1
+            match_id
+        FROM round_backup_matches
+        WHERE map_name = ?
+          AND COALESCE(team1_name, '') = COALESCE(?, '')
+          AND COALESCE(team2_name, '') = COALESCE(?, '')
+          AND current_round < ?
+          AND backup_timestamp <= TRY_CONVERT(DATETIME2, ?)
+          AND DATEDIFF(
+                MINUTE,
+                backup_timestamp,
+                TRY_CONVERT(DATETIME2, ?)
+              ) BETWEEN 0 AND 180
+        ORDER BY backup_timestamp DESC, current_round DESC;
+    """, (
+        map_name,
+        team1_name,
+        team2_name,
+        min_file_round,
+        min_timestamp,
+        min_timestamp,
+    ))
+
+    row = cursor.fetchone()
+    return row[0] if row else None
+
+
+def get_match_id_for_backup_group(cursor, backup_group):
+    existing_match_id = find_existing_match_id_for_backup_group(cursor, backup_group)
+
+    if existing_match_id:
+        print(f"Attaching stale backup group to existing match_id: {existing_match_id}")
+        return existing_match_id
+
+    new_match_id = make_backup_snapshot_match_id(backup_group)
+    print(f"Created new backup match_id: {new_match_id}")
+    return new_match_id
 
 
 def already_processed_round_backup_file(cursor, match_id, file_name):
@@ -275,13 +418,6 @@ def file_sha256(path):
 
 
 def download_round_backups_from_sftp(cursor):
-    """
-    Always download/overwrite backup_roundXX files.
-
-    Do NOT skip by file name here because backup_round00.txt gets reused
-    every map. We can only decide if it was processed after parsing and
-    generating match_id.
-    """
     backups_dir = local_backups_dir()
     remote_dir = os.environ.get("SFTP_REMOTE_BACKUP_DIR", BACKUP_REMOTE_DIR).strip()
 
@@ -457,25 +593,10 @@ def insert_round_backup_match(cursor, match_id, source_file, data):
             consecutive_ct_loses,
             spawn_points_cfg
         )
-        VALUES (
-            ?,
-            ?,
-            TRY_CONVERT(DATETIME2, ?),
-            ?,
-            ?,
-            ?,
-            ?,
-            ?,
-            ?,
-            ?,
-            ?,
-            ?,
-            ?
-        )
+        VALUES (?, ?, TRY_CONVERT(DATETIME2, ?), ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
     """, (
         match_id,
         source_file,
-
         match_id,
         source_file,
         data.get("timestamp"),
@@ -496,12 +617,10 @@ def insert_round_backup_rounds(cursor, match_id, source_file, data):
     round_results = data.get("RoundResults", {}) or {}
     alive_t = data.get("PlayersAliveT", {}) or {}
     alive_ct = data.get("PlayersAliveCT", {}) or {}
-
     current_round = to_int(data.get("round"), 0) or 0
 
     for round_number in range(1, 31):
         key = f"round{round_number}"
-
         players_alive_t = to_int(alive_t.get(key))
         players_alive_ct = to_int(alive_ct.get(key))
 
@@ -530,7 +649,6 @@ def insert_round_backup_rounds(cursor, match_id, source_file, data):
             match_id,
             source_file,
             round_number,
-
             match_id,
             source_file,
             round_number,
@@ -556,33 +674,11 @@ def insert_round_backup_player(cursor, match_id, source_file, team_side, steam_i
               AND steam_id = ?
         )
         INSERT INTO round_backup_players (
-            match_id,
-            source_file,
-            team_side,
-            steam_id,
-            player_name,
-            kills,
-            assists,
-            deaths,
-            mvps,
-            score,
-            cash,
-            rounds_won,
-            enemy_kills,
-            enemy_headshots,
-            enemy_2ks,
-            enemy_3ks,
-            enemy_4ks,
-            enemy_5ks,
-            enemy_kag,
-            first_kills,
-            clutch_kills,
-            pistol_kills,
-            sniper_kills,
-            knife_kills,
-            taser_kills,
-            enemy_damage_dealt,
-            helmet
+            match_id, source_file, team_side, steam_id, player_name,
+            kills, assists, deaths, mvps, score, cash, rounds_won,
+            enemy_kills, enemy_headshots, enemy_2ks, enemy_3ks, enemy_4ks,
+            enemy_5ks, enemy_kag, first_kills, clutch_kills, pistol_kills,
+            sniper_kills, knife_kills, taser_kills, enemy_damage_dealt, helmet
         )
         VALUES (
             ?, ?, ?, ?, ?,
@@ -595,7 +691,6 @@ def insert_round_backup_player(cursor, match_id, source_file, team_side, steam_i
         source_file,
         team_side,
         steam_id,
-
         match_id,
         source_file,
         team_side,
@@ -650,12 +745,7 @@ def insert_round_backup_match_stats(cursor, match_id, source_file, team_side, st
                           AND stat_name = ?
                     )
                     INSERT INTO round_backup_player_totals (
-                        match_id,
-                        source_file,
-                        team_side,
-                        steam_id,
-                        stat_name,
-                        stat_value
+                        match_id, source_file, team_side, steam_id, stat_name, stat_value
                     )
                     VALUES (?, ?, ?, ?, ?, ?)
                 """, (
@@ -664,7 +754,6 @@ def insert_round_backup_match_stats(cursor, match_id, source_file, team_side, st
                     team_side,
                     steam_id,
                     total_name,
-
                     match_id,
                     source_file,
                     team_side,
@@ -694,13 +783,7 @@ def insert_round_backup_match_stats(cursor, match_id, source_file, team_side, st
                       AND round_number = ?
                 )
                 INSERT INTO round_backup_player_round_stats (
-                    match_id,
-                    source_file,
-                    team_side,
-                    steam_id,
-                    stat_name,
-                    round_number,
-                    stat_value
+                    match_id, source_file, team_side, steam_id, stat_name, round_number, stat_value
                 )
                 VALUES (?, ?, ?, ?, ?, ?, ?)
             """, (
@@ -710,7 +793,6 @@ def insert_round_backup_match_stats(cursor, match_id, source_file, team_side, st
                 steam_id,
                 stat_name,
                 round_number,
-
                 match_id,
                 source_file,
                 team_side,
@@ -745,12 +827,7 @@ def insert_round_backup_weapon_purchases(cursor, match_id, source_file, team_sid
                   AND def_index = ?
             )
             INSERT INTO round_backup_weapon_purchases (
-                match_id,
-                source_file,
-                team_side,
-                steam_id,
-                def_index,
-                purchase_count
+                match_id, source_file, team_side, steam_id, def_index, purchase_count
             )
             VALUES (?, ?, ?, ?, ?, ?)
         """, (
@@ -759,7 +836,6 @@ def insert_round_backup_weapon_purchases(cursor, match_id, source_file, team_sid
             team_side,
             steam_id,
             def_index,
-
             match_id,
             source_file,
             team_side,
@@ -796,7 +872,6 @@ def import_round_backups(cursor, backup_paths):
 
     for path in sorted(backup_paths):
         file_name = path.name
-
         parsed = parse_keyvalues_file(path)
         data = parsed.get("SaveFile", {})
 
@@ -810,38 +885,46 @@ def import_round_backups(cursor, backup_paths):
         print("No parsed round backups found.")
         return []
 
-    match_id = make_backup_snapshot_match_id(parsed_backups)
-    print(f"Backup snapshot match_id: {match_id}")
+    backup_groups = split_parsed_backups_into_match_groups(parsed_backups)
 
-    for path, file_name, data in parsed_backups:
-        if already_processed_round_backup_file(cursor, match_id, file_name):
-            print(f"Skipping already parsed backup: {match_id} / {file_name}")
-            skipped += 1
-            continue
+    print(f"Detected backup match groups: {len(backup_groups)}")
 
-        print(f"Parsing round backup: {match_id} / {file_name}")
+    for group_index, backup_group in enumerate(backup_groups, start=1):
+        file_names = [file_name for path, file_name, data in backup_group]
+        group_map = backup_group[0][2].get("map")
 
-        insert_round_backup_match(cursor, match_id, file_name, data)
-        insert_round_backup_rounds(cursor, match_id, file_name, data)
-        insert_round_backup_players(cursor, match_id, file_name, data)
+        print(f"Backup group {group_index}: map={group_map!r}, files={file_names}")
 
-        mark_round_backup_file_processed(
-            cursor,
-            match_id,
-            file_name,
-            path.stat().st_size,
-            file_sha256(path),
-        )
+        match_id = get_match_id_for_backup_group(cursor, backup_group)
 
-        imported += 1
-        processed_paths.append(path)
+        for path, file_name, data in backup_group:
+            if already_processed_round_backup_file(cursor, match_id, file_name):
+                print(f"Skipping already parsed backup: {match_id} / {file_name}")
+                skipped += 1
+                continue
+
+            print(f"Parsing round backup: {match_id} / {file_name}")
+
+            insert_round_backup_match(cursor, match_id, file_name, data)
+            insert_round_backup_rounds(cursor, match_id, file_name, data)
+            insert_round_backup_players(cursor, match_id, file_name, data)
+
+            mark_round_backup_file_processed(
+                cursor,
+                match_id,
+                file_name,
+                path.stat().st_size,
+                file_sha256(path),
+            )
+
+            imported += 1
+            processed_paths.append(path)
 
     print("Round backup import complete.")
     print(f"Imported backups: {imported}")
     print(f"Skipped backups: {skipped}")
 
     return processed_paths
-
 
 def delete_imported_round_backups(backup_files):
     if not backup_files:
@@ -893,14 +976,12 @@ def rebuild_round_purchase_deltas(cursor):
             row["steam_id"],
             int(row["def_index"]),
         )
-
         by_key.setdefault(key, {})[int(row["backup_round"])] = int(row["purchase_count"] or 0)
 
     for (match_id, team_side, steam_id, def_index), counts_by_round in by_key.items():
         for round_number in range(BACKUP_ROUND_MIN, BACKUP_ROUND_MAX + 1):
             current_count = counts_by_round.get(round_number, 0)
             previous_count = counts_by_round.get(round_number - 1, 0)
-
             delta = current_count - previous_count
 
             if delta <= 0:
@@ -919,29 +1000,13 @@ def rebuild_round_purchase_deltas(cursor):
                     purchase_delta,
                     estimated_spent
                 )
-                SELECT
-                    ?,
-                    ?,
-                    ?,
-                    ?,
-                    ?,
-                    ?,
-                    ?,
-                    ? * COALESCE(price, 0)
+                SELECT ?, ?, ?, ?, ?, ?, ?, ? * COALESCE(price, 0)
                 FROM item_definition_prices
                 WHERE def_index = ?
 
                 UNION ALL
 
-                SELECT
-                    ?,
-                    ?,
-                    ?,
-                    ?,
-                    ?,
-                    ?,
-                    ?,
-                    NULL
+                SELECT ?, ?, ?, ?, ?, ?, ?, NULL
                 WHERE NOT EXISTS (
                     SELECT 1
                     FROM item_definition_prices
@@ -957,7 +1022,6 @@ def rebuild_round_purchase_deltas(cursor):
                 delta,
                 delta,
                 def_index,
-
                 match_id,
                 source_file,
                 round_number,
@@ -981,26 +1045,21 @@ def rebuild_round_player_economy(cursor):
             SELECT
                 prs.match_id,
                 prs.source_file,
-                CAST(REPLACE(REPLACE(prs.source_file, 'backup_round', ''), '.txt', '') AS INT) AS backup_round,
                 prs.team_side,
                 prs.steam_id,
                 p.player_name,
                 prs.round_number,
-
                 MAX(CASE WHEN prs.stat_name = 'CashEarned' THEN prs.stat_value END) AS cash_earned,
                 MAX(CASE WHEN prs.stat_name = 'MoneySaved' THEN prs.stat_value END) AS money_saved,
                 MAX(CASE WHEN prs.stat_name = 'EquipmentValue' THEN prs.stat_value END) AS equipment_value,
                 MAX(CASE WHEN prs.stat_name = 'KillReward' THEN prs.stat_value END) AS kill_reward
-
             FROM round_backup_player_round_stats prs
             LEFT JOIN round_backup_players p
               ON p.match_id = prs.match_id
              AND p.source_file = prs.source_file
              AND p.team_side = prs.team_side
              AND p.steam_id = prs.steam_id
-
             WHERE prs.round_number = CAST(REPLACE(REPLACE(prs.source_file, 'backup_round', ''), '.txt', '') AS INT)
-
             GROUP BY
                 prs.match_id,
                 prs.source_file,
@@ -1047,38 +1106,19 @@ def rebuild_round_player_economy(cursor):
             pr.team_side,
             pr.steam_id,
             pr.player_name,
-
             CASE
-                WHEN r.players_alive_t IS NOT NULL
-                 AND r.players_alive_ct IS NOT NULL
-                 AND pr.team_side = 'team1'
-                 AND r.players_alive_t > r.players_alive_ct THEN 1
-
-                WHEN r.players_alive_t IS NOT NULL
-                 AND r.players_alive_ct IS NOT NULL
-                 AND pr.team_side = 'team2'
-                 AND r.players_alive_ct > r.players_alive_t THEN 1
-
-                WHEN r.players_alive_t IS NOT NULL
-                 AND r.players_alive_ct IS NOT NULL
-                 AND pr.team_side = 'team1'
-                 AND r.players_alive_t < r.players_alive_ct THEN 0
-
-                WHEN r.players_alive_t IS NOT NULL
-                 AND r.players_alive_ct IS NOT NULL
-                 AND pr.team_side = 'team2'
-                 AND r.players_alive_ct < r.players_alive_t THEN 0
-
+                WHEN r.players_alive_t IS NOT NULL AND r.players_alive_ct IS NOT NULL AND pr.team_side = 'team1' AND r.players_alive_t > r.players_alive_ct THEN 1
+                WHEN r.players_alive_t IS NOT NULL AND r.players_alive_ct IS NOT NULL AND pr.team_side = 'team2' AND r.players_alive_ct > r.players_alive_t THEN 1
+                WHEN r.players_alive_t IS NOT NULL AND r.players_alive_ct IS NOT NULL AND pr.team_side = 'team1' AND r.players_alive_t < r.players_alive_ct THEN 0
+                WHEN r.players_alive_t IS NOT NULL AND r.players_alive_ct IS NOT NULL AND pr.team_side = 'team2' AND r.players_alive_ct < r.players_alive_t THEN 0
                 ELSE NULL
             END AS round_won,
-
             r.result_code,
             pr.cash_earned,
             pr.money_saved,
             pr.equipment_value,
             COALESCE(s.estimated_spent, 0) AS estimated_spent,
             COALESCE(pr.cash_earned, 0) - COALESCE(s.estimated_spent, 0) AS estimated_net
-
         FROM player_rounds pr
         LEFT JOIN round_backup_rounds r
           ON r.match_id = pr.match_id
@@ -1119,15 +1159,10 @@ def rebuild_inferred_betting_money(cursor):
         economy AS (
             SELECT
                 pc.*,
-
-                next_pc.source_file AS next_source_file,
                 next_pc.cash AS actual_next_cash,
-
                 COALESCE(spent.estimated_spent, 0) AS estimated_spent,
                 COALESCE(cash_stat.stat_value, 0) AS cash_earned
-
             FROM player_cash pc
-
             LEFT JOIN player_cash next_pc
               ON next_pc.match_id = pc.match_id
              AND next_pc.team_side = pc.team_side
@@ -1136,7 +1171,6 @@ def rebuild_inferred_betting_money(cursor):
              AND next_pc.map_name = pc.map_name
              AND next_pc.backup_timestamp > pc.backup_timestamp
              AND DATEDIFF(MINUTE, pc.backup_timestamp, next_pc.backup_timestamp) BETWEEN 0 AND 30
-
             LEFT JOIN (
                 SELECT
                     match_id,
@@ -1146,19 +1180,13 @@ def rebuild_inferred_betting_money(cursor):
                     steam_id,
                     SUM(COALESCE(estimated_spent, 0)) AS estimated_spent
                 FROM round_backup_purchase_deltas
-                GROUP BY
-                    match_id,
-                    source_file,
-                    round_number,
-                    team_side,
-                    steam_id
+                GROUP BY match_id, source_file, round_number, team_side, steam_id
             ) spent
               ON spent.match_id = pc.match_id
              AND spent.source_file = pc.source_file
              AND spent.round_number = pc.round_number
              AND spent.team_side = pc.team_side
              AND spent.steam_id = pc.steam_id
-
             LEFT JOIN round_backup_player_round_stats cash_stat
               ON cash_stat.match_id = pc.match_id
              AND cash_stat.source_file = pc.source_file
@@ -1171,20 +1199,17 @@ def rebuild_inferred_betting_money(cursor):
             SELECT
                 *,
                 cash - estimated_spent AS cash_after_buy,
-
                 CASE
                     WHEN cash - estimated_spent + cash_earned > {MONEY_CAP}
                     THEN {MONEY_CAP}
                     ELSE cash - estimated_spent + cash_earned
                 END AS expected_next_cash,
-
                 actual_next_cash -
                 CASE
                     WHEN cash - estimated_spent + cash_earned > {MONEY_CAP}
                     THEN {MONEY_CAP}
                     ELSE cash - estimated_spent + cash_earned
                 END AS raw_extra_money
-
             FROM economy
         )
         UPDATE target
@@ -1195,35 +1220,21 @@ def rebuild_inferred_betting_money(cursor):
             actual_next_cash = calculated.actual_next_cash,
             expected_next_cash = calculated.expected_next_cash,
             inferred_extra_money = calculated.raw_extra_money,
-
             inferred_betting_money =
                 CASE
                     WHEN calculated.actual_next_cash IS NULL THEN NULL
-
-                    WHEN calculated.raw_extra_money > 0
-                     AND calculated.raw_extra_money <= {IMPOSSIBLE_WINNING_THRESHOLD}
+                    WHEN calculated.raw_extra_money > 0 AND calculated.raw_extra_money <= {IMPOSSIBLE_WINNING_THRESHOLD}
                     THEN calculated.raw_extra_money
-
                     ELSE 0
                 END,
-
             economy_note =
                 CASE
-                    WHEN calculated.actual_next_cash IS NULL
-                    THEN 'No valid next-round cash snapshot'
-
-                    WHEN calculated.raw_extra_money > {IMPOSSIBLE_WINNING_THRESHOLD}
-                    THEN 'Impossible extra money; ignored'
-
-                    WHEN calculated.raw_extra_money > 0
-                    THEN 'Positive unexplained money; likely betting payout'
-
-                    WHEN calculated.raw_extra_money < 0
-                    THEN 'Lower than expected; missing spend, penalty, donation, or stat mismatch'
-
+                    WHEN calculated.actual_next_cash IS NULL THEN 'No valid next-round cash snapshot'
+                    WHEN calculated.raw_extra_money > {IMPOSSIBLE_WINNING_THRESHOLD} THEN 'Impossible extra money; ignored'
+                    WHEN calculated.raw_extra_money > 0 THEN 'Positive unexplained money; likely betting payout'
+                    WHEN calculated.raw_extra_money < 0 THEN 'Lower than expected; missing spend, penalty, donation, or stat mismatch'
                     ELSE 'No inferred betting money'
                 END
-
         FROM round_backup_player_economy_rounds target
         INNER JOIN calculated
           ON calculated.match_id = target.match_id
@@ -2147,19 +2158,6 @@ def consolidate_admin_target_rows(rows, player_profiles, count_field, extra_sum_
 
     return output_rows
 
-def get_latest_round_backup_source_file(cursor):
-    cursor.execute("""
-        SELECT TOP 1
-            source_file
-        FROM round_backup_matches
-        WHERE source_file LIKE 'backup_round%.txt'
-        ORDER BY
-            CAST(REPLACE(REPLACE(source_file, 'backup_round', ''), '.txt', '') AS INT) DESC;
-    """)
-
-    row = cursor.fetchone()
-    return row[0] if row else None
-
 
 def export_round_backup_jsons(cursor):
     data_dir = Path(__file__).resolve().parent.parent / "assets" / "data"
@@ -2167,9 +2165,6 @@ def export_round_backup_jsons(cursor):
 
     print("Exporting all-time round backup JSON files...")
 
-    # ------------------------------------------------------------
-    # Latest match summary only, for display/debug.
-    # ------------------------------------------------------------
     cursor.execute("""
         SELECT TOP 1
             match_id,
@@ -2178,18 +2173,18 @@ def export_round_backup_jsons(cursor):
             map_name,
             current_round,
             team1_name,
-            team2_name
+            team2_name,
+            first_half_team1_score,
+            first_half_team2_score,
+            loser_most_recent_team,
+            consecutive_t_loses,
+            consecutive_ct_loses,
+            spawn_points_cfg
         FROM round_backup_matches
-        ORDER BY backup_timestamp DESC;
+        ORDER BY backup_timestamp DESC, current_round DESC;
     """)
-
     write_json(data_dir / "round_match_summary.json", rows_to_dicts(cursor))
 
-    # ------------------------------------------------------------
-    # Player stats all-time.
-    # Uses only the latest backup file per match to avoid double-counting
-    # cumulative K/D/A/MVP stats.
-    # ------------------------------------------------------------
     cursor.execute("""
         WITH latest_files AS (
             SELECT
@@ -2215,13 +2210,9 @@ def export_round_backup_jsons(cursor):
              AND lf.source_file = prs.source_file
              AND lf.rn = 1
             WHERE prs.stat_name = 'Damage'
-            GROUP BY
-                prs.match_id,
-                prs.source_file,
-                prs.team_side,
-                prs.steam_id
+            GROUP BY prs.match_id, prs.source_file, prs.team_side, prs.steam_id
         ),
-        match_players AS (
+        player_totals AS (
             SELECT
                 p.player_name,
                 p.steam_id,
@@ -2230,6 +2221,17 @@ def export_round_backup_jsons(cursor):
                 SUM(COALESCE(p.assists, 0)) AS assists,
                 SUM(COALESCE(p.score, 0)) AS score,
                 SUM(COALESCE(p.mvps, 0)) AS mvps,
+                SUM(COALESCE(p.enemy_headshots, 0)) AS enemy_headshots,
+                SUM(COALESCE(p.enemy_2ks, 0)) AS enemy_2ks,
+                SUM(COALESCE(p.enemy_3ks, 0)) AS enemy_3ks,
+                SUM(COALESCE(p.enemy_4ks, 0)) AS enemy_4ks,
+                SUM(COALESCE(p.enemy_5ks, 0)) AS enemy_5ks,
+                SUM(COALESCE(p.first_kills, 0)) AS first_kills,
+                SUM(COALESCE(p.clutch_kills, 0)) AS clutch_kills,
+                SUM(COALESCE(p.pistol_kills, 0)) AS pistol_kills,
+                SUM(COALESCE(p.sniper_kills, 0)) AS sniper_kills,
+                SUM(COALESCE(p.knife_kills, 0)) AS knife_kills,
+                SUM(COALESCE(p.taser_kills, 0)) AS taser_kills,
                 SUM(COALESCE(d.damage, 0)) AS damage,
                 SUM(COALESCE(lf.current_round, 0)) AS rounds_played
             FROM round_backup_players p
@@ -2242,88 +2244,45 @@ def export_round_backup_jsons(cursor):
              AND d.source_file = p.source_file
              AND d.team_side = p.team_side
              AND d.steam_id = p.steam_id
-            GROUP BY
-                p.player_name,
-                p.steam_id
+            GROUP BY p.player_name, p.steam_id
         )
         SELECT
             player_name,
             steam_id,
             kills,
-            deaths,
             assists,
-            score,
+            deaths,
             mvps,
+            score,
             damage,
-
-            CAST(
-                CASE
-                    WHEN rounds_played > 0 THEN 1.0 * damage / rounds_played
-                    ELSE 0
-                END
-                AS DECIMAL(10, 2)
-            ) AS adr,
-
-            CAST(
-                CASE
-                    WHEN deaths > 0 THEN 1.0 * kills / deaths
-                    ELSE kills
-                END
-                AS DECIMAL(10, 2)
-            ) AS kd_ratio,
-
-            CAST(
-                CASE
-                    WHEN deaths > 0 THEN 1.0 * (kills + assists) / deaths
-                    ELSE kills + assists
-                END
-                AS DECIMAL(10, 2)
-            ) AS kad_ratio
-
-        FROM match_players
-        ORDER BY kills DESC, score DESC;
+            CAST(CASE WHEN rounds_played > 0 THEN 1.0 * damage / rounds_played ELSE 0 END AS DECIMAL(10, 2)) AS adr,
+            CAST(CASE WHEN deaths > 0 THEN 1.0 * kills / deaths ELSE kills END AS DECIMAL(10, 2)) AS kd_ratio,
+            CAST(CASE WHEN deaths > 0 THEN 1.0 * (kills + assists) / deaths ELSE kills + assists END AS DECIMAL(10, 2)) AS kad_ratio,
+            enemy_headshots,
+            CAST(CASE WHEN kills > 0 THEN 100.0 * enemy_headshots / kills ELSE 0 END AS DECIMAL(10, 2)) AS headshot_percent,
+            enemy_2ks,
+            enemy_3ks,
+            enemy_4ks,
+            enemy_5ks,
+            first_kills,
+            clutch_kills,
+            pistol_kills,
+            sniper_kills,
+            knife_kills,
+            taser_kills,
+            (
+                COALESCE(damage, 0)
+                + COALESCE(kills, 0) * 100
+                + COALESCE(assists, 0) * 40
+                + COALESCE(first_kills, 0) * 75
+                + COALESCE(clutch_kills, 0) * 100
+                + COALESCE(mvps, 0) * 150
+            ) AS impact_score
+        FROM player_totals
+        ORDER BY impact_score DESC, damage DESC, kills DESC;
     """)
-
     write_json(data_dir / "round_scoreboard.json", rows_to_dicts(cursor))
 
-    # ------------------------------------------------------------
-    # MVP leaderboard all-time.
-    # ------------------------------------------------------------
-    cursor.execute("""
-        WITH latest_files AS (
-            SELECT
-                match_id,
-                source_file,
-                ROW_NUMBER() OVER (
-                    PARTITION BY match_id
-                    ORDER BY current_round DESC, backup_timestamp DESC, source_file DESC
-                ) AS rn
-            FROM round_backup_matches
-        )
-        SELECT
-            p.player_name,
-            p.steam_id,
-            SUM(COALESCE(p.mvps, 0)) AS mvps,
-            SUM(COALESCE(p.kills, 0)) AS kills,
-            SUM(COALESCE(p.assists, 0)) AS assists,
-            SUM(COALESCE(p.deaths, 0)) AS deaths,
-            SUM(COALESCE(p.score, 0)) AS score
-        FROM round_backup_players p
-        INNER JOIN latest_files lf
-          ON lf.match_id = p.match_id
-         AND lf.source_file = p.source_file
-         AND lf.rn = 1
-        GROUP BY
-            p.player_name,
-            p.steam_id
-        ORDER BY mvps DESC, score DESC, kills DESC;
-    """)
-
-    write_json(data_dir / "round_mvp_leaderboard.json", rows_to_dicts(cursor))
-
-    # ------------------------------------------------------------
-    # Player money summary all-time.
-    # ------------------------------------------------------------
     cursor.execute("""
         SELECT
             player_name,
@@ -2332,60 +2291,25 @@ def export_round_backup_jsons(cursor):
             SUM(COALESCE(known_round_income, 0)) AS money_gained,
             SUM(COALESCE(known_round_income, 0) - COALESCE(estimated_spent, 0)) AS net_money
         FROM round_backup_player_economy_rounds
-        GROUP BY
-            player_name,
-            steam_id
+        GROUP BY player_name, steam_id
         ORDER BY net_money DESC;
     """)
-
     write_json(data_dir / "round_player_money_summary.json", rows_to_dicts(cursor))
 
-    # ------------------------------------------------------------
-    # Player betting net summary all-time.
-    # ------------------------------------------------------------
     cursor.execute("""
         SELECT
             player_name,
             steam_id,
-
-            SUM(CASE
-                WHEN economy_note <> 'Impossible extra money; ignored'
-                THEN COALESCE(inferred_extra_money, 0)
-                ELSE 0
-            END) AS total_net_bet_winnings,
-
-            SUM(CASE
-                WHEN inferred_extra_money > 0
-                 AND economy_note <> 'Impossible extra money; ignored'
-                THEN inferred_extra_money
-                ELSE 0
-            END) AS total_positive_bet_winnings,
-
-            SUM(CASE
-                WHEN inferred_extra_money < 0
-                 AND economy_note <> 'Impossible extra money; ignored'
-                THEN inferred_extra_money
-                ELSE 0
-            END) AS total_negative_bet_winnings,
-
-            COUNT(CASE
-                WHEN inferred_extra_money <> 0
-                 AND economy_note <> 'Impossible extra money; ignored'
-                THEN 1
-            END) AS rounds_with_unexplained_money
-
+            SUM(CASE WHEN economy_note <> 'Impossible extra money; ignored' THEN COALESCE(inferred_extra_money, 0) ELSE 0 END) AS total_net_bet_winnings,
+            SUM(CASE WHEN inferred_extra_money > 0 AND economy_note <> 'Impossible extra money; ignored' THEN inferred_extra_money ELSE 0 END) AS total_positive_bet_winnings,
+            SUM(CASE WHEN inferred_extra_money < 0 AND economy_note <> 'Impossible extra money; ignored' THEN inferred_extra_money ELSE 0 END) AS total_negative_bet_winnings,
+            COUNT(CASE WHEN inferred_extra_money <> 0 AND economy_note <> 'Impossible extra money; ignored' THEN 1 END) AS rounds_with_unexplained_money
         FROM round_backup_player_economy_rounds
-        GROUP BY
-            player_name,
-            steam_id
+        GROUP BY player_name, steam_id
         ORDER BY total_net_bet_winnings DESC;
     """)
-
     write_json(data_dir / "round_player_betting_summary.json", rows_to_dicts(cursor))
 
-    # ------------------------------------------------------------
-    # Positive betting events/debug table.
-    # ------------------------------------------------------------
     cursor.execute("""
         SELECT
             player_name,
@@ -2406,12 +2330,8 @@ def export_round_backup_jsons(cursor):
         WHERE inferred_betting_money > 0
         ORDER BY inferred_betting_money DESC, round_number ASC;
     """)
-
     write_json(data_dir / "round_betting_money.json", rows_to_dicts(cursor))
 
-    # ------------------------------------------------------------
-    # Full economy-by-round debug table.
-    # ------------------------------------------------------------
     cursor.execute("""
         SELECT
             player_name,
@@ -2436,12 +2356,65 @@ def export_round_backup_jsons(cursor):
         FROM round_backup_player_economy_rounds
         ORDER BY match_id ASC, round_number ASC, player_name ASC;
     """)
-
     write_json(data_dir / "round_economy_rounds.json", rows_to_dicts(cursor))
 
-    # ------------------------------------------------------------
-    # Player defuse kit purchase rate all-time.
-    # ------------------------------------------------------------
+    cursor.execute("""
+        SELECT
+            p.match_id,
+            p.source_file,
+            p.round_number,
+            p.team_side,
+            p.steam_id,
+            e.player_name,
+            p.def_index,
+            COALESCE(i.item_name, CONCAT('DefIndex_', p.def_index)) AS item_name,
+            i.item_category,
+            i.price,
+            p.purchase_delta,
+            p.estimated_spent,
+            e.round_won
+        FROM round_backup_purchase_deltas p
+        LEFT JOIN item_definition_prices i
+          ON i.def_index = p.def_index
+        LEFT JOIN round_backup_player_economy_rounds e
+          ON e.match_id = p.match_id
+         AND e.source_file = p.source_file
+         AND e.round_number = p.round_number
+         AND e.team_side = p.team_side
+         AND e.steam_id = p.steam_id
+        ORDER BY p.match_id ASC, p.round_number ASC, e.player_name ASC, i.item_name ASC;
+    """)
+    write_json(data_dir / "round_weapon_purchases.json", rows_to_dicts(cursor))
+
+    cursor.execute("""
+        SELECT
+            p.def_index,
+            COALESCE(i.item_name, CONCAT('DefIndex_', p.def_index)) AS item_name,
+            i.item_category,
+            i.price,
+            SUM(p.purchase_delta) AS total_bought,
+            SUM(CASE WHEN e.round_won = 1 THEN p.purchase_delta ELSE 0 END) AS bought_in_wins,
+            SUM(CASE WHEN e.round_won = 0 THEN p.purchase_delta ELSE 0 END) AS bought_in_losses,
+            CAST(
+                100.0 * SUM(CASE WHEN e.round_won = 1 THEN p.purchase_delta ELSE 0 END)
+                / NULLIF(SUM(p.purchase_delta), 0)
+                AS DECIMAL(10, 2)
+            ) AS win_buy_percent,
+            SUM(COALESCE(p.estimated_spent, 0)) AS total_spent
+        FROM round_backup_purchase_deltas p
+        LEFT JOIN item_definition_prices i
+          ON i.def_index = p.def_index
+        LEFT JOIN round_backup_player_economy_rounds e
+          ON e.match_id = p.match_id
+         AND e.source_file = p.source_file
+         AND e.round_number = p.round_number
+         AND e.team_side = p.team_side
+         AND e.steam_id = p.steam_id
+        GROUP BY p.def_index, i.item_name, i.item_category, i.price
+        ORDER BY total_bought DESC, total_spent DESC;
+    """)
+    write_json(data_dir / "round_weapon_meta.json", rows_to_dicts(cursor))
+
     cursor.execute("""
         WITH player_rounds AS (
             SELECT
@@ -2449,9 +2422,7 @@ def export_round_backup_jsons(cursor):
                 steam_id,
                 COUNT(*) AS rounds_played
             FROM round_backup_player_economy_rounds
-            GROUP BY
-                player_name,
-                steam_id
+            GROUP BY player_name, steam_id
         ),
         defuse_buys AS (
             SELECT
@@ -2466,35 +2437,26 @@ def export_round_backup_jsons(cursor):
              AND e.team_side = p.team_side
              AND e.steam_id = p.steam_id
             WHERE p.def_index = 55
-            GROUP BY
-                e.player_name,
-                e.steam_id
+            GROUP BY e.player_name, e.steam_id
         )
         SELECT
             pr.player_name,
             pr.steam_id,
             COALESCE(d.defuse_kits_bought, 0) AS defuse_kits_bought,
             pr.rounds_played,
-
             CAST(
                 100.0 * COALESCE(d.defuse_kits_bought, 0)
                 / NULLIF(pr.rounds_played, 0)
                 AS DECIMAL(10, 2)
             ) AS defuse_purchase_round_percent
-
         FROM player_rounds pr
         LEFT JOIN defuse_buys d
           ON d.steam_id = pr.steam_id
          AND d.player_name = pr.player_name
         ORDER BY defuse_purchase_round_percent DESC, defuse_kits_bought DESC;
     """)
-
     write_json(data_dir / "round_defuse_purchase_rate.json", rows_to_dicts(cursor))
 
-    # ------------------------------------------------------------
-    # Top kills by weapon category all-time.
-    # Uses latest file per match to avoid double-counting cumulative stats.
-    # ------------------------------------------------------------
     cursor.execute("""
         WITH latest_files AS (
             SELECT
@@ -2507,131 +2469,40 @@ def export_round_backup_jsons(cursor):
             FROM round_backup_matches
         ),
         unpivoted AS (
-            SELECT
-                p.player_name,
-                p.steam_id,
-                'Pistol' AS weapon,
-                COALESCE(p.pistol_kills, 0) AS kills
+            SELECT p.player_name, p.steam_id, 'Pistol' AS weapon, COALESCE(p.pistol_kills, 0) AS kills
             FROM round_backup_players p
-            INNER JOIN latest_files lf
-              ON lf.match_id = p.match_id
-             AND lf.source_file = p.source_file
-             AND lf.rn = 1
-
+            INNER JOIN latest_files lf ON lf.match_id = p.match_id AND lf.source_file = p.source_file AND lf.rn = 1
             UNION ALL
-
-            SELECT
-                p.player_name,
-                p.steam_id,
-                'Sniper' AS weapon,
-                COALESCE(p.sniper_kills, 0) AS kills
+            SELECT p.player_name, p.steam_id, 'Sniper' AS weapon, COALESCE(p.sniper_kills, 0) AS kills
             FROM round_backup_players p
-            INNER JOIN latest_files lf
-              ON lf.match_id = p.match_id
-             AND lf.source_file = p.source_file
-             AND lf.rn = 1
-
+            INNER JOIN latest_files lf ON lf.match_id = p.match_id AND lf.source_file = p.source_file AND lf.rn = 1
             UNION ALL
-
-            SELECT
-                p.player_name,
-                p.steam_id,
-                'Knife' AS weapon,
-                COALESCE(p.knife_kills, 0) AS kills
+            SELECT p.player_name, p.steam_id, 'Knife' AS weapon, COALESCE(p.knife_kills, 0) AS kills
             FROM round_backup_players p
-            INNER JOIN latest_files lf
-              ON lf.match_id = p.match_id
-             AND lf.source_file = p.source_file
-             AND lf.rn = 1
-
+            INNER JOIN latest_files lf ON lf.match_id = p.match_id AND lf.source_file = p.source_file AND lf.rn = 1
             UNION ALL
-
-            SELECT
-                p.player_name,
-                p.steam_id,
-                'Taser' AS weapon,
-                COALESCE(p.taser_kills, 0) AS kills
+            SELECT p.player_name, p.steam_id, 'Taser' AS weapon, COALESCE(p.taser_kills, 0) AS kills
             FROM round_backup_players p
-            INNER JOIN latest_files lf
-              ON lf.match_id = p.match_id
-             AND lf.source_file = p.source_file
-             AND lf.rn = 1
+            INNER JOIN latest_files lf ON lf.match_id = p.match_id AND lf.source_file = p.source_file AND lf.rn = 1
         ),
         totals AS (
-            SELECT
-                weapon,
-                player_name,
-                steam_id,
-                SUM(kills) AS kills
+            SELECT weapon, player_name, steam_id, SUM(kills) AS kills
             FROM unpivoted
-            GROUP BY
-                weapon,
-                player_name,
-                steam_id
+            GROUP BY weapon, player_name, steam_id
         ),
         ranked AS (
             SELECT
                 *,
-                ROW_NUMBER() OVER (
-                    PARTITION BY weapon
-                    ORDER BY kills DESC, player_name ASC
-                ) AS rn
+                ROW_NUMBER() OVER (PARTITION BY weapon ORDER BY kills DESC, player_name ASC) AS rn
             FROM totals
             WHERE kills > 0
         )
-        SELECT
-            weapon,
-            kills,
-            player_name,
-            steam_id
+        SELECT weapon, kills, player_name, steam_id
         FROM ranked
         WHERE rn = 1
         ORDER BY kills DESC;
     """)
-
     write_json(data_dir / "round_top_weapon_category_kills.json", rows_to_dicts(cursor))
-
-    # ------------------------------------------------------------
-    # Weapon purchase meta all-time.
-    # ------------------------------------------------------------
-    cursor.execute("""
-        SELECT
-            p.def_index,
-            COALESCE(i.item_name, CONCAT('DefIndex_', p.def_index)) AS item_name,
-            i.item_category,
-            i.price,
-
-            SUM(p.purchase_delta) AS total_bought,
-
-            SUM(CASE WHEN e.round_won = 1 THEN p.purchase_delta ELSE 0 END) AS bought_in_wins,
-            SUM(CASE WHEN e.round_won = 0 THEN p.purchase_delta ELSE 0 END) AS bought_in_losses,
-
-            CAST(
-                100.0 * SUM(CASE WHEN e.round_won = 1 THEN p.purchase_delta ELSE 0 END)
-                / NULLIF(SUM(p.purchase_delta), 0)
-                AS DECIMAL(10, 2)
-            ) AS win_buy_percent,
-
-            SUM(COALESCE(p.estimated_spent, 0)) AS total_spent
-
-        FROM round_backup_purchase_deltas p
-        LEFT JOIN item_definition_prices i
-          ON i.def_index = p.def_index
-        LEFT JOIN round_backup_player_economy_rounds e
-          ON e.match_id = p.match_id
-         AND e.source_file = p.source_file
-         AND e.round_number = p.round_number
-         AND e.team_side = p.team_side
-         AND e.steam_id = p.steam_id
-        GROUP BY
-            p.def_index,
-            i.item_name,
-            i.item_category,
-            i.price
-        ORDER BY total_bought DESC, total_spent DESC;
-    """)
-
-    write_json(data_dir / "round_weapon_meta.json", rows_to_dicts(cursor))
 
     print("Round backup JSON exports complete.")
 
