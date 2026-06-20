@@ -595,22 +595,21 @@ PLAYER_BASE_FIELDS = {
     "mvps": "mvps",
     "score": "score",
     "cash": "cash",
-    "roundsWon": "rounds_won",
     "enemyKs": "enemy_kills",
     "enemyHSs": "enemy_headshots",
-    "enemy2Ks": "enemy_2ks",
-    "enemy3Ks": "enemy_3ks",
-    "enemy4Ks": "enemy_4ks",
-    "enemy5Ks": "enemy_5ks",
     "enemyKAg": "enemy_kag",
-    "firstKs": "first_kills",
-    "clutchKs": "clutch_kills",
     "kills_weapon_pistol": "pistol_kills",
     "kills_weapon_sniper": "sniper_kills",
     "kills_knife": "knife_kills",
     "kills_taser": "taser_kills",
     "enemyDamageDealt": "enemy_damage_dealt",
-    "helmet": "helmet",
+}
+
+NEEDED_ROUND_STATS = {
+    "Damage",
+    "CashEarned",
+    "MoneySaved",
+    "KillReward",
 }
 
 
@@ -707,7 +706,7 @@ def insert_round_backup_rounds(cursor, match_id, source_file, data):
 
 def insert_round_backup_player(cursor, match_id, source_file, team_side, steam_id, player):
     values = {
-        sql_field: to_int(player.get(raw_field))
+        sql_field: to_int(player.get(raw_field), 0)
         for raw_field, sql_field in PLAYER_BASE_FIELDS.items()
     }
 
@@ -721,52 +720,59 @@ def insert_round_backup_player(cursor, match_id, source_file, team_side, steam_i
               AND steam_id = ?
         )
         INSERT INTO round_backup_players (
-            match_id, source_file, team_side, steam_id, player_name,
-            kills, assists, deaths, mvps, score, cash, rounds_won,
-            enemy_kills, enemy_headshots, enemy_2ks, enemy_3ks, enemy_4ks,
-            enemy_5ks, enemy_kag, first_kills, clutch_kills, pistol_kills,
-            sniper_kills, knife_kills, taser_kills, enemy_damage_dealt, helmet
+            match_id,
+            source_file,
+            team_side,
+            steam_id,
+            player_name,
+            kills,
+            assists,
+            deaths,
+            mvps,
+            score,
+            cash,
+            enemy_kills,
+            enemy_headshots,
+            enemy_kag,
+            pistol_kills,
+            sniper_kills,
+            knife_kills,
+            taser_kills,
+            enemy_damage_dealt
         )
         VALUES (
             ?, ?, ?, ?, ?,
-            ?, ?, ?, ?, ?, ?, ?,
-            ?, ?, ?, ?, ?, ?, ?,
-            ?, ?, ?, ?, ?, ?, ?, ?
+            ?, ?, ?, ?, ?,
+            ?, ?, ?, ?,
+            ?, ?, ?, ?, ?
         )
     """, (
         match_id,
         source_file,
         team_side,
         steam_id,
+
         match_id,
         source_file,
         team_side,
         steam_id,
         player.get("name"),
+
         values["kills"],
         values["assists"],
         values["deaths"],
         values["mvps"],
         values["score"],
         values["cash"],
-        values["rounds_won"],
         values["enemy_kills"],
         values["enemy_headshots"],
-        values["enemy_2ks"],
-        values["enemy_3ks"],
-        values["enemy_4ks"],
-        values["enemy_5ks"],
         values["enemy_kag"],
-        values["first_kills"],
-        values["clutch_kills"],
         values["pistol_kills"],
         values["sniper_kills"],
         values["knife_kills"],
         values["taser_kills"],
         values["enemy_damage_dealt"],
-        values["helmet"],
     ))
-
 
 def insert_round_backup_match_stats(cursor, match_id, source_file, team_side, steam_id, player):
     match_stats = player.get("MatchStats", {}) or {}
@@ -775,40 +781,13 @@ def insert_round_backup_match_stats(cursor, match_id, source_file, team_side, st
         if not isinstance(stat_block, dict):
             continue
 
+        # We do not use Totals on the website anymore.
+        # This avoids a lot of row-by-row SQL inserts.
         if stat_name == "Totals":
-            for total_name, raw_value in stat_block.items():
-                value = to_int(raw_value)
-                if value is None:
-                    continue
+            continue
 
-                cursor.execute("""
-                    IF NOT EXISTS (
-                        SELECT 1
-                        FROM round_backup_player_totals
-                        WHERE match_id = ?
-                          AND source_file = ?
-                          AND team_side = ?
-                          AND steam_id = ?
-                          AND stat_name = ?
-                    )
-                    INSERT INTO round_backup_player_totals (
-                        match_id, source_file, team_side, steam_id, stat_name, stat_value
-                    )
-                    VALUES (?, ?, ?, ?, ?, ?)
-                """, (
-                    match_id,
-                    source_file,
-                    team_side,
-                    steam_id,
-                    total_name,
-                    match_id,
-                    source_file,
-                    team_side,
-                    steam_id,
-                    total_name,
-                    value,
-                ))
-
+        # Only keep stats needed for the current website/economy pipeline.
+        if stat_name not in NEEDED_ROUND_STATS:
             continue
 
         for round_key, raw_value in stat_block.items():
@@ -859,8 +838,11 @@ def insert_round_backup_weapon_purchases(cursor, match_id, source_file, team_sid
     for def_key, raw_count in purchases.items():
         def_index = get_def_index(def_key)
         purchase_count = to_int(raw_count)
-
+        
         if def_index is None or purchase_count is None:
+            continue
+        
+        if purchase_count <= 0:
             continue
 
         cursor.execute("""
