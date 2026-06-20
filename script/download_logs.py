@@ -8,6 +8,14 @@ import hashlib
 from difflib import SequenceMatcher
 
 import paramiko
+import time
+
+def timed_step(label, func, *args, **kwargs):
+    start = time.time()
+    print(f"START: {label}")
+    result = func(*args, **kwargs)
+    print(f"END: {label} took {time.time() - start:.2f}s")
+    return result
 
 def download_logs_and_round_backups_from_sftp(include_logs=False):
     """
@@ -2772,54 +2780,70 @@ def export_log_jsons(cursor):
     export_round_backup_jsons(cursor)
 
 if __name__ == "__main__":
+    include_logs = os.environ.get("INCLUDE_LOGS", "0").strip() == "1"
+    print(f"INCLUDE_LOGS={include_logs}", flush=True)
+
     # ------------------------------------------------------------
     # 1. Download files first.
     # This opens SFTP, downloads logs/backups, then closes SFTP.
     # No SQL connection is open yet.
     # ------------------------------------------------------------
-    include_logs = os.environ.get("INCLUDE_LOGS", "0").strip() == "1"
-    backup_paths = download_logs_and_round_backups_from_sftp(include_logs=include_logs)
+    backup_paths = timed_step(
+        "SFTP download logs/backups",
+        download_logs_and_round_backups_from_sftp,
+        include_logs=include_logs
+    )
 
     # ------------------------------------------------------------
     # 2. Now connect to SQL after SFTP is done.
     # ------------------------------------------------------------
-    conn = connect_with_retry()
+    conn = timed_step("SQL connect", connect_with_retry)
     cursor = conn.cursor()
-    cursor.execute("SELECT @@VERSION")
 
     try:
+        timed_step("SQL version check", cursor.execute, "SELECT @@VERSION")
+
         # ------------------------------------------------------------
         # 3. Import local downloaded files into SQL.
         # ------------------------------------------------------------
         if include_logs:
-            processed_log_files = import_server_logs(cursor)
+            processed_log_files = timed_step("Import server logs", import_server_logs, cursor)
         else:
-            print("Skipping server log import because INCLUDE_LOGS is not 1.")
+            print("Skipping server log import because INCLUDE_LOGS is not 1.", flush=True)
             processed_log_files = []
-        processed_backup_files, touched_backup_rounds = import_round_backups(cursor, backup_paths)
+
+        processed_backup_files, touched_backup_rounds = timed_step(
+            "Import round backups",
+            import_round_backups,
+            cursor,
+            backup_paths
+        )
+
+        print(f"Processed backup files: {len(processed_backup_files)}", flush=True)
+        print(f"Touched backup rounds: {len(touched_backup_rounds)}", flush=True)
 
         # ------------------------------------------------------------
         # 4. Rebuild derived economy/betting tables.
         # ------------------------------------------------------------
-        rebuild_round_purchase_deltas(cursor, touched_backup_rounds)
-        rebuild_round_player_economy(cursor, touched_backup_rounds)
-        rebuild_inferred_betting_money(cursor, touched_backup_rounds)
+        timed_step("Rebuild purchase deltas", rebuild_round_purchase_deltas, cursor, touched_backup_rounds)
+        timed_step("Rebuild player economy", rebuild_round_player_economy, cursor, touched_backup_rounds)
+        timed_step("Rebuild inferred betting", rebuild_inferred_betting_money, cursor, touched_backup_rounds)
 
         # ------------------------------------------------------------
         # 5. Commit SQL before deleting local files.
         # ------------------------------------------------------------
-        conn.commit()
+        timed_step("SQL commit", conn.commit)
 
         # ------------------------------------------------------------
         # 6. Delete only successfully imported local files.
         # ------------------------------------------------------------
-        delete_imported_logs(processed_log_files)
-        delete_imported_round_backups(processed_backup_files)
+        timed_step("Delete imported logs", delete_imported_logs, processed_log_files)
+        timed_step("Delete imported round backups", delete_imported_round_backups, processed_backup_files)
 
         # ------------------------------------------------------------
         # 7. Export JSON after SQL commit.
         # ------------------------------------------------------------
-        export_log_jsons(cursor)
+        timed_step("Export JSON files", export_log_jsons, cursor)
 
     except Exception:
         conn.rollback()
