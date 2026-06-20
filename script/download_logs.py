@@ -1000,15 +1000,34 @@ def rebuild_round_purchase_deltas(cursor):
             row["steam_id"],
             int(row["def_index"]),
         )
+
         by_key.setdefault(key, {})[int(row["backup_round"])] = int(row["purchase_count"] or 0)
 
+    inserted = 0
+    skipped_no_previous = 0
+    skipped_not_increase = 0
+
     for (match_id, team_side, steam_id, def_index), counts_by_round in by_key.items():
-        for round_number in range(BACKUP_ROUND_MIN, BACKUP_ROUND_MAX + 1):
+        available_rounds = sorted(counts_by_round.keys())
+
+        for round_number in available_rounds:
+            previous_round_number = round_number - 1
+
+            # Important:
+            # WeaponPurchases values are cumulative totals.
+            # If we do not have the previous backup file for this same match/player/item,
+            # we cannot safely know what was bought this round.
+            # Do NOT assume previous count was 0, because that creates fake massive buys.
+            if previous_round_number not in counts_by_round:
+                skipped_no_previous += 1
+                continue
+
             current_count = counts_by_round.get(round_number, 0)
-            previous_count = counts_by_round.get(round_number - 1, 0)
+            previous_count = counts_by_round.get(previous_round_number, 0)
             delta = current_count - previous_count
 
             if delta <= 0:
+                skipped_not_increase += 1
                 continue
 
             source_file = f"backup_round{round_number:02d}.txt"
@@ -1046,6 +1065,7 @@ def rebuild_round_purchase_deltas(cursor):
                 delta,
                 delta,
                 def_index,
+
                 match_id,
                 source_file,
                 round_number,
@@ -1056,7 +1076,12 @@ def rebuild_round_purchase_deltas(cursor):
                 def_index,
             ))
 
+            inserted += 1
+
     print("Round purchase deltas rebuilt.")
+    print(f"Inserted purchase delta rows: {inserted}")
+    print(f"Skipped because previous round snapshot was missing: {skipped_no_previous}")
+    print(f"Skipped because purchase count did not increase: {skipped_not_increase}")
 
 
 def rebuild_round_player_economy(cursor):
