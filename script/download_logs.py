@@ -980,7 +980,7 @@ def delete_imported_round_backups(backup_files):
     print(f"Deleted imported round backups: {deleted}")
 
 MONEY_CAP = 30000
-IMPOSSIBLE_WINNING_THRESHOLD = 30000
+MAX_BET_AMOUNT = 10000
 
 def get_unique_touched_rounds(touched_rounds):
     unique = {}
@@ -1221,7 +1221,7 @@ def rebuild_round_player_economy(cursor, touched_rounds):
             pr.money_saved,
             pr.equipment_value,
             COALESCE(s.estimated_spent, 0) AS estimated_spent,
-            COALESCE(pr.cash_earned, 0) - COALESCE(s.estimated_spent, 0) AS estimated_net
+            COALESCE(pr.cash_earned, 0) - COALESCE(pr.money_saved, 0) AS estimated_net
         FROM player_rounds pr
         LEFT JOIN round_backup_rounds r
           ON r.match_id = pr.match_id
@@ -1310,51 +1310,54 @@ def rebuild_inferred_betting_money(cursor, touched_rounds):
         ),
         calculated AS (
             SELECT
-                *,
-                cash - estimated_spent AS cash_after_buy,
-                CASE
-                    WHEN cash - estimated_spent + cash_earned > {MONEY_CAP}
-                    THEN {MONEY_CAP}
-                    ELSE cash - estimated_spent + cash_earned
-                END AS expected_next_cash,
-                actual_next_cash -
-                CASE
-                    WHEN cash - estimated_spent + cash_earned > {MONEY_CAP}
-                    THEN {MONEY_CAP}
-                    ELSE cash - estimated_spent + cash_earned
-                END AS raw_extra_money
-            FROM economy
+                target.match_id,
+                target.source_file,
+                target.round_number,
+                target.team_side,
+                target.steam_id,
+                target.money_saved AS start_cash,
+                COALESCE(target.estimated_spent, 0) AS estimated_spent,
+                target.money_saved - COALESCE(target.estimated_spent, 0) AS cash_after_buy,
+                target.cash_earned AS actual_current_cash,
+                target.cash_earned - (
+                    target.money_saved - COALESCE(target.estimated_spent, 0)
+                ) AS raw_extra_money
+            FROM round_backup_player_economy_rounds target
+            INNER JOIN #touched_rounds touched
+              ON touched.match_id = target.match_id
+             AND touched.round_number = target.round_number
         )
         UPDATE target
-        SET
-            start_cash = calculated.cash,
-            cash_after_buy = calculated.cash_after_buy,
-            known_round_income = calculated.cash_earned,
-            actual_next_cash = calculated.actual_next_cash,
-            expected_next_cash = calculated.expected_next_cash,
-            inferred_extra_money = calculated.raw_extra_money,
-            inferred_betting_money =
-                CASE
-                    WHEN calculated.actual_next_cash IS NULL THEN NULL
-                    WHEN calculated.raw_extra_money > 0 AND calculated.raw_extra_money <= {IMPOSSIBLE_WINNING_THRESHOLD}
-                    THEN calculated.raw_extra_money
-                    ELSE 0
-                END,
-            economy_note =
-                CASE
-                    WHEN calculated.actual_next_cash IS NULL THEN 'No valid next-round cash snapshot'
-                    WHEN calculated.raw_extra_money > {IMPOSSIBLE_WINNING_THRESHOLD} THEN 'Impossible extra money; ignored'
-                    WHEN calculated.raw_extra_money > 0 THEN 'Positive unexplained money; likely betting payout'
-                    WHEN calculated.raw_extra_money < 0 THEN 'Lower than expected; missing spend, penalty, donation, or stat mismatch'
-                    ELSE 'No inferred betting money'
-                END
-        FROM round_backup_player_economy_rounds target
-        INNER JOIN calculated
-          ON calculated.match_id = target.match_id
-         AND calculated.source_file = target.source_file
-         AND calculated.round_number = target.round_number
-         AND calculated.team_side = target.team_side
-         AND calculated.steam_id = target.steam_id;
+            SET
+                start_cash = calculated.start_cash,
+                cash_after_buy = calculated.cash_after_buy,
+                known_round_income = calculated.actual_current_cash,
+                actual_next_cash = calculated.actual_current_cash,
+                expected_next_cash = calculated.cash_after_buy,
+                inferred_extra_money = calculated.raw_extra_money,
+                inferred_betting_money =
+                    CASE
+                        WHEN calculated.raw_extra_money BETWEEN -10000 AND 10000
+                        THEN calculated.raw_extra_money
+                        ELSE 0
+                    END,
+                economy_note =
+                    CASE
+                        WHEN calculated.start_cash IS NULL THEN 'Missing start cash'
+                        WHEN calculated.actual_current_cash IS NULL THEN 'Missing current cash'
+                        WHEN calculated.raw_extra_money > 10000 THEN 'Impossible positive money; ignored'
+                        WHEN calculated.raw_extra_money < -10000 THEN 'Impossible negative money; ignored'
+                        WHEN calculated.raw_extra_money > 0 THEN 'Positive unexplained money; likely betting win'
+                        WHEN calculated.raw_extra_money < 0 THEN 'Negative unexplained money; likely betting loss'
+                        ELSE 'No inferred betting money'
+                    END
+            FROM round_backup_player_economy_rounds target
+            INNER JOIN calculated
+              ON calculated.match_id = target.match_id
+             AND calculated.source_file = target.source_file
+             AND calculated.round_number = target.round_number
+             AND calculated.team_side = target.team_side
+             AND calculated.steam_id = target.steam_id;
     """)
 
     print("Touched inferred betting money rebuilt.")
@@ -2401,11 +2404,12 @@ def export_round_backup_jsons(cursor):
             player_name,
             steam_id,
             SUM(COALESCE(estimated_spent, 0)) AS money_spent,
-            SUM(COALESCE(known_round_income, 0)) AS money_gained,
-            SUM(COALESCE(known_round_income, 0) - COALESCE(estimated_spent, 0)) AS net_money
+            SUM(COALESCE(inferred_betting_money, 0)) AS net_betting,
+            SUM(CASE WHEN inferred_betting_money > 0 THEN inferred_betting_money ELSE 0 END) AS betting_won,
+            SUM(CASE WHEN inferred_betting_money < 0 THEN inferred_betting_money ELSE 0 END) AS betting_lost
         FROM round_backup_player_economy_rounds
         GROUP BY player_name, steam_id
-        ORDER BY net_money DESC;
+        ORDER BY net_betting DESC;
     """)
     write_json(data_dir / "round_player_money_summary.json", rows_to_dicts(cursor))
 
@@ -2440,7 +2444,7 @@ def export_round_backup_jsons(cursor):
             inferred_betting_money,
             economy_note
         FROM round_backup_player_economy_rounds
-        WHERE inferred_betting_money > 0
+        WHERE inferred_betting_money <> 0
         ORDER BY inferred_betting_money DESC, round_number ASC;
     """)
     write_json(data_dir / "round_betting_money.json", rows_to_dicts(cursor))
