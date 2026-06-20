@@ -10,9 +10,19 @@ from difflib import SequenceMatcher
 import paramiko
 
 
-def download_logs_from_sftp():
+def download_logs_and_round_backups_from_sftp():
+    """
+    Opens ONE SFTP connection, downloads:
+      1. newest log-all*.txt files
+      2. backup_round00.txt through backup_round20.txt
+
+    Then closes the connection.
+    """
+
     local_logs_dir = Path(__file__).resolve().parent / "logs"
     local_logs_dir.mkdir(parents=True, exist_ok=True)
+
+    backups_dir = local_backups_dir()
 
     required_sftp_vars = [
         "SFTP_HOST",
@@ -25,42 +35,25 @@ def download_logs_from_sftp():
 
     if missing:
         print(f"Missing SFTP environment variables: {', '.join(missing)}")
-        print("Skipping SFTP log download.")
-        return
+        print("Skipping SFTP downloads.")
+        return []
 
-    host = os.environ["SFTP_HOST"].strip()
-    port = int(os.environ.get("SFTP_PORT", "22").strip())
+    host, port, username, password = get_sftp_connection_parts()
 
-    # Allow accidental full URL.
-    host = host.replace("sftp://", "").replace("ssh://", "")
-
-    if "@" in host:
-        host = host.split("@", 1)[1]
-
-    if "/" in host:
-        host = host.split("/", 1)[0]
-
-    if ":" in host and host.count(":") == 1:
-        host_part, port_part = host.rsplit(":", 1)
-        if port_part.isdigit():
-            host = host_part
-            port = int(port_part)
-
-    username = os.environ["SFTP_USERNAME"]
-    password = os.environ["SFTP_PASSWORD"]
-    remote_log_dir = os.environ["SFTP_REMOTE_LOG_DIR"]
+    remote_log_dir = os.environ["SFTP_REMOTE_LOG_DIR"].strip()
+    remote_backup_dir = os.environ.get("SFTP_REMOTE_BACKUP_DIR", BACKUP_REMOTE_DIR).strip()
 
     print(f"Connecting to SFTP host={host!r}, port={port}, user={username!r}")
     print(f"Remote log dir={remote_log_dir!r}")
+    print(f"Remote backup dir={remote_backup_dir!r}")
 
     transport = None
     sftp = None
+    downloaded_backup_paths = []
 
     try:
         print("Opening SFTP transport...")
         transport = paramiko.Transport((host, port))
-
-        # This prevents infinite stalls.
         transport.banner_timeout = 30
         transport.auth_timeout = 30
         transport.handshake_timeout = 30
@@ -71,56 +64,85 @@ def download_logs_from_sftp():
         print("Creating SFTP client...")
         sftp = paramiko.SFTPClient.from_transport(transport)
 
-        print("Listing remote log directory...")
-        remote_files = sftp.listdir_attr(remote_log_dir)
+        # ------------------------------------------------------------
+        # Download newest log-all files
+        # ------------------------------------------------------------
+        try:
+            print("Listing remote log directory...")
+            remote_files = sftp.listdir_attr(remote_log_dir)
+            print(f"Found {len(remote_files)} remote log-dir files.")
 
-        print(f"Found {len(remote_files)} remote files.")
+            log_all_files = [
+                remote_file
+                for remote_file in remote_files
+                if remote_file.filename.endswith(".txt")
+                and remote_file.filename.startswith("log-all")
+            ]
 
-        log_all_files = [
-            remote_file
-            for remote_file in remote_files
-            if remote_file.filename.endswith(".txt")
-            and remote_file.filename.startswith("log-all")
-        ]
-        
-        ignored = len(remote_files) - len(log_all_files)
-        downloaded = 0
-        skipped = 0
-        
-        if not log_all_files:
-            print("No log-all*.txt files found on SFTP.")
-        else:
-            newest_files = sorted(
-                log_all_files,
-                key=lambda f: f.st_mtime,
-                reverse=True
-            )[:2]
-        
-            print("Newest log-all files selected:")
-            for selected_file in newest_files:
-                print(
-                    f"  {selected_file.filename} "
-                    f"(mtime={selected_file.st_mtime}, size={selected_file.st_size} bytes)"
-                )
-        
-            for remote_file in newest_files:
-                file_name = remote_file.filename
-                remote_path = f"{remote_log_dir.rstrip('/')}/{file_name}"
-                local_path = local_logs_dir / file_name
-        
-                if local_path.exists() and local_path.stat().st_size == remote_file.st_size:
-                    print(f"Skipping file because it already exists locally with same size: {file_name}")
-                    skipped += 1
-                    continue
-        
-                print(f"Downloading log-all file: {file_name} ({remote_file.st_size} bytes)...")
-                sftp.get(remote_path, str(local_path))
-                downloaded += 1
+            ignored = len(remote_files) - len(log_all_files)
+            downloaded = 0
+            skipped = 0
 
-        print("SFTP download complete.")
-        print(f"Downloaded: {downloaded}")
-        print(f"Skipped existing: {skipped}")
-        print(f"Ignored: {ignored}")
+            if not log_all_files:
+                print("No log-all*.txt files found on SFTP.")
+            else:
+                newest_files = sorted(
+                    log_all_files,
+                    key=lambda f: f.st_mtime,
+                    reverse=True
+                )[:2]
+
+                print("Newest log-all files selected:")
+                for selected_file in newest_files:
+                    print(
+                        f"  {selected_file.filename} "
+                        f"(mtime={selected_file.st_mtime}, size={selected_file.st_size} bytes)"
+                    )
+
+                for remote_file in newest_files:
+                    file_name = remote_file.filename
+                    remote_path = f"{remote_log_dir.rstrip('/')}/{file_name}"
+                    local_path = local_logs_dir / file_name
+
+                    if local_path.exists() and local_path.stat().st_size == remote_file.st_size:
+                        print(f"Skipping log because it already exists locally with same size: {file_name}")
+                        skipped += 1
+                        continue
+
+                    print(f"Downloading log-all file: {file_name} ({remote_file.st_size} bytes)...")
+                    sftp.get(remote_path, str(local_path))
+                    downloaded += 1
+
+            print("Log download complete.")
+            print(f"Downloaded logs: {downloaded}")
+            print(f"Skipped existing logs: {skipped}")
+            print(f"Ignored log-dir files: {ignored}")
+
+        except FileNotFoundError:
+            print(f"Remote log directory missing, skipping logs: {remote_log_dir}")
+
+        # ------------------------------------------------------------
+        # Download backup_round files
+        # ------------------------------------------------------------
+        print("Downloading round backup files...")
+
+        for file_name in backup_file_names():
+            remote_path = f"{remote_backup_dir.rstrip('/')}/{file_name}"
+            local_path = backups_dir / file_name
+
+            try:
+                sftp.stat(remote_path)
+            except FileNotFoundError:
+                print(f"Remote backup missing, skipping: {remote_path}")
+                continue
+
+            # Always overwrite local backups.
+            # Local same-size files may be stale.
+            print(f"Downloading backup: {remote_path} -> {local_path}")
+            sftp.get(remote_path, str(local_path))
+            downloaded_backup_paths.append(local_path)
+
+        print(f"Round backup download complete. Ready to parse: {len(downloaded_backup_paths)}")
 
     except Exception as e:
         print(f"SFTP download failed: {type(e).__name__}: {e}")
@@ -134,6 +156,8 @@ def download_logs_from_sftp():
         if transport:
             print("Closing SFTP transport...")
             transport.close()
+
+    return downloaded_backup_paths
 
 BACKUP_ROUND_MIN = 0
 BACKUP_ROUND_MAX = 20
@@ -2609,36 +2633,54 @@ def export_log_jsons(cursor):
     export_round_backup_jsons(cursor)
 
 if __name__ == "__main__":
-    download_logs_from_sftp()
+    # ------------------------------------------------------------
+    # 1. Download files first.
+    # This opens SFTP, downloads logs/backups, then closes SFTP.
+    # No SQL connection is open yet.
+    # ------------------------------------------------------------
+    backup_paths = download_logs_and_round_backups_from_sftp()
 
-    print("Testing Azure SQL connection...")
+    # ------------------------------------------------------------
+    # 2. Now connect to SQL after SFTP is done.
+    # ------------------------------------------------------------
     conn = connect_with_retry()
     cursor = conn.cursor()
-
     cursor.execute("SELECT @@VERSION")
-    row = cursor.fetchone()
 
-    print("Connected successfully!")
-    print(row[0][:200])
+    try:
+        # ------------------------------------------------------------
+        # 3. Import local downloaded files into SQL.
+        # ------------------------------------------------------------
+        processed_log_files = import_server_logs(cursor)
+        processed_backup_files = import_round_backups(cursor, backup_paths)
 
-    processed_log_files = import_server_logs(cursor)
+        # ------------------------------------------------------------
+        # 4. Rebuild derived economy/betting tables.
+        # ------------------------------------------------------------
+        rebuild_round_purchase_deltas(cursor)
+        rebuild_round_player_economy(cursor)
+        rebuild_inferred_betting_money(cursor)
 
-    backup_paths = download_round_backups_from_sftp(cursor)
-    processed_backup_files = import_round_backups(cursor, backup_paths)
-    
-    rebuild_round_purchase_deltas(cursor)
-    rebuild_round_player_economy(cursor)
-    rebuild_inferred_betting_money(cursor)
-    
-    conn.commit()
-    print("SQL import committed successfully.")
+        # ------------------------------------------------------------
+        # 5. Commit SQL before deleting local files.
+        # ------------------------------------------------------------
+        conn.commit()
 
-    delete_imported_logs(processed_log_files)
-    delete_imported_round_backups(processed_backup_files)
+        # ------------------------------------------------------------
+        # 6. Delete only successfully imported local files.
+        # ------------------------------------------------------------
+        delete_imported_logs(processed_log_files)
+        delete_imported_round_backups(processed_backup_files)
 
-    export_log_jsons(cursor)
+        # ------------------------------------------------------------
+        # 7. Export JSON after SQL commit.
+        # ------------------------------------------------------------
+        export_log_jsons(cursor)
 
-    cursor.close()
-    conn.close()
+    except Exception:
+        conn.rollback()
+        raise
 
-    print("Imported logs/backups into SQL, deleted imported files, and exported JSON files.")
+    finally:
+        cursor.close()
+        conn.close()
