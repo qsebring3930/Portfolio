@@ -1,17 +1,17 @@
 [
   {
-    "match_id": "cb828e2389b1b1c560c2e66bab1f6a17255f56fc25a7bcc7cc033a3e6aa71467",
-    "source_file": "backup_round12.txt",
-    "backup_timestamp": "2026-06-20 18:59:09",
-    "map_name": "de_neptune",
-    "current_round": 12,
+    "match_id": "8c53b1cd9b30bf2885d8fa085f633ddf1ea9e168cbdeaffdc54e7eb69bf04627",
+    "source_file": "backup_round04.txt",
+    "backup_timestamp": "2026-06-20 19:09:31",
+    "map_name": "de_vertigo",
+    "current_round": 4,
     "team1_name": "Alliance",
     "team2_name": "Horde",
     "first_half_team1_score": 0,
     "first_half_team2_score": 0,
     "loser_most_recent_team": "CT",
-    "consecutive_t_loses": null,
-    "consecutive_ct_loses": 4,
-    "spawn_points_cfg": 1890392837
+    "consecutive_t_loses": 1,
+    "consecutive_ct_loses": 1,
+    "spawn_points_cfg": 1068514972
   }
 ]
