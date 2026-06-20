@@ -1,17 +1,17 @@
 [
   {
-    "match_id": "318e08564b944cfe405e6a0ab22db1a6567645dbf64f79227877535a6ea54276",
-    "source_file": "backup_round07.txt",
-    "backup_timestamp": "2026-06-20 16:49:47",
-    "map_name": "cs_museum_d",
-    "current_round": 7,
+    "match_id": "ae55216c9675b08dc4b81d4108794ef3c4c124d03677c084bebe20fd7d089cf1",
+    "source_file": "backup_round06.txt",
+    "backup_timestamp": "2026-06-20 16:59:57",
+    "map_name": "de_nuke_night",
+    "current_round": 6,
     "team1_name": "Alliance",
     "team2_name": "Horde",
     "first_half_team1_score": 0,
     "first_half_team2_score": 0,
     "loser_most_recent_team": "CT",
     "consecutive_t_loses": null,
-    "consecutive_ct_loses": 2,
-    "spawn_points_cfg": 1177455984
+    "consecutive_ct_loses": 1,
+    "spawn_points_cfg": -202610626
   }
 ]
