@@ -1,17 +1,17 @@
 [
   {
     "match_id": "c01e0818b4d866b3b057218f7153871432ed23154c427c331f285898d41723c6",
-    "source_file": "backup_round00.txt",
-    "backup_timestamp": "2026-06-20 14:00:16",
+    "source_file": "backup_round09.txt",
+    "backup_timestamp": "2026-06-20 14:09:38",
     "map_name": "de_centro",
-    "current_round": 0,
+    "current_round": 9,
     "team1_name": "Alliance",
     "team2_name": "Horde",
     "first_half_team1_score": 0,
     "first_half_team2_score": 0,
-    "loser_most_recent_team": null,
-    "consecutive_t_loses": null,
+    "loser_most_recent_team": "T",
+    "consecutive_t_loses": 6,
     "consecutive_ct_loses": null,
-    "spawn_points_cfg": -8481185
+    "spawn_points_cfg": -395128673
   }
 ]
