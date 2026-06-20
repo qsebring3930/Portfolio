@@ -1199,6 +1199,7 @@ def rebuild_round_player_economy(cursor, touched_rounds):
             cash_earned,
             money_saved,
             equipment_value,
+            kill_reward,
             estimated_spent,
             estimated_net
         )
@@ -1220,6 +1221,7 @@ def rebuild_round_player_economy(cursor, touched_rounds):
             pr.cash_earned,
             pr.money_saved,
             pr.equipment_value,
+            COALESCE(pr.kill_reward, 0) AS kill_reward,
             COALESCE(s.estimated_spent, 0) AS estimated_spent,
             COALESCE(pr.cash_earned, 0) - COALESCE(pr.money_saved, 0) AS estimated_net
         FROM player_rounds pr
@@ -1252,112 +1254,149 @@ def rebuild_inferred_betting_money(cursor, touched_rounds):
         return
 
     cursor.execute(f"""
-        WITH player_cash AS (
-            SELECT
-                p.match_id,
-                p.source_file,
-                m.map_name,
-                m.backup_timestamp,
-                CAST(REPLACE(REPLACE(p.source_file, 'backup_round', ''), '.txt', '') AS INT) AS round_number,
-                p.team_side,
-                p.steam_id,
-                p.player_name,
-                p.cash
-            FROM round_backup_players p
-            INNER JOIN round_backup_matches m
-              ON m.match_id = p.match_id
-             AND m.source_file = p.source_file
-            WHERE p.source_file LIKE 'backup_round%.txt'
-        ),
-        economy AS (
-            SELECT
-                pc.*,
-                next_pc.cash AS actual_next_cash,
-                COALESCE(spent.estimated_spent, 0) AS estimated_spent,
-                COALESCE(cash_stat.stat_value, 0) AS cash_earned
-            FROM player_cash pc
-            INNER JOIN #touched_rounds touched
-              ON touched.match_id = pc.match_id
-             AND touched.round_number = pc.round_number
-            LEFT JOIN player_cash next_pc
-              ON next_pc.match_id = pc.match_id
-             AND next_pc.team_side = pc.team_side
-             AND next_pc.steam_id = pc.steam_id
-             AND next_pc.round_number = pc.round_number + 1
-            LEFT JOIN (
-                SELECT
-                    match_id,
-                    source_file,
-                    round_number,
-                    team_side,
-                    steam_id,
-                    SUM(COALESCE(estimated_spent, 0)) AS estimated_spent
-                FROM round_backup_purchase_deltas
-                GROUP BY match_id, source_file, round_number, team_side, steam_id
-            ) spent
-              ON spent.match_id = pc.match_id
-             AND spent.source_file = pc.source_file
-             AND spent.round_number = pc.round_number
-             AND spent.team_side = pc.team_side
-             AND spent.steam_id = pc.steam_id
-            LEFT JOIN round_backup_player_round_stats cash_stat
-              ON cash_stat.match_id = pc.match_id
-             AND cash_stat.source_file = pc.source_file
-             AND cash_stat.team_side = pc.team_side
-             AND cash_stat.steam_id = pc.steam_id
-             AND cash_stat.round_number = pc.round_number
-             AND cash_stat.stat_name = 'CashEarned'
-        ),
-        calculated AS (
+        WITH calculated AS (
             SELECT
                 target.match_id,
                 target.source_file,
                 target.round_number,
                 target.team_side,
                 target.steam_id,
+
+                m.map_name,
+
                 target.money_saved AS start_cash,
                 COALESCE(target.estimated_spent, 0) AS estimated_spent,
-                target.money_saved - COALESCE(target.estimated_spent, 0) AS cash_after_buy,
                 target.cash_earned AS actual_current_cash,
-                target.cash_earned - (
-                    target.money_saved - COALESCE(target.estimated_spent, 0)
-                ) AS raw_extra_money
+                COALESCE(target.kill_reward, 0) AS kill_reward,
+                target.result_code,
+                target.round_won,
+
+                CASE
+                    -- Casual bomb/defuse maps.
+                    -- Winner gets 2700.
+                    WHEN m.map_name LIKE 'de[_]%' AND target.round_won = 1
+                    THEN 2700
+
+                    -- Casual hostage maps.
+                    -- T win: 2000.
+                    WHEN m.map_name LIKE 'cs[_]%' AND target.round_won = 1 AND target.team_side = 'team1'
+                    THEN 2000
+
+                    -- Casual hostage maps.
+                    -- CT win default: 2300.
+                    -- True hostage rescue can be 3000, but keep 2300 until we verify exact result_code.
+                    WHEN m.map_name LIKE 'cs[_]%' AND target.round_won = 1 AND target.team_side = 'team2'
+                    THEN 2300
+
+                    -- Casual loser money is flat 2400.
+                    WHEN target.round_won = 0
+                    THEN 2400
+
+                    ELSE 0
+                END AS base_round_income,
+
+                CASE
+                    -- Casual bomb planted loser bonus.
+                    -- team1 is T in your existing code.
+                    -- result_code 3 is the one Zickzii's controlled test hit.
+                    WHEN m.map_name LIKE 'de[_]%'
+                     AND target.round_won = 0
+                     AND target.team_side = 'team1'
+                     AND target.result_code = 3
+                    THEN 200
+
+                    ELSE 0
+                END AS objective_bonus
+
             FROM round_backup_player_economy_rounds target
             INNER JOIN #touched_rounds touched
               ON touched.match_id = target.match_id
              AND touched.round_number = target.round_number
+            INNER JOIN round_backup_matches m
+              ON m.match_id = target.match_id
+             AND m.source_file = target.source_file
+        ),
+        final_calc AS (
+            SELECT
+                calculated.*,
+
+                calculated.base_round_income
+                + calculated.objective_bonus
+                + calculated.kill_reward AS normal_round_income,
+
+                calculated.start_cash
+                - calculated.estimated_spent AS cash_after_buy,
+
+                CASE
+                    WHEN calculated.start_cash IS NULL THEN NULL
+                    WHEN calculated.actual_current_cash IS NULL THEN NULL
+                    WHEN calculated.start_cash
+                         - calculated.estimated_spent
+                         + calculated.base_round_income
+                         + calculated.objective_bonus
+                         + calculated.kill_reward > {MONEY_CAP}
+                    THEN {MONEY_CAP}
+                    ELSE calculated.start_cash
+                         - calculated.estimated_spent
+                         + calculated.base_round_income
+                         + calculated.objective_bonus
+                         + calculated.kill_reward
+                END AS expected_cash_without_betting
+
+            FROM calculated
+        ),
+        betting_calc AS (
+            SELECT
+                final_calc.*,
+
+                final_calc.actual_current_cash
+                - final_calc.expected_cash_without_betting AS betting_delta
+
+            FROM final_calc
         )
         UPDATE target
-            SET
-                start_cash = calculated.start_cash,
-                cash_after_buy = calculated.cash_after_buy,
-                known_round_income = calculated.actual_current_cash,
-                actual_next_cash = calculated.actual_current_cash,
-                expected_next_cash = calculated.cash_after_buy,
-                inferred_extra_money = calculated.raw_extra_money,
-                inferred_betting_money =
-                    CASE
-                        WHEN calculated.raw_extra_money BETWEEN -10000 AND 10000
-                        THEN calculated.raw_extra_money
-                        ELSE 0
-                    END,
-                economy_note =
-                    CASE
-                        WHEN calculated.start_cash IS NULL THEN 'Missing start cash'
-                        WHEN calculated.actual_current_cash IS NULL THEN 'Missing current cash'
-                        WHEN calculated.raw_extra_money > 10000 THEN 'Impossible positive money; ignored'
-                        WHEN calculated.raw_extra_money < -10000 THEN 'Impossible negative money; ignored'
-                        WHEN calculated.raw_extra_money > 0 THEN 'Positive unexplained money; likely betting win'
-                        WHEN calculated.raw_extra_money < 0 THEN 'Negative unexplained money; likely betting loss'
-                        ELSE 'No inferred betting money'
-                    END
-            FROM round_backup_player_economy_rounds target
-            INNER JOIN calculated
-              ON calculated.match_id = target.match_id
-             AND calculated.source_file = target.source_file
-             AND calculated.round_number = target.round_number
-             AND calculated.team_side = target.team_side
-             AND calculated.steam_id = target.steam_id;
+        SET
+            start_cash = betting_calc.start_cash,
+            cash_after_buy = betting_calc.cash_after_buy,
+
+            -- Misnamed old column, but now this stores expected normal income:
+            -- base round payout + objective bonus + kill reward.
+            known_round_income = betting_calc.normal_round_income,
+
+            -- Misnamed old column, but now this stores actual current/end cash.
+            actual_next_cash = betting_calc.actual_current_cash,
+
+            -- Expected cash after spending and normal CS2 casual payout, before betting.
+            expected_next_cash = betting_calc.expected_cash_without_betting,
+
+            inferred_extra_money = betting_calc.betting_delta,
+
+            inferred_betting_money =
+                CASE
+                    WHEN betting_calc.start_cash IS NULL THEN NULL
+                    WHEN betting_calc.actual_current_cash IS NULL THEN NULL
+                    WHEN betting_calc.betting_delta BETWEEN -{MAX_BET_AMOUNT} AND {MAX_BET_AMOUNT}
+                    THEN betting_calc.betting_delta
+                    ELSE 0
+                END,
+
+            economy_note =
+                CASE
+                    WHEN betting_calc.start_cash IS NULL THEN 'Missing start cash'
+                    WHEN betting_calc.actual_current_cash IS NULL THEN 'Missing current cash'
+                    WHEN betting_calc.betting_delta > {MAX_BET_AMOUNT} THEN 'Impossible positive betting delta; ignored'
+                    WHEN betting_calc.betting_delta < -{MAX_BET_AMOUNT} THEN 'Impossible negative betting delta; ignored'
+                    WHEN betting_calc.betting_delta > 0 THEN 'Positive unexplained money; likely betting win'
+                    WHEN betting_calc.betting_delta < 0 THEN 'Negative unexplained money; likely betting loss'
+                    ELSE 'No inferred betting money'
+                END
+        FROM round_backup_player_economy_rounds target
+        INNER JOIN betting_calc
+          ON betting_calc.match_id = target.match_id
+         AND betting_calc.source_file = target.source_file
+         AND betting_calc.round_number = target.round_number
+         AND betting_calc.team_side = target.team_side
+         AND betting_calc.steam_id = target.steam_id;
     """)
 
     print("Touched inferred betting money rebuilt.")
