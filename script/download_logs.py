@@ -2484,8 +2484,8 @@ def export_round_backup_jsons(cursor):
              AND e.team_side = p.team_side
              AND e.steam_id = p.steam_id
             WHERE p.def_index = 55
-              AND p.team_side = 'team2'
-              AND e.team_side = 'team2'
+              AND p.team_side = 'team1'
+              AND e.team_side = 'team1'
             GROUP BY e.player_name, e.steam_id
         )
         SELECT
