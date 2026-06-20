@@ -9,8 +9,7 @@ from difflib import SequenceMatcher
 
 import paramiko
 
-
-def download_logs_and_round_backups_from_sftp():
+def download_logs_and_round_backups_from_sftp(include_logs=False):
     """
     Opens ONE SFTP connection, downloads:
       1. newest log-all*.txt files
@@ -67,7 +66,7 @@ def download_logs_and_round_backups_from_sftp():
         # ------------------------------------------------------------
         # Download newest log-all files
         # ------------------------------------------------------------
-        if include-logs:
+        if include_logs:
             try:
                 print("Listing remote log directory...")
                 remote_files = sftp.listdir_attr(remote_log_dir)
@@ -121,6 +120,8 @@ def download_logs_and_round_backups_from_sftp():
     
             except FileNotFoundError:
                 print(f"Remote log directory missing, skipping logs: {remote_log_dir}")
+        else:
+            print("Skipping log-all download because include_logs=False.")
 
         # ------------------------------------------------------------
         # Download backup_round files
