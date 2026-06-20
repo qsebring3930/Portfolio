@@ -1,17 +1,17 @@
 [
   {
-    "match_id": "9fe9931ec18e3f3b47edbddc947bb3fec2f117ae4790f57819142765dd869450",
-    "source_file": "backup_round10.txt",
-    "backup_timestamp": "2026-06-20 17:30:10",
-    "map_name": "de_cityfever_csgo_d",
-    "current_round": 10,
+    "match_id": "06ad07c3cfd1377280e07a700546ae817bd75cf9323c17c29e372e80f7ab51cd",
+    "source_file": "backup_round02.txt",
+    "backup_timestamp": "2026-06-20 17:40:25",
+    "map_name": "de_train",
+    "current_round": 2,
     "team1_name": "Alliance",
     "team2_name": "Horde",
     "first_half_team1_score": 0,
     "first_half_team2_score": 0,
-    "loser_most_recent_team": "CT",
-    "consecutive_t_loses": null,
-    "consecutive_ct_loses": 1,
-    "spawn_points_cfg": 930607769
+    "loser_most_recent_team": "T",
+    "consecutive_t_loses": 1,
+    "consecutive_ct_loses": null,
+    "spawn_points_cfg": 657053022
   }
 ]
