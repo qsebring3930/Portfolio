@@ -1,17 +1,17 @@
 [
   {
-    "match_id": "a468ff4a21918420cec7881f8e8605531b1d473137a913a13c3fe2d19048b81f",
-    "source_file": "backup_round12.txt",
-    "backup_timestamp": "2026-06-20 14:40:28",
-    "map_name": "de_castleball_retexture",
-    "current_round": 12,
+    "match_id": "a7052382c6661517714a10fd82051f9188963f665b9af19730a93302ca57b97c",
+    "source_file": "backup_round04.txt",
+    "backup_timestamp": "2026-06-20 14:49:38",
+    "map_name": "cs_backalley",
+    "current_round": 4,
     "team1_name": "Alliance",
     "team2_name": "Horde",
     "first_half_team1_score": 0,
     "first_half_team2_score": 0,
-    "loser_most_recent_team": "T",
-    "consecutive_t_loses": 1,
-    "consecutive_ct_loses": null,
-    "spawn_points_cfg": -626466301
+    "loser_most_recent_team": "CT",
+    "consecutive_t_loses": null,
+    "consecutive_ct_loses": 1,
+    "spawn_points_cfg": -69855879
   }
 ]
