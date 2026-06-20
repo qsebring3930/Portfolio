@@ -34,6 +34,7 @@ jobs:
       - name: Download logs from SFTP and import into SQL
         run: python script/download_logs.py
         env:
+          INCLUDE_LOGS: "0"
           SFTP_HOST: ${{ secrets.SFTP_HOST }}
           SFTP_PORT: ${{ secrets.SFTP_PORT }}
           SFTP_USERNAME: ${{ secrets.SFTP_USERNAME }}
