@@ -1,17 +1,17 @@
 [
   {
-    "match_id": "9d704a2ae533284c243e18d3aa28cd43dacfbee2dc2c2d4894aed0b4a57b557f",
-    "source_file": "backup_round08.txt",
-    "backup_timestamp": "2026-06-20 08:49:12",
-    "map_name": "de_sakura",
-    "current_round": 8,
+    "match_id": "665be48811c4e81d0a887371d225ee4fbfd4079158581e2ab71660699260486c",
+    "source_file": "backup_round11.txt",
+    "backup_timestamp": "2026-06-20 09:04:41",
+    "map_name": "de_dust_rbcs",
+    "current_round": 11,
     "team1_name": "Alliance",
     "team2_name": "Horde",
     "first_half_team1_score": 0,
     "first_half_team2_score": 0,
-    "loser_most_recent_team": "CT",
-    "consecutive_t_loses": null,
-    "consecutive_ct_loses": 8,
-    "spawn_points_cfg": 1776442983
+    "loser_most_recent_team": "T",
+    "consecutive_t_loses": 5,
+    "consecutive_ct_loses": null,
+    "spawn_points_cfg": 1727455365
   }
 ]

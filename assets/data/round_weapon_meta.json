@@ -4,22 +4,55 @@
     "item_name": "Kevlar Vest + Helmet",
     "item_category": "Equipment",
     "price": 1000,
-    "total_bought": 14,
-    "bought_in_wins": 4,
-    "bought_in_losses": 6,
-    "win_buy_percent": "28.57",
-    "total_spent": 14000
+    "total_bought": 36,
+    "bought_in_wins": 14,
+    "bought_in_losses": 15,
+    "win_buy_percent": "38.89",
+    "total_spent": 36000
   },
   {
     "def_index": 55,
     "item_name": "Defuse Kit",
     "item_category": "Equipment",
     "price": 400,
+    "total_bought": 14,
+    "bought_in_wins": 6,
+    "bought_in_losses": 7,
+    "win_buy_percent": "42.86",
+    "total_spent": 5600
+  },
+  {
+    "def_index": 35,
+    "item_name": "Nova",
+    "item_category": "Mid-Tier",
+    "price": 1050,
     "total_bought": 8,
-    "bought_in_wins": 5,
+    "bought_in_wins": 2,
+    "bought_in_losses": 5,
+    "win_buy_percent": "25.00",
+    "total_spent": 8400
+  },
+  {
+    "def_index": 7,
+    "item_name": "AK-47",
+    "item_category": "Rifle",
+    "price": 2700,
+    "total_bought": 4,
+    "bought_in_wins": 2,
     "bought_in_losses": 2,
-    "win_buy_percent": "62.50",
-    "total_spent": 3200
+    "win_buy_percent": "50.00",
+    "total_spent": 10800
+  },
+  {
+    "def_index": 60,
+    "item_name": "M4A1-S",
+    "item_category": "Rifle",
+    "price": 2900,
+    "total_bought": 2,
+    "bought_in_wins": 1,
+    "bought_in_losses": 1,
+    "win_buy_percent": "50.00",
+    "total_spent": 5800
   },
   {
     "def_index": 23,
@@ -33,36 +66,14 @@
     "total_spent": 2800
   },
   {
-    "def_index": 60,
-    "item_name": "M4A1-S",
-    "item_category": "Rifle",
-    "price": 2900,
-    "total_bought": 1,
-    "bought_in_wins": 1,
-    "bought_in_losses": 0,
-    "win_buy_percent": "100.00",
-    "total_spent": 2900
-  },
-  {
-    "def_index": 7,
-    "item_name": "AK-47",
-    "item_category": "Rifle",
-    "price": 2700,
-    "total_bought": 1,
-    "bought_in_wins": 0,
-    "bought_in_losses": 1,
-    "win_buy_percent": "0.00",
-    "total_spent": 2700
-  },
-  {
     "def_index": 50,
     "item_name": "Kevlar Vest",
     "item_category": "Equipment",
     "price": 650,
-    "total_bought": 1,
-    "bought_in_wins": 0,
+    "total_bought": 2,
+    "bought_in_wins": 1,
     "bought_in_losses": 1,
-    "win_buy_percent": "0.00",
-    "total_spent": 650
+    "win_buy_percent": "50.00",
+    "total_spent": 1300
   }
 ]
