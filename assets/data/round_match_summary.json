@@ -1,17 +1,17 @@
 [
   {
-    "match_id": "7f08518f9b509ed53f39e03e8a47e230fb91f2cd6bddab4c79cd00305b9ccc7b",
-    "source_file": "backup_round15.txt",
-    "backup_timestamp": "2026-06-20 20:48:16",
-    "map_name": "de_speedcastle_v2_retexture",
-    "current_round": 15,
+    "match_id": "5d806c275df40da553d1e72c170752ee5cdbb1677f98184d069f1f26c8c7c258",
+    "source_file": "backup_round09.txt",
+    "backup_timestamp": "2026-06-20 20:59:50",
+    "map_name": "cs_office",
+    "current_round": 9,
     "team1_name": "Alliance",
     "team2_name": "Horde",
     "first_half_team1_score": 0,
     "first_half_team2_score": 0,
-    "loser_most_recent_team": "T",
-    "consecutive_t_loses": 4,
-    "consecutive_ct_loses": null,
-    "spawn_points_cfg": 1350790929
+    "loser_most_recent_team": "CT",
+    "consecutive_t_loses": null,
+    "consecutive_ct_loses": 2,
+    "spawn_points_cfg": 302198225
   }
 ]
