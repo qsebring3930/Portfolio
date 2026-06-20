@@ -15,6 +15,7 @@ title: War3CS2 Stats
       <button class="stats-tab" data-tab="total-levels">Top Rank</button>
       <button class="stats-tab" data-tab="race-time">Race Time</button>
       <button class="stats-tab" data-tab="total-time">Total Time</button>
+      <button class="stats-tab" data-tab="popular-races">Popular Races</button>
       <button class="stats-tab" data-tab="top-chatters">Top Chatters</button>
       <button class="stats-tab" data-tab="curse-users">Curse Users</button>
       <button class="stats-tab" data-tab="most-slain">Most Slain</button>
@@ -86,6 +87,18 @@ title: War3CS2 Stats
 
       <div class="stats-table-wrap">
         <table id="raceTimeTable"></table>
+      </div>
+    </section>
+
+    <section class="stats-panel" data-panel="popular-races">
+      <label for="popularRacesSearch">Race:</label>
+      <div class="table-search-wrap">
+        <select id="popularRacesSearch"></select>
+        <button type="button" class="table-search-button" data-target="popularRacesSearch">▼</button>
+      </div>
+
+      <div class="stats-table-wrap">
+        <table id="popularRacesTable"></table>
       </div>
     </section>
 
@@ -867,6 +880,36 @@ function renderTotalTime() {
   ], filteredRows);
 }
 
+
+function getPopularRaceRows() {
+  return raceColumns
+    .map(race => {
+      const minutes = racePlaytime.reduce(
+        (sum, player) => sum + Number(player[race] || 0),
+        0
+      );
+
+      return {
+        race_key: race,
+        race: prettyName(race),
+        minutes: minutes
+      };
+    })
+    .filter(row => row.minutes > 0)
+    .sort((a, b) => b.minutes - a.minutes);
+}
+
+function renderPopularRaces() {
+  const rows = getPopularRaceRows();
+
+  const filteredRows = applyTableFilter("popularRacesSearch", rows, "race");
+
+  renderTable("popularRacesTable", [
+    { key: "race", label: "Race" },
+    { key: "minutes", label: "Minutes Played" }
+  ], filteredRows);
+}
+
 function renderTopChatters() {
   const rows = topChatters
     .map(row => ({
@@ -1190,6 +1233,7 @@ async function init() {
   setupTableSearch("highestAnyRaceSearch", raceLevels, "player_name", renderHighestAnyRace);
   setupTableSearch("highestTotalLevelsSearch", raceLevels, "player_name", renderHighestTotalLevels);
   setupTableSearch("totalTimeTableSearch", racePlaytime, "player_name", renderTotalTime);
+  setupTableSearch("popularRacesSearch", getPopularRaceRows(), "race", renderPopularRaces);
   setupTableSearch("topChattersSearch", topChatters, "player_name", renderTopChatters);
   setupTableSearch("curseUsersSearch", topCurseUsers, "player_name", renderTopCurseUsers);
   setupTableSearch("mostSlainSearch", mostSlainPlayers, "player_name", renderMostSlainPlayers);
@@ -1206,6 +1250,7 @@ async function init() {
   renderHighestAnyRace();
   renderHighestTotalLevels();
   renderTotalTime();
+  renderPopularRaces();
   renderTopChatters();
   renderTopCurseUsers();
   renderMostSlainPlayers();
