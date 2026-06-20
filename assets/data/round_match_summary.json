@@ -1,17 +1,17 @@
 [
   {
-    "match_id": "cd3e16e824cb4cc7d9ce1941402e8d3577a2b8f9c820d95b6b3a82fd7e4b960f",
-    "source_file": "backup_round10.txt",
-    "backup_timestamp": "2026-06-20 10:47:04",
-    "map_name": "de_akiba",
-    "current_round": 10,
+    "match_id": "d95edd81cde867c8fd4682879fab883fa4dc1e6974ffb6c56279c7f70795d0e5",
+    "source_file": "backup_round01.txt",
+    "backup_timestamp": "2026-06-20 10:54:36",
+    "map_name": "420_shotguns",
+    "current_round": 1,
     "team1_name": "Alliance",
     "team2_name": "Horde",
     "first_half_team1_score": 0,
     "first_half_team2_score": 0,
-    "loser_most_recent_team": "CT",
+    "loser_most_recent_team": null,
     "consecutive_t_loses": null,
-    "consecutive_ct_loses": 4,
-    "spawn_points_cfg": -882536161
+    "consecutive_ct_loses": null,
+    "spawn_points_cfg": -1565638638
   }
 ]
