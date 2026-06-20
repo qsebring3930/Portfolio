@@ -135,6 +135,986 @@ def download_logs_from_sftp():
             print("Closing SFTP transport...")
             transport.close()
 
+BACKUP_ROUND_MIN = 0
+BACKUP_ROUND_MAX = 20
+BACKUP_REMOTE_DIR = "game/csgo"
+
+
+def backup_file_names():
+    return [
+        f"backup_round{round_number:02d}.txt"
+        for round_number in range(BACKUP_ROUND_MIN, BACKUP_ROUND_MAX + 1)
+    ]
+
+
+def local_backups_dir():
+    path = Path(__file__).resolve().parent / "round_backups"
+    path.mkdir(parents=True, exist_ok=True)
+    return path
+
+
+def get_sftp_connection_parts():
+    required_sftp_vars = [
+        "SFTP_HOST",
+        "SFTP_USERNAME",
+        "SFTP_PASSWORD",
+    ]
+
+    missing = [name for name in required_sftp_vars if not os.environ.get(name)]
+
+    if missing:
+        raise RuntimeError(f"Missing SFTP environment variables: {', '.join(missing)}")
+
+    host = os.environ["SFTP_HOST"].strip()
+    port = int(os.environ.get("SFTP_PORT", "22").strip())
+
+    host = host.replace("sftp://", "").replace("ssh://", "")
+
+    if "@" in host:
+        host = host.split("@", 1)[1]
+
+    if "/" in host:
+        host = host.split("/", 1)[0]
+
+    if ":" in host and host.count(":") == 1:
+        host_part, port_part = host.rsplit(":", 1)
+        if port_part.isdigit():
+            host = host_part
+            port = int(port_part)
+
+    return host, port, os.environ["SFTP_USERNAME"], os.environ["SFTP_PASSWORD"]
+
+
+def already_processed_round_backup_file(cursor, file_name):
+    cursor.execute("""
+        SELECT 1
+        FROM processed_round_backup_files
+        WHERE file_name = ?
+    """, file_name)
+
+    return cursor.fetchone() is not None
+
+
+def mark_round_backup_file_processed(cursor, file_name, file_size, file_hash):
+    cursor.execute("""
+        IF NOT EXISTS (
+            SELECT 1
+            FROM processed_round_backup_files
+            WHERE file_name = ?
+        )
+        INSERT INTO processed_round_backup_files (
+            file_name,
+            file_size,
+            file_hash
+        )
+        VALUES (?, ?, ?)
+    """, (
+        file_name,
+        file_name,
+        file_size,
+        file_hash,
+    ))
+
+
+def file_sha256(path):
+    digest = hashlib.sha256()
+
+    with path.open("rb") as f:
+        for chunk in iter(lambda: f.read(1024 * 1024), b""):
+            digest.update(chunk)
+
+    return digest.hexdigest()
+
+
+def download_round_backups_from_sftp(cursor):
+    backups_dir = local_backups_dir()
+    remote_dir = os.environ.get("SFTP_REMOTE_BACKUP_DIR", BACKUP_REMOTE_DIR).strip()
+
+    host, port, username, password = get_sftp_connection_parts()
+
+    print(f"Connecting to SFTP host={host!r}, port={port}, user={username!r}")
+    print(f"Remote backup dir={remote_dir!r}")
+
+    transport = None
+    sftp = None
+    downloaded_paths = []
+
+    try:
+        transport = paramiko.Transport((host, port))
+        transport.banner_timeout = 30
+        transport.auth_timeout = 30
+        transport.handshake_timeout = 30
+        transport.connect(username=username, password=password)
+
+        sftp = paramiko.SFTPClient.from_transport(transport)
+
+        for file_name in backup_file_names():
+            if already_processed_round_backup_file(cursor, file_name):
+                print(f"Skipping already parsed backup: {file_name}")
+                continue
+
+            remote_path = f"{remote_dir.rstrip('/')}/{file_name}"
+            local_path = backups_dir / file_name
+
+            try:
+                remote_stat = sftp.stat(remote_path)
+            except FileNotFoundError:
+                print(f"Remote backup missing, skipping: {remote_path}")
+                continue
+
+            if local_path.exists() and local_path.stat().st_size == remote_stat.st_size:
+                print(f"Using existing local backup: {file_name}")
+                downloaded_paths.append(local_path)
+                continue
+
+            print(f"Downloading backup: {remote_path} -> {local_path}")
+            sftp.get(remote_path, str(local_path))
+            downloaded_paths.append(local_path)
+
+    finally:
+        if sftp:
+            sftp.close()
+
+        if transport:
+            transport.close()
+
+    print(f"Round backup download complete. Ready to parse: {len(downloaded_paths)}")
+    return downloaded_paths
+
+TOKEN_RE = re.compile(r'"([^"]*)"|([{}])')
+
+
+def parse_keyvalues_file(path):
+    text = path.read_text(encoding="utf-8", errors="replace")
+    tokens = []
+
+    for match in TOKEN_RE.finditer(text):
+        if match.group(1) is not None:
+            tokens.append(("string", match.group(1)))
+        else:
+            tokens.append((match.group(2), match.group(2)))
+
+    index = 0
+
+    def parse_object():
+        nonlocal index
+        obj = {}
+
+        while index < len(tokens):
+            token_type, token_value = tokens[index]
+
+            if token_type == "}":
+                index += 1
+                break
+
+            if token_type != "string":
+                index += 1
+                continue
+
+            key = token_value
+            index += 1
+
+            if index < len(tokens) and tokens[index][0] == "{":
+                index += 1
+                obj[key] = parse_object()
+            elif index < len(tokens) and tokens[index][0] == "string":
+                obj[key] = tokens[index][1]
+                index += 1
+            else:
+                obj[key] = None
+
+        return obj
+
+    if not tokens:
+        return {}
+
+    root_key_type, root_key = tokens[index]
+    index += 1
+
+    if index < len(tokens) and tokens[index][0] == "{":
+        index += 1
+        return {root_key: parse_object()}
+
+    return {root_key: None}
+
+
+def to_int(value, default=None):
+    if value is None:
+        return default
+
+    try:
+        return int(value)
+    except (TypeError, ValueError):
+        return default
+
+
+def get_round_number(round_key):
+    match = re.search(r"round(\d+)", str(round_key))
+    return int(match.group(1)) if match else None
+
+
+def get_def_index(def_key):
+    match = re.search(r"DefIndex_(\d+)", str(def_key))
+    return int(match.group(1)) if match else None
+
+PLAYER_BASE_FIELDS = {
+    "kills": "kills",
+    "assists": "assists",
+    "deaths": "deaths",
+    "mvps": "mvps",
+    "score": "score",
+    "cash": "cash",
+    "roundsWon": "rounds_won",
+    "enemyKs": "enemy_kills",
+    "enemyHSs": "enemy_headshots",
+    "enemy2Ks": "enemy_2ks",
+    "enemy3Ks": "enemy_3ks",
+    "enemy4Ks": "enemy_4ks",
+    "enemy5Ks": "enemy_5ks",
+    "enemyKAg": "enemy_kag",
+    "firstKs": "first_kills",
+    "clutchKs": "clutch_kills",
+    "kills_weapon_pistol": "pistol_kills",
+    "kills_weapon_sniper": "sniper_kills",
+    "kills_knife": "knife_kills",
+    "kills_taser": "taser_kills",
+    "enemyDamageDealt": "enemy_damage_dealt",
+    "helmet": "helmet",
+}
+
+
+def insert_round_backup_match(cursor, source_file, data):
+    history = data.get("History", {}) or {}
+    first_half = data.get("FirstHalfScore", {}) or {}
+
+    cursor.execute("""
+        IF NOT EXISTS (
+            SELECT 1 FROM round_backup_matches WHERE source_file = ?
+        )
+        INSERT INTO round_backup_matches (
+            source_file,
+            backup_timestamp,
+            map_name,
+            current_round,
+            team1_name,
+            team2_name,
+            first_half_team1_score,
+            first_half_team2_score,
+            loser_most_recent_team,
+            consecutive_t_loses,
+            consecutive_ct_loses,
+            spawn_points_cfg
+        )
+        VALUES (
+            ?,
+            TRY_CONVERT(DATETIME2, ?),
+            ?,
+            ?,
+            ?,
+            ?,
+            ?,
+            ?,
+            ?,
+            ?,
+            ?,
+            ?
+        )
+    """, (
+        source_file,
+        source_file,
+        data.get("timestamp"),
+        data.get("map"),
+        to_int(data.get("round")),
+        data.get("team1"),
+        data.get("team2"),
+        to_int(first_half.get("team1")),
+        to_int(first_half.get("team2")),
+        history.get("LoserMostRecentTeam"),
+        to_int(history.get("NumConsecutiveTerroristLoses")),
+        to_int(history.get("NumConsecutiveCTLoses")),
+        to_int(history.get("SpawnPointsCfg")),
+    ))
+
+
+def insert_round_backup_rounds(cursor, source_file, data):
+    round_results = data.get("RoundResults", {}) or {}
+    alive_t = data.get("PlayersAliveT", {}) or {}
+    alive_ct = data.get("PlayersAliveCT", {}) or {}
+
+    current_round = to_int(data.get("round"), 0) or 0
+
+    for round_number in range(1, 31):
+        key = f"round{round_number}"
+
+        # Do not insert future placeholder alive counts as real round data.
+        players_alive_t = to_int(alive_t.get(key))
+        players_alive_ct = to_int(alive_ct.get(key))
+
+        if round_number > current_round:
+            players_alive_t = None
+            players_alive_ct = None
+
+        cursor.execute("""
+            IF NOT EXISTS (
+                SELECT 1
+                FROM round_backup_rounds
+                WHERE source_file = ?
+                  AND round_number = ?
+            )
+            INSERT INTO round_backup_rounds (
+                source_file,
+                round_number,
+                result_code,
+                players_alive_t,
+                players_alive_ct
+            )
+            VALUES (?, ?, ?, ?, ?)
+        """, (
+            source_file,
+            round_number,
+            source_file,
+            round_number,
+            to_int(round_results.get(key)),
+            players_alive_t,
+            players_alive_ct,
+        ))
+
+
+def insert_round_backup_player(cursor, source_file, team_side, steam_id, player):
+    values = {
+        sql_field: to_int(player.get(raw_field))
+        for raw_field, sql_field in PLAYER_BASE_FIELDS.items()
+    }
+
+    cursor.execute("""
+        IF NOT EXISTS (
+            SELECT 1
+            FROM round_backup_players
+            WHERE source_file = ?
+              AND team_side = ?
+              AND steam_id = ?
+        )
+        INSERT INTO round_backup_players (
+            source_file,
+            team_side,
+            steam_id,
+            player_name,
+            kills,
+            assists,
+            deaths,
+            mvps,
+            score,
+            cash,
+            rounds_won,
+            enemy_kills,
+            enemy_headshots,
+            enemy_2ks,
+            enemy_3ks,
+            enemy_4ks,
+            enemy_5ks,
+            enemy_kag,
+            first_kills,
+            clutch_kills,
+            pistol_kills,
+            sniper_kills,
+            knife_kills,
+            taser_kills,
+            enemy_damage_dealt,
+            helmet
+        )
+        VALUES (
+            ?, ?, ?, ?,
+            ?, ?, ?, ?, ?, ?, ?,
+            ?, ?, ?, ?, ?, ?, ?,
+            ?, ?, ?, ?, ?, ?, ?, ?
+        )
+    """, (
+        source_file,
+        team_side,
+        steam_id,
+        source_file,
+        team_side,
+        steam_id,
+        player.get("name"),
+        values["kills"],
+        values["assists"],
+        values["deaths"],
+        values["mvps"],
+        values["score"],
+        values["cash"],
+        values["rounds_won"],
+        values["enemy_kills"],
+        values["enemy_headshots"],
+        values["enemy_2ks"],
+        values["enemy_3ks"],
+        values["enemy_4ks"],
+        values["enemy_5ks"],
+        values["enemy_kag"],
+        values["first_kills"],
+        values["clutch_kills"],
+        values["pistol_kills"],
+        values["sniper_kills"],
+        values["knife_kills"],
+        values["taser_kills"],
+        values["enemy_damage_dealt"],
+        values["helmet"],
+    ))
+
+
+def insert_round_backup_match_stats(cursor, source_file, team_side, steam_id, player):
+    match_stats = player.get("MatchStats", {}) or {}
+
+    for stat_name, stat_block in match_stats.items():
+        if not isinstance(stat_block, dict):
+            continue
+
+        if stat_name == "Totals":
+            for total_name, raw_value in stat_block.items():
+                value = to_int(raw_value)
+                if value is None:
+                    continue
+
+                cursor.execute("""
+                    IF NOT EXISTS (
+                        SELECT 1
+                        FROM round_backup_player_totals
+                        WHERE source_file = ?
+                          AND team_side = ?
+                          AND steam_id = ?
+                          AND stat_name = ?
+                    )
+                    INSERT INTO round_backup_player_totals (
+                        source_file,
+                        team_side,
+                        steam_id,
+                        stat_name,
+                        stat_value
+                    )
+                    VALUES (?, ?, ?, ?, ?)
+                """, (
+                    source_file,
+                    team_side,
+                    steam_id,
+                    total_name,
+                    source_file,
+                    team_side,
+                    steam_id,
+                    total_name,
+                    value,
+                ))
+
+            continue
+
+        for round_key, raw_value in stat_block.items():
+            round_number = get_round_number(round_key)
+            value = to_int(raw_value)
+
+            if round_number is None or value is None:
+                continue
+
+            cursor.execute("""
+                IF NOT EXISTS (
+                    SELECT 1
+                    FROM round_backup_player_round_stats
+                    WHERE source_file = ?
+                      AND team_side = ?
+                      AND steam_id = ?
+                      AND stat_name = ?
+                      AND round_number = ?
+                )
+                INSERT INTO round_backup_player_round_stats (
+                    source_file,
+                    team_side,
+                    steam_id,
+                    stat_name,
+                    round_number,
+                    stat_value
+                )
+                VALUES (?, ?, ?, ?, ?, ?)
+            """, (
+                source_file,
+                team_side,
+                steam_id,
+                stat_name,
+                round_number,
+                source_file,
+                team_side,
+                steam_id,
+                stat_name,
+                round_number,
+                value,
+            ))
+
+
+def insert_round_backup_weapon_purchases(cursor, source_file, team_side, steam_id, player):
+    purchases = player.get("WeaponPurchases", {}) or {}
+
+    if not isinstance(purchases, dict):
+        return
+
+    for def_key, raw_count in purchases.items():
+        def_index = get_def_index(def_key)
+        purchase_count = to_int(raw_count)
+
+        if def_index is None or purchase_count is None:
+            continue
+
+        cursor.execute("""
+            IF NOT EXISTS (
+                SELECT 1
+                FROM round_backup_weapon_purchases
+                WHERE source_file = ?
+                  AND team_side = ?
+                  AND steam_id = ?
+                  AND def_index = ?
+            )
+            INSERT INTO round_backup_weapon_purchases (
+                source_file,
+                team_side,
+                steam_id,
+                def_index,
+                purchase_count
+            )
+            VALUES (?, ?, ?, ?, ?)
+        """, (
+            source_file,
+            team_side,
+            steam_id,
+            def_index,
+            source_file,
+            team_side,
+            steam_id,
+            def_index,
+            purchase_count,
+        ))
+
+
+def insert_round_backup_players(cursor, source_file, data):
+    team_blocks = [
+        ("team1", data.get("PlayersOnTeam1", {}) or {}),
+        ("team2", data.get("PlayersOnTeam2", {}) or {}),
+    ]
+
+    for team_side, players in team_blocks:
+        if not isinstance(players, dict):
+            continue
+
+        for steam_id, player in players.items():
+            if not isinstance(player, dict):
+                continue
+
+            insert_round_backup_player(cursor, source_file, team_side, steam_id, player)
+            insert_round_backup_match_stats(cursor, source_file, team_side, steam_id, player)
+            insert_round_backup_weapon_purchases(cursor, source_file, team_side, steam_id, player)
+
+
+def import_round_backups(cursor, backup_paths):
+    imported = 0
+    skipped = 0
+    processed_paths = []
+
+    for path in sorted(backup_paths):
+        file_name = path.name
+
+        if already_processed_round_backup_file(cursor, file_name):
+            print(f"Skipping already parsed backup: {file_name}")
+            skipped += 1
+            continue
+
+        print(f"Parsing round backup: {file_name}")
+
+        parsed = parse_keyvalues_file(path)
+        data = parsed.get("SaveFile", {})
+
+        if not data:
+            print(f"No SaveFile root found, skipping: {file_name}")
+            continue
+
+        insert_round_backup_match(cursor, file_name, data)
+        insert_round_backup_rounds(cursor, file_name, data)
+        insert_round_backup_players(cursor, file_name, data)
+
+        mark_round_backup_file_processed(
+            cursor,
+            file_name,
+            path.stat().st_size,
+            file_sha256(path),
+        )
+
+        imported += 1
+        processed_paths.append(path)
+
+    print("Round backup import complete.")
+    print(f"Imported backups: {imported}")
+    print(f"Skipped backups: {skipped}")
+
+    return processed_paths
+
+def delete_imported_round_backups(backup_files):
+    if not backup_files:
+        print("No imported round backups to delete.")
+        return
+
+    deleted = 0
+
+    for backup_file in backup_files:
+        try:
+            if backup_file.exists() and re.match(r"backup_round\d{2}\.txt$", backup_file.name):
+                print(f"Deleting imported round backup: {backup_file}")
+                backup_file.unlink()
+                deleted += 1
+        except Exception as e:
+            print(f"Failed to delete backup file {backup_file}: {type(e).__name__}: {e}")
+
+    print(f"Deleted imported round backups: {deleted}")
+
+MONEY_CAP = 30000
+IMPOSSIBLE_WINNING_THRESHOLD = 30000
+
+
+def rebuild_round_purchase_deltas(cursor):
+    print("Rebuilding round purchase deltas...")
+
+    cursor.execute("DELETE FROM round_backup_purchase_deltas;")
+
+    cursor.execute("""
+        SELECT
+            source_file,
+            CAST(REPLACE(REPLACE(source_file, 'backup_round', ''), '.txt', '') AS INT) AS backup_round,
+            team_side,
+            steam_id,
+            def_index,
+            purchase_count
+        FROM round_backup_weapon_purchases
+        WHERE source_file LIKE 'backup_round%.txt';
+    """)
+
+    rows = rows_to_dicts(cursor)
+
+    by_key = {}
+
+    for row in rows:
+        key = (
+            row["team_side"],
+            row["steam_id"],
+            int(row["def_index"]),
+        )
+
+        by_key.setdefault(key, {})[int(row["backup_round"])] = int(row["purchase_count"] or 0)
+
+    for (team_side, steam_id, def_index), counts_by_round in by_key.items():
+        for round_number in range(BACKUP_ROUND_MIN, BACKUP_ROUND_MAX + 1):
+            current_count = counts_by_round.get(round_number, 0)
+            previous_count = counts_by_round.get(round_number - 1, 0)
+
+            delta = current_count - previous_count
+
+            if delta <= 0:
+                continue
+
+            source_file = f"backup_round{round_number:02d}.txt"
+
+            cursor.execute("""
+                INSERT INTO round_backup_purchase_deltas (
+                    source_file,
+                    round_number,
+                    team_side,
+                    steam_id,
+                    def_index,
+                    purchase_delta,
+                    estimated_spent
+                )
+                SELECT
+                    ?,
+                    ?,
+                    ?,
+                    ?,
+                    ?,
+                    ?,
+                    ? * COALESCE(price, 0)
+                FROM item_definition_prices
+                WHERE def_index = ?
+
+                UNION ALL
+
+                SELECT
+                    ?,
+                    ?,
+                    ?,
+                    ?,
+                    ?,
+                    ?,
+                    NULL
+                WHERE NOT EXISTS (
+                    SELECT 1
+                    FROM item_definition_prices
+                    WHERE def_index = ?
+                );
+            """, (
+                source_file,
+                round_number,
+                team_side,
+                steam_id,
+                def_index,
+                delta,
+                delta,
+                def_index,
+
+                source_file,
+                round_number,
+                team_side,
+                steam_id,
+                def_index,
+                delta,
+                def_index,
+            ))
+
+    print("Round purchase deltas rebuilt.")
+
+
+def rebuild_round_player_economy(cursor):
+    print("Rebuilding per-round player economy...")
+
+    cursor.execute("DELETE FROM round_backup_player_economy_rounds;")
+
+    cursor.execute("""
+        WITH player_rounds AS (
+            SELECT
+                prs.source_file,
+                CAST(REPLACE(REPLACE(prs.source_file, 'backup_round', ''), '.txt', '') AS INT) AS backup_round,
+                prs.team_side,
+                prs.steam_id,
+                p.player_name,
+                prs.round_number,
+
+                MAX(CASE WHEN prs.stat_name = 'CashEarned' THEN prs.stat_value END) AS cash_earned,
+                MAX(CASE WHEN prs.stat_name = 'MoneySaved' THEN prs.stat_value END) AS money_saved,
+                MAX(CASE WHEN prs.stat_name = 'EquipmentValue' THEN prs.stat_value END) AS equipment_value,
+                MAX(CASE WHEN prs.stat_name = 'KillReward' THEN prs.stat_value END) AS kill_reward
+
+            FROM round_backup_player_round_stats prs
+            LEFT JOIN round_backup_players p
+              ON p.source_file = prs.source_file
+             AND p.team_side = prs.team_side
+             AND p.steam_id = prs.steam_id
+
+            WHERE prs.round_number = CAST(REPLACE(REPLACE(prs.source_file, 'backup_round', ''), '.txt', '') AS INT)
+
+            GROUP BY
+                prs.source_file,
+                prs.team_side,
+                prs.steam_id,
+                p.player_name,
+                prs.round_number
+        ),
+        spent AS (
+            SELECT
+                source_file,
+                round_number,
+                team_side,
+                steam_id,
+                SUM(COALESCE(estimated_spent, 0)) AS estimated_spent
+            FROM round_backup_purchase_deltas
+            GROUP BY
+                source_file,
+                round_number,
+                team_side,
+                steam_id
+        )
+        INSERT INTO round_backup_player_economy_rounds (
+            source_file,
+            round_number,
+            team_side,
+            steam_id,
+            player_name,
+            round_won,
+            result_code,
+            cash_earned,
+            money_saved,
+            equipment_value,
+            estimated_spent,
+            estimated_net
+        )
+        SELECT
+            pr.source_file,
+            pr.round_number,
+            pr.team_side,
+            pr.steam_id,
+            pr.player_name,
+
+            CASE
+                WHEN r.players_alive_t IS NOT NULL
+                 AND r.players_alive_ct IS NOT NULL
+                 AND pr.team_side = 'team1'
+                 AND r.players_alive_t > r.players_alive_ct THEN 1
+
+                WHEN r.players_alive_t IS NOT NULL
+                 AND r.players_alive_ct IS NOT NULL
+                 AND pr.team_side = 'team2'
+                 AND r.players_alive_ct > r.players_alive_t THEN 1
+
+                WHEN r.players_alive_t IS NOT NULL
+                 AND r.players_alive_ct IS NOT NULL
+                 AND pr.team_side = 'team1'
+                 AND r.players_alive_t < r.players_alive_ct THEN 0
+
+                WHEN r.players_alive_t IS NOT NULL
+                 AND r.players_alive_ct IS NOT NULL
+                 AND pr.team_side = 'team2'
+                 AND r.players_alive_ct < r.players_alive_t THEN 0
+
+                ELSE NULL
+            END AS round_won,
+
+            r.result_code,
+            pr.cash_earned,
+            pr.money_saved,
+            pr.equipment_value,
+            COALESCE(s.estimated_spent, 0) AS estimated_spent,
+
+            COALESCE(pr.cash_earned, 0) - COALESCE(s.estimated_spent, 0) AS estimated_net
+
+        FROM player_rounds pr
+        LEFT JOIN round_backup_rounds r
+          ON r.source_file = pr.source_file
+         AND r.round_number = pr.round_number
+        LEFT JOIN spent s
+          ON s.source_file = pr.source_file
+         AND s.round_number = pr.round_number
+         AND s.team_side = pr.team_side
+         AND s.steam_id = pr.steam_id;
+    """)
+
+    print("Per-round player economy rebuilt.")
+
+
+def rebuild_inferred_betting_money(cursor):
+    print("Rebuilding inferred betting money...")
+
+    cursor.execute(f"""
+        WITH player_cash AS (
+            SELECT
+                p.source_file,
+                CAST(REPLACE(REPLACE(p.source_file, 'backup_round', ''), '.txt', '') AS INT) AS round_number,
+                p.team_side,
+                p.steam_id,
+                p.player_name,
+                p.cash
+            FROM round_backup_players p
+            WHERE p.source_file LIKE 'backup_round%.txt'
+        ),
+        economy AS (
+            SELECT
+                pc.*,
+
+                LEAD(pc.cash) OVER (
+                    PARTITION BY pc.team_side, pc.steam_id
+                    ORDER BY pc.round_number
+                ) AS actual_next_cash,
+
+                COALESCE(spent.estimated_spent, 0) AS estimated_spent,
+                COALESCE(cash_stat.stat_value, 0) AS cash_earned
+
+            FROM player_cash pc
+
+            LEFT JOIN (
+                SELECT
+                    source_file,
+                    round_number,
+                    team_side,
+                    steam_id,
+                    SUM(COALESCE(estimated_spent, 0)) AS estimated_spent
+                FROM round_backup_purchase_deltas
+                GROUP BY
+                    source_file,
+                    round_number,
+                    team_side,
+                    steam_id
+            ) spent
+              ON spent.source_file = pc.source_file
+             AND spent.round_number = pc.round_number
+             AND spent.team_side = pc.team_side
+             AND spent.steam_id = pc.steam_id
+
+            LEFT JOIN round_backup_player_round_stats cash_stat
+              ON cash_stat.source_file = pc.source_file
+             AND cash_stat.team_side = pc.team_side
+             AND cash_stat.steam_id = pc.steam_id
+             AND cash_stat.round_number = pc.round_number
+             AND cash_stat.stat_name = 'CashEarned'
+        ),
+        calculated AS (
+            SELECT
+                *,
+                cash - estimated_spent AS cash_after_buy,
+
+                CASE
+                    WHEN cash - estimated_spent + cash_earned > {MONEY_CAP}
+                    THEN {MONEY_CAP}
+                    ELSE cash - estimated_spent + cash_earned
+                END AS expected_next_cash,
+
+                actual_next_cash -
+                CASE
+                    WHEN cash - estimated_spent + cash_earned > {MONEY_CAP}
+                    THEN {MONEY_CAP}
+                    ELSE cash - estimated_spent + cash_earned
+                END AS raw_extra_money
+
+            FROM economy
+        )
+        UPDATE target
+        SET
+            start_cash = calculated.cash,
+
+            cash_after_buy = calculated.cash_after_buy,
+
+            known_round_income = calculated.cash_earned,
+
+            actual_next_cash = calculated.actual_next_cash,
+
+            expected_next_cash = calculated.expected_next_cash,
+
+            inferred_extra_money = calculated.raw_extra_money,
+
+            inferred_betting_money =
+                CASE
+                    WHEN calculated.actual_next_cash IS NULL THEN NULL
+
+                    WHEN calculated.raw_extra_money > 0
+                     AND calculated.raw_extra_money <= {IMPOSSIBLE_WINNING_THRESHOLD}
+                    THEN calculated.raw_extra_money
+
+                    ELSE 0
+                END,
+
+            economy_note =
+                CASE
+                    WHEN calculated.actual_next_cash IS NULL
+                    THEN 'No next-round cash snapshot'
+
+                    WHEN calculated.raw_extra_money > {IMPOSSIBLE_WINNING_THRESHOLD}
+                    THEN 'Impossible extra money; ignored'
+
+                    WHEN calculated.raw_extra_money > 0
+                    THEN 'Positive unexplained money; likely betting payout'
+
+                    WHEN calculated.raw_extra_money < 0
+                    THEN 'Lower than expected; missing spend, penalty, donation, or stat mismatch'
+
+                    ELSE 'No inferred betting money'
+                END
+
+        FROM round_backup_player_economy_rounds target
+        INNER JOIN calculated
+          ON calculated.source_file = target.source_file
+         AND calculated.round_number = target.round_number
+         AND calculated.team_side = target.team_side
+         AND calculated.steam_id = target.steam_id;
+    """)
+
+    print("Inferred betting money rebuilt.")
+
 def connect_with_retry(max_attempts=5):
     last_error = None
 
@@ -170,6 +1150,8 @@ TIMESTAMP_RE = re.compile(
 ISSUED_COMMAND_RE = re.compile(
     r"plugin:CS2-SimpleAdmin .*? (?P<admin>.*?) issued command `(?P<command>[^`]+)`"
 )
+
+
 
 def clean_export_name(name):
     if not name:
@@ -428,10 +1410,10 @@ def import_server_logs(cursor):
 
     for log_file in log_files:
         if already_processed_log_file(cursor, log_file.name):
-          skipped_files += 1
-          print(f"Skipping already processed log: {log_file.name}")
-          append_log_for_deletion(processed_files_to_delete, log_file)
-          continue
+            skipped_files += 1
+            print(f"Skipping already processed log: {log_file.name}")
+            append_log_for_deletion(processed_files_to_delete, log_file)
+            continue
 
         print(f"Processing log file: {log_file.name}")
 
@@ -524,8 +1506,8 @@ def import_server_logs(cursor):
 
                 admin_count += 1
 
-    mark_log_file_processed(cursor, log_file.name)
-    append_log_for_deletion(processed_files_to_delete, log_file)
+        mark_log_file_processed(cursor, log_file.name)
+        append_log_for_deletion(processed_files_to_delete, log_file)
 
     print("Server log import complete.")
     print(f"Logs folder: {logs_dir}")
@@ -1045,6 +2027,557 @@ def consolidate_admin_target_rows(rows, player_profiles, count_field, extra_sum_
 
     return output_rows
 
+def get_latest_round_backup_source_file(cursor):
+    cursor.execute("""
+        SELECT TOP 1
+            source_file
+        FROM round_backup_matches
+        WHERE source_file LIKE 'backup_round%.txt'
+        ORDER BY
+            CAST(REPLACE(REPLACE(source_file, 'backup_round', ''), '.txt', '') AS INT) DESC;
+    """)
+
+    row = cursor.fetchone()
+    return row[0] if row else None
+
+
+def export_round_backup_jsons(cursor):
+    data_dir = Path(__file__).resolve().parent.parent / "assets" / "data"
+    data_dir.mkdir(parents=True, exist_ok=True)
+
+    latest_source_file = get_latest_round_backup_source_file(cursor)
+
+    if not latest_source_file:
+        print("No round backup data found, skipping round backup JSON exports.")
+        return
+
+    print(f"Exporting round backup JSON files using latest source: {latest_source_file}")
+
+    # ------------------------------------------------------------
+    # Match summary
+    # ------------------------------------------------------------
+    cursor.execute("""
+        SELECT
+            source_file,
+            backup_timestamp,
+            map_name,
+            current_round,
+            team1_name,
+            team2_name,
+            first_half_team1_score,
+            first_half_team2_score,
+            loser_most_recent_team,
+            consecutive_t_loses,
+            consecutive_ct_loses,
+            spawn_points_cfg
+        FROM round_backup_matches
+        WHERE source_file = ?;
+    """, latest_source_file)
+
+    write_json(data_dir / "round_match_summary.json", rows_to_dicts(cursor))
+
+    # ------------------------------------------------------------
+    # KAD / MVP scoreboard
+    # ------------------------------------------------------------
+    cursor.execute("""
+        WITH damage_totals AS (
+            SELECT
+                source_file,
+                team_side,
+                steam_id,
+                SUM(stat_value) AS total_damage
+            FROM round_backup_player_round_stats
+            WHERE stat_name = 'Damage'
+            GROUP BY source_file, team_side, steam_id
+        ),
+        player_rows AS (
+            SELECT
+                p.source_file,
+                p.team_side,
+                p.steam_id,
+                p.player_name,
+                p.kills,
+                p.assists,
+                p.deaths,
+                p.mvps,
+                p.score,
+                p.cash,
+                p.rounds_won,
+                p.enemy_headshots,
+                p.enemy_2ks,
+                p.enemy_3ks,
+                p.enemy_4ks,
+                p.enemy_5ks,
+                p.first_kills,
+                p.clutch_kills,
+                p.pistol_kills,
+                p.sniper_kills,
+                p.knife_kills,
+                p.taser_kills,
+                COALESCE(d.total_damage, 0) AS damage,
+                m.current_round
+            FROM round_backup_players p
+            INNER JOIN round_backup_matches m
+              ON m.source_file = p.source_file
+            LEFT JOIN damage_totals d
+              ON d.source_file = p.source_file
+             AND d.team_side = p.team_side
+             AND d.steam_id = p.steam_id
+            WHERE p.source_file = ?
+        )
+        SELECT
+            source_file,
+            team_side,
+            steam_id,
+            player_name,
+            kills,
+            assists,
+            deaths,
+            mvps,
+            score,
+            cash,
+            rounds_won,
+            damage,
+
+            CAST(
+                CASE
+                    WHEN current_round > 0 THEN 1.0 * damage / current_round
+                    ELSE 0
+                END
+                AS DECIMAL(10, 2)
+            ) AS adr,
+
+            CAST(
+                CASE
+                    WHEN deaths > 0 THEN 1.0 * kills / deaths
+                    ELSE kills
+                END
+                AS DECIMAL(10, 2)
+            ) AS kd_ratio,
+
+            CAST(
+                CASE
+                    WHEN deaths > 0 THEN 1.0 * (kills + assists) / deaths
+                    ELSE kills + assists
+                END
+                AS DECIMAL(10, 2)
+            ) AS kad_ratio,
+
+            enemy_headshots,
+            CAST(
+                CASE
+                    WHEN kills > 0 THEN 100.0 * enemy_headshots / kills
+                    ELSE 0
+                END
+                AS DECIMAL(10, 2)
+            ) AS headshot_percent,
+
+            enemy_2ks,
+            enemy_3ks,
+            enemy_4ks,
+            enemy_5ks,
+            first_kills,
+            clutch_kills,
+            pistol_kills,
+            sniper_kills,
+            knife_kills,
+            taser_kills,
+
+            (
+                COALESCE(damage, 0)
+                + COALESCE(kills, 0) * 100
+                + COALESCE(assists, 0) * 40
+                + COALESCE(first_kills, 0) * 75
+                + COALESCE(clutch_kills, 0) * 100
+                + COALESCE(mvps, 0) * 150
+            ) AS impact_score
+
+        FROM player_rows
+        ORDER BY impact_score DESC, damage DESC, kills DESC;
+    """, latest_source_file)
+
+    write_json(data_dir / "round_scoreboard.json", rows_to_dicts(cursor))
+
+    # ------------------------------------------------------------
+    # MVP leaderboard
+    # ------------------------------------------------------------
+    cursor.execute("""
+        SELECT
+            player_name,
+            team_side,
+            steam_id,
+            mvps,
+            kills,
+            assists,
+            deaths,
+            score,
+            rounds_won
+        FROM round_backup_players
+        WHERE source_file = ?
+        ORDER BY mvps DESC, score DESC, kills DESC;
+    """, latest_source_file)
+
+    write_json(data_dir / "round_mvp_leaderboard.json", rows_to_dicts(cursor))
+
+    # ------------------------------------------------------------
+    # Betting table / inferred Vegas money
+    # ------------------------------------------------------------
+    cursor.execute("""
+        SELECT
+            player_name,
+            team_side,
+            steam_id,
+            round_number,
+            start_cash,
+            estimated_spent,
+            cash_after_buy,
+            known_round_income,
+            expected_next_cash,
+            actual_next_cash,
+            inferred_extra_money,
+            inferred_betting_money,
+            economy_note
+        FROM round_backup_player_economy_rounds
+        WHERE inferred_betting_money > 0
+        ORDER BY inferred_betting_money DESC, round_number ASC;
+    """)
+
+    write_json(data_dir / "round_betting_money.json", rows_to_dicts(cursor))
+
+    # ------------------------------------------------------------
+    # Full economy-by-round debug table
+    # ------------------------------------------------------------
+    cursor.execute("""
+        SELECT
+            player_name,
+            team_side,
+            steam_id,
+            round_number,
+            round_won,
+            result_code,
+            start_cash,
+            estimated_spent,
+            cash_after_buy,
+            known_round_income,
+            cash_earned,
+            money_saved,
+            equipment_value,
+            expected_next_cash,
+            actual_next_cash,
+            inferred_extra_money,
+            inferred_betting_money,
+            economy_note
+        FROM round_backup_player_economy_rounds
+        ORDER BY round_number ASC, player_name ASC;
+    """)
+
+    write_json(data_dir / "round_economy_rounds.json", rows_to_dicts(cursor))
+
+    # ------------------------------------------------------------
+    # Weapon purchases by player / round
+    # ------------------------------------------------------------
+    cursor.execute("""
+        SELECT
+            p.round_number,
+            p.team_side,
+            p.steam_id,
+            e.player_name,
+            p.def_index,
+            COALESCE(i.item_name, CONCAT('DefIndex_', p.def_index)) AS item_name,
+            i.item_category,
+            i.price,
+            p.purchase_delta,
+            p.estimated_spent,
+            e.round_won
+        FROM round_backup_purchase_deltas p
+        LEFT JOIN item_definition_prices i
+          ON i.def_index = p.def_index
+        LEFT JOIN round_backup_player_economy_rounds e
+          ON e.source_file = p.source_file
+         AND e.round_number = p.round_number
+         AND e.team_side = p.team_side
+         AND e.steam_id = p.steam_id
+        ORDER BY p.round_number ASC, e.player_name ASC, i.item_name ASC;
+    """)
+
+    write_json(data_dir / "round_weapon_purchases.json", rows_to_dicts(cursor))
+
+    # ------------------------------------------------------------
+    # Weapon meta: bought in wins vs losses
+    # ------------------------------------------------------------
+    cursor.execute("""
+        SELECT
+            p.def_index,
+            COALESCE(i.item_name, CONCAT('DefIndex_', p.def_index)) AS item_name,
+            i.item_category,
+            i.price,
+
+            SUM(p.purchase_delta) AS total_bought,
+
+            SUM(CASE WHEN e.round_won = 1 THEN p.purchase_delta ELSE 0 END) AS bought_in_wins,
+            SUM(CASE WHEN e.round_won = 0 THEN p.purchase_delta ELSE 0 END) AS bought_in_losses,
+
+            CAST(
+                100.0 * SUM(CASE WHEN e.round_won = 1 THEN p.purchase_delta ELSE 0 END)
+                / NULLIF(SUM(p.purchase_delta), 0)
+                AS DECIMAL(10, 2)
+            ) AS win_buy_percent,
+
+            SUM(COALESCE(p.estimated_spent, 0)) AS total_spent
+
+        FROM round_backup_purchase_deltas p
+        LEFT JOIN item_definition_prices i
+          ON i.def_index = p.def_index
+        LEFT JOIN round_backup_player_economy_rounds e
+          ON e.source_file = p.source_file
+         AND e.round_number = p.round_number
+         AND e.team_side = p.team_side
+         AND e.steam_id = p.steam_id
+        GROUP BY
+            p.def_index,
+            i.item_name,
+            i.item_category,
+            i.price
+        ORDER BY total_bought DESC, total_spent DESC;
+    """)
+
+    write_json(data_dir / "round_weapon_meta.json", rows_to_dicts(cursor))
+
+    # ------------------------------------------------------------
+    # Round results
+    # ------------------------------------------------------------
+    cursor.execute("""
+        SELECT
+            r.source_file,
+            r.round_number,
+            r.result_code,
+            r.players_alive_t,
+            r.players_alive_ct,
+
+            CASE
+                WHEN r.players_alive_t > r.players_alive_ct THEN 'T'
+                WHEN r.players_alive_ct > r.players_alive_t THEN 'CT'
+                ELSE 'Unknown'
+            END AS inferred_winner_side
+
+        FROM round_backup_rounds r
+        WHERE r.source_file = ?
+        ORDER BY r.round_number ASC;
+    """, latest_source_file)
+
+    write_json(data_dir / "round_results.json", rows_to_dicts(cursor))
+
+        # ------------------------------------------------------------
+    # Player money summary
+    # Website table:
+    # Player | Money Spent | Money Gained | Net
+    # ------------------------------------------------------------
+    cursor.execute("""
+        SELECT
+            player_name,
+            team_side,
+            steam_id,
+            SUM(COALESCE(estimated_spent, 0)) AS money_spent,
+            SUM(COALESCE(known_round_income, 0)) AS money_gained,
+            SUM(COALESCE(known_round_income, 0) - COALESCE(estimated_spent, 0)) AS net_money
+        FROM round_backup_player_economy_rounds
+        GROUP BY
+            player_name,
+            team_side,
+            steam_id
+        ORDER BY net_money DESC;
+    """)
+
+    write_json(data_dir / "round_player_money_summary.json", rows_to_dicts(cursor))
+
+    # ------------------------------------------------------------
+    # Player betting net summary
+    # Website table:
+    # Player | Total Net Bet Winnings (+/-)
+    # ------------------------------------------------------------
+    cursor.execute("""
+        SELECT
+            player_name,
+            team_side,
+            steam_id,
+
+            SUM(CASE
+                WHEN economy_note <> 'Impossible extra money; ignored'
+                THEN COALESCE(inferred_extra_money, 0)
+                ELSE 0
+            END) AS total_net_bet_winnings,
+
+            SUM(CASE
+                WHEN inferred_extra_money > 0
+                 AND economy_note <> 'Impossible extra money; ignored'
+                THEN inferred_extra_money
+                ELSE 0
+            END) AS total_positive_bet_winnings,
+
+            SUM(CASE
+                WHEN inferred_extra_money < 0
+                 AND economy_note <> 'Impossible extra money; ignored'
+                THEN inferred_extra_money
+                ELSE 0
+            END) AS total_negative_bet_winnings,
+
+            COUNT(CASE
+                WHEN inferred_extra_money <> 0
+                 AND economy_note <> 'Impossible extra money; ignored'
+                THEN 1
+            END) AS rounds_with_unexplained_money
+
+        FROM round_backup_player_economy_rounds
+        GROUP BY
+            player_name,
+            team_side,
+            steam_id
+        ORDER BY total_net_bet_winnings DESC;
+    """)
+
+    write_json(data_dir / "round_player_betting_summary.json", rows_to_dicts(cursor))
+
+    # ------------------------------------------------------------
+    # Player defuse kit purchase rate
+    # Website table:
+    # Player | Times bought Defuse Kit | Percentage of rounds with defuse kit
+    # ------------------------------------------------------------
+    cursor.execute("""
+        WITH latest_match AS (
+            SELECT
+                source_file,
+                current_round
+            FROM round_backup_matches
+            WHERE source_file = ?
+        ),
+        players AS (
+            SELECT
+                source_file,
+                team_side,
+                steam_id,
+                player_name
+            FROM round_backup_players
+            WHERE source_file = ?
+        ),
+        defuse_buys AS (
+            SELECT
+                team_side,
+                steam_id,
+                SUM(purchase_delta) AS defuse_kits_bought
+            FROM round_backup_purchase_deltas
+            WHERE def_index = 55
+            GROUP BY
+                team_side,
+                steam_id
+        )
+        SELECT
+            p.player_name,
+            p.team_side,
+            p.steam_id,
+            COALESCE(d.defuse_kits_bought, 0) AS defuse_kits_bought,
+            lm.current_round AS rounds_played,
+
+            CAST(
+                100.0 * COALESCE(d.defuse_kits_bought, 0)
+                / NULLIF(lm.current_round, 0)
+                AS DECIMAL(10, 2)
+            ) AS defuse_purchase_round_percent
+
+        FROM players p
+        CROSS JOIN latest_match lm
+        LEFT JOIN defuse_buys d
+          ON d.team_side = p.team_side
+         AND d.steam_id = p.steam_id
+        ORDER BY defuse_purchase_round_percent DESC, defuse_kits_bought DESC;
+    """, (
+        latest_source_file,
+        latest_source_file,
+    ))
+
+    write_json(data_dir / "round_defuse_purchase_rate.json", rows_to_dicts(cursor))
+
+        # ------------------------------------------------------------
+    # Top kills by weapon category
+    # Website table:
+    # Weapon | Kills | Player
+    #
+    # Note: these are broad categories from backup fields,
+    # not exact guns like AK-47/M4A1-S.
+    # ------------------------------------------------------------
+    cursor.execute("""
+        WITH unpivoted AS (
+            SELECT
+                player_name,
+                team_side,
+                steam_id,
+                'Pistol' AS weapon,
+                COALESCE(pistol_kills, 0) AS kills
+            FROM round_backup_players
+            WHERE source_file = ?
+
+            UNION ALL
+
+            SELECT
+                player_name,
+                team_side,
+                steam_id,
+                'Sniper' AS weapon,
+                COALESCE(sniper_kills, 0) AS kills
+            FROM round_backup_players
+            WHERE source_file = ?
+
+            UNION ALL
+
+            SELECT
+                player_name,
+                team_side,
+                steam_id,
+                'Knife' AS weapon,
+                COALESCE(knife_kills, 0) AS kills
+            FROM round_backup_players
+            WHERE source_file = ?
+
+            UNION ALL
+
+            SELECT
+                player_name,
+                team_side,
+                steam_id,
+                'Taser' AS weapon,
+                COALESCE(taser_kills, 0) AS kills
+            FROM round_backup_players
+            WHERE source_file = ?
+        ),
+        ranked AS (
+            SELECT
+                *,
+                ROW_NUMBER() OVER (
+                    PARTITION BY weapon
+                    ORDER BY kills DESC, player_name ASC
+                ) AS rn
+            FROM unpivoted
+            WHERE kills > 0
+        )
+        SELECT
+            weapon,
+            kills,
+            player_name,
+            team_side,
+            steam_id
+        FROM ranked
+        WHERE rn = 1
+        ORDER BY kills DESC;
+    """, (
+        latest_source_file,
+        latest_source_file,
+        latest_source_file,
+        latest_source_file,
+    ))
+
+    write_json(data_dir / "round_top_weapon_category_kills.json", rows_to_dicts(cursor))
+
+    print("Round backup JSON exports complete.")
+
 def export_log_jsons(cursor):
     data_dir = Path(__file__).resolve().parent.parent / "assets" / "data"
     data_dir.mkdir(parents=True, exist_ok=True)
@@ -1145,6 +2678,8 @@ def export_log_jsons(cursor):
     
     write_json(data_dir / "admin_command_usage.json", admin_rows)
 
+    export_round_backup_jsons(cursor)
+
 if __name__ == "__main__":
     download_logs_from_sftp()
 
@@ -1160,14 +2695,22 @@ if __name__ == "__main__":
 
     processed_log_files = import_server_logs(cursor)
 
+    backup_paths = download_round_backups_from_sftp(cursor)
+    processed_backup_files = import_round_backups(cursor, backup_paths)
+    
+    rebuild_round_purchase_deltas(cursor)
+    rebuild_round_player_economy(cursor)
+    rebuild_inferred_betting_money(cursor)
+    
     conn.commit()
     print("SQL import committed successfully.")
 
     delete_imported_logs(processed_log_files)
+    delete_imported_round_backups(processed_backup_files)
 
     export_log_jsons(cursor)
 
     cursor.close()
     conn.close()
 
-    print("Imported logs into SQL, deleted imported logs, and exported JSON files.")
+    print("Imported logs/backups into SQL, deleted imported files, and exported JSON files.")
