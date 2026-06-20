@@ -893,6 +893,7 @@ def import_round_backups(cursor, backup_paths):
     skipped = 0
     processed_paths = []
     parsed_backups = []
+    touched_rounds = []
 
     for path in sorted(backup_paths):
         file_name = path.name
@@ -907,7 +908,7 @@ def import_round_backups(cursor, backup_paths):
 
     if not parsed_backups:
         print("No parsed round backups found.")
-        return []
+        return [], []
 
     backup_groups = split_parsed_backups_into_match_groups(parsed_backups)
 
@@ -927,6 +928,8 @@ def import_round_backups(cursor, backup_paths):
                 skipped += 1
                 continue
 
+            round_number = get_backup_file_round_number(file_name)
+
             print(f"Parsing round backup: {match_id} / {file_name}")
 
             insert_round_backup_match(cursor, match_id, file_name, data)
@@ -941,14 +944,22 @@ def import_round_backups(cursor, backup_paths):
                 file_sha256(path),
             )
 
+            if round_number is not None:
+                touched_rounds.append({
+                    "match_id": match_id,
+                    "source_file": file_name,
+                    "round_number": round_number,
+                })
+
             imported += 1
             processed_paths.append(path)
 
     print("Round backup import complete.")
     print(f"Imported backups: {imported}")
     print(f"Skipped backups: {skipped}")
+    print(f"Touched backup rounds: {len(touched_rounds)}")
 
-    return processed_paths
+    return processed_paths, touched_rounds
 
 def delete_imported_round_backups(backup_files):
     if not backup_files:
@@ -971,123 +982,163 @@ def delete_imported_round_backups(backup_files):
 MONEY_CAP = 30000
 IMPOSSIBLE_WINNING_THRESHOLD = 30000
 
+def get_unique_touched_rounds(touched_rounds):
+    unique = {}
 
-def rebuild_round_purchase_deltas(cursor):
-    print("Rebuilding round purchase deltas...")
+    for row in touched_rounds or []:
+        match_id = row.get("match_id")
+        round_number = row.get("round_number")
 
-    cursor.execute("DELETE FROM round_backup_purchase_deltas;")
+        if not match_id or round_number is None:
+            continue
+
+        unique[(match_id, int(round_number))] = {
+            "match_id": match_id,
+            "round_number": int(round_number),
+        }
+
+    return list(unique.values())
+
+
+def create_touched_rounds_temp_table(cursor, touched_rounds, include_previous_for_betting=False):
+    touched_rounds = get_unique_touched_rounds(touched_rounds)
+
+    rows = []
+
+    for row in touched_rounds:
+        rows.append((row["match_id"], row["round_number"]))
+
+        if include_previous_for_betting and row["round_number"] > 0:
+            rows.append((row["match_id"], row["round_number"] - 1))
+
+    rows = sorted(set(rows), key=lambda row: (row[0], row[1]))
 
     cursor.execute("""
-        SELECT
+        IF OBJECT_ID('tempdb..#touched_rounds') IS NOT NULL
+            DROP TABLE #touched_rounds;
+
+        CREATE TABLE #touched_rounds (
+            match_id NVARCHAR(128) NOT NULL,
+            round_number INT NOT NULL
+        );
+    """)
+
+    if rows:
+        cursor.executemany("""
+            INSERT INTO #touched_rounds (
+                match_id,
+                round_number
+            )
+            VALUES (?, ?);
+        """, rows)
+
+    return rows
+
+def rebuild_round_purchase_deltas(cursor, touched_rounds):
+    print("Rebuilding touched round purchase deltas...")
+
+    rows = create_touched_rounds_temp_table(cursor, touched_rounds)
+
+    if not rows:
+        print("No touched rounds for purchase delta rebuild.")
+        return
+
+    cursor.execute("""
+        DELETE target
+        FROM round_backup_purchase_deltas target
+        INNER JOIN #touched_rounds touched
+          ON touched.match_id = target.match_id
+         AND touched.round_number = target.round_number;
+    """)
+
+    cursor.execute("""
+        WITH current_purchases AS (
+            SELECT
+                wp.match_id,
+                wp.source_file,
+                CAST(REPLACE(REPLACE(wp.source_file, 'backup_round', ''), '.txt', '') AS INT) AS round_number,
+                wp.team_side,
+                wp.steam_id,
+                wp.def_index,
+                wp.purchase_count
+            FROM round_backup_weapon_purchases wp
+            INNER JOIN #touched_rounds touched
+              ON touched.match_id = wp.match_id
+             AND touched.round_number = CAST(REPLACE(REPLACE(wp.source_file, 'backup_round', ''), '.txt', '') AS INT)
+            WHERE wp.source_file LIKE 'backup_round%.txt'
+        ),
+        previous_purchases AS (
+            SELECT
+                wp.match_id,
+                CAST(REPLACE(REPLACE(wp.source_file, 'backup_round', ''), '.txt', '') AS INT) AS round_number,
+                wp.team_side,
+                wp.steam_id,
+                wp.def_index,
+                wp.purchase_count
+            FROM round_backup_weapon_purchases wp
+            WHERE wp.source_file LIKE 'backup_round%.txt'
+        ),
+        deltas AS (
+            SELECT
+                current_purchases.match_id,
+                current_purchases.source_file,
+                current_purchases.round_number,
+                current_purchases.team_side,
+                current_purchases.steam_id,
+                current_purchases.def_index,
+                current_purchases.purchase_count - previous_purchases.purchase_count AS purchase_delta
+            FROM current_purchases
+            INNER JOIN previous_purchases
+              ON previous_purchases.match_id = current_purchases.match_id
+             AND previous_purchases.round_number = current_purchases.round_number - 1
+             AND previous_purchases.team_side = current_purchases.team_side
+             AND previous_purchases.steam_id = current_purchases.steam_id
+             AND previous_purchases.def_index = current_purchases.def_index
+            WHERE current_purchases.purchase_count > previous_purchases.purchase_count
+        )
+        INSERT INTO round_backup_purchase_deltas (
             match_id,
             source_file,
-            CAST(REPLACE(REPLACE(source_file, 'backup_round', ''), '.txt', '') AS INT) AS backup_round,
+            round_number,
             team_side,
             steam_id,
             def_index,
-            purchase_count
-        FROM round_backup_weapon_purchases
-        WHERE source_file LIKE 'backup_round%.txt';
+            purchase_delta,
+            estimated_spent
+        )
+        SELECT
+            deltas.match_id,
+            deltas.source_file,
+            deltas.round_number,
+            deltas.team_side,
+            deltas.steam_id,
+            deltas.def_index,
+            deltas.purchase_delta,
+            deltas.purchase_delta * COALESCE(item_definition_prices.price, 0) AS estimated_spent
+        FROM deltas
+        LEFT JOIN item_definition_prices
+          ON item_definition_prices.def_index = deltas.def_index;
     """)
 
-    rows = rows_to_dicts(cursor)
-    by_key = {}
-
-    for row in rows:
-        key = (
-            row["match_id"],
-            row["team_side"],
-            row["steam_id"],
-            int(row["def_index"]),
-        )
-
-        by_key.setdefault(key, {})[int(row["backup_round"])] = int(row["purchase_count"] or 0)
-
-    inserted = 0
-    skipped_no_previous = 0
-    skipped_not_increase = 0
-
-    for (match_id, team_side, steam_id, def_index), counts_by_round in by_key.items():
-        available_rounds = sorted(counts_by_round.keys())
-
-        for round_number in available_rounds:
-            previous_round_number = round_number - 1
-
-            # Important:
-            # WeaponPurchases values are cumulative totals.
-            # If we do not have the previous backup file for this same match/player/item,
-            # we cannot safely know what was bought this round.
-            # Do NOT assume previous count was 0, because that creates fake massive buys.
-            if previous_round_number not in counts_by_round:
-                skipped_no_previous += 1
-                continue
-
-            current_count = counts_by_round.get(round_number, 0)
-            previous_count = counts_by_round.get(previous_round_number, 0)
-            delta = current_count - previous_count
-
-            if delta <= 0:
-                skipped_not_increase += 1
-                continue
-
-            source_file = f"backup_round{round_number:02d}.txt"
-
-            cursor.execute("""
-                INSERT INTO round_backup_purchase_deltas (
-                    match_id,
-                    source_file,
-                    round_number,
-                    team_side,
-                    steam_id,
-                    def_index,
-                    purchase_delta,
-                    estimated_spent
-                )
-                SELECT ?, ?, ?, ?, ?, ?, ?, ? * COALESCE(price, 0)
-                FROM item_definition_prices
-                WHERE def_index = ?
-
-                UNION ALL
-
-                SELECT ?, ?, ?, ?, ?, ?, ?, NULL
-                WHERE NOT EXISTS (
-                    SELECT 1
-                    FROM item_definition_prices
-                    WHERE def_index = ?
-                );
-            """, (
-                match_id,
-                source_file,
-                round_number,
-                team_side,
-                steam_id,
-                def_index,
-                delta,
-                delta,
-                def_index,
-
-                match_id,
-                source_file,
-                round_number,
-                team_side,
-                steam_id,
-                def_index,
-                delta,
-                def_index,
-            ))
-
-            inserted += 1
-
-    print("Round purchase deltas rebuilt.")
-    print(f"Inserted purchase delta rows: {inserted}")
-    print(f"Skipped because previous round snapshot was missing: {skipped_no_previous}")
-    print(f"Skipped because purchase count did not increase: {skipped_not_increase}")
+    print("Touched round purchase deltas rebuilt.")
 
 
-def rebuild_round_player_economy(cursor):
-    print("Rebuilding per-round player economy...")
+def rebuild_round_player_economy(cursor, touched_rounds):
+    print("Rebuilding touched per-round player economy...")
 
-    cursor.execute("DELETE FROM round_backup_player_economy_rounds;")
+    rows = create_touched_rounds_temp_table(cursor, touched_rounds)
+
+    if not rows:
+        print("No touched rounds for player economy rebuild.")
+        return
+
+    cursor.execute("""
+        DELETE target
+        FROM round_backup_player_economy_rounds target
+        INNER JOIN #touched_rounds touched
+          ON touched.match_id = target.match_id
+         AND touched.round_number = target.round_number;
+    """)
 
     cursor.execute("""
         WITH player_rounds AS (
@@ -1103,6 +1154,9 @@ def rebuild_round_player_economy(cursor):
                 MAX(CASE WHEN prs.stat_name = 'EquipmentValue' THEN prs.stat_value END) AS equipment_value,
                 MAX(CASE WHEN prs.stat_name = 'KillReward' THEN prs.stat_value END) AS kill_reward
             FROM round_backup_player_round_stats prs
+            INNER JOIN #touched_rounds touched
+              ON touched.match_id = prs.match_id
+             AND touched.round_number = prs.round_number
             LEFT JOIN round_backup_players p
               ON p.match_id = prs.match_id
              AND p.source_file = prs.source_file
@@ -1181,11 +1235,21 @@ def rebuild_round_player_economy(cursor):
          AND s.steam_id = pr.steam_id;
     """)
 
-    print("Per-round player economy rebuilt.")
+    print("Touched per-round player economy rebuilt.")
 
 
-def rebuild_inferred_betting_money(cursor):
-    print("Rebuilding inferred betting money...")
+def rebuild_inferred_betting_money(cursor, touched_rounds):
+    print("Rebuilding touched inferred betting money...")
+
+    rows = create_touched_rounds_temp_table(
+        cursor,
+        touched_rounds,
+        include_previous_for_betting=True,
+    )
+
+    if not rows:
+        print("No touched rounds for inferred betting rebuild.")
+        return
 
     cursor.execute(f"""
         WITH player_cash AS (
@@ -1212,14 +1276,14 @@ def rebuild_inferred_betting_money(cursor):
                 COALESCE(spent.estimated_spent, 0) AS estimated_spent,
                 COALESCE(cash_stat.stat_value, 0) AS cash_earned
             FROM player_cash pc
+            INNER JOIN #touched_rounds touched
+              ON touched.match_id = pc.match_id
+             AND touched.round_number = pc.round_number
             LEFT JOIN player_cash next_pc
               ON next_pc.match_id = pc.match_id
              AND next_pc.team_side = pc.team_side
              AND next_pc.steam_id = pc.steam_id
              AND next_pc.round_number = pc.round_number + 1
-             AND next_pc.map_name = pc.map_name
-             AND next_pc.backup_timestamp > pc.backup_timestamp
-             AND DATEDIFF(MINUTE, pc.backup_timestamp, next_pc.backup_timestamp) BETWEEN 0 AND 30
             LEFT JOIN (
                 SELECT
                     match_id,
@@ -1293,7 +1357,7 @@ def rebuild_inferred_betting_money(cursor):
          AND calculated.steam_id = target.steam_id;
     """)
 
-    print("Inferred betting money rebuilt.")
+    print("Touched inferred betting money rebuilt.")
 
 def connect_with_retry(max_attempts=5):
     last_error = None
@@ -2677,14 +2741,14 @@ if __name__ == "__main__":
         # 3. Import local downloaded files into SQL.
         # ------------------------------------------------------------
         processed_log_files = import_server_logs(cursor)
-        processed_backup_files = import_round_backups(cursor, backup_paths)
+        processed_backup_files, touched_backup_rounds = import_round_backups(cursor, backup_path)
 
         # ------------------------------------------------------------
         # 4. Rebuild derived economy/betting tables.
         # ------------------------------------------------------------
-        rebuild_round_purchase_deltas(cursor)
-        rebuild_round_player_economy(cursor)
-        rebuild_inferred_betting_money(cursor)
+        rebuild_round_purchase_deltas(cursor, touched_backup_rounds)
+        rebuild_round_player_economy(cursor, touched_backup_rounds)
+        rebuild_inferred_betting_money(cursor, touched_backup_rounds)
 
         # ------------------------------------------------------------
         # 5. Commit SQL before deleting local files.
