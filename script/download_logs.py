@@ -137,7 +137,7 @@ def download_logs_from_sftp():
 
 BACKUP_ROUND_MIN = 0
 BACKUP_ROUND_MAX = 20
-BACKUP_REMOTE_DIR = "game/csgo"
+BACKUP_REMOTE_DIR = "/game/csgo"
 
 
 def backup_file_names():
