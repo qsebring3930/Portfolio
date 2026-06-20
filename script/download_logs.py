@@ -415,6 +415,19 @@ def already_processed_round_backup_file(cursor, match_id, file_name):
 
     return cursor.fetchone() is not None
 
+def already_imported_round_backup_match(cursor, match_id, file_name):
+    cursor.execute("""
+        SELECT 1
+        FROM round_backup_matches
+        WHERE match_id = ?
+          AND source_file = ?
+    """, (
+        match_id,
+        file_name,
+    ))
+
+    return cursor.fetchone() is not None
+
 
 def mark_round_backup_file_processed(cursor, match_id, file_name, file_size, file_hash):
     cursor.execute("""
@@ -933,9 +946,13 @@ def import_round_backups(cursor, backup_paths):
         match_id = get_match_id_for_backup_group(cursor, backup_group)
 
         for path, file_name, data in backup_group:
-            if already_processed_round_backup_file(cursor, match_id, file_name):
-                print(f"Skipping already parsed backup: {match_id} / {file_name}")
+            if (
+                already_processed_round_backup_file(cursor, match_id, file_name)
+                or already_imported_round_backup_match(cursor, match_id, file_name)
+            ):
+                print(f"Skipping already imported backup: {match_id} / {file_name}")
                 skipped += 1
+                processed_paths.append(path)
                 continue
 
             round_number = get_backup_file_round_number(file_name)
