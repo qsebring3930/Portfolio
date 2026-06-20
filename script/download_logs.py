@@ -1016,10 +1016,13 @@ def create_touched_rounds_temp_table(cursor, touched_rounds, include_previous_fo
     cursor.execute("""
         IF OBJECT_ID('tempdb..#touched_rounds') IS NOT NULL
             DROP TABLE #touched_rounds;
+    """)
 
+    cursor.execute("""
         CREATE TABLE #touched_rounds (
             match_id NVARCHAR(128) NOT NULL,
-            round_number INT NOT NULL
+            round_number INT NOT NULL,
+            PRIMARY KEY (match_id, round_number)
         );
     """)
 
@@ -1173,19 +1176,22 @@ def rebuild_round_player_economy(cursor, touched_rounds):
         ),
         spent AS (
             SELECT
-                match_id,
-                source_file,
-                round_number,
-                team_side,
-                steam_id,
-                SUM(COALESCE(estimated_spent, 0)) AS estimated_spent
-            FROM round_backup_purchase_deltas
+                d.match_id,
+                d.source_file,
+                d.round_number,
+                d.team_side,
+                d.steam_id,
+                SUM(COALESCE(d.estimated_spent, 0)) AS estimated_spent
+            FROM round_backup_purchase_deltas d
+            INNER JOIN #touched_rounds touched
+              ON touched.match_id = d.match_id
+             AND touched.round_number = d.round_number
             GROUP BY
-                match_id,
-                source_file,
-                round_number,
-                team_side,
-                steam_id
+                d.match_id,
+                d.source_file,
+                d.round_number,
+                d.team_side,
+                d.steam_id
         )
         INSERT INTO round_backup_player_economy_rounds (
             match_id,
