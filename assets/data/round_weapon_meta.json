@@ -4,22 +4,77 @@
     "item_name": "Kevlar Vest + Helmet",
     "item_category": "Equipment",
     "price": 1000,
-    "total_bought": 17,
-    "bought_in_wins": 7,
-    "bought_in_losses": 9,
-    "win_buy_percent": "41.18",
-    "total_spent": 17000
+    "total_bought": 31,
+    "bought_in_wins": 14,
+    "bought_in_losses": 16,
+    "win_buy_percent": "45.16",
+    "total_spent": 31000
   },
   {
     "def_index": 55,
     "item_name": "Defuse Kit",
     "item_category": "Equipment",
     "price": 400,
+    "total_bought": 12,
+    "bought_in_wins": 6,
+    "bought_in_losses": 6,
+    "win_buy_percent": "50.00",
+    "total_spent": 4800
+  },
+  {
+    "def_index": 33,
+    "item_name": "MP7",
+    "item_category": "Mid-Tier",
+    "price": 1400,
+    "total_bought": 7,
+    "bought_in_wins": 3,
+    "bought_in_losses": 4,
+    "win_buy_percent": "42.86",
+    "total_spent": 9800
+  },
+  {
+    "def_index": 45,
+    "item_name": "Smoke Grenade",
+    "item_category": "Grenade",
+    "price": 300,
     "total_bought": 5,
-    "bought_in_wins": 2,
-    "bought_in_losses": 3,
-    "win_buy_percent": "40.00",
-    "total_spent": 2000
+    "bought_in_wins": 3,
+    "bought_in_losses": 2,
+    "win_buy_percent": "60.00",
+    "total_spent": 1500
+  },
+  {
+    "def_index": 44,
+    "item_name": "HE Grenade",
+    "item_category": "Grenade",
+    "price": 300,
+    "total_bought": 4,
+    "bought_in_wins": 3,
+    "bought_in_losses": 1,
+    "win_buy_percent": "75.00",
+    "total_spent": 1200
+  },
+  {
+    "def_index": 48,
+    "item_name": "Incendiary Grenade",
+    "item_category": "Grenade",
+    "price": 500,
+    "total_bought": 3,
+    "bought_in_wins": 3,
+    "bought_in_losses": 0,
+    "win_buy_percent": "100.00",
+    "total_spent": 1500
+  },
+  {
+    "def_index": 43,
+    "item_name": "Flashbang",
+    "item_category": "Grenade",
+    "price": 200,
+    "total_bought": 3,
+    "bought_in_wins": 3,
+    "bought_in_losses": 0,
+    "win_buy_percent": "100.00",
+    "total_spent": 600
   },
   {
     "def_index": 23,
@@ -31,6 +86,17 @@
     "bought_in_losses": 1,
     "win_buy_percent": "0.00",
     "total_spent": 2800
+  },
+  {
+    "def_index": 7,
+    "item_name": "AK-47",
+    "item_category": "Rifle",
+    "price": 2700,
+    "total_bought": 1,
+    "bought_in_wins": 0,
+    "bought_in_losses": 1,
+    "win_buy_percent": "0.00",
+    "total_spent": 2700
   },
   {
     "def_index": 19,
@@ -53,17 +119,6 @@
     "bought_in_losses": 0,
     "win_buy_percent": "100.00",
     "total_spent": 1700
-  },
-  {
-    "def_index": 33,
-    "item_name": "MP7",
-    "item_category": "Mid-Tier",
-    "price": 1400,
-    "total_bought": 1,
-    "bought_in_wins": 0,
-    "bought_in_losses": 1,
-    "win_buy_percent": "0.00",
-    "total_spent": 1400
   },
   {
     "def_index": 50,
