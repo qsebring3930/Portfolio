@@ -1,17 +1,17 @@
 [
   {
     "match_id": "058adc35117359014e4d4f8828cca30d4091d5e7c4a8b260934a48a00ff0431d",
-    "source_file": "backup_round03.txt",
-    "backup_timestamp": "2026-06-20 16:10:20",
+    "source_file": "backup_round13.txt",
+    "backup_timestamp": "2026-06-20 16:20:23",
     "map_name": "de_dust2",
-    "current_round": 3,
+    "current_round": 13,
     "team1_name": "Alliance",
     "team2_name": "Horde",
     "first_half_team1_score": 0,
     "first_half_team2_score": 0,
     "loser_most_recent_team": "T",
-    "consecutive_t_loses": 3,
+    "consecutive_t_loses": 2,
     "consecutive_ct_loses": null,
-    "spawn_points_cfg": -905302268
+    "spawn_points_cfg": 1794334617
   }
 ]
