@@ -67,59 +67,60 @@ def download_logs_and_round_backups_from_sftp():
         # ------------------------------------------------------------
         # Download newest log-all files
         # ------------------------------------------------------------
-        try:
-            print("Listing remote log directory...")
-            remote_files = sftp.listdir_attr(remote_log_dir)
-            print(f"Found {len(remote_files)} remote log-dir files.")
-
-            log_all_files = [
-                remote_file
-                for remote_file in remote_files
-                if remote_file.filename.endswith(".txt")
-                and remote_file.filename.startswith("log-all")
-            ]
-
-            ignored = len(remote_files) - len(log_all_files)
-            downloaded = 0
-            skipped = 0
-
-            if not log_all_files:
-                print("No log-all*.txt files found on SFTP.")
-            else:
-                newest_files = sorted(
-                    log_all_files,
-                    key=lambda f: f.st_mtime,
-                    reverse=True
-                )[:2]
-
-                print("Newest log-all files selected:")
-                for selected_file in newest_files:
-                    print(
-                        f"  {selected_file.filename} "
-                        f"(mtime={selected_file.st_mtime}, size={selected_file.st_size} bytes)"
-                    )
-
-                for remote_file in newest_files:
-                    file_name = remote_file.filename
-                    remote_path = f"{remote_log_dir.rstrip('/')}/{file_name}"
-                    local_path = local_logs_dir / file_name
-
-                    if local_path.exists() and local_path.stat().st_size == remote_file.st_size:
-                        print(f"Skipping log because it already exists locally with same size: {file_name}")
-                        skipped += 1
-                        continue
-
-                    print(f"Downloading log-all file: {file_name} ({remote_file.st_size} bytes)...")
-                    sftp.get(remote_path, str(local_path))
-                    downloaded += 1
-
-            print("Log download complete.")
-            print(f"Downloaded logs: {downloaded}")
-            print(f"Skipped existing logs: {skipped}")
-            print(f"Ignored log-dir files: {ignored}")
-
-        except FileNotFoundError:
-            print(f"Remote log directory missing, skipping logs: {remote_log_dir}")
+        if include-logs:
+            try:
+                print("Listing remote log directory...")
+                remote_files = sftp.listdir_attr(remote_log_dir)
+                print(f"Found {len(remote_files)} remote log-dir files.")
+    
+                log_all_files = [
+                    remote_file
+                    for remote_file in remote_files
+                    if remote_file.filename.endswith(".txt")
+                    and remote_file.filename.startswith("log-all")
+                ]
+    
+                ignored = len(remote_files) - len(log_all_files)
+                downloaded = 0
+                skipped = 0
+    
+                if not log_all_files:
+                    print("No log-all*.txt files found on SFTP.")
+                else:
+                    newest_files = sorted(
+                        log_all_files,
+                        key=lambda f: f.st_mtime,
+                        reverse=True
+                    )[:2]
+    
+                    print("Newest log-all files selected:")
+                    for selected_file in newest_files:
+                        print(
+                            f"  {selected_file.filename} "
+                            f"(mtime={selected_file.st_mtime}, size={selected_file.st_size} bytes)"
+                        )
+    
+                    for remote_file in newest_files:
+                        file_name = remote_file.filename
+                        remote_path = f"{remote_log_dir.rstrip('/')}/{file_name}"
+                        local_path = local_logs_dir / file_name
+    
+                        if local_path.exists() and local_path.stat().st_size == remote_file.st_size:
+                            print(f"Skipping log because it already exists locally with same size: {file_name}")
+                            skipped += 1
+                            continue
+    
+                        print(f"Downloading log-all file: {file_name} ({remote_file.st_size} bytes)...")
+                        sftp.get(remote_path, str(local_path))
+                        downloaded += 1
+    
+                print("Log download complete.")
+                print(f"Downloaded logs: {downloaded}")
+                print(f"Skipped existing logs: {skipped}")
+                print(f"Ignored log-dir files: {ignored}")
+    
+            except FileNotFoundError:
+                print(f"Remote log directory missing, skipping logs: {remote_log_dir}")
 
         # ------------------------------------------------------------
         # Download backup_round files
@@ -1381,17 +1382,13 @@ def rebuild_inferred_betting_money(cursor, touched_rounds):
                 CASE
                     WHEN betting_calc.start_cash IS NULL THEN NULL
                     WHEN betting_calc.actual_current_cash IS NULL THEN NULL
-                    WHEN betting_calc.betting_delta BETWEEN -{MAX_BET_AMOUNT} AND {MAX_BET_AMOUNT}
-                    THEN betting_calc.betting_delta
-                    ELSE 0
+                    ELSE betting_calc.betting_delta
                 END,
-
+            
             economy_note =
                 CASE
                     WHEN betting_calc.start_cash IS NULL THEN 'Missing start cash'
                     WHEN betting_calc.actual_current_cash IS NULL THEN 'Missing current cash'
-                    WHEN betting_calc.betting_delta > {MAX_BET_AMOUNT} THEN 'Impossible positive betting delta; ignored'
-                    WHEN betting_calc.betting_delta < -{MAX_BET_AMOUNT} THEN 'Impossible negative betting delta; ignored'
                     WHEN betting_calc.betting_delta > 0 THEN 'Positive unexplained money; likely betting win'
                     WHEN betting_calc.betting_delta < 0 THEN 'Negative unexplained money; likely betting loss'
                     ELSE 'No inferred betting money'
@@ -2776,7 +2773,8 @@ if __name__ == "__main__":
     # This opens SFTP, downloads logs/backups, then closes SFTP.
     # No SQL connection is open yet.
     # ------------------------------------------------------------
-    backup_paths = download_logs_and_round_backups_from_sftp()
+    include_logs = os.environ.get("INCLUDE_LOGS", "0").strip() == "1"
+    backup_paths = download_logs_and_round_backups_from_sftp(include_logs=include_logs)
 
     # ------------------------------------------------------------
     # 2. Now connect to SQL after SFTP is done.
@@ -2789,7 +2787,11 @@ if __name__ == "__main__":
         # ------------------------------------------------------------
         # 3. Import local downloaded files into SQL.
         # ------------------------------------------------------------
-        processed_log_files = import_server_logs(cursor)
+        if include_logs:
+            processed_log_files = import_server_logs(cursor)
+        else:
+            print("Skipping server log import because INCLUDE_LOGS is not 1.")
+            processed_log_files = []
         processed_backup_files, touched_backup_rounds = import_round_backups(cursor, backup_paths)
 
         # ------------------------------------------------------------
