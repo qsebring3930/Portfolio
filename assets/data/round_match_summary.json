@@ -1,17 +1,17 @@
 [
   {
-    "match_id": "d95edd81cde867c8fd4682879fab883fa4dc1e6974ffb6c56279c7f70795d0e5",
-    "source_file": "backup_round01.txt",
-    "backup_timestamp": "2026-06-20 10:54:36",
-    "map_name": "420_shotguns",
-    "current_round": 1,
+    "match_id": "e72aaab1c0da733c7bcc8ce840918645e55b68961247e15b6af4a0697e6b4773",
+    "source_file": "backup_round06.txt",
+    "backup_timestamp": "2026-06-20 12:24:30",
+    "map_name": "de_anubis",
+    "current_round": 6,
     "team1_name": "Alliance",
     "team2_name": "Horde",
     "first_half_team1_score": 0,
     "first_half_team2_score": 0,
-    "loser_most_recent_team": null,
+    "loser_most_recent_team": "CT",
     "consecutive_t_loses": null,
-    "consecutive_ct_loses": null,
-    "spawn_points_cfg": -1565638638
+    "consecutive_ct_loses": 6,
+    "spawn_points_cfg": -291688249
   }
 ]
