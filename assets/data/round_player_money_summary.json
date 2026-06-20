@@ -192,14 +192,6 @@
     "betting_lost": 0
   },
   {
-    "player_name": "GraveyardKeeperAssaultSoldierLvl3",
-    "steam_id": "37375118",
-    "money_spent": 0,
-    "net_betting": 500,
-    "betting_won": 500,
-    "betting_lost": 0
-  },
-  {
     "player_name": "RawrMcRawrPredatorLvl21",
     "steam_id": "20687493",
     "money_spent": 0,
@@ -210,6 +202,14 @@
   {
     "player_name": "RawrMcRawr",
     "steam_id": "20687493",
+    "money_spent": 0,
+    "net_betting": 500,
+    "betting_won": 500,
+    "betting_lost": 0
+  },
+  {
+    "player_name": "GraveyardKeeperAssaultSoldierLvl3",
+    "steam_id": "37375118",
     "money_spent": 0,
     "net_betting": 500,
     "betting_won": 500,
@@ -288,9 +288,25 @@
     "betting_lost": 0
   },
   {
-    "player_name": "parianUndeadScourgeLvl30",
+    "player_name": "parianHumanAllianceLvl0",
+    "steam_id": "133872",
+    "money_spent": 1000,
+    "net_betting": 0,
+    "betting_won": 0,
+    "betting_lost": 0
+  },
+  {
+    "player_name": "parianHumanAllianceLvl2",
     "steam_id": "133872",
     "money_spent": 0,
+    "net_betting": 0,
+    "betting_won": 0,
+    "betting_lost": 0
+  },
+  {
+    "player_name": "parianUndeadScourgeLvl30",
+    "steam_id": "133872",
+    "money_spent": 5200,
     "net_betting": 0,
     "betting_won": 0,
     "betting_lost": 0
@@ -322,7 +338,7 @@
   {
     "player_name": "GucciWadeLaharlLvl36",
     "steam_id": "135851093",
-    "money_spent": 600,
+    "money_spent": 1100,
     "net_betting": 0,
     "betting_won": 0,
     "betting_lost": 0
@@ -346,7 +362,7 @@
   {
     "player_name": "RickyUndeadScourgeLvl11",
     "steam_id": "14577800",
-    "money_spent": 5450,
+    "money_spent": 8800,
     "net_betting": 0,
     "betting_won": 0,
     "betting_lost": 0
@@ -586,7 +602,7 @@
   {
     "player_name": "EcstatictongsArmsRaceLvl27",
     "steam_id": "192802928",
-    "money_spent": 7800,
+    "money_spent": 13000,
     "net_betting": 0,
     "betting_won": 0,
     "betting_lost": 0
@@ -656,6 +672,14 @@
     "betting_lost": 0
   },
   {
+    "player_name": "RawrMcRawrSilencerLvl33",
+    "steam_id": "20687493",
+    "money_spent": 0,
+    "net_betting": 0,
+    "betting_won": 0,
+    "betting_lost": 0
+  },
+  {
     "player_name": "ObsidianStorm",
     "steam_id": "24524073",
     "money_spent": 0,
@@ -680,6 +704,30 @@
     "betting_lost": 0
   },
   {
+    "player_name": "ObsidianStormTaurenChieftainLvl33",
+    "steam_id": "24524073",
+    "money_spent": 0,
+    "net_betting": 0,
+    "betting_won": 0,
+    "betting_lost": 0
+  },
+  {
+    "player_name": "Kyrez",
+    "steam_id": "25776664",
+    "money_spent": 0,
+    "net_betting": 0,
+    "betting_won": 0,
+    "betting_lost": 0
+  },
+  {
+    "player_name": "KyrezDemonicCanineLvl15",
+    "steam_id": "25776664",
+    "money_spent": 1300,
+    "net_betting": 0,
+    "betting_won": 0,
+    "betting_lost": 0
+  },
+  {
     "player_name": "TomNadey",
     "steam_id": "27401608",
     "money_spent": 0,
@@ -690,7 +738,15 @@
   {
     "player_name": "TomNadeyEnigmaLvl12",
     "steam_id": "27401608",
-    "money_spent": 1000,
+    "money_spent": 2000,
+    "net_betting": 0,
+    "betting_won": 0,
+    "betting_lost": 0
+  },
+  {
+    "player_name": "TomNadeyEnigmaLvl13",
+    "steam_id": "27401608",
+    "money_spent": 0,
     "net_betting": 0,
     "betting_won": 0,
     "betting_lost": 0
@@ -842,7 +898,15 @@
   {
     "player_name": "CCHILLYYOrcishHordeLvl11",
     "steam_id": "8533050",
-    "money_spent": 8900,
+    "money_spent": 15300,
+    "net_betting": 0,
+    "betting_won": 0,
+    "betting_lost": 0
+  },
+  {
+    "player_name": "CCHILLYYOrcishHordeLvl12",
+    "steam_id": "8533050",
+    "money_spent": 5600,
     "net_betting": 0,
     "betting_won": 0,
     "betting_lost": 0
@@ -936,6 +1000,14 @@
     "betting_lost": 0
   },
   {
+    "player_name": "JohnnieRico",
+    "steam_id": "94156945",
+    "money_spent": 0,
+    "net_betting": 0,
+    "betting_won": 0,
+    "betting_lost": 0
+  },
+  {
     "player_name": "JohnnieRicoAchooHeraldofSpringLvl0",
     "steam_id": "94156945",
     "money_spent": 0,
@@ -976,16 +1048,40 @@
     "betting_lost": 0
   },
   {
-    "player_name": "Zickzii",
-    "steam_id": "9944208",
+    "player_name": "JohnnieRicoPokemonTrainerLvl1",
+    "steam_id": "94156945",
     "money_spent": 0,
     "net_betting": 0,
     "betting_won": 0,
     "betting_lost": 0
   },
   {
-    "player_name": "GraveyardKeeperAssaultSoldierLvl6",
-    "steam_id": "37375118",
+    "player_name": "JohnnieRicoPokemonTrainerLvl2",
+    "steam_id": "94156945",
+    "money_spent": 0,
+    "net_betting": 0,
+    "betting_won": 0,
+    "betting_lost": 0
+  },
+  {
+    "player_name": "JohnnieRicoPokemonTrainerLvl5",
+    "steam_id": "94156945",
+    "money_spent": 0,
+    "net_betting": 0,
+    "betting_won": 0,
+    "betting_lost": 0
+  },
+  {
+    "player_name": "JohnnieRicoPokemonTrainerLvl6",
+    "steam_id": "94156945",
+    "money_spent": 0,
+    "net_betting": 0,
+    "betting_won": 0,
+    "betting_lost": 0
+  },
+  {
+    "player_name": "Zickzii",
+    "steam_id": "9944208",
     "money_spent": 0,
     "net_betting": 0,
     "betting_won": 0,
@@ -1000,9 +1096,49 @@
     "betting_lost": 0
   },
   {
+    "player_name": "GraveyardKeeperAssaultSoldierLvl14",
+    "steam_id": "37375118",
+    "money_spent": 0,
+    "net_betting": 0,
+    "betting_won": 0,
+    "betting_lost": 0
+  },
+  {
+    "player_name": "GraveyardKeeperAssaultSoldierLvl15",
+    "steam_id": "37375118",
+    "money_spent": 0,
+    "net_betting": 0,
+    "betting_won": 0,
+    "betting_lost": 0
+  },
+  {
+    "player_name": "blues",
+    "steam_id": "415141590",
+    "money_spent": 0,
+    "net_betting": 0,
+    "betting_won": 0,
+    "betting_lost": 0
+  },
+  {
+    "player_name": "bluesBlazeBinderLvl20",
+    "steam_id": "415141590",
+    "money_spent": 0,
+    "net_betting": 0,
+    "betting_won": 0,
+    "betting_lost": 0
+  },
+  {
     "player_name": "H4WKEN",
     "steam_id": "58409953",
     "money_spent": 0,
+    "net_betting": 0,
+    "betting_won": 0,
+    "betting_lost": 0
+  },
+  {
+    "player_name": "H4WKENEarthShamanLvl16",
+    "steam_id": "58409953",
+    "money_spent": 1000,
     "net_betting": 0,
     "betting_won": 0,
     "betting_lost": 0
@@ -1043,6 +1179,14 @@
     "player_name": "H4WKENHighTemplarLvl18",
     "steam_id": "58409953",
     "money_spent": 2000,
+    "net_betting": 0,
+    "betting_won": 0,
+    "betting_lost": 0
+  },
+  {
+    "player_name": "H4WKENHighTemplarLvl19",
+    "steam_id": "58409953",
+    "money_spent": 4000,
     "net_betting": 0,
     "betting_won": 0,
     "betting_lost": 0
@@ -1120,6 +1264,14 @@
     "betting_lost": 0
   },
   {
+    "player_name": "GraveyardKeeperAssaultSoldierLvl6",
+    "steam_id": "37375118",
+    "money_spent": 0,
+    "net_betting": 0,
+    "betting_won": 0,
+    "betting_lost": 0
+  },
+  {
     "player_name": "ZickziiEnigmaLvl29",
     "steam_id": "9944208",
     "money_spent": 6800,
@@ -1176,16 +1328,16 @@
     "betting_lost": -600
   },
   {
-    "player_name": "H4WKENSorcererDDLvl0",
-    "steam_id": "58409953",
+    "player_name": "GraveyardKeeperBristlebackLvl24",
+    "steam_id": "37375118",
     "money_spent": 0,
     "net_betting": -300,
     "betting_won": 0,
     "betting_lost": -300
   },
   {
-    "player_name": "GraveyardKeeperBristlebackLvl24",
-    "steam_id": "37375118",
+    "player_name": "H4WKENSorcererDDLvl0",
+    "steam_id": "58409953",
     "money_spent": 0,
     "net_betting": -300,
     "betting_won": 0,
