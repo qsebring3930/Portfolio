@@ -2699,7 +2699,7 @@ if __name__ == "__main__":
         # ------------------------------------------------------------
         timed_step("Rebuild purchase deltas", rebuild_round_purchase_deltas, cursor, touched_backup_rounds)
         timed_step("Rebuild player economy", rebuild_round_player_economy, cursor, touched_backup_rounds)
-        #timed_step("Rebuild inferred betting", rebuild_inferred_betting_money, cursor, touched_backup_rounds)
+        timed_step("Rebuild inferred betting", rebuild_inferred_betting_money, cursor, touched_backup_rounds)
 
         # ------------------------------------------------------------
         # 5. Commit SQL before deleting local files.
