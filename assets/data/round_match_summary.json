@@ -1,10 +1,10 @@
 [
   {
     "match_id": "51a8793dc39b7ce0ace03daf711d9dd0d130eb65b0115af86a3dfb9f2a785889",
-    "source_file": "backup_round01.txt",
-    "backup_timestamp": "2026-06-21 08:44:46",
+    "source_file": "backup_round13.txt",
+    "backup_timestamp": "2026-06-21 09:00:34",
     "map_name": "de_coldwater",
-    "current_round": 1,
+    "current_round": 13,
     "team1_name": "Alliance",
     "team2_name": "Horde",
     "first_half_team1_score": 0,
@@ -12,6 +12,6 @@
     "loser_most_recent_team": "T",
     "consecutive_t_loses": 1,
     "consecutive_ct_loses": null,
-    "spawn_points_cfg": -1923556898
+    "spawn_points_cfg": 71186461
   }
 ]
