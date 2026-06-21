@@ -1,17 +1,17 @@
 [
   {
-    "match_id": "9e52c69e3cf33a2990d048482fce5d0cf559156c2001fd4dae50a704912cb21f",
-    "source_file": "backup_round08.txt",
-    "backup_timestamp": "2026-06-21 22:00:40",
-    "map_name": "de_mirage",
-    "current_round": 8,
+    "match_id": "ba19bffd0816d93a53d5af92f0819afed513778c753ddd5032115a9c150e0333",
+    "source_file": "backup_round03.txt",
+    "backup_timestamp": "2026-06-21 22:14:43",
+    "map_name": "de_ancient",
+    "current_round": 3,
     "team1_name": "Alliance",
     "team2_name": "Horde",
     "first_half_team1_score": 0,
     "first_half_team2_score": 0,
-    "loser_most_recent_team": "T",
-    "consecutive_t_loses": 8,
-    "consecutive_ct_loses": null,
-    "spawn_points_cfg": 665707535
+    "loser_most_recent_team": "CT",
+    "consecutive_t_loses": null,
+    "consecutive_ct_loses": 1,
+    "spawn_points_cfg": 2075407600
   }
 ]
