@@ -1,17 +1,17 @@
 [
   {
-    "match_id": "9899d8f41ec1c09867a849c64a6028cfc4f6aaa8683f6f1b338ffedd8da79f9b",
-    "source_file": "backup_round05.txt",
-    "backup_timestamp": "2026-06-21 14:15:05",
-    "map_name": "cs_office",
-    "current_round": 5,
+    "match_id": "e0450a38ba89d6add82da60a24fdcf9659507d932d8a5ed04b5cff64c36b179f",
+    "source_file": "backup_round06.txt",
+    "backup_timestamp": "2026-06-21 14:29:57",
+    "map_name": "420_shotguns",
+    "current_round": 6,
     "team1_name": "Alliance",
     "team2_name": "Horde",
     "first_half_team1_score": 0,
     "first_half_team2_score": 0,
     "loser_most_recent_team": "T",
-    "consecutive_t_loses": 3,
+    "consecutive_t_loses": 5,
     "consecutive_ct_loses": null,
-    "spawn_points_cfg": -2013469197
+    "spawn_points_cfg": -784319033
   }
 ]
