@@ -1,17 +1,17 @@
 [
   {
-    "match_id": "babda0a234e7c1b1174d613cbafea7cfef49483531a06ccb3f8eaae537a67120",
-    "source_file": "backup_round06.txt",
-    "backup_timestamp": "2026-06-21 07:14:37",
-    "map_name": "de_aztec",
-    "current_round": 6,
+    "match_id": "0fba74e82ce3e4911f946e86c2ee29313ac098762c06b0f5cc75f0325410e319",
+    "source_file": "backup_round04.txt",
+    "backup_timestamp": "2026-06-21 07:30:25",
+    "map_name": "de_vertigo",
+    "current_round": 4,
     "team1_name": "Alliance",
     "team2_name": "Horde",
     "first_half_team1_score": 0,
     "first_half_team2_score": 0,
     "loser_most_recent_team": "CT",
     "consecutive_t_loses": null,
-    "consecutive_ct_loses": 1,
-    "spawn_points_cfg": 408513271
+    "consecutive_ct_loses": 3,
+    "spawn_points_cfg": -132306328
   }
 ]
