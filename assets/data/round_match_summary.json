@@ -1,17 +1,17 @@
 [
   {
-    "match_id": "b6922d0eee8000c6a4fdc03baade2285223fd903c83b1583f419dd641c244f8e",
-    "source_file": "backup_round06.txt",
-    "backup_timestamp": "2026-06-21 06:15:18",
-    "map_name": "de_inferno",
-    "current_round": 6,
+    "match_id": "e133e2f45668b6e072dcca2f834c6800144daf38f8fc92a0e3e2c85196a389b9",
+    "source_file": "backup_round07.txt",
+    "backup_timestamp": "2026-06-21 06:30:22",
+    "map_name": "cs_fallingliquid",
+    "current_round": 7,
     "team1_name": "Alliance",
     "team2_name": "Horde",
     "first_half_team1_score": 0,
     "first_half_team2_score": 0,
-    "loser_most_recent_team": "T",
-    "consecutive_t_loses": 1,
-    "consecutive_ct_loses": null,
-    "spawn_points_cfg": -1922428959
+    "loser_most_recent_team": "CT",
+    "consecutive_t_loses": null,
+    "consecutive_ct_loses": 3,
+    "spawn_points_cfg": 1198289814
   }
 ]
