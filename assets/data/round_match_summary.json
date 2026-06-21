@@ -1,17 +1,17 @@
 [
   {
     "match_id": "001deb846d37bd28195f1ee4c6dcbcc1d6ca18df6cff0680f8df45274cbd3e08",
-    "source_file": "backup_round04.txt",
-    "backup_timestamp": "2026-06-21 01:36:20",
+    "source_file": "backup_round10.txt",
+    "backup_timestamp": "2026-06-21 01:46:48",
     "map_name": "cs_italy_expanded",
-    "current_round": 4,
+    "current_round": 10,
     "team1_name": "Alliance",
     "team2_name": "Horde",
     "first_half_team1_score": 0,
     "first_half_team2_score": 0,
-    "loser_most_recent_team": "CT",
-    "consecutive_t_loses": null,
+    "loser_most_recent_team": "T",
+    "consecutive_t_loses": 1,
     "consecutive_ct_loses": 2,
-    "spawn_points_cfg": -438874956
+    "spawn_points_cfg": 509917291
   }
 ]
