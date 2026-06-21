@@ -1,10 +1,10 @@
 [
   {
-    "match_id": "845ceab15a12fbac9fb14af396fce302a6aa9383a827c944f48adbe1e1936bf8",
-    "source_file": "backup_round10.txt",
-    "backup_timestamp": "2026-06-21 01:11:09",
-    "map_name": "cs_horde",
-    "current_round": 10,
+    "match_id": "5794a80ca5572b07cf6ceb207cbd1f29eebd2e2884b46f6e5a0cf231d1a05fcb",
+    "source_file": "backup_round01.txt",
+    "backup_timestamp": "2026-06-21 01:23:10",
+    "map_name": "awp_crazyjump2007",
+    "current_round": 1,
     "team1_name": "Alliance",
     "team2_name": "Horde",
     "first_half_team1_score": 0,
@@ -12,6 +12,6 @@
     "loser_most_recent_team": "CT",
     "consecutive_t_loses": null,
     "consecutive_ct_loses": 1,
-    "spawn_points_cfg": -1647704487
+    "spawn_points_cfg": -1899945890
   }
 ]
