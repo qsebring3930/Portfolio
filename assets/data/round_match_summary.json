@@ -1,17 +1,17 @@
 [
   {
-    "match_id": "64fc81d139638d5656ca361b2b43b6a1ad675e39fc0b4bf7a7e4aa572aff73ae",
-    "source_file": "backup_round06.txt",
-    "backup_timestamp": "2026-06-21 23:14:48",
-    "map_name": "de_stockwell",
-    "current_round": 6,
+    "match_id": "aaf6b4a7b2d6c68ed720a29b785838e150aecdac46650861f053e11ef6d8c2ee",
+    "source_file": "backup_round11.txt",
+    "backup_timestamp": "2026-06-21 23:29:52",
+    "map_name": "de_inferno",
+    "current_round": 11,
     "team1_name": "Alliance",
     "team2_name": "Horde",
     "first_half_team1_score": 0,
     "first_half_team2_score": 0,
     "loser_most_recent_team": "T",
     "consecutive_t_loses": 1,
-    "consecutive_ct_loses": 3,
-    "spawn_points_cfg": 261509457
+    "consecutive_ct_loses": null,
+    "spawn_points_cfg": 779832417
   }
 ]
