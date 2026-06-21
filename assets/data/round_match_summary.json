@@ -1,10 +1,10 @@
 [
   {
-    "match_id": "e0450a38ba89d6add82da60a24fdcf9659507d932d8a5ed04b5cff64c36b179f",
-    "source_file": "backup_round06.txt",
-    "backup_timestamp": "2026-06-21 14:29:57",
-    "map_name": "420_shotguns",
-    "current_round": 6,
+    "match_id": "861945a61417251e0e12248c6c1d6cbc91c7d30690135df411527da8ee930061",
+    "source_file": "backup_round07.txt",
+    "backup_timestamp": "2026-06-21 14:45:11",
+    "map_name": "de_sakura",
+    "current_round": 7,
     "team1_name": "Alliance",
     "team2_name": "Horde",
     "first_half_team1_score": 0,
@@ -12,6 +12,6 @@
     "loser_most_recent_team": "T",
     "consecutive_t_loses": 5,
     "consecutive_ct_loses": null,
-    "spawn_points_cfg": -784319033
+    "spawn_points_cfg": 416432108
   }
 ]
