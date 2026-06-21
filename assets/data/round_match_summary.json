@@ -1,10 +1,10 @@
 [
   {
-    "match_id": "cd3cac9b14d99688edc5172b1e269db746be265f0c40c031b3f89a9457067dcc",
-    "source_file": "backup_round14.txt",
-    "backup_timestamp": "2026-06-21 07:59:55",
-    "map_name": "de_inferno_teamliquid",
-    "current_round": 14,
+    "match_id": "5fcb788e3061d1ed9772c26d7920414c72dbddbd4ffea6ed25603745ddda2c77",
+    "source_file": "backup_round10.txt",
+    "backup_timestamp": "2026-06-21 08:15:01",
+    "map_name": "de_nightfever",
+    "current_round": 10,
     "team1_name": "Alliance",
     "team2_name": "Horde",
     "first_half_team1_score": 0,
@@ -12,6 +12,6 @@
     "loser_most_recent_team": "CT",
     "consecutive_t_loses": null,
     "consecutive_ct_loses": 2,
-    "spawn_points_cfg": 2145712808
+    "spawn_points_cfg": 1904109085
   }
 ]
