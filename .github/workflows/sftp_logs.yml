@@ -11,7 +11,7 @@ permissions:
 jobs:
   download-logs:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 20
 
     concurrency:
       group: war3cs2-stats-pipeline
