@@ -1,0 +1,92 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Druid (D&D)
+|image=[[File:Druid (D&D).webp]]
+|category=D&D Casters
+|max=30
+|level=3490
+|access=Beta
+|passive=
+<p>
+Wild Shapes: 3
+</p>
+}}
+|skill1={{SkillInfo
+|name=Warden
+|info=
+Increase Health
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Health|unit=HP|lvl1=5|lvl2=10|lvl3=15|lvl4=20|lvl5=25}}
+}}}}
+|skill2={{SkillInfo
+|name=Faerie Fire
+|info=
+Smoke Detonate: Create Marking Ward
+|trigger=Special
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl1=1.0|lvl2=1.5|lvl3=2.0|lvl4=2.5|lvl5=3.0}}
+}}}}
+|skill3={{SkillInfo
+|name=Healing Spirit
+|info=
+Totem: Heals allies, follows closest ally
+|trigger=Ability1
+|target=Location
+|duration=10
+|range=400
+|radius=200
+|cooldown=20.0
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Heal|unit=HP|lvl1=1|lvl2=2|lvl3=3|lvl4=4|lvl5=5}}
+}}}}
+|skill4={{SkillInfo
+|name=Warding Wind
+|info=
+Knockback and Evade
+|trigger=Ability2
+|target=Self
+|radius=300
+|force=2
+|cooldown=15.0
+|extra=Ends Wind when evading 3 times
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl1=1.0|lvl2=2.0|lvl3=3.0|lvl4=4.0|lvl5=5.0}}
+|line2={{LevelUpRow|field=Evade Chance|lvl1=10.0%|lvl2=20.0%|lvl3=30.0%|lvl4=40.0%|lvl5=50.0%}}
+}}}}
+|skill5={{SkillInfo
+|name=Wild Companion
+|info=
+Sacrifice a Wild Shape to Summon a Pet
+|trigger=Ability3
+|target=Random_Ally
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Cooldown|unit=sec.|lvl1=42.0|lvl2=39.0|lvl3=36.0|lvl4=33.0|lvl5=30.0}}
+}}}}
+|skill6={{SkillInfo
+|name=Wild Shape
+|info=
+<p>
+Sacrifice a Wild Shape to Shapeshift<br>
+Bear: Deagle with Decreased Received Weapon Damage<br>
+Goat: Knife with Increased Speed and Impale<br>
+Wolf: Knife with Increased Speed and Silent Step
+</p>
+|trigger=Ultimate
+|target=Self
+|duration=8
+|cooldown=5.0
+|extra=
+<p>
+Health is remembered when shifting, Ends transformation early on killing shot<br>
+Bear: 150HP - Weapon: Deagle<br>
+Goat: 125HP - Weapon: Knife<br>
+Wolf: 100HP - Weapon: Knife
+</p>
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Bear Decrease|lvl1=5.0%|lvl2=10.0%|lvl3=15.0%|lvl4=20.0%|lvl5=25.0%}}
+|line2={{LevelUpRow|field=Goat Speed|lvl1=15.0%|lvl2=30.0%|lvl3=45.0%|lvl4=60.0%|lvl5=75.0%}}
+|line3={{LevelUpRow|field=Wolf Speed|lvl1=8.0%|lvl2=16.0%|lvl3=24.0%|lvl4=32.0%|lvl5=40.0%}}
+}}}}
+}}
