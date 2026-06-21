@@ -1,17 +1,17 @@
 [
   {
-    "match_id": "94a1cdc6e21664c493e40f255d9c07574c503d613e496a32f2b0111fb9aa7ad9",
-    "source_file": "backup_round03.txt",
-    "backup_timestamp": "2026-06-21 13:15:12",
-    "map_name": "de_overpass",
-    "current_round": 3,
+    "match_id": "b3a8472967b35fef1f04110b795a480951cce45b9c121bc8e435890c06a39ffd",
+    "source_file": "backup_round01.txt",
+    "backup_timestamp": "2026-06-21 13:30:22",
+    "map_name": "de_prodigy_ported",
+    "current_round": 1,
     "team1_name": "Alliance",
     "team2_name": "Horde",
     "first_half_team1_score": 0,
     "first_half_team2_score": 0,
-    "loser_most_recent_team": "CT",
-    "consecutive_t_loses": null,
-    "consecutive_ct_loses": 3,
-    "spawn_points_cfg": 1436229413
+    "loser_most_recent_team": "T",
+    "consecutive_t_loses": 1,
+    "consecutive_ct_loses": null,
+    "spawn_points_cfg": 1068531112
   }
 ]
