@@ -1,17 +1,32 @@
 [
   {
+<<<<<<< Updated upstream
     "match_id": "072b464a9b46171366cd8ae57e76ba5a80cd9163fdacf59bf40b34d5ba04bde5",
     "source_file": "backup_round14.txt",
     "backup_timestamp": "2026-06-21 21:30:01",
     "map_name": "de_island",
     "current_round": 14,
+=======
+    "match_id": "603d5cd845fbfd608cbbc8bb2817314732e5c6736359976d37777e60e44c9eee",
+    "source_file": "backup_round11.txt",
+    "backup_timestamp": "2026-06-21 21:45:17",
+    "map_name": "de_nuke",
+    "current_round": 11,
+>>>>>>> Stashed changes
     "team1_name": "Alliance",
     "team2_name": "Horde",
     "first_half_team1_score": 0,
     "first_half_team2_score": 0,
+<<<<<<< Updated upstream
     "loser_most_recent_team": "CT",
     "consecutive_t_loses": null,
     "consecutive_ct_loses": 5,
     "spawn_points_cfg": -2019336706
+=======
+    "loser_most_recent_team": "T",
+    "consecutive_t_loses": 3,
+    "consecutive_ct_loses": null,
+    "spawn_points_cfg": -49795038
+>>>>>>> Stashed changes
   }
 ]
