@@ -1,17 +1,17 @@
 [
   {
-    "match_id": "80e73e07273296dd92b2fef96ff74c490283a1c1a35f6f7196c2198b9c1f77df",
+    "match_id": "072b464a9b46171366cd8ae57e76ba5a80cd9163fdacf59bf40b34d5ba04bde5",
     "source_file": "backup_round02.txt",
-    "backup_timestamp": "2026-06-21 19:14:25",
-    "map_name": "de_anubis",
+    "backup_timestamp": "2026-06-21 21:15:15",
+    "map_name": "de_island",
     "current_round": 2,
     "team1_name": "Alliance",
     "team2_name": "Horde",
     "first_half_team1_score": 0,
     "first_half_team2_score": 0,
     "loser_most_recent_team": "T",
-    "consecutive_t_loses": 2,
+    "consecutive_t_loses": 1,
     "consecutive_ct_loses": null,
-    "spawn_points_cfg": 25445543
+    "spawn_points_cfg": 1199085835
   }
 ]
