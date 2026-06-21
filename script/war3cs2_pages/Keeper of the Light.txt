@@ -1,0 +1,95 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Keeper of the Light
+|image=[[File:Keeper of the Light.webp]]
+|category=DotA-Magic
+|max=48
+|level=2540
+|access=Beta
+|weapons=
+P2000<br>
+Flashbang
+|restricted=All
+|team=1
+|passive=
+<p>
+Fire Rate: -20%<br>
+Flash: No Teammates
+</p>
+}}
+|skill1={{SkillInfo
+|name=Illuminate
+|info=
+Channel to cast a moving wall of light, damaging enemies
+|trigger=Ability1
+|target=Target_Ally
+|duration=3
+|range=750
+|cooldown=15.0
+|extra=Press again to cast early, reducing damage
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Damage|lvl1=12|lvl2=15|lvl3=18|lvl4=21|lvl5=24|lvl6=27|lvl7=30|lvl8=}}
+}}}}
+|skill2={{SkillInfo
+|name=Blinding Light
+|info=
+<p>
+Gain Flashbang after throwing<br>
+Flash Detonate: Damages, Blinds and Knocksback Enemies close by
+</p>
+|trigger=Special
+|duration=4
+|extra=Blinded enemies have 45% chance to miss attacks
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Tick Rate|unit=sec.|lvl1=30.0|lvl2=28.0|lvl3=26.0|lvl4=24.0|lvl5=22.0|lvl6=20.0|lvl7=18.0|lvl8=16.0}}
+|line2={{LevelUpRow|field=Radius|lvl1=225.0|lvl2=250.0|lvl3=275.0|lvl4=300.0|lvl5=325.0|lvl6=350.0|lvl7=375.0|lvl8=400.0}}
+|line3={{LevelUpRow|field=Damage|lvl1=6|lvl2=8|lvl3=10|lvl4=12|lvl5=14|lvl6=16|lvl7=18|lvl8=20}}
+}}}}
+|skill3={{SkillInfo
+|name=Chakra Magic
+|info=
+Heal and Reduce Cooldowns
+|trigger=Ability2
+|target=Target_Ally
+|range=600
+|cooldown=16.0
+|extra=Applies to self if no target. Heal is based on Max Health
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Heal|lvl1=1.0%|lvl2=2.0%|lvl3=3.0%|lvl4=4.0%|lvl5=5.0%|lvl6=6.0%|lvl7=7.0%|lvl8=8.0%}}
+|line2={{LevelUpRow|field=Cooldown Reduction|unit=sec.|lvl1=2.5|lvl2=3.0|lvl3=3.5|lvl4=4.0|lvl5=4.5|lvl6=5.0|lvl7=5.5|lvl8=6.0}}
+}}}}
+|skill4={{SkillInfo
+|name=Solar Bind
+|info=
+Increase Received Magic Damage, Decrease Speed if enemies moves
+|trigger=Attack
+|duration=6
+|buffs=
+<p>
+Speed: -10% per 100 units traveled
+</p>
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Chance|lvl1=6.0%|lvl2=8.0%|lvl3=10.0%|lvl4=12.0%|lvl5=14.0%|lvl6=16.0%|lvl7=18.0%|lvl8=20.0%}}
+|line2={{LevelUpRow|field=Increase|lvl1=6.0%|lvl2=10.0%|lvl3=14.0%|lvl4=18.0%|lvl5=22.0%|lvl6=26.0%|lvl7=30.0%|lvl8=34.0%}}
+}}}}
+|skill5={{SkillInfo
+|name=Bright Speed
+|info=
+Increase Speed
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Speed|lvl1=2.5%|lvl2=5.0%|lvl3=7.5%|lvl4=10.0%|lvl5=12.5%|lvl6=15.0%|lvl7=17.5%|lvl8=20.0%}}
+}}}}
+|skill6={{SkillInfo
+|name=Spirit Form
+|info=
+Boost 'Bright Speed' and 'Illuminate'
+|trigger=Ultimate
+|target=Self
+|cooldown=30.0
+|extra=Doubles effect on 'Bright Speed'. 'Illuminate' doesn't freeze you while channeling, heals allies and travels further
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl1=4.4|lvl2=5.2|lvl3=6.0|lvl4=6.8|lvl5=7.6|lvl6=8.4|lvl7=9.2|lvl8=10.0}}
+}}}}
+}}
