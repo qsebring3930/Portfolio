@@ -1,17 +1,17 @@
 [
   {
-    "match_id": "730978e5dc68d2f3878e0acfde5a6091ad03c4c7bdf8e5c9af0c828156ed670f",
-    "source_file": "backup_round12.txt",
-    "backup_timestamp": "2026-06-21 15:59:28",
-    "map_name": "de_aztec",
-    "current_round": 12,
+    "match_id": "ff2f2c0bb9a3b964c42349faefea3144bacc34c1ef2adfe1ca376999ace17591",
+    "source_file": "backup_round04.txt",
+    "backup_timestamp": "2026-06-21 16:14:34",
+    "map_name": "de_dust2",
+    "current_round": 4,
     "team1_name": "Alliance",
     "team2_name": "Horde",
     "first_half_team1_score": 0,
     "first_half_team2_score": 0,
     "loser_most_recent_team": "T",
-    "consecutive_t_loses": 8,
+    "consecutive_t_loses": 3,
     "consecutive_ct_loses": null,
-    "spawn_points_cfg": -1545020414
+    "spawn_points_cfg": 289987730
   }
 ]
