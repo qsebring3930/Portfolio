@@ -1,17 +1,17 @@
 [
   {
-    "match_id": "89548b9dc7d285c753bbf95c0b6bd4c22ab24feafa1ce815292d79f6b7f815fc",
-    "source_file": "backup_round09.txt",
-    "backup_timestamp": "2026-06-21 12:15:15",
-    "map_name": "de_icewerk",
-    "current_round": 9,
+    "match_id": "07d4b17bf05a99ba942683b139eaea777d21e85983f3d56e658b0dd3f36e6ca9",
+    "source_file": "backup_round08.txt",
+    "backup_timestamp": "2026-06-21 12:30:12",
+    "map_name": "war3cs2meme",
+    "current_round": 8,
     "team1_name": "Alliance",
     "team2_name": "Horde",
     "first_half_team1_score": 0,
     "first_half_team2_score": 0,
     "loser_most_recent_team": "CT",
     "consecutive_t_loses": null,
-    "consecutive_ct_loses": 1,
-    "spawn_points_cfg": -2036661224
+    "consecutive_ct_loses": 4,
+    "spawn_points_cfg": -466973707
   }
 ]
