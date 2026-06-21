@@ -1,17 +1,17 @@
 [
   {
-    "match_id": "0fba74e82ce3e4911f946e86c2ee29313ac098762c06b0f5cc75f0325410e319",
-    "source_file": "backup_round04.txt",
-    "backup_timestamp": "2026-06-21 07:30:25",
-    "map_name": "de_vertigo",
-    "current_round": 4,
+    "match_id": "cd3cac9b14d99688edc5172b1e269db746be265f0c40c031b3f89a9457067dcc",
+    "source_file": "backup_round00.txt",
+    "backup_timestamp": "2026-06-21 07:44:35",
+    "map_name": "de_inferno_teamliquid",
+    "current_round": 0,
     "team1_name": "Alliance",
     "team2_name": "Horde",
     "first_half_team1_score": 0,
     "first_half_team2_score": 0,
-    "loser_most_recent_team": "CT",
+    "loser_most_recent_team": null,
     "consecutive_t_loses": null,
-    "consecutive_ct_loses": 3,
-    "spawn_points_cfg": -132306328
+    "consecutive_ct_loses": null,
+    "spawn_points_cfg": 1323492400
   }
 ]
