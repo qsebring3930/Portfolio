@@ -1,17 +1,17 @@
 [
   {
-    "match_id": "4e635b229b3be8d96fbb6e049f38324dc9cbb916bbdd0379285893fe2624aa01",
-    "source_file": "backup_round05.txt",
-    "backup_timestamp": "2026-06-21 07:00:24",
-    "map_name": "de_castleball_retexture",
-    "current_round": 5,
+    "match_id": "babda0a234e7c1b1174d613cbafea7cfef49483531a06ccb3f8eaae537a67120",
+    "source_file": "backup_round06.txt",
+    "backup_timestamp": "2026-06-21 07:14:37",
+    "map_name": "de_aztec",
+    "current_round": 6,
     "team1_name": "Alliance",
     "team2_name": "Horde",
     "first_half_team1_score": 0,
     "first_half_team2_score": 0,
     "loser_most_recent_team": "CT",
     "consecutive_t_loses": null,
-    "consecutive_ct_loses": 5,
-    "spawn_points_cfg": -1115970237
+    "consecutive_ct_loses": 1,
+    "spawn_points_cfg": 408513271
   }
 ]
