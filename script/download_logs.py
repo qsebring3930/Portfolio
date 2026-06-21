@@ -358,32 +358,26 @@ def find_existing_match_id_for_backup_group(cursor, backup_group):
     team1_name = first_data.get("team1")
     team2_name = first_data.get("team2")
 
-    # If this group starts at round 0, it is almost certainly a new match.
-    if min_file_round == 0:
-        return None
-
     cursor.execute("""
-        SELECT TOP 1
-            match_id
-        FROM round_backup_matches
-        WHERE map_name = ?
-          AND COALESCE(team1_name, '') = COALESCE(?, '')
-          AND COALESCE(team2_name, '') = COALESCE(?, '')
-          AND current_round < ?
-          AND backup_timestamp <= TRY_CONVERT(DATETIME2, ?)
-          AND DATEDIFF(
-                MINUTE,
-                backup_timestamp,
-                TRY_CONVERT(DATETIME2, ?)
-              ) BETWEEN 0 AND 180
-        ORDER BY backup_timestamp DESC, current_round DESC;
+       SELECT TOP 1
+           match_id
+       FROM round_backup_matches
+       WHERE map_name = ?
+         AND COALESCE(team1_name, '') = COALESCE(?, '')
+         AND COALESCE(team2_name, '') = COALESCE(?, '')
+         AND backup_timestamp <= TRY_CONVERT(DATETIME2, ?)
+         AND DATEDIFF(
+               MINUTE,
+               backup_timestamp,
+               TRY_CONVERT(DATETIME2, ?)
+             ) BETWEEN 0 AND 180
+       ORDER BY backup_timestamp DESC, current_round DESC;
     """, (
-        map_name,
-        team1_name,
-        team2_name,
-        min_file_round,
-        min_timestamp,
-        min_timestamp,
+       map_name,
+       team1_name,
+       team2_name,
+       min_timestamp,
+       min_timestamp,
     ))
 
     row = cursor.fetchone()
