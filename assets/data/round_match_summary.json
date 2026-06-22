@@ -1,17 +1,17 @@
 [
   {
-    "match_id": "bdc68833d6acb03c48dfc16400d173cd9db27ee328a7225ff3924ae51b03a069",
-    "source_file": "backup_round13.txt",
-    "backup_timestamp": "2026-06-22 22:00:33",
-    "map_name": "de_officexmas_lethal2013",
-    "current_round": 13,
+    "match_id": "e8b6ed06bf036ff2ee8d0b90ea49e4f91c35191e6b349bbd4658228ae48ba02b",
+    "source_file": "backup_round09.txt",
+    "backup_timestamp": "2026-06-22 22:15:36",
+    "map_name": "de_dust2_d",
+    "current_round": 9,
     "team1_name": "Alliance",
     "team2_name": "Horde",
     "first_half_team1_score": 0,
     "first_half_team2_score": 0,
     "loser_most_recent_team": "T",
-    "consecutive_t_loses": 8,
-    "consecutive_ct_loses": null,
-    "spawn_points_cfg": 1871871303
+    "consecutive_t_loses": 3,
+    "consecutive_ct_loses": 1,
+    "spawn_points_cfg": -535075032
   }
 ]
