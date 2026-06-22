@@ -1,17 +1,17 @@
 [
   {
-    "match_id": "f9d8f3359e6a717866e9de4cafa5bcd0a21e31aaec0f4f0da22bd8cfea0d812b",
+    "match_id": "fefbc4a8827ab815819c14a0980eca3d23336a102670d5db3824750422447d5a",
     "source_file": "backup_round04.txt",
-    "backup_timestamp": "2026-06-22 10:14:57",
-    "map_name": "de_buzzkill_retexture",
+    "backup_timestamp": "2026-06-22 10:30:27",
+    "map_name": "de_dogtown",
     "current_round": 4,
     "team1_name": "Alliance",
     "team2_name": "Horde",
     "first_half_team1_score": 0,
     "first_half_team2_score": 0,
-    "loser_most_recent_team": "T",
-    "consecutive_t_loses": 1,
-    "consecutive_ct_loses": 1,
-    "spawn_points_cfg": 1542427646
+    "loser_most_recent_team": "CT",
+    "consecutive_t_loses": null,
+    "consecutive_ct_loses": 4,
+    "spawn_points_cfg": -1108874450
   }
 ]
