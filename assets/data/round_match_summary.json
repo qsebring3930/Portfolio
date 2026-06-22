@@ -1,17 +1,17 @@
 [
   {
-    "match_id": "a5384a5e5533c35e0d03188d0c818d9a940660324c330897e76705dd5ac9a5ab",
-    "source_file": "backup_round15.txt",
-    "backup_timestamp": "2026-06-22 16:26:17",
-    "map_name": "de_dust2",
-    "current_round": 15,
+    "match_id": "d3d63ae94e9e31800a5150089c3c4fa2ec1ff2e4aba2636051d75b85e905bf9f",
+    "source_file": "backup_round00.txt",
+    "backup_timestamp": "2026-06-22 16:44:12",
+    "map_name": "de_westwood",
+    "current_round": 0,
     "team1_name": "Alliance",
     "team2_name": "Horde",
     "first_half_team1_score": 0,
     "first_half_team2_score": 0,
-    "loser_most_recent_team": "CT",
+    "loser_most_recent_team": null,
     "consecutive_t_loses": null,
-    "consecutive_ct_loses": 1,
-    "spawn_points_cfg": -1965783412
+    "consecutive_ct_loses": null,
+    "spawn_points_cfg": 920401643
   }
 ]
