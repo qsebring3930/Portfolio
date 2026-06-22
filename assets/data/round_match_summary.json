@@ -1,17 +1,17 @@
 [
   {
-    "match_id": "2392c87b6cc371a4e2bbf87fdf5db45cd51378f0b6addf0628f6bb3f3d79922f",
+    "match_id": "8aa13d36ea775c565f505824b600c0f4bc00b8b400acce0a6d734c16729100ee",
     "source_file": "backup_round07.txt",
-    "backup_timestamp": "2026-06-22 12:59:55",
-    "map_name": "de_island",
+    "backup_timestamp": "2026-06-22 13:30:42",
+    "map_name": "de_castleball_retexture",
     "current_round": 7,
     "team1_name": "Alliance",
     "team2_name": "Horde",
     "first_half_team1_score": 0,
     "first_half_team2_score": 0,
-    "loser_most_recent_team": "CT",
-    "consecutive_t_loses": null,
-    "consecutive_ct_loses": 2,
-    "spawn_points_cfg": -389471589
+    "loser_most_recent_team": "T",
+    "consecutive_t_loses": 2,
+    "consecutive_ct_loses": null,
+    "spawn_points_cfg": 1547100756
   }
 ]
