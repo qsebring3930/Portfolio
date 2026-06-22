@@ -1,17 +1,17 @@
 [
   {
-    "match_id": "58b9496f086b5fc3123c8d29bb76de1f8406bd2bdaafd629f4828bb2d16a92e7",
-    "source_file": "backup_round01.txt",
-    "backup_timestamp": "2026-06-22 11:44:58",
-    "map_name": "420_shotguns",
-    "current_round": 1,
+    "match_id": "473121825eca9ac10379910b2fb7fc5e3de81bad725cbd3536cb21c599fb26b1",
+    "source_file": "backup_round02.txt",
+    "backup_timestamp": "2026-06-22 12:00:30",
+    "map_name": "de_vertigo",
+    "current_round": 2,
     "team1_name": "Alliance",
     "team2_name": "Horde",
     "first_half_team1_score": 0,
     "first_half_team2_score": 0,
     "loser_most_recent_team": "T",
-    "consecutive_t_loses": 1,
+    "consecutive_t_loses": 2,
     "consecutive_ct_loses": null,
-    "spawn_points_cfg": -1683654748
+    "spawn_points_cfg": 215246068
   }
 ]
