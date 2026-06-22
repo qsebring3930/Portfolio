@@ -1,10 +1,10 @@
 [
   {
     "match_id": "41264f39dc5cfe7b1cf91141a5c30da84522ed5dddd50376274a581d5359db80",
-    "source_file": "backup_round02.txt",
-    "backup_timestamp": "2026-06-22 07:14:52",
+    "source_file": "backup_round12.txt",
+    "backup_timestamp": "2026-06-22 07:30:40",
     "map_name": "de_havana",
-    "current_round": 2,
+    "current_round": 12,
     "team1_name": "Alliance",
     "team2_name": "Horde",
     "first_half_team1_score": 0,
@@ -12,6 +12,6 @@
     "loser_most_recent_team": "CT",
     "consecutive_t_loses": null,
     "consecutive_ct_loses": 2,
-    "spawn_points_cfg": -702012907
+    "spawn_points_cfg": -1940499027
   }
 ]
