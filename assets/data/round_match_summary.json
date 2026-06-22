@@ -1,17 +1,17 @@
 [
   {
-    "match_id": "4f22e18197b093cc7c4eb82e8f79829c09ef11a8ef8b682ef04109a2b9c1e7f1",
-    "source_file": "backup_round13.txt",
-    "backup_timestamp": "2026-06-22 11:13:50",
-    "map_name": "de_overpass",
-    "current_round": 13,
+    "match_id": "58b9496f086b5fc3123c8d29bb76de1f8406bd2bdaafd629f4828bb2d16a92e7",
+    "source_file": "backup_round01.txt",
+    "backup_timestamp": "2026-06-22 11:44:58",
+    "map_name": "420_shotguns",
+    "current_round": 1,
     "team1_name": "Alliance",
     "team2_name": "Horde",
     "first_half_team1_score": 0,
     "first_half_team2_score": 0,
     "loser_most_recent_team": "T",
-    "consecutive_t_loses": 3,
+    "consecutive_t_loses": 1,
     "consecutive_ct_loses": null,
-    "spawn_points_cfg": 1286658182
+    "spawn_points_cfg": -1683654748
   }
 ]
