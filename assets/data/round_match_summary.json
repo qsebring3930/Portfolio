@@ -1,17 +1,17 @@
 [
   {
-    "match_id": "e1d2e12c400f5472c1dcca596e25c67085968733f1dc554cb3372903928a1511",
-    "source_file": "backup_round15.txt",
-    "backup_timestamp": "2026-06-22 08:29:55",
-    "map_name": "de_expo",
-    "current_round": 15,
+    "match_id": "54484eae93642e9cc0225803df93c0f70c2360f544d7bcb18ff51f7130038008",
+    "source_file": "backup_round12.txt",
+    "backup_timestamp": "2026-06-22 08:45:33",
+    "map_name": "de_outlaws_go_d",
+    "current_round": 12,
     "team1_name": "Alliance",
     "team2_name": "Horde",
     "first_half_team1_score": 0,
     "first_half_team2_score": 0,
     "loser_most_recent_team": "T",
-    "consecutive_t_loses": 3,
-    "consecutive_ct_loses": null,
-    "spawn_points_cfg": 1790415109
+    "consecutive_t_loses": 1,
+    "consecutive_ct_loses": 3,
+    "spawn_points_cfg": 157049142
   }
 ]
