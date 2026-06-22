@@ -1,17 +1,17 @@
 [
   {
-    "match_id": "d53c3568520846f9469142553b1cac491a5f5251866c6bff741bca63b73d9dcc",
-    "source_file": "backup_round03.txt",
-    "backup_timestamp": "2026-06-22 08:00:25",
-    "map_name": "graffiti",
-    "current_round": 3,
+    "match_id": "e1d2e12c400f5472c1dcca596e25c67085968733f1dc554cb3372903928a1511",
+    "source_file": "backup_round02.txt",
+    "backup_timestamp": "2026-06-22 08:16:11",
+    "map_name": "de_expo",
+    "current_round": 2,
     "team1_name": "Alliance",
     "team2_name": "Horde",
     "first_half_team1_score": 0,
     "first_half_team2_score": 0,
     "loser_most_recent_team": "CT",
     "consecutive_t_loses": null,
-    "consecutive_ct_loses": 1,
-    "spawn_points_cfg": -1387482416
+    "consecutive_ct_loses": 2,
+    "spawn_points_cfg": -1487989246
   }
 ]
