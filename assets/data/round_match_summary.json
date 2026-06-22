@@ -1,17 +1,17 @@
 [
   {
-    "match_id": "b6c9654ef614ece3bcbcde478d66944594100824123096e7ce2fe50742d97a0c",
-    "source_file": "backup_round08.txt",
-    "backup_timestamp": "2026-06-22 04:30:38",
-    "map_name": "de_nuke",
-    "current_round": 8,
+    "match_id": "b230910d8ca92d7ca9290e10a6641cde9e79bd775b4da5b5973028ca39dd30e0",
+    "source_file": "backup_round03.txt",
+    "backup_timestamp": "2026-06-22 04:44:28",
+    "map_name": "de_anubis",
+    "current_round": 3,
     "team1_name": "Alliance",
     "team2_name": "Horde",
     "first_half_team1_score": 0,
     "first_half_team2_score": 0,
-    "loser_most_recent_team": "CT",
-    "consecutive_t_loses": null,
-    "consecutive_ct_loses": 1,
-    "spawn_points_cfg": -506939093
+    "loser_most_recent_team": "T",
+    "consecutive_t_loses": 1,
+    "consecutive_ct_loses": null,
+    "spawn_points_cfg": 1528293481
   }
 ]
