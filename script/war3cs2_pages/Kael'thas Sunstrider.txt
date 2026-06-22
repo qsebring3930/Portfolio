@@ -1,0 +1,77 @@
+{{RaceDetail
+|type=Champions
+|info={{RaceInfo
+|title=Kael'thas Sunstrider
+|image=[[File:Kael'thas Sunstrider.webp]]
+|category=Champions
+|max=45
+|unlocks=
+<p>
+
+</p>
+|team=1
+}}
+|skill1={{SkillInfo
+|name=Mind Control
+|info=
+Turn Enemy into Minion
+|trigger=Attack
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Chance|lvl1=1.0%|lvl2=2.0%|lvl3=3.0%|lvl4=4.0%|lvl5=5.0%|lvl6=6.0%|lvl7=7.0%|lvl8=8.0%}}
+}}}}
+|skill2={{SkillInfo
+|name=Shock Barrier
+|info=
+Evade and Return Weapon Damage
+|trigger=Victim
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Chance|lvl1=6.0%|lvl2=8.0%|lvl3=10.0%|lvl4=12.0%|lvl5=14.0%|lvl6=16.0%|lvl7=18.0%|lvl8=20.0%}}
+|line2={{LevelUpRow|field=Return|lvl1=12.0%|lvl2=15.0%|lvl3=18.0%|lvl4=21.0%|lvl5=24.0%|lvl6=27.0%|lvl7=30.0%|lvl8=33.0%}}
+}}}}
+|skill3={{SkillInfo
+|name=Flame Strike
+|info=
+Burn and DoT
+|trigger=Attack
+|damage=2
+|tickrate=0.5
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Chance|lvl1=12.0%|lvl2=15.0%|lvl3=18.0%|lvl4=21.0%|lvl5=24.0%|lvl6=27.0%|lvl7=30.0%|lvl8=33.0%}}
+|line2={{LevelUpRow|field=Duration|unit=sec.|lvl1=0.5|lvl2=1.0|lvl3=1.5|lvl4=2.0|lvl5=2.5|lvl6=3.0|lvl7=3.5|lvl8=4.0}}
+}}}}
+|skill4={{SkillInfo
+|name=Nether Beam
+|info=
+Damage enemies around your target
+|trigger=Attack
+|damage=5
+|radius=300
+|extra=Damage is based on Enemies hit
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Chance|lvl1=4.0%|lvl2=8.0%|lvl3=12.0%|lvl4=16.0%|lvl5=20.0%|lvl6=24.0%|lvl7=28.0%|lvl8=32.0%}}
+}}}}
+|skill5={{SkillInfo
+|name=Gravity Lapse
+|info=
+<p>
+Passive: Decrease Gravity<br>
+Attack: Mess with Gravity
+</p>
+|trigger=Special
+|duration=4
+|tickrate=2
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Gravity Self|lvl1=5.0%|lvl2=10.0%|lvl3=15.0%|lvl4=20.0%|lvl5=25.0%|lvl6=30.0%|lvl7=35.0%|lvl8=40.0%}}
+|line2={{LevelUpRow|field=Chance|lvl1=12.0%|lvl2=15.0%|lvl3=18.0%|lvl4=21.0%|lvl5=24.0%|lvl6=27.0%|lvl7=30.0%|lvl8=33.0%}}
+}}}}
+|skill6={{SkillInfo
+|name=Summon Phoenix
+|info=
+Summon ally
+|trigger=Ultimate
+|target=Random_Ally
+|extra=Respawn is in the order of death
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Cooldown|unit=sec.|lvl1=51.0|lvl2=48.0|lvl3=45.0|lvl4=42.0|lvl5=39.0}}
+}}}}
+}}
