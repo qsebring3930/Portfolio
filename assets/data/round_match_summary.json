@@ -1,17 +1,17 @@
 [
   {
     "match_id": "473121825eca9ac10379910b2fb7fc5e3de81bad725cbd3536cb21c599fb26b1",
-    "source_file": "backup_round02.txt",
-    "backup_timestamp": "2026-06-22 12:00:30",
+    "source_file": "backup_round15.txt",
+    "backup_timestamp": "2026-06-22 12:15:22",
     "map_name": "de_vertigo",
-    "current_round": 2,
+    "current_round": 15,
     "team1_name": "Alliance",
     "team2_name": "Horde",
     "first_half_team1_score": 0,
     "first_half_team2_score": 0,
     "loser_most_recent_team": "T",
-    "consecutive_t_loses": 2,
+    "consecutive_t_loses": 3,
     "consecutive_ct_loses": null,
-    "spawn_points_cfg": 215246068
+    "spawn_points_cfg": 1443546150
   }
 ]
