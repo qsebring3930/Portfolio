@@ -1,12 +1,22 @@
 ---
-layout: base
-title: War3CS2 Stats
+layout: post
+title: "War3CS2 Stats"
 ---
 
 <div class="home">
-  <h1 class="page-heading">{{ page.title }}</h1>
 
-  <div class="war3-stats">
+  <div id="statsLoadingOverlay" class="stats-loading-overlay">
+    <div class="stats-loading-box">
+      <img
+        src="/assets/images/Site-logo.png"
+        alt="Loading stats"
+        class="stats-loading-logo"
+      />
+      <div class="stats-loading-text">Loading stats...</div>
+    </div>
+  </div>
+
+  <div class="war3-stats stats-content-hidden">
 
     <div class="stats-tabs">
       <button class="stats-tab active" data-tab="maps">Map Stats</button>
@@ -200,12 +210,6 @@ title: War3CS2 Stats
     </section>
 
     <section class="stats-panel" data-panel="weapon-kills">
-      <label for="weaponKillsSearch">Player:</label>
-      <div class="table-search-wrap">
-        <select id="weaponKillsSearch"></select>
-        <button type="button" class="table-search-button" data-target="weaponKillsSearch">▼</button>
-      </div>
-
       <div class="stats-table-wrap">
         <table id="weaponKillsTable"></table>
       </div>
@@ -242,6 +246,62 @@ title: War3CS2 Stats
 
 
 <style>
+.stats-loading-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 10, 10, 0.78);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  pointer-events: auto;
+}
+
+.stats-loading-overlay.hidden {
+  display: none;
+  pointer-events: none;
+}
+
+.stats-content-hidden {
+  visibility: hidden;
+}
+
+.stats-loading-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  text-align: center;
+}
+
+.stats-loading-logo {
+  width: 88px;
+  height: 88px;
+  object-fit: contain;
+  animation: war3cs2-coin-spin 1.2s linear infinite;
+  transform-style: preserve-3d;
+  backface-visibility: visible;
+}
+
+.stats-loading-text {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+  letter-spacing: 0.4px;
+}
+
+@keyframes war3cs2-coin-spin {
+  0% {
+    transform: perspective(700px) rotateY(0deg);
+  }
+  50% {
+    transform: perspective(700px) rotateY(90deg) scaleX(0.15);
+  }
+  100% {
+    transform: perspective(700px) rotateY(360deg);
+  }
+}
+
 .stats-tabs {
   display: flex;
   flex-wrap: wrap;
@@ -430,6 +490,37 @@ let weaponKills = [];
 let moneySummary = [];
 let defuseKits = [];
 
+function showStatsLoader(message = "Loading stats...") {
+  const overlay = document.getElementById("statsLoadingOverlay");
+  const text = overlay?.querySelector(".stats-loading-text");
+  const stats = document.querySelector(".war3-stats");
+
+  if (text) {
+    text.textContent = message;
+  }
+
+  stats?.classList.add("stats-content-hidden");
+
+  if (overlay) {
+    overlay.classList.remove("hidden");
+    overlay.style.display = "flex";
+    overlay.style.pointerEvents = "auto";
+  }
+}
+
+function hideStatsLoader() {
+  const overlay = document.getElementById("statsLoadingOverlay");
+  const stats = document.querySelector(".war3-stats");
+
+  stats?.classList.remove("stats-content-hidden");
+
+  if (overlay) {
+    overlay.classList.add("hidden");
+    overlay.style.display = "none";
+    overlay.style.pointerEvents = "none";
+  }
+}
+
 function escapeHTML(value) {
   return String(value ?? "")
     .replaceAll("&", "&amp;")
@@ -449,6 +540,76 @@ function compactName(value) {
     .replace(/[^a-z0-9]+/g, "");
 }
 
+function compactRaceName(value) {
+  return compactName(value)
+    .replaceAll("0", "o")
+    .replaceAll("1", "l")
+    .replaceAll("3", "e")
+    .replaceAll("4", "a")
+    .replaceAll("5", "s")
+    .replaceAll("7", "t");
+}
+
+function levenshteinDistance(a, b, maxDistance = 99) {
+  if (Math.abs(a.length - b.length) > maxDistance) {
+    return maxDistance + 1;
+  }
+
+  const previous = Array(b.length + 1)
+    .fill(0)
+    .map((_, index) => index);
+
+  for (let i = 1; i <= a.length; i++) {
+    let lastDiagonal = previous[0];
+    previous[0] = i;
+
+    let rowBest = previous[0];
+
+    for (let j = 1; j <= b.length; j++) {
+      const oldDiagonal = previous[j];
+
+      const cost = a[i - 1] === b[j - 1] ? 0 : 1;
+
+      previous[j] = Math.min(
+        previous[j] + 1,
+        previous[j - 1] + 1,
+        lastDiagonal + cost
+      );
+
+      lastDiagonal = oldDiagonal;
+      rowBest = Math.min(rowBest, previous[j]);
+    }
+
+    if (rowBest > maxDistance) {
+      return maxDistance + 1;
+    }
+  }
+
+  return previous[b.length];
+}
+
+function getRaceSuffixVariants() {
+  return raceColumns
+    .flatMap(race => [
+      prettyName(race),
+      race,
+      race.replaceAll("_", ""),
+      prettyName(race).replaceAll(" ", "")
+    ])
+    .map(race => ({
+      display: race,
+      compact: compactRaceName(race)
+    }))
+    .filter(race => race.compact.length >= 4)
+    .sort((a, b) => b.compact.length - a.compact.length);
+}
+
+function getAllowedRaceSuffixErrors(raceCompact) {
+  if (raceCompact.length >= 12) return 2;
+  if (raceCompact.length >= 7) return 1;
+  return 0;
+}
+
 function cleanRoundPlayerName(name) {
   let clean = String(name ?? "").trim();
 
@@ -458,30 +619,68 @@ function cleanRoundPlayerName(name) {
   // ZickziiEnigmaLvl21 -> ZickziiEnigma
   clean = clean.replace(/Lvl\d+$/i, "");
 
-  // Remove trailing race name using raceColumns:
-  // ZickziiEnigma -> Zickzii
-  // GraveyardKeeperHydralisk -> GraveyardKeeper
-  const raceNames = raceColumns
-    .flatMap(race => [
-      prettyName(race),
-      race,
-      race.replaceAll("_", ""),
-      prettyName(race).replaceAll(" ", "")
-    ])
-    .map(race => ({
-      display: race,
-      compact: compactName(race)
-    }))
-    .filter(race => race.compact.length > 0)
-    .sort((a, b) => b.compact.length - a.compact.length);
+  const raceNames = getRaceSuffixVariants();
+  const cleanCompact = compactRaceName(clean);
 
-  const cleanCompact = compactName(clean);
-
+  // 1. Exact suffix pass.
   for (const race of raceNames) {
     if (cleanCompact.endsWith(race.compact)) {
       const cutLength = race.display.replaceAll(" ", "").length;
       return clean.slice(0, Math.max(0, clean.length - cutLength)).trim() || clean;
     }
+  }
+
+  // 2. Fuzzy Saboteur suffix pass.
+  // Allows the race suffix to have 1-2 wrong/missing/extra characters.
+  let bestMatch = null;
+
+  for (const race of raceNames) {
+    const allowedErrors = getAllowedRaceSuffixErrors(race.compact);
+
+    if (allowedErrors <= 0) {
+      continue;
+    }
+
+    for (
+      let candidateLength = race.compact.length - allowedErrors;
+      candidateLength <= race.compact.length + allowedErrors;
+      candidateLength++
+    ) {
+      if (candidateLength <= 0 || candidateLength > cleanCompact.length) {
+        continue;
+      }
+
+      const candidateSuffix = cleanCompact.slice(-candidateLength);
+      const distance = levenshteinDistance(
+        candidateSuffix,
+        race.compact,
+        allowedErrors
+      );
+
+      if (distance > allowedErrors) {
+        continue;
+      }
+
+      const score = distance / race.compact.length;
+
+      if (
+        !bestMatch ||
+        distance < bestMatch.distance ||
+        (distance === bestMatch.distance && race.compact.length > bestMatch.race.compact.length)
+      ) {
+        bestMatch = {
+          race,
+          distance,
+          candidateLength,
+          score
+        };
+      }
+    }
+  }
+
+  if (bestMatch) {
+    const cutLength = bestMatch.candidateLength;
+    return clean.slice(0, Math.max(0, clean.length - cutLength)).trim() || clean;
   }
 
   return clean;
@@ -633,6 +832,219 @@ function groupRowsByCleanPlayer(rows, numericFields) {
   });
 
   return Object.values(grouped);
+}
+
+function toNumber(value) {
+  const number = Number(value);
+  return Number.isFinite(number) ? number : 0;
+}
+
+function normalizeRoundName(row) {
+  return cleanRoundPlayerName(
+    row.player_name ||
+    row.name ||
+    row.player ||
+    ""
+  );
+}
+
+function normalizeScoreboardRows(rows) {
+  if (!Array.isArray(rows)) return [];
+
+  return rows.map(row => ({
+    ...row,
+    raw_player_name: row.raw_player_name || row.player_name || "",
+    player_name: normalizeRoundName(row),
+    steam_id: String(row.steam_id ?? row.steamId ?? row.steam ?? ""),
+
+    kills: toNumber(row.kills ?? row.kill_count),
+    deaths: toNumber(row.deaths),
+    assists: toNumber(row.assists),
+    mvps: toNumber(row.mvps),
+    score: toNumber(row.score),
+    damage: toNumber(row.damage),
+    rounds_played: toNumber(row.rounds_played),
+
+    adr: toNumber(row.adr),
+    kd_ratio: toNumber(row.kd_ratio),
+    kad_ratio: toNumber(row.kad_ratio)
+  }));
+}
+
+function normalizeWeaponRows(rows) {
+  if (!Array.isArray(rows)) return [];
+
+  return rows.map(row => ({
+    ...row,
+    raw_player_name: row.raw_player_name || row.player_name || "",
+    player_name: normalizeRoundName(row),
+    steam_id: String(row.steam_id ?? row.steamId ?? row.steam ?? ""),
+
+    weapon_category:
+      row.weapon_category ||
+      row.weapon ||
+      row.weapon_name ||
+      row.item_name ||
+      "",
+
+    kills: toNumber(row.kills ?? row.kill_count)
+  }));
+}
+
+function normalizeMoneyRows(rows) {
+  if (!Array.isArray(rows)) return [];
+
+  return rows.map(row => ({
+    ...row,
+    raw_player_name: row.raw_player_name || row.player_name || "",
+    player_name: normalizeRoundName(row),
+    steam_id: String(row.steam_id ?? row.steamId ?? row.steam ?? ""),
+
+    money_spent: toNumber(row.money_spent),
+    net_betting: toNumber(row.net_betting),
+    betting_won: toNumber(row.betting_won),
+    betting_lost: toNumber(row.betting_lost)
+  }));
+}
+
+function normalizeDefuseRows(rows) {
+  if (!Array.isArray(rows)) return [];
+
+  return rows.map(row => ({
+    ...row,
+    raw_player_name: row.raw_player_name || row.player_name || "",
+    player_name: normalizeRoundName(row),
+    steam_id: String(row.steam_id ?? row.steamId ?? row.steam ?? ""),
+
+    defuse_kits_bought: toNumber(row.defuse_kits_bought),
+    rounds_played: toNumber(row.rounds_played ?? row.defuse_rounds_played),
+    defuse_purchase_rate: toNumber(row.defuse_purchase_rate)
+  }));
+}
+
+function groupRowsByPlayerIdentity(rows, numericFields) {
+  const grouped = {};
+
+  rows.forEach(row => {
+    const playerName = cleanRoundPlayerName(row.player_name);
+    const steamId = String(row.steam_id ?? "").trim();
+
+    if (!playerName) return;
+
+    const key = steamId || playerName;
+
+    if (!grouped[key]) {
+      grouped[key] = {
+        ...row,
+        player_name: playerName,
+        steam_id: steamId
+      };
+
+      numericFields.forEach(field => {
+        grouped[key][field] = 0;
+      });
+    }
+
+    numericFields.forEach(field => {
+      grouped[key][field] += toNumber(row[field]);
+    });
+  });
+
+  return Object.values(grouped);
+}
+
+let playerIdentityBySteamId = {};
+let playerAliasToCanonical = {};
+
+function nameKey(value) {
+  return compactName(cleanRoundPlayerName(value));
+}
+
+function chooseBetterDisplayName(a, b) {
+  const cleanA = cleanRoundPlayerName(a);
+  const cleanB = cleanRoundPlayerName(b);
+
+  if (!cleanA) return cleanB;
+  if (!cleanB) return cleanA;
+
+  // Prefer the name with fewer War3 leftovers / shorter junk.
+  // But don't prefer tiny aliases like "hKj" over readable names unless exact.
+  if (cleanB.length >= 3 && cleanB.length < cleanA.length) return cleanB;
+
+  return cleanA;
+}
+
+function collectIdentity(row) {
+  const steamId = String(row.steam_id ?? row.steamId ?? row.steam ?? "").trim();
+
+  const rawNames = [
+    row.raw_player_name,
+    row.player_name,
+    row.name,
+    row.player
+  ].filter(Boolean);
+
+  if (!steamId || rawNames.length === 0) return;
+
+  if (!playerIdentityBySteamId[steamId]) {
+    playerIdentityBySteamId[steamId] = {
+      steam_id: steamId,
+      canonical_name: cleanRoundPlayerName(rawNames[0]),
+      aliases: new Set()
+    };
+  }
+
+  const identity = playerIdentityBySteamId[steamId];
+
+  rawNames.forEach(name => {
+    const cleaned = cleanRoundPlayerName(name);
+    const key = nameKey(name);
+
+    if (!cleaned || !key) return;
+
+    identity.aliases.add(cleaned);
+    identity.aliases.add(String(name).trim());
+
+    identity.canonical_name = chooseBetterDisplayName(
+      identity.canonical_name,
+      cleaned
+    );
+  });
+}
+
+function buildPlayerIdentityMap() {
+  playerIdentityBySteamId = {};
+  playerAliasToCanonical = {};
+
+  [
+    ...roundScoreboard,
+    ...weaponKills,
+    ...moneySummary,
+    ...defuseKits
+  ].forEach(collectIdentity);
+
+  Object.values(playerIdentityBySteamId).forEach(identity => {
+    identity.aliases.forEach(alias => {
+      const key = nameKey(alias);
+
+      if (!key) return;
+
+      playerAliasToCanonical[key] = identity.canonical_name;
+    });
+
+    const canonicalKey = nameKey(identity.canonical_name);
+
+    if (canonicalKey) {
+      playerAliasToCanonical[canonicalKey] = identity.canonical_name;
+    }
+  });
+}
+
+function canonicalPlayerName(name) {
+  const cleaned = cleanRoundPlayerName(name);
+  const key = nameKey(cleaned);
+
+  return playerAliasToCanonical[key] || cleaned;
 }
 
 function renderTable(tableId, columns, rows) {
@@ -913,7 +1325,7 @@ function renderPopularRaces() {
 function renderTopChatters() {
   const rows = topChatters
     .map(row => ({
-      player_name: row.player_name,
+      player_name: canonicalPlayerName(row.player_name),
       message_count: Number(row.message_count || 0)
     }))
     .sort((a, b) => b.message_count - a.message_count);
@@ -929,7 +1341,7 @@ function renderTopChatters() {
 function renderTopCurseUsers() {
   const rows = topCurseUsers
     .map(row => ({
-      player_name: row.player_name,
+      player_name: canonicalPlayerName(row.player_name),
       curse_count: Number(row.curse_count || 0),
       curse_messages: Number(row.curse_messages || 0),
       matched_words_display: formatMatchedWords(row.matched_words)
@@ -949,7 +1361,7 @@ function renderTopCurseUsers() {
 function renderMostSlainPlayers() {
   const rows = mostSlainPlayers
     .map(row => ({
-      player_name: row.player_name,
+      player_name: canonicalPlayerName(row.player_name),
       slain_count: Number(row.slain_count || 0),
       aliases_display: formatAliases(row.aliases)
     }))
@@ -967,7 +1379,7 @@ function renderMostSlainPlayers() {
 function renderMostSlappedPlayers() {
   const rows = mostSlappedPlayers
     .map(row => ({
-      player_name: row.player_name,
+      player_name: canonicalPlayerName(row.player_name),
       slapped_count: Number(row.slapped_count || 0),
       total_slap_damage: Number(row.total_slap_damage || 0),
       aliases_display: formatAliases(row.aliases)
@@ -1041,7 +1453,7 @@ function renderRtvCounter() {
 }
 
 function getGroupedPlayerStats() {
-  return groupRowsByCleanPlayer(roundScoreboard, [
+  return groupRowsByPlayerIdentity(roundScoreboard, [
     "kills",
     "deaths",
     "assists",
@@ -1051,15 +1463,17 @@ function getGroupedPlayerStats() {
     "rounds_played"
   ]).map(row => ({
     ...row,
-    adr: Number(row.rounds_played || 0) > 0
-      ? Number((Number(row.damage || 0) / Number(row.rounds_played || 0)).toFixed(2))
-      : Number(row.adr || 0),
-    kd_ratio: Number(row.deaths || 0) > 0
-      ? Number((Number(row.kills || 0) / Number(row.deaths || 0)).toFixed(2))
-      : Number(row.kills || 0),
-    kad_ratio: Number(row.deaths || 0) > 0
-      ? Number(((Number(row.kills || 0) + Number(row.assists || 0)) / Number(row.deaths || 0)).toFixed(2))
-      : Number(row.kills || 0) + Number(row.assists || 0),
+    adr: toNumber(row.rounds_played) > 0
+      ? Number((toNumber(row.damage) / toNumber(row.rounds_played)).toFixed(2))
+      : toNumber(row.adr),
+
+    kd_ratio: toNumber(row.deaths) > 0
+      ? Number((toNumber(row.kills) / toNumber(row.deaths)).toFixed(2))
+      : toNumber(row.kills),
+
+    kad_ratio: toNumber(row.deaths) > 0
+      ? Number(((toNumber(row.kills) + toNumber(row.assists)) / toNumber(row.deaths)).toFixed(2))
+      : toNumber(row.kills) + toNumber(row.assists)
   }));
 }
 
@@ -1094,42 +1508,64 @@ function renderPerformanceStats() {
   ], filteredRows);
 }
 
-function renderWeaponKills() {
-  const grouped = {};
+function getTopWeaponCategoryRows() {
+  const groupedByPlayerAndCategory = {};
 
   weaponKills.forEach(row => {
+    const weaponCategory = row.weapon_category || "";
     const playerName = cleanRoundPlayerName(row.player_name);
-    const weaponCategory = row.weapon_category || row.weapon || row.weapon_name || row.item_name || "";
+    const steamId = String(row.steam_id ?? "").trim();
+    const kills = toNumber(row.kills);
 
-    if (!playerName || !weaponCategory) return;
+    if (!weaponCategory || !playerName || kills <= 0) return;
 
-    const key = `${playerName}|||${weaponCategory}`;
+    const playerKey = steamId || playerName;
+    const key = `${weaponCategory}|||${playerKey}`;
 
-    if (!grouped[key]) {
-      grouped[key] = {
+    if (!groupedByPlayerAndCategory[key]) {
+      groupedByPlayerAndCategory[key] = {
         weapon_category: weaponCategory,
         player_name: playerName,
+        steam_id: steamId,
         kills: 0
       };
     }
 
-    grouped[key].kills += Number(row.kills || row.kill_count || 0);
+    groupedByPlayerAndCategory[key].kills += kills;
+
+    // Prefer the cleaner/longer display name if the same Steam ID shows up with variants.
+    if (playerName.length > groupedByPlayerAndCategory[key].player_name.length) {
+      groupedByPlayerAndCategory[key].player_name = playerName;
+    }
   });
 
-  const rows = Object.values(grouped)
-    .sort((a, b) => b.kills - a.kills);
+  const bestByCategory = {};
 
-  const filteredRows = applyTableFilter("weaponKillsSearch", rows, "player_name");
+  Object.values(groupedByPlayerAndCategory).forEach(row => {
+    if (
+      !bestByCategory[row.weapon_category] ||
+      row.kills > bestByCategory[row.weapon_category].kills
+    ) {
+      bestByCategory[row.weapon_category] = row;
+    }
+  });
+
+  return Object.values(bestByCategory)
+    .sort((a, b) => b.kills - a.kills);
+}
+
+function renderWeaponKills() {
+  const rows = getTopWeaponCategoryRows();
 
   renderTable("weaponKillsTable", [
     { key: "weapon_category", label: "Weapon Category" },
     { key: "player_name", label: "Player" },
     { key: "kills", label: "Kills" }
-  ], filteredRows);
+  ], rows);
 }
 
 function renderMoneySummary() {
-  const rows = groupRowsByCleanPlayer(moneySummary, [
+  const rows = groupRowsByPlayerIdentity(moneySummary, [
     "money_spent",
     "net_betting",
     "betting_won",
@@ -1148,14 +1584,14 @@ function renderMoneySummary() {
 }
 
 function renderDefuseKits() {
-  const rows = groupRowsByCleanPlayer(defuseKits, [
+  const rows = groupRowsByPlayerIdentity(defuseKits, [
     "defuse_kits_bought",
     "rounds_played"
   ]).map(row => ({
     ...row,
     defuse_purchase_rate:
-      Number(row.rounds_played || 0) > 0
-        ? Number(((Number(row.defuse_kits_bought || 0) / Number(row.rounds_played || 0)) * 100).toFixed(2))
+      toNumber(row.rounds_played) > 0
+        ? Number(((toNumber(row.defuse_kits_bought) / toNumber(row.rounds_played)) * 100).toFixed(2))
         : 0
   })).sort((a, b) => b.defuse_purchase_rate - a.defuse_purchase_rate);
 
@@ -1169,113 +1605,7 @@ function renderDefuseKits() {
   ], filteredRows);
 }
 
-async function init() {
-[
-  mapPlaytime,
-  racePlaytime,
-  raceLevels,
-  topChatters,
-  topCurseUsers,
-  mostSlainPlayers,
-  mostSlappedPlayers,
-  adminCommandUsage,
-  rtvRequests,
-  roundScoreboard,
-  weaponKills,
-  moneySummary,
-  defuseKits
-] = await Promise.all([
-  fetchJson("map_playtime.json"),
-  fetchJson("race_playtime.json"),
-  fetchJson("race_levels.json"),
-  fetchJson("top_chatters.json"),
-  fetchJson("top_curse_users.json"),
-  fetchJson("most_slain_players.json"),
-  fetchJson("most_slapped_players.json"),
-  fetchJson("admin_command_usage.json"),
-  fetchJson("rtv_requests.json"),
-  fetchJson("round_scoreboard.json"),
-  fetchJson("round_top_weapon_category_kills.json"),
-  fetchJson("round_player_money_summary.json"),
-  fetchJson("round_defuse_purchase_rate.json")
-]);
-
-  raceColumns = getRaceColumns(racePlaytime)
-  .sort((a, b) => prettyName(a).localeCompare(prettyName(b)));
-
-  // Clean War3 round-backup names like ZickziiEnigmaLvl21 -> Zickzii
-  roundScoreboard = roundScoreboard.map(row => ({
-    ...row,
-    player_name: cleanRoundPlayerName(row.player_name),
-    raw_player_name: row.player_name
-  }));
-
-  weaponKills = weaponKills.map(row => ({
-    ...row,
-    player_name: cleanRoundPlayerName(row.player_name),
-    raw_player_name: row.player_name
-  }));
-
-  moneySummary = moneySummary.map(row => ({
-    ...row,
-    player_name: cleanRoundPlayerName(row.player_name),
-    raw_player_name: row.player_name
-  }));
-
-  defuseKits = defuseKits.map(row => ({
-    ...row,
-    player_name: cleanRoundPlayerName(row.player_name),
-    raw_player_name: row.player_name
-  }));
-
-  setupRaceDropdown();
-  setupTableSearch("mapStatsSearch", mapPlaytime, "map_name", renderMapStats);
-  setupTableSearch("highestAnyRaceSearch", raceLevels, "player_name", renderHighestAnyRace);
-  setupTableSearch("highestTotalLevelsSearch", raceLevels, "player_name", renderHighestTotalLevels);
-  setupTableSearch("totalTimeTableSearch", racePlaytime, "player_name", renderTotalTime);
-  setupTableSearch("popularRacesSearch", getPopularRaceRows(), "race", renderPopularRaces);
-  setupTableSearch("topChattersSearch", topChatters, "player_name", renderTopChatters);
-  setupTableSearch("curseUsersSearch", topCurseUsers, "player_name", renderTopCurseUsers);
-  setupTableSearch("mostSlainSearch", mostSlainPlayers, "player_name", renderMostSlainPlayers);
-  setupTableSearch("mostSlappedSearch", mostSlappedPlayers, "player_name", renderMostSlappedPlayers);
-  setupTableSearch("adminCommandsSearch", adminCommandUsage, "admin_name", renderAdminCommandUsage);
-  setupTableSearch("combatStatsSearch", roundScoreboard, "player_name", renderCombatStats);
-  setupTableSearch("performanceStatsSearch", roundScoreboard, "player_name", renderPerformanceStats);
-  setupTableSearch("weaponKillsSearch", weaponKills, "player_name", renderWeaponKills);
-  setupTableSearch("moneySummarySearch", moneySummary, "player_name", renderMoneySummary);
-  setupTableSearch("defuseKitsSearch", defuseKits, "player_name", renderDefuseKits);
-
-  renderMapStats();
-  renderRtvCounter();
-  renderHighestAnyRace();
-  renderHighestTotalLevels();
-  renderTotalTime();
-  renderPopularRaces();
-  renderTopChatters();
-  renderTopCurseUsers();
-  renderMostSlainPlayers();
-  renderMostSlappedPlayers();
-  renderAdminCommandUsage();
-  renderCumCounter();
-  renderCombatStats();
-  renderPerformanceStats();
-  renderWeaponKills();
-  renderMoneySummary();
-  renderDefuseKits();
-
-  const defaultRace = raceColumns[0];
-
-  if (defaultRace) {
-    renderHighestRaceLevel(defaultRace);
-    renderRaceTime(defaultRace);
-  }
-
-  document.getElementById("raceLevelInput").tomselect.clear();
-  document.getElementById("raceTimeInput").tomselect.clear();
-}
-
 document.addEventListener("click", (e) => {
-
   const tab = e.target.closest(".stats-tab");
 
   if (!tab) return;
@@ -1293,6 +1623,105 @@ document.addEventListener("click", (e) => {
     );
   });
 });
+
+async function init() {
+  showStatsLoader("Loading stats...");
+
+  try {
+    [
+      mapPlaytime,
+      racePlaytime,
+      raceLevels,
+      topChatters,
+      topCurseUsers,
+      mostSlainPlayers,
+      mostSlappedPlayers,
+      adminCommandUsage,
+      rtvRequests,
+      roundScoreboard,
+      weaponKills,
+      moneySummary,
+      defuseKits
+    ] = await Promise.all([
+      fetchJson("map_playtime.json"),
+      fetchJson("race_playtime.json"),
+      fetchJson("race_levels.json"),
+      fetchJson("top_chatters.json"),
+      fetchJson("top_curse_users.json"),
+      fetchJson("most_slain_players.json"),
+      fetchJson("most_slapped_players.json"),
+      fetchJson("admin_command_usage.json"),
+      fetchJson("rtv_requests.json"),
+      fetchJson("round_scoreboard.json"),
+      fetchJson("round_top_weapon_category_kills.json"),
+      fetchJson("round_player_money_summary.json"),
+      fetchJson("round_defuse_purchase_rate.json")
+    ]);
+
+    raceColumns = getRaceColumns(racePlaytime)
+      .sort((a, b) => prettyName(a).localeCompare(prettyName(b)));
+
+    roundScoreboard = normalizeScoreboardRows(roundScoreboard);
+    weaponKills = normalizeWeaponRows(weaponKills);
+    moneySummary = normalizeMoneyRows(moneySummary);
+    defuseKits = normalizeDefuseRows(defuseKits);
+
+    buildPlayerIdentityMap();
+
+    setupRaceDropdown();
+    setupTableSearch("mapStatsSearch", mapPlaytime, "map_name", renderMapStats);
+    setupTableSearch("highestAnyRaceSearch", raceLevels, "player_name", renderHighestAnyRace);
+    setupTableSearch("highestTotalLevelsSearch", raceLevels, "player_name", renderHighestTotalLevels);
+    setupTableSearch("totalTimeTableSearch", racePlaytime, "player_name", renderTotalTime);
+    setupTableSearch("popularRacesSearch", getPopularRaceRows(), "race", renderPopularRaces);
+    setupTableSearch("topChattersSearch", topChatters, "player_name", renderTopChatters);
+    setupTableSearch("curseUsersSearch", topCurseUsers, "player_name", renderTopCurseUsers);
+    setupTableSearch("mostSlainSearch", mostSlainPlayers, "player_name", renderMostSlainPlayers);
+    setupTableSearch("mostSlappedSearch", mostSlappedPlayers, "player_name", renderMostSlappedPlayers);
+    setupTableSearch("adminCommandsSearch", adminCommandUsage, "admin_name", renderAdminCommandUsage);
+    setupTableSearch("combatStatsSearch", roundScoreboard, "player_name", renderCombatStats);
+    setupTableSearch("performanceStatsSearch", roundScoreboard, "player_name", renderPerformanceStats);
+    setupTableSearch("moneySummarySearch", moneySummary, "player_name", renderMoneySummary);
+    setupTableSearch("defuseKitsSearch", defuseKits, "player_name", renderDefuseKits);
+
+    renderMapStats();
+    renderRtvCounter();
+    renderHighestAnyRace();
+    renderHighestTotalLevels();
+    renderTotalTime();
+    renderPopularRaces();
+    renderTopChatters();
+    renderTopCurseUsers();
+    renderMostSlainPlayers();
+    renderMostSlappedPlayers();
+    renderAdminCommandUsage();
+    renderCumCounter();
+    renderCombatStats();
+    renderPerformanceStats();
+    renderWeaponKills();
+    renderMoneySummary();
+    renderDefuseKits();
+
+    const defaultRace = raceColumns[0];
+
+    if (defaultRace) {
+      renderHighestRaceLevel(defaultRace);
+      renderRaceTime(defaultRace);
+
+      document.getElementById("raceLevelInput")?.tomselect?.setValue(defaultRace, true);
+      document.getElementById("raceTimeInput")?.tomselect?.setValue(defaultRace, true);
+    }
+
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        hideStatsLoader();
+      });
+    });
+  } catch (error) {
+    console.error("Failed to load stats:", error);
+    showStatsLoader("Failed to load stats.");
+  }
+}
 
 init();
 </script>
