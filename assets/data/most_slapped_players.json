@@ -167,8 +167,8 @@
     "player_name": "Gen_Acid",
     "slapped_count": 1,
     "aliases": [
-      "gen_acid",
-      "Gen_Acid"
+      "Gen_Acid",
+      "gen_acid"
     ],
     "total_slap_damage": 10
   },
@@ -194,6 +194,15 @@
     "slapped_count": 1,
     "aliases": [
       "MistaCat"
+    ],
+    "total_slap_damage": 0
+  },
+  {
+    "player_name": "Monkey Madness",
+    "slapped_count": 1,
+    "aliases": [
+      "monkey",
+      "Monkey Madness"
     ],
     "total_slap_damage": 0
   },

@@ -71,8 +71,8 @@
     "player_name": "RANSOM",
     "slain_count": 4,
     "aliases": [
-      "RANSOM",
-      "ransom"
+      "ransom",
+      "RANSOM"
     ]
   },
   {
@@ -93,11 +93,19 @@
     ]
   },
   {
+    "player_name": "Ben Affleck",
+    "slain_count": 2,
+    "aliases": [
+      "ben",
+      "Ben Affleck"
+    ]
+  },
+  {
     "player_name": "BOT Rock",
     "slain_count": 2,
     "aliases": [
-      "bot rock",
       "BOT Rock",
+      "bot rock",
       "rock"
     ]
   },
@@ -105,7 +113,6 @@
     "player_name": "Brice",
     "slain_count": 2,
     "aliases": [
-      "brice",
       "Brice"
     ]
   },
@@ -209,14 +216,6 @@
     ]
   },
   {
-    "player_name": "Ben Affleck",
-    "slain_count": 1,
-    "aliases": [
-      "ben",
-      "Ben Affleck"
-    ]
-  },
-  {
     "player_name": "Jonker's little bitch boy",
     "slain_count": 1,
     "aliases": [
@@ -258,16 +257,16 @@
     "player_name": "Eric",
     "slain_count": 1,
     "aliases": [
-      "Eric",
-      "eric"
+      "eric",
+      "Eric"
     ]
   },
   {
     "player_name": "Fergus",
     "slain_count": 1,
     "aliases": [
-      "Fergus",
-      "fergus"
+      "fergus",
+      "Fergus"
     ]
   },
   {
@@ -358,6 +357,14 @@
     "slain_count": 1,
     "aliases": [
       "reb"
+    ]
+  },
+  {
+    "player_name": "Ren",
+    "slain_count": 1,
+    "aliases": [
+      "ren",
+      "Ren"
     ]
   },
   {
