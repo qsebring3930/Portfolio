@@ -741,16 +741,27 @@ function formatMatchedWords(words) {
 }
 
 async function fetchJson(filename) {
-  const response = await fetch(DATA_PATH + filename + "?v=" + Date.now(), {
-    cache: "no-store"
-  });
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), 15000);
 
-  if (!response.ok) {
-    console.warn(`Could not load ${filename}`);
+  try {
+    const response = await fetch(DATA_PATH + filename + "?v=" + Date.now(), {
+      cache: "no-store",
+      signal: controller.signal
+    });
+
+    if (!response.ok) {
+      console.warn(`Could not load ${filename}`);
+      return [];
+    }
+
+    return await response.json();
+  } catch (error) {
+    console.warn(`Failed to load ${filename}`, error);
     return [];
+  } finally {
+    clearTimeout(timeout);
   }
-
-  return response.json();
 }
 
 const sortStates = {};
@@ -1712,14 +1723,16 @@ async function init() {
       document.getElementById("raceTimeInput")?.tomselect?.setValue(defaultRace, true);
     }
 
-    requestAnimationFrame(() => {
-      requestAnimationFrame(() => {
-        hideStatsLoader();
-      });
-    });
+    setTimeout(() => {
+      hideStatsLoader();
+    }, 30);
   } catch (error) {
     console.error("Failed to load stats:", error);
-    showStatsLoader("Failed to load stats.");
+    showStatsLoader("Some stats failed to load.");
+
+    setTimeout(() => {
+      hideStatsLoader();
+    }, 300);
   }
 }
 
