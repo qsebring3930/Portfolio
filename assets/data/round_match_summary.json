@@ -1,17 +1,17 @@
 [
   {
-    "match_id": "e8b6ed06bf036ff2ee8d0b90ea49e4f91c35191e6b349bbd4658228ae48ba02b",
-    "source_file": "backup_round09.txt",
-    "backup_timestamp": "2026-06-22 22:15:36",
-    "map_name": "de_dust2_d",
-    "current_round": 9,
+    "match_id": "6d05f06b46e7030dbdbc65fb3cc9390aba586883d181e2e679857953c64688ee",
+    "source_file": "backup_round08.txt",
+    "backup_timestamp": "2026-06-23 03:44:34",
+    "map_name": "de_speedcastle_v2_retexture",
+    "current_round": 8,
     "team1_name": "Alliance",
     "team2_name": "Horde",
     "first_half_team1_score": 0,
     "first_half_team2_score": 0,
     "loser_most_recent_team": "T",
-    "consecutive_t_loses": 3,
-    "consecutive_ct_loses": 1,
-    "spawn_points_cfg": -535075032
+    "consecutive_t_loses": 6,
+    "consecutive_ct_loses": null,
+    "spawn_points_cfg": -860848107
   }
 ]
