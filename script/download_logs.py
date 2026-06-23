@@ -173,6 +173,421 @@ BACKUP_ROUND_MIN = 0
 BACKUP_ROUND_MAX = 20
 BACKUP_REMOTE_DIR = "/game/csgo"
 
+def already_processed_snapshot(cursor, snapshot_hash):
+    cursor.execute("""
+        SELECT 1
+        FROM processed_round_backup_snapshots
+        WHERE snapshot_hash = ?;
+    """, snapshot_hash)
+
+    return cursor.fetchone() is not None
+
+
+def mark_snapshot_processed(cursor, snapshot_hash, file_name, round_number, data):
+    cursor.execute("""
+        IF NOT EXISTS (
+            SELECT 1
+            FROM processed_round_backup_snapshots
+            WHERE snapshot_hash = ?
+        )
+        INSERT INTO processed_round_backup_snapshots (
+            snapshot_hash,
+            source_file,
+            backup_round,
+            map_name,
+            team1_name,
+            team2_name,
+            backup_timestamp
+        )
+        VALUES (
+            ?, ?, ?, ?, ?, ?, TRY_CONVERT(DATETIME2, ?)
+        );
+    """, (
+        snapshot_hash,
+        snapshot_hash,
+        file_name,
+        round_number,
+        data.get("map"),
+        data.get("team1"),
+        data.get("team2"),
+        data.get("timestamp"),
+    ))
+
+
+def iter_backup_players(data):
+    for team_side, players in [
+        ("team1", data.get("PlayersOnTeam1", {}) or {}),
+        ("team2", data.get("PlayersOnTeam2", {}) or {}),
+    ]:
+        if not isinstance(players, dict):
+            continue
+
+        for steam_id, player in players.items():
+            if isinstance(player, dict):
+                yield team_side, str(steam_id), player
+
+
+def get_stat_total(player, stat_name):
+    match_stats = player.get("MatchStats", {}) or {}
+    stat_block = match_stats.get(stat_name, {}) or {}
+
+    if not isinstance(stat_block, dict):
+        return 0
+
+    total = 0
+
+    for round_key, raw_value in stat_block.items():
+        if get_round_number(round_key) is not None:
+            total += to_int(raw_value, 0) or 0
+
+    return total
+
+
+def get_stat_round(player, stat_name, round_number):
+    match_stats = player.get("MatchStats", {}) or {}
+    stat_block = match_stats.get(stat_name, {}) or {}
+
+    if not isinstance(stat_block, dict):
+        return None
+
+    return to_int(stat_block.get(f"round{round_number}"))
+
+
+def get_purchase_count(player, def_key):
+    purchases = player.get("WeaponPurchases", {}) or {}
+
+    if not isinstance(purchases, dict):
+        return 0
+
+    return to_int(purchases.get(def_key), 0) or 0
+
+
+def get_player_snapshot_values(player):
+    return {
+        "player_name": clean_export_name(player.get("name")),
+        "kills": to_int(player.get("kills"), 0) or 0,
+        "deaths": to_int(player.get("deaths"), 0) or 0,
+        "assists": to_int(player.get("assists"), 0) or 0,
+        "mvps": to_int(player.get("mvps"), 0) or 0,
+        "score": to_int(player.get("score"), 0) or 0,
+        "damage": get_stat_total(player, "Damage"),
+        "pistol_kills": to_int(player.get("kills_weapon_pistol"), 0) or 0,
+        "sniper_kills": to_int(player.get("kills_weapon_sniper"), 0) or 0,
+        "knife_kills": to_int(player.get("kills_knife"), 0) or 0,
+        "taser_kills": to_int(player.get("kills_taser"), 0) or 0,
+    }
+
+def import_round_backup_aggregates(cursor, backup_paths):
+    parsed_backups = []
+    processed_paths = []
+
+    # Prices are still stored in SQL, but we read them once.
+    cursor.execute("""
+        SELECT def_index, price
+        FROM item_definition_prices;
+    """)
+    item_prices = {
+        int(row.def_index): int(row.price or 0)
+        for row in cursor.fetchall()
+    }
+
+    for path in sorted(backup_paths):
+        file_name = path.name
+        round_number = get_backup_file_round_number(file_name)
+
+        if round_number is None:
+            continue
+
+        parsed = parse_keyvalues_file(path)
+        data = parsed.get("SaveFile", {})
+
+        if not data:
+            continue
+
+        parsed_backups.append((round_number, path, file_name, data))
+
+    if not parsed_backups:
+        print("No parsed round backups for aggregate import.")
+        return []
+
+    # Reuse your existing grouping. This keeps stale maps from mixing.
+    backup_groups = split_parsed_backups_into_match_groups([
+        (path, file_name, data)
+        for round_number, path, file_name, data in parsed_backups
+    ])
+
+    print(f"Aggregate backup groups: {len(backup_groups)}")
+
+    for backup_group in backup_groups:
+        # Sort group by backup_round number.
+        group_rows = []
+
+        for path, file_name, data in backup_group:
+            round_number = get_backup_file_round_number(file_name)
+
+            if round_number is None:
+                continue
+
+            group_rows.append((round_number, path, file_name, data))
+
+        group_rows.sort(key=lambda row: row[0])
+
+        previous_players = {}
+
+        for round_number, path, file_name, data in group_rows:
+            snapshot_hash = file_sha256(path)
+
+            current_players = {}
+
+            for team_side, steam_id, player in iter_backup_players(data):
+                current_players[(team_side, steam_id)] = player
+
+            # Even if already processed, keep it as baseline for the next file.
+            if already_processed_snapshot(cursor, snapshot_hash):
+                print(f"Skipping already aggregated snapshot: {file_name}")
+                previous_players = current_players
+                processed_paths.append(path)
+                continue
+
+            print(f"Aggregating snapshot: {file_name}")
+
+            round_results = data.get("RoundResults", {}) or {}
+            alive_t = data.get("PlayersAliveT", {}) or {}
+            alive_ct = data.get("PlayersAliveCT", {}) or {}
+
+            result_code = to_int(round_results.get(f"round{round_number}"))
+            players_alive_t = to_int(alive_t.get(f"round{round_number}"))
+            players_alive_ct = to_int(alive_ct.get(f"round{round_number}"))
+            map_name = data.get("map") or ""
+
+            for key, current_player in current_players.items():
+                team_side, steam_id = key
+                previous_player = previous_players.get(key)
+
+                # Round 0 / no previous snapshot = baseline only, do not add fake stats.
+                if not previous_player:
+                    continue
+
+                current_values = get_player_snapshot_values(current_player)
+                previous_values = get_player_snapshot_values(previous_player)
+                player_name = current_values["player_name"]
+
+                if not player_name:
+                    continue
+
+                deltas = {
+                    "kills": positive_delta(current_values, previous_values, "kills"),
+                    "deaths": positive_delta(current_values, previous_values, "deaths"),
+                    "assists": positive_delta(current_values, previous_values, "assists"),
+                    "mvps": positive_delta(current_values, previous_values, "mvps"),
+                    "score": positive_delta(current_values, previous_values, "score"),
+                    "damage": positive_delta(current_values, previous_values, "damage"),
+                    "pistol_kills": positive_delta(current_values, previous_values, "pistol_kills"),
+                    "sniper_kills": positive_delta(current_values, previous_values, "sniper_kills"),
+                    "knife_kills": positive_delta(current_values, previous_values, "knife_kills"),
+                    "taser_kills": positive_delta(current_values, previous_values, "taser_kills"),
+                }
+
+                if any(value > 0 for value in deltas.values()):
+                    cursor.execute("""
+                        IF EXISTS (
+                            SELECT 1 FROM round_player_aggregate WHERE steam_id = ?
+                        )
+                        BEGIN
+                            UPDATE round_player_aggregate
+                            SET
+                                player_name = ?,
+                                kills = kills + ?,
+                                deaths = deaths + ?,
+                                assists = assists + ?,
+                                mvps = mvps + ?,
+                                score = score + ?,
+                                damage = damage + ?,
+                                rounds_played = rounds_played + 1,
+                                pistol_kills = pistol_kills + ?,
+                                sniper_kills = sniper_kills + ?,
+                                knife_kills = knife_kills + ?,
+                                taser_kills = taser_kills + ?,
+                                updated_at = SYSUTCDATETIME()
+                            WHERE steam_id = ?;
+                        END
+                        ELSE
+                        BEGIN
+                            INSERT INTO round_player_aggregate (
+                                steam_id,
+                                player_name,
+                                kills,
+                                deaths,
+                                assists,
+                                mvps,
+                                score,
+                                damage,
+                                rounds_played,
+                                pistol_kills,
+                                sniper_kills,
+                                knife_kills,
+                                taser_kills
+                            )
+                            VALUES (?, ?, ?, ?, ?, ?, ?, ?, 1, ?, ?, ?, ?);
+                        END
+                    """, (
+                        steam_id,
+                        player_name,
+                        deltas["kills"],
+                        deltas["deaths"],
+                        deltas["assists"],
+                        deltas["mvps"],
+                        deltas["score"],
+                        deltas["damage"],
+                        deltas["pistol_kills"],
+                        deltas["sniper_kills"],
+                        deltas["knife_kills"],
+                        deltas["taser_kills"],
+                        steam_id,
+
+                        steam_id,
+                        player_name,
+                        deltas["kills"],
+                        deltas["deaths"],
+                        deltas["assists"],
+                        deltas["mvps"],
+                        deltas["score"],
+                        deltas["damage"],
+                        deltas["pistol_kills"],
+                        deltas["sniper_kills"],
+                        deltas["knife_kills"],
+                        deltas["taser_kills"],
+                    ))
+
+                # Purchase deltas.
+                money_spent = 0
+
+                current_purchases = current_player.get("WeaponPurchases", {}) or {}
+                previous_purchases = previous_player.get("WeaponPurchases", {}) or {}
+
+                if isinstance(current_purchases, dict):
+                    for def_key, raw_current in current_purchases.items():
+                        def_index = get_def_index(def_key)
+
+                        if def_index is None:
+                            continue
+
+                        current_count = to_int(raw_current, 0) or 0
+                        previous_count = to_int(previous_purchases.get(def_key), 0) or 0
+                        purchase_delta = current_count - previous_count
+
+                        if purchase_delta <= 0:
+                            continue
+
+                        money_spent += purchase_delta * item_prices.get(def_index, 0)
+
+                current_defuse = get_purchase_count(current_player, "DefIndex_55")
+                previous_defuse = get_purchase_count(previous_player, "DefIndex_55")
+                defuse_delta = max(0, current_defuse - previous_defuse)
+
+                # Betting estimate.
+                start_cash = get_stat_round(current_player, "MoneySaved", round_number)
+                actual_cash = get_stat_round(current_player, "CashEarned", round_number)
+                kill_reward = get_stat_round(current_player, "KillReward", round_number) or 0
+
+                round_won = None
+
+                if players_alive_t is not None and players_alive_ct is not None:
+                    if team_side == "team1":
+                        round_won = 1 if players_alive_t > players_alive_ct else 0 if players_alive_t < players_alive_ct else None
+                    elif team_side == "team2":
+                        round_won = 1 if players_alive_ct > players_alive_t else 0 if players_alive_ct < players_alive_t else None
+
+                base_income = 0
+
+                if map_name.startswith("de_") and round_won == 1:
+                    base_income = 2700
+                elif map_name.startswith("cs_") and round_won == 1 and team_side == "team1":
+                    base_income = 2000
+                elif map_name.startswith("cs_") and round_won == 1 and team_side == "team2":
+                    base_income = 2300
+                elif round_won == 0:
+                    base_income = 2400
+
+                objective_bonus = 0
+
+                if (
+                    map_name.startswith("de_")
+                    and round_won == 0
+                    and team_side == "team1"
+                    and result_code == 3
+                ):
+                    objective_bonus = 200
+
+                betting_delta = 0
+
+                if start_cash is not None and actual_cash is not None:
+                    expected_cash = start_cash - money_spent + base_income + objective_bonus + kill_reward
+                    expected_cash = min(MONEY_CAP, expected_cash)
+                    betting_delta = actual_cash - expected_cash
+
+                betting_won = betting_delta if betting_delta > 0 else 0
+                betting_lost = abs(betting_delta) if betting_delta < 0 else 0
+
+                cursor.execute("""
+                    IF EXISTS (
+                        SELECT 1 FROM round_money_aggregate WHERE steam_id = ?
+                    )
+                    BEGIN
+                        UPDATE round_money_aggregate
+                        SET
+                            player_name = ?,
+                            money_spent = money_spent + ?,
+                            net_betting = net_betting + ?,
+                            betting_won = betting_won + ?,
+                            betting_lost = betting_lost + ?,
+                            defuse_kits_bought = defuse_kits_bought + ?,
+                            defuse_rounds_played = defuse_rounds_played + 1,
+                            updated_at = SYSUTCDATETIME()
+                        WHERE steam_id = ?;
+                    END
+                    ELSE
+                    BEGIN
+                        INSERT INTO round_money_aggregate (
+                            steam_id,
+                            player_name,
+                            money_spent,
+                            net_betting,
+                            betting_won,
+                            betting_lost,
+                            defuse_kits_bought,
+                            defuse_rounds_played
+                        )
+                        VALUES (?, ?, ?, ?, ?, ?, ?, 1);
+                    END
+                """, (
+                    steam_id,
+                    player_name,
+                    money_spent,
+                    betting_delta,
+                    betting_won,
+                    betting_lost,
+                    defuse_delta,
+                    steam_id,
+
+                    steam_id,
+                    player_name,
+                    money_spent,
+                    betting_delta,
+                    betting_won,
+                    betting_lost,
+                    defuse_delta,
+                ))
+
+            mark_snapshot_processed(cursor, snapshot_hash, file_name, round_number, data)
+            previous_players = current_players
+            processed_paths.append(path)
+
+    return processed_paths
+
+def positive_delta(current, previous, key):
+    return max(0, int(current.get(key, 0) or 0) - int(previous.get(key, 0) or 0))
+
 
 def backup_file_names():
     return [
@@ -2320,89 +2735,9 @@ def export_round_backup_jsons(cursor):
     data_dir = Path(__file__).resolve().parent.parent / "assets" / "data"
     data_dir.mkdir(parents=True, exist_ok=True)
 
-    print("Exporting all-time round backup JSON files...")
+    print("Exporting aggregate round backup JSON files...")
 
     cursor.execute("""
-        SELECT TOP 1
-            match_id,
-            source_file,
-            backup_timestamp,
-            map_name,
-            current_round,
-            team1_name,
-            team2_name,
-            first_half_team1_score,
-            first_half_team2_score,
-            loser_most_recent_team,
-            consecutive_t_loses,
-            consecutive_ct_loses,
-            spawn_points_cfg
-        FROM round_backup_matches
-        ORDER BY backup_timestamp DESC, current_round DESC;
-    """)
-    write_json(data_dir / "round_match_summary.json", rows_to_dicts(cursor))
-
-    cursor.execute("""
-        WITH latest_files AS (
-            SELECT
-                match_id,
-                source_file,
-                current_round,
-                ROW_NUMBER() OVER (
-                    PARTITION BY match_id
-                    ORDER BY current_round DESC, backup_timestamp DESC, source_file DESC
-                ) AS rn
-            FROM round_backup_matches
-        ),
-        damage_totals AS (
-            SELECT
-                prs.match_id,
-                prs.source_file,
-                prs.team_side,
-                prs.steam_id,
-                SUM(prs.stat_value) AS damage
-            FROM round_backup_player_round_stats prs
-            INNER JOIN latest_files lf
-              ON lf.match_id = prs.match_id
-             AND lf.source_file = prs.source_file
-             AND lf.rn = 1
-            WHERE prs.stat_name = 'Damage'
-            GROUP BY prs.match_id, prs.source_file, prs.team_side, prs.steam_id
-        ),
-        player_totals AS (
-            SELECT
-                p.player_name,
-                p.steam_id,
-                SUM(COALESCE(p.kills, 0)) AS kills,
-                SUM(COALESCE(p.deaths, 0)) AS deaths,
-                SUM(COALESCE(p.assists, 0)) AS assists,
-                SUM(COALESCE(p.score, 0)) AS score,
-                SUM(COALESCE(p.mvps, 0)) AS mvps,
-                SUM(COALESCE(p.enemy_headshots, 0)) AS enemy_headshots,
-                SUM(COALESCE(p.enemy_2ks, 0)) AS enemy_2ks,
-                SUM(COALESCE(p.enemy_3ks, 0)) AS enemy_3ks,
-                SUM(COALESCE(p.enemy_4ks, 0)) AS enemy_4ks,
-                SUM(COALESCE(p.enemy_5ks, 0)) AS enemy_5ks,
-                SUM(COALESCE(p.first_kills, 0)) AS first_kills,
-                SUM(COALESCE(p.clutch_kills, 0)) AS clutch_kills,
-                SUM(COALESCE(p.pistol_kills, 0)) AS pistol_kills,
-                SUM(COALESCE(p.sniper_kills, 0)) AS sniper_kills,
-                SUM(COALESCE(p.knife_kills, 0)) AS knife_kills,
-                SUM(COALESCE(p.taser_kills, 0)) AS taser_kills,
-                SUM(COALESCE(d.damage, 0)) AS damage,
-                SUM(COALESCE(lf.current_round, 0)) AS rounds_played
-            FROM round_backup_players p
-            INNER JOIN latest_files lf
-              ON lf.match_id = p.match_id
-             AND lf.source_file = p.source_file
-             AND lf.rn = 1
-            LEFT JOIN damage_totals d
-              ON d.match_id = p.match_id
-             AND d.source_file = p.source_file
-             AND d.team_side = p.team_side
-             AND d.steam_id = p.steam_id
-            GROUP BY p.player_name, p.steam_id
-        )
         SELECT
             player_name,
             steam_id,
@@ -2412,142 +2747,66 @@ def export_round_backup_jsons(cursor):
             mvps,
             score,
             damage,
+            rounds_played,
             CAST(CASE WHEN rounds_played > 0 THEN 1.0 * damage / rounds_played ELSE 0 END AS DECIMAL(10, 2)) AS adr,
             CAST(CASE WHEN deaths > 0 THEN 1.0 * kills / deaths ELSE kills END AS DECIMAL(10, 2)) AS kd_ratio,
-            CAST(CASE WHEN deaths > 0 THEN 1.0 * (kills + assists) / deaths ELSE kills + assists END AS DECIMAL(10, 2)) AS kad_ratio,
-            enemy_headshots,
-            CAST(CASE WHEN kills > 0 THEN 100.0 * enemy_headshots / kills ELSE 0 END AS DECIMAL(10, 2)) AS headshot_percent,
-            enemy_2ks,
-            enemy_3ks,
-            enemy_4ks,
-            enemy_5ks,
-            first_kills,
-            clutch_kills,
-            pistol_kills,
-            sniper_kills,
-            knife_kills,
-            taser_kills,
-            (
-                COALESCE(damage, 0)
-                + COALESCE(kills, 0) * 100
-                + COALESCE(assists, 0) * 40
-                + COALESCE(first_kills, 0) * 75
-                + COALESCE(clutch_kills, 0) * 100
-                + COALESCE(mvps, 0) * 150
-            ) AS impact_score
-        FROM player_totals
-        ORDER BY impact_score DESC, damage DESC, kills DESC;
+            CAST(CASE WHEN deaths > 0 THEN 1.0 * (kills + assists) / deaths ELSE kills + assists END AS DECIMAL(10, 2)) AS kad_ratio
+        FROM round_player_aggregate
+        ORDER BY kills DESC, damage DESC;
     """)
     write_json(data_dir / "round_scoreboard.json", rows_to_dicts(cursor))
+
+    cursor.execute("""
+        SELECT weapon_category, player_name, steam_id, kills
+        FROM (
+            SELECT 'Pistol' AS weapon_category, player_name, steam_id, pistol_kills AS kills
+            FROM round_player_aggregate
+            UNION ALL
+            SELECT 'Sniper', player_name, steam_id, sniper_kills
+            FROM round_player_aggregate
+            UNION ALL
+            SELECT 'Knife', player_name, steam_id, knife_kills
+            FROM round_player_aggregate
+            UNION ALL
+            SELECT 'Taser', player_name, steam_id, taser_kills
+            FROM round_player_aggregate
+        ) x
+        WHERE kills > 0
+        ORDER BY kills DESC;
+    """)
+    write_json(data_dir / "round_top_weapon_category_kills.json", rows_to_dicts(cursor))
 
     cursor.execute("""
         SELECT
             player_name,
             steam_id,
-            SUM(COALESCE(estimated_spent, 0)) AS money_spent,
-            SUM(COALESCE(inferred_betting_money, 0)) AS net_betting,
-            SUM(CASE WHEN inferred_betting_money > 0 THEN inferred_betting_money ELSE 0 END) AS betting_won,
-            SUM(CASE WHEN inferred_betting_money < 0 THEN inferred_betting_money ELSE 0 END) AS betting_lost
-        FROM round_backup_player_economy_rounds
-        GROUP BY player_name, steam_id
+            money_spent,
+            net_betting,
+            betting_won,
+            betting_lost
+        FROM round_money_aggregate
         ORDER BY net_betting DESC;
     """)
     write_json(data_dir / "round_player_money_summary.json", rows_to_dicts(cursor))
 
-
     cursor.execute("""
-        WITH player_rounds AS (
-            SELECT
-                player_name,
-                steam_id,
-                COUNT(*) AS ct_rounds_played
-            FROM round_backup_player_economy_rounds
-            WHERE team_side = 'team2'
-            GROUP BY player_name, steam_id
-        ),
-        defuse_buys AS (
-            SELECT
-                e.player_name,
-                e.steam_id,
-                SUM(p.purchase_delta) AS defuse_kits_bought
-            FROM round_backup_purchase_deltas p
-            INNER JOIN round_backup_player_economy_rounds e
-              ON e.match_id = p.match_id
-             AND e.source_file = p.source_file
-             AND e.round_number = p.round_number
-             AND e.team_side = p.team_side
-             AND e.steam_id = p.steam_id
-            WHERE p.def_index = 55
-              AND p.team_side = 'team1'
-              AND e.team_side = 'team1'
-            GROUP BY e.player_name, e.steam_id
-        )
         SELECT
-            pr.player_name,
-            pr.steam_id,
-            COALESCE(d.defuse_kits_bought, 0) AS defuse_kits_bought,
-            pr.ct_rounds_played AS rounds_played,
+            player_name,
+            steam_id,
+            defuse_kits_bought,
+            defuse_rounds_played AS rounds_played,
             CAST(
-                100.0 * COALESCE(d.defuse_kits_bought, 0)
-                / NULLIF(pr.ct_rounds_played, 0)
+                CASE
+                    WHEN defuse_rounds_played > 0
+                    THEN 100.0 * defuse_kits_bought / defuse_rounds_played
+                    ELSE 0
+                END
                 AS DECIMAL(10, 2)
-            ) AS defuse_purchase_round_percent
-        FROM player_rounds pr
-        LEFT JOIN defuse_buys d
-          ON d.steam_id = pr.steam_id
-         AND d.player_name = pr.player_name
-        ORDER BY defuse_purchase_round_percent DESC, defuse_kits_bought DESC;
+            ) AS defuse_purchase_rate
+        FROM round_money_aggregate
+        ORDER BY defuse_purchase_rate DESC, defuse_kits_bought DESC;
     """)
     write_json(data_dir / "round_defuse_purchase_rate.json", rows_to_dicts(cursor))
-
-    cursor.execute("""
-        WITH latest_files AS (
-            SELECT
-                match_id,
-                source_file,
-                ROW_NUMBER() OVER (
-                    PARTITION BY match_id
-                    ORDER BY current_round DESC, backup_timestamp DESC, source_file DESC
-                ) AS rn
-            FROM round_backup_matches
-        ),
-        unpivoted AS (
-            SELECT p.player_name, p.steam_id, 'Pistol' AS weapon, COALESCE(p.pistol_kills, 0) AS kills
-            FROM round_backup_players p
-            INNER JOIN latest_files lf ON lf.match_id = p.match_id AND lf.source_file = p.source_file AND lf.rn = 1
-            UNION ALL
-            SELECT p.player_name, p.steam_id, 'Sniper' AS weapon, COALESCE(p.sniper_kills, 0) AS kills
-            FROM round_backup_players p
-            INNER JOIN latest_files lf ON lf.match_id = p.match_id AND lf.source_file = p.source_file AND lf.rn = 1
-            UNION ALL
-            SELECT p.player_name, p.steam_id, 'Knife' AS weapon, COALESCE(p.knife_kills, 0) AS kills
-            FROM round_backup_players p
-            INNER JOIN latest_files lf ON lf.match_id = p.match_id AND lf.source_file = p.source_file AND lf.rn = 1
-            UNION ALL
-            SELECT p.player_name, p.steam_id, 'Taser' AS weapon, COALESCE(p.taser_kills, 0) AS kills
-            FROM round_backup_players p
-            INNER JOIN latest_files lf ON lf.match_id = p.match_id AND lf.source_file = p.source_file AND lf.rn = 1
-        ),
-        totals AS (
-            SELECT weapon, player_name, steam_id, SUM(kills) AS kills
-            FROM unpivoted
-            GROUP BY weapon, player_name, steam_id
-        ),
-        ranked AS (
-            SELECT
-                *,
-                ROW_NUMBER() OVER (PARTITION BY weapon ORDER BY kills DESC, player_name ASC) AS rn
-            FROM totals
-            WHERE kills > 0
-        )
-        SELECT weapon, kills, player_name, steam_id
-        FROM ranked
-        WHERE rn = 1
-        ORDER BY kills DESC;
-    """)
-    write_json(data_dir / "round_top_weapon_category_kills.json", rows_to_dicts(cursor))
-
-    print("Round backup JSON exports complete.")
 
 def export_log_jsons(cursor):
     data_dir = Path(__file__).resolve().parent.parent / "assets" / "data"
@@ -2684,22 +2943,14 @@ if __name__ == "__main__":
             print("Skipping server log import because INCLUDE_LOGS is not 1.", flush=True)
             processed_log_files = []
 
-        processed_backup_files, touched_backup_rounds = timed_step(
-            "Import round backups",
-            import_round_backups,
+        processed_backup_files = timed_step(
+            "Import round backup aggregates",
+            import_round_backup_aggregates,
             cursor,
             backup_paths
         )
-
+        
         print(f"Processed backup files: {len(processed_backup_files)}", flush=True)
-        print(f"Touched backup rounds: {len(touched_backup_rounds)}", flush=True)
-
-        # ------------------------------------------------------------
-        # 4. Rebuild derived economy/betting tables.
-        # ------------------------------------------------------------
-        timed_step("Rebuild purchase deltas", rebuild_round_purchase_deltas, cursor, touched_backup_rounds)
-        timed_step("Rebuild player economy", rebuild_round_player_economy, cursor, touched_backup_rounds)
-        timed_step("Rebuild inferred betting", rebuild_inferred_betting_money, cursor, touched_backup_rounds)
 
         # ------------------------------------------------------------
         # 5. Commit SQL before deleting local files.
