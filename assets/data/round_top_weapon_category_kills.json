@@ -355,6 +355,18 @@
   },
   {
     "weapon_category": "Knife",
+    "player_name": "zenwormJamesBondLvl3",
+    "steam_id": "10745543",
+    "kills": 52
+  },
+  {
+    "weapon_category": "Sniper",
+    "player_name": "H4WKENLuckyPrinnyOverlordLvl53",
+    "steam_id": "58409953",
+    "kills": 51
+  },
+  {
+    "weapon_category": "Knife",
     "player_name": "WaylongTTVNeedsManaJamesBondLvl26",
     "steam_id": "209891973",
     "kills": 51
@@ -363,18 +375,6 @@
     "weapon_category": "Knife",
     "player_name": "SamusAranPokemonTrainerLvl9",
     "steam_id": "959620",
-    "kills": 51
-  },
-  {
-    "weapon_category": "Knife",
-    "player_name": "zenwormCombineAdvisorLvl13",
-    "steam_id": "10745543",
-    "kills": 51
-  },
-  {
-    "weapon_category": "Sniper",
-    "player_name": "H4WKENLuckyPrinnyOverlordLvl53",
-    "steam_id": "58409953",
     "kills": 51
   },
   {
@@ -1080,6 +1080,12 @@
     "kills": 19
   },
   {
+    "weapon_category": "Knife",
+    "player_name": "BakuryuDruidoftheClawLvl36",
+    "steam_id": "884806",
+    "kills": 18
+  },
+  {
     "weapon_category": "Pistol",
     "player_name": "SkyLionSawGunnerLvl5",
     "steam_id": "4043586",
@@ -1116,15 +1122,9 @@
     "kills": 17
   },
   {
-    "weapon_category": "Sniper",
-    "player_name": "OsamabinFallen",
-    "steam_id": "837256237",
-    "kills": 17
-  },
-  {
-    "weapon_category": "Sniper",
-    "player_name": "JustBestieThingsLaharlLvl16",
-    "steam_id": "4471218",
+    "weapon_category": "Knife",
+    "player_name": "CCHILLYYLichLvl4",
+    "steam_id": "8533050",
     "kills": 17
   },
   {
@@ -1134,15 +1134,15 @@
     "kills": 17
   },
   {
-    "weapon_category": "Knife",
-    "player_name": "CCHILLYYLichLvl4",
-    "steam_id": "8533050",
+    "weapon_category": "Sniper",
+    "player_name": "OsamabinFallen",
+    "steam_id": "837256237",
     "kills": 17
   },
   {
-    "weapon_category": "Knife",
-    "player_name": "BakuryuMurlocTidehunterLvl26",
-    "steam_id": "884806",
+    "weapon_category": "Sniper",
+    "player_name": "JustBestieThingsLaharlLvl16",
+    "steam_id": "4471218",
     "kills": 17
   },
   {
@@ -1387,6 +1387,12 @@
   },
   {
     "weapon_category": "Pistol",
+    "player_name": "zenwormJamesBondLvl3",
+    "steam_id": "10745543",
+    "kills": 12
+  },
+  {
+    "weapon_category": "Pistol",
     "player_name": "manyOneNecromancerLvl31",
     "steam_id": "1154524066",
     "kills": 12
@@ -1573,12 +1579,6 @@
   },
   {
     "weapon_category": "Pistol",
-    "player_name": "zenwormCombineAdvisorLvl13",
-    "steam_id": "10745543",
-    "kills": 9
-  },
-  {
-    "weapon_category": "Pistol",
     "player_name": "xPh0biaVengefulSpiritLvl23",
     "steam_id": "1202475984",
     "kills": 9
@@ -1591,7 +1591,7 @@
   },
   {
     "weapon_category": "Sniper",
-    "player_name": "zenwormCombineAdvisorLvl13",
+    "player_name": "zenwormJamesBondLvl3",
     "steam_id": "10745543",
     "kills": 9
   },
@@ -2335,7 +2335,7 @@
   },
   {
     "weapon_category": "Pistol",
-    "player_name": "BakuryuMurlocTidehunterLvl26",
+    "player_name": "BakuryuDruidoftheClawLvl36",
     "steam_id": "884806",
     "kills": 4
   },
