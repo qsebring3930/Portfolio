@@ -798,6 +798,12 @@
     "kills": 26
   },
   {
+    "weapon_category": "Taser",
+    "player_name": "TwistedSquiddyThorLvl49",
+    "steam_id": "191040345",
+    "kills": 26
+  },
+  {
     "weapon_category": "Sniper",
     "player_name": "PerculesRozalinLvl0",
     "steam_id": "39011615",
@@ -1393,7 +1399,7 @@
   },
   {
     "weapon_category": "Pistol",
-    "player_name": "TwistedSquiddyNightElfLvl117",
+    "player_name": "TwistedSquiddyThorLvl49",
     "steam_id": "191040345",
     "kills": 11
   },
@@ -1741,7 +1747,7 @@
   },
   {
     "weapon_category": "Sniper",
-    "player_name": "TwistedSquiddyNightElfLvl117",
+    "player_name": "TwistedSquiddyThorLvl49",
     "steam_id": "191040345",
     "kills": 8
   },
@@ -1938,12 +1944,6 @@
     "kills": 7
   },
   {
-    "weapon_category": "Taser",
-    "player_name": "wheelchairSpiritofVengeanceLvl14",
-    "steam_id": "326879082",
-    "kills": 6
-  },
-  {
     "weapon_category": "Knife",
     "player_name": "ErisDemonHunterLvl11",
     "steam_id": "93382355",
@@ -2050,6 +2050,18 @@
     "player_name": "InsanityLichLvl16",
     "steam_id": "393543647",
     "kills": 6
+  },
+  {
+    "weapon_category": "Taser",
+    "player_name": "wheelchairSpiritofVengeanceLvl14",
+    "steam_id": "326879082",
+    "kills": 6
+  },
+  {
+    "weapon_category": "Taser",
+    "player_name": "HornySexSlaveMkVLurkerLvl38",
+    "steam_id": "51789856",
+    "kills": 5
   },
   {
     "weapon_category": "Pistol",
@@ -2181,12 +2193,6 @@
     "weapon_category": "Knife",
     "player_name": "JonoHighTemplarLvl6",
     "steam_id": "51377294",
-    "kills": 5
-  },
-  {
-    "weapon_category": "Taser",
-    "player_name": "HornySexSlaveMkVLurkerLvl38",
-    "steam_id": "51789856",
     "kills": 5
   },
   {
@@ -3402,12 +3408,6 @@
     "kills": 1
   },
   {
-    "weapon_category": "Taser",
-    "player_name": "you0UndeadScourgeLvl7",
-    "steam_id": "431253218",
-    "kills": 1
-  },
-  {
     "weapon_category": "Knife",
     "player_name": "tudopeNavySealLvl35",
     "steam_id": "993476084",
@@ -3447,6 +3447,12 @@
     "weapon_category": "Knife",
     "player_name": "zhuravlev268bcElectricEagleLvl0",
     "steam_id": "723721125",
+    "kills": 1
+  },
+  {
+    "weapon_category": "Taser",
+    "player_name": "you0UndeadScourgeLvl7",
+    "steam_id": "431253218",
     "kills": 1
   }
 ]
