@@ -402,8 +402,26 @@
     "kills": 49
   },
   {
+    "weapon_category": "Pistol",
+    "player_name": "TheSpaniard400WitchDoctorWC3Lvl20",
+    "steam_id": "32167233",
+    "kills": 48
+  },
+  {
+    "weapon_category": "Pistol",
+    "player_name": "reaLityCookietheCookLvl25",
+    "steam_id": "52549756",
+    "kills": 47
+  },
+  {
+    "weapon_category": "Pistol",
+    "player_name": "JonoHighTemplarLvl6",
+    "steam_id": "51377294",
+    "kills": 47
+  },
+  {
     "weapon_category": "Knife",
-    "player_name": "OysterGhostLvl25",
+    "player_name": "OysterGhostLvl26",
     "steam_id": "7127499",
     "kills": 47
   },
@@ -421,18 +439,6 @@
   },
   {
     "weapon_category": "Pistol",
-    "player_name": "reaLityCookietheCookLvl25",
-    "steam_id": "52549756",
-    "kills": 47
-  },
-  {
-    "weapon_category": "Pistol",
-    "player_name": "JonoHighTemplarLvl6",
-    "steam_id": "51377294",
-    "kills": 47
-  },
-  {
-    "weapon_category": "Pistol",
     "player_name": "EricRPGLvl24",
     "steam_id": "21443158",
     "kills": 46
@@ -441,12 +447,6 @@
     "weapon_category": "Pistol",
     "player_name": "AzaBorovaDemolitionistLvl10",
     "steam_id": "1917962806",
-    "kills": 45
-  },
-  {
-    "weapon_category": "Pistol",
-    "player_name": "TheSpaniard400WitchDoctorWC3Lvl20",
-    "steam_id": "32167233",
     "kills": 45
   },
   {
@@ -912,6 +912,12 @@
     "kills": 22
   },
   {
+    "weapon_category": "Sniper",
+    "player_name": "OysterGhostLvl26",
+    "steam_id": "7127499",
+    "kills": 22
+  },
+  {
     "weapon_category": "Knife",
     "player_name": "AzaBorovaDemolitionistLvl10",
     "steam_id": "1917962806",
@@ -999,12 +1005,6 @@
     "weapon_category": "Sniper",
     "player_name": "TheSpaniard400WitchDoctorWC3Lvl20",
     "steam_id": "32167233",
-    "kills": 19
-  },
-  {
-    "weapon_category": "Sniper",
-    "player_name": "OysterGhostLvl25",
-    "steam_id": "7127499",
     "kills": 19
   },
   {
@@ -1717,7 +1717,7 @@
   },
   {
     "weapon_category": "Pistol",
-    "player_name": "OysterGhostLvl25",
+    "player_name": "OysterGhostLvl26",
     "steam_id": "7127499",
     "kills": 8
   },
@@ -2335,7 +2335,7 @@
   },
   {
     "weapon_category": "Pistol",
-    "player_name": "BonkPokemonTrainerLvl7",
+    "player_name": "BonkPokemonTrainerLvl9",
     "steam_id": "163174537",
     "kills": 4
   },
@@ -2661,6 +2661,12 @@
     "weapon_category": "Knife",
     "player_name": "GuseensHarpyLvl21",
     "steam_id": "199288311",
+    "kills": 2
+  },
+  {
+    "weapon_category": "Knife",
+    "player_name": "CookieImpalerLvl16",
+    "steam_id": "175811974",
     "kills": 2
   },
   {
@@ -3301,7 +3307,7 @@
   },
   {
     "weapon_category": "Knife",
-    "player_name": "BonkPokemonTrainerLvl7",
+    "player_name": "BonkPokemonTrainerLvl9",
     "steam_id": "163174537",
     "kills": 1
   },
@@ -3403,20 +3409,14 @@
   },
   {
     "weapon_category": "Knife",
-    "player_name": "UnhappyCatToadLvl34",
-    "steam_id": "19653487",
-    "kills": 1
-  },
-  {
-    "weapon_category": "Knife",
     "player_name": "NoLimitRetributionPaladinLvl35",
     "steam_id": "17444546",
     "kills": 1
   },
   {
     "weapon_category": "Knife",
-    "player_name": "CookieImpalerLvl16",
-    "steam_id": "175811974",
+    "player_name": "UnhappyCatToadLvl34",
+    "steam_id": "19653487",
     "kills": 1
   },
   {
