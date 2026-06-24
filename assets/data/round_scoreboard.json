@@ -14,16 +14,16 @@
     "kad_ratio": "2.61"
   },
   {
-    "player_name": "bluesMetalSonicLvl13",
+    "player_name": "bluesMetalSonicLvl15",
     "steam_id": "415141590",
-    "kills": 824,
-    "assists": 304,
-    "deaths": 705,
-    "mvps": 90,
-    "score": 2169,
-    "damage": 114249,
-    "rounds_played": 883,
-    "adr": "129.39",
+    "kills": 834,
+    "assists": 306,
+    "deaths": 712,
+    "mvps": 91,
+    "score": 2179,
+    "damage": 114870,
+    "rounds_played": 891,
+    "adr": "128.92",
     "kd_ratio": "1.17",
     "kad_ratio": "1.60"
   },
@@ -84,18 +84,18 @@
     "kad_ratio": "2.21"
   },
   {
-    "player_name": "EricDarkRangerLvl8",
+    "player_name": "EricDarkRangerLvl9",
     "steam_id": "21443158",
-    "kills": 646,
-    "assists": 325,
-    "deaths": 564,
+    "kills": 647,
+    "assists": 328,
+    "deaths": 571,
     "mvps": 70,
-    "score": 1762,
-    "damage": 89999,
-    "rounds_played": 713,
-    "adr": "126.23",
-    "kd_ratio": "1.15",
-    "kad_ratio": "1.72"
+    "score": 1771,
+    "damage": 90377,
+    "rounds_played": 720,
+    "adr": "125.52",
+    "kd_ratio": "1.13",
+    "kad_ratio": "1.71"
   },
   {
     "player_name": "tarTyrandeWhisperwindLvl42",
@@ -520,16 +520,16 @@
   {
     "player_name": "CumKissesVenomancerLvl23",
     "steam_id": "67520431",
-    "kills": 264,
-    "assists": 60,
-    "deaths": 222,
-    "mvps": 20,
-    "score": 587,
-    "damage": 28312,
-    "rounds_played": 331,
-    "adr": "85.53",
-    "kd_ratio": "1.19",
-    "kad_ratio": "1.46"
+    "kills": 268,
+    "assists": 63,
+    "deaths": 228,
+    "mvps": 21,
+    "score": 602,
+    "damage": 29100,
+    "rounds_played": 338,
+    "adr": "86.09",
+    "kd_ratio": "1.18",
+    "kad_ratio": "1.45"
   },
   {
     "player_name": "CrockettMageHunterLvl14",
@@ -742,32 +742,46 @@
     "kad_ratio": "1.13"
   },
   {
-    "player_name": "SkyLionParatrooperLvl3",
-    "steam_id": "4043586",
-    "kills": 184,
-    "assists": 63,
-    "deaths": 262,
-    "mvps": 18,
-    "score": 540,
-    "damage": 22757,
-    "rounds_played": 340,
-    "adr": "66.93",
-    "kd_ratio": "0.70",
-    "kad_ratio": "0.94"
+    "player_name": "wheelchairBansheeWC3Lvl12",
+    "steam_id": "326879082",
+    "kills": 190,
+    "assists": 35,
+    "deaths": 90,
+    "mvps": 31,
+    "score": 469,
+    "damage": 24308,
+    "rounds_played": 138,
+    "adr": "176.14",
+    "kd_ratio": "2.11",
+    "kad_ratio": "2.50"
   },
   {
-    "player_name": "wheelchairBansheeWC3Lvl11",
-    "steam_id": "326879082",
-    "kills": 180,
-    "assists": 33,
-    "deaths": 82,
-    "mvps": 30,
-    "score": 446,
-    "damage": 23121,
-    "rounds_played": 130,
-    "adr": "177.85",
-    "kd_ratio": "2.20",
-    "kad_ratio": "2.60"
+    "player_name": "1600microsoftpointsneededSorceressLvl16",
+    "steam_id": "41176942",
+    "kills": 185,
+    "assists": 73,
+    "deaths": 226,
+    "mvps": 12,
+    "score": 337,
+    "damage": 25217,
+    "rounds_played": 275,
+    "adr": "91.70",
+    "kd_ratio": "0.82",
+    "kad_ratio": "1.14"
+  },
+  {
+    "player_name": "SkyLionParatrooperLvl5",
+    "steam_id": "4043586",
+    "kills": 185,
+    "assists": 64,
+    "deaths": 269,
+    "mvps": 18,
+    "score": 550,
+    "damage": 22990,
+    "rounds_played": 346,
+    "adr": "66.45",
+    "kd_ratio": "0.69",
+    "kad_ratio": "0.93"
   },
   {
     "player_name": "MythicGpLCommandoLvl87",
@@ -796,20 +810,6 @@
     "adr": "152.76",
     "kd_ratio": "1.84",
     "kad_ratio": "2.38"
-  },
-  {
-    "player_name": "1600microsoftpointsneededSorceressLvl15",
-    "steam_id": "41176942",
-    "kills": 174,
-    "assists": 72,
-    "deaths": 221,
-    "mvps": 11,
-    "score": 303,
-    "damage": 24511,
-    "rounds_played": 267,
-    "adr": "91.80",
-    "kd_ratio": "0.79",
-    "kad_ratio": "1.11"
   },
   {
     "player_name": "TubertBigellowMonkDDLvl25",
@@ -882,6 +882,20 @@
     "kad_ratio": "1.73"
   },
   {
+    "player_name": "UnorthodoxHunterPitLordLvl7",
+    "steam_id": "267837800",
+    "kills": 155,
+    "assists": 63,
+    "deaths": 137,
+    "mvps": 8,
+    "score": 444,
+    "damage": 20915,
+    "rounds_played": 201,
+    "adr": "104.05",
+    "kd_ratio": "1.13",
+    "kad_ratio": "1.59"
+  },
+  {
     "player_name": "ThelRPGLvl27",
     "steam_id": "10003450",
     "kills": 151,
@@ -922,20 +936,6 @@
     "adr": "110.54",
     "kd_ratio": "1.60",
     "kad_ratio": "2.15"
-  },
-  {
-    "player_name": "UnorthodoxHunterPitLordLvl4",
-    "steam_id": "267837800",
-    "kills": 148,
-    "assists": 57,
-    "deaths": 130,
-    "mvps": 8,
-    "score": 417,
-    "damage": 19759,
-    "rounds_played": 194,
-    "adr": "101.85",
-    "kd_ratio": "1.14",
-    "kad_ratio": "1.58"
   },
   {
     "player_name": "BluntzfoshoAgentSmithLvl23",
@@ -994,6 +994,20 @@
     "kad_ratio": "4.91"
   },
   {
+    "player_name": "1Dead1PushupTeemoLvl26",
+    "steam_id": "1188258968",
+    "kills": 142,
+    "assists": 62,
+    "deaths": 160,
+    "mvps": 20,
+    "score": 431,
+    "damage": 19500,
+    "rounds_played": 208,
+    "adr": "93.75",
+    "kd_ratio": "0.89",
+    "kad_ratio": "1.28"
+  },
+  {
     "player_name": "xSatorixxTTVBarrelBoyLvl2",
     "steam_id": "66685727",
     "kills": 137,
@@ -1020,20 +1034,6 @@
     "adr": "137.66",
     "kd_ratio": "1.27",
     "kad_ratio": "1.83"
-  },
-  {
-    "player_name": "1Dead1PushupTeemoLvl26",
-    "steam_id": "1188258968",
-    "kills": 133,
-    "assists": 58,
-    "deaths": 155,
-    "mvps": 18,
-    "score": 406,
-    "damage": 18396,
-    "rounds_played": 202,
-    "adr": "91.07",
-    "kd_ratio": "0.86",
-    "kad_ratio": "1.23"
   },
   {
     "player_name": "JecaBytePrincessBenLvl26",
@@ -1134,6 +1134,20 @@
     "kad_ratio": "2.82"
   },
   {
+    "player_name": "JonoHighTemplarLvl7",
+    "steam_id": "51377294",
+    "kills": 111,
+    "assists": 41,
+    "deaths": 81,
+    "mvps": 7,
+    "score": 305,
+    "damage": 13773,
+    "rounds_played": 75,
+    "adr": "183.64",
+    "kd_ratio": "1.37",
+    "kad_ratio": "1.88"
+  },
+  {
     "player_name": "SurrealDynastyQueenBumblenadeLvl70",
     "steam_id": "954120",
     "kills": 110,
@@ -1176,20 +1190,6 @@
     "kad_ratio": "2.18"
   },
   {
-    "player_name": "JonoHighTemplarLvl6",
-    "steam_id": "51377294",
-    "kills": 107,
-    "assists": 39,
-    "deaths": 79,
-    "mvps": 6,
-    "score": 292,
-    "damage": 13179,
-    "rounds_played": 72,
-    "adr": "183.04",
-    "kd_ratio": "1.35",
-    "kad_ratio": "1.85"
-  },
-  {
     "player_name": "AlexIsAMonsterRockGolemLvl62",
     "steam_id": "3679281",
     "kills": 107,
@@ -1216,6 +1216,20 @@
     "adr": "118.32",
     "kd_ratio": "2.06",
     "kad_ratio": "2.73"
+  },
+  {
+    "player_name": "RebelDonkeyKongLvl10",
+    "steam_id": "152859091",
+    "kills": 106,
+    "assists": 76,
+    "deaths": 145,
+    "mvps": 3,
+    "score": 288,
+    "damage": 17102,
+    "rounds_played": 169,
+    "adr": "101.20",
+    "kd_ratio": "0.73",
+    "kad_ratio": "1.26"
   },
   {
     "player_name": "JustBestieThingsLaharlLvl16",
@@ -1260,18 +1274,18 @@
     "kad_ratio": "0.59"
   },
   {
-    "player_name": "BeHoppyShroudGhostLvl17",
+    "player_name": "BeHoppyLurkerLvl31",
     "steam_id": "1525185614",
-    "kills": 103,
-    "assists": 21,
-    "deaths": 89,
+    "kills": 105,
+    "assists": 22,
+    "deaths": 93,
     "mvps": 10,
-    "score": 176,
-    "damage": 11829,
-    "rounds_played": 102,
-    "adr": "115.97",
-    "kd_ratio": "1.16",
-    "kad_ratio": "1.39"
+    "score": 184,
+    "damage": 12173,
+    "rounds_played": 106,
+    "adr": "114.84",
+    "kd_ratio": "1.13",
+    "kad_ratio": "1.37"
   },
   {
     "player_name": "sourisPriestessoftheMoonLvl39",
@@ -1314,20 +1328,6 @@
     "adr": "105.96",
     "kd_ratio": "0.69",
     "kad_ratio": "1.03"
-  },
-  {
-    "player_name": "RebelMarioBrosLvl8",
-    "steam_id": "152859091",
-    "kills": 100,
-    "assists": 73,
-    "deaths": 140,
-    "mvps": 2,
-    "score": 285,
-    "damage": 16338,
-    "rounds_played": 161,
-    "adr": "101.48",
-    "kd_ratio": "0.71",
-    "kad_ratio": "1.24"
   },
   {
     "player_name": "zzzRPGLvl21",
@@ -1988,6 +1988,20 @@
     "kad_ratio": "2.67"
   },
   {
+    "player_name": "CrocodileDandyyCryptLordLvl4",
+    "steam_id": "163092379",
+    "kills": 49,
+    "assists": 13,
+    "deaths": 32,
+    "mvps": 10,
+    "score": 150,
+    "damage": 5847,
+    "rounds_played": 35,
+    "adr": "167.06",
+    "kd_ratio": "1.53",
+    "kad_ratio": "1.94"
+  },
+  {
     "player_name": "GraveyardKeeperProCookerLvl34",
     "steam_id": "37375118",
     "kills": 49,
@@ -2056,20 +2070,6 @@
     "adr": "70.18",
     "kd_ratio": "0.71",
     "kad_ratio": "0.89"
-  },
-  {
-    "player_name": "CrocodileDandyyWardenLvl13",
-    "steam_id": "163092379",
-    "kills": 47,
-    "assists": 6,
-    "deaths": 26,
-    "mvps": 10,
-    "score": 138,
-    "damage": 5214,
-    "rounds_played": 28,
-    "adr": "186.21",
-    "kd_ratio": "1.81",
-    "kad_ratio": "2.04"
   },
   {
     "player_name": "ColeKaneJasonVoorheesLvl16",
@@ -2224,6 +2224,20 @@
     "adr": "88.15",
     "kd_ratio": "1.20",
     "kad_ratio": "1.57"
+  },
+  {
+    "player_name": "ShadowslipBloodMageLvl28",
+    "steam_id": "20369330",
+    "kills": 41,
+    "assists": 16,
+    "deaths": 42,
+    "mvps": 1,
+    "score": 144,
+    "damage": 4600,
+    "rounds_played": 60,
+    "adr": "76.67",
+    "kd_ratio": "0.98",
+    "kad_ratio": "1.36"
   },
   {
     "player_name": "WorstplayerinCS2SpiritWalkerLvl17",
@@ -2462,20 +2476,6 @@
     "adr": "55.91",
     "kd_ratio": "0.67",
     "kad_ratio": "1.00"
-  },
-  {
-    "player_name": "ShadowslipBloodMageLvl27",
-    "steam_id": "20369330",
-    "kills": 34,
-    "assists": 15,
-    "deaths": 38,
-    "mvps": 1,
-    "score": 124,
-    "damage": 4215,
-    "rounds_played": 52,
-    "adr": "81.06",
-    "kd_ratio": "0.89",
-    "kad_ratio": "1.29"
   },
   {
     "player_name": "RedButtonUndeadScourgeLvl6",
