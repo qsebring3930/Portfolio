@@ -294,6 +294,20 @@
     "kad_ratio": "1.51"
   },
   {
+    "player_name": "ObsidianStormSpellBreakerLvl43",
+    "steam_id": "24524073",
+    "kills": 400,
+    "assists": 119,
+    "deaths": 204,
+    "mvps": 59,
+    "score": 1116,
+    "damage": 48940,
+    "rounds_played": 269,
+    "adr": "181.93",
+    "kd_ratio": "1.96",
+    "kad_ratio": "2.54"
+  },
+  {
     "player_name": "hKjMagikarpLvl22",
     "steam_id": "199574887",
     "kills": 399,
@@ -306,20 +320,6 @@
     "adr": "176.61",
     "kd_ratio": "1.53",
     "kad_ratio": "1.97"
-  },
-  {
-    "player_name": "ObsidianStormSpellBreakerLvl43",
-    "steam_id": "24524073",
-    "kills": 385,
-    "assists": 116,
-    "deaths": 201,
-    "mvps": 56,
-    "score": 1077,
-    "damage": 46981,
-    "rounds_played": 264,
-    "adr": "177.96",
-    "kd_ratio": "1.92",
-    "kad_ratio": "2.49"
   },
   {
     "player_name": "FireSniperArchmageLvl25",
@@ -406,6 +406,20 @@
     "kad_ratio": "1.85"
   },
   {
+    "player_name": "MilkyNavySealLvl25",
+    "steam_id": "14714479",
+    "kills": 319,
+    "assists": 163,
+    "deaths": 327,
+    "mvps": 23,
+    "score": 803,
+    "damage": 50171,
+    "rounds_played": 390,
+    "adr": "128.64",
+    "kd_ratio": "0.98",
+    "kad_ratio": "1.47"
+  },
+  {
     "player_name": "SnafuTyrandeWhisperwindLvl33",
     "steam_id": "18594167",
     "kills": 319,
@@ -418,20 +432,6 @@
     "adr": "102.81",
     "kd_ratio": "1.16",
     "kad_ratio": "1.52"
-  },
-  {
-    "player_name": "MilkyNavySealLvl24",
-    "steam_id": "14714479",
-    "kills": 311,
-    "assists": 162,
-    "deaths": 322,
-    "mvps": 23,
-    "score": 781,
-    "damage": 48763,
-    "rounds_played": 385,
-    "adr": "126.66",
-    "kd_ratio": "0.97",
-    "kad_ratio": "1.47"
   },
   {
     "player_name": "GucciWadeMurlocTidehunterLvl19",
@@ -492,16 +492,16 @@
   {
     "player_name": "SidBotLvl34",
     "steam_id": "399477860",
-    "kills": 284,
-    "assists": 151,
-    "deaths": 491,
+    "kills": 289,
+    "assists": 159,
+    "deaths": 497,
     "mvps": 24,
-    "score": 689,
-    "damage": 46750,
-    "rounds_played": 589,
-    "adr": "79.37",
+    "score": 705,
+    "damage": 47602,
+    "rounds_played": 595,
+    "adr": "80.00",
     "kd_ratio": "0.58",
-    "kad_ratio": "0.89"
+    "kad_ratio": "0.90"
   },
   {
     "player_name": "STANSuccubusHunterLvl8",
@@ -770,6 +770,20 @@
     "kad_ratio": "2.38"
   },
   {
+    "player_name": "SkyLionGhostLvl9",
+    "steam_id": "4043586",
+    "kills": 163,
+    "assists": 55,
+    "deaths": 235,
+    "mvps": 16,
+    "score": 461,
+    "damage": 19857,
+    "rounds_played": 306,
+    "adr": "64.89",
+    "kd_ratio": "0.69",
+    "kad_ratio": "0.93"
+  },
+  {
     "player_name": "TubertBigellowMonkDDLvl25",
     "steam_id": "7420022",
     "kills": 162,
@@ -838,20 +852,6 @@
     "adr": "129.43",
     "kd_ratio": "1.19",
     "kad_ratio": "1.71"
-  },
-  {
-    "player_name": "SkyLionSawGunnerLvl5",
-    "steam_id": "4043586",
-    "kills": 159,
-    "assists": 55,
-    "deaths": 230,
-    "mvps": 16,
-    "score": 451,
-    "damage": 19303,
-    "rounds_played": 302,
-    "adr": "63.92",
-    "kd_ratio": "0.69",
-    "kad_ratio": "0.93"
   },
   {
     "player_name": "EcstatictongsVoidwalkerLvl14",
@@ -1554,6 +1554,20 @@
     "kad_ratio": "1.76"
   },
   {
+    "player_name": "1Dead1PushupPrismaticGolemLvl14",
+    "steam_id": "1188258968",
+    "kills": 83,
+    "assists": 34,
+    "deaths": 115,
+    "mvps": 9,
+    "score": 243,
+    "damage": 11199,
+    "rounds_played": 146,
+    "adr": "76.71",
+    "kd_ratio": "0.72",
+    "kad_ratio": "1.02"
+  },
+  {
     "player_name": "HazardWizardDDLvl18",
     "steam_id": "161481336",
     "kills": 82,
@@ -1622,20 +1636,6 @@
     "adr": "155.85",
     "kd_ratio": "2.19",
     "kad_ratio": "2.86"
-  },
-  {
-    "player_name": "1Dead1PushupTeemoLvl20",
-    "steam_id": "1188258968",
-    "kills": 78,
-    "assists": 33,
-    "deaths": 111,
-    "mvps": 8,
-    "score": 233,
-    "damage": 10947,
-    "rounds_played": 141,
-    "adr": "77.64",
-    "kd_ratio": "0.70",
-    "kad_ratio": "1.00"
   },
   {
     "player_name": "BeHoppyShroudGhostLvl17",
