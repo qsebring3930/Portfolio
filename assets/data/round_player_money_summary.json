@@ -170,10 +170,18 @@
   {
     "player_name": "SkyLionGhostLvl9",
     "steam_id": "4043586",
-    "money_spent": 143700,
-    "net_betting": 135602,
-    "betting_won": 255925,
+    "money_spent": 144350,
+    "net_betting": 136452,
+    "betting_won": 256775,
     "betting_lost": 120323
+  },
+  {
+    "player_name": "ObsidianStormSpellBreakerLvl43",
+    "steam_id": "24524073",
+    "money_spent": 91400,
+    "net_betting": 135006,
+    "betting_won": 189519,
+    "betting_lost": 54513
   },
   {
     "player_name": "HasSWizardDDLvl29",
@@ -182,14 +190,6 @@
     "net_betting": 132583,
     "betting_won": 165195,
     "betting_lost": 32612
-  },
-  {
-    "player_name": "ObsidianStormSpellBreakerLvl43",
-    "steam_id": "24524073",
-    "money_spent": 89000,
-    "net_betting": 130506,
-    "betting_won": 185019,
-    "betting_lost": 54513
   },
   {
     "player_name": "JonoHighTemplarLvl6",
@@ -2120,14 +2120,6 @@
     "betting_lost": 33767
   },
   {
-    "player_name": "1Dead1PushupPrismaticGolemLvl14",
-    "steam_id": "1188258968",
-    "money_spent": 33000,
-    "net_betting": -18552,
-    "betting_won": 43565,
-    "betting_lost": 62117
-  },
-  {
     "player_name": "m0rttzFarSeerLvl14",
     "steam_id": "827860",
     "money_spent": 5900,
@@ -2144,12 +2136,20 @@
     "betting_lost": 33250
   },
   {
-    "player_name": "AzaBorovaDemolitionistLvl10",
+    "player_name": "AzaBorovaMagikarpLvl1",
     "steam_id": "1917962806",
     "money_spent": 155550,
-    "net_betting": -21708,
-    "betting_won": 155837,
-    "betting_lost": 177545
+    "net_betting": -24308,
+    "betting_won": 156237,
+    "betting_lost": 180545
+  },
+  {
+    "player_name": "1Dead1PushupPrismaticGolemLvl15",
+    "steam_id": "1188258968",
+    "money_spent": 33400,
+    "net_betting": -26352,
+    "betting_won": 44265,
+    "betting_lost": 70617
   },
   {
     "player_name": "illusionMLurkerLvl28",
@@ -2424,11 +2424,11 @@
     "betting_lost": 557035
   },
   {
-    "player_name": "SidBotLvl34",
+    "player_name": "SidBotLvl35",
     "steam_id": "399477860",
-    "money_spent": 161350,
-    "net_betting": -285142,
-    "betting_won": 324255,
-    "betting_lost": 609397
+    "money_spent": 165350,
+    "net_betting": -279842,
+    "betting_won": 329855,
+    "betting_lost": 609697
   }
 ]
