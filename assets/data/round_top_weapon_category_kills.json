@@ -73,15 +73,15 @@
   },
   {
     "weapon_category": "Pistol",
-    "player_name": "GucciWadeMurlocTidehunterLvl19",
-    "steam_id": "135851093",
-    "kills": 158
+    "player_name": "bluesMarauderLvl26",
+    "steam_id": "415141590",
+    "kills": 161
   },
   {
     "weapon_category": "Pistol",
-    "player_name": "bluesMarauderLvl26",
-    "steam_id": "415141590",
-    "kills": 155
+    "player_name": "GucciWadeMurlocTidehunterLvl19",
+    "steam_id": "135851093",
+    "kills": 158
   },
   {
     "weapon_category": "Pistol",
@@ -246,6 +246,12 @@
     "kills": 67
   },
   {
+    "weapon_category": "Pistol",
+    "player_name": "EricRPGLvl28",
+    "steam_id": "21443158",
+    "kills": 65
+  },
+  {
     "weapon_category": "Knife",
     "player_name": "ShuxpyObserverLvl25",
     "steam_id": "373936564",
@@ -337,14 +343,14 @@
   },
   {
     "weapon_category": "Pistol",
-    "player_name": "EricRPGLvl27",
-    "steam_id": "21443158",
-    "kills": 58
+    "player_name": "PerculesRozalinLvl0",
+    "steam_id": "39011615",
+    "kills": 56
   },
   {
     "weapon_category": "Pistol",
-    "player_name": "PerculesRozalinLvl0",
-    "steam_id": "39011615",
+    "player_name": "SidHexetteLvl7",
+    "steam_id": "399477860",
     "kills": 56
   },
   {
@@ -358,12 +364,6 @@
     "player_name": "MoldybreadWorldEaterLvl38",
     "steam_id": "107058756",
     "kills": 54
-  },
-  {
-    "weapon_category": "Pistol",
-    "player_name": "SidHexetteLvl6",
-    "steam_id": "399477860",
-    "kills": 53
   },
   {
     "weapon_category": "Pistol",
@@ -427,7 +427,7 @@
   },
   {
     "weapon_category": "Knife",
-    "player_name": "EricRPGLvl27",
+    "player_name": "EricRPGLvl28",
     "steam_id": "21443158",
     "kills": 49
   },
@@ -463,7 +463,7 @@
   },
   {
     "weapon_category": "Knife",
-    "player_name": "1600microsoftpointsneededSorceressLvl12",
+    "player_name": "1600microsoftpointsneededSorceressLvl13",
     "steam_id": "41176942",
     "kills": 47
   },
@@ -733,7 +733,7 @@
   },
   {
     "weapon_category": "Knife",
-    "player_name": "SidHexetteLvl6",
+    "player_name": "SidHexetteLvl7",
     "steam_id": "399477860",
     "kills": 30
   },
@@ -883,7 +883,7 @@
   },
   {
     "weapon_category": "Pistol",
-    "player_name": "xSatorixxTTVLoveHurtsLvl11",
+    "player_name": "xSatorixxTTVBarrelBoyLvl2",
     "steam_id": "66685727",
     "kills": 24
   },
@@ -1327,6 +1327,12 @@
   },
   {
     "weapon_category": "Sniper",
+    "player_name": "ScrubishArchmageLvl14",
+    "steam_id": "32734970",
+    "kills": 12
+  },
+  {
+    "weapon_category": "Sniper",
     "player_name": "JohnnieRicoShadowHunterLvl5",
     "steam_id": "94156945",
     "kills": 12
@@ -1470,12 +1476,6 @@
     "kills": 11
   },
   {
-    "weapon_category": "Sniper",
-    "player_name": "ScrubishArchmageLvl13",
-    "steam_id": "32734970",
-    "kills": 11
-  },
-  {
     "weapon_category": "Knife",
     "player_name": "VEGETO6969CrazyDaveLvl82",
     "steam_id": "77452012",
@@ -1506,30 +1506,6 @@
     "kills": 10
   },
   {
-    "weapon_category": "Sniper",
-    "player_name": "RexxxTimeshifterLvl26",
-    "steam_id": "33358424",
-    "kills": 10
-  },
-  {
-    "weapon_category": "Sniper",
-    "player_name": "RenarsUndeadScourgeLvl17",
-    "steam_id": "380839289",
-    "kills": 10
-  },
-  {
-    "weapon_category": "Sniper",
-    "player_name": "SidHexetteLvl6",
-    "steam_id": "399477860",
-    "kills": 10
-  },
-  {
-    "weapon_category": "Sniper",
-    "player_name": "KngNecromancerLvl7",
-    "steam_id": "68359102",
-    "kills": 10
-  },
-  {
     "weapon_category": "Knife",
     "player_name": "1Dead1PushupTeemoLvl25",
     "steam_id": "1188258968",
@@ -1557,6 +1533,30 @@
     "weapon_category": "Sniper",
     "player_name": "CCHILLYYLichLvl4",
     "steam_id": "8533050",
+    "kills": 10
+  },
+  {
+    "weapon_category": "Sniper",
+    "player_name": "RexxxTimeshifterLvl26",
+    "steam_id": "33358424",
+    "kills": 10
+  },
+  {
+    "weapon_category": "Sniper",
+    "player_name": "RenarsUndeadScourgeLvl17",
+    "steam_id": "380839289",
+    "kills": 10
+  },
+  {
+    "weapon_category": "Sniper",
+    "player_name": "SidHexetteLvl7",
+    "steam_id": "399477860",
+    "kills": 10
+  },
+  {
+    "weapon_category": "Sniper",
+    "player_name": "KngNecromancerLvl7",
+    "steam_id": "68359102",
     "kills": 10
   },
   {
@@ -1593,6 +1593,12 @@
     "weapon_category": "Pistol",
     "player_name": "BiddynosoundThorLvl8",
     "steam_id": "30308641",
+    "kills": 10
+  },
+  {
+    "weapon_category": "Pistol",
+    "player_name": "ScrubishArchmageLvl14",
+    "steam_id": "32734970",
     "kills": 10
   },
   {
@@ -1753,7 +1759,7 @@
   },
   {
     "weapon_category": "Pistol",
-    "player_name": "1600microsoftpointsneededSorceressLvl12",
+    "player_name": "1600microsoftpointsneededSorceressLvl13",
     "steam_id": "41176942",
     "kills": 8
   },
@@ -1803,12 +1809,6 @@
     "weapon_category": "Pistol",
     "player_name": "wontonPriestLvl35",
     "steam_id": "105238651",
-    "kills": 8
-  },
-  {
-    "weapon_category": "Pistol",
-    "player_name": "ScrubishArchmageLvl13",
-    "steam_id": "32734970",
     "kills": 8
   },
   {
@@ -1873,7 +1873,7 @@
   },
   {
     "weapon_category": "Sniper",
-    "player_name": "EricRPGLvl27",
+    "player_name": "EricRPGLvl28",
     "steam_id": "21443158",
     "kills": 7
   },
@@ -2035,7 +2035,7 @@
   },
   {
     "weapon_category": "Sniper",
-    "player_name": "xSatorixxTTVLoveHurtsLvl11",
+    "player_name": "xSatorixxTTVBarrelBoyLvl2",
     "steam_id": "66685727",
     "kills": 6
   },
@@ -2821,7 +2821,7 @@
   },
   {
     "weapon_category": "Sniper",
-    "player_name": "1600microsoftpointsneededSorceressLvl12",
+    "player_name": "1600microsoftpointsneededSorceressLvl13",
     "steam_id": "41176942",
     "kills": 2
   },
