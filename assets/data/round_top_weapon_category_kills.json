@@ -228,6 +228,12 @@
     "kills": 71
   },
   {
+    "weapon_category": "Pistol",
+    "player_name": "1Dead1PushupTeemoLvl21",
+    "steam_id": "1188258968",
+    "kills": 70
+  },
+  {
     "weapon_category": "Knife",
     "player_name": "GoldfishVendingMachineLvl46",
     "steam_id": "108554414",
@@ -238,12 +244,6 @@
     "player_name": "BigPStalkerLvl22",
     "steam_id": "14281846",
     "kills": 67
-  },
-  {
-    "weapon_category": "Pistol",
-    "player_name": "1Dead1PushupPrismaticGolemLvl17",
-    "steam_id": "1188258968",
-    "kills": 65
   },
   {
     "weapon_category": "Knife",
@@ -445,6 +445,12 @@
   },
   {
     "weapon_category": "Pistol",
+    "player_name": "AzaBorovaMudkipLvl6",
+    "steam_id": "1917962806",
+    "kills": 47
+  },
+  {
+    "weapon_category": "Pistol",
     "player_name": "reaLityCookietheCookLvl25",
     "steam_id": "52549756",
     "kills": 47
@@ -457,7 +463,7 @@
   },
   {
     "weapon_category": "Pistol",
-    "player_name": "SidBotLvl35",
+    "player_name": "SidMichaelMyersLvl29",
     "steam_id": "399477860",
     "kills": 47
   },
@@ -465,12 +471,6 @@
     "weapon_category": "Pistol",
     "player_name": "EricRPGLvl24",
     "steam_id": "21443158",
-    "kills": 46
-  },
-  {
-    "weapon_category": "Pistol",
-    "player_name": "AzaBorovaMagikarpLvl4",
-    "steam_id": "1917962806",
     "kills": 46
   },
   {
@@ -727,15 +727,15 @@
   },
   {
     "weapon_category": "Knife",
-    "player_name": "JohnnieRicoShadowHunterLvl5",
-    "steam_id": "94156945",
+    "player_name": "SidMichaelMyersLvl29",
+    "steam_id": "399477860",
     "kills": 30
   },
   {
     "weapon_category": "Knife",
-    "player_name": "SidBotLvl35",
-    "steam_id": "399477860",
-    "kills": 29
+    "player_name": "JohnnieRicoShadowHunterLvl5",
+    "steam_id": "94156945",
+    "kills": 30
   },
   {
     "weapon_category": "Knife",
@@ -781,7 +781,7 @@
   },
   {
     "weapon_category": "Sniper",
-    "player_name": "AzaBorovaMagikarpLvl4",
+    "player_name": "AzaBorovaMudkipLvl6",
     "steam_id": "1917962806",
     "kills": 28
   },
@@ -817,7 +817,7 @@
   },
   {
     "weapon_category": "Knife",
-    "player_name": "AzaBorovaMagikarpLvl4",
+    "player_name": "AzaBorovaMudkipLvl6",
     "steam_id": "1917962806",
     "kills": 26
   },
@@ -1501,7 +1501,7 @@
   },
   {
     "weapon_category": "Knife",
-    "player_name": "1Dead1PushupPrismaticGolemLvl17",
+    "player_name": "1Dead1PushupTeemoLvl21",
     "steam_id": "1188258968",
     "kills": 10
   },
@@ -1543,7 +1543,7 @@
   },
   {
     "weapon_category": "Sniper",
-    "player_name": "SidBotLvl35",
+    "player_name": "SidMichaelMyersLvl29",
     "steam_id": "399477860",
     "kills": 10
   },
@@ -2515,7 +2515,7 @@
   },
   {
     "weapon_category": "Sniper",
-    "player_name": "1Dead1PushupPrismaticGolemLvl17",
+    "player_name": "1Dead1PushupTeemoLvl21",
     "steam_id": "1188258968",
     "kills": 3
   },
