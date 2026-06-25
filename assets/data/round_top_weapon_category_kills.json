@@ -337,6 +337,12 @@
   },
   {
     "weapon_category": "Pistol",
+    "player_name": "STANHitmonleeLvl3",
+    "steam_id": "27614129",
+    "kills": 73
+  },
+  {
+    "weapon_category": "Pistol",
     "player_name": "EricBansheeWC3Lvl15",
     "steam_id": "21443158",
     "kills": 73
@@ -346,12 +352,6 @@
     "player_name": "HornySexSlaveMkVWaxGolemLvl18",
     "steam_id": "51789856",
     "kills": 73
-  },
-  {
-    "weapon_category": "Pistol",
-    "player_name": "STANMarineLvl22",
-    "steam_id": "27614129",
-    "kills": 72
   },
   {
     "weapon_category": "Knife",
@@ -463,7 +463,7 @@
   },
   {
     "weapon_category": "Pistol",
-    "player_name": "ThazAwfulAimLvl14",
+    "player_name": "ThazAwfulAimLvl15",
     "steam_id": "25869320",
     "kills": 61
   },
@@ -571,7 +571,7 @@
   },
   {
     "weapon_category": "Knife",
-    "player_name": "ThazAwfulAimLvl14",
+    "player_name": "ThazAwfulAimLvl15",
     "steam_id": "25869320",
     "kills": 51
   },
@@ -733,7 +733,7 @@
   },
   {
     "weapon_category": "Sniper",
-    "player_name": "STANMarineLvl22",
+    "player_name": "STANHitmonleeLvl3",
     "steam_id": "27614129",
     "kills": 41
   },
@@ -858,6 +858,12 @@
     "kills": 33
   },
   {
+    "weapon_category": "Knife",
+    "player_name": "ShirosCloudGhoulLvl5",
+    "steam_id": "241472349",
+    "kills": 32
+  },
+  {
     "weapon_category": "Sniper",
     "player_name": "VaxisShroudGhostLvl25",
     "steam_id": "87858561",
@@ -865,7 +871,7 @@
   },
   {
     "weapon_category": "Pistol",
-    "player_name": "ReaperthegrimprinnyFighterDDLvl9",
+    "player_name": "ReaperthegrimprinnyRogueDDLvl1",
     "steam_id": "69947938",
     "kills": 32
   },
@@ -973,7 +979,7 @@
   },
   {
     "weapon_category": "Sniper",
-    "player_name": "ShirosCloudGhoulLvl3",
+    "player_name": "ShirosCloudGhoulLvl5",
     "steam_id": "241472349",
     "kills": 29
   },
@@ -981,12 +987,6 @@
     "weapon_category": "Knife",
     "player_name": "CrockettMageHunterLvl14",
     "steam_id": "176528679",
-    "kills": 29
-  },
-  {
-    "weapon_category": "Knife",
-    "player_name": "ShirosCloudGhoulLvl3",
-    "steam_id": "241472349",
     "kills": 29
   },
   {
@@ -1105,7 +1105,7 @@
   },
   {
     "weapon_category": "Pistol",
-    "player_name": "ShirosCloudGhoulLvl3",
+    "player_name": "ShirosCloudGhoulLvl5",
     "steam_id": "241472349",
     "kills": 23
   },
@@ -2485,7 +2485,7 @@
   },
   {
     "weapon_category": "Knife",
-    "player_name": "STANMarineLvl22",
+    "player_name": "STANHitmonleeLvl3",
     "steam_id": "27614129",
     "kills": 5
   },
@@ -2695,7 +2695,7 @@
   },
   {
     "weapon_category": "Knife",
-    "player_name": "ReaperthegrimprinnyFighterDDLvl9",
+    "player_name": "ReaperthegrimprinnyRogueDDLvl1",
     "steam_id": "69947938",
     "kills": 4
   },
@@ -2779,7 +2779,7 @@
   },
   {
     "weapon_category": "Sniper",
-    "player_name": "SeaguldUndeadScourgeLvl11",
+    "player_name": "SeaguldUndeadScourgeLvl12",
     "steam_id": "10485765",
     "kills": 3
   },
@@ -3205,7 +3205,7 @@
   },
   {
     "weapon_category": "Pistol",
-    "player_name": "SeaguldUndeadScourgeLvl11",
+    "player_name": "SeaguldUndeadScourgeLvl12",
     "steam_id": "10485765",
     "kills": 2
   },
@@ -3667,7 +3667,7 @@
   },
   {
     "weapon_category": "Knife",
-    "player_name": "SeaguldUndeadScourgeLvl11",
+    "player_name": "SeaguldUndeadScourgeLvl12",
     "steam_id": "10485765",
     "kills": 1
   },
