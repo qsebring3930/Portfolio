@@ -7,7 +7,7 @@
   },
   {
     "weapon_category": "Pistol",
-    "player_name": "RawrMcRawrSpiderLvl16",
+    "player_name": "RawrMcRawrZerglingLvl33",
     "steam_id": "20687493",
     "kills": 361
   },
@@ -19,13 +19,13 @@
   },
   {
     "weapon_category": "Knife",
-    "player_name": "RawrMcRawrSpiderLvl16",
+    "player_name": "RawrMcRawrZerglingLvl33",
     "steam_id": "20687493",
-    "kills": 306
+    "kills": 316
   },
   {
     "weapon_category": "Sniper",
-    "player_name": "RawrMcRawrSpiderLvl16",
+    "player_name": "RawrMcRawrZerglingLvl33",
     "steam_id": "20687493",
     "kills": 283
   },
@@ -145,7 +145,7 @@
   },
   {
     "weapon_category": "Pistol",
-    "player_name": "1Dead1PushupPrismaticGolemLvl19",
+    "player_name": "1Dead1PushupAlienLvl0",
     "steam_id": "1188258968",
     "kills": 142
   },
@@ -216,6 +216,12 @@
     "kills": 97
   },
   {
+    "weapon_category": "Pistol",
+    "player_name": "Crockett",
+    "steam_id": "176528679",
+    "kills": 95
+  },
+  {
     "weapon_category": "Sniper",
     "player_name": "AimTh3GodKill3rLvl15",
     "steam_id": "225176809",
@@ -232,12 +238,6 @@
     "player_name": "RexxxTimeshifterLvl30",
     "steam_id": "33358424",
     "kills": 91
-  },
-  {
-    "weapon_category": "Pistol",
-    "player_name": "CrockettMageHunterLvl14",
-    "steam_id": "176528679",
-    "kills": 89
   },
   {
     "weapon_category": "Sniper",
@@ -337,7 +337,7 @@
   },
   {
     "weapon_category": "Pistol",
-    "player_name": "STANGnomeSpyLvl8",
+    "player_name": "STANGnomeSpyLvl10",
     "steam_id": "27614129",
     "kills": 74
   },
@@ -427,7 +427,7 @@
   },
   {
     "weapon_category": "Pistol",
-    "player_name": "ThazDarkArchonLvl9",
+    "player_name": "ThazGunGamerLvl23",
     "steam_id": "25869320",
     "kills": 63
   },
@@ -481,9 +481,9 @@
   },
   {
     "weapon_category": "Pistol",
-    "player_name": "AzaBorovaHitmonleeLvl5",
+    "player_name": "AzaBorovaBoxLvl10",
     "steam_id": "1917962806",
-    "kills": 59
+    "kills": 60
   },
   {
     "weapon_category": "Pistol",
@@ -505,7 +505,7 @@
   },
   {
     "weapon_category": "Knife",
-    "player_name": "zenwormTaurenChieftainLvl30",
+    "player_name": "zenwormTaurenChieftainLvl31",
     "steam_id": "10745543",
     "kills": 59
   },
@@ -523,7 +523,7 @@
   },
   {
     "weapon_category": "Knife",
-    "player_name": "ThazDarkArchonLvl9",
+    "player_name": "ThazGunGamerLvl23",
     "steam_id": "25869320",
     "kills": 55
   },
@@ -739,7 +739,7 @@
   },
   {
     "weapon_category": "Sniper",
-    "player_name": "STANGnomeSpyLvl8",
+    "player_name": "STANGnomeSpyLvl10",
     "steam_id": "27614129",
     "kills": 41
   },
@@ -762,6 +762,12 @@
     "kills": 40
   },
   {
+    "weapon_category": "Sniper",
+    "player_name": "AzaBorovaBoxLvl10",
+    "steam_id": "1917962806",
+    "kills": 39
+  },
+  {
     "weapon_category": "Knife",
     "player_name": "LtmonkeyWaxGolemLvl34",
     "steam_id": "24791364",
@@ -771,12 +777,6 @@
     "weapon_category": "Knife",
     "player_name": "SidMichaelMyersLvl29",
     "steam_id": "399477860",
-    "kills": 38
-  },
-  {
-    "weapon_category": "Sniper",
-    "player_name": "AzaBorovaHitmonleeLvl5",
-    "steam_id": "1917962806",
     "kills": 38
   },
   {
@@ -835,6 +835,12 @@
   },
   {
     "weapon_category": "Pistol",
+    "player_name": "zenwormTaurenChieftainLvl31",
+    "steam_id": "10745543",
+    "kills": 35
+  },
+  {
+    "weapon_category": "Pistol",
     "player_name": "ReaperthegrimprinnyRogueDDLvl4",
     "steam_id": "69947938",
     "kills": 35
@@ -846,16 +852,10 @@
     "kills": 34
   },
   {
-    "weapon_category": "Pistol",
-    "player_name": "zenwormTaurenChieftainLvl30",
-    "steam_id": "10745543",
+    "weapon_category": "Knife",
+    "player_name": "AzaBorovaBoxLvl10",
+    "steam_id": "1917962806",
     "kills": 34
-  },
-  {
-    "weapon_category": "Pistol",
-    "player_name": "SmagenaflurpakDruidoftheTalonLvl15",
-    "steam_id": "299611531",
-    "kills": 33
   },
   {
     "weapon_category": "Knife",
@@ -870,16 +870,10 @@
     "kills": 33
   },
   {
-    "weapon_category": "Knife",
-    "player_name": "AzaBorovaHitmonleeLvl5",
-    "steam_id": "1917962806",
+    "weapon_category": "Pistol",
+    "player_name": "SmagenaflurpakDruidoftheTalonLvl15",
+    "steam_id": "299611531",
     "kills": 33
-  },
-  {
-    "weapon_category": "Sniper",
-    "player_name": "VaxisShroudGhostLvl25",
-    "steam_id": "87858561",
-    "kills": 32
   },
   {
     "weapon_category": "Pistol",
@@ -888,10 +882,22 @@
     "kills": 32
   },
   {
+    "weapon_category": "Sniper",
+    "player_name": "VaxisShroudGhostLvl25",
+    "steam_id": "87858561",
+    "kills": 32
+  },
+  {
     "weapon_category": "Knife",
     "player_name": "SkyLionTimeshifterLvl13",
     "steam_id": "4043586",
     "kills": 32
+  },
+  {
+    "weapon_category": "Sniper",
+    "player_name": "PepkilzPriestLvl74",
+    "steam_id": "17201640",
+    "kills": 31
   },
   {
     "weapon_category": "Sniper",
@@ -912,10 +918,16 @@
     "kills": 31
   },
   {
-    "weapon_category": "Sniper",
-    "player_name": "PepkilzPriestLvl74",
-    "steam_id": "17201640",
-    "kills": 31
+    "weapon_category": "Pistol",
+    "player_name": "SnafuTyrandeWhisperwindLvl33",
+    "steam_id": "18594167",
+    "kills": 30
+  },
+  {
+    "weapon_category": "Pistol",
+    "player_name": "fathogjrCryptLordLvl25",
+    "steam_id": "37828453",
+    "kills": 30
   },
   {
     "weapon_category": "Sniper",
@@ -936,22 +948,22 @@
     "kills": 30
   },
   {
-    "weapon_category": "Pistol",
-    "player_name": "SnafuTyrandeWhisperwindLvl33",
-    "steam_id": "18594167",
-    "kills": 30
-  },
-  {
-    "weapon_category": "Pistol",
-    "player_name": "fathogjrCryptLordLvl25",
-    "steam_id": "37828453",
-    "kills": 30
-  },
-  {
     "weapon_category": "Knife",
     "player_name": "JohnnieRicoShadowHunterLvl5",
     "steam_id": "94156945",
     "kills": 30
+  },
+  {
+    "weapon_category": "Sniper",
+    "player_name": "ShirosCloudGhoulLvl8",
+    "steam_id": "241472349",
+    "kills": 29
+  },
+  {
+    "weapon_category": "Knife",
+    "player_name": "Crockett",
+    "steam_id": "176528679",
+    "kills": 29
   },
   {
     "weapon_category": "Pistol",
@@ -978,24 +990,6 @@
     "kills": 29
   },
   {
-    "weapon_category": "Sniper",
-    "player_name": "ShirosCloudGhoulLvl8",
-    "steam_id": "241472349",
-    "kills": 29
-  },
-  {
-    "weapon_category": "Knife",
-    "player_name": "CrockettMageHunterLvl14",
-    "steam_id": "176528679",
-    "kills": 29
-  },
-  {
-    "weapon_category": "Knife",
-    "player_name": "DerpmindNecromancerLvl22",
-    "steam_id": "20254672",
-    "kills": 28
-  },
-  {
     "weapon_category": "Pistol",
     "player_name": "FireSniperArchmageLvl29",
     "steam_id": "3069543",
@@ -1005,6 +999,12 @@
     "weapon_category": "Pistol",
     "player_name": "BakuryuDruidoftheClawLvl37",
     "steam_id": "884806",
+    "kills": 28
+  },
+  {
+    "weapon_category": "Knife",
+    "player_name": "DerpmindNecromancerLvl22",
+    "steam_id": "20254672",
     "kills": 28
   },
   {
@@ -1459,7 +1459,7 @@
   },
   {
     "weapon_category": "Knife",
-    "player_name": "1Dead1PushupPrismaticGolemLvl19",
+    "player_name": "1Dead1PushupAlienLvl0",
     "steam_id": "1188258968",
     "kills": 16
   },
@@ -1753,7 +1753,7 @@
   },
   {
     "weapon_category": "Sniper",
-    "player_name": "CrockettMageHunterLvl14",
+    "player_name": "Crockett",
     "steam_id": "176528679",
     "kills": 11
   },
@@ -1891,7 +1891,7 @@
   },
   {
     "weapon_category": "Sniper",
-    "player_name": "zenwormTaurenChieftainLvl30",
+    "player_name": "zenwormTaurenChieftainLvl31",
     "steam_id": "10745543",
     "kills": 9
   },
@@ -2491,7 +2491,7 @@
   },
   {
     "weapon_category": "Knife",
-    "player_name": "STANGnomeSpyLvl8",
+    "player_name": "STANGnomeSpyLvl10",
     "steam_id": "27614129",
     "kills": 5
   },
@@ -2791,7 +2791,7 @@
   },
   {
     "weapon_category": "Sniper",
-    "player_name": "1Dead1PushupPrismaticGolemLvl19",
+    "player_name": "1Dead1PushupAlienLvl0",
     "steam_id": "1188258968",
     "kills": 3
   },
