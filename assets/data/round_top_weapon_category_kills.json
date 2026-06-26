@@ -7,7 +7,7 @@
   },
   {
     "weapon_category": "Pistol",
-    "player_name": "RawrMcRawrZerglingLvl35",
+    "player_name": "RawrMcRawrNecromancerLvl19",
     "steam_id": "20687493",
     "kills": 463
   },
@@ -19,9 +19,9 @@
   },
   {
     "weapon_category": "Knife",
-    "player_name": "RawrMcRawrZerglingLvl35",
+    "player_name": "RawrMcRawrNecromancerLvl19",
     "steam_id": "20687493",
-    "kills": 385
+    "kills": 386
   },
   {
     "weapon_category": "Pistol",
@@ -49,7 +49,7 @@
   },
   {
     "weapon_category": "Sniper",
-    "player_name": "RawrMcRawrZerglingLvl35",
+    "player_name": "RawrMcRawrNecromancerLvl19",
     "steam_id": "20687493",
     "kills": 283
   },
@@ -79,9 +79,9 @@
   },
   {
     "weapon_category": "Pistol",
-    "player_name": "bluesSorcererDDLvl13",
+    "player_name": "bluesSorcererDDLvl16",
     "steam_id": "415141590",
-    "kills": 228
+    "kills": 231
   },
   {
     "weapon_category": "Sniper",
@@ -187,7 +187,7 @@
   },
   {
     "weapon_category": "Knife",
-    "player_name": "bluesSorcererDDLvl13",
+    "player_name": "bluesSorcererDDLvl16",
     "steam_id": "415141590",
     "kills": 162
   },
@@ -199,13 +199,13 @@
   },
   {
     "weapon_category": "Knife",
-    "player_name": "neighbourhoodalcoholicAdventurerLvl24",
+    "player_name": "neighbourhoodalcoholicAdventurerLvl26",
     "steam_id": "57889259",
-    "kills": 149
+    "kills": 150
   },
   {
     "weapon_category": "Pistol",
-    "player_name": "CrockettMountainKingLvl14",
+    "player_name": "CrockettMountainKingLvl16",
     "steam_id": "176528679",
     "kills": 145
   },
@@ -217,7 +217,7 @@
   },
   {
     "weapon_category": "Pistol",
-    "player_name": "1Dead1PushupAlienLvl10",
+    "player_name": "1Dead1PushupLichLvl16",
     "steam_id": "1188258968",
     "kills": 142
   },
@@ -229,7 +229,7 @@
   },
   {
     "weapon_category": "Knife",
-    "player_name": "ZyzzGeodetheRagingRavineLvl91",
+    "player_name": "ZyzzBloodMageLvl34",
     "steam_id": "1687969288",
     "kills": 136
   },
@@ -246,6 +246,12 @@
     "kills": 129
   },
   {
+    "weapon_category": "Pistol",
+    "player_name": "neighbourhoodalcoholicAdventurerLvl26",
+    "steam_id": "57889259",
+    "kills": 126
+  },
+  {
     "weapon_category": "Knife",
     "player_name": "MilkyCrazyDaveLvl37",
     "steam_id": "14714479",
@@ -256,12 +262,6 @@
     "player_name": "PerculesParatrooperLvl11",
     "steam_id": "39011615",
     "kills": 124
-  },
-  {
-    "weapon_category": "Pistol",
-    "player_name": "neighbourhoodalcoholicAdventurerLvl24",
-    "steam_id": "57889259",
-    "kills": 122
   },
   {
     "weapon_category": "Knife",
@@ -445,6 +445,12 @@
   },
   {
     "weapon_category": "Knife",
+    "player_name": "FireSniperYandereLvl14",
+    "steam_id": "3069543",
+    "kills": 81
+  },
+  {
+    "weapon_category": "Knife",
     "player_name": "HornySexSlaveMkVSoySusanooLvl4",
     "steam_id": "51789856",
     "kills": 81
@@ -504,12 +510,6 @@
     "kills": 75
   },
   {
-    "weapon_category": "Knife",
-    "player_name": "FireSniperYandereLvl12",
-    "steam_id": "3069543",
-    "kills": 74
-  },
-  {
     "weapon_category": "Pistol",
     "player_name": "PrincessBenWorldEaterLvl106",
     "steam_id": "64194714",
@@ -529,9 +529,15 @@
   },
   {
     "weapon_category": "Sniper",
-    "player_name": "bluesSorcererDDLvl13",
+    "player_name": "bluesSorcererDDLvl16",
     "steam_id": "415141590",
     "kills": 68
+  },
+  {
+    "weapon_category": "Knife",
+    "player_name": "CrockettMountainKingLvl16",
+    "steam_id": "176528679",
+    "kills": 67
   },
   {
     "weapon_category": "Pistol",
@@ -544,6 +550,12 @@
     "player_name": "hKjSilencerLvl36",
     "steam_id": "199574887",
     "kills": 65
+  },
+  {
+    "weapon_category": "Knife",
+    "player_name": "zenwormSpectreLvl14",
+    "steam_id": "10745543",
+    "kills": 64
   },
   {
     "weapon_category": "Pistol",
@@ -567,12 +579,6 @@
     "weapon_category": "Knife",
     "player_name": "SensibleDNkLurkerLvl22",
     "steam_id": "1226709410",
-    "kills": 63
-  },
-  {
-    "weapon_category": "Knife",
-    "player_name": "zenwormGragasLvl9",
-    "steam_id": "10745543",
     "kills": 63
   },
   {
@@ -612,32 +618,26 @@
     "kills": 61
   },
   {
-    "weapon_category": "Sniper",
-    "player_name": "HornySexSlaveMkVSoySusanooLvl4",
-    "steam_id": "51789856",
-    "kills": 61
-  },
-  {
     "weapon_category": "Knife",
     "player_name": "MrMankeymanAgentSmithLvl23",
     "steam_id": "122633832",
     "kills": 61
   },
   {
-    "weapon_category": "Knife",
-    "player_name": "CrockettMountainKingLvl14",
-    "steam_id": "176528679",
-    "kills": 60
+    "weapon_category": "Sniper",
+    "player_name": "HornySexSlaveMkVSoySusanooLvl4",
+    "steam_id": "51789856",
+    "kills": 61
   },
   {
     "weapon_category": "Pistol",
-    "player_name": "TheGoldenOneBansheeSCLvl17",
+    "player_name": "TheGoldenOneBansheeSCLvl18",
     "steam_id": "210878433",
     "kills": 60
   },
   {
     "weapon_category": "Knife",
-    "player_name": "VictomatnoSoundNightElfArcherLvl16",
+    "player_name": "VictomatnoSoundNightElfArcherLvl18",
     "steam_id": "120635489",
     "kills": 59
   },
@@ -811,6 +811,12 @@
   },
   {
     "weapon_category": "Pistol",
+    "player_name": "BakuryuEnigmaLvl15",
+    "steam_id": "884806",
+    "kills": 45
+  },
+  {
+    "weapon_category": "Pistol",
     "player_name": "sn0wSpiritWalkerLvl39",
     "steam_id": "36205433",
     "kills": 44
@@ -876,12 +882,6 @@
     "kills": 40
   },
   {
-    "weapon_category": "Pistol",
-    "player_name": "BakuryuEnigmaLvl13",
-    "steam_id": "884806",
-    "kills": 40
-  },
-  {
     "weapon_category": "Sniper",
     "player_name": "CumKissesGoblinTinkerLvl12",
     "steam_id": "67520431",
@@ -943,7 +943,7 @@
   },
   {
     "weapon_category": "Pistol",
-    "player_name": "zenwormGragasLvl9",
+    "player_name": "zenwormSpectreLvl14",
     "steam_id": "10745543",
     "kills": 37
   },
@@ -961,14 +961,14 @@
   },
   {
     "weapon_category": "Pistol",
-    "player_name": "xSatorixxTTVBarrelBoyLvl7",
-    "steam_id": "66685727",
+    "player_name": "FireSniperYandereLvl14",
+    "steam_id": "3069543",
     "kills": 36
   },
   {
     "weapon_category": "Pistol",
-    "player_name": "FireSniperYandereLvl12",
-    "steam_id": "3069543",
+    "player_name": "xSatorixxTTVBarrelBoyLvl7",
+    "steam_id": "66685727",
     "kills": 36
   },
   {
@@ -1159,7 +1159,7 @@
   },
   {
     "weapon_category": "Pistol",
-    "player_name": "VictomatnoSoundNightElfArcherLvl16",
+    "player_name": "VictomatnoSoundNightElfArcherLvl18",
     "steam_id": "120635489",
     "kills": 29
   },
@@ -1173,6 +1173,12 @@
     "weapon_category": "Sniper",
     "player_name": "JimmyXBloodMageLvl36",
     "steam_id": "393197344",
+    "kills": 28
+  },
+  {
+    "weapon_category": "Knife",
+    "player_name": "1Dead1PushupLichLvl16",
+    "steam_id": "1188258968",
     "kills": 28
   },
   {
@@ -1218,22 +1224,16 @@
     "kills": 26
   },
   {
-    "weapon_category": "Sniper",
-    "player_name": "SnafuSorcererDDLvl2",
-    "steam_id": "18594167",
-    "kills": 26
-  },
-  {
     "weapon_category": "Knife",
     "player_name": "elektroTheHiddenLvl17",
     "steam_id": "183338135",
     "kills": 26
   },
   {
-    "weapon_category": "Knife",
-    "player_name": "1Dead1PushupAlienLvl10",
-    "steam_id": "1188258968",
-    "kills": 25
+    "weapon_category": "Sniper",
+    "player_name": "SnafuSorcererDDLvl2",
+    "steam_id": "18594167",
+    "kills": 26
   },
   {
     "weapon_category": "Sniper",
@@ -1489,7 +1489,7 @@
   },
   {
     "weapon_category": "Knife",
-    "player_name": "BakuryuEnigmaLvl13",
+    "player_name": "BakuryuEnigmaLvl15",
     "steam_id": "884806",
     "kills": 19
   },
@@ -1525,7 +1525,7 @@
   },
   {
     "weapon_category": "Sniper",
-    "player_name": "FireSniperYandereLvl12",
+    "player_name": "FireSniperYandereLvl14",
     "steam_id": "3069543",
     "kills": 19
   },
@@ -1711,7 +1711,7 @@
   },
   {
     "weapon_category": "Sniper",
-    "player_name": "CrockettMountainKingLvl14",
+    "player_name": "CrockettMountainKingLvl16",
     "steam_id": "176528679",
     "kills": 16
   },
@@ -1833,6 +1833,12 @@
     "weapon_category": "Knife",
     "player_name": "ehhhPriestessoftheMoonLvl24",
     "steam_id": "892617371",
+    "kills": 13
+  },
+  {
+    "weapon_category": "Sniper",
+    "player_name": "VictomatnoSoundNightElfArcherLvl18",
+    "steam_id": "120635489",
     "kills": 13
   },
   {
@@ -2035,7 +2041,7 @@
   },
   {
     "weapon_category": "Pistol",
-    "player_name": "ZyzzGeodetheRagingRavineLvl91",
+    "player_name": "ZyzzBloodMageLvl34",
     "steam_id": "1687969288",
     "kills": 10
   },
@@ -2067,12 +2073,6 @@
     "weapon_category": "Sniper",
     "player_name": "RenarsUndeadScourgeLvl17",
     "steam_id": "380839289",
-    "kills": 10
-  },
-  {
-    "weapon_category": "Sniper",
-    "player_name": "VictomatnoSoundNightElfArcherLvl16",
-    "steam_id": "120635489",
     "kills": 10
   },
   {
@@ -2167,7 +2167,7 @@
   },
   {
     "weapon_category": "Sniper",
-    "player_name": "neighbourhoodalcoholicAdventurerLvl24",
+    "player_name": "neighbourhoodalcoholicAdventurerLvl26",
     "steam_id": "57889259",
     "kills": 9
   },
@@ -2185,7 +2185,7 @@
   },
   {
     "weapon_category": "Sniper",
-    "player_name": "zenwormGragasLvl9",
+    "player_name": "zenwormSpectreLvl14",
     "steam_id": "10745543",
     "kills": 9
   },
@@ -2611,7 +2611,7 @@
   },
   {
     "weapon_category": "Sniper",
-    "player_name": "Ek1noxNightElfLvl34",
+    "player_name": "Ek1noxNightElfLvl35",
     "steam_id": "158193922",
     "kills": 6
   },
@@ -2731,7 +2731,7 @@
   },
   {
     "weapon_category": "Knife",
-    "player_name": "TheGoldenOneBansheeSCLvl17",
+    "player_name": "TheGoldenOneBansheeSCLvl18",
     "steam_id": "210878433",
     "kills": 5
   },
@@ -3271,7 +3271,7 @@
   },
   {
     "weapon_category": "Sniper",
-    "player_name": "1Dead1PushupAlienLvl10",
+    "player_name": "1Dead1PushupLichLvl16",
     "steam_id": "1188258968",
     "kills": 3
   },
@@ -3385,7 +3385,7 @@
   },
   {
     "weapon_category": "Pistol",
-    "player_name": "Ek1noxNightElfLvl34",
+    "player_name": "Ek1noxNightElfLvl35",
     "steam_id": "158193922",
     "kills": 3
   },
@@ -4105,7 +4105,7 @@
   },
   {
     "weapon_category": "Sniper",
-    "player_name": "TheGoldenOneBansheeSCLvl17",
+    "player_name": "TheGoldenOneBansheeSCLvl18",
     "steam_id": "210878433",
     "kills": 1
   },
