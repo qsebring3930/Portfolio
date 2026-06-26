@@ -265,7 +265,7 @@
   },
   {
     "weapon_category": "Knife",
-    "player_name": "ThazTechGoblinLvl24",
+    "player_name": "ThazTechGoblinLvl27",
     "steam_id": "25869320",
     "kills": 117
   },
@@ -511,7 +511,7 @@
   },
   {
     "weapon_category": "Pistol",
-    "player_name": "ThazTechGoblinLvl24",
+    "player_name": "ThazTechGoblinLvl27",
     "steam_id": "25869320",
     "kills": 69
   },
@@ -1573,7 +1573,7 @@
   },
   {
     "weapon_category": "Pistol",
-    "player_name": "LogickVoidwalkerLvl81",
+    "player_name": "LogickGengarLvl8",
     "steam_id": "75368663",
     "kills": 19
   },
@@ -2533,6 +2533,12 @@
   },
   {
     "weapon_category": "Pistol",
+    "player_name": "ChazzMichaelMichaelsNightElfLvl25",
+    "steam_id": "220064538",
+    "kills": 6
+  },
+  {
+    "weapon_category": "Pistol",
     "player_name": "HeldebraunNightElfLvl27",
     "steam_id": "9590258",
     "kills": 6
@@ -2881,20 +2887,14 @@
   },
   {
     "weapon_category": "Pistol",
-    "player_name": "CrocodileDandyyOrcishHordeLvl18",
-    "steam_id": "163092379",
-    "kills": 5
-  },
-  {
-    "weapon_category": "Pistol",
-    "player_name": "ChazzMichaelMichaelsNightElfLvl25",
-    "steam_id": "220064538",
-    "kills": 5
-  },
-  {
-    "weapon_category": "Pistol",
     "player_name": "DabielAntlionGuardLvl0",
     "steam_id": "24357852",
+    "kills": 5
+  },
+  {
+    "weapon_category": "Pistol",
+    "player_name": "CrocodileDandyyOrcishHordeLvl18",
+    "steam_id": "163092379",
     "kills": 5
   },
   {
@@ -2917,18 +2917,6 @@
   },
   {
     "weapon_category": "Pistol",
-    "player_name": "LuckyPrinnyOverlordKeeperoftheLightLvl9",
-    "steam_id": "27079416",
-    "kills": 4
-  },
-  {
-    "weapon_category": "Pistol",
-    "player_name": "LegendRedneckLvl16",
-    "steam_id": "23064979",
-    "kills": 4
-  },
-  {
-    "weapon_category": "Pistol",
     "player_name": "BonkPokemonTrainerLvl9",
     "steam_id": "163174537",
     "kills": 4
@@ -2937,6 +2925,18 @@
     "weapon_category": "Pistol",
     "player_name": "iPlaynakedNightElfLvl7",
     "steam_id": "15968928",
+    "kills": 4
+  },
+  {
+    "weapon_category": "Pistol",
+    "player_name": "LuckyPrinnyOverlordKeeperoftheLightLvl9",
+    "steam_id": "27079416",
+    "kills": 4
+  },
+  {
+    "weapon_category": "Pistol",
+    "player_name": "LegendRedneckLvl16",
+    "steam_id": "23064979",
     "kills": 4
   },
   {
@@ -3145,7 +3145,7 @@
   },
   {
     "weapon_category": "Knife",
-    "player_name": "LogickVoidwalkerLvl81",
+    "player_name": "LogickGengarLvl8",
     "steam_id": "75368663",
     "kills": 4
   },
@@ -3349,12 +3349,6 @@
   },
   {
     "weapon_category": "Pistol",
-    "player_name": "highasalwaysPoltergeistLvl45",
-    "steam_id": "1667633096",
-    "kills": 3
-  },
-  {
-    "weapon_category": "Pistol",
     "player_name": "ADuckDuckTheBlindBastardLvl105",
     "steam_id": "24335663",
     "kills": 3
@@ -3363,6 +3357,12 @@
     "weapon_category": "Pistol",
     "player_name": "ESPeciallyGoodMorphlingLvl35",
     "steam_id": "266038580",
+    "kills": 3
+  },
+  {
+    "weapon_category": "Pistol",
+    "player_name": "highasalwaysPoltergeistLvl45",
+    "steam_id": "1667633096",
     "kills": 3
   },
   {
@@ -3475,18 +3475,6 @@
   },
   {
     "weapon_category": "Pistol",
-    "player_name": "OutlineMasterSupportClassLvl12",
-    "steam_id": "26514442",
-    "kills": 2
-  },
-  {
-    "weapon_category": "Pistol",
-    "player_name": "thevoidbeckonsTricksterLvl0",
-    "steam_id": "26546744",
-    "kills": 2
-  },
-  {
-    "weapon_category": "Pistol",
     "player_name": "HazardWizardDDLvl18",
     "steam_id": "161481336",
     "kills": 2
@@ -3501,6 +3489,18 @@
     "weapon_category": "Pistol",
     "player_name": "majikoJigglypuffLvl31",
     "steam_id": "180792748",
+    "kills": 2
+  },
+  {
+    "weapon_category": "Pistol",
+    "player_name": "OutlineMasterSupportClassLvl12",
+    "steam_id": "26514442",
+    "kills": 2
+  },
+  {
+    "weapon_category": "Pistol",
+    "player_name": "thevoidbeckonsTricksterLvl0",
+    "steam_id": "26546744",
     "kills": 2
   },
   {
@@ -4303,36 +4303,6 @@
   },
   {
     "weapon_category": "Pistol",
-    "player_name": "BuckUndeadScourgeLvl10",
-    "steam_id": "18777284",
-    "kills": 1
-  },
-  {
-    "weapon_category": "Pistol",
-    "player_name": "Bilish8UndeadScourgeLvl10",
-    "steam_id": "1881633071",
-    "kills": 1
-  },
-  {
-    "weapon_category": "Pistol",
-    "player_name": "walczykUndeadScourgeLvl3",
-    "steam_id": "1904607",
-    "kills": 1
-  },
-  {
-    "weapon_category": "Pistol",
-    "player_name": "NoggieUndeadScourgeLvl5",
-    "steam_id": "1771798083",
-    "kills": 1
-  },
-  {
-    "weapon_category": "Pistol",
-    "player_name": "SenpaiChannUndeadScourgeLvl14",
-    "steam_id": "179298555",
-    "kills": 1
-  },
-  {
-    "weapon_category": "Pistol",
     "player_name": "ScumPugUndeadScourgeLvl16",
     "steam_id": "297949022",
     "kills": 1
@@ -4359,6 +4329,36 @@
     "weapon_category": "Pistol",
     "player_name": "boeUndeadScourgeLvl6",
     "steam_id": "210207725",
+    "kills": 1
+  },
+  {
+    "weapon_category": "Pistol",
+    "player_name": "BuckUndeadScourgeLvl10",
+    "steam_id": "18777284",
+    "kills": 1
+  },
+  {
+    "weapon_category": "Pistol",
+    "player_name": "Bilish8UndeadScourgeLvl10",
+    "steam_id": "1881633071",
+    "kills": 1
+  },
+  {
+    "weapon_category": "Pistol",
+    "player_name": "walczykUndeadScourgeLvl3",
+    "steam_id": "1904607",
+    "kills": 1
+  },
+  {
+    "weapon_category": "Pistol",
+    "player_name": "NoggieUndeadScourgeLvl5",
+    "steam_id": "1771798083",
+    "kills": 1
+  },
+  {
+    "weapon_category": "Pistol",
+    "player_name": "SenpaiChannUndeadScourgeLvl14",
+    "steam_id": "179298555",
     "kills": 1
   },
   {
