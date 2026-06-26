@@ -24,16 +24,16 @@
     "kills": 377
   },
   {
+    "weapon_category": "Knife",
+    "player_name": "RawrMcRawrNecromancerLvl18",
+    "steam_id": "20687493",
+    "kills": 343
+  },
+  {
     "weapon_category": "Pistol",
     "player_name": "zBrackeTEngineeringGoblinLvl12",
     "steam_id": "28725580",
     "kills": 341
-  },
-  {
-    "weapon_category": "Knife",
-    "player_name": "RawrMcRawrNecromancerLvl18",
-    "steam_id": "20687493",
-    "kills": 332
   },
   {
     "weapon_category": "Pistol",
@@ -600,6 +600,12 @@
     "kills": 62
   },
   {
+    "weapon_category": "Knife",
+    "player_name": "FireSniperYandereLvl6",
+    "steam_id": "3069543",
+    "kills": 62
+  },
+  {
     "weapon_category": "Pistol",
     "player_name": "reaLityFarSeerLvl26",
     "steam_id": "52549756",
@@ -619,14 +625,8 @@
   },
   {
     "weapon_category": "Pistol",
-    "player_name": "TheGoldenOneBansheeSCLvl13",
+    "player_name": "TheGoldenOneBansheeSCLvl14",
     "steam_id": "210878433",
-    "kills": 60
-  },
-  {
-    "weapon_category": "Knife",
-    "player_name": "FireSniperYandereLvl5",
-    "steam_id": "3069543",
     "kills": 60
   },
   {
@@ -798,6 +798,12 @@
     "kills": 47
   },
   {
+    "weapon_category": "Knife",
+    "player_name": "CrockettBlazeBinderLvl18",
+    "steam_id": "176528679",
+    "kills": 46
+  },
+  {
     "weapon_category": "Pistol",
     "player_name": "DrAxelStollLurkerLvl31",
     "steam_id": "33190668",
@@ -807,12 +813,6 @@
     "weapon_category": "Pistol",
     "player_name": "sn0wSpiritWalkerLvl39",
     "steam_id": "36205433",
-    "kills": 44
-  },
-  {
-    "weapon_category": "Knife",
-    "player_name": "CrockettBlazeBinderLvl18",
-    "steam_id": "176528679",
     "kills": 44
   },
   {
@@ -955,7 +955,7 @@
   },
   {
     "weapon_category": "Pistol",
-    "player_name": "FireSniperYandereLvl5",
+    "player_name": "FireSniperYandereLvl6",
     "steam_id": "3069543",
     "kills": 36
   },
@@ -1525,7 +1525,7 @@
   },
   {
     "weapon_category": "Sniper",
-    "player_name": "FireSniperYandereLvl5",
+    "player_name": "FireSniperYandereLvl6",
     "steam_id": "3069543",
     "kills": 19
   },
@@ -2725,7 +2725,7 @@
   },
   {
     "weapon_category": "Knife",
-    "player_name": "TheGoldenOneBansheeSCLvl13",
+    "player_name": "TheGoldenOneBansheeSCLvl14",
     "steam_id": "210878433",
     "kills": 5
   },
@@ -4105,7 +4105,7 @@
   },
   {
     "weapon_category": "Sniper",
-    "player_name": "TheGoldenOneBansheeSCLvl13",
+    "player_name": "TheGoldenOneBansheeSCLvl14",
     "steam_id": "210878433",
     "kills": 1
   },
