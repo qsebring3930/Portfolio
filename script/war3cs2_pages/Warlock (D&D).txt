@@ -1,0 +1,104 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Warlock (D&D)
+|image=[[File:Warlock (D&D).webp]]
+|category=D&D Casters
+|max=35
+|level=3490
+|access=Beta
+|passive=
+<p>
+Devil's Sight: Can see in Smokes
+</p>
+}}
+|skill1={{SkillInfo
+|name=Fiendish Vigor
+|info=
+<p>
+Passive: Decrease Max Health for a Shield<br>
+Victim: Absorb Damage
+</p>
+|trigger=Special
+|heal=2
+|health=50
+|buffs=
+<p>
+HP: -25HP
+</p>
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Tick Rate|unit=sec.|lvl1=5.0|lvl2=4.0|lvl3=3.0|lvl4=2.0|lvl5=1.0}}
+}}}}
+|skill2={{SkillInfo
+|name=One with Shadows
+|info=
+Decrease your Visibility based on movement
+|trigger=Special
+|duration=1
+|extra=Attacking forces Visibility to Run Visibility
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Run Visibility|lvl1=5.0%|lvl2=10.0%|lvl3=15.0%|lvl4=20.0%|lvl5=25.0%}}
+|line2={{LevelUpRow|field=Walk Visibility|lvl1=10.0%|lvl2=20.0%|lvl3=30.0%|lvl4=40.0%|lvl5=50.0%}}
+|line3={{LevelUpRow|field=Still Visibility|lvl1=15.0%|lvl2=30.0%|lvl3=45.0%|lvl4=60.0%|lvl5=75.0%}}
+}}}}
+|skill3={{SkillInfo
+|name=Eldritch Blast
+|info=
+Cone Knockback, Damage 2 Random Enemies
+|trigger=Ability1
+|target=Cone
+|quantity=2
+|cone=40
+|force=1.5
+|cooldown=12.0
+|extra=
+<p>
+Damage is based on 'Eldritch Spear' and 'Repelling Blast', adds 4 damage per level<br>
+Damage Range: 250<br>
+Push Range: 50<br>
+Second Attack Deals 50% less damage if its the same target
+</p>
+}}
+|skill4={{SkillInfo
+|name=Eldritch Spear
+|info=
+Increase 'Eldritch Blast' Damage Range
+|trigger=Special
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Range|lvl1=100.0|lvl2=200.0|lvl3=300.0|lvl4=400.0|lvl5=500.0}}
+}}}}
+|skill5={{SkillInfo
+|name=Repelling Blast
+|info=
+Increase 'Eldritch Blast' Knockback Range
+|trigger=Special
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Range|lvl1=100.0|lvl2=150.0|lvl3=200.0|lvl4=250.0|lvl5=300.0}}
+}}}}
+|skill6={{SkillInfo
+|name=Armor of Agathys
+|info=
+Prevent and reflect next Shield Breaking Damage
+|trigger=Ability2
+|cooldown=25.0
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Return|lvl1=20.0%|lvl2=40.0%|lvl3=60.0%|lvl4=80.0%|lvl5=100.0%}}
+}}}}
+|skill7={{SkillInfo
+|name=Hunger of Hadar
+|info=
+Place Ward, Ward: Damage, Slow, Darken Vision
+|trigger=Ultimate
+|target=Location
+|damage=10
+|duration=8
+|range=500
+|buffs=
+<p>
+Speed: -30%
+</p>
+|cooldown=33.0
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Radius|lvl1=140.0|lvl2=205.0|lvl3=270.0|lvl4=335.0|lvl5=400.0}}
+}}}}
+}}
