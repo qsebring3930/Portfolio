@@ -7,7 +7,7 @@
   {
     "admin_name": "TwistedSquiddy",
     "command": "css_respawn",
-    "command_count": 131
+    "command_count": 133
   },
   {
     "admin_name": "xSignHere",
@@ -17,7 +17,7 @@
   {
     "admin_name": "Logick",
     "command": "css_respawn",
-    "command_count": 77
+    "command_count": 84
   },
   {
     "admin_name": "Lucky Prinny Overlord",
@@ -27,12 +27,12 @@
   {
     "admin_name": "TwistedSquiddy",
     "command": "css_slay",
-    "command_count": 70
+    "command_count": 71
   },
   {
     "admin_name": "Logick",
     "command": "css_slay",
-    "command_count": 43
+    "command_count": 48
   },
   {
     "admin_name": "TwistedSquiddy",
@@ -42,7 +42,7 @@
   {
     "admin_name": "Logick",
     "command": "css_slap",
-    "command_count": 28
+    "command_count": 29
   },
   {
     "admin_name": "Hexette",
@@ -52,7 +52,7 @@
   {
     "admin_name": "TwistedSquiddy",
     "command": "css_wsmap",
-    "command_count": 19
+    "command_count": 21
   },
   {
     "admin_name": "Logick",
@@ -82,7 +82,7 @@
   {
     "admin_name": "TwistedSquiddy",
     "command": "css_speed",
-    "command_count": 12
+    "command_count": 13
   },
   {
     "admin_name": "Hexette",
@@ -112,6 +112,11 @@
   {
     "admin_name": "Logick",
     "command": "css_god",
+    "command_count": 4
+  },
+  {
+    "admin_name": "TwistedSquiddy",
+    "command": "css_gravity",
     "command_count": 4
   },
   {
@@ -155,11 +160,6 @@
     "command_count": 3
   },
   {
-    "admin_name": "TwistedSquiddy",
-    "command": "css_gravity",
-    "command_count": 3
-  },
-  {
     "admin_name": "<3 Awful Aim :D",
     "command": "css_respawn",
     "command_count": 3
@@ -198,6 +198,11 @@
     "admin_name": "Logick",
     "command": "css_speed",
     "command_count": 3
+  },
+  {
+    "admin_name": "Hexette",
+    "command": "css_addban",
+    "command_count": 2
   },
   {
     "admin_name": "Hexette",
@@ -245,6 +250,11 @@
     "command_count": 2
   },
   {
+    "admin_name": "Logick",
+    "command": "css_vote",
+    "command_count": 2
+  },
+  {
     "admin_name": "TwistedSquiddy",
     "command": "css_vote",
     "command_count": 2
@@ -256,11 +266,6 @@
   },
   {
     "admin_name": "Console",
-    "command": "css_addban",
-    "command_count": 1
-  },
-  {
-    "admin_name": "Hexette",
     "command": "css_addban",
     "command_count": 1
   },
