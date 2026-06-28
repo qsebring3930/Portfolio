@@ -1,11 +1,11 @@
 [
   {
-    "player_name": "ThazDeathKnightLvl45",
+    "player_name": "ThazPitLordLvl2",
     "steam_id": "25869320",
-    "money_spent": 719200,
-    "net_betting": 1114522,
-    "betting_won": 1653588,
-    "betting_lost": 539066
+    "money_spent": 721550,
+    "net_betting": 1113572,
+    "betting_won": 1653838,
+    "betting_lost": 540266
   },
   {
     "player_name": "naidaNightElfLvl23",
@@ -16,12 +16,12 @@
     "betting_lost": 69405
   },
   {
-    "player_name": "STANTwistedSquiddyLvl8",
+    "player_name": "STANLavaSpawnLvl12",
     "steam_id": "27614129",
-    "money_spent": 1064400,
-    "net_betting": 859051,
-    "betting_won": 1185875,
-    "betting_lost": 326824
+    "money_spent": 1068050,
+    "net_betting": 857501,
+    "betting_won": 1186625,
+    "betting_lost": 329124
   },
   {
     "player_name": "JonoToadLvl14",
@@ -50,9 +50,9 @@
   {
     "player_name": "AskadarCryptLordLvl23",
     "steam_id": "21114461",
-    "money_spent": 767800,
-    "net_betting": 756463,
-    "betting_won": 837718,
+    "money_spent": 778050,
+    "net_betting": 759113,
+    "betting_won": 840368,
     "betting_lost": 81255
   },
   {
@@ -99,9 +99,9 @@
     "player_name": "neighbourhoodalcoholicHeadcrabLvl17",
     "steam_id": "57889259",
     "money_spent": 190400,
-    "net_betting": 580533,
-    "betting_won": 852160,
-    "betting_lost": 271627
+    "net_betting": 580233,
+    "betting_won": 852460,
+    "betting_lost": 272227
   },
   {
     "player_name": "BigPWorldEaterLvl37",
@@ -184,11 +184,11 @@
     "betting_lost": 258003
   },
   {
-    "player_name": "ZyzzGeodetheRagingRavineLvl93",
+    "player_name": "Zyzz",
     "steam_id": "1687969288",
-    "money_spent": 300700,
-    "net_betting": 416596,
-    "betting_won": 743769,
+    "money_spent": 305300,
+    "net_betting": 419585,
+    "betting_won": 746758,
     "betting_lost": 327173
   },
   {
@@ -288,20 +288,20 @@
     "betting_lost": 34453
   },
   {
-    "player_name": "SkyLionTrollBerserkerLvl5",
-    "steam_id": "4043586",
-    "money_spent": 265300,
-    "net_betting": 294145,
-    "betting_won": 542755,
-    "betting_lost": 248610
-  },
-  {
     "player_name": "TheGoldenOneBansheeSCLvl24",
     "steam_id": "210878433",
     "money_spent": 373000,
     "net_betting": 293014,
     "betting_won": 469411,
     "betting_lost": 176397
+  },
+  {
+    "player_name": "SkyLionTrollBerserkerLvl8",
+    "steam_id": "4043586",
+    "money_spent": 265300,
+    "net_betting": 291128,
+    "betting_won": 546388,
+    "betting_lost": 255260
   },
   {
     "player_name": "BoujeeHumanAllianceLvl36",
@@ -410,10 +410,10 @@
   {
     "player_name": "TwistedSquiddyNightElfLvl118",
     "steam_id": "191040345",
-    "money_spent": 116800,
-    "net_betting": 212865,
-    "betting_won": 295613,
-    "betting_lost": 82748
+    "money_spent": 119100,
+    "net_betting": 215065,
+    "betting_won": 298113,
+    "betting_lost": 83048
   },
   {
     "player_name": "KillMonsterNecromancerLvl20",
@@ -3888,14 +3888,6 @@
     "betting_lost": 234534
   },
   {
-    "player_name": "MrocNyGengarLvl9",
-    "steam_id": "51605820",
-    "money_spent": 155600,
-    "net_betting": -59614,
-    "betting_won": 171323,
-    "betting_lost": 230937
-  },
-  {
     "player_name": "burningopsGengarLvl9",
     "steam_id": "110529183",
     "money_spent": 10800,
@@ -3926,6 +3918,14 @@
     "net_betting": -64169,
     "betting_won": 190521,
     "betting_lost": 254690
+  },
+  {
+    "player_name": "MrocNyGengarLvl10",
+    "steam_id": "51605820",
+    "money_spent": 157300,
+    "net_betting": -67914,
+    "betting_won": 172323,
+    "betting_lost": 240237
   },
   {
     "player_name": "woosterRPGLvl39",
@@ -4168,14 +4168,6 @@
     "betting_lost": 916046
   },
   {
-    "player_name": "DaRuinerNightElfLvl18",
-    "steam_id": "52041808",
-    "money_spent": 488050,
-    "net_betting": -456357,
-    "betting_won": 589576,
-    "betting_lost": 1045933
-  },
-  {
     "player_name": "bluesBeastMasteryHunterLvl42",
     "steam_id": "415141590",
     "money_spent": 162700,
@@ -4190,5 +4182,13 @@
     "net_betting": -481227,
     "betting_won": 694391,
     "betting_lost": 1175618
+  },
+  {
+    "player_name": "DaRuinerAnkleBiterLvl7",
+    "steam_id": "52041808",
+    "money_spent": 488050,
+    "net_betting": -483207,
+    "betting_won": 589576,
+    "betting_lost": 1072783
   }
 ]
