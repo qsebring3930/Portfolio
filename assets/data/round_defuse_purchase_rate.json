@@ -56,13 +56,6 @@
     "defuse_purchase_rate": "50.00"
   },
   {
-    "player_name": "SolykTeemoLvl11",
-    "steam_id": "106189083",
-    "defuse_kits_bought": 16,
-    "rounds_played": 33,
-    "defuse_purchase_rate": "48.48"
-  },
-  {
     "player_name": "GalacticRebelUndeadScourgeLvl11",
     "steam_id": "124829258",
     "defuse_kits_bought": 8,
@@ -75,6 +68,13 @@
     "defuse_kits_bought": 11,
     "rounds_played": 26,
     "defuse_purchase_rate": "42.31"
+  },
+  {
+    "player_name": "SolykTeemoLvl13",
+    "steam_id": "106189083",
+    "defuse_kits_bought": 16,
+    "rounds_played": 38,
+    "defuse_purchase_rate": "42.11"
   },
   {
     "player_name": "thorQHumanAllianceLvl98",
@@ -91,11 +91,11 @@
     "defuse_purchase_rate": "40.93"
   },
   {
-    "player_name": "STANNightElfArcherLvl21",
+    "player_name": "STANNightElfArcherLvl22",
     "steam_id": "27614129",
-    "defuse_kits_bought": 252,
-    "rounds_played": 645,
-    "defuse_purchase_rate": "39.07"
+    "defuse_kits_bought": 253,
+    "rounds_played": 647,
+    "defuse_purchase_rate": "39.10"
   },
   {
     "player_name": "Coolpenguin897UndeadScourgeLvl102",
@@ -385,17 +385,17 @@
     "defuse_purchase_rate": "20.50"
   },
   {
-    "player_name": "AimTh3GodKill3rLvl29",
-    "steam_id": "225176809",
-    "defuse_kits_bought": 107,
-    "rounds_played": 527,
-    "defuse_purchase_rate": "20.30"
-  },
-  {
     "player_name": "ThazDeathKnightLvl45",
     "steam_id": "25869320",
     "defuse_kits_bought": 251,
     "rounds_played": 1248,
+    "defuse_purchase_rate": "20.11"
+  },
+  {
+    "player_name": "AimTh3GodKill3rLvl30",
+    "steam_id": "225176809",
+    "defuse_kits_bought": 107,
+    "rounds_played": 532,
     "defuse_purchase_rate": "20.11"
   },
   {
@@ -411,13 +411,6 @@
     "defuse_kits_bought": 101,
     "rounds_played": 526,
     "defuse_purchase_rate": "19.20"
-  },
-  {
-    "player_name": "w4vesUndeadScourgeLvl11",
-    "steam_id": "1279062294",
-    "defuse_kits_bought": 4,
-    "rounds_played": 21,
-    "defuse_purchase_rate": "19.05"
   },
   {
     "player_name": "SensibleDNkLurkerLvl26",
@@ -474,6 +467,13 @@
     "defuse_kits_bought": 15,
     "rounds_played": 86,
     "defuse_purchase_rate": "17.44"
+  },
+  {
+    "player_name": "w4vesUndeadScourgeLvl13",
+    "steam_id": "1279062294",
+    "defuse_kits_bought": 4,
+    "rounds_played": 24,
+    "defuse_purchase_rate": "16.67"
   },
   {
     "player_name": "killaCivilProtectorLvl5",
@@ -626,8 +626,8 @@
     "player_name": "GucciWadeAssassinationRogueLvl21",
     "steam_id": "135851093",
     "defuse_kits_bought": 47,
-    "rounds_played": 426,
-    "defuse_purchase_rate": "11.03"
+    "rounds_played": 432,
+    "defuse_purchase_rate": "10.88"
   },
   {
     "player_name": "CommunistPrimeAgentSmithLvl17",
@@ -686,11 +686,11 @@
     "defuse_purchase_rate": "9.43"
   },
   {
-    "player_name": "MilkyHeadcrabLvl33",
+    "player_name": "MilkySaboteurLvl51",
     "steam_id": "14714479",
     "defuse_kits_bought": 57,
-    "rounds_played": 618,
-    "defuse_purchase_rate": "9.22"
+    "rounds_played": 623,
+    "defuse_purchase_rate": "9.15"
   },
   {
     "player_name": "OutlineMasterSupportClassLvl12",
@@ -728,13 +728,6 @@
     "defuse_purchase_rate": "8.89"
   },
   {
-    "player_name": "SoupbrehPriestLvl60",
-    "steam_id": "27244147",
-    "defuse_kits_bought": 10,
-    "rounds_played": 114,
-    "defuse_purchase_rate": "8.77"
-  },
-  {
     "player_name": "CmCUndeadScourgeLvl23",
     "steam_id": "36827702",
     "defuse_kits_bought": 5,
@@ -768,6 +761,13 @@
     "defuse_kits_bought": 56,
     "rounds_played": 661,
     "defuse_purchase_rate": "8.47"
+  },
+  {
+    "player_name": "SoupbrehPriestLvl60",
+    "steam_id": "27244147",
+    "defuse_kits_bought": 10,
+    "rounds_played": 119,
+    "defuse_purchase_rate": "8.40"
   },
   {
     "player_name": "BonkPokemonTrainerLvl9",
@@ -1074,8 +1074,8 @@
     "player_name": "EtherofRuinSpellBreakerLvl15",
     "steam_id": "15332172",
     "defuse_kits_bought": 21,
-    "rounds_played": 588,
-    "defuse_purchase_rate": "3.57"
+    "rounds_played": 594,
+    "defuse_purchase_rate": "3.54"
   },
   {
     "player_name": "DINOSOWERwhitedenjiChristmasPaladinLvl4",
@@ -1246,11 +1246,11 @@
     "defuse_purchase_rate": "1.97"
   },
   {
-    "player_name": "MrMankeymanEnigmaLvl21",
+    "player_name": "MrMankeymanEnigmaLvl22",
     "steam_id": "122633832",
     "defuse_kits_bought": 17,
-    "rounds_played": 881,
-    "defuse_purchase_rate": "1.93"
+    "rounds_played": 885,
+    "defuse_purchase_rate": "1.92"
   },
   {
     "player_name": "SkyLionUndeadLordLvl27",
@@ -1330,18 +1330,18 @@
     "defuse_purchase_rate": "1.40"
   },
   {
-    "player_name": "VaxisDragonKnightLvl21",
+    "player_name": "VaxisDragonKnightLvl22",
     "steam_id": "87858561",
     "defuse_kits_bought": 26,
-    "rounds_played": 1947,
-    "defuse_purchase_rate": "1.34"
+    "rounds_played": 1952,
+    "defuse_purchase_rate": "1.33"
   },
   {
-    "player_name": "DoitallornotSmokeGolemLvl4",
+    "player_name": "DoitallornotBloodGolemLvl3",
     "steam_id": "131149989",
     "defuse_kits_bought": 6,
-    "rounds_played": 490,
-    "defuse_purchase_rate": "1.22"
+    "rounds_played": 495,
+    "defuse_purchase_rate": "1.21"
   },
   {
     "player_name": "CrocodileDandyyOrcishHordeLvl21",
@@ -1414,13 +1414,6 @@
     "defuse_purchase_rate": "0.69"
   },
   {
-    "player_name": "LogickKeeperoftheGroveLvl30",
-    "steam_id": "75368663",
-    "defuse_kits_bought": 2,
-    "rounds_played": 305,
-    "defuse_purchase_rate": "0.66"
-  },
-  {
     "player_name": "MGJammerObserverLvl35",
     "steam_id": "68831705",
     "defuse_kits_bought": 2,
@@ -1428,10 +1421,17 @@
     "defuse_purchase_rate": "0.65"
   },
   {
-    "player_name": "DaRuinerSpiritWalkerLvl13",
+    "player_name": "LogickKeeperoftheGroveLvl31",
+    "steam_id": "75368663",
+    "defuse_kits_bought": 2,
+    "rounds_played": 311,
+    "defuse_purchase_rate": "0.64"
+  },
+  {
+    "player_name": "DaRuinerSpiritWalkerLvl15",
     "steam_id": "52041808",
     "defuse_kits_bought": 5,
-    "rounds_played": 788,
+    "rounds_played": 794,
     "defuse_purchase_rate": "0.63"
   },
   {
@@ -1463,10 +1463,10 @@
     "defuse_purchase_rate": "0.51"
   },
   {
-    "player_name": "ChippedSidewalkBroodLordLvl8",
+    "player_name": "ChippedSidewalkBroodLordLvl9",
     "steam_id": "10238144",
     "defuse_kits_bought": 1,
-    "rounds_played": 195,
+    "rounds_played": 198,
     "defuse_purchase_rate": "0.51"
   },
   {
@@ -1533,10 +1533,10 @@
     "defuse_purchase_rate": "0.20"
   },
   {
-    "player_name": "CryHavocKeeperoftheGroveLvl12",
+    "player_name": "CryHavocKeeperoftheGroveLvl14",
     "steam_id": "460591640",
     "defuse_kits_bought": 2,
-    "rounds_played": 1016,
+    "rounds_played": 1021,
     "defuse_purchase_rate": "0.20"
   },
   {
@@ -1557,7 +1557,7 @@
     "player_name": "SickboyrariBloodMageLvl39",
     "steam_id": "32783979",
     "defuse_kits_bought": 1,
-    "rounds_played": 629,
+    "rounds_played": 634,
     "defuse_purchase_rate": "0.16"
   },
   {
@@ -1862,10 +1862,10 @@
     "defuse_purchase_rate": "0.00"
   },
   {
-    "player_name": "RellexBloodseekerLvl12",
+    "player_name": "RellexKeeperoftheGroveLvl4",
     "steam_id": "205551555",
     "defuse_kits_bought": 0,
-    "rounds_played": 828,
+    "rounds_played": 833,
     "defuse_purchase_rate": "0.00"
   },
   {
@@ -2328,6 +2328,13 @@
     "steam_id": "1267483852",
     "defuse_kits_bought": 0,
     "rounds_played": 83,
+    "defuse_purchase_rate": "0.00"
+  },
+  {
+    "player_name": "mason",
+    "steam_id": "1268265534",
+    "defuse_kits_bought": 0,
+    "rounds_played": 1,
     "defuse_purchase_rate": "0.00"
   },
   {
@@ -3227,10 +3234,10 @@
     "defuse_purchase_rate": "0.00"
   },
   {
-    "player_name": "JustBestieThingsThorLvl9",
+    "player_name": "JustBestieThingsThorLvl10",
     "steam_id": "4471218",
     "defuse_kits_bought": 0,
-    "rounds_played": 456,
+    "rounds_played": 462,
     "defuse_purchase_rate": "0.00"
   },
   {
@@ -3262,10 +3269,10 @@
     "defuse_purchase_rate": "0.00"
   },
   {
-    "player_name": "XZaTTyuingNightElfLvl4",
+    "player_name": "XZaTTyuingNightElfLvl8",
     "steam_id": "487876785",
     "defuse_kits_bought": 0,
-    "rounds_played": 7,
+    "rounds_played": 12,
     "defuse_purchase_rate": "0.00"
   },
   {
@@ -3395,10 +3402,10 @@
     "defuse_purchase_rate": "0.00"
   },
   {
-    "player_name": "PeriDarkRangerLvl3",
+    "player_name": "PeriFaerieDragonLvl3",
     "steam_id": "40697335",
     "defuse_kits_bought": 0,
-    "rounds_played": 468,
+    "rounds_played": 474,
     "defuse_purchase_rate": "0.00"
   },
   {
