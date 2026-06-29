@@ -361,7 +361,7 @@
   },
   {
     "weapon_category": "Pistol",
-    "player_name": "1Dead1PushupSARSZombieLvl42",
+    "player_name": "1Dead1Pushup",
     "steam_id": "1188258968",
     "kills": 161
   },
@@ -643,7 +643,7 @@
   },
   {
     "weapon_category": "Sniper",
-    "player_name": "CryHavocVoidwalkerLvl10",
+    "player_name": "CryHavocVoidwalkerLvl12",
     "steam_id": "460591640",
     "kills": 106
   },
@@ -745,7 +745,7 @@
   },
   {
     "weapon_category": "Sniper",
-    "player_name": "AskadarGhoulLvl16",
+    "player_name": "AskadarGhoulLvl17",
     "steam_id": "21114461",
     "kills": 89
   },
@@ -781,7 +781,7 @@
   },
   {
     "weapon_category": "Pistol",
-    "player_name": "CryHavocVoidwalkerLvl10",
+    "player_name": "CryHavocVoidwalkerLvl12",
     "steam_id": "460591640",
     "kills": 86
   },
@@ -871,7 +871,7 @@
   },
   {
     "weapon_category": "Knife",
-    "player_name": "CryHavocVoidwalkerLvl10",
+    "player_name": "CryHavocVoidwalkerLvl12",
     "steam_id": "460591640",
     "kills": 78
   },
@@ -1111,7 +1111,7 @@
   },
   {
     "weapon_category": "Knife",
-    "player_name": "1Dead1PushupSARSZombieLvl42",
+    "player_name": "1Dead1Pushup",
     "steam_id": "1188258968",
     "kills": 59
   },
@@ -1404,6 +1404,24 @@
     "kills": 43
   },
   {
+    "weapon_category": "Knife",
+    "player_name": "AskadarGhoulLvl17",
+    "steam_id": "21114461",
+    "kills": 43
+  },
+  {
+    "weapon_category": "Knife",
+    "player_name": "ShaggyPrincessB3nLvl24",
+    "steam_id": "31280052",
+    "kills": 42
+  },
+  {
+    "weapon_category": "Sniper",
+    "player_name": "SkyLionDruidoftheClawLvl9",
+    "steam_id": "4043586",
+    "kills": 42
+  },
+  {
     "weapon_category": "Sniper",
     "player_name": "PepkilzFlamePredatorLvl32",
     "steam_id": "17201640",
@@ -1420,30 +1438,6 @@
     "player_name": "manyOneVenomancerLvl44",
     "steam_id": "1154524066",
     "kills": 42
-  },
-  {
-    "weapon_category": "Knife",
-    "player_name": "ShaggyPrincessB3nLvl24",
-    "steam_id": "31280052",
-    "kills": 42
-  },
-  {
-    "weapon_category": "Sniper",
-    "player_name": "SkyLionDruidoftheClawLvl9",
-    "steam_id": "4043586",
-    "kills": 42
-  },
-  {
-    "weapon_category": "Knife",
-    "player_name": "ObsidianStormGargoyleLvl34",
-    "steam_id": "24524073",
-    "kills": 41
-  },
-  {
-    "weapon_category": "Knife",
-    "player_name": "AzaBorovaKeeperoftheGroveLvl18",
-    "steam_id": "1917962806",
-    "kills": 41
   },
   {
     "weapon_category": "Pistol",
@@ -1464,10 +1458,16 @@
     "kills": 41
   },
   {
-    "weapon_category": "Sniper",
-    "player_name": "SpyScope00HumanAllianceLvl15",
-    "steam_id": "1576099475",
-    "kills": 40
+    "weapon_category": "Knife",
+    "player_name": "ObsidianStormGargoyleLvl34",
+    "steam_id": "24524073",
+    "kills": 41
+  },
+  {
+    "weapon_category": "Knife",
+    "player_name": "AzaBorovaKeeperoftheGroveLvl18",
+    "steam_id": "1917962806",
+    "kills": 41
   },
   {
     "weapon_category": "Knife",
@@ -1488,10 +1488,10 @@
     "kills": 40
   },
   {
-    "weapon_category": "Knife",
-    "player_name": "LtmonkeyWaxGolemLvl34",
-    "steam_id": "24791364",
-    "kills": 39
+    "weapon_category": "Sniper",
+    "player_name": "SpyScope00HumanAllianceLvl15",
+    "steam_id": "1576099475",
+    "kills": 40
   },
   {
     "weapon_category": "Pistol",
@@ -1500,22 +1500,10 @@
     "kills": 39
   },
   {
-    "weapon_category": "Pistol",
-    "player_name": "BustaWolfLvl24",
-    "steam_id": "2113384",
-    "kills": 38
-  },
-  {
-    "weapon_category": "Pistol",
-    "player_name": "ISEETHRUWALLSBarbarianDDLvl24",
-    "steam_id": "186340525",
-    "kills": 38
-  },
-  {
     "weapon_category": "Knife",
-    "player_name": "AskadarGhoulLvl16",
-    "steam_id": "21114461",
-    "kills": 38
+    "player_name": "LtmonkeyWaxGolemLvl34",
+    "steam_id": "24791364",
+    "kills": 39
   },
   {
     "weapon_category": "Taser",
@@ -1527,6 +1515,18 @@
     "weapon_category": "Knife",
     "player_name": "ScaramoucheZerglingLvl32",
     "steam_id": "48891679",
+    "kills": 38
+  },
+  {
+    "weapon_category": "Pistol",
+    "player_name": "BustaWolfLvl24",
+    "steam_id": "2113384",
+    "kills": 38
+  },
+  {
+    "weapon_category": "Pistol",
+    "player_name": "ISEETHRUWALLSBarbarianDDLvl24",
+    "steam_id": "186340525",
     "kills": 38
   },
   {
@@ -1645,7 +1645,7 @@
   },
   {
     "weapon_category": "Pistol",
-    "player_name": "AskadarGhoulLvl16",
+    "player_name": "AskadarGhoulLvl17",
     "steam_id": "21114461",
     "kills": 33
   },
@@ -2317,7 +2317,7 @@
   },
   {
     "weapon_category": "Pistol",
-    "player_name": "GGAmericasCookedBoyfriendLvl12",
+    "player_name": "GGAmericasCookedThorLvl3",
     "steam_id": "142917815",
     "kills": 19
   },
@@ -2587,7 +2587,7 @@
   },
   {
     "weapon_category": "Pistol",
-    "player_name": "ThelAznPandaLvl11",
+    "player_name": "ThelAznPandaLvl12",
     "steam_id": "10003450",
     "kills": 15
   },
@@ -2719,7 +2719,7 @@
   },
   {
     "weapon_category": "Sniper",
-    "player_name": "ThelAznPandaLvl11",
+    "player_name": "ThelAznPandaLvl12",
     "steam_id": "10003450",
     "kills": 14
   },
@@ -3631,7 +3631,7 @@
   },
   {
     "weapon_category": "Taser",
-    "player_name": "1Dead1PushupSARSZombieLvl42",
+    "player_name": "1Dead1Pushup",
     "steam_id": "1188258968",
     "kills": 6
   },
@@ -3709,7 +3709,7 @@
   },
   {
     "weapon_category": "Knife",
-    "player_name": "GGAmericasCookedBoyfriendLvl12",
+    "player_name": "GGAmericasCookedThorLvl3",
     "steam_id": "142917815",
     "kills": 6
   },
@@ -4453,7 +4453,7 @@
   },
   {
     "weapon_category": "Sniper",
-    "player_name": "1Dead1PushupSARSZombieLvl42",
+    "player_name": "1Dead1Pushup",
     "steam_id": "1188258968",
     "kills": 3
   },
@@ -4819,7 +4819,7 @@
   },
   {
     "weapon_category": "Knife",
-    "player_name": "ThelAznPandaLvl11",
+    "player_name": "ThelAznPandaLvl12",
     "steam_id": "10003450",
     "kills": 2
   },
@@ -4987,7 +4987,7 @@
   },
   {
     "weapon_category": "Sniper",
-    "player_name": "GGAmericasCookedBoyfriendLvl12",
+    "player_name": "GGAmericasCookedThorLvl3",
     "steam_id": "142917815",
     "kills": 2
   },
