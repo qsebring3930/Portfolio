@@ -355,14 +355,20 @@
   },
   {
     "weapon_category": "Knife",
-    "player_name": "EricHitmonleeLvl18",
-    "steam_id": "21443158",
-    "kills": 162
+    "player_name": "PerculesAssassinationRogueLvl9",
+    "steam_id": "39011615",
+    "kills": 166
   },
   {
     "weapon_category": "Knife",
     "player_name": "SUPAErrorLvl16",
     "steam_id": "64136700",
+    "kills": 162
+  },
+  {
+    "weapon_category": "Knife",
+    "player_name": "EricHitmonleeLvl18",
+    "steam_id": "21443158",
     "kills": 162
   },
   {
@@ -373,7 +379,7 @@
   },
   {
     "weapon_category": "Pistol",
-    "player_name": "PerculesWaxGolemLvl9",
+    "player_name": "PerculesAssassinationRogueLvl9",
     "steam_id": "39011615",
     "kills": 157
   },
@@ -382,12 +388,6 @@
     "player_name": "highasalwaysGhoulLvl29",
     "steam_id": "1667633096",
     "kills": 156
-  },
-  {
-    "weapon_category": "Knife",
-    "player_name": "PerculesWaxGolemLvl9",
-    "steam_id": "39011615",
-    "kills": 155
   },
   {
     "weapon_category": "Knife",
@@ -643,7 +643,7 @@
   },
   {
     "weapon_category": "Sniper",
-    "player_name": "CryHavocGragasLvl7",
+    "player_name": "CryHavocGragasLvl9",
     "steam_id": "460591640",
     "kills": 106
   },
@@ -672,6 +672,12 @@
     "kills": 103
   },
   {
+    "weapon_category": "Knife",
+    "player_name": "CryHavocGragasLvl9",
+    "steam_id": "460591640",
+    "kills": 102
+  },
+  {
     "weapon_category": "Sniper",
     "player_name": "OAFPlouploufxSignHereLvl62",
     "steam_id": "216413930",
@@ -687,12 +693,6 @@
     "weapon_category": "Sniper",
     "player_name": "PrincessBenKaelthasSunstriderLvl8",
     "steam_id": "64194714",
-    "kills": 97
-  },
-  {
-    "weapon_category": "Knife",
-    "player_name": "CryHavocGragasLvl7",
-    "steam_id": "460591640",
     "kills": 97
   },
   {
@@ -739,7 +739,7 @@
   },
   {
     "weapon_category": "Pistol",
-    "player_name": "CryHavocGragasLvl7",
+    "player_name": "CryHavocGragasLvl9",
     "steam_id": "460591640",
     "kills": 92
   },
@@ -1069,7 +1069,7 @@
   },
   {
     "weapon_category": "Pistol",
-    "player_name": "n0xGirlfriendLvl9",
+    "player_name": "n0xBoyfriendLvl0",
     "steam_id": "1888431017",
     "kills": 62
   },
@@ -1309,7 +1309,7 @@
   },
   {
     "weapon_category": "Sniper",
-    "player_name": "PerculesWaxGolemLvl9",
+    "player_name": "PerculesAssassinationRogueLvl9",
     "steam_id": "39011615",
     "kills": 48
   },
@@ -2857,7 +2857,7 @@
   },
   {
     "weapon_category": "Taser",
-    "player_name": "PerculesWaxGolemLvl9",
+    "player_name": "PerculesAssassinationRogueLvl9",
     "steam_id": "39011615",
     "kills": 12
   },
@@ -3967,6 +3967,12 @@
   },
   {
     "weapon_category": "Knife",
+    "player_name": "n0xBoyfriendLvl0",
+    "steam_id": "1888431017",
+    "kills": 5
+  },
+  {
+    "weapon_category": "Knife",
     "player_name": "MuteVoidHighlordLvl42",
     "steam_id": "17553799",
     "kills": 5
@@ -4521,12 +4527,6 @@
     "weapon_category": "Knife",
     "player_name": "HabibiBustYaBussyOrcishHordeLvl31",
     "steam_id": "1254439483",
-    "kills": 3
-  },
-  {
-    "weapon_category": "Knife",
-    "player_name": "n0xGirlfriendLvl9",
-    "steam_id": "1888431017",
     "kills": 3
   },
   {
@@ -5569,7 +5569,7 @@
   },
   {
     "weapon_category": "Sniper",
-    "player_name": "n0xGirlfriendLvl9",
+    "player_name": "n0xBoyfriendLvl0",
     "steam_id": "1888431017",
     "kills": 1
   },
