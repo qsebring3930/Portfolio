@@ -12,7 +12,7 @@
   {
     "admin_name": "xSignHere",
     "command": "css_slap",
-    "command_count": 96
+    "command_count": 127
   },
   {
     "admin_name": "Logick",
@@ -85,19 +85,19 @@
     "command_count": 13
   },
   {
+    "admin_name": "xSignHere",
+    "command": "css_respawn",
+    "command_count": 11
+  },
+  {
     "admin_name": "Hexette",
     "command": "css_slap",
     "command_count": 11
   },
   {
     "admin_name": "xSignHere",
-    "command": "css_respawn",
-    "command_count": 10
-  },
-  {
-    "admin_name": "xSignHere",
     "command": "css_slay",
-    "command_count": 7
+    "command_count": 8
   },
   {
     "admin_name": "Hexette",
@@ -301,6 +301,11 @@
   },
   {
     "admin_name": "Lucky Prinny Overlord",
+    "command": "css_kick",
+    "command_count": 1
+  },
+  {
+    "admin_name": "xSignHere",
     "command": "css_kick",
     "command_count": 1
   },
