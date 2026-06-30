@@ -595,7 +595,7 @@
   },
   {
     "weapon_category": "Pistol",
-    "player_name": "RebelArmsRaceLvl26",
+    "player_name": "RebelBroodmotherLvl6",
     "steam_id": "152859091",
     "kills": 124
   },
@@ -1020,6 +1020,12 @@
     "kills": 72
   },
   {
+    "weapon_category": "Knife",
+    "player_name": "RebelBroodmotherLvl6",
+    "steam_id": "152859091",
+    "kills": 71
+  },
+  {
     "weapon_category": "Sniper",
     "player_name": "MNightShinodaOrcishHordeLvl37",
     "steam_id": "1043305982",
@@ -1047,12 +1053,6 @@
     "weapon_category": "Knife",
     "player_name": "CrockettSpectreLvl29",
     "steam_id": "176528679",
-    "kills": 70
-  },
-  {
-    "weapon_category": "Knife",
-    "player_name": "RebelArmsRaceLvl26",
-    "steam_id": "152859091",
     "kills": 70
   },
   {
@@ -2299,7 +2299,7 @@
   },
   {
     "weapon_category": "Pistol",
-    "player_name": "FatsaxonMudkipLvl3",
+    "player_name": "FatsaxonMudkipLvl7",
     "steam_id": "86004550",
     "kills": 22
   },
@@ -3235,6 +3235,12 @@
   },
   {
     "weapon_category": "Sniper",
+    "player_name": "RebelBroodmotherLvl6",
+    "steam_id": "152859091",
+    "kills": 10
+  },
+  {
+    "weapon_category": "Sniper",
     "player_name": "ADuckUnkn0wnS0ld13rLvl78",
     "steam_id": "24335663",
     "kills": 10
@@ -3373,14 +3379,14 @@
   },
   {
     "weapon_category": "Sniper",
-    "player_name": "CookieBloomwardHostLvl7",
-    "steam_id": "175811974",
+    "player_name": "UAVlaginatorDragoonLvl27",
+    "steam_id": "1554569660",
     "kills": 9
   },
   {
     "weapon_category": "Sniper",
-    "player_name": "UAVlaginatorDragoonLvl27",
-    "steam_id": "1554569660",
+    "player_name": "CookieBloomwardHostLvl7",
+    "steam_id": "175811974",
     "kills": 9
   },
   {
@@ -3499,20 +3505,14 @@
   },
   {
     "weapon_category": "Sniper",
-    "player_name": "RebelArmsRaceLvl26",
-    "steam_id": "152859091",
+    "player_name": "HazardVendingMachineLvl8",
+    "steam_id": "161481336",
     "kills": 8
   },
   {
     "weapon_category": "Sniper",
     "player_name": "PiracyUndeadScourgeLvl8",
     "steam_id": "127280172",
-    "kills": 8
-  },
-  {
-    "weapon_category": "Sniper",
-    "player_name": "HazardVendingMachineLvl8",
-    "steam_id": "161481336",
     "kills": 8
   },
   {
@@ -3607,7 +3607,7 @@
   },
   {
     "weapon_category": "Knife",
-    "player_name": "FatsaxonMudkipLvl3",
+    "player_name": "FatsaxonMudkipLvl7",
     "steam_id": "86004550",
     "kills": 7
   },
@@ -3685,7 +3685,7 @@
   },
   {
     "weapon_category": "Knife",
-    "player_name": "WindWanderingWorldEaterLvl16",
+    "player_name": "WindWanderingSorcererDDLvl10",
     "steam_id": "1095486733",
     "kills": 7
   },
@@ -3703,14 +3703,14 @@
   },
   {
     "weapon_category": "Sniper",
-    "player_name": "ZyzzGeodetheRagingRavineLvl95",
-    "steam_id": "1687969288",
+    "player_name": "poxteyostreLvl37",
+    "steam_id": "130204211",
     "kills": 7
   },
   {
     "weapon_category": "Sniper",
-    "player_name": "poxteyostreLvl37",
-    "steam_id": "130204211",
+    "player_name": "ZyzzGeodetheRagingRavineLvl95",
+    "steam_id": "1687969288",
     "kills": 7
   },
   {
@@ -3861,6 +3861,12 @@
     "weapon_category": "Sniper",
     "player_name": "HezoxSignHereLvl26",
     "steam_id": "32658647",
+    "kills": 6
+  },
+  {
+    "weapon_category": "Sniper",
+    "player_name": "FatsaxonMudkipLvl7",
+    "steam_id": "86004550",
     "kills": 6
   },
   {
@@ -4614,12 +4620,6 @@
     "kills": 3
   },
   {
-    "weapon_category": "Sniper",
-    "player_name": "FatsaxonMudkipLvl3",
-    "steam_id": "86004550",
-    "kills": 3
-  },
-  {
     "weapon_category": "Knife",
     "player_name": "SolykDarkArchonLvl44",
     "steam_id": "106189083",
@@ -4669,7 +4669,7 @@
   },
   {
     "weapon_category": "Sniper",
-    "player_name": "WindWanderingWorldEaterLvl16",
+    "player_name": "WindWanderingSorcererDDLvl10",
     "steam_id": "1095486733",
     "kills": 3
   },
@@ -6121,7 +6121,7 @@
   },
   {
     "weapon_category": "Pistol",
-    "player_name": "WindWanderingWorldEaterLvl16",
+    "player_name": "WindWanderingSorcererDDLvl10",
     "steam_id": "1095486733",
     "kills": 1
   },
