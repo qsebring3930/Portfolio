@@ -186,15 +186,15 @@
     "kills": 296
   },
   {
+    "weapon_category": "Pistol",
+    "player_name": "HornySexSlaveMkVVengefulSpiritLvl11",
+    "steam_id": "51789856",
+    "kills": 291
+  },
+  {
     "weapon_category": "Knife",
     "player_name": "1600microsoftpointsneededFireLordLvl15",
     "steam_id": "41176942",
-    "kills": 289
-  },
-  {
-    "weapon_category": "Pistol",
-    "player_name": "HornySexSlaveMkVVengefulSpiritLvl10",
-    "steam_id": "51789856",
     "kills": 289
   },
   {
@@ -234,16 +234,16 @@
     "kills": 260
   },
   {
+    "weapon_category": "Knife",
+    "player_name": "PerculesThorLvl20",
+    "steam_id": "39011615",
+    "kills": 251
+  },
+  {
     "weapon_category": "Pistol",
     "player_name": "BakuryuDruidoftheMoonLvl7",
     "steam_id": "884806",
     "kills": 251
-  },
-  {
-    "weapon_category": "Knife",
-    "player_name": "PerculesThorLvl20",
-    "steam_id": "39011615",
-    "kills": 245
   },
   {
     "weapon_category": "Sniper",
@@ -690,22 +690,10 @@
     "kills": 110
   },
   {
-    "weapon_category": "Knife",
-    "player_name": "SurrealDynastyQueenBumblenadeLvl72",
-    "steam_id": "954120",
-    "kills": 106
-  },
-  {
-    "weapon_category": "Sniper",
-    "player_name": "CryHavocDemolitionistLvl11",
-    "steam_id": "460591640",
-    "kills": 106
-  },
-  {
-    "weapon_category": "Sniper",
-    "player_name": "OAFPlouploufxSignHereLvl65",
-    "steam_id": "216413930",
-    "kills": 106
+    "weapon_category": "Pistol",
+    "player_name": "LurpakpeekArmsRaceLvl47",
+    "steam_id": "109520439",
+    "kills": 108
   },
   {
     "weapon_category": "Pistol",
@@ -720,6 +708,24 @@
     "kills": 106
   },
   {
+    "weapon_category": "Sniper",
+    "player_name": "OAFPlouploufxSignHereLvl65",
+    "steam_id": "216413930",
+    "kills": 106
+  },
+  {
+    "weapon_category": "Knife",
+    "player_name": "SurrealDynastyQueenBumblenadeLvl72",
+    "steam_id": "954120",
+    "kills": 106
+  },
+  {
+    "weapon_category": "Sniper",
+    "player_name": "CryHavocDemolitionistLvl11",
+    "steam_id": "460591640",
+    "kills": 106
+  },
+  {
     "weapon_category": "Knife",
     "player_name": "JonoYautjaBerserkerLvl2",
     "steam_id": "51377294",
@@ -730,12 +736,6 @@
     "player_name": "EricHitmonleeLvl19",
     "steam_id": "21443158",
     "kills": 103
-  },
-  {
-    "weapon_category": "Pistol",
-    "player_name": "LurpakpeekArmsRaceLvl47",
-    "steam_id": "109520439",
-    "kills": 100
   },
   {
     "weapon_category": "Knife",
@@ -901,7 +901,7 @@
   },
   {
     "weapon_category": "Knife",
-    "player_name": "HornySexSlaveMkVVengefulSpiritLvl10",
+    "player_name": "HornySexSlaveMkVVengefulSpiritLvl11",
     "steam_id": "51789856",
     "kills": 82
   },
@@ -1051,6 +1051,12 @@
   },
   {
     "weapon_category": "Knife",
+    "player_name": "RebelRockGolemLvl41",
+    "steam_id": "152859091",
+    "kills": 69
+  },
+  {
+    "weapon_category": "Knife",
     "player_name": "reaLityTemplarAssassinLvl11",
     "steam_id": "52549756",
     "kills": 69
@@ -1078,12 +1084,6 @@
     "player_name": "BiddynosoundDemolitionistLvl17",
     "steam_id": "30308641",
     "kills": 68
-  },
-  {
-    "weapon_category": "Knife",
-    "player_name": "RebelRockGolemLvl41",
-    "steam_id": "152859091",
-    "kills": 67
   },
   {
     "weapon_category": "Pistol",
@@ -1129,7 +1129,7 @@
   },
   {
     "weapon_category": "Sniper",
-    "player_name": "HornySexSlaveMkVVengefulSpiritLvl10",
+    "player_name": "HornySexSlaveMkVVengefulSpiritLvl11",
     "steam_id": "51789856",
     "kills": 63
   },
@@ -1584,21 +1584,21 @@
     "kills": 40
   },
   {
-    "weapon_category": "Pistol",
-    "player_name": "TheLeftWallRedneckLvl18",
-    "steam_id": "19691448",
-    "kills": 39
-  },
-  {
     "weapon_category": "Sniper",
     "player_name": "LurpakpeekArmsRaceLvl47",
     "steam_id": "109520439",
-    "kills": 39
+    "kills": 40
   },
   {
     "weapon_category": "Pistol",
     "player_name": "SurrealDynastyQueenBumblenadeLvl72",
     "steam_id": "954120",
+    "kills": 39
+  },
+  {
+    "weapon_category": "Pistol",
+    "player_name": "TheLeftWallRedneckLvl18",
+    "steam_id": "19691448",
     "kills": 39
   },
   {
@@ -1699,8 +1699,20 @@
   },
   {
     "weapon_category": "Knife",
+    "player_name": "LurpakpeekArmsRaceLvl47",
+    "steam_id": "109520439",
+    "kills": 35
+  },
+  {
+    "weapon_category": "Knife",
     "player_name": "STANNavySealLvl4",
     "steam_id": "27614129",
+    "kills": 35
+  },
+  {
+    "weapon_category": "Taser",
+    "player_name": "PerculesThorLvl20",
+    "steam_id": "39011615",
     "kills": 35
   },
   {
@@ -1806,12 +1818,6 @@
     "kills": 32
   },
   {
-    "weapon_category": "Knife",
-    "player_name": "LurpakpeekArmsRaceLvl47",
-    "steam_id": "109520439",
-    "kills": 32
-  },
-  {
     "weapon_category": "Sniper",
     "player_name": "XavinNinjaLvl3",
     "steam_id": "90540730",
@@ -1881,12 +1887,6 @@
     "weapon_category": "Knife",
     "player_name": "JohnnieRicoShadowHunterLvl5",
     "steam_id": "94156945",
-    "kills": 30
-  },
-  {
-    "weapon_category": "Taser",
-    "player_name": "PerculesThorLvl20",
-    "steam_id": "39011615",
     "kills": 30
   },
   {
@@ -3955,7 +3955,7 @@
   },
   {
     "weapon_category": "Taser",
-    "player_name": "HornySexSlaveMkVVengefulSpiritLvl10",
+    "player_name": "HornySexSlaveMkVVengefulSpiritLvl11",
     "steam_id": "51789856",
     "kills": 5
   },
@@ -4065,6 +4065,12 @@
     "weapon_category": "Sniper",
     "player_name": "n0sWaLsDeathLvl44",
     "steam_id": "1321911",
+    "kills": 5
+  },
+  {
+    "weapon_category": "Sniper",
+    "player_name": "RebelRockGolemLvl41",
+    "steam_id": "152859091",
     "kills": 5
   },
   {
@@ -4269,12 +4275,6 @@
     "weapon_category": "Sniper",
     "player_name": "CureArcanaShadowUndeadScourgeLvl7",
     "steam_id": "1225090372",
-    "kills": 4
-  },
-  {
-    "weapon_category": "Sniper",
-    "player_name": "RebelRockGolemLvl41",
-    "steam_id": "152859091",
     "kills": 4
   },
   {
