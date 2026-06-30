@@ -234,15 +234,15 @@
     "kills": 260
   },
   {
+    "weapon_category": "Pistol",
+    "player_name": "BakuryuDruidoftheMoonLvl8",
+    "steam_id": "884806",
+    "kills": 253
+  },
+  {
     "weapon_category": "Knife",
     "player_name": "PerculesThorLvl20",
     "steam_id": "39011615",
-    "kills": 251
-  },
-  {
-    "weapon_category": "Pistol",
-    "player_name": "BakuryuDruidoftheMoonLvl7",
-    "steam_id": "884806",
     "kills": 251
   },
   {
@@ -367,15 +367,15 @@
   },
   {
     "weapon_category": "Pistol",
-    "player_name": "PerculesThorLvl20",
-    "steam_id": "39011615",
-    "kills": 187
+    "player_name": "STANAdventurerLvl9",
+    "steam_id": "27614129",
+    "kills": 189
   },
   {
     "weapon_category": "Pistol",
-    "player_name": "STANAdventurerLvl9",
-    "steam_id": "27614129",
-    "kills": 182
+    "player_name": "PerculesThorLvl20",
+    "steam_id": "39011615",
+    "kills": 187
   },
   {
     "weapon_category": "Knife",
@@ -738,10 +738,10 @@
     "kills": 105
   },
   {
-    "weapon_category": "Pistol",
-    "player_name": "SidBotLvl42",
-    "steam_id": "399477860",
-    "kills": 103
+    "weapon_category": "Sniper",
+    "player_name": "AskadarPriestLvl27",
+    "steam_id": "21114461",
+    "kills": 104
   },
   {
     "weapon_category": "Sniper",
@@ -750,10 +750,10 @@
     "kills": 103
   },
   {
-    "weapon_category": "Sniper",
-    "player_name": "AskadarPriestLvl26",
-    "steam_id": "21114461",
-    "kills": 102
+    "weapon_category": "Pistol",
+    "player_name": "SidBotLvl42",
+    "steam_id": "399477860",
+    "kills": 103
   },
   {
     "weapon_category": "Knife",
@@ -957,7 +957,7 @@
     "weapon_category": "Sniper",
     "player_name": "STANAdventurerLvl9",
     "steam_id": "27614129",
-    "kills": 78
+    "kills": 79
   },
   {
     "weapon_category": "Taser",
@@ -1266,6 +1266,12 @@
     "kills": 57
   },
   {
+    "weapon_category": "Pistol",
+    "player_name": "AskadarPriestLvl27",
+    "steam_id": "21114461",
+    "kills": 57
+  },
+  {
     "weapon_category": "Sniper",
     "player_name": "MrMankeymanHarpyLvl29",
     "steam_id": "122633832",
@@ -1305,12 +1311,6 @@
     "weapon_category": "Pistol",
     "player_name": "MilkyNavySealLvl29",
     "steam_id": "14714479",
-    "kills": 54
-  },
-  {
-    "weapon_category": "Pistol",
-    "player_name": "AskadarPriestLvl26",
-    "steam_id": "21114461",
     "kills": 54
   },
   {
@@ -1447,7 +1447,7 @@
   },
   {
     "weapon_category": "Knife",
-    "player_name": "AskadarPriestLvl26",
+    "player_name": "AskadarPriestLvl27",
     "steam_id": "21114461",
     "kills": 48
   },
@@ -1560,16 +1560,16 @@
     "kills": 42
   },
   {
+    "weapon_category": "Knife",
+    "player_name": "ObsidianStormGargoyleLvl34",
+    "steam_id": "24524073",
+    "kills": 42
+  },
+  {
     "weapon_category": "Sniper",
     "player_name": "SkyLionEnforcerLvl14",
     "steam_id": "4043586",
     "kills": 42
-  },
-  {
-    "weapon_category": "Knife",
-    "player_name": "ObsidianStormGargoyleLvl34",
-    "steam_id": "24524073",
-    "kills": 41
   },
   {
     "weapon_category": "Knife",
@@ -1693,7 +1693,7 @@
   },
   {
     "weapon_category": "Knife",
-    "player_name": "BakuryuDruidoftheMoonLvl7",
+    "player_name": "BakuryuDruidoftheMoonLvl8",
     "steam_id": "884806",
     "kills": 36
   },
