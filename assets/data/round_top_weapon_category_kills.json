@@ -121,7 +121,7 @@
   },
   {
     "weapon_category": "Pistol",
-    "player_name": "bluesWindrangerLvl20",
+    "player_name": "bluesWindrangerLvl21",
     "steam_id": "415141590",
     "kills": 337
   },
@@ -169,7 +169,7 @@
   },
   {
     "weapon_category": "Knife",
-    "player_name": "bluesWindrangerLvl20",
+    "player_name": "bluesWindrangerLvl21",
     "steam_id": "415141590",
     "kills": 305
   },
@@ -187,7 +187,7 @@
   },
   {
     "weapon_category": "Pistol",
-    "player_name": "PsychoToadLvl20",
+    "player_name": "PsychoToadLvl22",
     "steam_id": "179677821",
     "kills": 295
   },
@@ -289,9 +289,9 @@
   },
   {
     "weapon_category": "Pistol",
-    "player_name": "1Dead1PushupEnforcerLvl46",
+    "player_name": "1Dead1PushupSorcererDDLvl5",
     "steam_id": "1188258968",
-    "kills": 215
+    "kills": 217
   },
   {
     "weapon_category": "Knife",
@@ -330,6 +330,12 @@
     "kills": 206
   },
   {
+    "weapon_category": "Sniper",
+    "player_name": "bluesWindrangerLvl21",
+    "steam_id": "415141590",
+    "kills": 202
+  },
+  {
     "weapon_category": "Pistol",
     "player_name": "STANFlonneLvl7",
     "steam_id": "27614129",
@@ -342,14 +348,8 @@
     "kills": 200
   },
   {
-    "weapon_category": "Sniper",
-    "player_name": "bluesWindrangerLvl20",
-    "steam_id": "415141590",
-    "kills": 200
-  },
-  {
     "weapon_category": "Pistol",
-    "player_name": "SkyLionHydraliskLvl0",
+    "player_name": "SkyLionHydraliskLvl3",
     "steam_id": "4043586",
     "kills": 199
   },
@@ -384,16 +384,16 @@
     "kills": 187
   },
   {
+    "weapon_category": "Pistol",
+    "player_name": "wheelchairAssaultSoldierLvl23",
+    "steam_id": "326879082",
+    "kills": 181
+  },
+  {
     "weapon_category": "Knife",
     "player_name": "RellexMurlocTidehunterLvl16",
     "steam_id": "205551555",
     "kills": 181
-  },
-  {
-    "weapon_category": "Pistol",
-    "player_name": "wheelchairNinjaLvl93",
-    "steam_id": "326879082",
-    "kills": 180
   },
   {
     "weapon_category": "Sniper",
@@ -421,7 +421,7 @@
   },
   {
     "weapon_category": "Pistol",
-    "player_name": "CrockettVoidwalkerLvl18",
+    "player_name": "CrockettVoidwalkerLvl19",
     "steam_id": "176528679",
     "kills": 174
   },
@@ -529,15 +529,15 @@
   },
   {
     "weapon_category": "Knife",
-    "player_name": "CumKissesTimeshifterLvl17",
-    "steam_id": "67520431",
-    "kills": 138
+    "player_name": "wheelchairAssaultSoldierLvl23",
+    "steam_id": "326879082",
+    "kills": 139
   },
   {
     "weapon_category": "Knife",
-    "player_name": "wheelchairNinjaLvl93",
-    "steam_id": "326879082",
-    "kills": 137
+    "player_name": "CumKissesTimeshifterLvl17",
+    "steam_id": "67520431",
+    "kills": 138
   },
   {
     "weapon_category": "Sniper",
@@ -547,7 +547,7 @@
   },
   {
     "weapon_category": "Pistol",
-    "player_name": "ObsidianStormTrollBerserkerLvl32",
+    "player_name": "ObsidianStormTrollBerserkerLvl33",
     "steam_id": "24524073",
     "kills": 135
   },
@@ -847,7 +847,7 @@
   },
   {
     "weapon_category": "Sniper",
-    "player_name": "PsychoToadLvl20",
+    "player_name": "PsychoToadLvl22",
     "steam_id": "179677821",
     "kills": 92
   },
@@ -967,7 +967,7 @@
   },
   {
     "weapon_category": "Taser",
-    "player_name": "1Dead1PushupEnforcerLvl46",
+    "player_name": "1Dead1PushupSorcererDDLvl5",
     "steam_id": "1188258968",
     "kills": 78
   },
@@ -979,7 +979,7 @@
   },
   {
     "weapon_category": "Knife",
-    "player_name": "1Dead1PushupEnforcerLvl46",
+    "player_name": "1Dead1PushupSorcererDDLvl5",
     "steam_id": "1188258968",
     "kills": 77
   },
@@ -1015,7 +1015,7 @@
   },
   {
     "weapon_category": "Knife",
-    "player_name": "CrockettVoidwalkerLvl18",
+    "player_name": "CrockettVoidwalkerLvl19",
     "steam_id": "176528679",
     "kills": 75
   },
@@ -1153,6 +1153,12 @@
   },
   {
     "weapon_category": "Knife",
+    "player_name": "ObsidianStormTrollBerserkerLvl33",
+    "steam_id": "24524073",
+    "kills": 64
+  },
+  {
+    "weapon_category": "Knife",
     "player_name": "zenwormMaoLvl17",
     "steam_id": "10745543",
     "kills": 64
@@ -1161,12 +1167,6 @@
     "weapon_category": "Sniper",
     "player_name": "HornySexSlaveMkVBarbarianDDLvl8",
     "steam_id": "51789856",
-    "kills": 63
-  },
-  {
-    "weapon_category": "Knife",
-    "player_name": "ObsidianStormTrollBerserkerLvl32",
-    "steam_id": "24524073",
     "kills": 63
   },
   {
@@ -1314,6 +1314,12 @@
     "kills": 55
   },
   {
+    "weapon_category": "Sniper",
+    "player_name": "SpyScope00PrincessBenLvl17",
+    "steam_id": "1576099475",
+    "kills": 55
+  },
+  {
     "weapon_category": "Pistol",
     "player_name": "ISEETHRUWALLSPokemonTrainerLvl26",
     "steam_id": "186340525",
@@ -1323,12 +1329,6 @@
     "weapon_category": "Pistol",
     "player_name": "MilkyNavySealLvl29",
     "steam_id": "14714479",
-    "kills": 54
-  },
-  {
-    "weapon_category": "Sniper",
-    "player_name": "SpyScope00PrincessBenLvl17",
-    "steam_id": "1576099475",
     "kills": 54
   },
   {
@@ -1369,7 +1369,7 @@
   },
   {
     "weapon_category": "Sniper",
-    "player_name": "wheelchairNinjaLvl93",
+    "player_name": "wheelchairAssaultSoldierLvl23",
     "steam_id": "326879082",
     "kills": 51
   },
@@ -1483,7 +1483,7 @@
   },
   {
     "weapon_category": "Knife",
-    "player_name": "SkyLionHydraliskLvl0",
+    "player_name": "SkyLionHydraliskLvl3",
     "steam_id": "4043586",
     "kills": 47
   },
@@ -1542,6 +1542,12 @@
     "kills": 43
   },
   {
+    "weapon_category": "Sniper",
+    "player_name": "CrockettVoidwalkerLvl19",
+    "steam_id": "176528679",
+    "kills": 43
+  },
+  {
     "weapon_category": "Pistol",
     "player_name": "LegRacerDeathKnightLvl29",
     "steam_id": "49319259",
@@ -1567,13 +1573,13 @@
   },
   {
     "weapon_category": "Knife",
-    "player_name": "PsychoToadLvl20",
+    "player_name": "PsychoToadLvl22",
     "steam_id": "179677821",
     "kills": 42
   },
   {
     "weapon_category": "Sniper",
-    "player_name": "SkyLionHydraliskLvl0",
+    "player_name": "SkyLionHydraliskLvl3",
     "steam_id": "4043586",
     "kills": 42
   },
@@ -1593,12 +1599,6 @@
     "weapon_category": "Sniper",
     "player_name": "LurpakpeekArmsRaceLvl48",
     "steam_id": "109520439",
-    "kills": 40
-  },
-  {
-    "weapon_category": "Sniper",
-    "player_name": "CrockettVoidwalkerLvl18",
-    "steam_id": "176528679",
     "kills": 40
   },
   {
@@ -2503,7 +2503,7 @@
   },
   {
     "weapon_category": "Taser",
-    "player_name": "wheelchairNinjaLvl93",
+    "player_name": "wheelchairAssaultSoldierLvl23",
     "steam_id": "326879082",
     "kills": 19
   },
@@ -4116,6 +4116,12 @@
     "kills": 5
   },
   {
+    "weapon_category": "Sniper",
+    "player_name": "1Dead1PushupSorcererDDLvl5",
+    "steam_id": "1188258968",
+    "kills": 5
+  },
+  {
     "weapon_category": "Pistol",
     "player_name": "LaGallinaTuruletaTaurenChieftainLvl20",
     "steam_id": "70976171",
@@ -4309,7 +4315,7 @@
   },
   {
     "weapon_category": "Sniper",
-    "player_name": "ObsidianStormTrollBerserkerLvl32",
+    "player_name": "ObsidianStormTrollBerserkerLvl33",
     "steam_id": "24524073",
     "kills": 4
   },
@@ -4663,12 +4669,6 @@
   },
   {
     "weapon_category": "Sniper",
-    "player_name": "1Dead1PushupEnforcerLvl46",
-    "steam_id": "1188258968",
-    "kills": 3
-  },
-  {
-    "weapon_category": "Sniper",
     "player_name": "SeaguldNecromancerLvl10",
     "steam_id": "10485765",
     "kills": 3
@@ -5017,12 +5017,6 @@
   },
   {
     "weapon_category": "Sniper",
-    "player_name": "KarmanbezperepodvipodvertaUndeadScourgeLvl15",
-    "steam_id": "1172872211",
-    "kills": 2
-  },
-  {
-    "weapon_category": "Sniper",
     "player_name": "bvrthBloodMageLvl18",
     "steam_id": "1267336757",
     "kills": 2
@@ -5037,6 +5031,12 @@
     "weapon_category": "Sniper",
     "player_name": "AwpsR4PuieSBloodMageLvl14",
     "steam_id": "1256383660",
+    "kills": 2
+  },
+  {
+    "weapon_category": "Sniper",
+    "player_name": "KarmanbezperepodvipodvertaUndeadScourgeLvl15",
+    "steam_id": "1172872211",
     "kills": 2
   },
   {
