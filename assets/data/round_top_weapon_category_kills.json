@@ -372,6 +372,12 @@
     "kills": 187
   },
   {
+    "weapon_category": "Pistol",
+    "player_name": "STANAdventurerLvl9",
+    "steam_id": "27614129",
+    "kills": 182
+  },
+  {
     "weapon_category": "Knife",
     "player_name": "RellexMurlocTidehunterLvl16",
     "steam_id": "205551555",
@@ -382,12 +388,6 @@
     "player_name": "RexxxDeathLvl41",
     "steam_id": "33358424",
     "kills": 179
-  },
-  {
-    "weapon_category": "Pistol",
-    "player_name": "STANHuskarLvl20",
-    "steam_id": "27614129",
-    "kills": 178
   },
   {
     "weapon_category": "Pistol",
@@ -750,6 +750,12 @@
     "kills": 103
   },
   {
+    "weapon_category": "Sniper",
+    "player_name": "AskadarPriestLvl26",
+    "steam_id": "21114461",
+    "kills": 102
+  },
+  {
     "weapon_category": "Knife",
     "player_name": "HooLeeCrabPrincessBenLvl25",
     "steam_id": "165962520",
@@ -826,12 +832,6 @@
     "player_name": "ChippedSidewalkHarpyLvl4",
     "steam_id": "10238144",
     "kills": 93
-  },
-  {
-    "weapon_category": "Sniper",
-    "player_name": "AskadarPriestLvl24",
-    "steam_id": "21114461",
-    "kills": 92
   },
   {
     "weapon_category": "Pistol",
@@ -954,6 +954,12 @@
     "kills": 79
   },
   {
+    "weapon_category": "Sniper",
+    "player_name": "STANAdventurerLvl9",
+    "steam_id": "27614129",
+    "kills": 78
+  },
+  {
     "weapon_category": "Taser",
     "player_name": "1Dead1PushupKoboldGeomancerLvl21",
     "steam_id": "1188258968",
@@ -985,21 +991,15 @@
   },
   {
     "weapon_category": "Pistol",
-    "player_name": "MoldybreadChameleonLvl94",
-    "steam_id": "107058756",
-    "kills": 77
-  },
-  {
-    "weapon_category": "Pistol",
     "player_name": "PrincessBenKaelthasSunstriderLvl8",
     "steam_id": "64194714",
     "kills": 77
   },
   {
-    "weapon_category": "Sniper",
-    "player_name": "STANHuskarLvl20",
-    "steam_id": "27614129",
-    "kills": 76
+    "weapon_category": "Pistol",
+    "player_name": "MoldybreadChameleonLvl94",
+    "steam_id": "107058756",
+    "kills": 77
   },
   {
     "weapon_category": "Knife",
@@ -1308,6 +1308,12 @@
     "kills": 54
   },
   {
+    "weapon_category": "Pistol",
+    "player_name": "AskadarPriestLvl26",
+    "steam_id": "21114461",
+    "kills": 54
+  },
+  {
     "weapon_category": "Sniper",
     "player_name": "SpyScope00PrincessBenLvl17",
     "steam_id": "1576099475",
@@ -1399,12 +1405,6 @@
   },
   {
     "weapon_category": "Pistol",
-    "player_name": "AskadarPriestLvl24",
-    "steam_id": "21114461",
-    "kills": 49
-  },
-  {
-    "weapon_category": "Pistol",
     "player_name": "BustaRockGolemLvl53",
     "steam_id": "2113384",
     "kills": 49
@@ -1447,7 +1447,7 @@
   },
   {
     "weapon_category": "Knife",
-    "player_name": "AskadarPriestLvl24",
+    "player_name": "AskadarPriestLvl26",
     "steam_id": "21114461",
     "kills": 48
   },
@@ -1723,7 +1723,7 @@
   },
   {
     "weapon_category": "Knife",
-    "player_name": "STANHuskarLvl20",
+    "player_name": "STANAdventurerLvl9",
     "steam_id": "27614129",
     "kills": 35
   },
@@ -5521,7 +5521,7 @@
   },
   {
     "weapon_category": "Knife",
-    "player_name": "UndeadScourgeLvl3",
+    "player_name": "UndeadScourgeLvl6",
     "steam_id": "131791155",
     "kills": 1
   },
@@ -6139,7 +6139,7 @@
   },
   {
     "weapon_category": "Pistol",
-    "player_name": "UndeadScourgeLvl3",
+    "player_name": "UndeadScourgeLvl6",
     "steam_id": "131791155",
     "kills": 1
   },
