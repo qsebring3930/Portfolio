@@ -1,0 +1,94 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Io
+|image=[[File:Io.webp]]
+|category=DotA-Universal
+|max=40
+|level=2740
+|access=Beta
+|weapons=
+CZ75-Auto
+|restricted=All
+|team=1
+}}
+|skill1={{SkillInfo
+|name=Tether
+|info=
+<p>
+Connect with an Ally to boost both of you<br>
+Heal Ally when you Heal<br>
+Increase Speed<br>
+Hinder Enemies between you<br>
+Shard: Damage Enemies and Heal
+</p>
+|trigger=Ability1
+|target=Target_Ally
+|tickrate=0.2
+|range=1000
+|radius=1200
+|cooldown=12.0
+|extra=
+<p>
+Breaks if you move too far. Press again to break manually.<br>
+Damage ticks every second, Heal is 50%
+</p>
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Heal Transfer|lvl1=50.0%|lvl2=60.0%|lvl3=70.0%|lvl4=80.0%|lvl5=90.0%|lvl6=100.0%|lvl7=110.0%|lvl8=120.0%}}
+|line2={{LevelUpRow|field=Speed|lvl1=6.0%|lvl2=8.0%|lvl3=10.0%|lvl4=12.0%|lvl5=14.0%|lvl6=16.0%|lvl7=18.0%|lvl8=20.0%}}
+|line3={{LevelUpRow|field=Hinder|lvl1=5.0%|lvl2=10.0%|lvl3=15.0%|lvl4=20.0%|lvl5=25.0%|lvl6=30.0%|lvl7=35.0%|lvl8=40.0%}}
+|line4={{LevelUpRow|field=Damage|lvl1=0|lvl2=0|lvl3=0|lvl4=4|lvl5=6|lvl6=8|lvl7=10|lvl8=12}}
+}}}}
+|skill2={{SkillInfo
+|name=Spirits
+|info=
+Summon Orbiting No-Clip Grenades that explode on contact
+|trigger=Ability2
+|target=Self
+|quantity=5
+|duration=15
+|radius=650
+|cooldown=15.0
+|extra=Press again to detonate all early
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Explosion Damage|lvl1=40|lvl2=45|lvl3=50|lvl4=55|lvl5=60|lvl6=65|lvl7=70|lvl8=75}}
+}}}}
+|skill3={{SkillInfo
+|name=Overcharge
+|info=
+Regen HP and Increase Magic Damage
+|trigger=Ability3
+|target=Self
+|duration=10
+|extra=
+<p>
+Heal is based on Max Health<br>
+Gives ally same boost if they are tethered
+</p>
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Heal|lvl1=1.0%|lvl2=2.0%|lvl3=3.0%|lvl4=4.0%|lvl5=5.0%|lvl6=6.0%|lvl7=7.0%|lvl8=8.0%}}
+|line2={{LevelUpRow|field=Increase|lvl1=12.0%|lvl2=15.0%|lvl3=18.0%|lvl4=21.0%|lvl5=24.0%|lvl6=27.0%|lvl7=30.0%|lvl8=33.0%}}
+|line3={{LevelUpRow|field=Cooldown|unit=sec.|lvl1=36.0|lvl2=33.0|lvl3=30.0|lvl4=27.0|lvl5=24.0|lvl6=21.0|lvl7=18.0|lvl8=15.0}}
+}}}}
+|skill4={{SkillInfo
+|name=Equilibrium
+|info=
+Increase Gun Damage if Healthy, Increase Healing Power if closer to Death
+|trigger=Special
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Increase|lvl1=4.0%|lvl2=7.0%|lvl3=10.0%|lvl4=13.0%|lvl5=16.0%|lvl6=19.0%|lvl7=22.0%|lvl8=25.0%}}
+|line2={{LevelUpRow|field=Healing|lvl1=4.0%|lvl2=7.0%|lvl3=10.0%|lvl4=13.0%|lvl5=16.0%|lvl6=19.0%|lvl7=22.0%|lvl8=25.0%}}
+}}}}
+|skill5={{SkillInfo
+|name=Relocate
+|info=
+Channel to teleport to where you aim for a short time
+|trigger=Ultimate
+|duration=12
+|range=1500
+|extra=Teleports ally too if they are tethered
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Channel Time|unit=sec.|lvl1=3.5|lvl2=3.2|lvl3=3.0|lvl4=2.8|lvl5=2.5|lvl6=2.2|lvl7=1.8|lvl8=1.5}}
+|line2={{LevelUpRow|field=Cooldown|unit=sec.|lvl1=41.0|lvl2=38.0|lvl3=35.0|lvl4=32.0|lvl5=29.0|lvl6=26.0|lvl7=23.0|lvl8=20.0}}
+}}}}
+}}
