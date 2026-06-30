@@ -349,6 +349,12 @@
   },
   {
     "weapon_category": "Pistol",
+    "player_name": "STANAdventurerLvl11",
+    "steam_id": "27614129",
+    "kills": 193
+  },
+  {
+    "weapon_category": "Pistol",
     "player_name": "DaRuinerArchmageLvl29",
     "steam_id": "52041808",
     "kills": 191
@@ -363,12 +369,6 @@
     "weapon_category": "Sniper",
     "player_name": "CIuelessIRLMurlocTidecallerLvl21",
     "steam_id": "31738326",
-    "kills": 189
-  },
-  {
-    "weapon_category": "Pistol",
-    "player_name": "STANAdventurerLvl9",
-    "steam_id": "27614129",
     "kills": 189
   },
   {
@@ -955,7 +955,7 @@
   },
   {
     "weapon_category": "Sniper",
-    "player_name": "STANAdventurerLvl9",
+    "player_name": "STANAdventurerLvl11",
     "steam_id": "27614129",
     "kills": 79
   },
@@ -1399,6 +1399,12 @@
   },
   {
     "weapon_category": "Pistol",
+    "player_name": "ObsidianStormAlchemistLvl37",
+    "steam_id": "24524073",
+    "kills": 50
+  },
+  {
+    "weapon_category": "Pistol",
     "player_name": "ScrubishCryptLordLvl32",
     "steam_id": "32734970",
     "kills": 50
@@ -1500,12 +1506,6 @@
     "kills": 45
   },
   {
-    "weapon_category": "Pistol",
-    "player_name": "ObsidianStormGargoyleLvl34",
-    "steam_id": "24524073",
-    "kills": 44
-  },
-  {
     "weapon_category": "Knife",
     "player_name": "XenoBloodMageLvl44",
     "steam_id": "60950492",
@@ -1561,7 +1561,7 @@
   },
   {
     "weapon_category": "Knife",
-    "player_name": "ObsidianStormGargoyleLvl34",
+    "player_name": "ObsidianStormAlchemistLvl37",
     "steam_id": "24524073",
     "kills": 42
   },
@@ -1705,6 +1705,12 @@
   },
   {
     "weapon_category": "Knife",
+    "player_name": "STANAdventurerLvl11",
+    "steam_id": "27614129",
+    "kills": 36
+  },
+  {
+    "weapon_category": "Knife",
     "player_name": "IceColdFrostyKrampusLvl28",
     "steam_id": "31912388",
     "kills": 36
@@ -1719,12 +1725,6 @@
     "weapon_category": "Knife",
     "player_name": "LurpakpeekArmsRaceLvl48",
     "steam_id": "109520439",
-    "kills": 35
-  },
-  {
-    "weapon_category": "Knife",
-    "player_name": "STANAdventurerLvl9",
-    "steam_id": "27614129",
     "kills": 35
   },
   {
@@ -4315,7 +4315,7 @@
   },
   {
     "weapon_category": "Sniper",
-    "player_name": "ObsidianStormGargoyleLvl34",
+    "player_name": "ObsidianStormAlchemistLvl37",
     "steam_id": "24524073",
     "kills": 4
   },
