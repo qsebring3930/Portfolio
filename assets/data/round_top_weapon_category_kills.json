@@ -432,15 +432,15 @@
     "kills": 163
   },
   {
-    "weapon_category": "Knife",
-    "player_name": "EricHitmonleeLvl19",
-    "steam_id": "21443158",
-    "kills": 162
-  },
-  {
     "weapon_category": "Pistol",
     "player_name": "STANHuskarLvl16",
     "steam_id": "27614129",
+    "kills": 163
+  },
+  {
+    "weapon_category": "Knife",
+    "player_name": "EricHitmonleeLvl19",
+    "steam_id": "21443158",
     "kills": 162
   },
   {
@@ -571,7 +571,7 @@
   },
   {
     "weapon_category": "Sniper",
-    "player_name": "TonyMummyLvl14",
+    "player_name": "TonyMummyLvl16",
     "steam_id": "32169045",
     "kills": 126
   },
@@ -823,15 +823,15 @@
   },
   {
     "weapon_category": "Pistol",
-    "player_name": "N3squikErrorLvl16",
-    "steam_id": "243319964",
-    "kills": 92
+    "player_name": "TonyMummyLvl16",
+    "steam_id": "32169045",
+    "kills": 93
   },
   {
     "weapon_category": "Pistol",
-    "player_name": "TonyMummyLvl14",
-    "steam_id": "32169045",
-    "kills": 91
+    "player_name": "N3squikErrorLvl16",
+    "steam_id": "243319964",
+    "kills": 92
   },
   {
     "weapon_category": "Taser",
@@ -847,7 +847,7 @@
   },
   {
     "weapon_category": "Sniper",
-    "player_name": "AskadarPriestLvl17",
+    "player_name": "AskadarPriestLvl19",
     "steam_id": "21114461",
     "kills": 89
   },
@@ -997,7 +997,7 @@
   },
   {
     "weapon_category": "Knife",
-    "player_name": "TonyMummyLvl14",
+    "player_name": "TonyMummyLvl16",
     "steam_id": "32169045",
     "kills": 75
   },
@@ -1098,6 +1098,12 @@
     "kills": 69
   },
   {
+    "weapon_category": "Pistol",
+    "player_name": "EcstatictongsBotLvl5",
+    "steam_id": "192802928",
+    "kills": 68
+  },
+  {
     "weapon_category": "Sniper",
     "player_name": "BansheeWC3Lvl35",
     "steam_id": "1009276262",
@@ -1108,12 +1114,6 @@
     "player_name": "BiddynosoundSorceressLvl34",
     "steam_id": "30308641",
     "kills": 68
-  },
-  {
-    "weapon_category": "Pistol",
-    "player_name": "EcstatictongsCharizardLvl15",
-    "steam_id": "192802928",
-    "kills": 67
   },
   {
     "weapon_category": "Pistol",
@@ -1441,7 +1441,7 @@
   },
   {
     "weapon_category": "Knife",
-    "player_name": "AskadarPriestLvl17",
+    "player_name": "AskadarPriestLvl19",
     "steam_id": "21114461",
     "kills": 48
   },
@@ -1675,7 +1675,7 @@
   },
   {
     "weapon_category": "Pistol",
-    "player_name": "AskadarPriestLvl17",
+    "player_name": "AskadarPriestLvl19",
     "steam_id": "21114461",
     "kills": 36
   },
@@ -2533,7 +2533,7 @@
   },
   {
     "weapon_category": "Sniper",
-    "player_name": "EcstatictongsCharizardLvl15",
+    "player_name": "EcstatictongsBotLvl5",
     "steam_id": "192802928",
     "kills": 19
   },
@@ -3079,7 +3079,7 @@
   },
   {
     "weapon_category": "Knife",
-    "player_name": "EcstatictongsCharizardLvl15",
+    "player_name": "EcstatictongsBotLvl5",
     "steam_id": "192802928",
     "kills": 12
   },
