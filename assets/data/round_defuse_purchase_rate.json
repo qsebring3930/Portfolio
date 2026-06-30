@@ -546,13 +546,6 @@
     "defuse_purchase_rate": "16.47"
   },
   {
-    "player_name": "1Dead1PushupAntlionSoldierLvl9",
-    "steam_id": "1188258968",
-    "defuse_kits_bought": 107,
-    "rounds_played": 656,
-    "defuse_purchase_rate": "16.31"
-  },
-  {
     "player_name": "LeohitmanUndeadScourgeLvl11",
     "steam_id": "918617722",
     "defuse_kits_bought": 6,
@@ -565,6 +558,13 @@
     "defuse_kits_bought": 256,
     "rounds_played": 1583,
     "defuse_purchase_rate": "16.17"
+  },
+  {
+    "player_name": "1Dead1PushupThorLvl67",
+    "steam_id": "1188258968",
+    "defuse_kits_bought": 107,
+    "rounds_played": 662,
+    "defuse_purchase_rate": "16.16"
   },
   {
     "player_name": "KarlisladRevenantLvl8",
@@ -628,6 +628,13 @@
     "defuse_kits_bought": 1,
     "rounds_played": 7,
     "defuse_purchase_rate": "14.29"
+  },
+  {
+    "player_name": "BukkakeBroDeathKnightLvl32",
+    "steam_id": "67858257",
+    "defuse_kits_bought": 15,
+    "rounds_played": 111,
+    "defuse_purchase_rate": "13.51"
   },
   {
     "player_name": "DerpmindCounterSniperLvl15",
@@ -740,13 +747,6 @@
     "defuse_kits_bought": 5,
     "rounds_played": 47,
     "defuse_purchase_rate": "10.64"
-  },
-  {
-    "player_name": "BukkakeBroAgentSmithLvl47",
-    "steam_id": "67858257",
-    "defuse_kits_bought": 11,
-    "rounds_played": 104,
-    "defuse_purchase_rate": "10.58"
   },
   {
     "player_name": "MNightShinodaOrcishHordeLvl37",
@@ -1071,13 +1071,6 @@
     "defuse_purchase_rate": "5.68"
   },
   {
-    "player_name": "FatsaxonKoffingLvl10",
-    "steam_id": "86004550",
-    "defuse_kits_bought": 14,
-    "rounds_played": 247,
-    "defuse_purchase_rate": "5.67"
-  },
-  {
     "player_name": "GoldfishPrismaticGolemLvl24",
     "steam_id": "108554414",
     "defuse_kits_bought": 10,
@@ -1090,6 +1083,13 @@
     "defuse_kits_bought": 26,
     "rounds_played": 467,
     "defuse_purchase_rate": "5.57"
+  },
+  {
+    "player_name": "FatsaxonKoffingLvl11",
+    "steam_id": "86004550",
+    "defuse_kits_bought": 14,
+    "rounds_played": 253,
+    "defuse_purchase_rate": "5.53"
   },
   {
     "player_name": "eLmNagaSeaWitchLvl3",
@@ -1183,13 +1183,6 @@
     "defuse_purchase_rate": "4.40"
   },
   {
-    "player_name": "WindWanderingEarthShamanLvl21",
-    "steam_id": "1095486733",
-    "defuse_kits_bought": 7,
-    "rounds_played": 166,
-    "defuse_purchase_rate": "4.22"
-  },
-  {
     "player_name": "WildeboareMichaelMyersLvl10",
     "steam_id": "131596884",
     "defuse_kits_bought": 3,
@@ -1225,11 +1218,18 @@
     "defuse_purchase_rate": "4.08"
   },
   {
-    "player_name": "TonyGhostLvl27",
+    "player_name": "Tony",
     "steam_id": "32169045",
     "defuse_kits_bought": 21,
-    "rounds_played": 516,
-    "defuse_purchase_rate": "4.07"
+    "rounds_played": 517,
+    "defuse_purchase_rate": "4.06"
+  },
+  {
+    "player_name": "WindWanderingDarkArchonLvl17",
+    "steam_id": "1095486733",
+    "defuse_kits_bought": 7,
+    "rounds_played": 173,
+    "defuse_purchase_rate": "4.05"
   },
   {
     "player_name": "XenoBloodMageLvl44",
@@ -1477,13 +1477,6 @@
     "defuse_purchase_rate": "1.90"
   },
   {
-    "player_name": "LvLeleventyOrcishHordeLvl22",
-    "steam_id": "3205118",
-    "defuse_kits_bought": 3,
-    "rounds_played": 176,
-    "defuse_purchase_rate": "1.70"
-  },
-  {
     "player_name": "PaladinLvl23",
     "steam_id": "8039897",
     "defuse_kits_bought": 2,
@@ -1503,6 +1496,13 @@
     "defuse_kits_bought": 10,
     "rounds_played": 604,
     "defuse_purchase_rate": "1.66"
+  },
+  {
+    "player_name": "LvLeleventyOrcishHordeLvl23",
+    "steam_id": "3205118",
+    "defuse_kits_bought": 3,
+    "rounds_played": 182,
+    "defuse_purchase_rate": "1.65"
   },
   {
     "player_name": "GuseensLoveHurtsLvl11",
@@ -1820,10 +1820,10 @@
     "defuse_purchase_rate": "0.11"
   },
   {
-    "player_name": "LeeGrowlitheLvl16",
+    "player_name": "LeeLurkerLvl4",
     "steam_id": "43076823",
     "defuse_kits_bought": 1,
-    "rounds_played": 1296,
+    "rounds_played": 1304,
     "defuse_purchase_rate": "0.08"
   },
   {
