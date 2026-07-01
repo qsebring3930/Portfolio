@@ -505,7 +505,7 @@
   },
   {
     "weapon_category": "Pistol",
-    "player_name": "ObsidianStormShadowHunterLvl47",
+    "player_name": "ObsidianStormTrollBerserkerLvl33",
     "steam_id": "24524073",
     "kills": 161
   },
@@ -744,15 +744,15 @@
     "kills": 113
   },
   {
-    "weapon_category": "Sniper",
-    "player_name": "JecaByteToadLvl29",
-    "steam_id": "28889661",
-    "kills": 111
-  },
-  {
     "weapon_category": "Pistol",
     "player_name": "SidShadowHunterLvl88",
     "steam_id": "399477860",
+    "kills": 112
+  },
+  {
+    "weapon_category": "Sniper",
+    "player_name": "JecaByteToadLvl29",
+    "steam_id": "28889661",
     "kills": 111
   },
   {
@@ -1008,6 +1008,12 @@
     "kills": 81
   },
   {
+    "weapon_category": "Knife",
+    "player_name": "ObsidianStormTrollBerserkerLvl33",
+    "steam_id": "24524073",
+    "kills": 81
+  },
+  {
     "weapon_category": "Pistol",
     "player_name": "highasalwaysGhoulLvl29",
     "steam_id": "1667633096",
@@ -1110,24 +1116,6 @@
     "kills": 74
   },
   {
-    "weapon_category": "Knife",
-    "player_name": "ObsidianStormShadowHunterLvl47",
-    "steam_id": "24524073",
-    "kills": 74
-  },
-  {
-    "weapon_category": "Knife",
-    "player_name": "Kotaj4ckGhoulLvl60",
-    "steam_id": "859824385",
-    "kills": 73
-  },
-  {
-    "weapon_category": "Sniper",
-    "player_name": "SickboyrariKaelthasSunstriderLvl39",
-    "steam_id": "32783979",
-    "kills": 73
-  },
-  {
     "weapon_category": "Sniper",
     "player_name": "MNightShinodaNightElfLvl33",
     "steam_id": "1043305982",
@@ -1137,6 +1125,18 @@
     "weapon_category": "Pistol",
     "player_name": "DrNotMonkey2ShroudGhostLvl35",
     "steam_id": "31143533",
+    "kills": 73
+  },
+  {
+    "weapon_category": "Sniper",
+    "player_name": "SickboyrariKaelthasSunstriderLvl39",
+    "steam_id": "32783979",
+    "kills": 73
+  },
+  {
+    "weapon_category": "Knife",
+    "player_name": "Kotaj4ckGhoulLvl60",
+    "steam_id": "859824385",
     "kills": 73
   },
   {
@@ -4411,7 +4411,7 @@
   },
   {
     "weapon_category": "Sniper",
-    "player_name": "ObsidianStormShadowHunterLvl47",
+    "player_name": "ObsidianStormTrollBerserkerLvl33",
     "steam_id": "24524073",
     "kills": 4
   },
