@@ -517,9 +517,9 @@
   },
   {
     "weapon_category": "Pistol",
-    "player_name": "CryHavocGangplankLvl14",
+    "player_name": "CryHavocVenomancerLvl15",
     "steam_id": "460591640",
-    "kills": 157
+    "kills": 158
   },
   {
     "weapon_category": "Pistol",
@@ -654,10 +654,10 @@
     "kills": 132
   },
   {
-    "weapon_category": "Knife",
-    "player_name": "CryHavocGangplankLvl14",
-    "steam_id": "460591640",
-    "kills": 125
+    "weapon_category": "Pistol",
+    "player_name": "SantaJigglypuffLvl17",
+    "steam_id": "109132144",
+    "kills": 130
   },
   {
     "weapon_category": "Pistol",
@@ -672,15 +672,21 @@
     "kills": 125
   },
   {
-    "weapon_category": "Sniper",
-    "player_name": "STANFlonneLvl20",
-    "steam_id": "27614129",
-    "kills": 124
+    "weapon_category": "Knife",
+    "player_name": "CryHavocVenomancerLvl15",
+    "steam_id": "460591640",
+    "kills": 125
   },
   {
     "weapon_category": "Knife",
     "player_name": "zBrackeTDemonHunterLvl37",
     "steam_id": "28725580",
+    "kills": 124
+  },
+  {
+    "weapon_category": "Sniper",
+    "player_name": "STANFlonneLvl20",
+    "steam_id": "27614129",
     "kills": 124
   },
   {
@@ -694,12 +700,6 @@
     "player_name": "noboBloodseekerLvl2",
     "steam_id": "107525940",
     "kills": 122
-  },
-  {
-    "weapon_category": "Pistol",
-    "player_name": "SantaJigglypuffLvl16",
-    "steam_id": "109132144",
-    "kills": 121
   },
   {
     "weapon_category": "Knife",
@@ -805,7 +805,7 @@
   },
   {
     "weapon_category": "Sniper",
-    "player_name": "CryHavocGangplankLvl14",
+    "player_name": "CryHavocVenomancerLvl15",
     "steam_id": "460591640",
     "kills": 106
   },
@@ -1183,6 +1183,12 @@
   },
   {
     "weapon_category": "Pistol",
+    "player_name": "AskadarDeathKnightLvl11",
+    "steam_id": "21114461",
+    "kills": 68
+  },
+  {
+    "weapon_category": "Pistol",
     "player_name": "EcstatictongsBotLvl11",
     "steam_id": "192802928",
     "kills": 68
@@ -1198,12 +1204,6 @@
     "player_name": "MilkyBlackMageLvl19",
     "steam_id": "14714479",
     "kills": 68
-  },
-  {
-    "weapon_category": "Pistol",
-    "player_name": "AskadarDeathKnightLvl11",
-    "steam_id": "21114461",
-    "kills": 67
   },
   {
     "weapon_category": "Pistol",
@@ -1501,7 +1501,7 @@
   },
   {
     "weapon_category": "Sniper",
-    "player_name": "SantaJigglypuffLvl16",
+    "player_name": "SantaJigglypuffLvl17",
     "steam_id": "109132144",
     "kills": 50
   },
@@ -2731,7 +2731,7 @@
   },
   {
     "weapon_category": "Knife",
-    "player_name": "SantaJigglypuffLvl16",
+    "player_name": "SantaJigglypuffLvl17",
     "steam_id": "109132144",
     "kills": 18
   },
