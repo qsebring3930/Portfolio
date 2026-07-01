@@ -510,6 +510,18 @@
     "kills": 161
   },
   {
+    "weapon_category": "Knife",
+    "player_name": "highasalwaysGhoulLvl29",
+    "steam_id": "1667633096",
+    "kills": 160
+  },
+  {
+    "weapon_category": "Pistol",
+    "player_name": "CryHavocGangplankLvl14",
+    "steam_id": "460591640",
+    "kills": 157
+  },
+  {
     "weapon_category": "Pistol",
     "player_name": "H4WKENLuckyPrinnyOverlordLvl55",
     "steam_id": "58409953",
@@ -522,16 +534,16 @@
     "kills": 156
   },
   {
-    "weapon_category": "Knife",
-    "player_name": "highasalwaysGhoulLvl29",
-    "steam_id": "1667633096",
-    "kills": 156
-  },
-  {
     "weapon_category": "Pistol",
     "player_name": "LurpakpeekErrorLvl2",
     "steam_id": "109520439",
     "kills": 155
+  },
+  {
+    "weapon_category": "Knife",
+    "player_name": "ObsidianStormTrollBerserkerLvl39",
+    "steam_id": "24524073",
+    "kills": 154
   },
   {
     "weapon_category": "Knife",
@@ -546,22 +558,10 @@
     "kills": 150
   },
   {
-    "weapon_category": "Pistol",
-    "player_name": "CryHavocGangplankLvl10",
-    "steam_id": "460591640",
-    "kills": 150
-  },
-  {
     "weapon_category": "Sniper",
     "player_name": "KarlisladSorceressLvl18",
     "steam_id": "1213608465",
     "kills": 150
-  },
-  {
-    "weapon_category": "Knife",
-    "player_name": "ObsidianStormTrollBerserkerLvl39",
-    "steam_id": "24524073",
-    "kills": 148
   },
   {
     "weapon_category": "Pistol",
@@ -655,7 +655,7 @@
   },
   {
     "weapon_category": "Knife",
-    "player_name": "CryHavocGangplankLvl10",
+    "player_name": "CryHavocGangplankLvl14",
     "steam_id": "460591640",
     "kills": 125
   },
@@ -694,6 +694,12 @@
     "player_name": "noboBloodseekerLvl2",
     "steam_id": "107525940",
     "kills": 122
+  },
+  {
+    "weapon_category": "Pistol",
+    "player_name": "SantaJigglypuffLvl16",
+    "steam_id": "109132144",
+    "kills": 121
   },
   {
     "weapon_category": "Knife",
@@ -780,12 +786,6 @@
     "kills": 109
   },
   {
-    "weapon_category": "Pistol",
-    "player_name": "SantaJigglypuffLvl13",
-    "steam_id": "109132144",
-    "kills": 108
-  },
-  {
     "weapon_category": "Sniper",
     "player_name": "OAFPlouploufZerglingLvl32",
     "steam_id": "216413930",
@@ -805,13 +805,13 @@
   },
   {
     "weapon_category": "Sniper",
-    "player_name": "CryHavocGangplankLvl10",
+    "player_name": "CryHavocGangplankLvl14",
     "steam_id": "460591640",
     "kills": 106
   },
   {
     "weapon_category": "Sniper",
-    "player_name": "AskadarPandarenBrewmasterLvl5",
+    "player_name": "AskadarDeathKnightLvl11",
     "steam_id": "21114461",
     "kills": 105
   },
@@ -1201,7 +1201,7 @@
   },
   {
     "weapon_category": "Pistol",
-    "player_name": "AskadarPandarenBrewmasterLvl5",
+    "player_name": "AskadarDeathKnightLvl11",
     "steam_id": "21114461",
     "kills": 67
   },
@@ -1446,6 +1446,12 @@
     "kills": 54
   },
   {
+    "weapon_category": "Knife",
+    "player_name": "AskadarDeathKnightLvl11",
+    "steam_id": "21114461",
+    "kills": 53
+  },
+  {
     "weapon_category": "Sniper",
     "player_name": "PerculesThorLvl20",
     "steam_id": "39011615",
@@ -1495,7 +1501,7 @@
   },
   {
     "weapon_category": "Sniper",
-    "player_name": "SantaJigglypuffLvl13",
+    "player_name": "SantaJigglypuffLvl16",
     "steam_id": "109132144",
     "kills": 50
   },
@@ -1509,12 +1515,6 @@
     "weapon_category": "Sniper",
     "player_name": "ErisGhoulLvl12",
     "steam_id": "93382355",
-    "kills": 50
-  },
-  {
-    "weapon_category": "Knife",
-    "player_name": "AskadarPandarenBrewmasterLvl5",
-    "steam_id": "21114461",
     "kills": 50
   },
   {
@@ -2731,7 +2731,7 @@
   },
   {
     "weapon_category": "Knife",
-    "player_name": "SantaJigglypuffLvl13",
+    "player_name": "SantaJigglypuffLvl16",
     "steam_id": "109132144",
     "kills": 18
   },
@@ -2935,7 +2935,7 @@
   },
   {
     "weapon_category": "Pistol",
-    "player_name": "yaysayerDeathKnightLvl14",
+    "player_name": "yaysayerDeathKnightLvl15",
     "steam_id": "35807818",
     "kills": 15
   },
@@ -3073,7 +3073,7 @@
   },
   {
     "weapon_category": "Sniper",
-    "player_name": "yaysayerDeathKnightLvl14",
+    "player_name": "yaysayerDeathKnightLvl15",
     "steam_id": "35807818",
     "kills": 13
   },
@@ -3133,7 +3133,7 @@
   },
   {
     "weapon_category": "Pistol",
-    "player_name": "GraveyardKeeperTreantProtectorLvl6",
+    "player_name": "GraveyardKeeperRockGolemLvl27",
     "steam_id": "37375118",
     "kills": 13
   },
@@ -3231,6 +3231,12 @@
     "weapon_category": "Knife",
     "player_name": "JambiPantsTrollBerserkerLvl20",
     "steam_id": "48157218",
+    "kills": 11
+  },
+  {
+    "weapon_category": "Knife",
+    "player_name": "TrueRaccoonSolarFlareLvl106",
+    "steam_id": "30458067",
     "kills": 11
   },
   {
@@ -3469,7 +3475,7 @@
   },
   {
     "weapon_category": "Knife",
-    "player_name": "GraveyardKeeperTreantProtectorLvl6",
+    "player_name": "GraveyardKeeperRockGolemLvl27",
     "steam_id": "37375118",
     "kills": 9
   },
@@ -3727,12 +3733,6 @@
   },
   {
     "weapon_category": "Knife",
-    "player_name": "TrueRaccoonSolarFlareLvl105",
-    "steam_id": "30458067",
-    "kills": 8
-  },
-  {
-    "weapon_category": "Knife",
     "player_name": "SyNcro3PriestLvl2",
     "steam_id": "900663142",
     "kills": 8
@@ -3751,14 +3751,14 @@
   },
   {
     "weapon_category": "Knife",
-    "player_name": "MugiwaraSpectreLvl9",
-    "steam_id": "29955070",
+    "player_name": "HouseArrestTrollBerserkerLvl0",
+    "steam_id": "32281830",
     "kills": 7
   },
   {
     "weapon_category": "Knife",
-    "player_name": "HouseArrestTrollBerserkerLvl0",
-    "steam_id": "32281830",
+    "player_name": "MugiwaraSpectreLvl9",
+    "steam_id": "29955070",
     "kills": 7
   },
   {
@@ -4087,14 +4087,14 @@
   },
   {
     "weapon_category": "Knife",
-    "player_name": "MulitioShroudGhostLvl26",
-    "steam_id": "34140708",
+    "player_name": "DavidWestOmniknightLvl8",
+    "steam_id": "31949620",
     "kills": 6
   },
   {
     "weapon_category": "Knife",
-    "player_name": "DavidWestOmniknightLvl8",
-    "steam_id": "31949620",
+    "player_name": "MulitioShroudGhostLvl26",
+    "steam_id": "34140708",
     "kills": 6
   },
   {
