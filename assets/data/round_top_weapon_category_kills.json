@@ -1,9 +1,9 @@
 [
   {
     "weapon_category": "Knife",
-    "player_name": "LeeYandereLvl62",
+    "player_name": "LeeYandereLvl63",
     "steam_id": "43076823",
-    "kills": 999
+    "kills": 1006
   },
   {
     "weapon_category": "Knife",
@@ -306,10 +306,10 @@
     "kills": 262
   },
   {
-    "weapon_category": "Knife",
-    "player_name": "PerculesThorLvl21",
-    "steam_id": "39011615",
-    "kills": 251
+    "weapon_category": "Pistol",
+    "player_name": "STANWorldEaterLvl17",
+    "steam_id": "27614129",
+    "kills": 253
   },
   {
     "weapon_category": "Pistol",
@@ -318,10 +318,10 @@
     "kills": 251
   },
   {
-    "weapon_category": "Pistol",
-    "player_name": "STANWorldEaterLvl15",
-    "steam_id": "27614129",
-    "kills": 249
+    "weapon_category": "Knife",
+    "player_name": "PerculesThorLvl21",
+    "steam_id": "39011615",
+    "kills": 251
   },
   {
     "weapon_category": "Sniper",
@@ -396,15 +396,21 @@
     "kills": 211
   },
   {
-    "weapon_category": "Pistol",
-    "player_name": "MuteMonkDDLvl19",
-    "steam_id": "17553799",
-    "kills": 209
+    "weapon_category": "Sniper",
+    "player_name": "STANWorldEaterLvl17",
+    "steam_id": "27614129",
+    "kills": 210
   },
   {
     "weapon_category": "Knife",
     "player_name": "SurrealStoneGolemLvl62",
     "steam_id": "954120",
+    "kills": 209
+  },
+  {
+    "weapon_category": "Pistol",
+    "player_name": "MuteMonkDDLvl19",
+    "steam_id": "17553799",
     "kills": 209
   },
   {
@@ -426,21 +432,15 @@
     "kills": 206
   },
   {
-    "weapon_category": "Sniper",
-    "player_name": "STANWorldEaterLvl15",
-    "steam_id": "27614129",
-    "kills": 204
+    "weapon_category": "Knife",
+    "player_name": "ObsidianStormSpiritWalkerLvl47",
+    "steam_id": "24524073",
+    "kills": 199
   },
   {
     "weapon_category": "Sniper",
     "player_name": "SyNcro3DreadLordLvl8",
     "steam_id": "900663142",
-    "kills": 199
-  },
-  {
-    "weapon_category": "Knife",
-    "player_name": "ObsidianStormSpiritWalkerLvl47",
-    "steam_id": "24524073",
     "kills": 199
   },
   {
@@ -625,7 +625,7 @@
   },
   {
     "weapon_category": "Pistol",
-    "player_name": "LeeYandereLvl62",
+    "player_name": "LeeYandereLvl63",
     "steam_id": "43076823",
     "kills": 150
   },
@@ -727,6 +727,12 @@
   },
   {
     "weapon_category": "Pistol",
+    "player_name": "AskadarAlchemistLvl18",
+    "steam_id": "21114461",
+    "kills": 131
+  },
+  {
+    "weapon_category": "Pistol",
     "player_name": "EtherofRuinSantaLvl12",
     "steam_id": "15332172",
     "kills": 129
@@ -790,12 +796,6 @@
     "player_name": "MulitioShroudGhostLvl26",
     "steam_id": "34140708",
     "kills": 118
-  },
-  {
-    "weapon_category": "Pistol",
-    "player_name": "AskadarAlchemistLvl14",
-    "steam_id": "21114461",
-    "kills": 117
   },
   {
     "weapon_category": "Pistol",
@@ -865,7 +865,7 @@
   },
   {
     "weapon_category": "Sniper",
-    "player_name": "AskadarAlchemistLvl14",
+    "player_name": "AskadarAlchemistLvl18",
     "steam_id": "21114461",
     "kills": 106
   },
@@ -1429,7 +1429,7 @@
   },
   {
     "weapon_category": "Sniper",
-    "player_name": "LeeYandereLvl62",
+    "player_name": "LeeYandereLvl63",
     "steam_id": "43076823",
     "kills": 58
   },
@@ -1555,7 +1555,7 @@
   },
   {
     "weapon_category": "Knife",
-    "player_name": "AskadarAlchemistLvl14",
+    "player_name": "AskadarAlchemistLvl18",
     "steam_id": "21114461",
     "kills": 53
   },
@@ -1573,7 +1573,7 @@
   },
   {
     "weapon_category": "Pistol",
-    "player_name": "BelliqueGoblinTinkerLvl2",
+    "player_name": "BelliquePandarenBrewmasterLvl2",
     "steam_id": "48099214",
     "kills": 52
   },
@@ -1879,7 +1879,7 @@
   },
   {
     "weapon_category": "Knife",
-    "player_name": "STANWorldEaterLvl15",
+    "player_name": "STANWorldEaterLvl17",
     "steam_id": "27614129",
     "kills": 39
   },
@@ -2388,6 +2388,12 @@
     "kills": 26
   },
   {
+    "weapon_category": "Sniper",
+    "player_name": "BelliquePandarenBrewmasterLvl2",
+    "steam_id": "48099214",
+    "kills": 26
+  },
+  {
     "weapon_category": "Pistol",
     "player_name": "elektroPersnicketyLvl14",
     "steam_id": "183338135",
@@ -2455,14 +2461,14 @@
   },
   {
     "weapon_category": "Sniper",
-    "player_name": "LvLeleventyOrcishHordeLvl27",
-    "steam_id": "3205118",
+    "player_name": "TubertBigellowMaoLvl31",
+    "steam_id": "7420022",
     "kills": 25
   },
   {
     "weapon_category": "Sniper",
-    "player_name": "TubertBigellowMaoLvl31",
-    "steam_id": "7420022",
+    "player_name": "LvLeleventyOrcishHordeLvl27",
+    "steam_id": "3205118",
     "kills": 25
   },
   {
@@ -2832,24 +2838,6 @@
     "kills": 19
   },
   {
-    "weapon_category": "Sniper",
-    "player_name": "BelliqueGoblinTinkerLvl2",
-    "steam_id": "48099214",
-    "kills": 19
-  },
-  {
-    "weapon_category": "Sniper",
-    "player_name": "LPPaladinLvl8",
-    "steam_id": "70603457",
-    "kills": 18
-  },
-  {
-    "weapon_category": "Sniper",
-    "player_name": "ludStrifeShroudGhostLvl30",
-    "steam_id": "30072050",
-    "kills": 18
-  },
-  {
     "weapon_category": "Knife",
     "player_name": "xPh0biaFlamePredatorLvl16",
     "steam_id": "1202475984",
@@ -2865,6 +2853,18 @@
     "weapon_category": "Knife",
     "player_name": "EmfevaDemolitionistLvl80",
     "steam_id": "164603554",
+    "kills": 18
+  },
+  {
+    "weapon_category": "Sniper",
+    "player_name": "LPPaladinLvl8",
+    "steam_id": "70603457",
+    "kills": 18
+  },
+  {
+    "weapon_category": "Sniper",
+    "player_name": "ludStrifeShroudGhostLvl30",
+    "steam_id": "30072050",
     "kills": 18
   },
   {
@@ -2958,12 +2958,6 @@
     "kills": 17
   },
   {
-    "weapon_category": "Knife",
-    "player_name": "CookieBloomwardHostLvl7",
-    "steam_id": "175811974",
-    "kills": 17
-  },
-  {
     "weapon_category": "Sniper",
     "player_name": "TerlianTechGoblinLvl57",
     "steam_id": "73238511",
@@ -2973,6 +2967,12 @@
     "weapon_category": "Sniper",
     "player_name": "OsamabinFallen",
     "steam_id": "837256237",
+    "kills": 17
+  },
+  {
+    "weapon_category": "Knife",
+    "player_name": "CookieBloomwardHostLvl7",
+    "steam_id": "175811974",
     "kills": 17
   },
   {
@@ -3301,7 +3301,7 @@
   },
   {
     "weapon_category": "Sniper",
-    "player_name": "WinDVDTrollBerserkerLvl1",
+    "player_name": "WinDVDTrollBerserkerLvl3",
     "steam_id": "38060241",
     "kills": 12
   },
@@ -3519,6 +3519,12 @@
     "weapon_category": "Knife",
     "player_name": "HasSAznPandaLvl34",
     "steam_id": "93794049",
+    "kills": 10
+  },
+  {
+    "weapon_category": "Knife",
+    "player_name": "BelliquePandarenBrewmasterLvl2",
+    "steam_id": "48099214",
     "kills": 10
   },
   {
@@ -3819,12 +3825,6 @@
     "weapon_category": "Taser",
     "player_name": "SnafuBloodMageLvl32",
     "steam_id": "18594167",
-    "kills": 8
-  },
-  {
-    "weapon_category": "Knife",
-    "player_name": "BelliqueGoblinTinkerLvl2",
-    "steam_id": "48099214",
     "kills": 8
   },
   {
@@ -4885,7 +4885,7 @@
   },
   {
     "weapon_category": "Pistol",
-    "player_name": "WinDVDTrollBerserkerLvl1",
+    "player_name": "WinDVDTrollBerserkerLvl3",
     "steam_id": "38060241",
     "kills": 3
   },
@@ -4993,7 +4993,7 @@
   },
   {
     "weapon_category": "Knife",
-    "player_name": "WinDVDTrollBerserkerLvl1",
+    "player_name": "WinDVDTrollBerserkerLvl3",
     "steam_id": "38060241",
     "kills": 3
   },
