@@ -294,6 +294,12 @@
     "kills": 264
   },
   {
+    "weapon_category": "Pistol",
+    "player_name": "STANWorldEaterLvl19",
+    "steam_id": "27614129",
+    "kills": 263
+  },
+  {
     "weapon_category": "Knife",
     "player_name": "JonoShadowMonkeyLvl9",
     "steam_id": "51377294",
@@ -306,21 +312,15 @@
     "kills": 262
   },
   {
-    "weapon_category": "Pistol",
-    "player_name": "STANWorldEaterLvl19",
-    "steam_id": "27614129",
-    "kills": 258
+    "weapon_category": "Knife",
+    "player_name": "PerculesThorLvl22",
+    "steam_id": "39011615",
+    "kills": 251
   },
   {
     "weapon_category": "Pistol",
     "player_name": "MrocNyIvysaurLvl12",
     "steam_id": "51605820",
-    "kills": 251
-  },
-  {
-    "weapon_category": "Knife",
-    "player_name": "PerculesThorLvl21",
-    "steam_id": "39011615",
     "kills": 251
   },
   {
@@ -369,7 +369,7 @@
     "weapon_category": "Sniper",
     "player_name": "STANWorldEaterLvl19",
     "steam_id": "27614129",
-    "kills": 216
+    "kills": 220
   },
   {
     "weapon_category": "Knife",
@@ -421,7 +421,7 @@
   },
   {
     "weapon_category": "Pistol",
-    "player_name": "PerculesThorLvl21",
+    "player_name": "PerculesThorLvl22",
     "steam_id": "39011615",
     "kills": 206
   },
@@ -781,7 +781,7 @@
   },
   {
     "weapon_category": "Knife",
-    "player_name": "FireSniperShamanLvl16",
+    "player_name": "FireSniperShamanLvl17",
     "steam_id": "3069543",
     "kills": 120
   },
@@ -1488,6 +1488,12 @@
     "kills": 57
   },
   {
+    "weapon_category": "Taser",
+    "player_name": "PerculesThorLvl22",
+    "steam_id": "39011615",
+    "kills": 57
+  },
+  {
     "weapon_category": "Sniper",
     "player_name": "CumKissesDragoonLvl33",
     "steam_id": "67520431",
@@ -1537,7 +1543,7 @@
   },
   {
     "weapon_category": "Sniper",
-    "player_name": "PerculesThorLvl21",
+    "player_name": "PerculesThorLvl22",
     "steam_id": "39011615",
     "kills": 53
   },
@@ -1573,9 +1579,9 @@
   },
   {
     "weapon_category": "Pistol",
-    "player_name": "BelliqueHarpyLvl0",
+    "player_name": "BelliqueHarpyLvl4",
     "steam_id": "48099214",
-    "kills": 52
+    "kills": 53
   },
   {
     "weapon_category": "Pistol",
@@ -1633,7 +1639,7 @@
   },
   {
     "weapon_category": "Pistol",
-    "player_name": "FireSniperShamanLvl16",
+    "player_name": "FireSniperShamanLvl17",
     "steam_id": "3069543",
     "kills": 50
   },
@@ -1714,12 +1720,6 @@
     "player_name": "XenoBloodMageLvl46",
     "steam_id": "60950492",
     "kills": 47
-  },
-  {
-    "weapon_category": "Taser",
-    "player_name": "PerculesThorLvl21",
-    "steam_id": "39011615",
-    "kills": 46
   },
   {
     "weapon_category": "Knife",
@@ -1807,6 +1807,12 @@
   },
   {
     "weapon_category": "Pistol",
+    "player_name": "WindWanderingPersnicketyLvl8",
+    "steam_id": "1095486733",
+    "kills": 41
+  },
+  {
+    "weapon_category": "Pistol",
     "player_name": "PinkoPoltergeistLvl11",
     "steam_id": "104662667",
     "kills": 41
@@ -1845,12 +1851,6 @@
     "weapon_category": "Knife",
     "player_name": "BakuryuArchmageLvl32",
     "steam_id": "884806",
-    "kills": 40
-  },
-  {
-    "weapon_category": "Pistol",
-    "player_name": "WindWanderingSorcererDDLvl15",
-    "steam_id": "1095486733",
     "kills": 40
   },
   {
@@ -2065,7 +2065,7 @@
   },
   {
     "weapon_category": "Knife",
-    "player_name": "WindWanderingSorcererDDLvl15",
+    "player_name": "WindWanderingPersnicketyLvl8",
     "steam_id": "1095486733",
     "kills": 32
   },
@@ -2275,7 +2275,7 @@
   },
   {
     "weapon_category": "Sniper",
-    "player_name": "FireSniperShamanLvl16",
+    "player_name": "FireSniperShamanLvl17",
     "steam_id": "3069543",
     "kills": 28
   },
@@ -2389,7 +2389,7 @@
   },
   {
     "weapon_category": "Sniper",
-    "player_name": "BelliqueHarpyLvl0",
+    "player_name": "BelliqueHarpyLvl4",
     "steam_id": "48099214",
     "kills": 26
   },
@@ -3066,6 +3066,12 @@
     "kills": 15
   },
   {
+    "weapon_category": "Knife",
+    "player_name": "BelliqueHarpyLvl4",
+    "steam_id": "48099214",
+    "kills": 15
+  },
+  {
     "weapon_category": "Sniper",
     "player_name": "SamusAranArmsRaceLvl14",
     "steam_id": "959620",
@@ -3147,12 +3153,6 @@
     "weapon_category": "Knife",
     "player_name": "KyrezWaxGolemLvl10",
     "steam_id": "25776664",
-    "kills": 14
-  },
-  {
-    "weapon_category": "Knife",
-    "player_name": "BelliqueHarpyLvl0",
-    "steam_id": "48099214",
     "kills": 14
   },
   {
@@ -3307,7 +3307,7 @@
   },
   {
     "weapon_category": "Sniper",
-    "player_name": "WinDVDTrollBerserkerLvl5",
+    "player_name": "WinDVDTrollBerserkerLvl6",
     "steam_id": "38060241",
     "kills": 12
   },
@@ -3337,14 +3337,14 @@
   },
   {
     "weapon_category": "Knife",
-    "player_name": "EvansThorLvl60",
-    "steam_id": "39918972",
+    "player_name": "EcstatictongsBotLvl11",
+    "steam_id": "192802928",
     "kills": 12
   },
   {
     "weapon_category": "Knife",
-    "player_name": "EcstatictongsBotLvl11",
-    "steam_id": "192802928",
+    "player_name": "EvansThorLvl60",
+    "steam_id": "39918972",
     "kills": 12
   },
   {
@@ -4231,7 +4231,7 @@
   },
   {
     "weapon_category": "Sniper",
-    "player_name": "WindWanderingSorcererDDLvl15",
+    "player_name": "WindWanderingPersnicketyLvl8",
     "steam_id": "1095486733",
     "kills": 6
   },
@@ -4405,7 +4405,7 @@
   },
   {
     "weapon_category": "Knife",
-    "player_name": "WinDVDTrollBerserkerLvl5",
+    "player_name": "WinDVDTrollBerserkerLvl6",
     "steam_id": "38060241",
     "kills": 5
   },
@@ -4891,7 +4891,7 @@
   },
   {
     "weapon_category": "Pistol",
-    "player_name": "WinDVDTrollBerserkerLvl5",
+    "player_name": "WinDVDTrollBerserkerLvl6",
     "steam_id": "38060241",
     "kills": 3
   },
