@@ -210,16 +210,16 @@
     "kills": 311
   },
   {
+    "weapon_category": "Pistol",
+    "player_name": "1Dead1PushupTrickorTreaterLvl16",
+    "steam_id": "1188258968",
+    "kills": 306
+  },
+  {
     "weapon_category": "Knife",
     "player_name": "ShuxpyDreadLordLvl80",
     "steam_id": "373936564",
     "kills": 303
-  },
-  {
-    "weapon_category": "Pistol",
-    "player_name": "1Dead1PushupTrickorTreaterLvl16",
-    "steam_id": "1188258968",
-    "kills": 302
   },
   {
     "weapon_category": "Knife",
@@ -381,13 +381,13 @@
     "weapon_category": "Pistol",
     "player_name": "ZickziiNoSoundMonkDDLvl19",
     "steam_id": "9944208",
-    "kills": 219
+    "kills": 221
   },
   {
     "weapon_category": "Pistol",
     "player_name": "CrockettEnigmaLvl21",
     "steam_id": "176528679",
-    "kills": 216
+    "kills": 218
   },
   {
     "weapon_category": "Knife",
@@ -537,7 +537,7 @@
     "weapon_category": "Pistol",
     "player_name": "AskadarDeathKnightLvl24",
     "steam_id": "21114461",
-    "kills": 170
+    "kills": 171
   },
   {
     "weapon_category": "Knife",
@@ -937,7 +937,7 @@
   },
   {
     "weapon_category": "Pistol",
-    "player_name": "UAVlaginatorRockGolemLvl28",
+    "player_name": "UAVlaginatorNavySealLvl14",
     "steam_id": "1554569660",
     "kills": 97
   },
@@ -1255,7 +1255,7 @@
   },
   {
     "weapon_category": "Knife",
-    "player_name": "UAVlaginatorRockGolemLvl28",
+    "player_name": "UAVlaginatorNavySealLvl14",
     "steam_id": "1554569660",
     "kills": 70
   },
@@ -1278,6 +1278,24 @@
     "kills": 69
   },
   {
+    "weapon_category": "Sniper",
+    "player_name": "PepkilzEidolonLvl6",
+    "steam_id": "17201640",
+    "kills": 69
+  },
+  {
+    "weapon_category": "Sniper",
+    "player_name": "MilkyBlademasterLvl27",
+    "steam_id": "14714479",
+    "kills": 68
+  },
+  {
+    "weapon_category": "Sniper",
+    "player_name": "BansheeWC3Lvl35",
+    "steam_id": "1009276262",
+    "kills": 68
+  },
+  {
     "weapon_category": "Pistol",
     "player_name": "EcstatictongsBotLvl11",
     "steam_id": "192802928",
@@ -1290,39 +1308,21 @@
     "kills": 68
   },
   {
-    "weapon_category": "Sniper",
-    "player_name": "MilkyBlademasterLvl27",
-    "steam_id": "14714479",
-    "kills": 68
-  },
-  {
-    "weapon_category": "Sniper",
-    "player_name": "PepkilzBeastMasteryHunterLvl39",
-    "steam_id": "17201640",
-    "kills": 68
-  },
-  {
-    "weapon_category": "Sniper",
-    "player_name": "BansheeWC3Lvl35",
-    "steam_id": "1009276262",
-    "kills": 68
-  },
-  {
     "weapon_category": "Knife",
     "player_name": "PsychoxSignHereLvl20",
     "steam_id": "179677821",
     "kills": 68
   },
   {
-    "weapon_category": "Sniper",
-    "player_name": "TheLeftWallHumanAllianceLvl25",
-    "steam_id": "19691448",
-    "kills": 67
-  },
-  {
     "weapon_category": "Pistol",
     "player_name": "MulitioShroudGhostLvl26",
     "steam_id": "34140708",
+    "kills": 67
+  },
+  {
+    "weapon_category": "Sniper",
+    "player_name": "TheLeftWallHumanAllianceLvl25",
+    "steam_id": "19691448",
     "kills": 67
   },
   {
@@ -2179,7 +2179,7 @@
   },
   {
     "weapon_category": "Pistol",
-    "player_name": "PepkilzBeastMasteryHunterLvl39",
+    "player_name": "PepkilzEidolonLvl6",
     "steam_id": "17201640",
     "kills": 30
   },
@@ -3187,6 +3187,12 @@
   },
   {
     "weapon_category": "Pistol",
+    "player_name": "WinDVDCryptLordLvl22",
+    "steam_id": "38060241",
+    "kills": 14
+  },
+  {
+    "weapon_category": "Pistol",
     "player_name": "LPPaladinLvl8",
     "steam_id": "70603457",
     "kills": 14
@@ -3363,12 +3369,6 @@
     "weapon_category": "Pistol",
     "player_name": "adNUndeadScourgeLvl24",
     "steam_id": "28238183",
-    "kills": 12
-  },
-  {
-    "weapon_category": "Pistol",
-    "player_name": "WinDVDCryptLordLvl22",
-    "steam_id": "38060241",
     "kills": 12
   },
   {
@@ -3583,8 +3583,8 @@
   },
   {
     "weapon_category": "Pistol",
-    "player_name": "DogeJackSkellingtonLvl28",
-    "steam_id": "370836478",
+    "player_name": "TrueRaccoonRogueDDLvl17",
+    "steam_id": "30458067",
     "kills": 10
   },
   {
@@ -3595,8 +3595,8 @@
   },
   {
     "weapon_category": "Pistol",
-    "player_name": "TrueRaccoonRogueDDLvl17",
-    "steam_id": "30458067",
+    "player_name": "DogeJackSkellingtonLvl28",
+    "steam_id": "370836478",
     "kills": 10
   },
   {
@@ -3649,7 +3649,7 @@
   },
   {
     "weapon_category": "Sniper",
-    "player_name": "UAVlaginatorRockGolemLvl28",
+    "player_name": "UAVlaginatorNavySealLvl14",
     "steam_id": "1554569660",
     "kills": 9
   },
@@ -3967,14 +3967,14 @@
   },
   {
     "weapon_category": "Pistol",
-    "player_name": "FlashxpBoxLvl21",
-    "steam_id": "38764144",
+    "player_name": "tcUndeadScourgeLvl22",
+    "steam_id": "35264043",
     "kills": 7
   },
   {
     "weapon_category": "Pistol",
-    "player_name": "tcUndeadScourgeLvl22",
-    "steam_id": "35264043",
+    "player_name": "FlashxpBoxLvl21",
+    "steam_id": "38764144",
     "kills": 7
   },
   {
@@ -4177,6 +4177,12 @@
   },
   {
     "weapon_category": "Pistol",
+    "player_name": "RANSOMPriestLvl33",
+    "steam_id": "4047722",
+    "kills": 6
+  },
+  {
+    "weapon_category": "Pistol",
     "player_name": "HeartStringsBarbarianDDLvl9",
     "steam_id": "35273992",
     "kills": 6
@@ -4185,12 +4191,6 @@
     "weapon_category": "Pistol",
     "player_name": "EvilMadMatterNecrophosLvl12",
     "steam_id": "35525804",
-    "kills": 6
-  },
-  {
-    "weapon_category": "Pistol",
-    "player_name": "RANSOMPriestLvl33",
-    "steam_id": "4047722",
     "kills": 6
   },
   {
@@ -4483,7 +4483,7 @@
   },
   {
     "weapon_category": "Knife",
-    "player_name": "PepkilzBeastMasteryHunterLvl39",
+    "player_name": "PepkilzEidolonLvl6",
     "steam_id": "17201640",
     "kills": 5
   },
