@@ -7,12 +7,12 @@
   {
     "admin_name": "TwistedSquiddy",
     "command": "css_respawn",
-    "command_count": 133
+    "command_count": 134
   },
   {
     "admin_name": "xSignHere",
     "command": "css_slap",
-    "command_count": 127
+    "command_count": 129
   },
   {
     "admin_name": "Logick",
@@ -27,7 +27,7 @@
   {
     "admin_name": "TwistedSquiddy",
     "command": "css_slay",
-    "command_count": 72
+    "command_count": 74
   },
   {
     "admin_name": "Logick",
@@ -87,7 +87,7 @@
   {
     "admin_name": "xSignHere",
     "command": "css_respawn",
-    "command_count": 11
+    "command_count": 12
   },
   {
     "admin_name": "Hexette",
@@ -100,13 +100,28 @@
     "command_count": 9
   },
   {
+    "admin_name": "xSignHere",
+    "command": "css_gravity",
+    "command_count": 7
+  },
+  {
     "admin_name": "Hexette",
     "command": "css_hp",
     "command_count": 6
   },
   {
+    "admin_name": "Console",
+    "command": "css_say",
+    "command_count": 5
+  },
+  {
     "admin_name": "Lucky Prinny Overlord",
     "command": "css_slay",
+    "command_count": 5
+  },
+  {
+    "admin_name": "xSignHere",
+    "command": "css_speed",
     "command_count": 5
   },
   {
@@ -120,13 +135,13 @@
     "command_count": 4
   },
   {
-    "admin_name": "xSignHere",
-    "command": "css_gravity",
+    "admin_name": "Lucky Prinny Overlord",
+    "command": "css_respawn",
     "command_count": 4
   },
   {
-    "admin_name": "Lucky Prinny Overlord",
-    "command": "css_respawn",
+    "admin_name": "xSignHere",
+    "command": "css_say",
     "command_count": 4
   },
   {
@@ -175,8 +190,8 @@
     "command_count": 3
   },
   {
-    "admin_name": "xSignHere",
-    "command": "css_say",
+    "admin_name": "VEGETO#6969",
+    "command": "css_slap",
     "command_count": 3
   },
   {
@@ -198,6 +213,11 @@
     "admin_name": "Logick",
     "command": "css_speed",
     "command_count": 3
+  },
+  {
+    "admin_name": "Console",
+    "command": "css_addban",
+    "command_count": 2
   },
   {
     "admin_name": "Hexette",
@@ -225,6 +245,11 @@
     "command_count": 2
   },
   {
+    "admin_name": "TwistedSquiddy",
+    "command": "css_hp",
+    "command_count": 2
+  },
+  {
     "admin_name": "xSignHere",
     "command": "css_hp",
     "command_count": 2
@@ -232,16 +257,6 @@
   {
     "admin_name": "/Toad",
     "command": "css_respawn",
-    "command_count": 2
-  },
-  {
-    "admin_name": "VEGETO#6969",
-    "command": "css_slap",
-    "command_count": 2
-  },
-  {
-    "admin_name": "xSignHere",
-    "command": "css_speed",
     "command_count": 2
   },
   {
@@ -270,12 +285,12 @@
     "command_count": 1
   },
   {
-    "admin_name": "Console",
-    "command": "css_addban",
+    "admin_name": "Logick",
+    "command": "css_ban",
     "command_count": 1
   },
   {
-    "admin_name": "Logick",
+    "admin_name": "xSignHere",
     "command": "css_ban",
     "command_count": 1
   },
@@ -297,11 +312,6 @@
   {
     "admin_name": "Logick",
     "command": "css_gravity",
-    "command_count": 1
-  },
-  {
-    "admin_name": "TwistedSquiddy",
-    "command": "css_hp",
     "command_count": 1
   },
   {
@@ -330,11 +340,6 @@
     "command_count": 1
   },
   {
-    "admin_name": "Console",
-    "command": "css_say",
-    "command_count": 1
-  },
-  {
     "admin_name": "TwistedSquiddy",
     "command": "css_silence",
     "command_count": 1
@@ -352,6 +357,11 @@
   {
     "admin_name": "Hobo",
     "command": "css_slay",
+    "command_count": 1
+  },
+  {
+    "admin_name": "VEGETO#6969",
+    "command": "css_speed",
     "command_count": 1
   },
   {
