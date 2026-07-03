@@ -264,6 +264,12 @@
     "kills": 309
   },
   {
+    "weapon_category": "Knife",
+    "player_name": "ObsidianStormGargoyleLvl41",
+    "steam_id": "24524073",
+    "kills": 309
+  },
+  {
     "weapon_category": "Pistol",
     "player_name": "boochOrcishHordeLvl47",
     "steam_id": "159185248",
@@ -274,12 +280,6 @@
     "player_name": "STANDemolitionGoblinLvl17",
     "steam_id": "27614129",
     "kills": 307
-  },
-  {
-    "weapon_category": "Knife",
-    "player_name": "ObsidianStorm",
-    "steam_id": "24524073",
-    "kills": 304
   },
   {
     "weapon_category": "Knife",
@@ -456,16 +456,16 @@
     "kills": 212
   },
   {
+    "weapon_category": "Knife",
+    "player_name": "FireSniperCupidLvl19",
+    "steam_id": "3069543",
+    "kills": 211
+  },
+  {
     "weapon_category": "Pistol",
     "player_name": "DaRuinerGirlfriendLvl22",
     "steam_id": "52041808",
     "kills": 210
-  },
-  {
-    "weapon_category": "Knife",
-    "player_name": "FireSniper",
-    "steam_id": "3069543",
-    "kills": 203
   },
   {
     "weapon_category": "Pistol",
@@ -493,7 +493,7 @@
   },
   {
     "weapon_category": "Pistol",
-    "player_name": "ObsidianStorm",
+    "player_name": "ObsidianStormGargoyleLvl41",
     "steam_id": "24524073",
     "kills": 195
   },
@@ -1615,7 +1615,7 @@
   },
   {
     "weapon_category": "Pistol",
-    "player_name": "FireSniper",
+    "player_name": "FireSniperCupidLvl19",
     "steam_id": "3069543",
     "kills": 57
   },
@@ -2149,7 +2149,7 @@
   },
   {
     "weapon_category": "Sniper",
-    "player_name": "FireSniper",
+    "player_name": "FireSniperCupidLvl19",
     "steam_id": "3069543",
     "kills": 35
   },
@@ -4237,7 +4237,7 @@
   },
   {
     "weapon_category": "Sniper",
-    "player_name": "ObsidianStorm",
+    "player_name": "ObsidianStormGargoyleLvl41",
     "steam_id": "24524073",
     "kills": 6
   },
