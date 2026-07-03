@@ -229,6 +229,12 @@
   },
   {
     "weapon_category": "Knife",
+    "player_name": "ObsidianStormGargoyleLvl41",
+    "steam_id": "24524073",
+    "kills": 319
+  },
+  {
+    "weapon_category": "Knife",
     "player_name": "boochOrcishHordeLvl47",
     "steam_id": "159185248",
     "kills": 319
@@ -261,12 +267,6 @@
     "weapon_category": "Knife",
     "player_name": "PerculesT600Lvl0",
     "steam_id": "39011615",
-    "kills": 309
-  },
-  {
-    "weapon_category": "Knife",
-    "player_name": "ObsidianStormGargoyleLvl41",
-    "steam_id": "24524073",
     "kills": 309
   },
   {
@@ -451,15 +451,15 @@
   },
   {
     "weapon_category": "Knife",
-    "player_name": "CabooseGengarLvl15",
-    "steam_id": "109327401",
-    "kills": 212
+    "player_name": "FireSniperCupidLvl20",
+    "steam_id": "3069543",
+    "kills": 215
   },
   {
     "weapon_category": "Knife",
-    "player_name": "FireSniperCupidLvl19",
-    "steam_id": "3069543",
-    "kills": 211
+    "player_name": "CabooseGengarLvl15",
+    "steam_id": "109327401",
+    "kills": 212
   },
   {
     "weapon_category": "Pistol",
@@ -1615,7 +1615,7 @@
   },
   {
     "weapon_category": "Pistol",
-    "player_name": "FireSniperCupidLvl19",
+    "player_name": "FireSniperCupidLvl20",
     "steam_id": "3069543",
     "kills": 57
   },
@@ -1831,7 +1831,7 @@
   },
   {
     "weapon_category": "Pistol",
-    "player_name": "iPlaynakedBloodMageLvl4",
+    "player_name": "iPlaynakedBloodMageLvl5",
     "steam_id": "15968928",
     "kills": 47
   },
@@ -2149,7 +2149,7 @@
   },
   {
     "weapon_category": "Sniper",
-    "player_name": "FireSniperCupidLvl19",
+    "player_name": "FireSniperCupidLvl20",
     "steam_id": "3069543",
     "kills": 35
   },
@@ -3319,6 +3319,12 @@
   },
   {
     "weapon_category": "Knife",
+    "player_name": "ShishisonsonSorceressLvl0",
+    "steam_id": "1011174563",
+    "kills": 14
+  },
+  {
+    "weapon_category": "Knife",
     "player_name": "majikoostreLvl59",
     "steam_id": "180792748",
     "kills": 14
@@ -3432,21 +3438,15 @@
     "kills": 13
   },
   {
-    "weapon_category": "Sniper",
-    "player_name": "DINOSOWERwhitedenjiChristmasPaladinLvl4",
-    "steam_id": "81340762",
-    "kills": 13
-  },
-  {
     "weapon_category": "Knife",
     "player_name": "ViviXUnkn0wnS0ld13rLvl5",
     "steam_id": "100175971",
     "kills": 13
   },
   {
-    "weapon_category": "Knife",
-    "player_name": "ShishisonsonGargoyleLvl6",
-    "steam_id": "1011174563",
+    "weapon_category": "Sniper",
+    "player_name": "DINOSOWERwhitedenjiChristmasPaladinLvl4",
+    "steam_id": "81340762",
     "kills": 13
   },
   {
@@ -3493,12 +3493,6 @@
   },
   {
     "weapon_category": "Sniper",
-    "player_name": "JohnnieRicoShadowHunterLvl5",
-    "steam_id": "94156945",
-    "kills": 12
-  },
-  {
-    "weapon_category": "Sniper",
     "player_name": "BGMishenataOrcishHordeLvl18",
     "steam_id": "80455958",
     "kills": 12
@@ -3507,6 +3501,12 @@
     "weapon_category": "Sniper",
     "player_name": "McMercenaryGhoulLvl16",
     "steam_id": "724839005",
+    "kills": 12
+  },
+  {
+    "weapon_category": "Sniper",
+    "player_name": "JohnnieRicoShadowHunterLvl5",
+    "steam_id": "94156945",
     "kills": 12
   },
   {
@@ -4549,7 +4549,7 @@
   },
   {
     "weapon_category": "Knife",
-    "player_name": "iPlaynakedBloodMageLvl4",
+    "player_name": "iPlaynakedBloodMageLvl5",
     "steam_id": "15968928",
     "kills": 5
   },
@@ -4927,7 +4927,7 @@
   },
   {
     "weapon_category": "Sniper",
-    "player_name": "iPlaynakedBloodMageLvl4",
+    "player_name": "iPlaynakedBloodMageLvl5",
     "steam_id": "15968928",
     "kills": 4
   },
@@ -5659,7 +5659,7 @@
   },
   {
     "weapon_category": "Pistol",
-    "player_name": "ShishisonsonGargoyleLvl6",
+    "player_name": "ShishisonsonSorceressLvl0",
     "steam_id": "1011174563",
     "kills": 2
   },
@@ -5911,7 +5911,7 @@
   },
   {
     "weapon_category": "Sniper",
-    "player_name": "ShishisonsonGargoyleLvl6",
+    "player_name": "ShishisonsonSorceressLvl0",
     "steam_id": "1011174563",
     "kills": 1
   },
