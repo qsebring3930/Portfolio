@@ -1,5 +1,13 @@
 [
   {
+    "player_name": "Mute",
+    "slapped_count": 340,
+    "aliases": [
+      "Mute"
+    ],
+    "total_slap_damage": 0
+  },
+  {
     "player_name": "hex",
     "slapped_count": 96,
     "aliases": [
@@ -63,6 +71,14 @@
     "total_slap_damage": 1
   },
   {
+    "player_name": "cab",
+    "slapped_count": 2,
+    "aliases": [
+      "cab"
+    ],
+    "total_slap_damage": 10
+  },
+  {
     "player_name": "David West",
     "slapped_count": 2,
     "aliases": [
@@ -82,8 +98,8 @@
     "player_name": "Spoxie",
     "slapped_count": 2,
     "aliases": [
-      "spoxie",
-      "Spoxie"
+      "Spoxie",
+      "spoxie"
     ],
     "total_slap_damage": 0
   },
@@ -108,8 +124,8 @@
     "player_name": "Argy",
     "slapped_count": 1,
     "aliases": [
-      "argy",
-      "Argy"
+      "Argy",
+      "argy"
     ],
     "total_slap_damage": 99
   },
@@ -118,14 +134,6 @@
     "slapped_count": 1,
     "aliases": [
       "buk"
-    ],
-    "total_slap_damage": 10
-  },
-  {
-    "player_name": "cab",
-    "slapped_count": 1,
-    "aliases": [
-      "cab"
     ],
     "total_slap_damage": 10
   },
@@ -221,15 +229,6 @@
     "aliases": [
       "monkey",
       "Monkey Madness"
-    ],
-    "total_slap_damage": 0
-  },
-  {
-    "player_name": "Mute",
-    "slapped_count": 1,
-    "aliases": [
-      "Mute",
-      "mute"
     ],
     "total_slap_damage": 0
   },
