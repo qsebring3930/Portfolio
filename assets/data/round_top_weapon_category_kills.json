@@ -306,6 +306,12 @@
     "kills": 293
   },
   {
+    "weapon_category": "Knife",
+    "player_name": "ObsidianStormGargoyleLvl40",
+    "steam_id": "24524073",
+    "kills": 290
+  },
+  {
     "weapon_category": "Sniper",
     "player_name": "RawrMcRawrZerglingLvl36",
     "steam_id": "20687493",
@@ -315,12 +321,6 @@
     "weapon_category": "Pistol",
     "player_name": "MrocNyDestructionWarlockLvl40",
     "steam_id": "51605820",
-    "kills": 281
-  },
-  {
-    "weapon_category": "Knife",
-    "player_name": "ObsidianStormGargoyleLvl40",
-    "steam_id": "24524073",
     "kills": 281
   },
   {
@@ -571,6 +571,12 @@
   },
   {
     "weapon_category": "Knife",
+    "player_name": "FireSniperCupidLvl15",
+    "steam_id": "3069543",
+    "kills": 176
+  },
+  {
+    "weapon_category": "Knife",
     "player_name": "highasalwaysGhoulLvl30",
     "steam_id": "1667633096",
     "kills": 174
@@ -634,12 +640,6 @@
     "player_name": "RebelWarlockDDLvl8",
     "steam_id": "152859091",
     "kills": 157
-  },
-  {
-    "weapon_category": "Knife",
-    "player_name": "FireSniperCupidLvl13",
-    "steam_id": "3069543",
-    "kills": 155
   },
   {
     "weapon_category": "Knife",
@@ -799,9 +799,9 @@
   },
   {
     "weapon_category": "Knife",
-    "player_name": "WindWanderingPredatorLvl31",
+    "player_name": "WindWandering",
     "steam_id": "1095486733",
-    "kills": 128
+    "kills": 129
   },
   {
     "weapon_category": "Knife",
@@ -1399,7 +1399,7 @@
   },
   {
     "weapon_category": "Sniper",
-    "player_name": "WindWanderingPredatorLvl31",
+    "player_name": "WindWandering",
     "steam_id": "1095486733",
     "kills": 67
   },
@@ -1615,7 +1615,7 @@
   },
   {
     "weapon_category": "Pistol",
-    "player_name": "FireSniperCupidLvl13",
+    "player_name": "FireSniperCupidLvl15",
     "steam_id": "3069543",
     "kills": 57
   },
@@ -1657,7 +1657,7 @@
   },
   {
     "weapon_category": "Pistol",
-    "player_name": "WindWanderingPredatorLvl31",
+    "player_name": "WindWandering",
     "steam_id": "1095486733",
     "kills": 56
   },
@@ -2149,7 +2149,7 @@
   },
   {
     "weapon_category": "Sniper",
-    "player_name": "FireSniperCupidLvl13",
+    "player_name": "FireSniperCupidLvl15",
     "steam_id": "3069543",
     "kills": 35
   },

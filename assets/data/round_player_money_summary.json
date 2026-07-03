@@ -331,8 +331,8 @@
     "player_name": "ObsidianStormGargoyleLvl40",
     "steam_id": "24524073",
     "money_spent": 501000,
-    "net_betting": 463447,
-    "betting_won": 1175271,
+    "net_betting": 470547,
+    "betting_won": 1182371,
     "betting_lost": 711824
   },
   {
@@ -1896,14 +1896,6 @@
     "betting_lost": 800
   },
   {
-    "player_name": "WindWanderingPredatorLvl31",
-    "steam_id": "1095486733",
-    "money_spent": 184800,
-    "net_betting": 34559,
-    "betting_won": 466733,
-    "betting_lost": 432174
-  },
-  {
     "player_name": "JfriessBoyfriendLvl6",
     "steam_id": "891531018",
     "money_spent": 9400,
@@ -1918,6 +1910,14 @@
     "net_betting": 34400,
     "betting_won": 37200,
     "betting_lost": 2800
+  },
+  {
+    "player_name": "WindWandering",
+    "steam_id": "1095486733",
+    "money_spent": 184800,
+    "net_betting": 34259,
+    "betting_won": 466733,
+    "betting_lost": 432474
   },
   {
     "player_name": "kevpapaxSignHereLvl106",
@@ -5480,20 +5480,20 @@
     "betting_lost": 404467
   },
   {
+    "player_name": "FireSniperCupidLvl15",
+    "steam_id": "3069543",
+    "money_spent": 724850,
+    "net_betting": -308124,
+    "betting_won": 762884,
+    "betting_lost": 1071008
+  },
+  {
     "player_name": "GenAcidBoxLvl23",
     "steam_id": "1057209",
     "money_spent": 4050,
     "net_betting": -314298,
     "betting_won": 63743,
     "betting_lost": 378041
-  },
-  {
-    "player_name": "FireSniperCupidLvl13",
-    "steam_id": "3069543",
-    "money_spent": 717850,
-    "net_betting": -319524,
-    "betting_won": 751484,
-    "betting_lost": 1071008
   },
   {
     "player_name": "PeriColdlightOracleLvl36",
