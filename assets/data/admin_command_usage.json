@@ -37,7 +37,7 @@
   {
     "admin_name": "Logick",
     "command": "css_slay",
-    "command_count": 48
+    "command_count": 49
   },
   {
     "admin_name": "TwistedSquiddy",
@@ -57,7 +57,7 @@
   {
     "admin_name": "TwistedSquiddy",
     "command": "css_wsmap",
-    "command_count": 22
+    "command_count": 23
   },
   {
     "admin_name": "Logick",
@@ -125,6 +125,11 @@
     "command_count": 5
   },
   {
+    "admin_name": "VEGETO#6969",
+    "command": "css_speed",
+    "command_count": 5
+  },
+  {
     "admin_name": "xSignHere",
     "command": "css_speed",
     "command_count": 5
@@ -160,11 +165,6 @@
     "command_count": 4
   },
   {
-    "admin_name": "VEGETO#6969",
-    "command": "css_speed",
-    "command_count": 4
-  },
-  {
     "admin_name": "TwistedSquiddy",
     "command": "css_strip",
     "command_count": 4
@@ -182,6 +182,11 @@
   {
     "admin_name": "VEGETO#6969",
     "command": "css_ban",
+    "command_count": 3
+  },
+  {
+    "admin_name": "TwistedSquiddy",
+    "command": "css_god",
     "command_count": 3
   },
   {
@@ -235,13 +240,13 @@
     "command_count": 2
   },
   {
-    "admin_name": "<3 Awful Aim :D",
-    "command": "css_give",
+    "admin_name": "xSignHere",
+    "command": "css_ban",
     "command_count": 2
   },
   {
-    "admin_name": "TwistedSquiddy",
-    "command": "css_god",
+    "admin_name": "<3 Awful Aim :D",
+    "command": "css_give",
     "command_count": 2
   },
   {
@@ -296,11 +301,6 @@
   },
   {
     "admin_name": "xSignHere",
-    "command": "css_ban",
-    "command_count": 1
-  },
-  {
-    "admin_name": "xSignHere",
     "command": "css_gag",
     "command_count": 1
   },
@@ -321,6 +321,11 @@
   },
   {
     "admin_name": "Logick",
+    "command": "css_gravity",
+    "command_count": 1
+  },
+  {
+    "admin_name": "VEGETO#6969",
     "command": "css_gravity",
     "command_count": 1
   },

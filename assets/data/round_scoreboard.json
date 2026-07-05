@@ -338,6 +338,7 @@
   {
     "player_name": "STANMummyLvl23",
     "steam_id": "27614129",
+<<<<<<< Updated upstream
     "kills": 1548,
     "assists": 736,
     "deaths": 1892,
@@ -346,6 +347,16 @@
     "damage": 234866,
     "rounds_played": 2154,
     "adr": "109.04",
+=======
+    "kills": 1553,
+    "assists": 737,
+    "deaths": 1892,
+    "mvps": 153,
+    "score": 4924,
+    "damage": 235592,
+    "rounds_played": 2155,
+    "adr": "109.32",
+>>>>>>> Stashed changes
     "kd_ratio": "0.82",
     "kad_ratio": "1.21"
   },
@@ -852,6 +863,20 @@
     "adr": "192.47",
     "kd_ratio": "1.71",
     "kad_ratio": "2.29"
+  },
+  {
+    "player_name": "JimmyXZerglingLvl38",
+    "steam_id": "393197344",
+    "kills": 933,
+    "assists": 413,
+    "deaths": 1027,
+    "mvps": 55,
+    "score": 2294,
+    "damage": 138581,
+    "rounds_played": 1112,
+    "adr": "124.62",
+    "kd_ratio": "0.91",
+    "kad_ratio": "1.31"
   },
   {
     "player_name": "TheGoldenOneRogueDDLvl21",
@@ -1752,6 +1777,7 @@
   {
     "player_name": "WinDVDShadowHunterLvl0",
     "steam_id": "38060241",
+<<<<<<< Updated upstream
     "kills": 475,
     "assists": 217,
     "deaths": 702,
@@ -1760,6 +1786,16 @@
     "damage": 69698,
     "rounds_played": 656,
     "adr": "106.25",
+=======
+    "kills": 476,
+    "assists": 217,
+    "deaths": 703,
+    "mvps": 24,
+    "score": 1570,
+    "damage": 69735,
+    "rounds_played": 657,
+    "adr": "106.14",
+>>>>>>> Stashed changes
     "kd_ratio": "0.68",
     "kad_ratio": "0.99"
   },

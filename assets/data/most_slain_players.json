@@ -62,8 +62,8 @@
     "player_name": "Milky",
     "slain_count": 4,
     "aliases": [
-      "milky",
-      "Milky"
+      "Milky",
+      "milky"
     ]
   },
   {
@@ -194,11 +194,19 @@
     ]
   },
   {
+    "player_name": "Sid",
+    "slain_count": 2,
+    "aliases": [
+      "Sid",
+      "sid"
+    ]
+  },
+  {
     "player_name": "Tony",
     "slain_count": 2,
     "aliases": [
-      "tony",
-      "Tony"
+      "Tony",
+      "tony"
     ]
   },
   {
@@ -212,8 +220,8 @@
     "player_name": "Argy",
     "slain_count": 1,
     "aliases": [
-      "argy",
-      "Argy"
+      "Argy",
+      "argy"
     ]
   },
   {
@@ -418,14 +426,6 @@
     "slain_count": 1,
     "aliases": [
       "rip"
-    ]
-  },
-  {
-    "player_name": "Sid",
-    "slain_count": 1,
-    "aliases": [
-      "Sid",
-      "sid"
     ]
   },
   {
