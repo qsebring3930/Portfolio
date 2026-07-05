@@ -121,7 +121,7 @@
   },
   {
     "weapon_category": "Pistol",
-    "player_name": "bluesSupportClassLvl11",
+    "player_name": "bluesSupportClassLvl14",
     "steam_id": "415141590",
     "kills": 484
   },
@@ -187,7 +187,7 @@
   },
   {
     "weapon_category": "Knife",
-    "player_name": "bluesSupportClassLvl11",
+    "player_name": "bluesSupportClassLvl14",
     "steam_id": "415141590",
     "kills": 413
   },
@@ -271,9 +271,9 @@
   },
   {
     "weapon_category": "Pistol",
-    "player_name": "STANMummyLvl29",
+    "player_name": "STANWorldEaterLvl35",
     "steam_id": "27614129",
-    "kills": 358
+    "kills": 359
   },
   {
     "weapon_category": "Sniper",
@@ -355,7 +355,7 @@
   },
   {
     "weapon_category": "Sniper",
-    "player_name": "bluesSupportClassLvl11",
+    "player_name": "bluesSupportClassLvl14",
     "steam_id": "415141590",
     "kills": 312
   },
@@ -373,9 +373,9 @@
   },
   {
     "weapon_category": "Sniper",
-    "player_name": "STANMummyLvl29",
+    "player_name": "STANWorldEaterLvl35",
     "steam_id": "27614129",
-    "kills": 302
+    "kills": 305
   },
   {
     "weapon_category": "Pistol",
@@ -388,6 +388,12 @@
     "player_name": "RawrMcRawrDoctorEggmanLvl27",
     "steam_id": "20687493",
     "kills": 291
+  },
+  {
+    "weapon_category": "Knife",
+    "player_name": "JimmyXZerglingLvl41",
+    "steam_id": "393197344",
+    "kills": 288
   },
   {
     "weapon_category": "Pistol",
@@ -424,12 +430,6 @@
     "player_name": "RellexWarlockDDLvl2",
     "steam_id": "205551555",
     "kills": 278
-  },
-  {
-    "weapon_category": "Knife",
-    "player_name": "JimmyXZerglingLvl40",
-    "steam_id": "393197344",
-    "kills": 277
   },
   {
     "weapon_category": "Pistol",
@@ -1332,6 +1332,12 @@
     "kills": 86
   },
   {
+    "weapon_category": "Knife",
+    "player_name": "EverestPoltergeistLvl34",
+    "steam_id": "6527417",
+    "kills": 86
+  },
+  {
     "weapon_category": "Pistol",
     "player_name": "CabooseChanseyLvl18",
     "steam_id": "109327401",
@@ -1363,12 +1369,6 @@
   },
   {
     "weapon_category": "Knife",
-    "player_name": "SensibleDNkAwfulAimLvl10",
-    "steam_id": "1226709410",
-    "kills": 84
-  },
-  {
-    "weapon_category": "Knife",
     "player_name": "DrAxelStollRockGolemLvl51",
     "steam_id": "33190668",
     "kills": 84
@@ -1377,6 +1377,12 @@
     "weapon_category": "Knife",
     "player_name": "BiddynosoundLifestealerLvl18",
     "steam_id": "30308641",
+    "kills": 84
+  },
+  {
+    "weapon_category": "Knife",
+    "player_name": "SensibleDNkAwfulAimLvl10",
+    "steam_id": "1226709410",
     "kills": 84
   },
   {
@@ -1407,12 +1413,6 @@
     "weapon_category": "Pistol",
     "player_name": "LockedandLoadedLurkerLvl30",
     "steam_id": "396991987",
-    "kills": 82
-  },
-  {
-    "weapon_category": "Knife",
-    "player_name": "EverestPoltergeistLvl34",
-    "steam_id": "6527417",
     "kills": 82
   },
   {
@@ -1483,19 +1483,19 @@
   },
   {
     "weapon_category": "Knife",
-    "player_name": "AviLichLvl8",
-    "steam_id": "4992134",
-    "kills": 77
-  },
-  {
-    "weapon_category": "Knife",
     "player_name": "SmagenaflurpakDestructionWarlockLvl33",
     "steam_id": "299611531",
     "kills": 77
   },
   {
+    "weapon_category": "Knife",
+    "player_name": "AviLichLvl8",
+    "steam_id": "4992134",
+    "kills": 77
+  },
+  {
     "weapon_category": "Pistol",
-    "player_name": "JimmyXZerglingLvl40",
+    "player_name": "JimmyXZerglingLvl41",
     "steam_id": "393197344",
     "kills": 76
   },
@@ -1555,7 +1555,7 @@
   },
   {
     "weapon_category": "Sniper",
-    "player_name": "JimmyXZerglingLvl40",
+    "player_name": "JimmyXZerglingLvl41",
     "steam_id": "393197344",
     "kills": 72
   },
@@ -2191,7 +2191,7 @@
   },
   {
     "weapon_category": "Knife",
-    "player_name": "STANMummyLvl29",
+    "player_name": "STANWorldEaterLvl35",
     "steam_id": "27614129",
     "kills": 43
   },
@@ -2521,7 +2521,7 @@
   },
   {
     "weapon_category": "Pistol",
-    "player_name": "MistiQShadowHunterLvl19",
+    "player_name": "MistiQShadowHunterLvl21",
     "steam_id": "421745138",
     "kills": 32
   },
@@ -3325,7 +3325,7 @@
   },
   {
     "weapon_category": "Sniper",
-    "player_name": "MistiQShadowHunterLvl19",
+    "player_name": "MistiQShadowHunterLvl21",
     "steam_id": "421745138",
     "kills": 17
   },
@@ -4885,7 +4885,7 @@
   },
   {
     "weapon_category": "Knife",
-    "player_name": "MistiQShadowHunterLvl19",
+    "player_name": "MistiQShadowHunterLvl21",
     "steam_id": "421745138",
     "kills": 5
   },
@@ -5809,7 +5809,7 @@
   },
   {
     "weapon_category": "Taser",
-    "player_name": "bluesSupportClassLvl11",
+    "player_name": "bluesSupportClassLvl14",
     "steam_id": "415141590",
     "kills": 2
   },
