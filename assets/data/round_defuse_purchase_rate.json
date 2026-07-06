@@ -196,11 +196,11 @@
     "defuse_purchase_rate": "36.36"
   },
   {
-    "player_name": "BrockJohnsonMummyLvl8",
+    "player_name": "BrockJohnsonBotLvl6",
     "steam_id": "152929118",
-    "defuse_kits_bought": 138,
-    "rounds_played": 385,
-    "defuse_purchase_rate": "35.84"
+    "defuse_kits_bought": 140,
+    "rounds_played": 391,
+    "defuse_purchase_rate": "35.81"
   },
   {
     "player_name": "thorQHumanAllianceLvl98",
@@ -434,11 +434,11 @@
     "defuse_purchase_rate": "25.82"
   },
   {
-    "player_name": "TheGoldenOneBarbarianDDLvl20",
+    "player_name": "TheGoldenOneBarbarianDDLvl22",
     "steam_id": "210878433",
     "defuse_kits_bought": 323,
-    "rounds_played": 1259,
-    "defuse_purchase_rate": "25.66"
+    "rounds_played": 1262,
+    "defuse_purchase_rate": "25.59"
   },
   {
     "player_name": "PINGACHUECAUndeadScourgeLvl3",
@@ -793,9 +793,9 @@
   {
     "player_name": "naidaPriestLvl28",
     "steam_id": "205748381",
-    "defuse_kits_bought": 153,
-    "rounds_played": 982,
-    "defuse_purchase_rate": "15.58"
+    "defuse_kits_bought": 154,
+    "rounds_played": 989,
+    "defuse_purchase_rate": "15.57"
   },
   {
     "player_name": "ShishisonsonShadowHunterLvl10",
@@ -973,13 +973,6 @@
     "defuse_purchase_rate": "12.47"
   },
   {
-    "player_name": "yaysayerMichaelMyersLvl5",
-    "steam_id": "35807818",
-    "defuse_kits_bought": 93,
-    "rounds_played": 791,
-    "defuse_purchase_rate": "11.76"
-  },
-  {
     "player_name": "xSatorixxTTVGunGamerLvl18",
     "steam_id": "66685727",
     "defuse_kits_bought": 24,
@@ -1006,6 +999,13 @@
     "defuse_kits_bought": 2,
     "rounds_played": 17,
     "defuse_purchase_rate": "11.76"
+  },
+  {
+    "player_name": "yaysayerMichaelMyersLvl8",
+    "steam_id": "35807818",
+    "defuse_kits_bought": 93,
+    "rounds_played": 798,
+    "defuse_purchase_rate": "11.65"
   },
   {
     "player_name": "asomeNightElfLvl4",
@@ -1099,6 +1099,13 @@
     "defuse_purchase_rate": "10.55"
   },
   {
+    "player_name": "SantaPBodyLvl11",
+    "steam_id": "109132144",
+    "defuse_kits_bought": 121,
+    "rounds_played": 1150,
+    "defuse_purchase_rate": "10.52"
+  },
+  {
     "player_name": "357SIGSnorlaxLvl31",
     "steam_id": "21039493",
     "defuse_kits_bought": 60,
@@ -1118,13 +1125,6 @@
     "defuse_kits_bought": 105,
     "rounds_played": 1011,
     "defuse_purchase_rate": "10.39"
-  },
-  {
-    "player_name": "SantaPBodyLvl7",
-    "steam_id": "109132144",
-    "defuse_kits_bought": 118,
-    "rounds_played": 1144,
-    "defuse_purchase_rate": "10.31"
   },
   {
     "player_name": "tcUndeadScourgeLvl22",
@@ -1204,15 +1204,15 @@
     "defuse_purchase_rate": "9.09"
   },
   {
-    "player_name": "Sh3deOoUndeadScourgeLvl6",
-    "steam_id": "1261226694",
+    "player_name": "MrFukaDeathKnightLvl6",
+    "steam_id": "101009010",
     "defuse_kits_bought": 1,
     "rounds_played": 11,
     "defuse_purchase_rate": "9.09"
   },
   {
-    "player_name": "MrFukaDeathKnightLvl6",
-    "steam_id": "101009010",
+    "player_name": "Sh3deOoUndeadScourgeLvl6",
+    "steam_id": "1261226694",
     "defuse_kits_bought": 1,
     "rounds_played": 11,
     "defuse_purchase_rate": "9.09"
@@ -1232,18 +1232,18 @@
     "defuse_purchase_rate": "8.86"
   },
   {
+    "player_name": "jburrArchmageLvl37",
+    "steam_id": "75136047",
+    "defuse_kits_bought": 9,
+    "rounds_played": 104,
+    "defuse_purchase_rate": "8.65"
+  },
+  {
     "player_name": "fiftyMikeCombineMedicLvl25",
     "steam_id": "14458803",
     "defuse_kits_bought": 11,
     "rounds_played": 133,
     "defuse_purchase_rate": "8.27"
-  },
-  {
-    "player_name": "jburrArchmageLvl36",
-    "steam_id": "75136047",
-    "defuse_kits_bought": 8,
-    "rounds_played": 98,
-    "defuse_purchase_rate": "8.16"
   },
   {
     "player_name": "MummyLvl105",
@@ -1428,18 +1428,18 @@
     "defuse_purchase_rate": "5.56"
   },
   {
-    "player_name": "wheelchairSorcererDDLvl51",
-    "steam_id": "326879082",
-    "defuse_kits_bought": 55,
-    "rounds_played": 1001,
-    "defuse_purchase_rate": "5.49"
-  },
-  {
     "player_name": "NightElfLvl8",
     "steam_id": "319938958",
     "defuse_kits_bought": 5,
     "rounds_played": 91,
     "defuse_purchase_rate": "5.49"
+  },
+  {
+    "player_name": "wheelchairSorcererDDLvl51",
+    "steam_id": "326879082",
+    "defuse_kits_bought": 55,
+    "rounds_played": 1008,
+    "defuse_purchase_rate": "5.46"
   },
   {
     "player_name": "J1MB0DeathKnightLvl0",
@@ -1568,11 +1568,11 @@
     "defuse_purchase_rate": "4.35"
   },
   {
-    "player_name": "ScrubishPriestLvl4",
+    "player_name": "ScrubishPriestLvl8",
     "steam_id": "32734970",
     "defuse_kits_bought": 44,
-    "rounds_played": 1044,
-    "defuse_purchase_rate": "4.21"
+    "rounds_played": 1051,
+    "defuse_purchase_rate": "4.19"
   },
   {
     "player_name": "NaClMortimerEarthShamanLvl5",
@@ -1638,11 +1638,11 @@
     "defuse_purchase_rate": "3.97"
   },
   {
-    "player_name": "RatTsarTop0saurLvl26",
+    "player_name": "RatTsarTop0saurLvl28",
     "steam_id": "33209775",
     "defuse_kits_bought": 56,
-    "rounds_played": 1436,
-    "defuse_purchase_rate": "3.90"
+    "rounds_played": 1443,
+    "defuse_purchase_rate": "3.88"
   },
   {
     "player_name": "LeZebreUndeadScourgeLvl10",
@@ -1897,11 +1897,11 @@
     "defuse_purchase_rate": "2.08"
   },
   {
-    "player_name": "UnhappyCatAznPandaLvl27",
+    "player_name": "UnhappyCatAznPandaLvl28",
     "steam_id": "19653487",
     "defuse_kits_bought": 23,
-    "rounds_played": 1112,
-    "defuse_purchase_rate": "2.07"
+    "rounds_played": 1118,
+    "defuse_purchase_rate": "2.06"
   },
   {
     "player_name": "Kotaj4ckLurkerLvl39",
@@ -1939,18 +1939,18 @@
     "defuse_purchase_rate": "1.95"
   },
   {
-    "player_name": "SoapDogWorldEaterLvl106",
-    "steam_id": "175033829",
-    "defuse_kits_bought": 24,
-    "rounds_played": 1261,
-    "defuse_purchase_rate": "1.90"
-  },
-  {
     "player_name": "CabooseSnorlaxLvl19",
     "steam_id": "109327401",
     "defuse_kits_bought": 13,
     "rounds_played": 686,
     "defuse_purchase_rate": "1.90"
+  },
+  {
+    "player_name": "SoapDogWorldEaterLvl106",
+    "steam_id": "175033829",
+    "defuse_kits_bought": 24,
+    "rounds_played": 1267,
+    "defuse_purchase_rate": "1.89"
   },
   {
     "player_name": "LordAcornChameleonLvl36",
@@ -2023,11 +2023,11 @@
     "defuse_purchase_rate": "1.56"
   },
   {
-    "player_name": "RapidHumanAllianceLvl17",
+    "player_name": "RapidHumanAllianceLvl18",
     "steam_id": "12390101",
     "defuse_kits_bought": 6,
-    "rounds_played": 392,
-    "defuse_purchase_rate": "1.53"
+    "rounds_played": 398,
+    "defuse_purchase_rate": "1.51"
   },
   {
     "player_name": "SobBobStalkerLvl47",
@@ -2236,7 +2236,7 @@
     "player_name": "HeckinBadBloodMageLvl29",
     "steam_id": "442655068",
     "defuse_kits_bought": 2,
-    "rounds_played": 397,
+    "rounds_played": 404,
     "defuse_purchase_rate": "0.50"
   },
   {
@@ -2261,10 +2261,10 @@
     "defuse_purchase_rate": "0.38"
   },
   {
-    "player_name": "LeeYandereLvl69",
+    "player_name": "LeeCryptLordLvl9",
     "steam_id": "43076823",
     "defuse_kits_bought": 7,
-    "rounds_played": 2061,
+    "rounds_played": 2067,
     "defuse_purchase_rate": "0.34"
   },
   {
@@ -2299,14 +2299,7 @@
     "player_name": "bluesxSignHereLvl29",
     "steam_id": "415141590",
     "defuse_kits_bought": 13,
-    "rounds_played": 4250,
-    "defuse_purchase_rate": "0.31"
-  },
-  {
-    "player_name": "errohrArmsRaceLvl28",
-    "steam_id": "132295650",
-    "defuse_kits_bought": 1,
-    "rounds_played": 326,
+    "rounds_played": 4256,
     "defuse_purchase_rate": "0.31"
   },
   {
@@ -2324,6 +2317,13 @@
     "defuse_purchase_rate": "0.30"
   },
   {
+    "player_name": "errohrSpyGoblinLvl3",
+    "steam_id": "132295650",
+    "defuse_kits_bought": 1,
+    "rounds_played": 332,
+    "defuse_purchase_rate": "0.30"
+  },
+  {
     "player_name": "BlinkzTyrandeWhisperwindLvl34",
     "steam_id": "181471669",
     "defuse_kits_bought": 2,
@@ -2331,17 +2331,17 @@
     "defuse_purchase_rate": "0.27"
   },
   {
-    "player_name": "bigbooglymooglyWispLvl5",
-    "steam_id": "1484238763",
-    "defuse_kits_bought": 1,
-    "rounds_played": 391,
-    "defuse_purchase_rate": "0.26"
-  },
-  {
     "player_name": "SickboyrariSlowpokeLvl29",
     "steam_id": "32783979",
     "defuse_kits_bought": 4,
     "rounds_played": 1592,
+    "defuse_purchase_rate": "0.25"
+  },
+  {
+    "player_name": "bigbooglymooglyWispLvl6",
+    "steam_id": "1484238763",
+    "defuse_kits_bought": 1,
+    "rounds_played": 398,
     "defuse_purchase_rate": "0.25"
   },
   {
@@ -2387,17 +2387,17 @@
     "defuse_purchase_rate": "0.14"
   },
   {
-    "player_name": "CryHavoc",
+    "player_name": "CryHavocRageDrivenZombieLvl5",
     "steam_id": "460591640",
     "defuse_kits_bought": 4,
-    "rounds_played": 3051,
+    "rounds_played": 3057,
     "defuse_purchase_rate": "0.13"
   },
   {
-    "player_name": "SyNcro3PitLordLvl18",
+    "player_name": "SyNcro3PitLordLvl20",
     "steam_id": "900663142",
     "defuse_kits_bought": 1,
-    "rounds_played": 776,
+    "rounds_played": 782,
     "defuse_purchase_rate": "0.13"
   },
   {
@@ -2411,7 +2411,7 @@
     "player_name": "SidShadowHunterLvl89",
     "steam_id": "399477860",
     "defuse_kits_bought": 2,
-    "rounds_played": 1953,
+    "rounds_played": 1959,
     "defuse_purchase_rate": "0.10"
   },
   {
@@ -2705,7 +2705,7 @@
     "player_name": "n0xBloodGolemLvl7",
     "steam_id": "1888431017",
     "defuse_kits_bought": 0,
-    "rounds_played": 680,
+    "rounds_played": 687,
     "defuse_purchase_rate": "0.00"
   },
   {
@@ -4627,10 +4627,10 @@
     "defuse_purchase_rate": "0.00"
   },
   {
-    "player_name": "blairSorceressLvl5",
+    "player_name": "blairSorceressLvl7",
     "steam_id": "159521998",
     "defuse_kits_bought": 0,
-    "rounds_played": 146,
+    "rounds_played": 149,
     "defuse_purchase_rate": "0.00"
   },
   {
@@ -4669,10 +4669,10 @@
     "defuse_purchase_rate": "0.00"
   },
   {
-    "player_name": "blaJamesBondLvl15",
+    "player_name": "blaJamesBondLvl17",
     "steam_id": "171414437",
     "defuse_kits_bought": 0,
-    "rounds_played": 489,
+    "rounds_played": 496,
     "defuse_purchase_rate": "0.00"
   },
   {
