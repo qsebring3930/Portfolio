@@ -1192,6 +1192,7 @@ function renderMapStats() {
     .map(row => ({
       map_name: row.map_name,
       minutes_played: Number(row.minutes_played || 0),
+      complaint_count: Number(row.complaint_count || 0),
       last_seen: formatLocalTime(row.last_seen),
       last_seen_sort: new Date(forceUtc(row.last_seen)).getTime()
     }))
@@ -1202,6 +1203,7 @@ function renderMapStats() {
   renderTable("mapStats", [
     { key: "map_name", label: "Map Name" },
     { key: "minutes_played", label: "Minutes Played" },
+    { key: "complaint_count", label: "Complaints" },
     { key: "last_seen", label: "Last Seen", sortKey: "last_seen_sort" }
   ], filteredRows);
 }
@@ -1725,14 +1727,14 @@ async function init() {
 
     setTimeout(() => {
       hideStatsLoader();
-    }, 30);
+    }, 10);
   } catch (error) {
     console.error("Failed to load stats:", error);
     showStatsLoader("Some stats failed to load.");
 
     setTimeout(() => {
       hideStatsLoader();
-    }, 300);
+    }, 100);
   }
 }
 
