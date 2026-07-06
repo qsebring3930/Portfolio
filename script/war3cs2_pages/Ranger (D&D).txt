@@ -1,0 +1,84 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Ranger (D&D)
+|image=[[File:Ranger (D&D).webp]]
+|category=D&D Hybrids
+|max=30
+|level=3630
+|access=Beta
+}}
+|skill1={{SkillInfo
+|name=Deft Explorer
+|info=
+Increase Speed, Bash Immunity and Slow Resistance
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Speed|lvl1=4.0%|lvl2=8.0%|lvl3=12.0%|lvl4=16.0%|lvl5=20.0%}}
+|line2={{LevelUpRow|field=Immunity|unit=%|lvl1=20|lvl2=40|lvl3=60|lvl4=80|lvl5=100}}
+|line3={{LevelUpRow|field=Resistance|lvl1=20.0%|lvl2=40.0%|lvl3=60.0%|lvl4=80.0%|lvl5=100.0%}}
+}}}}
+|skill2={{SkillInfo
+|name=Hunter's Mark
+|info=
+<p>
+Ability: Mark Closest Enemy<br>
+Attack: Increase SSG08 Damage on Any Marked Enemies
+</p>
+|trigger=Ability1
+|radius=750
+|cooldown=15.0
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl1=1.0|lvl2=2.0|lvl3=3.0|lvl4=4.0|lvl5=5.0}}
+|line2={{LevelUpRow|field=Increase|lvl1=30.0%|lvl2=40.0%|lvl3=50.0%|lvl4=60.0%|lvl5=80.0%}}
+}}}}
+|skill3={{SkillInfo
+|name=Ensnaring Strike
+|info=
+Next Shot will Bash, Increase Duration with SSG08
+|trigger=Ability2
+|cooldown=15.0
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl1=0.2|lvl2=0.4|lvl3=0.6|lvl4=0.8|lvl5=1.0}}
+|line2={{LevelUpRow|field=Extra Duration|unit=sec.|lvl1=0.5|lvl2=1.0|lvl3=1.5|lvl4=2.0|lvl5=2.5}}
+}}}}
+|skill4={{SkillInfo
+|name=Hail of Thorns
+|info=
+<p>
+Grenade creates ward instead of explosion<br>
+Ward: Damage
+</p>
+|trigger=Special
+|duration=5
+|radius=300
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Damage|lvl1=2|lvl2=4|lvl3=6|lvl4=8|lvl5=10}}
+}}}}
+|skill5={{SkillInfo
+|name=Barkskin
+|info=
+Decrease Received Headshot Damage
+|trigger=Ability3
+|cooldown=20.0
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Duration|lvl1=1.0|lvl2=2.0|lvl3=3.0|lvl4=4.0|lvl5=5.0}}
+}}}}
+|skill6={{SkillInfo
+|name=Cordon of Arrows
+|info=
+<p>
+Next Missed Shot Places Trap<br>
+Trap: Damage Enemy<br>
+Passive: Gain Arrows over time
+</p>
+|trigger=Ultimate
+|quantity=4
+|tickrate=5
+|radius=250
+|cooldown=1.0
+|extra=Can have upto 5 Traps on the map
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Damage|lvl1=2|lvl2=4|lvl3=6|lvl4=8|lvl5=10}}
+}}}}
+}}
