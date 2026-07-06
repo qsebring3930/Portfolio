@@ -198,16 +198,16 @@
     "kills": 438
   },
   {
+    "weapon_category": "Pistol",
+    "player_name": "ObsidianStormFireLordLvl41",
+    "steam_id": "24524073",
+    "kills": 433
+  },
+  {
     "weapon_category": "Knife",
     "player_name": "JimmyXKaelthasSunstriderLvl56",
     "steam_id": "393197344",
     "kills": 423
-  },
-  {
-    "weapon_category": "Pistol",
-    "player_name": "ObsidianStormFireLordLvl41",
-    "steam_id": "24524073",
-    "kills": 422
   },
   {
     "weapon_category": "Knife",
@@ -655,7 +655,7 @@
   },
   {
     "weapon_category": "Pistol",
-    "player_name": "LurpakpeekRPGLvl48",
+    "player_name": "LurpakpeekLurkerLvl34",
     "steam_id": "109520439",
     "kills": 194
   },
@@ -1387,6 +1387,12 @@
   },
   {
     "weapon_category": "Pistol",
+    "player_name": "zenwormTreantProtectorLvl11",
+    "steam_id": "10745543",
+    "kills": 90
+  },
+  {
+    "weapon_category": "Pistol",
     "player_name": "sn0wGnomeSpyLvl12",
     "steam_id": "36205433",
     "kills": 89
@@ -1461,12 +1467,6 @@
     "weapon_category": "Sniper",
     "player_name": "HornySexSlaveMkVRogueDDLvl21",
     "steam_id": "51789856",
-    "kills": 83
-  },
-  {
-    "weapon_category": "Pistol",
-    "player_name": "zenwormLavaSpawnLvl21",
-    "steam_id": "10745543",
     "kills": 83
   },
   {
@@ -1759,7 +1759,7 @@
   },
   {
     "weapon_category": "Knife",
-    "player_name": "zenwormLavaSpawnLvl21",
+    "player_name": "zenwormTreantProtectorLvl11",
     "steam_id": "10745543",
     "kills": 67
   },
@@ -1843,7 +1843,7 @@
   },
   {
     "weapon_category": "Sniper",
-    "player_name": "LurpakpeekRPGLvl48",
+    "player_name": "LurpakpeekLurkerLvl34",
     "steam_id": "109520439",
     "kills": 63
   },
@@ -2149,15 +2149,15 @@
   },
   {
     "weapon_category": "Pistol",
-    "player_name": "ViviXLogickalLvl9",
-    "steam_id": "100175971",
+    "player_name": "NightElfLvl22",
+    "steam_id": "1023963144",
     "kills": 49
   },
   {
     "weapon_category": "Pistol",
-    "player_name": "HumanAllianceLvl17",
-    "steam_id": "1023963144",
-    "kills": 48
+    "player_name": "ViviXLogickalLvl9",
+    "steam_id": "100175971",
+    "kills": 49
   },
   {
     "weapon_category": "Sniper",
@@ -2227,7 +2227,7 @@
   },
   {
     "weapon_category": "Knife",
-    "player_name": "LurpakpeekRPGLvl48",
+    "player_name": "LurpakpeekLurkerLvl34",
     "steam_id": "109520439",
     "kills": 45
   },
@@ -2653,7 +2653,7 @@
   },
   {
     "weapon_category": "Sniper",
-    "player_name": "HumanAllianceLvl17",
+    "player_name": "NightElfLvl22",
     "steam_id": "1023963144",
     "kills": 32
   },
@@ -4177,7 +4177,7 @@
   },
   {
     "weapon_category": "Sniper",
-    "player_name": "zenwormLavaSpawnLvl21",
+    "player_name": "zenwormTreantProtectorLvl11",
     "steam_id": "10745543",
     "kills": 9
   },
