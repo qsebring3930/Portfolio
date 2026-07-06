@@ -157,7 +157,7 @@
   },
   {
     "weapon_category": "Pistol",
-    "player_name": "bluesTuskLvl12",
+    "player_name": "bluesLavaSpawnLvl24",
     "steam_id": "415141590",
     "kills": 490
   },
@@ -177,7 +177,7 @@
     "weapon_category": "Pistol",
     "player_name": "ObsidianStormFireLordLvl43",
     "steam_id": "24524073",
-    "kills": 460
+    "kills": 468
   },
   {
     "weapon_category": "Pistol",
@@ -205,15 +205,15 @@
   },
   {
     "weapon_category": "Knife",
-    "player_name": "bluesTuskLvl12",
+    "player_name": "bluesLavaSpawnLvl24",
     "steam_id": "415141590",
-    "kills": 426
+    "kills": 427
   },
   {
     "weapon_category": "Pistol",
     "player_name": "TheGoldenOneDeathLvl49",
     "steam_id": "210878433",
-    "kills": 426
+    "kills": 427
   },
   {
     "weapon_category": "Knife",
@@ -349,7 +349,7 @@
   },
   {
     "weapon_category": "Pistol",
-    "player_name": "1Dead1PushupT600Lvl17",
+    "player_name": "1Dead1PushupT600Lvl18",
     "steam_id": "1188258968",
     "kills": 320
   },
@@ -367,7 +367,7 @@
   },
   {
     "weapon_category": "Sniper",
-    "player_name": "bluesTuskLvl12",
+    "player_name": "bluesLavaSpawnLvl24",
     "steam_id": "415141590",
     "kills": 312
   },
@@ -1135,8 +1135,14 @@
   },
   {
     "weapon_category": "Knife",
-    "player_name": "1Dead1PushupT600Lvl17",
+    "player_name": "1Dead1PushupT600Lvl18",
     "steam_id": "1188258968",
+    "kills": 114
+  },
+  {
+    "weapon_category": "Pistol",
+    "player_name": "TonyRPGLvl50",
+    "steam_id": "32169045",
     "kills": 114
   },
   {
@@ -1150,12 +1156,6 @@
     "player_name": "EverestPoltergeistLvl37",
     "steam_id": "6527417",
     "kills": 114
-  },
-  {
-    "weapon_category": "Pistol",
-    "player_name": "TonyRPGLvl50",
-    "steam_id": "32169045",
-    "kills": 113
   },
   {
     "weapon_category": "Knife",
@@ -1489,7 +1489,7 @@
   },
   {
     "weapon_category": "Taser",
-    "player_name": "1Dead1PushupT600Lvl17",
+    "player_name": "1Dead1PushupT600Lvl18",
     "steam_id": "1188258968",
     "kills": 82
   },
@@ -1885,7 +1885,7 @@
   },
   {
     "weapon_category": "Pistol",
-    "player_name": "HumanAllianceLvl22",
+    "player_name": "HumanAllianceLvl23",
     "steam_id": "1023963144",
     "kills": 61
   },
@@ -2605,7 +2605,7 @@
   },
   {
     "weapon_category": "Sniper",
-    "player_name": "HumanAllianceLvl22",
+    "player_name": "HumanAllianceLvl23",
     "steam_id": "1023963144",
     "kills": 33
   },
@@ -4159,7 +4159,7 @@
   },
   {
     "weapon_category": "Sniper",
-    "player_name": "1Dead1PushupT600Lvl17",
+    "player_name": "1Dead1PushupT600Lvl18",
     "steam_id": "1188258968",
     "kills": 10
   },
@@ -5737,6 +5737,12 @@
   },
   {
     "weapon_category": "Pistol",
+    "player_name": "a21UndeadScourgeLvl14",
+    "steam_id": "156137703",
+    "kills": 3
+  },
+  {
+    "weapon_category": "Pistol",
     "player_name": "ICEFLOUndeadScourgeLvl11",
     "steam_id": "1250545296",
     "kills": 3
@@ -5833,7 +5839,7 @@
   },
   {
     "weapon_category": "Knife",
-    "player_name": "HumanAllianceLvl22",
+    "player_name": "HumanAllianceLvl23",
     "steam_id": "1023963144",
     "kills": 3
   },
@@ -6211,18 +6217,6 @@
   },
   {
     "weapon_category": "Pistol",
-    "player_name": "fredfan2001UndeadScourgeLvl17",
-    "steam_id": "146416847",
-    "kills": 2
-  },
-  {
-    "weapon_category": "Pistol",
-    "player_name": "ColtzNightElfLvl24",
-    "steam_id": "151065626",
-    "kills": 2
-  },
-  {
-    "weapon_category": "Pistol",
     "player_name": "CDNNo1HydraliskLvl22",
     "steam_id": "161235870",
     "kills": 2
@@ -6235,8 +6229,14 @@
   },
   {
     "weapon_category": "Pistol",
-    "player_name": "a21UndeadScourgeLvl13",
-    "steam_id": "156137703",
+    "player_name": "fredfan2001UndeadScourgeLvl17",
+    "steam_id": "146416847",
+    "kills": 2
+  },
+  {
+    "weapon_category": "Pistol",
+    "player_name": "ColtzNightElfLvl24",
+    "steam_id": "151065626",
     "kills": 2
   },
   {
@@ -6499,7 +6499,7 @@
   },
   {
     "weapon_category": "Taser",
-    "player_name": "bluesTuskLvl12",
+    "player_name": "bluesLavaSpawnLvl24",
     "steam_id": "415141590",
     "kills": 2
   },
@@ -7189,18 +7189,6 @@
   },
   {
     "weapon_category": "Pistol",
-    "player_name": "BainteoirLichLvl17",
-    "steam_id": "1587935550",
-    "kills": 1
-  },
-  {
-    "weapon_category": "Pistol",
-    "player_name": "PardonMiiLichLvl11",
-    "steam_id": "1582920517",
-    "kills": 1
-  },
-  {
-    "weapon_category": "Pistol",
     "player_name": "Cars4GargoyleLvl0",
     "steam_id": "153040625",
     "kills": 1
@@ -7215,6 +7203,18 @@
     "weapon_category": "Pistol",
     "player_name": "IceeCoffeeUndeadScourgeLvl3",
     "steam_id": "1420748899",
+    "kills": 1
+  },
+  {
+    "weapon_category": "Pistol",
+    "player_name": "BainteoirLichLvl17",
+    "steam_id": "1587935550",
+    "kills": 1
+  },
+  {
+    "weapon_category": "Pistol",
+    "player_name": "PardonMiiLichLvl11",
+    "steam_id": "1582920517",
     "kills": 1
   },
   {
@@ -7713,6 +7713,12 @@
     "weapon_category": "Knife",
     "player_name": "thegunjoeDwarvenRiflemanLvl10",
     "steam_id": "19717010",
+    "kills": 1
+  },
+  {
+    "weapon_category": "Knife",
+    "player_name": "DivingWaffleBloodSorceressLvl12",
+    "steam_id": "2083348",
     "kills": 1
   },
   {
