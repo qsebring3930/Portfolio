@@ -1,9 +1,9 @@
 [
   {
     "weapon_category": "Knife",
-    "player_name": "LeeNecromancerLvl23",
+    "player_name": "LeeNecromancerLvl25",
     "steam_id": "43076823",
-    "kills": 1313
+    "kills": 1314
   },
   {
     "weapon_category": "Knife",
@@ -498,15 +498,15 @@
     "kills": 257
   },
   {
+    "weapon_category": "Knife",
+    "player_name": "OysterAchooHeraldofSpringLvl8",
+    "steam_id": "7127499",
+    "kills": 257
+  },
+  {
     "weapon_category": "Pistol",
     "player_name": "CryHavocHeavyMercenaryLvl10",
     "steam_id": "460591640",
-    "kills": 256
-  },
-  {
-    "weapon_category": "Knife",
-    "player_name": "OysterAchooHeraldofSpringLvl7",
-    "steam_id": "7127499",
     "kills": 256
   },
   {
@@ -697,7 +697,7 @@
   },
   {
     "weapon_category": "Pistol",
-    "player_name": "LeeNecromancerLvl23",
+    "player_name": "LeeNecromancerLvl25",
     "steam_id": "43076823",
     "kills": 186
   },
@@ -1255,7 +1255,7 @@
   },
   {
     "weapon_category": "Sniper",
-    "player_name": "OysterAchooHeraldofSpringLvl7",
+    "player_name": "OysterAchooHeraldofSpringLvl8",
     "steam_id": "7127499",
     "kills": 100
   },
@@ -1663,6 +1663,12 @@
   },
   {
     "weapon_category": "Pistol",
+    "player_name": "OysterAchooHeraldofSpringLvl8",
+    "steam_id": "7127499",
+    "kills": 70
+  },
+  {
+    "weapon_category": "Pistol",
     "player_name": "PeriCharizardLvl9",
     "steam_id": "40697335",
     "kills": 70
@@ -1713,12 +1719,6 @@
     "weapon_category": "Knife",
     "player_name": "ErisArchmageLvl15",
     "steam_id": "93382355",
-    "kills": 68
-  },
-  {
-    "weapon_category": "Pistol",
-    "player_name": "OysterAchooHeraldofSpringLvl7",
-    "steam_id": "7127499",
     "kills": 68
   },
   {
@@ -1915,7 +1915,7 @@
   },
   {
     "weapon_category": "Sniper",
-    "player_name": "LeeNecromancerLvl23",
+    "player_name": "LeeNecromancerLvl25",
     "steam_id": "43076823",
     "kills": 58
   },
@@ -3942,6 +3942,12 @@
     "kills": 12
   },
   {
+    "weapon_category": "Pistol",
+    "player_name": "TheLionUndeadScourgeLvl20",
+    "steam_id": "270233868",
+    "kills": 12
+  },
+  {
     "weapon_category": "Sniper",
     "player_name": "bigbooglymooglyWaterElementalLvl5",
     "steam_id": "1484238763",
@@ -4119,12 +4125,6 @@
     "weapon_category": "Pistol",
     "player_name": "bvrthBloodMageLvl18",
     "steam_id": "1267336757",
-    "kills": 10
-  },
-  {
-    "weapon_category": "Pistol",
-    "player_name": "TheLionUndeadScourgeLvl19",
-    "steam_id": "270233868",
     "kills": 10
   },
   {
@@ -4363,7 +4363,7 @@
   },
   {
     "weapon_category": "Knife",
-    "player_name": "TheLionUndeadScourgeLvl19",
+    "player_name": "TheLionUndeadScourgeLvl20",
     "steam_id": "270233868",
     "kills": 8
   },
@@ -6109,7 +6109,7 @@
   },
   {
     "weapon_category": "Sniper",
-    "player_name": "TheLionUndeadScourgeLvl19",
+    "player_name": "TheLionUndeadScourgeLvl20",
     "steam_id": "270233868",
     "kills": 2
   },
@@ -6607,7 +6607,7 @@
   },
   {
     "weapon_category": "Taser",
-    "player_name": "TheLionUndeadScourgeLvl19",
+    "player_name": "TheLionUndeadScourgeLvl20",
     "steam_id": "270233868",
     "kills": 1
   },
