@@ -377,23 +377,80 @@ for item in messages:
 
 os.makedirs("assets/data", exist_ok=True)
 
+def fetch_rows(cursor, query):
+    cursor.execute(query)
+    columns = [c[0] for c in cursor.description]
+    return [
+        dict(zip(columns, row))
+        for row in cursor.fetchall()
+    ]
+
+
+def get_map_complaint_counts(cursor):
+    cursor.execute("""
+    WITH complaint_messages AS (
+        SELECT
+            cm.event_id,
+            cm.timestamp
+        FROM chat_messages cm
+        WHERE cm.timestamp IS NOT NULL
+          AND (
+               LOWER(cm.message) = 'rtv'
+            OR LOWER(cm.message) = '.rtv'
+            OR LOWER(cm.message) LIKE 'rtv %'
+            OR LOWER(cm.message) LIKE '.rtv %'
+            OR LOWER(cm.message) LIKE '% rtv'
+            OR LOWER(cm.message) LIKE '% rtv %'
+            OR LOWER(cm.message) LIKE '% .rtv'
+            OR LOWER(cm.message) LIKE '% .rtv %'
+            OR LOWER(cm.message) LIKE '%can we rtv%'
+            OR LOWER(cm.message) LIKE '%can we rtv please%'
+            OR LOWER(cm.message) LIKE '%change map%'
+            OR LOWER(cm.message) LIKE '%change the map%'
+            OR LOWER(cm.message) LIKE '%map change%'
+          )
+    )
+    SELECT
+        active_map.map_name,
+        COUNT(*) AS complaint_count
+    FROM complaint_messages cm
+    CROSS APPLY (
+        SELECT TOP 1
+            prs.map_name
+        FROM processed_round_backup_snapshots prs
+        WHERE prs.backup_timestamp IS NOT NULL
+          AND prs.map_name IS NOT NULL
+          AND prs.backup_timestamp <= cm.timestamp
+          AND prs.backup_timestamp >= DATEADD(hour, -3, cm.timestamp)
+        ORDER BY
+            prs.backup_timestamp DESC,
+            prs.backup_round DESC
+    ) AS active_map
+    GROUP BY active_map.map_name;
+    """)
+
+    return {
+        row.map_name: int(row.complaint_count or 0)
+        for row in cursor.fetchall()
+    }
+
+
+map_complaint_counts = get_map_complaint_counts(cursor)
+
 for table in [
     "map_playtime",
     "race_playtime",
     "race_levels",
 ]:
-    cursor.execute(f"SELECT * FROM {table}")
+    rows = fetch_rows(cursor, f"SELECT * FROM {table}")
 
-    columns = [c[0] for c in cursor.description]
-
-    rows = [
-        dict(zip(columns, row))
-        for row in cursor.fetchall()
-    ]
+    if table == "map_playtime":
+        for row in rows:
+            map_name = row.get("map_name")
+            row["complaint_count"] = map_complaint_counts.get(map_name, 0)
 
     with open(f"assets/data/{table}.json", "w", encoding="utf-8") as f:
         json.dump(rows, f, indent=2, default=str)
-
 
 cursor.execute("""
 SELECT COUNT(*) AS rtv_count
