@@ -468,6 +468,11 @@ WHERE LOWER(message) LIKE 'rtv'
    OR LOWER(message) LIKE '%change map%'
    OR LOWER(message) LIKE '%change the map%'
    OR LOWER(message) LIKE '%map change%'
+   OR LOWER(message) LIKE '%map sucks%'
+   OR LOWER(message) LIKE '%map trash%'
+   OR LOWER(message) LIKE '%map ass%'
+   OR LOWER(message) LIKE '%trash map%'
+   OR LOWER(message) LIKE '%lets go to%'
 """)
 
 rtv_count = cursor.fetchone()[0] or 0
