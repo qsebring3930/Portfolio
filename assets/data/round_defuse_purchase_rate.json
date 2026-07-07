@@ -266,13 +266,6 @@
     "defuse_purchase_rate": "32.56"
   },
   {
-    "player_name": "BrockJohnsonEnforcerLvl29",
-    "steam_id": "152929118",
-    "defuse_kits_bought": 170,
-    "rounds_played": 529,
-    "defuse_purchase_rate": "32.14"
-  },
-  {
     "player_name": "UndeadScourgeLvl13",
     "steam_id": "1026588489",
     "defuse_kits_bought": 7,
@@ -285,6 +278,13 @@
     "defuse_kits_bought": 32,
     "rounds_played": 101,
     "defuse_purchase_rate": "31.68"
+  },
+  {
+    "player_name": "BrockJohnsonEnforcerLvl29",
+    "steam_id": "152929118",
+    "defuse_kits_bought": 170,
+    "rounds_played": 537,
+    "defuse_purchase_rate": "31.66"
   },
   {
     "player_name": "killaCivilProtectorLvl6",
@@ -1120,13 +1120,6 @@
     "defuse_purchase_rate": "10.55"
   },
   {
-    "player_name": "Flanny91TrickorTreaterLvl5",
-    "steam_id": "252538559",
-    "defuse_kits_bought": 2,
-    "rounds_played": 19,
-    "defuse_purchase_rate": "10.53"
-  },
-  {
     "player_name": "357SIGSnorlaxLvl31",
     "steam_id": "21039493",
     "defuse_kits_bought": 60,
@@ -1230,6 +1223,13 @@
     "defuse_kits_bought": 39,
     "rounds_played": 424,
     "defuse_purchase_rate": "9.20"
+  },
+  {
+    "player_name": "Flanny91TrickorTreaterLvl6",
+    "steam_id": "252538559",
+    "defuse_kits_bought": 2,
+    "rounds_played": 22,
+    "defuse_purchase_rate": "9.09"
   },
   {
     "player_name": "OutlineMasterSupportClassLvl12",
@@ -1477,18 +1477,18 @@
     "defuse_purchase_rate": "5.41"
   },
   {
+    "player_name": "MilkySpectreLvl22",
+    "steam_id": "14714479",
+    "defuse_kits_bought": 71,
+    "rounds_played": 1314,
+    "defuse_purchase_rate": "5.40"
+  },
+  {
     "player_name": "wheelchairThorLvl45",
     "steam_id": "326879082",
     "defuse_kits_bought": 57,
     "rounds_played": 1061,
     "defuse_purchase_rate": "5.37"
-  },
-  {
-    "player_name": "MilkySASMarksmanLvl6",
-    "steam_id": "14714479",
-    "defuse_kits_bought": 69,
-    "rounds_played": 1309,
-    "defuse_purchase_rate": "5.27"
   },
   {
     "player_name": "BODZiNUndeadScourgeLvl14",
