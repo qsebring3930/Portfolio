@@ -85,19 +85,19 @@
   },
   {
     "weapon_category": "Sniper",
-    "player_name": "SUPABroodLordLvl0",
+    "player_name": "SUPABroodLordLvl5",
     "steam_id": "64136700",
     "kills": 628
   },
   {
     "weapon_category": "Knife",
-    "player_name": "JimmyXLichLvl13",
+    "player_name": "JimmyXSpellBreakerLvl14",
     "steam_id": "393197344",
-    "kills": 622
+    "kills": 623
   },
   {
     "weapon_category": "Pistol",
-    "player_name": "SUPABroodLordLvl0",
+    "player_name": "SUPABroodLordLvl5",
     "steam_id": "64136700",
     "kills": 596
   },
@@ -126,6 +126,12 @@
     "kills": 557
   },
   {
+    "weapon_category": "Knife",
+    "player_name": "UnhappyCatDryadLvl21",
+    "steam_id": "19653487",
+    "kills": 552
+  },
+  {
     "weapon_category": "Pistol",
     "player_name": "RexxxVenusLvl35",
     "steam_id": "33358424",
@@ -141,12 +147,6 @@
     "weapon_category": "Pistol",
     "player_name": "coldNinjaLvl29",
     "steam_id": "146179965",
-    "kills": 546
-  },
-  {
-    "weapon_category": "Knife",
-    "player_name": "UnhappyCatostreLvl25",
-    "steam_id": "19653487",
     "kills": 546
   },
   {
@@ -547,7 +547,7 @@
   },
   {
     "weapon_category": "Knife",
-    "player_name": "RatTsarCommandoLvl38",
+    "player_name": "RatTsarBroodlingLvl33",
     "steam_id": "33209775",
     "kills": 251
   },
@@ -595,7 +595,7 @@
   },
   {
     "weapon_category": "Knife",
-    "player_name": "SUPABroodLordLvl0",
+    "player_name": "SUPABroodLordLvl5",
     "steam_id": "64136700",
     "kills": 231
   },
@@ -625,9 +625,9 @@
   },
   {
     "weapon_category": "Pistol",
-    "player_name": "LurpakpeekShadowHunterLvl19",
+    "player_name": "LurpakpeekShadowHunterLvl20",
     "steam_id": "109520439",
-    "kills": 221
+    "kills": 222
   },
   {
     "weapon_category": "Knife",
@@ -733,7 +733,7 @@
   },
   {
     "weapon_category": "Pistol",
-    "player_name": "AskadarGhoulLvl24",
+    "player_name": "AskadarDemonHunterLvl0",
     "steam_id": "21114461",
     "kills": 185
   },
@@ -817,7 +817,7 @@
   },
   {
     "weapon_category": "Pistol",
-    "player_name": "JimmyXLichLvl13",
+    "player_name": "JimmyXSpellBreakerLvl14",
     "steam_id": "393197344",
     "kills": 167
   },
@@ -882,16 +882,16 @@
     "kills": 157
   },
   {
+    "weapon_category": "Pistol",
+    "player_name": "RatTsarBroodlingLvl33",
+    "steam_id": "33209775",
+    "kills": 157
+  },
+  {
     "weapon_category": "Sniper",
     "player_name": "BrodinPredatorLvl16",
     "steam_id": "66719285",
     "kills": 155
-  },
-  {
-    "weapon_category": "Pistol",
-    "player_name": "RatTsarCommandoLvl38",
-    "steam_id": "33209775",
-    "kills": 154
   },
   {
     "weapon_category": "Pistol",
@@ -1219,7 +1219,7 @@
   },
   {
     "weapon_category": "Pistol",
-    "player_name": "UnhappyCatostreLvl25",
+    "player_name": "UnhappyCatDryadLvl21",
     "steam_id": "19653487",
     "kills": 115
   },
@@ -1255,7 +1255,7 @@
   },
   {
     "weapon_category": "Knife",
-    "player_name": "AskadarGhoulLvl24",
+    "player_name": "AskadarDemonHunterLvl0",
     "steam_id": "21114461",
     "kills": 111
   },
@@ -1267,7 +1267,7 @@
   },
   {
     "weapon_category": "Sniper",
-    "player_name": "AskadarGhoulLvl24",
+    "player_name": "AskadarDemonHunterLvl0",
     "steam_id": "21114461",
     "kills": 111
   },
@@ -1501,7 +1501,7 @@
   },
   {
     "weapon_category": "Sniper",
-    "player_name": "JimmyXLichLvl13",
+    "player_name": "JimmyXSpellBreakerLvl14",
     "steam_id": "393197344",
     "kills": 89
   },
@@ -1909,7 +1909,7 @@
   },
   {
     "weapon_category": "Sniper",
-    "player_name": "LurpakpeekShadowHunterLvl19",
+    "player_name": "LurpakpeekShadowHunterLvl20",
     "steam_id": "109520439",
     "kills": 64
   },
@@ -2341,13 +2341,13 @@
   },
   {
     "weapon_category": "Knife",
-    "player_name": "LurpakpeekShadowHunterLvl19",
+    "player_name": "LurpakpeekShadowHunterLvl20",
     "steam_id": "109520439",
     "kills": 45
   },
   {
     "weapon_category": "Sniper",
-    "player_name": "RatTsarCommandoLvl38",
+    "player_name": "RatTsarBroodlingLvl33",
     "steam_id": "33209775",
     "kills": 45
   },
@@ -2953,7 +2953,7 @@
   },
   {
     "weapon_category": "Taser",
-    "player_name": "SUPABroodLordLvl0",
+    "player_name": "SUPABroodLordLvl5",
     "steam_id": "64136700",
     "kills": 27
   },
@@ -7495,7 +7495,7 @@
   },
   {
     "weapon_category": "Sniper",
-    "player_name": "UnhappyCatostreLvl25",
+    "player_name": "UnhappyCatDryadLvl21",
     "steam_id": "19653487",
     "kills": 1
   },
@@ -7825,7 +7825,7 @@
   },
   {
     "weapon_category": "Taser",
-    "player_name": "RatTsarCommandoLvl38",
+    "player_name": "RatTsarBroodlingLvl33",
     "steam_id": "33209775",
     "kills": 1
   },
