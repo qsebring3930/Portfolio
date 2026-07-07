@@ -42,18 +42,18 @@
     "kad_ratio": "1.48"
   },
   {
-    "player_name": "ObsidianStormGirlfriendLvl30",
+    "player_name": "ObsidianStormGirlfriendLvl31",
     "steam_id": "24524073",
-    "kills": 4481,
-    "assists": 1489,
-    "deaths": 2746,
-    "mvps": 539,
-    "score": 9698,
-    "damage": 610048,
-    "rounds_played": 3201,
-    "adr": "190.58",
-    "kd_ratio": "1.63",
-    "kad_ratio": "2.17"
+    "kills": 4500,
+    "assists": 1492,
+    "deaths": 2749,
+    "mvps": 544,
+    "score": 9751,
+    "damage": 612427,
+    "rounds_played": 3208,
+    "adr": "190.91",
+    "kd_ratio": "1.64",
+    "kad_ratio": "2.18"
   },
   {
     "player_name": "OAFPlouploufEasterBunnyLvl57",
@@ -280,6 +280,20 @@
     "kad_ratio": "1.57"
   },
   {
+    "player_name": "JimmyXBansheeWC3Lvl23",
+    "steam_id": "393197344",
+    "kills": 1830,
+    "assists": 761,
+    "deaths": 1996,
+    "mvps": 125,
+    "score": 3592,
+    "damage": 262808,
+    "rounds_played": 2055,
+    "adr": "127.89",
+    "kd_ratio": "0.92",
+    "kad_ratio": "1.30"
+  },
+  {
     "player_name": "TheGoldenOneBarbarianDDLvl22",
     "steam_id": "210878433",
     "kills": 1829,
@@ -306,20 +320,6 @@
     "adr": "214.39",
     "kd_ratio": "1.75",
     "kad_ratio": "2.58"
-  },
-  {
-    "player_name": "JimmyXPriestLvl32",
-    "steam_id": "393197344",
-    "kills": 1823,
-    "assists": 757,
-    "deaths": 1990,
-    "mvps": 125,
-    "score": 3567,
-    "damage": 261756,
-    "rounds_played": 2048,
-    "adr": "127.81",
-    "kd_ratio": "0.92",
-    "kad_ratio": "1.30"
   },
   {
     "player_name": "SickboyrariPersianLvl29",
@@ -448,16 +448,16 @@
     "kad_ratio": "1.56"
   },
   {
-    "player_name": "SpyScope00NightElfLvl15",
+    "player_name": "SpyScope00MalevolentMoleLvl2",
     "steam_id": "1576099475",
-    "kills": 1651,
-    "assists": 1177,
-    "deaths": 4572,
+    "kills": 1655,
+    "assists": 1179,
+    "deaths": 4581,
     "mvps": 42,
-    "score": 4718,
-    "damage": 273665,
-    "rounds_played": 4232,
-    "adr": "64.67",
+    "score": 4732,
+    "damage": 274437,
+    "rounds_played": 4240,
+    "adr": "64.73",
     "kd_ratio": "0.36",
     "kad_ratio": "0.62"
   },
@@ -840,16 +840,16 @@
     "kad_ratio": "0.84"
   },
   {
-    "player_name": "1Dead1PushupDeathLvl13",
+    "player_name": "1Dead1PushupWolfLvl16",
     "steam_id": "1188258968",
-    "kills": 1087,
-    "assists": 393,
-    "deaths": 1104,
+    "kills": 1091,
+    "assists": 396,
+    "deaths": 1111,
     "mvps": 129,
-    "score": 2841,
-    "damage": 155690,
-    "rounds_played": 1196,
-    "adr": "130.18",
+    "score": 2850,
+    "damage": 156402,
+    "rounds_played": 1203,
+    "adr": "130.01",
     "kd_ratio": "0.98",
     "kad_ratio": "1.34"
   },
@@ -1148,18 +1148,18 @@
     "kad_ratio": "2.32"
   },
   {
-    "player_name": "LurpakpeekShadowHunterLvl17",
+    "player_name": "LurpakpeekShadowHunterLvl19",
     "steam_id": "109520439",
-    "kills": 885,
+    "kills": 886,
     "assists": 364,
-    "deaths": 641,
+    "deaths": 643,
     "mvps": 102,
-    "score": 2259,
-    "damage": 118763,
-    "rounds_played": 669,
-    "adr": "177.52",
+    "score": 2264,
+    "damage": 118863,
+    "rounds_played": 672,
+    "adr": "176.88",
     "kd_ratio": "1.38",
-    "kad_ratio": "1.95"
+    "kad_ratio": "1.94"
   },
   {
     "player_name": "TheSpaniard400GirlfriendLvl7",
@@ -5586,6 +5586,20 @@
     "kad_ratio": "1.47"
   },
   {
+    "player_name": "BraglyBarbarianDDLvl10",
+    "steam_id": "68041496",
+    "kills": 21,
+    "assists": 4,
+    "deaths": 11,
+    "mvps": 2,
+    "score": 60,
+    "damage": 2135,
+    "rounds_played": 14,
+    "adr": "152.50",
+    "kd_ratio": "1.91",
+    "kad_ratio": "2.27"
+  },
+  {
     "player_name": "TomMyersUndeadScourgeLvl11",
     "steam_id": "1531181093",
     "kills": 20,
@@ -7082,20 +7096,6 @@
     "adr": "66.31",
     "kd_ratio": "0.90",
     "kad_ratio": "1.20"
-  },
-  {
-    "player_name": "BraglyBarbarianDDLvl7",
-    "steam_id": "68041496",
-    "kills": 9,
-    "assists": 3,
-    "deaths": 4,
-    "mvps": 1,
-    "score": 30,
-    "damage": 860,
-    "rounds_played": 7,
-    "adr": "122.86",
-    "kd_ratio": "2.25",
-    "kad_ratio": "3.00"
   },
   {
     "player_name": "WildDemolitionistLvl40",
