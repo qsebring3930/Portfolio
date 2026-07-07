@@ -152,11 +152,11 @@
     "betting_lost": 1147900
   },
   {
-    "player_name": "HauntersArcanistUndeadScourgeLvl19",
+    "player_name": "HauntersArcanistUndeadScourgeLvl20",
     "steam_id": "70839452",
     "money_spent": 1018250,
-    "net_betting": 972291,
-    "betting_won": 1003791,
+    "net_betting": 972891,
+    "betting_won": 1004391,
     "betting_lost": 31500
   },
   {
@@ -672,14 +672,6 @@
     "betting_lost": 129895
   },
   {
-    "player_name": "BrockJohnsonEarthShamanLvl9",
-    "steam_id": "152929118",
-    "money_spent": 586550,
-    "net_betting": 356847,
-    "betting_won": 644150,
-    "betting_lost": 287303
-  },
-  {
     "player_name": "MilkySASMarksmanLvl6",
     "steam_id": "14714479",
     "money_spent": 217200,
@@ -694,6 +686,14 @@
     "net_betting": 351401,
     "betting_won": 701520,
     "betting_lost": 350119
+  },
+  {
+    "player_name": "BrockJohnsonEnforcerLvl27",
+    "steam_id": "152929118",
+    "money_spent": 586550,
+    "net_betting": 343697,
+    "betting_won": 645750,
+    "betting_lost": 302053
   },
   {
     "player_name": "BukkakeBroShroudGhostLvl30",
@@ -2088,6 +2088,14 @@
     "betting_lost": 18200
   },
   {
+    "player_name": "NaClMortimerEnforcerLvl8",
+    "steam_id": "14931173",
+    "money_spent": 113300,
+    "net_betting": 41908,
+    "betting_won": 98220,
+    "betting_lost": 56312
+  },
+  {
     "player_name": "GButtersnapsTechGoblinLvl18",
     "steam_id": "50567948",
     "money_spent": 0,
@@ -2182,14 +2190,6 @@
     "net_betting": 37588,
     "betting_won": 51938,
     "betting_lost": 14350
-  },
-  {
-    "player_name": "NaClMortimerEnforcerLvl4",
-    "steam_id": "14931173",
-    "money_spent": 113300,
-    "net_betting": 37477,
-    "betting_won": 92889,
-    "betting_lost": 55412
   },
   {
     "player_name": "JerohmThorLvl3",
@@ -4928,14 +4928,6 @@
     "betting_lost": 900
   },
   {
-    "player_name": "Flanny91PokemonTrainerLvl58",
-    "steam_id": "252538559",
-    "money_spent": 5400,
-    "net_betting": 900,
-    "betting_won": 1500,
-    "betting_lost": 600
-  },
-  {
     "player_name": "stephenUnkn0wnS0ld13rLvl23",
     "steam_id": "45958678",
     "money_spent": 0,
@@ -5070,6 +5062,14 @@
     "net_betting": 500,
     "betting_won": 600,
     "betting_lost": 100
+  },
+  {
+    "player_name": "Flanny91PokemonTrainerLvl58",
+    "steam_id": "252538559",
+    "money_spent": 6500,
+    "net_betting": 500,
+    "betting_won": 2400,
+    "betting_lost": 1900
   },
   {
     "player_name": "mcgrimaceEnforcerLvl34",
