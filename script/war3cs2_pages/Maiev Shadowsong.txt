@@ -1,0 +1,86 @@
+{{RaceDetail
+|type=Champions
+|info={{RaceInfo
+|title=Maiev Shadowsong
+|image=[[File:Maiev Shadowsong.webp]]
+|category=Champions
+|max=48
+|unlocks=
+<p>
+
+</p>
+|weapons=
+Knife
+|restricted=All
+|items=
+Boots of Evasion
+|team=2
+|passive=
+<p>
+Silent Step: When Not Vanished
+</p>
+}}
+|skill1={{SkillInfo
+|name=Shadow Strike
+|info=
+DoT based on dealt damage
+|trigger=Attack
+|damage=65.0%
+|duration=5
+|levelup={{LevelUpInfo|levels=8|zero=1
+|line1={{LevelUpRow|field=Chance|lvl0=8.0%|lvl1=12.0%|lvl2=16.0%|lvl3=20.0%|lvl4=24.0%|lvl5=28.0%|lvl6=32.0%|lvl7=36.0%|lvl8=40.0%}}
+}}}}
+|skill2={{SkillInfo
+|name=Vanish
+|info=
+Become Invisible
+|trigger=Ability1
+|duration=10
+|extra=Cancels when you attack or are attacked
+|levelup={{LevelUpInfo|levels=8|zero=1
+|line1={{LevelUpRow|field=Cooldown|unit=sec.|lvl0=32.0|lvl1=30.0|lvl2=28.0|lvl3=26.0|lvl4=24.0|lvl5=22.0|lvl6=20.0|lvl7=18.0|lvl8=16.0}}
+}}}}
+|skill3={{SkillInfo
+|name=Cheap Shot
+|info=
+Bash
+|trigger=Attack
+|duration=2
+|levelup={{LevelUpInfo|levels=8|zero=1
+|line1={{LevelUpRow|field=Chance|lvl0=5.0%|lvl1=7.5%|lvl2=10.0%|lvl3=12.5%|lvl4=15.0%|lvl5=17.5%|lvl6=20.0%|lvl7=22.5%|lvl8=25.0%}}
+}}}}
+|skill4={{SkillInfo
+|name=Cloak of Shadows
+|info=
+Decrease Visibility
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=8|zero=1
+|line1={{LevelUpRow|field=Visibility|lvl0=20.0%|lvl1=25.0%|lvl2=30.0%|lvl3=35.0%|lvl4=40.0%|lvl5=45.0%|lvl6=50.0%|lvl7=55.0%|lvl8=60.0%}}
+}}}}
+|skill5={{SkillInfo
+|name=Master of Subtlety
+|info=
+Increase Speed
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=8|zero=1
+|line1={{LevelUpRow|field=Speed|lvl0=10.0%|lvl1=15.0%|lvl2=20.0%|lvl3=25.0%|lvl4=30.0%|lvl5=35.0%|lvl6=40.0%|lvl7=45.0%|lvl8=50.0%}}
+}}}}
+|skill6={{SkillInfo
+|name=Cheat Death
+|info=
+Evade Killing Blow, Become Invincible
+|trigger=Victim
+|required=
+<p>
+Shadow Strike - Level 2<br>
+Vanish - Level 2<br>
+Cheap Shot - Level 2<br>
+Cloak of Shadows - Level 2<br>
+Master of Subtlety - Level 2
+</p>
+|duration=1.5
+|cooldown=10.0
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Chance|lvl1=5.0%|lvl2=9.0%|lvl3=13.0%|lvl4=17.0%|lvl5=21.0%|lvl6=25.0%|lvl7=29.0%|lvl8=33.0%}}
+}}}}
+}}
