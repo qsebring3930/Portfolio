@@ -151,7 +151,7 @@
   },
   {
     "weapon_category": "Pistol",
-    "player_name": "MrMankeymanDwarvenRiflemanLvl31",
+    "player_name": "MrMankeymanFaerieDragonLvl11",
     "steam_id": "122633832",
     "kills": 577
   },
@@ -339,7 +339,7 @@
     "weapon_category": "Pistol",
     "player_name": "ZickziiSorcererDDLvl21",
     "steam_id": "9944208",
-    "kills": 349
+    "kills": 352
   },
   {
     "weapon_category": "Knife",
@@ -559,7 +559,7 @@
   },
   {
     "weapon_category": "Knife",
-    "player_name": "OysterNagaSeaWitchLvl22",
+    "player_name": "OysterNagaSeaWitchLvl24",
     "steam_id": "7127499",
     "kills": 258
   },
@@ -697,7 +697,7 @@
   },
   {
     "weapon_category": "Sniper",
-    "player_name": "TonyDeathKnightLvl22",
+    "player_name": "TonyFireGolemLvl16",
     "steam_id": "32169045",
     "kills": 212
   },
@@ -841,7 +841,7 @@
   },
   {
     "weapon_category": "Knife",
-    "player_name": "MrMankeymanDwarvenRiflemanLvl31",
+    "player_name": "MrMankeymanFaerieDragonLvl11",
     "steam_id": "122633832",
     "kills": 176
   },
@@ -1008,6 +1008,12 @@
     "kills": 149
   },
   {
+    "weapon_category": "Knife",
+    "player_name": "TonyFireGolemLvl16",
+    "steam_id": "32169045",
+    "kills": 148
+  },
+  {
     "weapon_category": "Pistol",
     "player_name": "HooLeeCrabGhostLvl7",
     "steam_id": "165962520",
@@ -1024,6 +1030,12 @@
     "player_name": "WaylongTTVNeedsManaRogueDDLvl16",
     "steam_id": "209891973",
     "kills": 146
+  },
+  {
+    "weapon_category": "Sniper",
+    "player_name": "OysterNagaSeaWitchLvl24",
+    "steam_id": "7127499",
+    "kills": 144
   },
   {
     "weapon_category": "Pistol",
@@ -1062,21 +1074,15 @@
     "kills": 140
   },
   {
-    "weapon_category": "Sniper",
-    "player_name": "OysterNagaSeaWitchLvl22",
-    "steam_id": "7127499",
-    "kills": 140
+    "weapon_category": "Pistol",
+    "player_name": "1600microsoftpointsneededPriestLvl11",
+    "steam_id": "41176942",
+    "kills": 139
   },
   {
     "weapon_category": "Sniper",
     "player_name": "CrockettAssaultClassLvl23",
     "steam_id": "176528679",
-    "kills": 139
-  },
-  {
-    "weapon_category": "Pistol",
-    "player_name": "1600microsoftpointsneededPriestLvl11",
-    "steam_id": "41176942",
     "kills": 139
   },
   {
@@ -1104,12 +1110,6 @@
     "kills": 137
   },
   {
-    "weapon_category": "Knife",
-    "player_name": "TonyDeathKnightLvl22",
-    "steam_id": "32169045",
-    "kills": 135
-  },
-  {
     "weapon_category": "Pistol",
     "player_name": "CaboosePersianLvl17",
     "steam_id": "109327401",
@@ -1117,7 +1117,7 @@
   },
   {
     "weapon_category": "Pistol",
-    "player_name": "TonyDeathKnightLvl22",
+    "player_name": "TonyFireGolemLvl16",
     "steam_id": "32169045",
     "kills": 133
   },
@@ -1357,7 +1357,7 @@
   },
   {
     "weapon_category": "Sniper",
-    "player_name": "MrMankeymanDwarvenRiflemanLvl31",
+    "player_name": "MrMankeymanFaerieDragonLvl11",
     "steam_id": "122633832",
     "kills": 109
   },
@@ -1585,7 +1585,7 @@
   },
   {
     "weapon_category": "Pistol",
-    "player_name": "OysterNagaSeaWitchLvl22",
+    "player_name": "OysterNagaSeaWitchLvl24",
     "steam_id": "7127499",
     "kills": 85
   },
@@ -4458,6 +4458,12 @@
     "kills": 9
   },
   {
+    "weapon_category": "Pistol",
+    "player_name": "TheOneThatSinnedOrcishHordeLvl92",
+    "steam_id": "165475544",
+    "kills": 9
+  },
+  {
     "weapon_category": "Knife",
     "player_name": "WinDVDKrampusLvl9",
     "steam_id": "38060241",
@@ -4513,24 +4519,6 @@
   },
   {
     "weapon_category": "Pistol",
-    "player_name": "RicketyCricketSnorlaxLvl19",
-    "steam_id": "1908252023",
-    "kills": 8
-  },
-  {
-    "weapon_category": "Pistol",
-    "player_name": "EchlipzeeNightElfLvl91",
-    "steam_id": "191200391",
-    "kills": 8
-  },
-  {
-    "weapon_category": "Pistol",
-    "player_name": "TheOneThatSinnedOrcishHordeLvl92",
-    "steam_id": "165475544",
-    "kills": 8
-  },
-  {
-    "weapon_category": "Pistol",
     "player_name": "EnotWhyNotHumanAllianceLvl22",
     "steam_id": "1674631432",
     "kills": 8
@@ -4539,6 +4527,18 @@
     "weapon_category": "Pistol",
     "player_name": "acylSorcererDDLvl7",
     "steam_id": "156866182",
+    "kills": 8
+  },
+  {
+    "weapon_category": "Pistol",
+    "player_name": "RicketyCricketSnorlaxLvl19",
+    "steam_id": "1908252023",
+    "kills": 8
+  },
+  {
+    "weapon_category": "Pistol",
+    "player_name": "EchlipzeeNightElfLvl91",
+    "steam_id": "191200391",
     "kills": 8
   },
   {
