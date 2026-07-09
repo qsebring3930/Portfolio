@@ -247,9 +247,9 @@
   {
     "player_name": "OnlyHits",
     "steam_id": "98759965",
-    "defuse_kits_bought": 1,
-    "rounds_played": 3,
-    "defuse_purchase_rate": "33.33"
+    "defuse_kits_bought": 2,
+    "rounds_played": 6,
+    "defuse_purchase_rate": 33.33
   },
   {
     "player_name": "blyatUndeadScourgeLvl2",
@@ -644,11 +644,11 @@
     "defuse_purchase_rate": "20.75"
   },
   {
-    "player_name": "GGAmericasCookedKoboldTunnelerLvl15",
+    "player_name": "GGAmericasCookedTsarenirLvl5",
     "steam_id": "142917815",
-    "defuse_kits_bought": 68,
-    "rounds_played": 334,
-    "defuse_purchase_rate": "20.36"
+    "defuse_kits_bought": 70,
+    "rounds_played": 338,
+    "defuse_purchase_rate": 20.71
   },
   {
     "player_name": "BukkakeBroVampireLvl43",
@@ -938,13 +938,6 @@
     "defuse_purchase_rate": "14.88"
   },
   {
-    "player_name": "HauntersArcanist",
-    "steam_id": "70839452",
-    "defuse_kits_bought": 66,
-    "rounds_played": 451,
-    "defuse_purchase_rate": "14.63"
-  },
-  {
     "player_name": "knotNightElfLvl0",
     "steam_id": "377698945",
     "defuse_kits_bought": 6,
@@ -957,6 +950,13 @@
     "defuse_kits_bought": 65,
     "rounds_played": 445,
     "defuse_purchase_rate": "14.61"
+  },
+  {
+    "player_name": "HauntersArcanist",
+    "steam_id": "70839452",
+    "defuse_kits_bought": 66,
+    "rounds_played": 452,
+    "defuse_purchase_rate": 14.6
   },
   {
     "player_name": "rBotLvl15",
@@ -2478,11 +2478,11 @@
     "defuse_purchase_rate": "0.33"
   },
   {
-    "player_name": "LeeYandereLvl72",
+    "player_name": "LeeYandereLvl71",
     "steam_id": "43076823",
     "defuse_kits_bought": 8,
-    "rounds_played": 2625,
-    "defuse_purchase_rate": "0.30"
+    "rounds_played": 2629,
+    "defuse_purchase_rate": 0.3
   },
   {
     "player_name": "ShaggySilencerLvl16",
