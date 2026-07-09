@@ -432,12 +432,6 @@
     "complaint_count": 0
   },
   {
-    "map_name": "de_dust_rbcs",
-    "minutes_played": 153,
-    "last_seen": "2026-07-05 14:46:53.694000",
-    "complaint_count": 0
-  },
-  {
     "map_name": "de_dust2",
     "minutes_played": 926,
     "last_seen": "2026-07-08 16:22:58.090000",
@@ -453,6 +447,12 @@
     "map_name": "de_dust2_unlimited_csgo",
     "minutes_played": 256,
     "last_seen": "2026-07-05 17:32:02.648000",
+    "complaint_count": 0
+  },
+  {
+    "map_name": "de_dust_rbcs",
+    "minutes_played": 153,
+    "last_seen": "2026-07-05 14:46:53.694000",
     "complaint_count": 0
   },
   {
@@ -558,15 +558,15 @@
     "complaint_count": 0
   },
   {
-    "map_name": "de_inferno_teamliquid",
-    "minutes_played": 29,
-    "last_seen": "2026-06-21 08:01:14.530000",
-    "complaint_count": 0
-  },
-  {
     "map_name": "de_inferno2",
     "minutes_played": 167,
     "last_seen": "2026-07-07 16:04:50.454000",
+    "complaint_count": 0
+  },
+  {
+    "map_name": "de_inferno_teamliquid",
+    "minutes_played": 29,
+    "last_seen": "2026-06-21 08:01:14.530000",
     "complaint_count": 0
   },
   {
@@ -577,8 +577,8 @@
   },
   {
     "map_name": "de_jav4",
-    "minutes_played": 152,
-    "last_seen": "2026-07-08 22:49:33.149000",
+    "minutes_played": 153,
+    "last_seen": "2026-07-08T22:49:33.149000+00:00",
     "complaint_count": 0
   },
   {
@@ -600,15 +600,15 @@
     "complaint_count": 0
   },
   {
-    "map_name": "de_losttemple_d",
-    "minutes_played": 62,
-    "last_seen": "2026-06-30 21:44:23.675000",
-    "complaint_count": 0
-  },
-  {
     "map_name": "de_losttemple2",
     "minutes_played": 119,
     "last_seen": "2026-07-05 02:42:29.687000",
+    "complaint_count": 0
+  },
+  {
+    "map_name": "de_losttemple_d",
+    "minutes_played": 62,
+    "last_seen": "2026-06-30 21:44:23.675000",
     "complaint_count": 0
   },
   {
