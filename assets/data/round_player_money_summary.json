@@ -1392,20 +1392,20 @@
     "betting_lost": 83577
   },
   {
+    "player_name": "SockyToast",
+    "steam_id": "727740849",
+    "money_spent": 207400,
+    "net_betting": 126599,
+    "betting_won": 138550,
+    "betting_lost": 11951
+  },
+  {
     "player_name": "MugiwaraT600Lvl21",
     "steam_id": "29955070",
     "money_spent": 328850,
     "net_betting": 122154,
     "betting_won": 394154,
     "betting_lost": 272000
-  },
-  {
-    "player_name": "SockyToastUndeadScourgeLvl13",
-    "steam_id": "727740849",
-    "money_spent": 201800,
-    "net_betting": 120549,
-    "betting_won": 132500,
-    "betting_lost": 11951
   },
   {
     "player_name": "PinkoPoltergeistLvl11",
@@ -4904,6 +4904,14 @@
     "betting_lost": 2100
   },
   {
+    "player_name": "GenericUndeadScourgeLvl2",
+    "steam_id": "340872722",
+    "money_spent": 9400,
+    "net_betting": 2900,
+    "betting_won": 2900,
+    "betting_lost": 0
+  },
+  {
     "player_name": "serylxdNightElfLvl6",
     "steam_id": "447051531",
     "money_spent": 4400,
@@ -4918,14 +4926,6 @@
     "net_betting": 2900,
     "betting_won": 3500,
     "betting_lost": 600
-  },
-  {
-    "player_name": "GenericUndeadScourgeLvl2",
-    "steam_id": "340872722",
-    "money_spent": 9400,
-    "net_betting": 2900,
-    "betting_won": 2900,
-    "betting_lost": 0
   },
   {
     "player_name": "HighTeckUndeadScourgeLvl12",
@@ -5160,20 +5160,20 @@
     "betting_lost": 1500
   },
   {
-    "player_name": "ZxUndeadScourgeLvl10",
-    "steam_id": "76532335",
-    "money_spent": 5300,
-    "net_betting": 2100,
-    "betting_won": 2400,
-    "betting_lost": 300
-  },
-  {
     "player_name": "LittleDude",
     "steam_id": "77991225",
     "money_spent": 0,
     "net_betting": 2100,
     "betting_won": 2100,
     "betting_lost": 0
+  },
+  {
+    "player_name": "ZxUndeadScourgeLvl10",
+    "steam_id": "76532335",
+    "money_spent": 5300,
+    "net_betting": 2100,
+    "betting_won": 2400,
+    "betting_lost": 300
   },
   {
     "player_name": "SlipperyGrapplerUndeadScourgeLvl0",
@@ -5592,6 +5592,14 @@
     "betting_lost": 100
   },
   {
+    "player_name": "dylnyan",
+    "steam_id": "26528765",
+    "money_spent": 500,
+    "net_betting": 500,
+    "betting_won": 500,
+    "betting_lost": 0
+  },
+  {
     "player_name": "mcgrimaceEnforcerLvl34",
     "steam_id": "20507549",
     "money_spent": 0,
@@ -5664,12 +5672,12 @@
     "betting_lost": 0
   },
   {
-    "player_name": "Jerrbear",
-    "steam_id": "31671948",
-    "money_spent": 1000,
+    "player_name": "SHiFTUndeadScourgeLvl33",
+    "steam_id": "24801161",
+    "money_spent": 14150,
     "net_betting": 400,
-    "betting_won": 400,
-    "betting_lost": 0
+    "betting_won": 1000,
+    "betting_lost": 600
   },
   {
     "player_name": "BigHossDeathKnightLvl1",
@@ -5680,12 +5688,20 @@
     "betting_lost": 600
   },
   {
-    "player_name": "SHiFTUndeadScourgeLvl33",
-    "steam_id": "24801161",
-    "money_spent": 14150,
+    "player_name": "Jerrbear",
+    "steam_id": "31671948",
+    "money_spent": 1000,
     "net_betting": 400,
-    "betting_won": 1000,
-    "betting_lost": 600
+    "betting_won": 400,
+    "betting_lost": 0
+  },
+  {
+    "player_name": "PolyUndeadScourgeLvl0",
+    "steam_id": "318220834",
+    "money_spent": 3700,
+    "net_betting": 300,
+    "betting_won": 300,
+    "betting_lost": 0
   },
   {
     "player_name": "Marble",
@@ -5702,14 +5718,6 @@
     "net_betting": 300,
     "betting_won": 600,
     "betting_lost": 300
-  },
-  {
-    "player_name": "PolyUndeadScourgeLvl0",
-    "steam_id": "318220834",
-    "money_spent": 3700,
-    "net_betting": 300,
-    "betting_won": 300,
-    "betting_lost": 0
   },
   {
     "player_name": "spinnyfishUndeadScourgeLvl0",
@@ -5872,17 +5880,17 @@
     "betting_lost": 0
   },
   {
-    "player_name": "DiclawalUndeadScourgeLvl0",
-    "steam_id": "48484855",
-    "money_spent": 0,
+    "player_name": "FlickadaWristUndeadScourgeLvl0",
+    "steam_id": "493171",
+    "money_spent": 2900,
     "net_betting": 300,
     "betting_won": 300,
     "betting_lost": 0
   },
   {
-    "player_name": "FlickadaWristUndeadScourgeLvl0",
-    "steam_id": "493171",
-    "money_spent": 2900,
+    "player_name": "DiclawalUndeadScourgeLvl0",
+    "steam_id": "48484855",
+    "money_spent": 0,
     "net_betting": 300,
     "betting_won": 300,
     "betting_lost": 0
@@ -5992,6 +6000,14 @@
     "betting_lost": 0
   },
   {
+    "player_name": "zoinhoSKINSUndeadScourgeLvl0",
+    "steam_id": "299777520",
+    "money_spent": 2900,
+    "net_betting": 0,
+    "betting_won": 0,
+    "betting_lost": 0
+  },
+  {
     "player_name": "NiaKrisUndeadScourgeLvl6",
     "steam_id": "307594653",
     "money_spent": 3400,
@@ -6008,24 +6024,8 @@
     "betting_lost": 300
   },
   {
-    "player_name": "zoinhoSKINSUndeadScourgeLvl0",
-    "steam_id": "299777520",
-    "money_spent": 2900,
-    "net_betting": 0,
-    "betting_won": 0,
-    "betting_lost": 0
-  },
-  {
     "player_name": "Hunter2kUndeadScourgeLvl0",
     "steam_id": "241938112",
-    "money_spent": 3700,
-    "net_betting": 0,
-    "betting_won": 0,
-    "betting_lost": 0
-  },
-  {
-    "player_name": "spinbetterac1dUndeadScourgeLvl0",
-    "steam_id": "278967134",
     "money_spent": 3700,
     "net_betting": 0,
     "betting_won": 0,
@@ -6035,6 +6035,14 @@
     "player_name": "RogShotzChameleonLvl17",
     "steam_id": "27604266",
     "money_spent": 2700,
+    "net_betting": 0,
+    "betting_won": 0,
+    "betting_lost": 0
+  },
+  {
+    "player_name": "spinbetterac1dUndeadScourgeLvl0",
+    "steam_id": "278967134",
+    "money_spent": 3700,
     "net_betting": 0,
     "betting_won": 0,
     "betting_lost": 0
@@ -6136,17 +6144,17 @@
     "betting_lost": 300
   },
   {
-    "player_name": "lowkeyUndeadScourgeLvl0",
-    "steam_id": "41877384",
-    "money_spent": 2700,
+    "player_name": "CountMERCulaUndeadScourgeLvl0",
+    "steam_id": "41651281",
+    "money_spent": 2900,
     "net_betting": 0,
     "betting_won": 0,
     "betting_lost": 0
   },
   {
-    "player_name": "CountMERCulaUndeadScourgeLvl0",
-    "steam_id": "41651281",
-    "money_spent": 2900,
+    "player_name": "lowkeyUndeadScourgeLvl0",
+    "steam_id": "41877384",
+    "money_spent": 2700,
     "net_betting": 0,
     "betting_won": 0,
     "betting_lost": 0
@@ -6163,14 +6171,6 @@
     "player_name": "AffanniUndeadScourgeLvl2",
     "steam_id": "837051922",
     "money_spent": 1300,
-    "net_betting": 0,
-    "betting_won": 0,
-    "betting_lost": 0
-  },
-  {
-    "player_name": "RetardedMedicUndeadScourgeLvl0",
-    "steam_id": "851171291",
-    "money_spent": 2700,
     "net_betting": 0,
     "betting_won": 0,
     "betting_lost": 0
@@ -6195,6 +6195,14 @@
     "player_name": "oceanic",
     "steam_id": "852721936",
     "money_spent": 1000,
+    "net_betting": 0,
+    "betting_won": 0,
+    "betting_lost": 0
+  },
+  {
+    "player_name": "RetardedMedicUndeadScourgeLvl0",
+    "steam_id": "851171291",
+    "money_spent": 2700,
     "net_betting": 0,
     "betting_won": 0,
     "betting_lost": 0
@@ -6296,14 +6304,6 @@
     "betting_lost": 300
   },
   {
-    "player_name": "THEEYEUndeadScourgeLvl0",
-    "steam_id": "851478511",
-    "money_spent": 1000,
-    "net_betting": -300,
-    "betting_won": 0,
-    "betting_lost": 300
-  },
-  {
     "player_name": "oReUndeadScourgeLvl0",
     "steam_id": "780090548",
     "money_spent": 0,
@@ -6320,6 +6320,14 @@
     "betting_lost": 300
   },
   {
+    "player_name": "THEEYEUndeadScourgeLvl0",
+    "steam_id": "851478511",
+    "money_spent": 1000,
+    "net_betting": -300,
+    "betting_won": 0,
+    "betting_lost": 300
+  },
+  {
     "player_name": "UndeadScourgeLvl2",
     "steam_id": "854057231",
     "money_spent": 5200,
@@ -6328,20 +6336,20 @@
     "betting_lost": 400
   },
   {
-    "player_name": "JohUndeadScourgeLvl3",
-    "steam_id": "928403710",
-    "money_spent": 12650,
-    "net_betting": -300,
-    "betting_won": 400,
-    "betting_lost": 700
-  },
-  {
     "player_name": "Illmatic",
     "steam_id": "90567168",
     "money_spent": 2900,
     "net_betting": -300,
     "betting_won": 0,
     "betting_lost": 300
+  },
+  {
+    "player_name": "JohUndeadScourgeLvl3",
+    "steam_id": "928403710",
+    "money_spent": 12650,
+    "net_betting": -300,
+    "betting_won": 400,
+    "betting_lost": 700
   },
   {
     "player_name": "HOSSTigercat234CUndeadScourgeLvl0",
@@ -6488,17 +6496,17 @@
     "betting_lost": 700
   },
   {
-    "player_name": "e",
-    "steam_id": "869001822",
-    "money_spent": 3700,
+    "player_name": "2017MiaKhalifa",
+    "steam_id": "864389399",
+    "money_spent": 1000,
     "net_betting": -400,
     "betting_won": 0,
     "betting_lost": 400
   },
   {
-    "player_name": "2017MiaKhalifa",
-    "steam_id": "864389399",
-    "money_spent": 1000,
+    "player_name": "e",
+    "steam_id": "869001822",
+    "money_spent": 3700,
     "net_betting": -400,
     "betting_won": 0,
     "betting_lost": 400
