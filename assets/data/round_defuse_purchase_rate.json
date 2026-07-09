@@ -245,6 +245,13 @@
     "defuse_purchase_rate": "33.33"
   },
   {
+    "player_name": "OnlyHits",
+    "steam_id": "98759965",
+    "defuse_kits_bought": 1,
+    "rounds_played": 3,
+    "defuse_purchase_rate": "33.33"
+  },
+  {
     "player_name": "blyatUndeadScourgeLvl2",
     "steam_id": "1888208911",
     "defuse_kits_bought": 1,
@@ -931,11 +938,11 @@
     "defuse_purchase_rate": "14.88"
   },
   {
-    "player_name": "HauntersArcanistUndeadScourgeLvl20",
+    "player_name": "HauntersArcanist",
     "steam_id": "70839452",
     "defuse_kits_bought": 66,
-    "rounds_played": 450,
-    "defuse_purchase_rate": "14.67"
+    "rounds_played": 451,
+    "defuse_purchase_rate": "14.63"
   },
   {
     "player_name": "knotNightElfLvl0",
@@ -6601,6 +6608,13 @@
     "defuse_purchase_rate": "0.00"
   },
   {
+    "player_name": "WeebkingUndeadScourgeLvl23",
+    "steam_id": "974840674",
+    "defuse_kits_bought": 0,
+    "rounds_played": 13,
+    "defuse_purchase_rate": "0.00"
+  },
+  {
     "player_name": "EvenflowUndeadScourgeLvl0",
     "steam_id": "98046290",
     "defuse_kits_bought": 0,
@@ -6619,13 +6633,6 @@
     "steam_id": "99074731",
     "defuse_kits_bought": 0,
     "rounds_played": 1,
-    "defuse_purchase_rate": "0.00"
-  },
-  {
-    "player_name": "WeebkingUndeadScourgeLvl23",
-    "steam_id": "974840674",
-    "defuse_kits_bought": 0,
-    "rounds_played": 13,
     "defuse_purchase_rate": "0.00"
   }
 ]
