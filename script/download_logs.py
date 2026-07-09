@@ -5,7 +5,7 @@ import time
 import json
 import hashlib
 from difflib import SequenceMatcher
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 
 import paramiko
 import time
@@ -355,15 +355,24 @@ def parse_timestamp_for_rtv(value):
 
     value = str(value).strip().replace("Z", "+00:00")
 
+    parsed = None
+
     try:
-        return datetime.fromisoformat(value)
+        parsed = datetime.fromisoformat(value)
     except ValueError:
         pass
 
-    try:
-        return datetime.strptime(value, "%Y-%m-%d %H:%M:%S.%f %z")
-    except ValueError:
-        return None
+    if parsed is None:
+        try:
+            parsed = datetime.strptime(value, "%Y-%m-%d %H:%M:%S.%f %z")
+        except ValueError:
+            return None
+
+    # Normalize everything to naive UTC so comparisons do not crash.
+    if parsed.tzinfo is not None:
+        parsed = parsed.astimezone(timezone.utc).replace(tzinfo=None)
+
+    return parsed
 
 
 def is_rtv_message(message, patterns):
@@ -894,51 +903,61 @@ def import_server_logs_json():
 
 ITEM_PRICES = {
     # pistols
-    1: 700,    # deagle
-    2: 300,    # elite
-    3: 300,    # five-seven
-    4: 500,    # glock
-    30: 200,   # tec9
-    32: 200,   # hkp2000
-    36: 200,   # p250
-    61: 200,   # usp-s
-    63: 500,   # cz75a
-    64: 600,   # revolver
-
-    # smgs
-    17: 1050,  # mac10
-    19: 1250,  # p90
-    23: 1200,  # mp5sd
-    24: 1200,  # ump45
-    26: 1500,  # bizon
-    33: 1500,  # mp7
-    34: 1050,  # mp9
+    1: 700,    # Desert Eagle
+    2: 300,    # Dual Berettas
+    3: 500,    # Five-SeveN
+    4: 200,    # Glock-18
+    30: 500,   # Tec-9
+    32: 200,   # P2000
+    36: 300,   # P250
+    61: 200,   # USP-S
+    63: 500,   # CZ75-Auto
+    64: 600,   # R8 Revolver
 
     # rifles
-    7: 2700,   # ak47
-    8: 3300,   # aug
-    10: 5000,  # famas? adjust if wrong in your data
-    13: 1800,  # galil
-    16: 3100,  # m4a4
-    39: 3000,  # sg556
-    60: 2900,  # m4a1-s
+    7: 2700,   # AK-47
+    8: 3300,   # AUG
+    10: 1950,  # FAMAS
+    13: 1800,  # Galil AR
+    16: 2900,  # M4A4
+    39: 3000,  # SG 553
+    60: 2900,  # M4A1-S
 
     # snipers
-    9: 4750,   # awp
-    11: 1700,  # g3sg1
-    38: 5000,  # scar20
-    40: 1700,  # ssg08
+    9: 4750,   # AWP
+    11: 5000,  # G3SG1
+    38: 5000,  # SCAR-20
+    40: 1700,  # SSG 08
 
-    # heavy
-    14: 5200,  # m249
-    25: 1300,  # xm1014
-    27: 1050,  # mag7
-    28: 1700,  # negev
-    29: 900,   # sawedoff
-    35: 1200,  # nova
+    # mid-tier / SMGs / heavy
+    14: 5200,  # M249
+    17: 1050,  # MAC-10
+    19: 2350,  # P90
+    23: 1400,  # MP5-SD
+    24: 1200,  # UMP-45
+    25: 2000,  # XM1014
+    26: 1400,  # PP-Bizon
+    27: 1300,  # MAG-7
+    28: 5000,  # Negev
+    29: 1100,  # Sawed-Off
+    33: 1400,  # MP7
+    34: 1250,  # MP9
+    35: 1050,  # Nova
 
-    # gear
-    55: 400,   # defuse kit
+    # grenades
+    43: 200,   # Flashbang
+    44: 300,   # HE Grenade
+    45: 300,   # Smoke Grenade
+    46: 400,   # Molotov
+    47: 50,    # Decoy Grenade
+    48: 500,   # Incendiary Grenade
+
+    # equipment
+    31: 200,   # Zeus x27
+    50: 650,   # Kevlar Vest
+    51: 1000,  # Kevlar Vest + Helmet
+    55: 400,   # Defuse Kit
+    57: 0,     # Healthshot
 }
 
 def load_dict_json(path, key_field):
