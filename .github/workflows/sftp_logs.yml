@@ -25,17 +25,10 @@ jobs:
           python-version: "3.11"
           cache: "pip"
 
-      - name: Install Microsoft ODBC Driver 18
-        run: |
-          curl https://packages.microsoft.com/keys/microsoft.asc | sudo tee /etc/apt/trusted.gpg.d/microsoft.asc
-          curl https://packages.microsoft.com/config/ubuntu/22.04/prod.list | sudo tee /etc/apt/sources.list.d/mssql-release.list
-          sudo apt-get update
-          sudo ACCEPT_EULA=Y apt-get install -y msodbcsql18 unixodbc-dev
-
       - name: Install Python dependencies
-        run: pip install paramiko pyodbc
+        run: pip install paramiko
 
-      - name: Download logs from SFTP and import into SQL
+      - name: Download backups from SFTP and update JSON data
         run: python script/download_logs.py
         env:
           INCLUDE_LOGS: "0"
@@ -44,13 +37,9 @@ jobs:
           SFTP_USERNAME: ${{ secrets.SFTP_USERNAME }}
           SFTP_PASSWORD: ${{ secrets.SFTP_PASSWORD }}
           SFTP_REMOTE_LOG_DIR: ${{ secrets.SFTP_REMOTE_LOG_DIR }}
+          SFTP_REMOTE_BACKUP_DIR: ${{ secrets.SFTP_REMOTE_BACKUP_DIR }}
 
-          AZURE_SQL_SERVER: ${{ secrets.AZURE_SQL_SERVER }}
-          AZURE_SQL_DATABASE: ${{ secrets.AZURE_SQL_DATABASE }}
-          AZURE_SQL_USERNAME: ${{ secrets.AZURE_SQL_USERNAME }}
-          AZURE_SQL_PASSWORD: ${{ secrets.AZURE_SQL_PASSWORD }}
-
-      - name: Commit downloaded logs and JSON data
+      - name: Commit downloaded backups and JSON data
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
@@ -59,7 +48,7 @@ jobs:
           git status --short
 
           # Save generated changes temporarily so pull/rebase is clean.
-          git stash push -u -m "generated log stats" || true
+          git stash push -u -m "generated json stats" || true
 
           # Get latest remote changes.
           git pull --rebase origin master
@@ -70,7 +59,7 @@ jobs:
           echo "Git status after sync:"
           git status --short
 
-          # Stage EVERYTHING, including deleted logs.
+          # Stage EVERYTHING, including deleted local logs/backups and new _ JSON files.
           git add -A
 
           echo "Git status after staging:"
@@ -81,5 +70,5 @@ jobs:
             exit 0
           fi
 
-          git commit -m "Update server log stats"
+          git commit -m "Update server JSON stats"
           git push origin master
