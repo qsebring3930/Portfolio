@@ -26,11 +26,6 @@ jobs:
           cache: "pip"
           cache-dependency-path: requirements.txt
 
-      - name: Install Microsoft ODBC driver
-        run: |
-          sudo apt-get update
-          sudo ACCEPT_EULA=Y apt-get install -y msodbcsql18 unixodbc-dev
-
       - run: pip install -r requirements.txt
 
       - run: python script/getwar3races.py
@@ -55,15 +50,13 @@ jobs:
         env:
           APIFY_TOKEN: ${{ secrets.APIFY_TOKEN }}
           DISCORD_TOKEN: ${{ secrets.DISCORD_TOKEN }}
-          AZURE_SQL_SERVER: ${{ secrets.AZURE_SQL_SERVER }}
-          AZURE_SQL_DATABASE: ${{ secrets.AZURE_SQL_DATABASE }}
-          AZURE_SQL_USERNAME: ${{ secrets.AZURE_SQL_USERNAME }}
-          AZURE_SQL_PASSWORD: ${{ secrets.AZURE_SQL_PASSWORD }}
+
           SFTP_HOST: ${{ secrets.SFTP_HOST }}
           SFTP_PORT: ${{ secrets.SFTP_PORT }}
           SFTP_USERNAME: ${{ secrets.SFTP_USERNAME }}
           SFTP_PASSWORD: ${{ secrets.SFTP_PASSWORD }}
           SFTP_REMOTE_LOG_DIR: ${{ secrets.SFTP_REMOTE_LOG_DIR }}
+          SFTP_REMOTE_BACKUP_DIR: ${{ secrets.SFTP_REMOTE_BACKUP_DIR }}
 
       - name: Commit JSON exports
         run: |
@@ -71,6 +64,8 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
       
           git add assets/data/*.json
+          git add assets/data/_*.json
+          git add assets/data/_*.jsonl
       
           if git diff --cached --quiet; then
             echo "No JSON changes"
@@ -82,4 +77,3 @@ jobs:
           git pull --rebase -X theirs origin master
       
           git push origin HEAD:master
-          
