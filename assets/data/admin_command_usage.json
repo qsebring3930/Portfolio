@@ -12,7 +12,7 @@
   {
     "admin_name": "TwistedSquiddy",
     "command": "css_respawn",
-    "command_count": 142
+    "command_count": 152
   },
   {
     "admin_name": "VEGETO#6969",
@@ -27,7 +27,7 @@
   {
     "admin_name": "TwistedSquiddy",
     "command": "css_slay",
-    "command_count": 80
+    "command_count": 84
   },
   {
     "admin_name": "Lucky Prinny Overlord",
@@ -45,14 +45,19 @@
     "command_count": 41
   },
   {
+    "admin_name": "Hexette",
+    "command": "css_slay",
+    "command_count": 38
+  },
+  {
     "admin_name": "Logick",
     "command": "css_slap",
     "command_count": 29
   },
   {
-    "admin_name": "Hexette",
-    "command": "css_slay",
-    "command_count": 28
+    "admin_name": "TwistedSquiddy",
+    "command": "css_say",
+    "command_count": 29
   },
   {
     "admin_name": "TwistedSquiddy",
@@ -60,9 +65,19 @@
     "command_count": 24
   },
   {
+    "admin_name": "Hexette",
+    "command": "css_respawn",
+    "command_count": 21
+  },
+  {
     "admin_name": "xSignHere",
     "command": "css_respawn",
     "command_count": 19
+  },
+  {
+    "admin_name": "TwistedSquiddy",
+    "command": "css_bring",
+    "command_count": 18
   },
   {
     "admin_name": "Logick",
@@ -80,19 +95,9 @@
     "command_count": 16
   },
   {
-    "admin_name": "Hexette",
-    "command": "css_respawn",
-    "command_count": 15
-  },
-  {
     "admin_name": "TwistedSquiddy",
     "command": "css_give",
-    "command_count": 14
-  },
-  {
-    "admin_name": "TwistedSquiddy",
-    "command": "css_bring",
-    "command_count": 14
+    "command_count": 15
   },
   {
     "admin_name": "TwistedSquiddy",
@@ -102,7 +107,7 @@
   {
     "admin_name": "Hexette",
     "command": "css_slap",
-    "command_count": 11
+    "command_count": 13
   },
   {
     "admin_name": "xSignHere",
@@ -145,13 +150,13 @@
     "command_count": 5
   },
   {
-    "admin_name": "Logick",
-    "command": "css_god",
-    "command_count": 4
-  },
-  {
     "admin_name": "Lucky Prinny Overlord",
     "command": "css_respawn",
+    "command_count": 5
+  },
+  {
+    "admin_name": "Logick",
+    "command": "css_god",
     "command_count": 4
   },
   {
@@ -172,11 +177,6 @@
   {
     "admin_name": "TwistedSquiddy",
     "command": "css_strip",
-    "command_count": 4
-  },
-  {
-    "admin_name": "TwistedSquiddy",
-    "command": "css_say",
     "command_count": 4
   },
   {
@@ -387,6 +387,11 @@
   {
     "admin_name": "Hexette",
     "command": "css_vote",
+    "command_count": 1
+  },
+  {
+    "admin_name": "Hexette",
+    "command": "css_godmode",
     "command_count": 1
   }
 ]
