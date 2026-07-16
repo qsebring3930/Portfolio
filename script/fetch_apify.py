@@ -3,23 +3,24 @@ import re
 import json
 import requests
 from pathlib import Path
-from datetime import datetime
 
 DATA_DIR = Path("assets/data")
 DATA_DIR.mkdir(parents=True, exist_ok=True)
 
 SNAPSHOT_MINUTES = 1
 
+
 def load_json(path, default):
     if not path.exists():
+        print(f"{path} does not exist, using default.")
         return default
 
     try:
         with path.open("r", encoding="utf-8") as f:
             return json.load(f)
     except json.JSONDecodeError:
-        print(f"Warning: {path} was invalid JSON, using default.")
-        return default
+        print(f"ERROR: {path} was invalid JSON. Refusing to overwrite it.")
+        raise
 
 
 def save_json(path, data):
@@ -32,15 +33,18 @@ def save_json(path, data):
 
 
 def rows_to_dict(rows, key):
-    return {
-        row[key]: row
-        for row in rows
-        if row.get(key)
-    }
+    result = {}
+
+    for row in rows:
+        value = row.get(key)
+        if value:
+            result[str(value)] = row
+
+    return result
 
 
 def normalize_player_name(player_name):
-    name = player_name.strip()
+    name = str(player_name or "").strip()
 
     if name.upper().startswith("BOT "):
         return "BOT"
@@ -49,31 +53,22 @@ def normalize_player_name(player_name):
 
 
 def race_to_column(race_name):
+    race_name = str(race_name or "").strip()
+
+    if not race_name:
+        return "saboteur"
+
     col = race_name.lower()
     col = re.sub(r"[^a-z0-9]+", "_", col).strip("_")
+
     return col[:120] if col else "saboteur"
-
-
-def get_valid_race_columns():
-    script_dir = Path(__file__).resolve().parent
-    race_pages_dir = script_dir / "war3cs2_pages"
-
-    valid_columns = {
-        race_to_column(path.stem)
-        for path in race_pages_dir.glob("*.txt")
-    }
-
-    valid_columns.add("saboteur")
-    return valid_columns
-
-
-VALID_RACE_COLUMNS = get_valid_race_columns()
 
 
 def get_embed(item):
     embeds = item.get("embeds") or []
     if not embeds:
         return None
+
     return embeds[0]
 
 
@@ -82,6 +77,7 @@ def get_map_name(embed):
         if "Map" in field.get("name", ""):
             value = field.get("value", "")
             return value.split(" ")[0].strip()
+
     return None
 
 
@@ -107,13 +103,22 @@ def parse_team_players(embed):
             if not match:
                 continue
 
+            player_name = normalize_player_name(match.group(1))
+            race_name = match.group(2).strip()
+            level = int(match.group(3))
+
+            if not player_name:
+                continue
+
             players.append({
-                "player_name": normalize_player_name(match.group(1)),
-                "race_name": match.group(2).strip(),
-                "level": int(match.group(3)),
+                "player_name": player_name,
+                "race_name": race_name,
+                "race_col": race_to_column(race_name),
+                "level": level,
             })
 
     return players
+
 
 def update_stats_json(item, state):
     embed = get_embed(item)
@@ -148,12 +153,12 @@ def update_stats_json(item, state):
         row["minutes_played"] = int(row.get("minutes_played") or 0) + SNAPSHOT_MINUTES
         row["last_seen"] = timestamp
 
+        if "complaint_count" not in row:
+            row["complaint_count"] = 0
+
     for player in players:
         player_name = player["player_name"]
-        race_col = race_to_column(player["race_name"])
-
-        if race_col not in VALID_RACE_COLUMNS:
-            race_col = "saboteur"
+        race_col = player["race_col"]
 
         playtime_row = race_playtime.setdefault(player_name, {
             "player_name": player_name,
@@ -168,11 +173,15 @@ def update_stats_json(item, state):
         playtime_row[race_col] = int(playtime_row.get(race_col) or 0) + SNAPSHOT_MINUTES
         playtime_row["last_seen"] = timestamp
 
-        level_row[race_col] = player["level"]
+        old_level = int(level_row.get(race_col) or 0)
+        new_level = int(player["level"] or 0)
+
+        level_row[race_col] = max(old_level, new_level)
         level_row["last_seen"] = timestamp
 
     processed_snapshots.add(snapshot_id)
     return True
+
 
 def retrieve_messages(channel_id, limit=100):
     token = os.environ["DISCORD_TOKEN"].strip()
@@ -224,17 +233,26 @@ def load_state():
 def save_state(state):
     save_json(
         DATA_DIR / "map_playtime.json",
-        sorted(state["map_playtime"].values(), key=lambda r: r["map_name"].lower())
+        sorted(
+            state["map_playtime"].values(),
+            key=lambda r: str(r.get("map_name", "")).lower()
+        )
     )
 
     save_json(
         DATA_DIR / "race_playtime.json",
-        sorted(state["race_playtime"].values(), key=lambda r: r["player_name"].lower())
+        sorted(
+            state["race_playtime"].values(),
+            key=lambda r: str(r.get("player_name", "")).lower()
+        )
     )
 
     save_json(
         DATA_DIR / "race_levels.json",
-        sorted(state["race_levels"].values(), key=lambda r: r["player_name"].lower())
+        sorted(
+            state["race_levels"].values(),
+            key=lambda r: str(r.get("player_name", "")).lower()
+        )
     )
 
     save_json(
@@ -251,7 +269,6 @@ messages = retrieve_messages(discord_channel_id, limit=discord_message_limit)
 
 changed = False
 
-# Oldest first, so totals are applied chronologically.
 for item in reversed(messages):
     if update_stats_json(item, state):
         changed = True
