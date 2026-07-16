@@ -9,6 +9,10 @@ DATA_DIR.mkdir(parents=True, exist_ok=True)
 
 SNAPSHOT_MINUTES = 1
 
+# Safety check. If fewer than this many race/champion pages exist,
+# something is probably wrong with war3cs2_pages.
+MIN_EXPECTED_RACE_PAGES = 25
+
 
 def load_json(path, default):
     if not path.exists():
@@ -64,6 +68,52 @@ def race_to_column(race_name):
     return col[:120] if col else "saboteur"
 
 
+def get_valid_race_columns():
+    script_dir = Path(__file__).resolve().parent
+    race_pages_dir = script_dir / "war3cs2_pages"
+
+    if not race_pages_dir.exists():
+        raise RuntimeError(
+            f"Missing race page folder: {race_pages_dir}. "
+            "Refusing to update JSON because every race would fall back to saboteur."
+        )
+
+    valid_columns = {
+        race_to_column(path.stem)
+        for path in race_pages_dir.glob("*.txt")
+    }
+
+    if len(valid_columns) < MIN_EXPECTED_RACE_PAGES:
+        raise RuntimeError(
+            f"Only found {len(valid_columns)} race/champion pages in {race_pages_dir}. "
+            "Refusing to update JSON because the race list is probably incomplete."
+        )
+
+    valid_columns.add("saboteur")
+
+    print(f"Loaded {len(valid_columns)} valid race columns.")
+    return valid_columns
+
+
+VALID_RACE_COLUMNS = get_valid_race_columns()
+
+
+def resolve_race_column(race_name):
+    race_name = str(race_name or "").strip()
+
+    if not race_name:
+        return "saboteur"
+
+    race_col = race_to_column(race_name)
+
+    if race_col in VALID_RACE_COLUMNS:
+        return race_col
+
+    # This is the intended fallback for weird names.
+    print(f"Unknown race '{race_name}', using saboteur fallback.")
+    return "saboteur"
+
+
 def get_embed(item):
     embeds = item.get("embeds") or []
     if not embeds:
@@ -113,7 +163,6 @@ def parse_team_players(embed):
             players.append({
                 "player_name": player_name,
                 "race_name": race_name,
-                "race_col": race_to_column(race_name),
                 "level": level,
             })
 
@@ -158,7 +207,7 @@ def update_stats_json(item, state):
 
     for player in players:
         player_name = player["player_name"]
-        race_col = player["race_col"]
+        race_col = resolve_race_column(player["race_name"])
 
         playtime_row = race_playtime.setdefault(player_name, {
             "player_name": player_name,
@@ -176,6 +225,7 @@ def update_stats_json(item, state):
         old_level = int(level_row.get(race_col) or 0)
         new_level = int(player["level"] or 0)
 
+        # Do not lower a player's recorded highest level.
         level_row[race_col] = max(old_level, new_level)
         level_row["last_seen"] = timestamp
 
