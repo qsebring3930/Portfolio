@@ -12,7 +12,7 @@
   {
     "admin_name": "TwistedSquiddy",
     "command": "css_respawn",
-    "command_count": 154
+    "command_count": 155
   },
   {
     "admin_name": "VEGETO#6969",
@@ -20,13 +20,13 @@
     "command_count": 122
   },
   {
-    "admin_name": "Logick",
-    "command": "css_respawn",
-    "command_count": 84
-  },
-  {
     "admin_name": "TwistedSquiddy",
     "command": "css_slay",
+    "command_count": 90
+  },
+  {
+    "admin_name": "Logick",
+    "command": "css_respawn",
     "command_count": 84
   },
   {
@@ -62,7 +62,7 @@
   {
     "admin_name": "TwistedSquiddy",
     "command": "css_wsmap",
-    "command_count": 24
+    "command_count": 27
   },
   {
     "admin_name": "Hexette",
@@ -125,6 +125,11 @@
     "command_count": 6
   },
   {
+    "admin_name": "TwistedSquiddy",
+    "command": "css_god",
+    "command_count": 6
+  },
+  {
     "admin_name": "Console",
     "command": "css_say",
     "command_count": 5
@@ -151,7 +156,7 @@
   },
   {
     "admin_name": "TwistedSquiddy",
-    "command": "css_god",
+    "command": "css_slap",
     "command_count": 5
   },
   {
@@ -165,11 +170,6 @@
     "command_count": 4
   },
   {
-    "admin_name": "TwistedSquiddy",
-    "command": "css_slap",
-    "command_count": 4
-  },
-  {
     "admin_name": "<3 Awful Aim :D",
     "command": "css_speed",
     "command_count": 4
@@ -180,12 +180,12 @@
     "command_count": 4
   },
   {
-    "admin_name": "<3 Awful Aim :D",
+    "admin_name": "TwistedSquiddy",
     "command": "css_ban",
-    "command_count": 3
+    "command_count": 4
   },
   {
-    "admin_name": "TwistedSquiddy",
+    "admin_name": "<3 Awful Aim :D",
     "command": "css_ban",
     "command_count": 3
   },
@@ -225,6 +225,11 @@
     "command_count": 3
   },
   {
+    "admin_name": "TwistedSquiddy",
+    "command": "css_hp",
+    "command_count": 3
+  },
+  {
     "admin_name": "Console",
     "command": "css_addban",
     "command_count": 2
@@ -251,11 +256,6 @@
   },
   {
     "admin_name": "<3 Awful Aim :D",
-    "command": "css_hp",
-    "command_count": 2
-  },
-  {
-    "admin_name": "TwistedSquiddy",
     "command": "css_hp",
     "command_count": 2
   },
