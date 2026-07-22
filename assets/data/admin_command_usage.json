@@ -110,6 +110,11 @@
     "command_count": 13
   },
   {
+    "admin_name": "Console",
+    "command": "css_say",
+    "command_count": 8
+  },
+  {
     "admin_name": "xSignHere",
     "command": "css_gravity",
     "command_count": 7
@@ -127,11 +132,6 @@
   {
     "admin_name": "TwistedSquiddy",
     "command": "css_god",
-    "command_count": 6
-  },
-  {
-    "admin_name": "Console",
-    "command": "css_say",
     "command_count": 6
   },
   {
@@ -190,6 +190,11 @@
     "command_count": 4
   },
   {
+    "admin_name": "Console",
+    "command": "css_addban",
+    "command_count": 4
+  },
+  {
     "admin_name": "<3 Awful Aim :D",
     "command": "css_ban",
     "command_count": 3
@@ -230,8 +235,8 @@
     "command_count": 3
   },
   {
-    "admin_name": "Console",
-    "command": "css_addban",
+    "admin_name": "/Toad",
+    "command": "css_slay",
     "command_count": 3
   },
   {
@@ -365,11 +370,6 @@
     "command_count": 1
   },
   {
-    "admin_name": "/Toad",
-    "command": "css_slay",
-    "command_count": 1
-  },
-  {
     "admin_name": "Console",
     "command": "css_slay",
     "command_count": 1
@@ -392,6 +392,21 @@
   {
     "admin_name": "Hexette",
     "command": "css_godmode",
+    "command_count": 1
+  },
+  {
+    "admin_name": "/Toad",
+    "command": "css_wsmap",
+    "command_count": 1
+  },
+  {
+    "admin_name": "/Toad",
+    "command": "css_addban",
+    "command_count": 1
+  },
+  {
+    "admin_name": "/Toad",
+    "command": "css_vote",
     "command_count": 1
   }
 ]
