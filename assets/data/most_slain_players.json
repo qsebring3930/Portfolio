@@ -260,6 +260,13 @@
     ]
   },
   {
+    "player_name": "operator",
+    "slain_count": 2,
+    "aliases": [
+      "operator"
+    ]
+  },
+  {
     "player_name": "Argy",
     "slain_count": 1,
     "aliases": [
@@ -395,13 +402,6 @@
     "slain_count": 1,
     "aliases": [
       "mug"
-    ]
-  },
-  {
-    "player_name": "operator",
-    "slain_count": 1,
-    "aliases": [
-      "operator"
     ]
   },
   {
