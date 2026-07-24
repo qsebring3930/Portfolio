@@ -2,7 +2,7 @@
   {
     "admin_name": "xSignHere",
     "command": "css_slap",
-    "command_count": 496
+    "command_count": 504
   },
   {
     "admin_name": "xSignHere",
@@ -12,7 +12,7 @@
   {
     "admin_name": "TwistedSquiddy",
     "command": "css_respawn",
-    "command_count": 155
+    "command_count": 162
   },
   {
     "admin_name": "VEGETO#6969",
@@ -20,14 +20,14 @@
     "command_count": 122
   },
   {
-    "admin_name": "TwistedSquiddy",
-    "command": "css_slay",
-    "command_count": 92
-  },
-  {
     "admin_name": "Logick",
     "command": "css_respawn",
-    "command_count": 84
+    "command_count": 117
+  },
+  {
+    "admin_name": "TwistedSquiddy",
+    "command": "css_slay",
+    "command_count": 94
   },
   {
     "admin_name": "Lucky Prinny Overlord",
@@ -37,7 +37,7 @@
   {
     "admin_name": "Logick",
     "command": "css_slay",
-    "command_count": 49
+    "command_count": 72
   },
   {
     "admin_name": "TwistedSquiddy",
@@ -52,7 +52,7 @@
   {
     "admin_name": "Logick",
     "command": "css_slap",
-    "command_count": 29
+    "command_count": 38
   },
   {
     "admin_name": "TwistedSquiddy",
@@ -62,7 +62,12 @@
   {
     "admin_name": "TwistedSquiddy",
     "command": "css_wsmap",
-    "command_count": 27
+    "command_count": 28
+  },
+  {
+    "admin_name": "Logick",
+    "command": "css_strip",
+    "command_count": 24
   },
   {
     "admin_name": "Hexette",
@@ -72,12 +77,12 @@
   {
     "admin_name": "xSignHere",
     "command": "css_respawn",
-    "command_count": 19
+    "command_count": 20
   },
   {
     "admin_name": "TwistedSquiddy",
     "command": "css_bring",
-    "command_count": 18
+    "command_count": 19
   },
   {
     "admin_name": "Logick",
@@ -85,14 +90,9 @@
     "command_count": 17
   },
   {
-    "admin_name": "Logick",
-    "command": "css_strip",
-    "command_count": 17
-  },
-  {
     "admin_name": "xSignHere",
     "command": "css_slay",
-    "command_count": 16
+    "command_count": 17
   },
   {
     "admin_name": "TwistedSquiddy",
@@ -102,12 +102,17 @@
   {
     "admin_name": "TwistedSquiddy",
     "command": "css_speed",
-    "command_count": 13
+    "command_count": 14
   },
   {
     "admin_name": "Hexette",
     "command": "css_slap",
     "command_count": 13
+  },
+  {
+    "admin_name": "TwistedSquiddy",
+    "command": "css_hp",
+    "command_count": 9
   },
   {
     "admin_name": "Console",
@@ -135,6 +140,11 @@
     "command_count": 6
   },
   {
+    "admin_name": "TwistedSquiddy",
+    "command": "css_slap",
+    "command_count": 6
+  },
+  {
     "admin_name": "Lucky Prinny Overlord",
     "command": "css_slay",
     "command_count": 5
@@ -155,8 +165,8 @@
     "command_count": 5
   },
   {
-    "admin_name": "TwistedSquiddy",
-    "command": "css_slap",
+    "admin_name": "♥✿PrincessBen✿♥",
+    "command": "css_slay",
     "command_count": 5
   },
   {
@@ -185,18 +195,13 @@
     "command_count": 4
   },
   {
-    "admin_name": "TwistedSquiddy",
-    "command": "css_hp",
-    "command_count": 4
-  },
-  {
     "admin_name": "Console",
     "command": "css_addban",
     "command_count": 4
   },
   {
     "admin_name": "♥✿PrincessBen✿♥",
-    "command": "css_slay",
+    "command": "css_slap",
     "command_count": 4
   },
   {
@@ -240,17 +245,17 @@
     "command_count": 3
   },
   {
+    "admin_name": "xSignHere",
+    "command": "css_ban",
+    "command_count": 3
+  },
+  {
     "admin_name": "Hexette",
     "command": "css_addban",
     "command_count": 2
   },
   {
     "admin_name": "Hexette",
-    "command": "css_ban",
-    "command_count": 2
-  },
-  {
-    "admin_name": "xSignHere",
     "command": "css_ban",
     "command_count": 2
   },
@@ -295,13 +300,18 @@
     "command_count": 2
   },
   {
-    "admin_name": "<3 Awful Aim :D",
-    "command": "css_addban",
-    "command_count": 1
+    "admin_name": "Console",
+    "command": "css_slay",
+    "command_count": 2
   },
   {
     "admin_name": "Logick",
     "command": "css_ban",
+    "command_count": 2
+  },
+  {
+    "admin_name": "<3 Awful Aim :D",
+    "command": "css_addban",
     "command_count": 1
   },
   {
@@ -370,11 +380,6 @@
     "command_count": 1
   },
   {
-    "admin_name": "Console",
-    "command": "css_slay",
-    "command_count": 1
-  },
-  {
     "admin_name": "Hobo",
     "command": "css_slay",
     "command_count": 1
@@ -407,6 +412,11 @@
   {
     "admin_name": "/Toad",
     "command": "css_vote",
+    "command_count": 1
+  },
+  {
+    "admin_name": "♥✿PrincessBen✿♥",
+    "command": "css_respawn",
     "command_count": 1
   }
 ]

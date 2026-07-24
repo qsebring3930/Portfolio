@@ -17,7 +17,7 @@
   },
   {
     "player_name": "Logick",
-    "slapped_count": 76,
+    "slapped_count": 80,
     "aliases": [
       "logic",
       "Logick"
@@ -26,13 +26,21 @@
   },
   {
     "player_name": "Bukkake Bro",
-    "slapped_count": 35,
+    "slapped_count": 37,
     "aliases": [
       "bro",
       "bukkake",
       "Bukkake Bro"
     ],
-    "total_slap_damage": 129
+    "total_slap_damage": 137
+  },
+  {
+    "player_name": "Caboose",
+    "slapped_count": 8,
+    "aliases": [
+      "Caboose"
+    ],
+    "total_slap_damage": 10
   },
   {
     "player_name": "Cum Kisses",
@@ -101,6 +109,23 @@
       "Spoxie"
     ],
     "total_slap_damage": 0
+  },
+  {
+    "player_name": "Milky",
+    "slapped_count": 2,
+    "aliases": [
+      "milky",
+      "Milky"
+    ],
+    "total_slap_damage": 44
+  },
+  {
+    "player_name": "mankey",
+    "slapped_count": 2,
+    "aliases": [
+      "mankey"
+    ],
+    "total_slap_damage": 100
   },
   {
     "player_name": "@me",
@@ -207,14 +232,6 @@
     "total_slap_damage": 0
   },
   {
-    "player_name": "mankey",
-    "slapped_count": 1,
-    "aliases": [
-      "mankey"
-    ],
-    "total_slap_damage": 1
-  },
-  {
     "player_name": "MistaCat",
     "slapped_count": 1,
     "aliases": [
@@ -297,5 +314,39 @@
       "operator"
     ],
     "total_slap_damage": 0
+  },
+  {
+    "player_name": "Never Win",
+    "slapped_count": 1,
+    "aliases": [
+      "never",
+      "Never Win"
+    ],
+    "total_slap_damage": 0
+  },
+  {
+    "player_name": "ask",
+    "slapped_count": 1,
+    "aliases": [
+      "ask"
+    ],
+    "total_slap_damage": 0
+  },
+  {
+    "player_name": "Santa Claus",
+    "slapped_count": 1,
+    "aliases": [
+      "santa",
+      "Santa Claus"
+    ],
+    "total_slap_damage": 99
+  },
+  {
+    "player_name": "squid",
+    "slapped_count": 1,
+    "aliases": [
+      "squid"
+    ],
+    "total_slap_damage": 99
   }
 ]
