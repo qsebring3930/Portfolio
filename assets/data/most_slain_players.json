@@ -10,20 +10,20 @@
     ]
   },
   {
+    "player_name": "Milky",
+    "slain_count": 12,
+    "aliases": [
+      "Milky",
+      "milky"
+    ]
+  },
+  {
     "player_name": "Cum Kisses",
     "slain_count": 10,
     "aliases": [
       "cum",
       "Cum Kisses",
       "cum kisses"
-    ]
-  },
-  {
-    "player_name": "Milky",
-    "slain_count": 9,
-    "aliases": [
-      "milky",
-      "Milky"
     ]
   },
   {
@@ -142,6 +142,14 @@
     "slain_count": 3,
     "aliases": [
       "operator"
+    ]
+  },
+  {
+    "player_name": "Caboose",
+    "slain_count": 3,
+    "aliases": [
+      "caboose",
+      "Caboose"
     ]
   },
   {
@@ -265,14 +273,6 @@
     "slain_count": 2,
     "aliases": [
       "mccoy"
-    ]
-  },
-  {
-    "player_name": "Caboose",
-    "slain_count": 2,
-    "aliases": [
-      "caboose",
-      "Caboose"
     ]
   },
   {
@@ -596,6 +596,37 @@
     "slain_count": 1,
     "aliases": [
       "steel"
+    ]
+  },
+  {
+    "player_name": "xSignHere",
+    "slain_count": 1,
+    "aliases": [
+      "XSIGN",
+      "xSignHere"
+    ]
+  },
+  {
+    "player_name": "Stupendous One",
+    "slain_count": 1,
+    "aliases": [
+      "stupendous",
+      "Stupendous One"
+    ]
+  },
+  {
+    "player_name": "log",
+    "slain_count": 1,
+    "aliases": [
+      "log"
+    ]
+  },
+  {
+    "player_name": "Eris",
+    "slain_count": 1,
+    "aliases": [
+      "Eris",
+      "eris"
     ]
   }
 ]
