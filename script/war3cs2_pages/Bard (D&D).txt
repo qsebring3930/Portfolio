@@ -1,0 +1,93 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Bard (D&D)
+|image=[[File:Bard (D&D).webp]]
+|category=D&D Hybrids
+|max=30
+|level=3630
+|access=Beta
+}}
+|skill1={{SkillInfo
+|name=Jack of All Trades
+|info=
+<p>
+Passive: Increase Health, Speed and Long Jump. Decrease Gravity and Visibility<br>
+Victim: Evade Weapon Damage
+</p>
+|trigger=Special
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Health|unit=HP|lvl1=3|lvl2=6|lvl3=9|lvl4=12|lvl5=15}}
+|line2={{LevelUpRow|field=Speed|lvl1=3.0%|lvl2=6.0%|lvl3=9.0%|lvl4=12.0%|lvl5=15.0%}}
+|line3={{LevelUpRow|field=Gravity|lvl1=2.0%|lvl2=4.0%|lvl3=6.0%|lvl4=8.0%|lvl5=10.0%}}
+|line4={{LevelUpRow|field=Jump|lvl1=3.0%|lvl2=6.0%|lvl3=9.0%|lvl4=12.0%|lvl5=15.0%}}
+|line5={{LevelUpRow|field=Invisibility|lvl1=3.0%|lvl2=6.0%|lvl3=9.0%|lvl4=12.0%|lvl5=15.0%}}
+|line6={{LevelUpRow|field=Evade Chance|lvl1=2.0%|lvl2=4.0%|lvl3=6.0%|lvl4=8.0%|lvl5=10.0%}}
+}}}}
+|skill2={{SkillInfo
+|name=Dissonant Whispers
+|info=
+Damage Random Enemy
+|trigger=Passive
+|damage=5
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Tick Rate|unit=sec.|lvl1=6.0|lvl2=5.0|lvl3=4.0|lvl4=3.0|lvl5=2.0}}
+}}}}
+|skill3={{SkillInfo
+|name=Bardic Inspiration
+|info=
+<p>
+Use an Inspiration Charge to Inspire an Ally<br>
+Gives the following effect depending on the first situation<br>
+Attack: Increase Weapon Damage<br>
+Victim: Nullify Magic Damage, Cleanse a DoT if source<br>
+Victim: Evade Weapon Damage<br>
+Debuff: Cleanse
+</p>
+|trigger=Ability1
+|target=Target_Ally
+|damage=+50.0%
+|duration=20
+|range=1000
+|extra=Will target yourself if no allies are alive
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Cooldown|unit=sec.|lvl1=9.0|lvl2=8.0|lvl3=7.0|lvl4=6.0|lvl5=5.0}}
+}}}}
+|skill4={{SkillInfo
+|name=Vicious Mockery
+|info=
+DoT and mess up vision
+|trigger=Ability2
+|target=Target_Enemy
+|damage=5
+|range=750
+|cooldown=15.0
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl1=1.0|lvl2=1.5|lvl3=2.0|lvl4=2.5|lvl5=3.0}}
+}}}}
+|skill5={{SkillInfo
+|name=Font of Inspiration
+|info=
+<p>
+Ability: Regain Inspiration Charges<br>
+Passive: Stand Still to Regain Inspiration Charges
+</p>
+|trigger=Ability3
+|target=Self
+|extra=Standing Still Accumulates
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Still Duration|unit=sec.|lvl1=14.0|lvl2=13.0|lvl3=12.0|lvl4=11.0|lvl5=10.0}}
+|line2={{LevelUpRow|field=Cooldown|unit=sec.|lvl1=42.0|lvl2=39.0|lvl3=36.0|lvl4=33.0|lvl5=30.0}}
+}}}}
+|skill6={{SkillInfo
+|name=Hypnotic Pattern
+|info=
+Force enemies to look at your distraction
+|trigger=Ultimate
+|target=Location
+|range=750
+|extra=Only affects enemies that can see the distraction
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl1=1.0|lvl2=2.0|lvl3=3.0|lvl4=4.0|lvl5=5.0}}
+}}}}
+}}
