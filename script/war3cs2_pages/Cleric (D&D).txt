@@ -1,0 +1,76 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Cleric (D&D)
+|image=[[File:Cleric (D&D).webp]]
+|category=D&D Hybrids
+|max=30
+|level=3630
+|access=Beta
+}}
+|skill1={{SkillInfo
+|name=Protector
+|info=
+<p>
+Passive: Increase Health<br>
+Victim: Decrease Weapon Damage
+</p>
+|trigger=Special
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Health|unit=HP|lvl1=10|lvl2=20|lvl3=30|lvl4=40|lvl5=50}}
+|line2={{LevelUpRow|field=Decrease|lvl1=5.0%|lvl2=10.0%|lvl3=15.0%|lvl4=20.0%|lvl5=25.0%}}
+}}}}
+|skill2={{SkillInfo
+|name=Bless
+|info=
+Evade Weapon Damage for Allies, Damage their target when they attack enemies
+|trigger=Aura
+|radius=500
+|extra=Does not apply to yourself
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Chance|lvl1=4.0%|lvl2=8.0%|lvl3=12.0%|lvl4=16.0%|lvl5=20.0%}}
+|line2={{LevelUpRow|field=Damage|lvl1=1|lvl2=2|lvl3=3|lvl4=4|lvl5=5}}
+}}}}
+|skill3={{SkillInfo
+|name=Cure Wounds
+|info=
+Knife Allies to heal them
+|trigger=Special
+|extra=Heal is based on Knife Damage
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Heal|lvl1=10.0%|lvl2=20.0%|lvl3=30.0%|lvl4=40.0%|lvl5=50.0%}}
+}}}}
+|skill4={{SkillInfo
+|name=Guiding Bolt
+|info=
+Decoy will follow enemies. Impact: Damage and Highlight
+|trigger=Special
+|duration=3
+|force=250
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Damage|lvl1=6|lvl2=12|lvl3=18|lvl4=24|lvl5=30}}
+}}}}
+|skill5={{SkillInfo
+|name=Sear Undead
+|info=
+<p>
+Aura: Track Enemies who are revived<br>
+Attack: Increase Damage to Targeted Enemies
+</p>
+|trigger=Special
+|radius=1000
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Increase|lvl1=10.0%|lvl2=20.0%|lvl3=30.0%|lvl4=40.0%|lvl5=50.0%}}
+}}}}
+|skill6={{SkillInfo
+|name=Shield of Faith
+|info=
+Protect Ally from damage, protect from Killing Shot
+|trigger=Ultimate
+|target=Target_Enemy
+|range=750
+|cooldown=30.0
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Shield|unit=HP|lvl1=10|lvl2=20|lvl3=30|lvl4=40|lvl5=50}}
+}}}}
+}}
