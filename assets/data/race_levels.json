@@ -213776,6 +213776,11 @@
     "chaos_knight": null
   },
   {
+    "player_name": "loser",
+    "last_seen": "2026-07-27T11:31:59.517000+00:00",
+    "undead_scourge": 0
+  },
+  {
     "player_name": "LostLight",
     "last_seen": "2026-06-21 15:48:51.814000",
     "queen_of_pain": null,
@@ -300034,7 +300039,7 @@
   },
   {
     "player_name": "Santa",
-    "last_seen": "2026-07-27T11:30:59.511000+00:00",
+    "last_seen": "2026-07-27T11:31:59.517000+00:00",
     "queen_of_pain": null,
     "adventurer": null,
     "thief_of_hours": null,
@@ -300155,7 +300160,7 @@
     "invoker": null,
     "spectre": null,
     "sars_zombie": null,
-    "apparition": 8,
+    "apparition": 9,
     "crazy_dave": 9,
     "chen": 21,
     "pikachu": null,
