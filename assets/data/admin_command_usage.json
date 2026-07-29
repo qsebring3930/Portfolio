@@ -27,7 +27,7 @@
   {
     "admin_name": "TwistedSquiddy",
     "command": "css_slay",
-    "command_count": 98
+    "command_count": 99
   },
   {
     "admin_name": "Lucky Prinny Overlord",
@@ -57,7 +57,7 @@
   {
     "admin_name": "TwistedSquiddy",
     "command": "css_wsmap",
-    "command_count": 32
+    "command_count": 34
   },
   {
     "admin_name": "TwistedSquiddy",
@@ -112,7 +112,7 @@
   {
     "admin_name": "Hexette",
     "command": "css_slap",
-    "command_count": 13
+    "command_count": 14
   },
   {
     "admin_name": "TwistedSquiddy",
@@ -265,6 +265,11 @@
     "command_count": 3
   },
   {
+    "admin_name": "TwistedSquiddy",
+    "command": "css_vote",
+    "command_count": 3
+  },
+  {
     "admin_name": "Hexette",
     "command": "css_addban",
     "command_count": 2
@@ -297,11 +302,6 @@
   {
     "admin_name": "Hexette",
     "command": "css_team",
-    "command_count": 2
-  },
-  {
-    "admin_name": "TwistedSquiddy",
-    "command": "css_vote",
     "command_count": 2
   },
   {
