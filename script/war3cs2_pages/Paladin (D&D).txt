@@ -1,0 +1,83 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Paladin (D&D)
+|image=[[File:Paladin (D&D).webp]]
+|category=D&D Hybrids
+|max=30
+|level=3630
+|access=Beta
+}}
+|skill1={{SkillInfo
+|name=Aura of Vitality
+|info=
+<p>
+Passive: Increase Health<br>
+Aura: Reduce Received Damage for Allies
+</p>
+|trigger=Special
+|damage=+25.0%
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Health|unit=HP|lvl1=10|lvl2=20|lvl3=30|lvl4=40|lvl5=50}}
+|line2={{LevelUpRow|field=Radius|lvl1=100.0|lvl2=200.0|lvl3=300.0|lvl4=400.0|lvl5=500.0}}
+}}}}
+|skill2={{SkillInfo
+|name=Divine Sense
+|info=
+On Magic Damage Highlight
+|trigger=Victim
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl1=1.0|lvl2=1.5|lvl3=2.0|lvl4=2.5|lvl5=3.0}}
+}}}}
+|skill3={{SkillInfo
+|name=Divine Smite
+|info=
+Your Next Attack will deal extra Magic Damage
+|trigger=Ability1
+|target=Self
+|cooldown=15.0
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Damage|lvl1=20.0%|lvl2=40.0%|lvl3=60.0%|lvl4=80.0%|lvl5=100.0%}}
+}}}}
+|skill4={{SkillInfo
+|name=Heroism
+|info=
+Cleanse and Increase Your Resistance and Immunity to certain Debuffs
+|trigger=Ability2
+|target=Target_Ally
+|range=750
+|cooldown=15.0
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl1=1.0|lvl2=2.0|lvl3=3.0|lvl4=4.0|lvl5=5.0}}
+}}}}
+|skill5={{SkillInfo
+|name=Lay on Hands
+|info=
+Heal allies you shoot
+|trigger=Special
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Health Pool|unit=HP|lvl1=100|lvl2=150|lvl3=200|lvl4=250|lvl5=300}}
+}}}}
+|skill6={{SkillInfo
+|name=Smite Spells
+|info=
+<p>
+Choose a Spell to empower 'Divinse Smite' giving it AoE effects<br>
+Searing: Silence Victim, Burn Enemies<br>
+Thunderous: Stun Victim, Bash Enemies<br>
+Wrathful: Turn Aim, Darken Screen<br>
+Shining: Blind<br>
+Banishing: Increase Damage if summoned or revived
+</p>
+|trigger=Ultimate
+|target=Self
+|radius=300
+|cooldown=5.0
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Searing Duration|unit=sec.|lvl1=1.0|lvl2=2.0|lvl3=3.0|lvl4=4.0|lvl5=5.0}}
+|line2={{LevelUpRow|field=Thunderous Duration|unit=sec.|lvl1=0.3|lvl2=0.6|lvl3=0.9|lvl4=1.2|lvl5=1.5}}
+|line3={{LevelUpRow|field=Wrathful Duration|unit=sec.|lvl1=0.5|lvl2=1.0|lvl3=1.5|lvl4=2.0|lvl5=2.5}}
+|line4={{LevelUpRow|field=Shining Duration|unit=sec.|lvl1=0.5|lvl2=1.0|lvl3=1.5|lvl4=2.0|lvl5=2.5}}
+|line5={{LevelUpRow|field=Banishing Damage|lvl1=20.0%|lvl2=40.0%|lvl3=60.0%|lvl4=80.0%|lvl5=100.0%}}
+}}}}
+}}
