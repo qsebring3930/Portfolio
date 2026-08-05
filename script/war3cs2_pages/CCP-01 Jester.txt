@@ -1,0 +1,57 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=CCP-01 Jester
+|image=[[File:CCP-01 Jester.webp]]
+|category=NSC-CCP
+|max=40
+|level=5150
+|access=Beta
+|weapons=
+Dual Berettas
+|restricted=All
+}}
+|skill1={{SkillInfo
+|name=Mechanical Prestidigitism
+|info=
+Return Bullets
+|trigger=Attack
+|quantity=7
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Chance|lvl1=6.0%|lvl2=8.0%|lvl3=10.0%|lvl4=12.0%|lvl5=14.0%|lvl6=16.0%|lvl7=18.0%|lvl8=20.0%}}
+}}}}
+|skill2={{SkillInfo
+|name=Mechanical Acrobatism
+|info=
+Increase Longjump
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Longjump|lvl1=15.0%|lvl2=20.0%|lvl3=25.0%|lvl4=30.0%|lvl5=35.0%|lvl6=40.0%|lvl7=45.0%|lvl8=50.0%}}
+}}}}
+|skill3={{SkillInfo
+|name=Bio-Enhanced System
+|info=
+Increase Speed
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Speed|lvl1=5.0%|lvl2=10.0%|lvl3=15.0%|lvl4=20.0%|lvl5=25.0%|lvl6=30.0%|lvl7=35.0%|lvl8=40.0%}}
+}}}}
+|skill4={{SkillInfo
+|name=NSC Bootboost MK.I
+|info=
+Decrease Gravity
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Gravity|lvl1=5.0%|lvl2=10.0%|lvl3=15.0%|lvl4=20.0%|lvl5=25.0%|lvl6=30.0%|lvl7=35.0%|lvl8=40.0%}}
+}}}}
+|skill5={{SkillInfo
+|name=N.Mako Core Upgrade
+|info=
+Increase Health
+|trigger=Passive
+|extra=Increase Between ... and ...
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Min Health|unit=HP|lvl1=5|lvl2=10|lvl3=15|lvl4=20|lvl5=25|lvl6=30|lvl7=35|lvl8=40}}
+|line2={{LevelUpRow|field=Max Health|unit=HP|lvl1=25|lvl2=30|lvl3=35|lvl4=40|lvl5=45|lvl6=50|lvl7=55|lvl8=60}}
+}}}}
+}}
