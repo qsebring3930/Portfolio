@@ -53,6 +53,15 @@
     "total_slap_damage": 10
   },
   {
+    "player_name": "Santa Claus",
+    "slapped_count": 8,
+    "aliases": [
+      "santa",
+      "Santa Claus"
+    ],
+    "total_slap_damage": 199
+  },
+  {
     "player_name": "Cum Kisses",
     "slapped_count": 3,
     "aliases": [
@@ -343,15 +352,6 @@
     "total_slap_damage": 0
   },
   {
-    "player_name": "Santa Claus",
-    "slapped_count": 1,
-    "aliases": [
-      "santa",
-      "Santa Claus"
-    ],
-    "total_slap_damage": 99
-  },
-  {
     "player_name": "squid",
     "slapped_count": 1,
     "aliases": [
@@ -399,6 +399,30 @@
     "slapped_count": 1,
     "aliases": [
       "blues"
+    ],
+    "total_slap_damage": 0
+  },
+  {
+    "player_name": "syfers",
+    "slapped_count": 1,
+    "aliases": [
+      "syfers"
+    ],
+    "total_slap_damage": 0
+  },
+  {
+    "player_name": "karp",
+    "slapped_count": 1,
+    "aliases": [
+      "karp"
+    ],
+    "total_slap_damage": 0
+  },
+  {
+    "player_name": "delrow",
+    "slapped_count": 1,
+    "aliases": [
+      "delrow"
     ],
     "total_slap_damage": 0
   }

@@ -99,6 +99,15 @@
     ]
   },
   {
+    "player_name": "Santa Claus",
+    "slain_count": 4,
+    "aliases": [
+      "sant",
+      "santa",
+      "Santa Claus"
+    ]
+  },
+  {
     "player_name": "BOT Gen_Acid's Healer",
     "slain_count": 3,
     "aliases": [
@@ -280,15 +289,6 @@
     "slain_count": 2,
     "aliases": [
       "squid"
-    ]
-  },
-  {
-    "player_name": "Santa Claus",
-    "slain_count": 2,
-    "aliases": [
-      "sant",
-      "santa",
-      "Santa Claus"
     ]
   },
   {
@@ -635,6 +635,14 @@
     "aliases": [
       "Terlian",
       "terlian"
+    ]
+  },
+  {
+    "player_name": "☠ Cry Havoc ☠",
+    "slain_count": 1,
+    "aliases": [
+      "cry",
+      "☠ Cry Havoc ☠"
     ]
   }
 ]
