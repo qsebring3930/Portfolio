@@ -1,0 +1,67 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Influencer
+|image=[[File:Influencer.webp]]
+|category=Human
+|max=30
+|level=445
+|access=Beta
+|passive=
+<p>
+Shopmenu: Disabled
+</p>
+}}
+|skill1={{SkillInfo
+|name=Stream Routine
+|info=
+Gain an 'Ankh of Reincarnation'
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Chance|unit=%|lvl1=20|lvl2=40|lvl3=60|lvl4=80|lvl5=100}}
+}}}}
+|skill2={{SkillInfo
+|name=Creator Code
+|info=
+Gain Money when people buy items
+|trigger=Special
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Money|lvl1=2.0%|lvl2=4.0%|lvl3=6.0%|lvl4=8.0%|lvl5=10.0%}}
+}}}}
+|skill3={{SkillInfo
+|name=Open PO Box
+|info=
+Gain Item when people buy items
+|trigger=Special
+|extra=Gain a Random Item if you already own the item
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Chance|unit=%|lvl1=20|lvl2=40|lvl3=60|lvl4=80|lvl5=100}}
+}}}}
+|skill4={{SkillInfo
+|name=Unboxing Review
+|info=
+Gain a Random Item
+|trigger=Ability1
+|target=Self
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Cooldown|unit=sec.|lvl1=27.0|lvl2=24.0|lvl3=21.0|lvl4=18.0|lvl5=15.0}}
+}}}}
+|skill5={{SkillInfo
+|name=Streamer Loot
+|info=
+Get a Second Item on 'Open PO Box' or 'Unboxing Review'
+|trigger=Special
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Chance|unit=%|lvl1=5|lvl2=10|lvl3=15|lvl4=20|lvl5=25}}
+}}}}
+|skill6={{SkillInfo
+|name=Donate to Charity
+|info=
+Share your money with your allies, gain XP
+|trigger=Ultimate
+|target=Allies
+|cooldown=30.0
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Convert|lvl1=1.0%|lvl2=2.0%|lvl3=3.0%|lvl4=4.0%|lvl5=5.0%}}
+}}}}
+}}
