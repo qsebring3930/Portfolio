@@ -15465,7 +15465,7 @@
   },
   {
     "player_name": "^TheGoldenOne",
-    "last_seen": "2026-08-09T18:01:16.582000+00:00",
+    "last_seen": "2026-08-09T18:02:16.694000+00:00",
     "queen_of_pain": null,
     "adventurer": null,
     "thief_of_hours": null,
@@ -15496,7 +15496,7 @@
     "kanji_tatsumi": null,
     "lifestealer": null,
     "pro_cooker": null,
-    "dread_lord": null,
+    "dread_lord": 32,
     "venus": null,
     "orcish_horde": null,
     "treant_protector": null,
@@ -25601,7 +25601,7 @@
   },
   {
     "player_name": "Al Bundy Poke Hi",
-    "last_seen": "2026-08-09T18:01:16.582000+00:00",
+    "last_seen": "2026-08-09T18:02:16.694000+00:00",
     "undead_scourge": 15,
     "saboteur": 4,
     "human_alliance": 22,
@@ -25622,7 +25622,7 @@
     "dread_lord": 10,
     "dark_ranger": 1,
     "magikarp": 0,
-    "necromancer": 5
+    "necromancer": 6
   },
   {
     "player_name": "Alan",
@@ -48203,7 +48203,7 @@
   },
   {
     "player_name": "Blinkz",
-    "last_seen": "2026-08-09T18:01:16.582000+00:00",
+    "last_seen": "2026-08-09T18:02:16.694000+00:00",
     "queen_of_pain": null,
     "adventurer": null,
     "thief_of_hours": null,
@@ -48904,7 +48904,7 @@
   },
   {
     "player_name": "blues",
-    "last_seen": "2026-08-09T18:01:16.582000+00:00",
+    "last_seen": "2026-08-09T18:02:16.694000+00:00",
     "queen_of_pain": 32,
     "adventurer": null,
     "thief_of_hours": 30,
@@ -97497,7 +97497,7 @@
   },
   {
     "player_name": "DircheBag",
-    "last_seen": "2026-08-09T18:01:16.582000+00:00",
+    "last_seen": "2026-08-09T18:02:16.694000+00:00",
     "undead_scourge": 5,
     "human_alliance": 10,
     "night_elf": 6,
@@ -111771,7 +111771,7 @@
   },
   {
     "player_name": "elektro",
-    "last_seen": "2026-08-09T18:01:16.582000+00:00",
+    "last_seen": "2026-08-09T18:02:16.694000+00:00",
     "queen_of_pain": null,
     "adventurer": null,
     "thief_of_hours": null,
@@ -113157,7 +113157,7 @@
   },
   {
     "player_name": "Emfeva",
-    "last_seen": "2026-08-09T18:01:16.582000+00:00",
+    "last_seen": "2026-08-09T18:02:16.694000+00:00",
     "queen_of_pain": 11,
     "adventurer": null,
     "thief_of_hours": null,
@@ -144935,7 +144935,7 @@
   },
   {
     "player_name": "Grand Daddy Camper",
-    "last_seen": "2026-08-09T18:01:16.582000+00:00",
+    "last_seen": "2026-08-09T18:02:16.694000+00:00",
     "death_knight": 47,
     "zergling": 48,
     "ultralisk": 23,
@@ -154683,7 +154683,7 @@
   },
   {
     "player_name": "HaTer8",
-    "last_seen": "2026-08-09T18:01:16.582000+00:00",
+    "last_seen": "2026-08-09T18:02:16.694000+00:00",
     "blood_golem": 3,
     "murloc_tidehunter": 31,
     "murloc_tidecaller": 33,
@@ -159602,7 +159602,7 @@
   },
   {
     "player_name": "hKj",
-    "last_seen": "2026-08-09T18:01:16.582000+00:00",
+    "last_seen": "2026-08-09T18:02:16.694000+00:00",
     "queen_of_pain": null,
     "adventurer": null,
     "thief_of_hours": null,
@@ -247295,7 +247295,7 @@
   },
   {
     "player_name": "MythicGpL",
-    "last_seen": "2026-08-09T18:01:16.582000+00:00",
+    "last_seen": "2026-08-09T18:02:16.694000+00:00",
     "queen_of_pain": null,
     "adventurer": null,
     "thief_of_hours": null,
@@ -257850,7 +257850,7 @@
   },
   {
     "player_name": "ObeseBatman",
-    "last_seen": "2026-08-09T18:01:16.582000+00:00",
+    "last_seen": "2026-08-09T18:02:16.694000+00:00",
     "sorceress": 11,
     "logickal": 10,
     "spell_breaker": 18,
@@ -257861,7 +257861,7 @@
   },
   {
     "player_name": "ObsidianStorm",
-    "last_seen": "2026-08-09T18:01:16.582000+00:00",
+    "last_seen": "2026-08-09T18:02:16.694000+00:00",
     "queen_of_pain": null,
     "adventurer": null,
     "thief_of_hours": null,
@@ -263145,7 +263145,7 @@
   },
   {
     "player_name": "p3rm",
-    "last_seen": "2026-08-09T18:01:16.582000+00:00",
+    "last_seen": "2026-08-09T18:02:16.694000+00:00",
     "undead_scourge": 10,
     "orcish_horde": 19,
     "dread_lord": 16,
@@ -263282,7 +263282,8 @@
     "prinny": 0,
     "high_templar": 10,
     "unkn0wn_s0ld13r": 1,
-    "troll_berserker": 3
+    "troll_berserker": 3,
+    "timeshifter": 1
   },
   {
     "player_name": "p4ddy",
@@ -281898,7 +281899,7 @@
   },
   {
     "player_name": "Queeferia",
-    "last_seen": "2026-08-09T18:01:16.582000+00:00",
+    "last_seen": "2026-08-09T18:02:16.694000+00:00",
     "dread_lord": 12,
     "dwarven_rifleman": 2,
     "growlithe": 0,
@@ -326221,7 +326222,7 @@
   },
   {
     "player_name": "smoke1",
-    "last_seen": "2026-08-09T18:01:16.582000+00:00",
+    "last_seen": "2026-08-09T18:02:16.694000+00:00",
     "queen_of_pain": null,
     "adventurer": 11,
     "thief_of_hours": null,
@@ -326347,7 +326348,7 @@
     "chen": null,
     "pikachu": 11,
     "tech_goblin": 10,
-    "lucky_prinny_overlord": 13,
+    "lucky_prinny_overlord": 14,
     "druid_of_the_talon": null,
     "dragon_knight": null,
     "headcrab": null,
@@ -358052,7 +358053,7 @@
   },
   {
     "player_name": "TheLeftWall",
-    "last_seen": "2026-08-09T18:01:16.582000+00:00",
+    "last_seen": "2026-08-09T18:02:16.694000+00:00",
     "queen_of_pain": null,
     "adventurer": null,
     "thief_of_hours": null,
@@ -371991,7 +371992,7 @@
   },
   {
     "player_name": "Vaxis",
-    "last_seen": "2026-08-09T18:01:16.582000+00:00",
+    "last_seen": "2026-08-09T18:02:16.694000+00:00",
     "queen_of_pain": 31,
     "adventurer": null,
     "thief_of_hours": 23,
@@ -410438,7 +410439,7 @@
   },
   {
     "player_name": "✪$tar",
-    "last_seen": "2026-08-09T18:01:16.582000+00:00",
+    "last_seen": "2026-08-09T18:02:16.694000+00:00",
     "queen_of_pain": null,
     "adventurer": null,
     "thief_of_hours": null,
@@ -410784,7 +410785,7 @@
     "ranger_d_d": 31,
     "bard_d_d": 30,
     "cleric_d_d": 29,
-    "paladin_d_d": 31,
+    "paladin_d_d": 32,
     "ccp_01_jester": 39
   },
   {
@@ -410801,7 +410802,7 @@
   },
   {
     "player_name": "✿ S m ツ e y",
-    "last_seen": "2026-08-09T18:01:16.582000+00:00",
+    "last_seen": "2026-08-09T18:02:16.694000+00:00",
     "queen_of_pain": null,
     "adventurer": null,
     "thief_of_hours": null,
