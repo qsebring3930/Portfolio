@@ -1,0 +1,90 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Artificer (D&D)
+|image=[[File:Artificer (D&D).webp]]
+|category=D&D Hybrids
+|max=30
+|level=3640
+|access=Beta
+}}
+|skill1={{SkillInfo
+|name=Infuse Item
+|info=
+<p>
+Right Click with your knife on a weapon to empower it with a random buff<br>
+Repeating Shot: Increase Attack Speed on firing<br>
+Radiant Weapon: Blind And Deal Extra Damage<br>
+Mind Sharpener: Reduce Cooldowns<br>
+Propulsion Armor: Evade Knife Attacks And Push Back attackers<br>
+Resistant Armor: Decrease Received Damage Taken
+</p>
+|trigger=Special
+|range=300
+|extra=
+<p>
+Radiant: Chance 50% - Damage Between 1 and ...<br>
+Propulsion: Force 300
+</p>
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Repeating Chance|unit=%|lvl1=6|lvl2=12|lvl3=18|lvl4=24|lvl5=30}}
+|line2={{LevelUpRow|field=Radiant Blind Duration|unit=sec.|lvl1=0.2|lvl2=0.3|lvl3=0.4|lvl4=0.6|lvl5=0.8}}
+|line3={{LevelUpRow|field=Radiant Max Damage|lvl1=2|lvl2=4|lvl3=6|lvl4=8|lvl5=10}}
+|line4={{LevelUpRow|field=Cooldown Reduction|lvl1=6.0%|lvl2=12.0%|lvl3=18.0%|lvl4=24.0%|lvl5=30.0%}}
+|line5={{LevelUpRow|field=Propulsion Cooldown|unit=sec.|lvl1=9.0|lvl2=8.0|lvl3=7.0|lvl4=6.0|lvl5=5.0}}
+|line6={{LevelUpRow|field=Decrease|lvl1=5.0%|lvl2=10.0%|lvl3=15.0%|lvl4=20.0%|lvl5=25.0%}}
+}}}}
+|skill2={{SkillInfo
+|name=Right Tool for the Job
+|info=
+Gain Weapon with Random Infuse Buff
+|trigger=Ability1
+|cooldown=10.0
+|extra=Weapons are chosen at random on spawn
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Quantity|lvl1=1|lvl2=2|lvl3=3|lvl4=4|lvl5=5}}
+}}}}
+|skill3={{SkillInfo
+|name=Magical Tinkering
+|info=
+Increase Speed when saving hostage, Shield the Bomb
+|trigger=Special
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=HP|unit=HP|lvl1=30|lvl2=60|lvl3=90|lvl4=120|lvl5=150}}
+|line2={{LevelUpRow|field=Speed|lvl1=5.0%|lvl2=10.0%|lvl3=15.0%|lvl4=20.0%|lvl5=25.0%}}
+}}}}
+|skill4={{SkillInfo
+|name=Expeditious Retreat
+|info=
+Increase Speed
+|trigger=Victim
+|duration=3
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Speed|lvl1=10.0%|lvl2=20.0%|lvl3=30.0%|lvl4=40.0%|lvl5=50.0%}}
+}}}}
+|skill5={{SkillInfo
+|name=Catapult
+|info=
+Throw everything around them at the Enemy
+|trigger=Ability2
+|target=Target_Enemy
+|range=750
+|radius=500
+|cooldown=15.0
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Damage|lvl1=3|lvl2=6|lvl3=9|lvl4=12|lvl5=15}}
+}}}}
+|skill6={{SkillInfo
+|name=Heat Metal
+|info=
+Heat up the enemy's weapon, causing damage for holding it
+|trigger=Ultimate
+|target=Target_Enemy
+|duration=6
+|range=750
+|cooldown=20.0
+|extra=Duration is halved on none guns
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Damage|lvl1=2|lvl2=4|lvl3=6|lvl4=8|lvl5=10}}
+}}}}
+}}
