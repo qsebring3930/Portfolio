@@ -59933,7 +59933,7 @@
   },
   {
     "player_name": "Busta",
-    "last_seen": "2026-08-13T01:50:23.682000+00:00",
+    "last_seen": "2026-08-13T01:51:23.783000+00:00",
     "queen_of_pain": 20,
     "adventurer": null,
     "thief_of_hours": null,
@@ -114519,7 +114519,7 @@
   },
   {
     "player_name": "Eric",
-    "last_seen": "2026-08-13T01:50:23.682000+00:00",
+    "last_seen": "2026-08-13T01:51:23.783000+00:00",
     "queen_of_pain": null,
     "adventurer": null,
     "thief_of_hours": null,
@@ -124257,8 +124257,9 @@
   },
   {
     "player_name": "FiRe ReSisTaNt",
-    "last_seen": "2026-08-13T01:49:21.131000+00:00",
-    "undead_scourge": 0
+    "last_seen": "2026-08-13T01:51:23.783000+00:00",
+    "undead_scourge": 0,
+    "saboteur": 0
   },
   {
     "player_name": "Fire Sniper",
@@ -204134,6 +204135,11 @@
     "chaos_knight": null
   },
   {
+    "player_name": "LaNdSpeEd",
+    "last_seen": "2026-08-13T01:51:23.783000+00:00",
+    "saboteur": 0
+  },
+  {
     "player_name": "Laniakeabel",
     "last_seen": "2026-08-13T01:50:23.682000+00:00",
     "crypt_lord": 32,
@@ -232842,14 +232848,15 @@
   },
   {
     "player_name": "Meads",
-    "last_seen": "2026-08-13T01:49:21.131000+00:00",
+    "last_seen": "2026-08-13T01:51:23.783000+00:00",
     "undead_scourge": 12,
     "orcish_horde": 26,
     "saboteur": 3,
     "murloc_tidehunter": 0,
     "bluegill_warrior": 0,
     "human_alliance": 18,
-    "necromancer": 21
+    "necromancer": 21,
+    "dwarven_rifleman": 0
   },
   {
     "player_name": "medicine",
@@ -261139,7 +261146,7 @@
   },
   {
     "player_name": "Orrb",
-    "last_seen": "2026-08-13T01:49:21.131000+00:00",
+    "last_seen": "2026-08-13T01:51:23.783000+00:00",
     "voidwalker": 16,
     "druid_of_the_claw": 11,
     "error": 19,
@@ -261200,7 +261207,8 @@
     "ninja": 21,
     "tech_goblin": 22,
     "queen_bumblenade": 17,
-    "sars_zombie": 21
+    "sars_zombie": 21,
+    "exodus": 32
   },
   {
     "player_name": "Osama bin Fallen",
@@ -368795,7 +368803,7 @@
   },
   {
     "player_name": "TwistedSquiddy",
-    "last_seen": "2026-08-13T01:50:23.682000+00:00",
+    "last_seen": "2026-08-13T01:51:23.783000+00:00",
     "queen_of_pain": null,
     "adventurer": null,
     "thief_of_hours": null,
@@ -372358,7 +372366,7 @@
   },
   {
     "player_name": "UtterContempt",
-    "last_seen": "2026-08-13T01:50:23.682000+00:00",
+    "last_seen": "2026-08-13T01:51:23.783000+00:00",
     "undead_scourge": 32,
     "human_alliance": 33,
     "cookie_the_cook": 0,
@@ -373102,7 +373110,7 @@
   },
   {
     "player_name": "Vaxis",
-    "last_seen": "2026-08-13T01:49:21.131000+00:00",
+    "last_seen": "2026-08-13T01:51:23.783000+00:00",
     "queen_of_pain": 31,
     "adventurer": null,
     "thief_of_hours": 23,
