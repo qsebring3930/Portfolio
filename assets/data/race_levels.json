@@ -12415,7 +12415,7 @@
   },
   {
     "player_name": "[FR] Major Patrick",
-    "last_seen": "2026-08-14T12:09:37.203000+00:00",
+    "last_seen": "2026-08-14T12:12:38.372000+00:00",
     "sorceress": 39,
     "ghoul": 33,
     "saboteur": 7,
@@ -80857,6 +80857,11 @@
     "chaos_knight": null
   },
   {
+    "player_name": "CosmicReaper",
+    "last_seen": "2026-08-14T12:12:38.372000+00:00",
+    "undead_scourge": 4
+  },
+  {
     "player_name": "cotu",
     "last_seen": "2026-08-12T06:36:10.415000+00:00",
     "undead_scourge": 0
@@ -81955,7 +81960,7 @@
   },
   {
     "player_name": "CreativeFrags",
-    "last_seen": "2026-08-14T12:09:37.203000+00:00",
+    "last_seen": "2026-08-14T12:12:38.372000+00:00",
     "saboteur": 4,
     "undead_scourge": 16,
     "necromancer": 19,
@@ -136531,13 +136536,13 @@
   },
   {
     "player_name": "Gareisser",
-    "last_seen": "2026-08-14T12:09:37.203000+00:00",
+    "last_seen": "2026-08-14T12:12:38.372000+00:00",
     "dark_ranger": 10,
     "mountain_king": 5,
     "priest": 27,
     "saboteur": 5,
     "achoo_herald_of_spring": 2,
-    "faerie_dragon": 8
+    "faerie_dragon": 9
   },
   {
     "player_name": "Gator needs his gat",
@@ -275371,7 +275376,7 @@
   },
   {
     "player_name": "Pkh",
-    "last_seen": "2026-08-14T12:11:38.361000+00:00",
+    "last_seen": "2026-08-14T12:12:38.372000+00:00",
     "tech_goblin": 39,
     "orcish_horde": 42,
     "slowpoke": 2,
@@ -322838,8 +322843,9 @@
   },
   {
     "player_name": "Sk'o",
-    "last_seen": "2026-08-14T12:09:37.203000+00:00",
-    "undead_scourge": 4
+    "last_seen": "2026-08-14T12:12:38.372000+00:00",
+    "undead_scourge": 4,
+    "gargoyle": 1
   },
   {
     "player_name": "skabadadeedobop",
@@ -395591,7 +395597,7 @@
   },
   {
     "player_name": "zenworm",
-    "last_seen": "2026-08-14T12:09:37.203000+00:00",
+    "last_seen": "2026-08-14T12:12:38.372000+00:00",
     "queen_of_pain": null,
     "adventurer": null,
     "thief_of_hours": null,
@@ -395757,7 +395763,7 @@
     "dryad": 34,
     "flonne": null,
     "wisp": null,
-    "witch_doctor_dota": 0,
+    "witch_doctor_dota": 1,
     "vending_machine": null,
     "windranger": null,
     "assault_soldier": null,
