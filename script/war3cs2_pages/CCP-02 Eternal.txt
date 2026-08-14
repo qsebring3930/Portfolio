@@ -1,0 +1,66 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=CCP-02 Eternal
+|image=[[File:CCP-02 Eternal.webp]]
+|category=NSC-CCP
+|max=48
+|level=5185
+|access=Beta
+|team=1
+}}
+|skill1={{SkillInfo
+|name=N.Mako Nanobot System
+|info=
+Regen Health
+|trigger=Passive
+|extra=Heal Between ... and ... HP
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Min Heal|unit=HP|lvl1=0.8|lvl2=1.0|lvl3=1.2|lvl4=1.5|lvl5=1.8|lvl6=2.0|lvl7=2.2|lvl8=2.5}}
+|line2={{LevelUpRow|field=Max Heal|unit=HP|lvl1=1.5|lvl2=2.0|lvl3=2.5|lvl4=3.0|lvl5=3.5|lvl6=4.0|lvl7=4.5|lvl8=5.0}}
+}}}}
+|skill2={{SkillInfo
+|name=AC Recycling Process
+|info=
+Heal
+|trigger=Kill
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Heal|unit=HP|lvl1=9|lvl2=12|lvl3=15|lvl4=18|lvl5=21|lvl6=24|lvl7=27|lvl8=30}}
+}}}}
+|skill3={{SkillInfo
+|name=N.Mako Enhanced Shells
+|info=
+Increase Gun Damage
+|trigger=Attack
+|chance=35
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Increase|lvl1=12.0%|lvl2=15.0%|lvl3=18.0%|lvl4=21.0%|lvl5=24.0%|lvl6=27.0%|lvl7=30.0%|lvl8=33.0%}}
+}}}}
+|skill4={{SkillInfo
+|name=Autonomous Evolution
+|info=
+Increase Max Health Every Spawn
+|trigger=Passive
+|extra=Health Caps at 300HP
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Chance|unit=%|lvl1=85|lvl2=80|lvl3=75|lvl4=70|lvl5=65|lvl6=60|lvl7=55|lvl8=50}}
+|line2={{LevelUpRow|field=Health|unit=HP|lvl1=3|lvl2=4|lvl3=5|lvl4=6|lvl5=7|lvl6=8|lvl7=9|lvl8=10}}
+}}}}
+|skill5={{SkillInfo
+|name=NSC Bootboost MK.II
+|info=
+Decrease Gravity
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Gravity|lvl1=11.0%|lvl2=18.0%|lvl3=25.0%|lvl4=32.0%|lvl5=39.0%|lvl6=46.0%|lvl7=53.0%|lvl8=60.0%}}
+}}}}
+|skill6={{SkillInfo
+|name=Bio-Mechanical Restoration
+|info=
+Respawn
+|trigger=Death
+|extra=Respawn Between 4.0 and 6.5 sec.
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Chance|unit=%|lvl1=8|lvl2=16|lvl3=24|lvl4=32|lvl5=40|lvl6=48|lvl7=56|lvl8=65}}
+}}}}
+}}
