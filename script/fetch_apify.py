@@ -97,6 +97,28 @@ def get_valid_race_columns():
 
 VALID_RACE_COLUMNS = get_valid_race_columns()
 
+def make_player_race_row(player_name):
+    row = {
+        "player_name": player_name,
+        "last_seen": None,
+    }
+
+    for race_col in sorted(VALID_RACE_COLUMNS):
+        row[race_col] = None
+
+    return row
+
+
+def ensure_all_race_columns(row):
+    """
+    Backfills missing race fields on existing player rows without
+    changing races that already have recorded values.
+    """
+    for race_col in sorted(VALID_RACE_COLUMNS):
+        row.setdefault(race_col, None)
+
+    return row
+
 
 def resolve_race_column(race_name):
     race_name = str(race_name or "").strip()
@@ -208,16 +230,19 @@ def update_stats_json(item, state):
     for player in players:
         player_name = player["player_name"]
         race_col = resolve_race_column(player["race_name"])
-
-        playtime_row = race_playtime.setdefault(player_name, {
-            "player_name": player_name,
-            "last_seen": None,
-        })
-
-        level_row = race_levels.setdefault(player_name, {
-            "player_name": player_name,
-            "last_seen": None,
-        })
+        playtime_row = race_playtime.setdefault(
+            player_name,
+            make_player_race_row(player_name),
+        )
+        
+        level_row = race_levels.setdefault(
+            player_name,
+            make_player_race_row(player_name),
+        )
+        
+        # Also repair players created before all race columns were initialized.
+        ensure_all_race_columns(playtime_row)
+        ensure_all_race_columns(level_row)
 
         playtime_row[race_col] = int(playtime_row.get(race_col) or 0) + SNAPSHOT_MINUTES
         playtime_row["last_seen"] = timestamp
@@ -261,11 +286,16 @@ def retrieve_messages(channel_id, limit=100):
 
     return messages
 
-
 def load_state():
     map_rows = load_json(DATA_DIR / "map_playtime.json", [])
     race_playtime_rows = load_json(DATA_DIR / "race_playtime.json", [])
     race_level_rows = load_json(DATA_DIR / "race_levels.json", [])
+
+    for row in race_playtime_rows:
+        ensure_all_race_columns(row)
+
+    for row in race_level_rows:
+        ensure_all_race_columns(row)
 
     processed_snapshots = set(load_json(
         DATA_DIR / "processed_snapshots.json",
