@@ -1,0 +1,87 @@
+{{RaceDetail
+|type=Champions
+|info={{RaceInfo
+|title=Scout Rogue (D&D)
+|image=[[File:Scout Rogue (D&D).webp]]
+|category=Champions
+|max=30
+|unlocks=
+<p>
+
+</p>
+|restricted=
+R8 Revolver<br>
+SCAR-20<br>
+G3SG1
+}}
+|skill1={{SkillInfo
+|name=Superior Mobility
+|info=
+<p>
+Passive: Increase Speed, Longjump<br>
+Victim: Evade Weapon Damage
+</p>
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Speed|lvl1=6.0%|lvl2=12.0%|lvl3=18.0%|lvl4=24.0%|lvl5=30.0%}}
+|line2={{LevelUpRow|field=LongJump|lvl1=20.0%|lvl2=22.5%|lvl3=25.0%|lvl4=27.5%|lvl5=30.0%}}
+|line3={{LevelUpRow|field=Chance|lvl1=5.0%|lvl2=10.0%|lvl3=15.0%|lvl4=20.0%|lvl5=25.0%}}
+}}}}
+|skill2={{SkillInfo
+|name=Sneak Attack
+|info=
+Increase Weapon Damage if they have not damaged you yet
+|trigger=Attack
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Increase|lvl1=108.0%|lvl2=116.0%|lvl3=124.0%|lvl4=132.0%|lvl5=140.0%}}
+}}}}
+|skill3={{SkillInfo
+|name=Survivalist
+|info=
+<p>
+Passive: Get Armor and Tools, Regen Health<br>
+Victim: Decrease Weapon Damage on Full Health<br>
+Kill: Increase Regen
+</p>
+|trigger=Passive
+|damage=+50.0%
+|quantity=3
+|duration=3
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Heal|unit=HP|lvl1=0.5|lvl2=1.0|lvl3=1.5|lvl4=2.0|lvl5=2.5}}
+}}}}
+|skill4={{SkillInfo
+|name=Cunning Action
+|info=
+<p>
+Effect based on weapon<br>
+Knife: Decrease Visibility<br>
+Pistol: Refill Clip, next shot deals extra damage<br>
+Other: Refill Clip
+</p>
+|trigger=Ability1
+|target=Self
+|duration=6
+|cooldown=20.0
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Visibility|lvl1=82.0%|lvl2=64.0%|lvl3=46.0%|lvl4=28.0%|lvl5=10.0%}}
+|line2={{LevelUpRow|field=Clip|lvl1=20.0%|lvl2=40.0%|lvl3=60.0%|lvl4=80.0%|lvl5=100.0%}}
+|line3={{LevelUpRow|field=Increase|lvl1=108.0%|lvl2=116.0%|lvl3=124.0%|lvl4=132.0%|lvl5=140.0%}}
+}}}}
+|skill5={{SkillInfo
+|name=Skirmisher
+|info=
+Reset Sneak Attack out of Combat
+|trigger=Special
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Cooldown|unit=sec.|lvl1=14.0|lvl2=13.0|lvl3=12.0|lvl4=11.0|lvl5=10.0}}
+}}}}
+|skill6={{SkillInfo
+|name=Uncanny Dodge
+|info=
+Evade Weapon Damage
+|trigger=Victim
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Cooldown|unit=sec.|lvl1=9.0|lvl2=8.0|lvl3=7.0|lvl4=6.0|lvl5=5.0}}
+}}}}
+}}
