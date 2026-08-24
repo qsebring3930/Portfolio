@@ -1,0 +1,71 @@
+{{RaceDetail
+|type=Champions
+|info={{RaceInfo
+|title=Inquisitive Rogue (D&D)
+|image=[[File:Inquisitive Rogue (D&D).webp]]
+|category=Champions
+|max=30
+|unlocks=
+<p>
+
+</p>
+|restricted=
+R8 Revolver<br>
+SCAR-20<br>
+G3SG1
+}}
+|skill1={{SkillInfo
+|name=Expertise
+|info=
+Increase Health, Speed
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Health|unit=HP|lvl1=2|lvl2=4|lvl3=6|lvl4=8|lvl5=10}}
+|line2={{LevelUpRow|field=Speed|lvl1=5.0%|lvl2=10.0%|lvl3=15.0%|lvl4=20.0%|lvl5=25.0%}}
+}}}}
+|skill2={{SkillInfo
+|name=Sneak Attack
+|info=
+Increase Weapon Damage if they have not damaged you yet
+|trigger=Attack
+|extra=Double effect with pistol
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Increase|lvl1=4.0%|lvl2=8.0%|lvl3=12.0%|lvl4=16.0%|lvl5=20.0%}}
+}}}}
+|skill3={{SkillInfo
+|name=Ear for Deceit
+|info=
+Expose Sneaky players
+|trigger=Aura
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Radius|lvl1=350.0|lvl2=450.0|lvl3=550.0|lvl4=650.0|lvl5=750.0}}
+}}}}
+|skill4={{SkillInfo
+|name=Eye for Detail
+|info=
+Reveal Enemies you can see, Highlight them if they were invisible
+|trigger=Ability1
+|duration=5
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Radius|lvl1=600.0|lvl2=700.0|lvl3=800.0|lvl4=900.0|lvl5=1000.0}}
+|line2={{LevelUpRow|field=Highlight Duration|unit=sec.|lvl1=0.5|lvl2=1.0|lvl3=1.5|lvl4=2.0|lvl5=2.5}}
+}}}}
+|skill5={{SkillInfo
+|name=Steady Eye
+|info=
+Stand Still to gain True Damage
+|trigger=Special
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl1=4.5|lvl2=4.0|lvl3=3.5|lvl4=3.0|lvl5=2.5}}
+}}}}
+|skill6={{SkillInfo
+|name=Uncanny Dodge
+|info=
+Evade Weapon Damage
+|trigger=Victim
+|duration=3
+|extra=Only Resets out of Combat
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Cooldown|unit=sec.|lvl1=9.0|lvl2=8.0|lvl3=7.0|lvl4=6.0|lvl5=5.0}}
+}}}}
+}}
