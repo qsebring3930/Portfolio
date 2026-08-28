@@ -1,0 +1,81 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=CCP-04 Timeslip
+|image=[[File:CCP-04 Timeslip.webp]]
+|category=NSC-CCP
+|max=56
+|level=5205
+|access=Beta
+|team=1
+}}
+|skill1={{SkillInfo
+|name=Bio-Mechanical Decelerator
+|info=
+Decrease Speed, Stacks
+|trigger=Attack
+|quantity=5
+|duration=5
+|buffs=
+<p>
+Speed: -10%
+</p>
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Chance|lvl1=95.0%|lvl2=90.0%|lvl3=85.0%|lvl4=80.0%|lvl5=75.0%|lvl6=70.0%|lvl7=65.0%|lvl8=60.0%}}
+}}}}
+|skill2={{SkillInfo
+|name=TS-V2 G.Point Swap
+|info=
+<p>
+Swap Position with Random Enemy after short time.<br>
+Gain Kill XP if they die after swap
+</p>
+|trigger=Ability1
+|target=AoE_Self
+|duration=5
+|radius=1500
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Kill XP Duration|unit=sec.|lvl1=2.0|lvl2=4.0|lvl3=6.0|lvl4=8.0|lvl5=10.0|lvl6=12.0|lvl7=14.0|lvl8=16.0}}
+}}}}
+|skill3={{SkillInfo
+|name=Enhanced Velocity
+|info=
+Increase Speed
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Speed|lvl1=9.0%|lvl2=12.0%|lvl3=15.0%|lvl4=18.0%|lvl5=21.0%|lvl6=24.0%|lvl7=27.0%|lvl8=30.0%}}
+}}}}
+|skill4={{SkillInfo
+|name=N.Mako Vitality Core
+|info=
+Increase Health
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=HP|unit=HP|lvl1=3|lvl2=6|lvl3=9|lvl4=12|lvl5=15|lvl6=18|lvl7=21|lvl8=25}}
+}}}}
+|skill5={{SkillInfo
+|name=TS-1A Chrono Shift
+|info=
+Evade Weapon Damage And Teleport to Spawn
+|trigger=Ability2
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl1=5.0|lvl2=6.0|lvl3=7.0|lvl4=8.0|lvl5=9.0|lvl6=10.0|lvl7=11.0|lvl8=12.0}}
+|line2={{LevelUpRow|field=Cooldown|unit=sec.|lvl1=48.0|lvl2=44.0|lvl3=40.0|lvl4=36.0|lvl5=32.0|lvl6=28.0|lvl7=24.0|lvl8=20.0}}
+}}}}
+|skill6={{SkillInfo
+|name=NSC-T Bootboost MK. I
+|info=
+Decrease Gravity
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Gravity|lvl1=15.0%|lvl2=20.0%|lvl3=25.0%|lvl4=30.0%|lvl5=35.0%|lvl6=40.0%|lvl7=45.0%|lvl8=50.0%}}
+}}}}
+|skill7={{SkillInfo
+|name=Alpha Convergence
+|info=
+Teleport To Spawn
+|trigger=Ultimate
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Cooldown|unit=sec.|lvl1=37.5|lvl2=35.0|lvl3=32.5|lvl4=30.0|lvl5=27.5|lvl6=25.0|lvl7=22.5|lvl8=20.0}}
+}}}}
+}}
