@@ -1,0 +1,109 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Carl (DCC)
+|image=[[File:Carl (DCC).webp]]
+|category=Dungeon Crawler
+|max=35
+|level=5845
+|access=Beta
+|weapons=
+Knife<br>
+Grenade<br>
+Smoke Grenade
+|restricted=All
+|team=1
+}}
+|skill1={{SkillInfo
+|name=Goblin Dynamite!
+|info=
+Grenades are volitile and unstable
+|trigger=Special
+|extra=
+<p>
+20% Chance it explodes on Bounce. Explosion Damage and Radius varies<br>
+Detonate Time is random between -50% and 50%.
+</p>
+|levelup={{LevelUpInfo|levels=5|zero=1
+|line1={{LevelUpRow|field=Explosion Radius Reduction|lvl0=10.0%|lvl1=13.0%|lvl2=16.0%|lvl3=19.0%|lvl4=22.0%|lvl5=25.0%}}
+|line2={{LevelUpRow|field=Explosion Radius Increase|lvl0=10.0%|lvl1=20.0%|lvl2=30.0%|lvl3=40.0%|lvl4=50.0%|lvl5=60.0%}}
+|line3={{LevelUpRow|field=Explosion Damage Reduction|lvl0=10.0%|lvl1=13.0%|lvl2=16.0%|lvl3=19.0%|lvl4=22.0%|lvl5=25.0%}}
+|line4={{LevelUpRow|field=Explosion Damage Increase|lvl0=15.0%|lvl1=20.0%|lvl2=25.0%|lvl3=30.0%|lvl4=35.0%|lvl5=40.0%}}
+}}}}
+|skill2={{SkillInfo
+|name=War Gauntlet of the exalted Grull
+|info=
+Increase Knife Damage, Chance to Stun
+|trigger=Attack
+|chance=10
+|duration=1
+|levelup={{LevelUpInfo|levels=5|zero=1
+|line1={{LevelUpRow|field=Increase|lvl0=5.0%|lvl1=10.0%|lvl2=15.0%|lvl3=20.0%|lvl4=25.0%|lvl5=30.0%}}
+}}}}
+|skill3={{SkillInfo
+|name=Nightgaunt Cloak of Stoutness
+|info=
+Increase HP, Slow Resistance, Bash Immunity
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=5|zero=1
+|line1={{LevelUpRow|field=Health|unit=HP|lvl0=10|lvl1=12|lvl2=14|lvl3=16|lvl4=18|lvl5=20}}
+|line2={{LevelUpRow|field=Resistance|lvl0=90.0%|lvl1=80.0%|lvl2=70.0%|lvl3=60.0%|lvl4=50.0%|lvl5=}}
+|line3={{LevelUpRow|field=Immunity|unit=%|lvl0=10|lvl1=15|lvl2=20|lvl3=25|lvl4=30|lvl5=35}}
+}}}}
+|skill4={{SkillInfo
+|name=Pedicure Kit of the Sylph
+|info=
+<p>
+Passive: Increase Speed, Fall Damage Resistance<br>
+Damage Enemies you stomp
+</p>
+|trigger=Special
+|extra=Damage is based on momentum
+|levelup={{LevelUpInfo|levels=5|zero=1
+|line1={{LevelUpRow|field=Speed|lvl0=5.0%|lvl1=6.0%|lvl2=7.0%|lvl3=8.0%|lvl4=9.0%|lvl5=10.0%}}
+|line2={{LevelUpRow|field=Resistance|lvl0=50.0%|lvl1=60.0%|lvl2=70.0%|lvl3=80.0%|lvl4=90.0%|lvl5=100.0%}}
+|line3={{LevelUpRow|field=Damage|lvl0=10|lvl1=15|lvl2=20|lvl3=25|lvl4=30|lvl5=35}}
+}}}}
+|skill5={{SkillInfo
+|name=Carl's Jug'O'Boom!
+|info=
+Throw Molotov, explodes on Impact
+|trigger=Ability1
+|cooldown=15.0
+|levelup={{LevelUpInfo|levels=5|zero=1
+|line1={{LevelUpRow|field=Explosion Damage|lvl0=10|lvl1=18|lvl2=26|lvl3=34|lvl4=42|lvl5=50}}
+|line2={{LevelUpRow|field=Explosion Radius|lvl0=125.0|lvl1=150.0|lvl2=175.0|lvl3=200.0|lvl4=225.0|lvl5=250.0}}
+}}}}
+|skill6={{SkillInfo
+|name=Scavenger's Daughter Patch
+|info=
+Increase Knife Damage if enough Knife kills made
+|trigger=Attack
+|extra=Kill count increases each time
+|levelup={{LevelUpInfo|levels=5|zero=1
+|line1={{LevelUpRow|field=Damage Increase|lvl0=200.0%|lvl1=220.0%|lvl2=240.0%|lvl3=260.0%|lvl4=280.0%|lvl5=300.0%}}
+}}}}
+|skill7={{SkillInfo
+|name=Carl's Doomsday Scenario
+|info=
+Delayed Random Magical Explosion
+|trigger=Death
+|required=
+<p>
+Goblin Dynamite! - Level 3<br>
+War Gauntlet of the exalted Grull - Level 3<br>
+Nightgaunt Cloak of Stoutness - Level 3<br>
+Pedicure Kit of the Sylph - Level 3<br>
+Carl's Jug'O'Boom! - Level 3<br>
+Scavenger's Daughter Patch - Level 3
+</p>
+|explrad=1000
+|extra=
+<p>
+Explodes between 10.0 and 30.0 secs.<br>
+Explosion Damage between 300 and 600
+</p>
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Chance|unit=%|lvl1=8|lvl2=11|lvl3=14|lvl4=17|lvl5=20}}
+}}}}
+}}
