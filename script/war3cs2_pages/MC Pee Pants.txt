@@ -1,0 +1,73 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=MC Pee Pants
+|image=[[File:MC Pee Pants.webp]]
+|category=ATHF
+|max=30
+|level=2110
+|access=Beta
+}}
+|skill1={{SkillInfo
+|name=I Want Candy
+|info=
+Decrease Weapon Damage
+|trigger=Victim
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Decrease|lvl1=5.0%|lvl2=10.0%|lvl3=15.0%|lvl4=20.0%|lvl5=25.0%}}
+}}}}
+|skill2={{SkillInfo
+|name=Web Trap
+|info=
+Trap: Bash Enemies
+|trigger=Ability1
+|target=Location
+|duration=5
+|range=300
+|radius=300
+|cooldown=10.0
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Quantity|lvl1=1|lvl2=2|lvl3=3|lvl4=4|lvl5=5}}
+}}}}
+|skill3={{SkillInfo
+|name=Stomach Acid
+|info=
+Damage and DoT
+|trigger=Ability2
+|target=Target_Enemy
+|range=600
+|cooldown=15.0
+|extra=Damage: 20 - DoT: 5
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl1=2.0|lvl2=3.0|lvl3=4.0|lvl4=5.0|lvl5=6.0}}
+}}}}
+|skill4={{SkillInfo
+|name=Worm
+|info=
+Spawn as Small Fast Knifer
+|trigger=Special
+|buffs=
+<p>
+Speed: +20%<br>
+Size: -50%
+</p>
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Chance|unit=%|lvl1=5|lvl2=10|lvl3=15|lvl4=20|lvl5=25}}
+}}}}
+|skill5={{SkillInfo
+|name=Vampire
+|info=
+Steal Health
+|trigger=Attack
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Steal|lvl1=4.0%|lvl2=8.0%|lvl3=12.0%|lvl4=16.0%|lvl5=20.0%}}
+}}}}
+|skill6={{SkillInfo
+|name=Fly Wings
+|info=
+Toggle Flight
+|trigger=Ultimate
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Cooldown|unit=sec.|lvl1=30.0|lvl2=24.0|lvl3=18.0|lvl4=12.0|lvl5=6.0}}
+}}}}
+}}
