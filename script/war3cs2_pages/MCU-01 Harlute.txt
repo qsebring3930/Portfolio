@@ -1,0 +1,83 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=MCU-01 Harlute
+|image=[[File:MCU-01 Harlute.webp]]
+|category=NSC-MCU
+|max=56
+|level=5345
+|access=Beta
+|weapons=
+Knife
+|restricted=All
+|team=1
+}}
+|skill1={{SkillInfo
+|name=N.Mako Stabilizators
+|info=
+Increase Speed
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=8|zero=1
+|line1={{LevelUpRow|field=Speed|lvl0=20.0%|lvl1=25.0%|lvl2=30.0%|lvl3=35.0%|lvl4=40.0%|lvl5=45.0%|lvl6=50.0%|lvl7=55.0%|lvl8=60.0%}}
+}}}}
+|skill2={{SkillInfo
+|name=Force Shield
+|info=
+Evade Weapon Damage
+|trigger=Victim
+|levelup={{LevelUpInfo|levels=8|zero=1
+|line1={{LevelUpRow|field=Chance|lvl0=9.0%|lvl1=12.0%|lvl2=15.0%|lvl3=18.0%|lvl4=21.0%|lvl5=24.0%|lvl6=27.0%|lvl7=30.0%|lvl8=33.0%}}
+}}}}
+|skill3={{SkillInfo
+|name=Gravitational Modulator
+|info=
+Toggle Gravity Field
+|trigger=Ability1
+|target=Self
+|buffs=
+<p>
+Low Grav: -55%<br>
+High Grav: +65%
+</p>
+|cooldown=3.0
+|levelup={{LevelUpInfo|levels=8|zero=1
+|line1={{LevelUpRow|field=Radius|lvl0=350.0|lvl1=400.0|lvl2=450.0|lvl3=500.0|lvl4=550.0|lvl5=600.0|lvl6=650.0|lvl7=700.0|lvl8=750.0}}
+}}}}
+|skill4={{SkillInfo
+|name=Gravity Distortion
+|info=
+Impale
+|trigger=Attack
+|force=300
+|levelup={{LevelUpInfo|levels=8|zero=1
+|line1={{LevelUpRow|field=Chance|lvl0=20.0%|lvl1=25.0%|lvl2=30.0%|lvl3=35.0%|lvl4=40.0%|lvl5=45.0%|lvl6=50.0%|lvl7=55.0%|lvl8=60.0%}}
+}}}}
+|skill5={{SkillInfo
+|name=NSC-D.Matter Hoverboots
+|info=
+Decrease Gravity
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=8|zero=1
+|line1={{LevelUpRow|field=Gravity|lvl0=80.0%|lvl1=75.0%|lvl2=70.0%|lvl3=65.0%|lvl4=60.0%|lvl5=55.0%|lvl6=50.0%|lvl7=45.0%|lvl8=40.0%}}
+}}}}
+|skill6={{SkillInfo
+|name=Force Pulsar
+|info=
+Increase Knife Damage
+|trigger=Attack
+|damage=+100.0%
+|levelup={{LevelUpInfo|levels=8|zero=1
+|line1={{LevelUpRow|field=Chance|lvl0=4.0%|lvl1=6.0%|lvl2=8.0%|lvl3=10.0%|lvl4=12.0%|lvl5=14.0%|lvl6=16.0%|lvl7=18.0%|lvl8=20.0%}}
+}}}}
+|skill7={{SkillInfo
+|name=Zero Gravity
+|info=
+Impale and Bash in the air
+|trigger=Ultimate
+|duration=4
+|force=350
+|cooldown=40.0
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Radius|lvl1=150.0|lvl2=180.0|lvl3=210.0|lvl4=240.0|lvl5=270.0|lvl6=300.0|lvl7=330.0|lvl8=350.0}}
+}}}}
+}}
