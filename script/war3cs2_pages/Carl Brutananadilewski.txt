@@ -1,0 +1,65 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Carl Brutananadilewski
+|image=[[File:Carl Brutananadilewski.webp]]
+|category=ATHF
+|max=25
+|level=2110
+|access=Beta
+|weapons=
+Sawed-Off<br>
+Knife
+|restricted=All
+}}
+|skill1={{SkillInfo
+|name=Considerably Strong
+|info=
+Increase Weapon Damage, Decrease Health
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Increase|lvl1=7.0%|lvl2=14.0%|lvl3=21.0%|lvl4=28.0%|lvl5=35.0%}}
+|line2={{LevelUpRow|field=Health|unit=HP|lvl1=-7|lvl2=-14|lvl3=-21|lvl4=-28|lvl5=-35}}
+}}}}
+|skill2={{SkillInfo
+|name=Drunk Driver
+|info=
+Randomly shakes your screen
+|trigger=Special
+|duration=1
+|levelup={{LevelUpInfo|levels=5|zero=1
+|line1={{LevelUpRow|field=Chance|unit=%|lvl0=55|lvl1=45|lvl2=35|lvl3=25|lvl4=15|lvl5=5}}
+}}}}
+|skill3={{SkillInfo
+|name=Criminal Record
+|info=
+Highlight strongest Enemy, On Failure Highlight yourself to that Enemy
+|trigger=Ability1
+|duration=5
+|cooldown=20.0
+|extra=Chance is reduced on final enemy
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Chance|unit=%|lvl1=35|lvl2=45|lvl3=55|lvl4=65|lvl5=75}}
+}}}}
+|skill4={{SkillInfo
+|name=Cocaine Addict
+|info=
+Increase Speed
+|trigger=Ability2
+|duration=7.5
+|cooldown=10.0
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Speed|lvl1=10.0%|lvl2=20.0%|lvl3=30.0%|lvl4=40.0%|lvl5=50.0%}}
+}}}}
+|skill5={{SkillInfo
+|name=Explosive Sawed-Off
+|info=
+Explosive bullets
+|trigger=Ultimate
+|damage=5
+|duration=5
+|radius=100
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Cooldown|unit=sec.|lvl1=30.0|lvl2=25.0|lvl3=20.0|lvl4=15.0|lvl5=10.0}}
+}}}}
+}}
