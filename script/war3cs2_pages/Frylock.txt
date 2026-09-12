@@ -1,0 +1,68 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=Frylock
+|image=[[File:Frylock.webp]]
+|category=ATHF
+|max=25
+|level=2110
+|access=Beta
+|weapons=
+No Weapon
+|restricted=All
+}}
+|skill1={{SkillInfo
+|name=Levitation
+|info=
+<p>
+Passive: Increase Gravity Resistance and Movement Skill Immunity<br>
+Victim: Evade Knife Damage
+</p>
+|trigger=Special
+|levelup={{LevelUpInfo|levels=5|zero=1
+|line1={{LevelUpRow|field=Resistance|lvl0=15.0%|lvl1=30.0%|lvl2=45.0%|lvl3=60.0%|lvl4=75.0%|lvl5=90.0%}}
+|line2={{LevelUpRow|field=Immunity|unit=%|lvl0=15|lvl1=30|lvl2=45|lvl3=60|lvl4=75|lvl5=90}}
+|line3={{LevelUpRow|field=Chance|lvl0=11.0%|lvl1=22.0%|lvl2=33.0%|lvl3=44.0%|lvl4=55.0%|lvl5=66.0%}}
+}}}}
+|skill2={{SkillInfo
+|name=Frydar
+|info=
+Highlight Knifers
+|trigger=Aura
+|levelup={{LevelUpInfo|levels=5|zero=1
+|line1={{LevelUpRow|field=Radius|lvl0=250.0|lvl1=350.0|lvl2=450.0|lvl3=550.0|lvl4=650.0|lvl5=750.0}}
+}}}}
+|skill3={{SkillInfo
+|name=Multi-Ray Eye Beams
+|info=
+Use Charge to Damage, Rapid fire if Fully Charged
+|trigger=Ability1
+|damage=10
+|tickrate=5
+|range=1500
+|cooldown=2.0
+|levelup={{LevelUpInfo|levels=5|zero=1
+|line1={{LevelUpRow|field=Max Beams|lvl0=1|lvl1=2|lvl2=3|lvl3=4|lvl4=5|lvl5=6}}
+}}}}
+|skill4={{SkillInfo
+|name=Extinguish
+|info=
+Cleanse
+|trigger=Ability2
+|target=Target_Ally
+|range=500
+|extra=Applies to self if no target
+|levelup={{LevelUpInfo|levels=5|zero=1
+|line1={{LevelUpRow|field=Cooldown|unit=sec.|lvl0=30.0|lvl1=28.0|lvl2=26.0|lvl3=24.0|lvl4=22.0|lvl5=20.0}}
+}}}}
+|skill5={{SkillInfo
+|name=Fry Launcher
+|info=
+Throw Fry, Impact: Damage and Impale
+|trigger=Ultimate
+|damage=33
+|force=1.5
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Cooldown|unit=sec.|lvl1=20.0|lvl2=17.5|lvl3=15.0|lvl4=12.5|lvl5=10.0}}
+}}}}
+}}
