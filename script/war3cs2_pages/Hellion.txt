@@ -1,0 +1,62 @@
+{{RaceDetail
+|type=Champions
+|info={{RaceInfo
+|title=Hellion
+|image=[[File:Hellion.webp]]
+|category=Champions
+|max=25
+|unlocks=
+<p>
+
+</p>
+|weapons=
+Knife
+|restricted=All
+|team=1
+}}
+|skill1={{SkillInfo
+|name=Distant Shadows
+|info=
+Visibility based on Distance
+|trigger=Special
+|levelup={{LevelUpInfo|levels=5|zero=1
+|line1={{LevelUpRow|field=Chance|unit=%|lvl0=36|lvl1=42|lvl2=48|lvl3=54|lvl4=60|lvl5=66}}
+}}}}
+|skill2={{SkillInfo
+|name=Adrenaline
+|info=
+Increase Speed
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=5|zero=1
+|line1={{LevelUpRow|field=Speed|lvl0=11.0%|lvl1=22.0%|lvl2=33.0%|lvl3=44.0%|lvl4=55.0%|lvl5=66.0%}}
+}}}}
+|skill3={{SkillInfo
+|name=Infused Blades
+|info=
+Increase Knife Damage
+|trigger=Attack
+|damage=+100.0%
+|levelup={{LevelUpInfo|levels=5|zero=1
+|line1={{LevelUpRow|field=Chance|lvl0=10.0%|lvl1=15.0%|lvl2=20.0%|lvl3=25.0%|lvl4=30.0%|lvl5=35.0%}}
+}}}}
+|skill4={{SkillInfo
+|name=Anisopterous
+|info=
+Decrease Gravity
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=5|zero=1
+|line1={{LevelUpRow|field=Gravity|lvl0=20.0%|lvl1=28.0%|lvl2=36.0%|lvl3=44.0%|lvl4=52.0%|lvl5=60.0%}}
+}}}}
+|skill5={{SkillInfo
+|name=Volatilize
+|info=
+Toggle to Be Unarmed, Invisible and Leap for a short time to be Bashed
+|trigger=Ultimate
+|tickrate=0.3
+|range=200
+|force=1
+|cooldown=1.0
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl1=1.2|lvl2=1.5|lvl3=1.8|lvl4=2.1|lvl5=2.4}}
+}}}}
+}}
