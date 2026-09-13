@@ -1,0 +1,64 @@
+{{RaceDetail
+|type=Champions
+|info={{RaceInfo
+|title=Vagabond
+|image=[[File:Vagabond.webp]]
+|category=Champions
+|max=25
+|unlocks=
+<p>
+
+</p>
+|weapons=
+SSG 08<br>
+Knife
+|restricted=All
+|team=1
+}}
+|skill1={{SkillInfo
+|name=Flickering Shadows
+|info=
+Fade in and out of Visibility
+|trigger=Passive
+|extra=Tick Visible: 0.2 sec., Tick Invisible: 0.3 sec.
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Chance|unit=%|lvl1=34|lvl2=42|lvl3=50|lvl4=58|lvl5=66}}
+}}}}
+|skill2={{SkillInfo
+|name=Adrenaline
+|info=
+Increase Speed
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Speed|lvl1=8.0%|lvl2=16.0%|lvl3=24.0%|lvl4=32.0%|lvl5=40.0%}}
+}}}}
+|skill3={{SkillInfo
+|name=Pinpoint Weakness
+|info=
+Increase Weapon Damage
+|trigger=Attack
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Chance|lvl1=9.0%|lvl2=18.0%|lvl3=27.0%|lvl4=36.0%|lvl5=45.0%}}
+|line2={{LevelUpRow|field=Increase|lvl1=10.0%|lvl2=15.0%|lvl3=20.0%|lvl4=25.0%|lvl5=30.0%}}
+}}}}
+|skill4={{SkillInfo
+|name=Anisopterous
+|info=
+Decrease Gravity
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Gravity|lvl1=16.0%|lvl2=22.0%|lvl3=28.0%|lvl4=34.0%|lvl5=40.0%}}
+}}}}
+|skill5={{SkillInfo
+|name=Volatilize
+|info=
+Toggle to Be Unarmed, Invisible and Leap for a short time to be Bashed
+|trigger=Ultimate
+|tickrate=0.3
+|range=200
+|force=1
+|cooldown=5.0
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Duration|unit=sec.|lvl1=1.2|lvl2=1.5|lvl3=1.8|lvl4=2.1|lvl5=2.4}}
+}}}}
+}}
