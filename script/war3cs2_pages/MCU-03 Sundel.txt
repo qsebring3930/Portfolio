@@ -1,0 +1,75 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=MCU-03 Sundel
+|image=[[File:MCU-03 Sundel.webp]]
+|category=NSC-MCU
+|max=48
+|level=5435
+|access=Beta
+|weapons=
+MP9<br>
+Knife
+|restricted=All
+|team=1
+}}
+|skill1={{SkillInfo
+|name=N.Mako Nanobot System
+|info=
+Regen Health
+|trigger=Passive
+|extra=Health goes up to 200
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Heal|unit=F1|lvl1=HP|lvl2=HP|lvl3=HP|lvl4=HP|lvl5=HP|lvl6=HP|lvl7=HP|lvl8=HP}}
+}}}}
+|skill2={{SkillInfo
+|name=Rippling Convulsion
+|info=
+Random Changing Speed
+|trigger=Passive
+|extra=Changes Randomly every 3.0 to 6.0 secs.
+|levelup={{LevelUpInfo|levels=8|zero=1
+|line1={{LevelUpRow|field=Speed|lvl0=-10%|lvl1=0% to -15%|lvl2=15% to -15%|lvl3=25% to -15%|lvl4=35% to -15%|lvl5=45% to -15%|lvl6=55% to -15%|lvl7=65% to -15%|lvl8=65% to 0%}}
+}}}}
+|skill3={{SkillInfo
+|name=Spectral Ray
+|info=
+Darken Vision Enemy, Heal Ally
+|trigger=Attack
+|damage=60.0%
+|duration=1.5
+|radius=400
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Chance|lvl1=4.0%|lvl2=8.0%|lvl3=12.0%|lvl4=16.0%|lvl5=20.0%|lvl6=24.0%|lvl7=28.0%|lvl8=32.0%}}
+}}}}
+|skill4={{SkillInfo
+|name=NSC-S Vitality Conduit
+|info=
+Allies gain Lifesteal
+|trigger=Ability1
+|target=AoE_Self
+|damage=15.0%
+|duration=7.5
+|cooldown=20.0
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Radius|lvl1=225.0|lvl2=300.0|lvl3=375.0|lvl4=450.0|lvl5=525.0|lvl6=600.0|lvl7=675.0|lvl8=750.0}}
+}}}}
+|skill5={{SkillInfo
+|name=NSC-D.Matter Hoverboots
+|info=
+Decrease Gravity
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Gravity|lvl1=12.0%|lvl2=16.0%|lvl3=20.0%|lvl4=24.0%|lvl5=28.0%|lvl6=32.0%|lvl7=36.0%|lvl8=40.0%}}
+}}}}
+|skill6={{SkillInfo
+|name=Ethereal Flare
+|info=
+Heal Allies
+|trigger=Ultimate
+|target=AoE_Self
+|cooldown=20.0
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Heal|unit=HP|lvl1=7|lvl2=11|lvl3=15|lvl4=19|lvl5=23|lvl6=27|lvl7=31|lvl8=35}}
+}}}}
+}}
