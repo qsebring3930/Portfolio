@@ -92,16 +92,16 @@
   },
   {
     "player_name": "Vinnyx1",
-    "curse_count": 904,
-    "curse_messages": 866,
+    "curse_count": 914,
+    "curse_messages": 876,
     "matched_words": [
       {
         "word": "fuck",
-        "count": 451
+        "count": 457
       },
       {
         "word": "wtf",
-        "count": 236
+        "count": 237
       },
       {
         "word": "shit",
@@ -109,7 +109,7 @@
       },
       {
         "word": "damn",
-        "count": 74
+        "count": 75
       },
       {
         "word": "ass",
@@ -129,7 +129,7 @@
       },
       {
         "word": "bitch",
-        "count": 3
+        "count": 5
       },
       {
         "word": "asshole",
@@ -206,20 +206,20 @@
   },
   {
     "player_name": "Grand Daddy Camper",
-    "curse_count": 672,
-    "curse_messages": 628,
+    "curse_count": 687,
+    "curse_messages": 641,
     "matched_words": [
       {
         "word": "fuck",
-        "count": 390
+        "count": 397
       },
       {
         "word": "shit",
-        "count": 116
+        "count": 119
       },
       {
         "word": "ass",
-        "count": 70
+        "count": 74
       },
       {
         "word": "damn",
@@ -262,6 +262,10 @@
         "count": 2
       },
       {
+        "word": "bastard",
+        "count": 2
+      },
+      {
         "word": "hella",
         "count": 1
       },
@@ -272,17 +276,13 @@
       {
         "word": "bullshit",
         "count": 1
-      },
-      {
-        "word": "bastard",
-        "count": 1
       }
     ]
   },
   {
     "player_name": "Samus Aran",
-    "curse_count": 605,
-    "curse_messages": 568,
+    "curse_count": 606,
+    "curse_messages": 569,
     "matched_words": [
       {
         "word": "fuck",
@@ -294,7 +294,7 @@
       },
       {
         "word": "damn",
-        "count": 87
+        "count": 88
       },
       {
         "word": "wtf",
@@ -368,8 +368,8 @@
   },
   {
     "player_name": "Nyan Sub-Death",
-    "curse_count": 569,
-    "curse_messages": 551,
+    "curse_count": 570,
+    "curse_messages": 552,
     "matched_words": [
       {
         "word": "damn",
@@ -381,7 +381,7 @@
       },
       {
         "word": "shit",
-        "count": 83
+        "count": 84
       },
       {
         "word": "cum",
@@ -798,8 +798,8 @@
   },
   {
     "player_name": "NoLimit ( ͡° ʖ̯ ͡°)",
-    "curse_count": 243,
-    "curse_messages": 231,
+    "curse_count": 245,
+    "curse_messages": 233,
     "matched_words": [
       {
         "word": "damn",
@@ -807,7 +807,7 @@
       },
       {
         "word": "fuck",
-        "count": 45
+        "count": 46
       },
       {
         "word": "shit",
@@ -819,7 +819,7 @@
       },
       {
         "word": "hell",
-        "count": 24
+        "count": 25
       },
       {
         "word": "ass",
@@ -1591,6 +1591,53 @@
     ]
   },
   {
+    "player_name": "neighbourhood alcoholic",
+    "curse_count": 139,
+    "curse_messages": 135,
+    "matched_words": [
+      {
+        "word": "fuck",
+        "count": 43
+      },
+      {
+        "word": "shit",
+        "count": 29
+      },
+      {
+        "word": "damn",
+        "count": 28
+      },
+      {
+        "word": "wtf",
+        "count": 17
+      },
+      {
+        "word": "ass",
+        "count": 10
+      },
+      {
+        "word": "hell",
+        "count": 6
+      },
+      {
+        "word": "cum",
+        "count": 2
+      },
+      {
+        "word": "bullshit",
+        "count": 2
+      },
+      {
+        "word": "asshole",
+        "count": 1
+      },
+      {
+        "word": "bitch",
+        "count": 1
+      }
+    ]
+  },
+  {
     "player_name": "Reeses",
     "curse_count": 136,
     "curse_messages": 131,
@@ -1692,53 +1739,6 @@
       },
       {
         "word": "asshole",
-        "count": 1
-      }
-    ]
-  },
-  {
-    "player_name": "neighbourhood alcoholic",
-    "curse_count": 132,
-    "curse_messages": 128,
-    "matched_words": [
-      {
-        "word": "fuck",
-        "count": 41
-      },
-      {
-        "word": "shit",
-        "count": 28
-      },
-      {
-        "word": "damn",
-        "count": 26
-      },
-      {
-        "word": "wtf",
-        "count": 16
-      },
-      {
-        "word": "ass",
-        "count": 9
-      },
-      {
-        "word": "hell",
-        "count": 6
-      },
-      {
-        "word": "cum",
-        "count": 2
-      },
-      {
-        "word": "bullshit",
-        "count": 2
-      },
-      {
-        "word": "asshole",
-        "count": 1
-      },
-      {
-        "word": "bitch",
         "count": 1
       }
     ]
@@ -3541,6 +3541,57 @@
     ]
   },
   {
+    "player_name": "blues",
+    "curse_count": 51,
+    "curse_messages": 50,
+    "matched_words": [
+      {
+        "word": "shit",
+        "count": 20
+      },
+      {
+        "word": "fuck",
+        "count": 10
+      },
+      {
+        "word": "cum",
+        "count": 6
+      },
+      {
+        "word": "piss",
+        "count": 3
+      },
+      {
+        "word": "wtf",
+        "count": 3
+      },
+      {
+        "word": "ass",
+        "count": 2
+      },
+      {
+        "word": "hell",
+        "count": 2
+      },
+      {
+        "word": "cock",
+        "count": 2
+      },
+      {
+        "word": "dick",
+        "count": 1
+      },
+      {
+        "word": "pussy",
+        "count": 1
+      },
+      {
+        "word": "dogshit",
+        "count": 1
+      }
+    ]
+  },
+  {
     "player_name": "Brice",
     "curse_count": 50,
     "curse_messages": 46,
@@ -3661,57 +3712,6 @@
       },
       {
         "word": "bitch",
-        "count": 1
-      }
-    ]
-  },
-  {
-    "player_name": "blues",
-    "curse_count": 49,
-    "curse_messages": 48,
-    "matched_words": [
-      {
-        "word": "shit",
-        "count": 19
-      },
-      {
-        "word": "fuck",
-        "count": 9
-      },
-      {
-        "word": "cum",
-        "count": 6
-      },
-      {
-        "word": "piss",
-        "count": 3
-      },
-      {
-        "word": "wtf",
-        "count": 3
-      },
-      {
-        "word": "ass",
-        "count": 2
-      },
-      {
-        "word": "hell",
-        "count": 2
-      },
-      {
-        "word": "cock",
-        "count": 2
-      },
-      {
-        "word": "dick",
-        "count": 1
-      },
-      {
-        "word": "pussy",
-        "count": 1
-      },
-      {
-        "word": "dogshit",
         "count": 1
       }
     ]
@@ -4261,6 +4261,33 @@
     ]
   },
   {
+    "player_name": "Bull3T OrgY | MuziK H!gH",
+    "curse_count": 44,
+    "curse_messages": 44,
+    "matched_words": [
+      {
+        "word": "damn",
+        "count": 28
+      },
+      {
+        "word": "wtf",
+        "count": 9
+      },
+      {
+        "word": "fuck",
+        "count": 3
+      },
+      {
+        "word": "shit",
+        "count": 2
+      },
+      {
+        "word": "ass",
+        "count": 2
+      }
+    ]
+  },
+  {
     "player_name": "HighbornHellest",
     "curse_count": 43,
     "curse_messages": 39,
@@ -4304,33 +4331,6 @@
       {
         "word": "hell",
         "count": 1
-      }
-    ]
-  },
-  {
-    "player_name": "Bull3T OrgY | MuziK H!gH",
-    "curse_count": 43,
-    "curse_messages": 43,
-    "matched_words": [
-      {
-        "word": "damn",
-        "count": 27
-      },
-      {
-        "word": "wtf",
-        "count": 9
-      },
-      {
-        "word": "fuck",
-        "count": 3
-      },
-      {
-        "word": "shit",
-        "count": 2
-      },
-      {
-        "word": "ass",
-        "count": 2
       }
     ]
   },
@@ -4624,6 +4624,41 @@
     ]
   },
   {
+    "player_name": "SoulDragon",
+    "curse_count": 38,
+    "curse_messages": 36,
+    "matched_words": [
+      {
+        "word": "fuck",
+        "count": 18
+      },
+      {
+        "word": "shit",
+        "count": 6
+      },
+      {
+        "word": "wtf",
+        "count": 4
+      },
+      {
+        "word": "damn",
+        "count": 4
+      },
+      {
+        "word": "cum",
+        "count": 3
+      },
+      {
+        "word": "ass",
+        "count": 2
+      },
+      {
+        "word": "badass",
+        "count": 1
+      }
+    ]
+  },
+  {
     "player_name": "Xeno",
     "curse_count": 37,
     "curse_messages": 36,
@@ -4729,36 +4764,40 @@
     ]
   },
   {
-    "player_name": "SoulDragon",
+    "player_name": "Orrb",
     "curse_count": 36,
-    "curse_messages": 34,
+    "curse_messages": 35,
     "matched_words": [
       {
+        "word": "damn",
+        "count": 11
+      },
+      {
+        "word": "ass",
+        "count": 9
+      },
+      {
         "word": "fuck",
-        "count": 17
+        "count": 6
       },
       {
         "word": "shit",
         "count": 6
       },
       {
-        "word": "wtf",
-        "count": 4
+        "word": "bastard",
+        "count": 1
       },
       {
-        "word": "cum",
-        "count": 3
+        "word": "asshole",
+        "count": 1
       },
       {
-        "word": "damn",
-        "count": 3
+        "word": "hell",
+        "count": 1
       },
       {
-        "word": "ass",
-        "count": 2
-      },
-      {
-        "word": "badass",
+        "word": "dick",
         "count": 1
       }
     ]
@@ -4834,41 +4873,33 @@
     ]
   },
   {
-    "player_name": "Orrb",
+    "player_name": "Waylong",
     "curse_count": 35,
-    "curse_messages": 34,
+    "curse_messages": 33,
     "matched_words": [
       {
+        "word": "fuck",
+        "count": 13
+      },
+      {
         "word": "damn",
-        "count": 11
+        "count": 8
       },
       {
         "word": "ass",
-        "count": 9
-      },
-      {
-        "word": "fuck",
-        "count": 6
-      },
-      {
-        "word": "shit",
         "count": 5
       },
       {
-        "word": "bastard",
-        "count": 1
+        "word": "wtf",
+        "count": 5
       },
       {
-        "word": "asshole",
-        "count": 1
-      },
-      {
-        "word": "hell",
-        "count": 1
+        "word": "shit",
+        "count": 2
       },
       {
         "word": "dick",
-        "count": 1
+        "count": 2
       }
     ]
   },
@@ -4947,37 +4978,6 @@
       {
         "word": "pussy",
         "count": 1
-      }
-    ]
-  },
-  {
-    "player_name": "Waylong",
-    "curse_count": 33,
-    "curse_messages": 31,
-    "matched_words": [
-      {
-        "word": "fuck",
-        "count": 12
-      },
-      {
-        "word": "damn",
-        "count": 8
-      },
-      {
-        "word": "ass",
-        "count": 5
-      },
-      {
-        "word": "wtf",
-        "count": 4
-      },
-      {
-        "word": "shit",
-        "count": 2
-      },
-      {
-        "word": "dick",
-        "count": 2
       }
     ]
   },
@@ -5380,6 +5380,45 @@
     ]
   },
   {
+    "player_name": "wooster",
+    "curse_count": 27,
+    "curse_messages": 27,
+    "matched_words": [
+      {
+        "word": "wtf",
+        "count": 11
+      },
+      {
+        "word": "ass",
+        "count": 6
+      },
+      {
+        "word": "fuck",
+        "count": 3
+      },
+      {
+        "word": "hella",
+        "count": 2
+      },
+      {
+        "word": "shit",
+        "count": 2
+      },
+      {
+        "word": "damn",
+        "count": 1
+      },
+      {
+        "word": "retard",
+        "count": 1
+      },
+      {
+        "word": "hell",
+        "count": 1
+      }
+    ]
+  },
+  {
     "player_name": "Thaz",
     "curse_count": 26,
     "curse_messages": 25,
@@ -5538,45 +5577,6 @@
       },
       {
         "word": "bitch",
-        "count": 1
-      }
-    ]
-  },
-  {
-    "player_name": "wooster",
-    "curse_count": 26,
-    "curse_messages": 26,
-    "matched_words": [
-      {
-        "word": "wtf",
-        "count": 11
-      },
-      {
-        "word": "ass",
-        "count": 6
-      },
-      {
-        "word": "hella",
-        "count": 2
-      },
-      {
-        "word": "shit",
-        "count": 2
-      },
-      {
-        "word": "fuck",
-        "count": 2
-      },
-      {
-        "word": "damn",
-        "count": 1
-      },
-      {
-        "word": "retard",
-        "count": 1
-      },
-      {
-        "word": "hell",
         "count": 1
       }
     ]
@@ -6217,6 +6217,45 @@
     ]
   },
   {
+    "player_name": "🔫$ ⁧⁧meatwad",
+    "curse_count": 22,
+    "curse_messages": 21,
+    "matched_words": [
+      {
+        "word": "damn",
+        "count": 6
+      },
+      {
+        "word": "fuck",
+        "count": 5
+      },
+      {
+        "word": "shit",
+        "count": 3
+      },
+      {
+        "word": "wtf",
+        "count": 3
+      },
+      {
+        "word": "ass",
+        "count": 2
+      },
+      {
+        "word": "piss",
+        "count": 1
+      },
+      {
+        "word": "retard",
+        "count": 1
+      },
+      {
+        "word": "hell",
+        "count": 1
+      }
+    ]
+  },
+  {
     "player_name": "ツXP Chickenツ",
     "curse_count": 21,
     "curse_messages": 20,
@@ -6635,41 +6674,6 @@
     ]
   },
   {
-    "player_name": "🔫$ ⁧⁧meatwad",
-    "curse_count": 18,
-    "curse_messages": 17,
-    "matched_words": [
-      {
-        "word": "damn",
-        "count": 5
-      },
-      {
-        "word": "fuck",
-        "count": 4
-      },
-      {
-        "word": "shit",
-        "count": 3
-      },
-      {
-        "word": "ass",
-        "count": 2
-      },
-      {
-        "word": "wtf",
-        "count": 2
-      },
-      {
-        "word": "piss",
-        "count": 1
-      },
-      {
-        "word": "retard",
-        "count": 1
-      }
-    ]
-  },
-  {
     "player_name": "b",
     "curse_count": 18,
     "curse_messages": 18,
@@ -7046,6 +7050,76 @@
     ]
   },
   {
+    "player_name": "Almighty EWOK",
+    "curse_count": 15,
+    "curse_messages": 14,
+    "matched_words": [
+      {
+        "word": "shit",
+        "count": 9
+      },
+      {
+        "word": "damn",
+        "count": 2
+      },
+      {
+        "word": "hell",
+        "count": 1
+      },
+      {
+        "word": "fuck",
+        "count": 1
+      },
+      {
+        "word": "wtf",
+        "count": 1
+      },
+      {
+        "word": "bitch",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "player_name": ".//Nystik",
+    "curse_count": 15,
+    "curse_messages": 15,
+    "matched_words": [
+      {
+        "word": "damn",
+        "count": 4
+      },
+      {
+        "word": "shit",
+        "count": 3
+      },
+      {
+        "word": "fuck",
+        "count": 3
+      },
+      {
+        "word": "ass",
+        "count": 1
+      },
+      {
+        "word": "hell",
+        "count": 1
+      },
+      {
+        "word": "retard",
+        "count": 1
+      },
+      {
+        "word": "pussy",
+        "count": 1
+      },
+      {
+        "word": "wtf",
+        "count": 1
+      }
+    ]
+  },
+  {
     "player_name": "not the impostor -Zickzii",
     "curse_count": 14,
     "curse_messages": 14,
@@ -7235,6 +7309,64 @@
     ]
   },
   {
+    "player_name": "Ginger Gosling",
+    "curse_count": 14,
+    "curse_messages": 14,
+    "matched_words": [
+      {
+        "word": "fuck",
+        "count": 3
+      },
+      {
+        "word": "shit",
+        "count": 2
+      },
+      {
+        "word": "damn",
+        "count": 2
+      },
+      {
+        "word": "asshole",
+        "count": 2
+      },
+      {
+        "word": "bitch",
+        "count": 2
+      },
+      {
+        "word": "cock",
+        "count": 1
+      },
+      {
+        "word": "bastard",
+        "count": 1
+      },
+      {
+        "word": "wtf",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "player_name": "Bobby",
+    "curse_count": 14,
+    "curse_messages": 14,
+    "matched_words": [
+      {
+        "word": "damn",
+        "count": 11
+      },
+      {
+        "word": "fuck",
+        "count": 2
+      },
+      {
+        "word": "shit",
+        "count": 1
+      }
+    ]
+  },
+  {
     "player_name": "HighbornHellest (deafened)",
     "curse_count": 13,
     "curse_messages": 11,
@@ -7389,126 +7521,6 @@
       {
         "word": "ass",
         "count": 2
-      }
-    ]
-  },
-  {
-    "player_name": "Ginger Gosling",
-    "curse_count": 13,
-    "curse_messages": 13,
-    "matched_words": [
-      {
-        "word": "fuck",
-        "count": 3
-      },
-      {
-        "word": "shit",
-        "count": 2
-      },
-      {
-        "word": "damn",
-        "count": 2
-      },
-      {
-        "word": "asshole",
-        "count": 2
-      },
-      {
-        "word": "cock",
-        "count": 1
-      },
-      {
-        "word": "bastard",
-        "count": 1
-      },
-      {
-        "word": "wtf",
-        "count": 1
-      },
-      {
-        "word": "bitch",
-        "count": 1
-      }
-    ]
-  },
-  {
-    "player_name": ".//Nystik",
-    "curse_count": 13,
-    "curse_messages": 13,
-    "matched_words": [
-      {
-        "word": "damn",
-        "count": 4
-      },
-      {
-        "word": "shit",
-        "count": 3
-      },
-      {
-        "word": "fuck",
-        "count": 2
-      },
-      {
-        "word": "ass",
-        "count": 1
-      },
-      {
-        "word": "hell",
-        "count": 1
-      },
-      {
-        "word": "retard",
-        "count": 1
-      },
-      {
-        "word": "pussy",
-        "count": 1
-      }
-    ]
-  },
-  {
-    "player_name": "Almighty EWOK",
-    "curse_count": 13,
-    "curse_messages": 12,
-    "matched_words": [
-      {
-        "word": "shit",
-        "count": 8
-      },
-      {
-        "word": "damn",
-        "count": 2
-      },
-      {
-        "word": "hell",
-        "count": 1
-      },
-      {
-        "word": "fuck",
-        "count": 1
-      },
-      {
-        "word": "wtf",
-        "count": 1
-      }
-    ]
-  },
-  {
-    "player_name": "Bobby",
-    "curse_count": 13,
-    "curse_messages": 13,
-    "matched_words": [
-      {
-        "word": "damn",
-        "count": 10
-      },
-      {
-        "word": "fuck",
-        "count": 2
-      },
-      {
-        "word": "shit",
-        "count": 1
       }
     ]
   },
@@ -9140,6 +9152,33 @@
     ]
   },
   {
+    "player_name": "hKj",
+    "curse_count": 8,
+    "curse_messages": 8,
+    "matched_words": [
+      {
+        "word": "ass",
+        "count": 2
+      },
+      {
+        "word": "shit",
+        "count": 2
+      },
+      {
+        "word": "wtf",
+        "count": 2
+      },
+      {
+        "word": "fuck",
+        "count": 1
+      },
+      {
+        "word": "pussy",
+        "count": 1
+      }
+    ]
+  },
+  {
     "player_name": "MouzzisZeus",
     "curse_count": 7,
     "curse_messages": 7,
@@ -9438,33 +9477,6 @@
     ]
   },
   {
-    "player_name": "hKj",
-    "curse_count": 7,
-    "curse_messages": 7,
-    "matched_words": [
-      {
-        "word": "ass",
-        "count": 2
-      },
-      {
-        "word": "shit",
-        "count": 2
-      },
-      {
-        "word": "fuck",
-        "count": 1
-      },
-      {
-        "word": "pussy",
-        "count": 1
-      },
-      {
-        "word": "wtf",
-        "count": 1
-      }
-    ]
-  },
-  {
     "player_name": "CreativeFrags",
     "curse_count": 7,
     "curse_messages": 6,
@@ -9549,6 +9561,21 @@
       {
         "word": "goddamn",
         "count": 1
+      }
+    ]
+  },
+  {
+    "player_name": "DircheBag",
+    "curse_count": 7,
+    "curse_messages": 7,
+    "matched_words": [
+      {
+        "word": "wtf",
+        "count": 5
+      },
+      {
+        "word": "damn",
+        "count": 2
       }
     ]
   },
@@ -9967,21 +9994,6 @@
     ]
   },
   {
-    "player_name": "DircheBag",
-    "curse_count": 6,
-    "curse_messages": 6,
-    "matched_words": [
-      {
-        "word": "wtf",
-        "count": 4
-      },
-      {
-        "word": "damn",
-        "count": 2
-      }
-    ]
-  },
-  {
     "player_name": "J0hnnyyB*.velk.ca",
     "curse_count": 6,
     "curse_messages": 5,
@@ -10023,6 +10035,52 @@
       },
       {
         "word": "shit",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "player_name": "Holygrad",
+    "curse_count": 6,
+    "curse_messages": 6,
+    "matched_words": [
+      {
+        "word": "wtf",
+        "count": 3
+      },
+      {
+        "word": "shit",
+        "count": 2
+      },
+      {
+        "word": "fuck",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "player_name": "Wallbeng",
+    "curse_count": 6,
+    "curse_messages": 5,
+    "matched_words": [
+      {
+        "word": "fuck",
+        "count": 2
+      },
+      {
+        "word": "wtf",
+        "count": 1
+      },
+      {
+        "word": "ass",
+        "count": 1
+      },
+      {
+        "word": "shit",
+        "count": 1
+      },
+      {
+        "word": "dogshit",
         "count": 1
       }
     ]
@@ -10478,25 +10536,6 @@
     ]
   },
   {
-    "player_name": "Holygrad",
-    "curse_count": 5,
-    "curse_messages": 5,
-    "matched_words": [
-      {
-        "word": "wtf",
-        "count": 2
-      },
-      {
-        "word": "shit",
-        "count": 2
-      },
-      {
-        "word": "fuck",
-        "count": 1
-      }
-    ]
-  },
-  {
     "player_name": "Onslaught357",
     "curse_count": 5,
     "curse_messages": 5,
@@ -10622,6 +10661,29 @@
       {
         "word": "fuck",
         "count": 5
+      }
+    ]
+  },
+  {
+    "player_name": "LeisureSuit",
+    "curse_count": 5,
+    "curse_messages": 5,
+    "matched_words": [
+      {
+        "word": "shit",
+        "count": 2
+      },
+      {
+        "word": "damn",
+        "count": 1
+      },
+      {
+        "word": "fuck",
+        "count": 1
+      },
+      {
+        "word": "hell",
+        "count": 1
       }
     ]
   },
@@ -11115,29 +11177,6 @@
     ]
   },
   {
-    "player_name": "LeisureSuit",
-    "curse_count": 4,
-    "curse_messages": 4,
-    "matched_words": [
-      {
-        "word": "damn",
-        "count": 1
-      },
-      {
-        "word": "shit",
-        "count": 1
-      },
-      {
-        "word": "fuck",
-        "count": 1
-      },
-      {
-        "word": "hell",
-        "count": 1
-      }
-    ]
-  },
-  {
     "player_name": "Teflon",
     "curse_count": 4,
     "curse_messages": 3,
@@ -11171,6 +11210,25 @@
       },
       {
         "word": "hell",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "player_name": "Sinisterways",
+    "curse_count": 4,
+    "curse_messages": 4,
+    "matched_words": [
+      {
+        "word": "damn",
+        "count": 2
+      },
+      {
+        "word": "fuck",
+        "count": 1
+      },
+      {
+        "word": "shit",
         "count": 1
       }
     ]
@@ -13231,31 +13289,16 @@
     ]
   },
   {
-    "player_name": "Wallbeng",
+    "player_name": "Ellracks",
     "curse_count": 2,
     "curse_messages": 2,
     "matched_words": [
-      {
-        "word": "wtf",
-        "count": 1
-      },
-      {
-        "word": "ass",
-        "count": 1
-      }
-    ]
-  },
-  {
-    "player_name": "Sinisterways",
-    "curse_count": 2,
-    "curse_messages": 2,
-    "matched_words": [
-      {
-        "word": "damn",
-        "count": 1
-      },
       {
         "word": "fuck",
+        "count": 1
+      },
+      {
+        "word": "pussy",
         "count": 1
       }
     ]
@@ -15307,17 +15350,6 @@
     ]
   },
   {
-    "player_name": "Ellracks",
-    "curse_count": 1,
-    "curse_messages": 1,
-    "matched_words": [
-      {
-        "word": "fuck",
-        "count": 1
-      }
-    ]
-  },
-  {
     "player_name": "Bobby Bukkake",
     "curse_count": 1,
     "curse_messages": 1,
@@ -15379,6 +15411,39 @@
     "matched_words": [
       {
         "word": "shit",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "player_name": "Zeno",
+    "curse_count": 1,
+    "curse_messages": 1,
+    "matched_words": [
+      {
+        "word": "ass",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "player_name": "sG| Warden Sweetrock (ANC)",
+    "curse_count": 1,
+    "curse_messages": 1,
+    "matched_words": [
+      {
+        "word": "wtf",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "player_name": "Kurama",
+    "curse_count": 1,
+    "curse_messages": 1,
+    "matched_words": [
+      {
+        "word": "piss",
         "count": 1
       }
     ]
