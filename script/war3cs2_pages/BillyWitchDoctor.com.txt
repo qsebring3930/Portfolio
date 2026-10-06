@@ -1,0 +1,77 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=BillyWitchDoctor.com
+|image=[[File:BillyWitchDoctor.com.webp]]
+|category=ATHF
+|max=30
+|level=2110
+|access=Beta
+|passive=
+<p>
+Chicken Revenge: No
+</p>
+}}
+|skill1={{SkillInfo
+|name=Chicken Shaman
+|info=
+<p>
+Passive: Increase Hex Immunity<br>
+Victim: Spawn Chicken<br>
+Special: Heal on Chicken Kill
+</p>
+|trigger=Special
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Immunity|unit=%|lvl1=20|lvl2=40|lvl3=60|lvl4=80|lvl5=100}}
+|line2={{LevelUpRow|field=Chance|lvl1=13.0%|lvl2=18.0%|lvl3=23.0%|lvl4=28.0%|lvl5=33.0%}}
+|line3={{LevelUpRow|field=Heal|unit=HP|lvl1=12|lvl2=14|lvl3=16|lvl4=18|lvl5=20}}
+}}}}
+|skill2={{SkillInfo
+|name=One Convenient Locations
+|info=
+Teleport to spot close to the last person who died
+|trigger=Ability1
+|target=Self
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Cooldown|unit=sec.|lvl1=20.0|lvl2=18.0|lvl3=16.0|lvl4=14.0|lvl5=12.0}}
+}}}}
+|skill3={{SkillInfo
+|name=Kiss Him Deep
+|info=
+Spin and Push towards close by enemy
+|trigger=Attack
+|radius=500
+|force=2
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Chance|lvl1=4.0%|lvl2=8.0%|lvl3=12.0%|lvl4=16.0%|lvl5=20.0%}}
+}}}}
+|skill4={{SkillInfo
+|name=Magic Words
+|info=
+Beacon and Damage
+|trigger=Ability2
+|target=AoE_Self
+|duration=5
+|cooldown=18.0
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Damage|lvl1=3|lvl2=6|lvl3=9|lvl4=12|lvl5=15}}
+|line2={{LevelUpRow|field=Radius|lvl1=3|lvl2=6|lvl3=9|lvl4=12|lvl5=15}}
+}}}}
+|skill5={{SkillInfo
+|name=Just an Intern
+|info=
+Increase Kill and Chicken XP
+|trigger=Special
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Multiplier|lvl1=40.0%|lvl2=80.0%|lvl3=120.0%|lvl4=160.0%|lvl5=200.0%}}
+}}}}
+|skill6={{SkillInfo
+|name=Arise Chicken Arise
+|info=
+Revive Ally, Summon Ultra Mega Chicken if revenged by chicken
+|trigger=Ultimate
+|target=Random_Ally
+|levelup={{LevelUpInfo|levels=5
+|line1={{LevelUpRow|field=Cooldown|unit=sec.|lvl1=30.0|lvl2=28.0|lvl3=26.0|lvl4=24.0|lvl5=22.0}}
+}}}}
+}}
