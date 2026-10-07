@@ -1,0 +1,79 @@
+{{RaceDetail
+|type=Races
+|info={{RaceInfo
+|title=MCU-04 Metatron
+|image=[[File:MCU-04 Metatron.webp]]
+|category=NSC-MCU
+|max=48
+|level=5455
+|access=Beta
+|weapons=
+Nova<br>
+Knife
+|restricted=All
+}}
+|skill1={{SkillInfo
+|name=NSC-M Burst Shell
+|info=
+Increase Gun Damage
+|trigger=Attack
+|extra=Damage is based on Pellets hit
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Bonus Damage Chance|unit=%|lvl1=3|lvl2=6|lvl3=9|lvl4=12|lvl5=15|lvl6=18|lvl7=21|lvl8=24}}
+}}}}
+|skill2={{SkillInfo
+|name=N.Mako Core Upgrade
+|info=
+Increase Health
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Health|unit=HP|lvl1=15|lvl2=20|lvl3=25|lvl4=30|lvl5=35|lvl6=40|lvl7=45|lvl8=50}}
+}}}}
+|skill3={{SkillInfo
+|name=MT-04 Claymore
+|info=
+<p>
+Spend Money and Channel to Place Claymore<br>
+Trap: Explodes when moved off when active
+</p>
+|trigger=Ability1
+|target=Self
+|quantity=2
+|duration=4
+|radius=50
+|explrad=150
+|cooldown=15.0
+|extra=Claymore costs $500
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Explosion Damage|lvl1=25|lvl2=30|lvl3=35|lvl4=40|lvl5=45|lvl6=50|lvl7=55|lvl8=60}}
+}}}}
+|skill4={{SkillInfo
+|name=Stasis Shock
+|info=
+Bash
+|trigger=Attack
+|duration=1
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Stun Chance|unit=%|lvl1=3|lvl2=4|lvl3=5|lvl4=6|lvl5=7|lvl6=8|lvl7=9|lvl8=10}}
+}}}}
+|skill5={{SkillInfo
+|name=NSC-D. Matter Hoverboots
+|info=
+Decrease Gravity
+|trigger=Passive
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Gravity|lvl1=12.0%|lvl2=16.0%|lvl3=20.0%|lvl4=24.0%|lvl5=28.0%|lvl6=32.0%|lvl7=36.0%|lvl8=40.0%}}
+}}}}
+|skill6={{SkillInfo
+|name=Celestial Wrath
+|info=
+Damage and Darken Vision
+|trigger=Ultimate
+|target=AoE_Self
+|damage=25
+|duration=1
+|radius=1400
+|levelup={{LevelUpInfo|levels=8
+|line1={{LevelUpRow|field=Cooldown|unit=sec.|lvl1=47.5|lvl2=45.0|lvl3=42.5|lvl4=40.0|lvl5=37.5|lvl6=35.0|lvl7=32.5|lvl8=30.0}}
+}}}}
+}}
